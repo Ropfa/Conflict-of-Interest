@@ -114,4 +114,6 @@ char phoenix hide
 "6 AM?{n}WHat were you doing out so early?"
 
 char gumshoe e=crash
-"............I can't remember.{n}{char gumshoe e=crash
+"{delay 1}......{n}{char gumshoe e=crash-pumped}......{n}{char gumshoe e=crash-laugh}{delay 2}......{p30}{next}"
+char gumshoe e=crash
+"I can't remember.{n}{char gumshoe e=crash
