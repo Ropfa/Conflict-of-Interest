@@ -1,0 +1,167 @@
+set _cr_button true
+nt
+bg black
+"{center}{type}{c090}July 19, 9:30 AM{n}Wright Anything Agency"
+mus Doubted People.ogg
+"{center}{c090}But you'll die."
+"{center}{c940}Nothing can stop that now..."
+char phoenix hide
+"*sniff*"
+char nothing
+"{center}{c940}Go now... {p10}my son... {p20}Leave me..."
+"{center}{c090}No. {p10}You're coming with me. {p10}{n}I have to save you!"
+"{center}{c940}You already have..."
+char phoenix hide
+"*sob*"
+"{center}{c940}You were right... {p20}{n}You were right about me..."
+"{center}{c940}Tell your sister... {p30}{n}{delay 1}you were right...{c999}"
+mus fade
+"{center}{delay 2}THE END"
+pause 60
+bg wrightanything fade
+
+char phoenix hide
+"*sniff*"
+"{c089}(Such a sad movie...{n}{p20}No wonder it made her cry.)"
+
+char maya hide
+"So...?{n}{p20}What did you think?"
+char maya e=confident fade
+
+char phoenix hide
+"It was... {p10}*sniff*{n}{p30}so beautiful..."
+
+char maya e=cheerful
+"Haha!{p20}{n}You know..."
+char maya e=confident
+"Trucy and I could hear you {n}crying from the other room."
+
+char phoenix hide
+"I know!"
+"You two were laughing{n}the whole time! {p10}It really ruined {n}the mood!"
+mus Gyakuten Sisters theme.ogg
+
+char maya e=cheerful
+"You liked it though, {p10}right?"
+
+char phoenix hide
+"Yes...{p10}{n}I think my life might be changed {n}forever."
+
+char maya e=confident
+"Maybe we can even put that poster {n}up again!"
+
+char phoenix hide
+"We should. {p10}I'll get around to it.{n}{p30}{c089}(Eventually.)"
+
+char maya e=mad
+"You say that about everything."
+"You still haven't cleaned this dump {n}like you said you would!"
+
+char phoenix hide
+"I'll get around to it."
+
+char maya e=thinking
+"Ugh. {p20}You'd think that with the four {n}of us, somebody would actually do {n}a bit of cleaning around here."
+
+char phoenix hide
+"If it bothers you that much, why {n}don't you do it?"
+
+char maya e=cheerful
+"I'm the Kurain Master now.{n}I have more important things to do {n}than clean up after you!"
+
+bg black fade
+char maya e=cheerful fade
+char phoenix hide
+"Since inheriting the rank of Master,{n}Maya's been working really hard to{n}unify the Fey Clan."
+"She's seen firsthand the damage{n}that the inner feuding with the{n}branch families has caused."
+"She's trying to put a stop to it,{n}once and for all."
+"Surprisingly, she's had a lot of{n}success, considering what little {n}leadership experience she had."
+char maya e=cheerful
+"I have to work hard!{n}This is really important to me!"
+
+bg wrightanything fade
+char maya e=cheerful fade
+
+char phoenix hide
+"Tell you what. I'll sort through {n}this place."
+"I'll see if there's anything we can {n}get rid of."
+
+char maya e=thinking
+"It just needs a bit of straightening up {n}is all. You just need to put an hour {n}or ten into it."
+
+char phoenix hide
+"{c089}(Well, {p10}there goes my weekend...)"
+
+mus Steel Samurai ring tone.ogg
+set _ev newcell
+showevl
+pause 100
+char phoenix hide
+"I wonder who that could be."
+mus
+sfx phoneoff
+"Hello?"
+
+char ??? hide
+"Hello, is this Mr. Phoenix Wright?"
+
+char phoenix hide
+"Yes, {p10}who am I speaking to?"
+
+char nurse hide
+"I'm a nurse at the Eldoon Clinic{n}downtown."
+"I'm calling to tell you about a{n}Mr. Dick Gumshoe, who was just {n}brought here."
+
+char phoenix hide
+"{s10}{sfx shout-general}Gumshoe's hurt!?"
+
+char maya e=shock
+"{sfx shout-shock}WHAT!?"
+char maya e=worried
+
+char nurse hide
+"Yes, sir."
+
+char maya e=thinking
+char phoenix hide
+"{sfx shout-general}What happened!?"
+
+char nurse hide
+"Mr. Gumshoe received a rather bad {n}concussion early this morning."
+"He had you listed as his {n}emergency contact number."
+
+char maya e=worried
+char phoenix hide
+"I..."
+pause 20
+sfx realization
+"{c089}(Wait, what?)"
+"...I'll be there right away."
+
+char nurse hide
+"Thank you, Mr. Wright.{n}{p10}I'm sorry for any inconvenience.{p20}{n}Have a nice day!"
+
+char phoenix hide
+"Yes, {p10}good-bye."
+sfx phoneoff
+hideevl
+
+char maya e=worried
+"What happened to Gumshoe, Nick!?"
+
+char phoenix hide
+"He's in the hospital."
+
+char maya e=surprised
+"Is he okay!?"
+
+char phoenix hide
+"I'm sure he's fine.{n}The nurse didn't sound too worried."
+
+char maya e=pumped
+"We need to go there right away!{n}I want to know what happened to him!"
+
+char phoenix hide
+"{c089}More importantly, {p10}I'd like to know {n}why Gumshoe has me listed as his {n}emergency contact number..."
+
+script scene2menu

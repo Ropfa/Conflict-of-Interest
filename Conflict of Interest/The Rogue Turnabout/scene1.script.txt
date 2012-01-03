@@ -1,0 +1,68 @@
+bg black
+pause 60
+set _bigbutton_img general/bigbutton/phoenix
+nt
+"The Ace Attorney series is property {n}of Capcom. No profit was made from {n}this game. {p30}{next}"
+"It is a game by the fans, for the fans."
+pause 60 script
+set _cr_button false
+set _textbox_show_button false
+
+bg bigblack
+fg title fade x=50 y=260
+pause 100
+mus Swept-Away Turnabout.ogg
+pause 60
+
+bg LAskyline fade
+pause 200
+"I know you're holding back.{p150}{next}"
+{next}
+
+bg tower fade
+"Nothing I can do about it.{p80}{next}"
+"You know I don't have that {n}kind of authority.{p150}{next}"
+
+bg pent fade
+pause 30
+char rivales e=shadow fade
+pause100
+
+"You have access to it all.{p20}{n} Find some way. {p40}{n} Get it to me.{p60}{next}"
+pause 80
+
+"You think I'd risk everything for{n} a guy like you?{p60}{next}"
+pause 100
+
+"{delay 1}You already have.{p60}{next}"
+pause 60
+
+"...... {p100}{next}"
+"{delay 3}...{p100}{next}"
+pause 100
+
+"You know what? {p20}{n}This deal's over.{p100}{next}"
+mus intro2.ogg
+"I'm sorry... {p90}{n}{delay 1}But I can't let you do that.{p100}{next}"
+pause 40
+
+bg black
+sfx knifethrow.wav
+sfx shout-scream.wav
+"{f}{f}{f}{f}{next}"
+bg blood
+pause 20
+sfx shout-loud.wav
+pause 150
+
+pause 30
+bg pent fade
+"...{p80}{next}"
+pause 60
+"There were no courts on earth {n}for men like him.{p60}{next}"
+"{f}{s10}{next}"
+bg flight
+pause 200
+mus
+
+script scene2

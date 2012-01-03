@@ -1,0 +1,38 @@
+bg black
+nt
+"{c090}{center}{type}July 19, 10:00 AM{n}Eldoon Clinic"
+bg clinic fade
+set _ev gumshoe$
+addev gumshoe$
+char gumshoe e=crash fade
+"Hey! {p10}You made it, pal!"
+
+char phoenix hide
+"What happened to your {s}head!?"
+
+char gumshoe e=crash
+"Don't worry about me, pal.{n}The doctors said that I'll be fine!"
+"I'll just need a day or two to recover."
+
+char maya e=worried
+"What happened, Gumshoe?{n}How'd you get hurt!?"
+
+char gumshoe e=crash-pumped
+"Something fell out of the sky{n}and hit me {sfx shout-general}right on the head!"
+
+char maya e=surprised
+"That's awful!"
+
+char gumshoe e=crash-pumped
+"The blow knocked me out cold.{n}It could've been worse though."
+"The doctors told me that being{n}hit by something from that height{n}would normally kill you!"
+
+char maya e=shock
+"Wow!{n}{p20}{char maya e=confident}You must be really lucky to have{n}survived!"
+
+char gumshoe e=crash
+"Yeah... {char gumshoe e=crash-laugh}{n}I guess it's because I've got{n}such a thick skull!"
+
+char phoenix hide
+"That's usually not something you {n}want to say about yourself."
+"Were you really 

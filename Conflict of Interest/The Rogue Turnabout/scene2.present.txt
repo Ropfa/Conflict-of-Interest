@@ -1,0 +1,38 @@
+present
+label top
+menu scene2
+bg wrightanything
+
+label magatama
+char maya e=normal
+"That's my old magatama."
+"How long has it been since you {n}got that?"
+char phoenix hide
+"It has to have been at least nine{n}years ago."
+char maya e=thinking
+"Wow... It's hard to believe that{n}it's been that long."
+"I wonder if it still works."
+char phoenix hide
+"{c089}(I guess magic lie detectors must {n}have some kind of battery life...)"
+goto top
+
+label attorneybadge
+char maya e=normal
+"I'll bet you're really excited to have {n}that thing again!"
+char phoenix hide
+"Yeah, it felt really empty not {n}having one."
+char maya e=cheerful
+"You're probably gonna go show it {n}off to everyone you see{char maya e=pumped} so that they know you're an attorney again!"
+char phoenix hide
+"C'mon, Maya. I never did that."
+"{c089}(...Did I?)"
+goto top
+
+label maya$
+char maya e=normal
+"Wow, I look really young in that {n}photo!"
+char phoenix hide
+"You think so?{n}It was just taken last month."
+char maya e=thinking
+"Was it? {n}I guess I haven't really aged much."
+goto top

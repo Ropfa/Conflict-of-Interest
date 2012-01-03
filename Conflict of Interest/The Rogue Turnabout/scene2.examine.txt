@@ -1,0 +1,12 @@
+label top
+bg wrightanything
+
+examine
+menu scene2
+
+label none
+char maya e=mad
+"{sfx shout-general}{s}Nick!!"
+"Now's not the time to be fooling {n}around!"
+"We need to go see Gumshoe in the {n}hospital!!"
+goto top

@@ -1,0 +1,10 @@
+label top
+bg wrightanything
+
+list scene2move
+li Hospital
+showlist
+menu scene2
+
+label Hospital
+script scene3

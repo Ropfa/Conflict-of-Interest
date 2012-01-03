@@ -1,0 +1,4 @@
+bg wrightanything
+char maya e=worried
+mus Gyakuten Sisters theme.ogg
+menu scene2

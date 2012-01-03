@@ -1,0 +1,8 @@
+set _cr_button truebg black
+nt
+“{c090}{center}{type}FILLER DATE, 9:38{n}District Court{n}Defendant Lobby No. 3”
+pause 50
+char Phoenix hide
+"It's been a long time… But I'm back."
+bg courtlobby fade
+"{c099}(My name is Phoenix Wright.)"
