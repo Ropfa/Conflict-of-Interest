@@ -20,9 +20,10 @@ label attorneybadge
 char maya e=normal
 "I'll bet you're really excited to have {n}that thing again!"
 char phoenix hide
-"Yeah, it felt really empty not {n}having one."
+"Yeah, it felt empty not having {n}one."
 char maya e=cheerful
-"You're probably gonna go show it {n}off to everyone you see{char maya e=pumped} so that they know you're an attorney again!"
+"You're probably gonna go show it {n}off to everyone you see{char maya e=pumped} so that they {n}know you're an attorney."
+"Just like you always used to!"
 char phoenix hide
 "C'mon, Maya. I never did that."
 "{c089}(...Did I?)"
@@ -35,4 +36,14 @@ char phoenix hide
 "You think so?{n}It was just taken last month."
 char maya e=thinking
 "Was it? {n}I guess I haven't really aged much."
+goto top
+
+label none
+char maya e=normal
+char phoenix hide
+"What do you think of this?"
+char maya e=normal
+"I don't think I'm the person{n}to be asking about that, Nick."
+char phoenix hide
+"{c089}(In other words: Nothing.)"
 goto top

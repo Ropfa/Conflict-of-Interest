@@ -22,7 +22,7 @@ bg wrightanything fade
 
 char phoenix hide
 "*sniff*"
-"{c089}(Such a sad movie...{n}{p20}No wonder it made her cry.)"
+"{c089}(Such a sad movie...{n}{p20}No wonder it made {c940}her {c089}cry.)"
 
 char maya hide
 "So...?{n}{p20}What did you think?"
@@ -54,14 +54,14 @@ char phoenix hide
 "We should. {p10}I'll get around to it.{n}{p30}{c089}(Eventually.)"
 
 char maya e=mad
-"You say that about everything."
+"{sfx shout-general}You say that about everything."
 "You still haven't cleaned this dump {n}like you said you would!"
 
 char phoenix hide
 "I'll get around to it."
 
 char maya e=thinking
-"Ugh. {p20}You'd think that with the four {n}of us, somebody would actually do {n}a bit of cleaning around here."
+"Ugh. {p10}You'd think that with the four {n}of us, somebody would actually do {n}a bit of cleaning around here."
 
 char phoenix hide
 "If it bothers you that much, why {n}don't you do it?"
@@ -113,10 +113,10 @@ char nurse hide
 "I'm calling to tell you about a{n}Mr. Dick Gumshoe, who was just {n}brought here."
 
 char phoenix hide
-"{s10}{sfx shout-general}Gumshoe's hurt!?"
+"{s10}{sfx shout-general}Gumshoe's hurt?!"
 
 char maya e=shock
-"{sfx shout-shock}WHAT!?"
+"{sfx shout-shock}WHAT?!"
 char maya e=worried
 
 char nurse hide
@@ -124,7 +124,7 @@ char nurse hide
 
 char maya e=thinking
 char phoenix hide
-"{sfx shout-general}What happened!?"
+"{sfx shout-general}{s2}What happened?!"
 
 char nurse hide
 "Mr. Gumshoe received a rather bad {n}concussion early this morning."
@@ -147,21 +147,21 @@ sfx phoneoff
 hideevl
 
 char maya e=worried
-"What happened to Gumshoe, Nick!?"
+"What happened to Gumshoe, Nick?!"
 
 char phoenix hide
 "He's in the hospital."
 
 char maya e=surprised
-"Is he okay!?"
+"Is he okay?!"
 
 char phoenix hide
 "I'm sure he's fine.{n}The nurse didn't sound too worried."
 
 char maya e=pumped
-"We need to go there right away!{n}I want to know what happened to him!"
+"{sfx shout-general}We need to go there right away!{n}I want to know what happened to him!"
 
 char phoenix hide
-"{c089}More importantly, {p10}I'd like to know {n}why Gumshoe has me listed as his {n}emergency contact number..."
+"{c089}(More importantly, {p10}I'd like to know {n}why Gumshoe has me listed as his {n}emergency contact number...)"
 
 script scene2menu

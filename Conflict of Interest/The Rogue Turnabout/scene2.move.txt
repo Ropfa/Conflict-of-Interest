@@ -7,4 +7,5 @@ showlist
 menu scene2
 
 label Hospital
+mus
 script scene3

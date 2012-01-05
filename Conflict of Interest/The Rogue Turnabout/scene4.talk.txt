@@ -1,0 +1,120 @@
+label top
+bg detentionnew
+
+list scene4talk
+li The arrest
+li Wayne Parker
+label scene4talk
+show list
+menu scene4
+goto scene4talk
+
+label The arrest
+char phoenix hide
+"Why were you arrested?"
+char parker e=worried
+"My boss...{n}He... He's dead."
+"Somebody killed him.{n}They think it was me."
+char phoenix hide
+"{c089}(Why does it always have to be murder?)"
+char parker e=worried
+"I heard some of them talking...{n}I think they have some pretty{n}strong evidence."
+"There's even a witness."
+char parker e=serious
+"I'm guilty!{n}Might as well lock me up right now!"
+char phoenix hide
+"You didn't actually do it, did you?"
+char parker e=sad
+"No. {p20}{n}But that's what they'll all be saying."
+""That Parker guy!" "Watch out for him -- He's a killer!""
+"Please, Mr. Wright...{n}I know I look like a bad guy,{n}but I could never kill anyone!"
+char phoenix hide
+"I don't think you look like{n}a bad person."
+"*glare*"
+char maya e=mad
+"{sfx shout-general}Hey!{n}{p20}I said I was sorry!"
+char parker e=sad
+"My boss owned a skyscraper downtown.{n}I can give you directions to there."
+char phoenix hide
+"Is that where he was killed?"
+char parker e=sad
+"Must've been. {n}He didn't get out much.{n}He lived out of that building."
+char phoenix hide
+"Doesn't sound like he was a {n}very active person."
+char parker e=serious
+"No. {p10}He was."
+char parker e=worried
+"He was very busy. {n}He was always working at the penthouse at the top."
+"That's where he was when I met with him this morning."
+char phoenix hide
+"{sfx idea}...!"
+"You met with him before he was killed?!"
+"{c089}(No wonder they think this guy's guilty!)"
+char parker e=disturbed
+"{sfx shout-general}{sfx shout-loud}Hey hey HEY!!!{n}Don't look at me like that! {n}{char parker e=sad}{sfx shout-loud}I didn't do it!!!"
+"If you don't take my case,{n}{p20}*sniff*"
+char parker e=crying
+"then nobody will..."
+char phoenix hide
+"Look, don't cry.{n}{p20}You're not..."
+char parker e=crying
+"*sniff*{n}*sob*"
+char phoenix hide
+"...{n}{c089}(This guy's nothing more than a big baby!)"
+goto top
+
+label Wayne Parker
+char phoenix hide
+"Could you tell me a bit about yourself, Mr. Parker?"
+char parker e=disturbed
+"I didn't do IT!!!"
+char phoenix hide
+"What?! I didn't say that!"
+char parker e=disturbed
+"I swear, I didn't DOOOO {char parker e=freakout}{p20}{char parker hide}{sfx thud-body}{s20}IIIIIT!!!"
+char phoenix hide
+"{c089}(How'd he get THAT from my question?!)"
+char maya e=pumped
+"Quick, Nick!{n}Change the subject!"
+char parker e=sad fade
+pause 30
+char phoenix hide
+"So, um...{n}Your job?{n}How about that?"
+"What do you do for a living?"
+char parker e=sad
+"My... my job...?"
+char phoenix hide
+"Do you do anything interesting?"
+char parker e=sad
+"...Well...{n}I worked for the victim."
+char phoenix hide
+"What did you do?"
+char parker e=sad
+"I guess that you could say that I... guarded things?"
+char phoenix hide
+"{c089}(Was that a question?)"
+"So you're a security guard?"
+char parker e=worried
+"Yeah, you could say that, I guess."
+char phoenix hide
+"You don't seem too sure about it."
+char parker e=sad
+"I...{char parker e=crying}{p20}Sorry.{p20}{n}I'm not a very assertive guy."
+char phoenix hide
+"{c089}(I can see that much.)"
+"How long did you work for him?"
+char parker e=worried
+"It's been a long time...{n}At least twenty years by now."
+char phoenix hide
+"Wow, twenty years?{n}You must have known each other pretty well."
+char parker e=worried
+"Yeah."
+char phoenix hide
+"..."
+char parker e=worried
+"..."
+char maya e=thinking
+"..."
+char phoenix hide
+"...{n}{c089}I feel like he's trying to avoid{n}this topic.)"
+goto top

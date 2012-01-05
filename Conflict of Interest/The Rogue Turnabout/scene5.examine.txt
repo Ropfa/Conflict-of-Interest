@@ -1,0 +1,60 @@
+label top
+bg entrance
+
+examine
+region 256 100 171 100 skyscraper
+region 78 60 12 21 hawk
+region 188 152 45 52 door
+menu scene5
+
+label skyscraper
+char maya e=thinking
+"Why do they call them "skyscrapers"? They don't "scrape" the sky... They just sort of poke up there."
+char phoenix hide
+"Maybe you should call up the writers of the dictionary and give them a piece of your mind."
+char maya e=pumped
+"You know what?{n}I will!"
+char phoenix hide
+"{c089}(Note to self: Be sure to record that conversation if it ever happens.)"
+goto top
+
+label hawk
+sfx hawk.ogg
+char maya e=surprised
+"What was that?"
+set _ev hawk
+showevr
+sfx showevidence
+pause 10
+sfx hawk.ogg
+char maya e=thinking
+char phoenix hide
+"It looks like some kind of hawk."
+sfx alitawings
+char maya e=cheerful
+"Doesn't it look kind of like it's sitting guard over this place?"
+char phoenix hide
+"Kind of."
+goto top
+
+label door
+char maya e=cheerful
+"I love revolving doors!{n}They're like little tiny vortexes of fun!"
+char phoenix hide
+"Don't even{char maya e=surprised}think about playing around in that doorway!"
+"There are other people who need to leave and enter that building!"
+char maya e=sad
+"*mumble*"
+char phoenix hide
+"Tell you what, Maya. {n}After this case, I'll take you{n}to the Sunshine Coliseum."
+"You can spend the whole day spinning around in the revolving doors there."
+char maya e=cheerful
+"Really, Nick?"
+char phoenix hide
+"{c089}(This girl gives a new definition to the term "easily amused".)"
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

@@ -1,0 +1,109 @@
+bg black
+nt
+"{c090}{center}{type}July 19, 10:30 AM{n}Detention Center{n}Visitor's Room"
+bg detentionnew fade
+pause 60
+char parker e=serious fade
+char parker
+pause 40
+sfx realization
+pause 20
+char maya e=shock
+"{sfx shout-scream}AAAAAAAAAAHHHHHH!!!"
+char maya e=surprised
+"Nick, is this the guy we're{n}supposed to defend?!"
+"He looks like he's about to break {n}your kneecaps with a baseball bat!"
+char parker e=sad fade
+"......"
+char parker e=crying
+pause 40
+char phoenix hide
+"I think you hurt his feelings, Maya."
+mus Doubted People.ogg
+char maya e=worried
+"Um...{n}I'm sorry...{n}I guess I overreacted."
+char parker e=crying
+pause 60
+char maya e=worried
+"P-Please don't cry..."
+char parker e=sad
+"Are you the lawyer Virgil called {n}for me?"
+char phoenix hide
+"I'm assuming so."
+"A man called me earlier, but he didn't {n}really tell me who I was supposed to {n}defend."
+
+char parker e=worried
+"...That's Virgil all right."
+"My name's Wayne Parker."
+set _ev parker$
+addev parker$
+
+char phoenix hide
+"I'm Phoenix Wright."
+
+char parker e=worried
+"Wright...{n}{delay 1}Wright...{n}{delay 2}Phoe... nix...{next}"
+char parker e=disturbed
+"{sfx shout-general}PHOENIX WRI{sfx shout-loud}{char parker e=freakout}IIIIGHT?!"
+char parker e=disturbed
+
+char phoenix hide
+"!!!"
+"Is there a problem?"
+
+char parker e=disturbed
+"{sfx shout-general}He went and found {sfx shout-scream}YOU?!"
+
+char phoenix hide
+"I guess so."
+
+char parker e=freakout
+"BWWHH{p10}{char parker hide}{sfx thud-body}{s20}AAAAAAAAAAAT?!"
+pause 60
+
+char phoenix hide
+"..."
+"{c089}(He fell over.)"
+char parker e=sad fade
+"Sorry about that."
+char phoenix hide
+"Are you okay?{n}That looked like a nasty fall."
+
+char parker e=sad
+"No. {p20}I'm used to it."
+
+char phoenix hide
+"Mr. Parker, are you opposed to me {n}defending you?"
+
+char parker e=worried
+"No, no... It's not that."
+"It's just...{n}{char parker e=serious}I wasn't expecting anybody to take my case..."
+"And now {char parker e=disturbed}Virgil brings me a legend!! {n}{sfx shout-loud}I CAN'T BELIEVE {char parker e=freakout}IT!!!{char parker e=disturbed}"
+mus
+pause 60
+char phoenix hide
+"Actually, I'm sorry to disappoint you, {n}Mr. Parker. But I haven't agreed to {n}defend you yet."
+
+char parker e=serious
+sfx realization
+"I...{n}{char parker e=sad}But you...{n}{char parker e=crying}But I..."
+
+char phoenix hide
+"...!"
+
+char maya e=mad fade
+"Nick!{n}You made him cry again!"
+
+char phoenix hide
+"{c089}(Me?! You're the one who did it the {n}first time!)"
+
+char parker e=crying
+"I shouldn't have gotten so excited... {n}Nobody'd defend a guy like me."
+
+char phoenix hide
+"Th-That's not what I meant!{n}I just need to ask a few questions {n}first!"
+
+char parker e=crying
+"......Okay."
+
+script scene4menu

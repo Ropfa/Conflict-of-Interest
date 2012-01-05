@@ -1,4 +1,5 @@
 .DS_Store
-autosave.ns*
+save_backup
+*save.ns*
 *(Autosaved).txt
 

@@ -1,0 +1,9 @@
+bg black
+nt
+"{c090}{center}{type}July 19, 11:40 AM{n}Rivales Tower{n}Reception Area"
+bg reception
+pause 60
+char gallante e=ba fade
+"Sup, foo?"
+char phoenix hide
+"Wassup."

@@ -10,8 +10,8 @@ goto scene2talk
 
 label What to do
 char maya e=mad
-""What to do!?"{n}Are you {s}serious, Nick"
-"Gumshoe might be dying!{n}We need to go to the hospital right now!"
+""What to do?!"{n}Are you {s}serious, Nick"
+"Gumshoe might be dying!{n}We need to go to the hospital right {n}now!"
 char phoenix hide
 "I really don't think he's dying."
 char maya e=mad

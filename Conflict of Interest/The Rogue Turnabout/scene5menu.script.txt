@@ -1,0 +1,3 @@
+bg entrance
+char maya
+menu scene5
