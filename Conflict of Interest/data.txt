@@ -1,3 +1,6 @@
 version 1.0
-icon art/ev/watters.pngtitle Phoenix Wright: Ace Attorney - Conflict of Interestauthor Ropfa
-website
+icon art/ev/watters.png
+title Phoenix Wright: Ace Attorney - Conflict of Interest
+author Ropfa
+website http://www.nowhere.com/nothing
+
