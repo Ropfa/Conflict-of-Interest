@@ -1,0 +1,5 @@
+bg entrance
+char cody
+mus Investigation - Opening.ogg
+set _music_loop Investigation - Opening - loop.ogg
+menu scene11

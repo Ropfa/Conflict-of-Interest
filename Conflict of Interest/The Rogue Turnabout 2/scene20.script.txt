@@ -1,0 +1,226 @@
+fg ani-judge-gavel
+bg judge
+char judge e=normal
+"I believe that we've heard enough."
+"I see no reason to prolong this trial."
+"The jury may decide its--{p20}{next}"
+
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+char judge e=surprised
+pause 20 script
+"{p10}Yes, Mr. Williamson?"
+
+mus Shibuya.ogg
+set _music_loop Shibuya - loop.ogg
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Your Honor, at the beginning, I said {n}that it was the prosecution's goal to {n}prove Wayne Parker is guilty..."
+"...of {c940}all of Sir Gallante's crimes{c999}."
+"We have yet to even touch on the {n}subject."
+bg judge
+char judge e=surprised
+"Oh, yes!{n}{p20}I'd forgotten about that!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"We can't have that man walking away{n}only charged with one murder now, {n}can we?"
+"It would be an injustice to the dead."
+
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(This is just great. {n}He held off the verdict so that he {n}could add even MORE punishment!)"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Sir Gallante leaves his mark after {n}each crime."
+"The nature of this mark is known only {n}to the top people on the investigation."
+"When questioned, the defendant {n}knew a rather suspicious amount {n}about it."
+
+bg judge
+char judge e=normal
+"So he was privy to knowledge that he {n}should not have been."
+mus
+
+bg judge
+char judge e=normal
+"Does the defense have anything to {n}say regarding this accusation?"
+
+mus Tricks and Gimmicks.ogg
+bg aide
+char maya e=bench-strict
+"Nick! You'd better think up something {n}fast!"
+"{sfx shout-general}They don't give Get Out Of Jail Free {n}cards to serial killers!"
+char phoenix hide
+"I know! {n}I'm thinking! {n}I'm thinking!"
+char maya e=bench-strict
+"Remember everything Cody told us {n}about Sir Gallante! He gave us that {n}neat poster and everything!"
+char phoenix hide
+"I don't think Cody is the best person {n}to be looking to for information."
+char maya e=bench-strict
+"Yeah, well, at the moment he's all {n}we've got!"
+"We know barely anything about Sir {n}Gallante, besides what he told us."
+"That's all we have to go on here."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(I guess she's right.)"
+label redopresent
+char phoenix e=handsondesk
+"{c090}(Is there any evidence which shows {n}that Mr. Parker isn't Sir Gallante?"
+set _cr_back_button false
+present
+
+label security2
+mus
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Let's take a look at that security {n}tape again..."
+sfx showevidence
+bg securitycamera
+char phoenix hide
+"What do we see?"
+char judge hide
+"Why, I see the defendant."
+char phoenix hide
+"Presumably on his way into the {n}penthouse. {n}Right, Sarah?"
+char sarah hide
+"...{p10}Right."
+char obadiah hide
+"What are you getting at?{n}{p20}I see nothing strange."
+sfx showevidence
+bg defense
+fg dbench
+char phoenix e=confident
+"And therein lies our problem."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"...{sfx realization}!{n}{p30}What do you mean?"
+bg defense
+fg dbench
+char phoenix e=document
+"It's not what I see, so much as it's {n}what I don't see."
+"Prosecutor, {p10}what is Sir Gallante {n}known for dressing up as when he kills {n}his victims?"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"...{p20}{delay 1}That's classified."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Nevertheless, somewhere along the {n}line, that information got leaked..."
+"...and now teenage boys everywhere {n}are able to imitate him to their {n}hearts' content."
+bg prosecution
+fg pbench
+char obadiah e=worried
+"......"
+bg defense
+fg dbench
+char phoenix e=thinking
+"It's a knight, {p10}isn't it?"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"...{p20}{delay 1}Yes."
+
+bg defense
+fg dbench
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+char phoenix e=confident
+"Tell me, {p10}where in this picture do you {n}see a knight?"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"...{p10}{delay 1}I don't."
+bg defense
+fg dbench
+char phoenix e=confident(blink)
+"{c089}(Finally, some progress!)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I know what you're thinking! {n}You're thinking that you've finally {n}made some progress."
+"Well, that's not the case."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(What, he's a mind reader too now?)"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"And no, I'm not a mind reader... {n}But you're overlooking one very {n}important thing."
+"Just because Gallante is famous for {n}his knight armor doesn't mean that he {n}has to wear it everywhere he goes."
+"Maybe he decided to go undercover {n}this time."
+
+script scene21
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"My client isn't Sir Gallante, and this {n}proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wright, {p20}I'd like to thank you."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Really...?{n}{p20}For what?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"For making my job easier."
+bg judge
+char judge e=warning
+"Yes, and mine as well!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"You're welcome..." 
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+goto redopresent
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

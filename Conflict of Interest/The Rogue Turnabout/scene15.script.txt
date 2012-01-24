@@ -1,0 +1,123 @@
+bg pent3
+mus
+pause 100
+char phoenix hide
+"...{n}{p30}Nothing."
+
+char maya e=thinking
+"That's strange.{n}I was expecting to find something {n}really amazing."
+"All we found was that stain where {n}Mr. Rivales died."
+
+char phoenix hide
+"We didn't even need luminol to see {n}that."
+
+char phoenix hide
+"{c089}(I think I'll keep this bottle.{n}{p10}Just in case.)"
+
+set _ev luminol
+nt
+addev luminol
+fg luminolev name=luminolev
+"{sfx evidence updated.wav}{c099}Luminol "borrowed" from crime {n}scene."
+delete name=luminolev
+pause 40 script
+
+char phoenix hide
+"Well, I don't think we're going to find {n}anything more here. {p10}Let's go."
+
+pause 80 script
+
+char gallante hide nametag=???
+"A moment of your time, Sir Wright."
+
+char maya e=normal
+"Did you say something, Nick?"
+
+pause 60 script
+
+char gallante e=ba fade
+pause 30
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+
+char gallante e=ba nametag=???
+"Sir Lawyer... {p20}Madame Fey...{n}{p20}It is a pleasure to make your {n}acquaintance."
+
+char phoenix hide
+"Wh-who are you?!"
+
+char gallante e=ba
+"Isn't it obvious? {n}I am the one you seek."
+"{delay 1}I am Sir Gallante."
+
+char maya e=surprised
+"S-S-S-Si {e shock}{s5}{sfx shout-scream}{sfx shout-objection}AAAAHHHH!!!"
+
+char gallante e=ba
+"You need not be afraid, Madame Fey.{n}{p10}I have no quarrel with you."
+"Only the wicked need fear my blade."
+
+char phoenix hide
+"How did you get in here?!"
+
+char maya e=surprised
+"And how do you know my name?!"
+
+char gallante e=ba
+"These things are unimportant."
+"All that matter is this..."
+"As defender of this city, it is my {n}duty to protect the innocent..."
+"...and I know that Sir Parker is {n}innocent."
+"He must not be found guilty {n}tomorrow."
+
+char phoenix hide
+"How do you know...?"
+
+mus
+char gallante e=ba
+"I know...{n}{p20}because I killed Michael Rivales."
+mus Pinch!.ogg
+set _music_loop Pinch! - loop.ogg
+
+char phoenix hide
+"Y-Y-You k-k-k..."
+
+char gallante e=ba
+"Yes, 'twas I."
+"Rivales was a blight on {n}this great city."
+"He had to be eliminated for the {n}greater good."
+
+char phoenix hide
+"{c089}(Watters, where are you?!{n}Get back in here!!)"
+
+char gallante e=ba
+"A not guilty verdict, Sir Lawyer. {n}Get that and we will need not {n}meet again."
+
+pause 40 script
+"{f}{next}"
+char nothing
+pause 60 script
+
+char phoenix hide
+"{sfx shout-objection}W-Wait!!!"
+
+"{f}{f}{s10}{next}"
+
+bg flight
+char maya hide
+"Nick! {n}{p20}Is he..."
+char phoenix hide
+"He can't be!{n}{p30}{delay 2}{p10}..."
+pause 30 script
+"{c089}(Is he? {p20}Did he really just {c940}fly out {n}that window{c089}?!)"
+
+bg black fade
+pause 80 script
+mus
+pause 80
+mus Jingle - Slight Break.ogg
+bg tobecontinued fade
+pause 300
+mus
+bg nothing fade
+exit

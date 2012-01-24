@@ -1,6 +1,6 @@
 bg black
 nt
-"{c090}{center}{type}July 19, 10:00 AM{n}Eldoon Clinic"
+"{c090}{center}{type}July 19, 10:30 AM{n}Eldoon Clinic"
 bg clinic fade
 pause 60
 set _ev gumshoe$
@@ -29,7 +29,9 @@ char gumshoe e=crash-pumped
 "The doctors told me that being{n}hit by something from that height{n}would normally kill you!"
 
 char maya e=shock
-"Wow!{n}{p20}{char maya e=confident}You must be really lucky to have{n}survived!"
+"Wow!"
+char maya e=confident
+"You must be really lucky to have{n}survived!"
 
 char gumshoe e=crash
 "Yeah..."
@@ -38,7 +40,7 @@ char gumshoe e=crash-laugh
 
 char phoenix hide
 "{c089}(That's usually not something you {n}want to say about yourself.)"
-"When you say 'from that height,' {n}what do you mean?"
+"When you say 'from that height,' {n}{p5}what do you mean?"
 
 char gumshoe e=crash
 "Something came right out of the sky {n}and hit me!!"
@@ -47,9 +49,10 @@ char maya e-thinking
 "Maybe it was a meteorite?"
 
 char gumshoe e=crash
-"Well... It probably wasn't actually{n}'out of the sky'..."
+"Well... {p10}It probably wasn't actually{n}'out of the sky'..."
 "It would've been neat if is was{n}a meteorite though."
-"{char gumshoe e=crash-pumped}Maybe I'll get some alien superpowers{n}from it!"
+char gumshoe e=crash-pumped
+"Maybe I would've gotten some {n}alien superpowers from it!"
 
 char phoenix hide
 "I don't think getting hit by{n}a meteorite would give you {n}superpowers."
@@ -58,7 +61,7 @@ char gumshoe e=crash
 "You sure about that, pal?"
 
 char phoenix hide
-"{c089}(What kind of crazy sci-fi{n}movie does this guy think he's in?!)"
+"{c089}(What kind of crazy sci-fi movie {n}does this guy think he's in?!)"
 
 char gumshoe e=crash
 "It probably actually came from {n}one of the buildings around me."
@@ -78,28 +81,32 @@ sfx showevidence.wav
 "They let me keep it as a souvenir!"
 
 char phoenix hide
-"........."
+"{delay 1}........."
 
 char maya e=worried
-"...What is it?"
+"...{p20}What is it?"
 
 char gumshoe e=crash
 "Beats me, pal. {p10}{n}From what I can tell, it used to be {n}{c940}an object of some sort{c999}!"
 
 char phoenix hide
-"........."
+"{delay 1}........."
+1440
+790
 
-char gumshoe e=crash
+char gumshoe e=crash-laugh
 "Do you want it?"
 
 char phoenix hide
 "Well, I--"
-nt
-addev smashed
-"{sfx evidence updated.wav}{c099}Smashed object received as gift."
-pause 20
 hideevl
 sfx showevidence
+fg smashedev name=smashedev
+addev smashed
+nt
+"{sfx evidence updated.wav}{c099}Smashed object received as gift."
+delete name=smashedev
+pause 20 script
 
 char phoenix hide
 "...Thanks."
@@ -115,21 +122,21 @@ char gumshoe e=crash
 "Yeah. I think it was almost 6:00 AM.{n}The sun hadn't come up yet."
 
 char phoenix hide
-"6 AM?{n}WHat were you doing out so early?"
+"6 AM?{n}What were you doing out so early?"
 
-char gumshoe e=crash
-"{delay 1}......{n}{char gumshoe e=crash-pumped}......{n}{char gumshoe e=crash-laugh}{delay 2}......{p30}{next}"
+char gumshoe e=crash(blink)
+"{delay 1}......{e crash-pumped(blink)}{n}......{n}{e crash-laugh(blink)}{delay 2}......"
 char gumshoe e=crash
 "I can't remember.{n}Sorry."
 
 char phoenix hide
 "That's okay.{n}It doesn't really matter."
-"{c089}(The blow must've caused him to{n}forget some of the details.{n}Poor guy.)"
+"{c089}(The blow must've caused him to{n}forget some of the details.{n}{p20}Poor guy.)"
 
 mus Steel Samurai ring tone.ogg
 set _ev newcell
 showevl
-pause 200
+pause 300 script
 mus
 sfx phoneoff
 char phoenix hide
@@ -145,7 +152,7 @@ char ??? hide
 "{sfx shout-general}Please!!{n}{sfx shout-general}You need to help him!!!"
 
 char phoenix hide
-"{sfx shout-general}Who?!"
+"{sfx damage}Who?!"
 
 char ??? hide
 "He's at the detention center!{n}{sfx shout-loud}HURRY!!!"
@@ -154,6 +161,7 @@ hideevl
 
 char phoenix hide
 "..."
+pause 40 script
 
 char maya e=normal
 "Who was that?"
@@ -163,9 +171,9 @@ char phoenix hide
 "Somebody wants me to defend {n}somebody else. I got that much."
 
 char gumshoe e=crash-pumped
-"{sfx shout-loud}Wait!!! {n}{p50}{char gumshoe e=crash}Defend...?"
-pause 60
-"You're a lawyer again?"
+"{sfx damage}Wait!!! {n}{p50}{e crash}Defend...?"
+pause 60 script
+"{sfx realization}You're a lawyer again?"
 
 char phoenix hide
 "Gumshoe, you testified in one{n}of my trials just a few days ago!"
@@ -176,7 +184,7 @@ char gumshoe e=crash-laugh
 "Did I...?"
 
 char phoenix hide
-"...Well, I'm glad to see that you're {n}okay physically."
+"...{p10}Well, I'm glad to see that you're {n}okay physically."
 
 char maya e=normal
 "You should go down to the detention{n}center and see who your new client {n}is."
@@ -186,7 +194,7 @@ char phoenix hide
 "You mean you aren't coming?"
 
 char maya e=disheartened
-"Well, I've been kind of busy lately..."
+"Well, {p5}I've been kind of busy lately..."
 "I still have a lot of preparations{n}to make."
 
 char phoenix hide

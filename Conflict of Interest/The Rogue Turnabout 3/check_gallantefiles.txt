@@ -1,0 +1,3 @@
+bg Gallantefiles fade y=192
+gui Button {gpage2} x=140 y=200 Page 2
+gui Back y=350

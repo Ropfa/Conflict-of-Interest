@@ -9,10 +9,20 @@ showlist
 menu scene5
 
 label Wright Anything Agency
-script scene2menu
+script scene10menu
 
 label Detention Center
-script scene4
+script scene4menu
 
 label Reception
+noflag receptionget scene6
+flag receptionget ifthen
+label scene6
 script scene6
+label ifthen
+noflag metsarah scene6b
+flag metsarah ifthen2
+label scene6b
+script scene6menu
+label ifthen2
+script scene8menu

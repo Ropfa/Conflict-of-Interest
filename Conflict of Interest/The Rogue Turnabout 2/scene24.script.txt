@@ -1,0 +1,297 @@
+mus
+bg defense
+fg dbench
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"Sarah... {n}I could accept a small slip-up..."
+"But your testimony has shown not {n}one, {p20}but TWO major contradictions!"
+
+bg witness
+fg wbench
+char sarah e=bored
+"T-{p5}{s2}two?"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I can't accept that as just {n}coincidence!"
+"First, you conveniently lose your {n}phone when you need it the most..."
+"...and then it turns out that it was {n}impossible for the supposed murder {n}weapon to have killed the victim!"
+
+bg witness
+fg wbench
+char sarah e=bored
+"I... {p20}Well, I...{n}{p20}I guess I was mistaken?"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I'd say that's also rather {n}convenient...{p20}{next}"
+
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I'm going to stop you before you go {n}any further."
+"This woman is innocent. {n}{p10}Don't even think about accusing her."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"...{sfx idea}!{n}{p20}I... {p20}I-{p5}I hadn't..."
+char sarah hide
+"Umm... {p10}Excuse me..."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"I know your tricks. {n}{p10}You hadn't...{n}{p20}But you were going to."
+
+bg defense
+fg dbench
+char phoenix e=headshake
+pause 50 script
+char phoenix e=normal
+"You're just jumping to conclusions!"
+
+bg aide
+char maya e=bench-hum
+"That does tend to be how your trials {n}turn out."
+char phoenix hide
+"What does?"
+char maya e=bench
+"You know. Accuse the witness, and {n}prove they're the real killer."
+char sarah hide
+"Could I speak for just a moment...?"
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(She was the only other person on {n}that floor that morning... {n}Maybe...)"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Just like a defense attorney {n}to place the blame anywhere but {n}on their client."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I'll place the blame on whoever {n}deserves it!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"...Or on whoever {sfx shout-general}YOU say deserves {n}it."
+char sarah hide
+"Excuse me!!"
+
+bg judge
+char judge e=normal
+"Mr. Wright, were you going to {n}accuse the witness of murder?"
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I don't actually have anything that {n}connects her to the crime...)"
+"{c089}(It would be idiotic to try that.)"
+char phoenix e=normal
+"No, Your Honor."
+
+bg judge
+char judge e=normal
+"Well, then perhaps we should--{p20}{next}"
+char judge e=surprised
+char sarah hide
+"{f}{sfx shout-general}HE{f}{sfx shout-shock}EEE{f}{sfx shout-loud}YY{f}Y!!!"
+
+bg courtsarah
+char sarah hide
+"{sfx shout-angry}SHUT UP AND LISTEN TO ME WHILE {n}I'M TALKING!!!"
+pause 30 script
+sfx shockingreveal.wav
+pause 30 script
+char obadiah hide
+"..."
+pause 20 script
+char phoenix hide
+"..."
+pause 20 script
+
+bg judge
+char judge e=surprised
+"Y-Yes--{p10}{next}"
+
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+bg witness
+fg wbench
+char sarah e=angry
+"Parker killed him. It doesn't matter {n}whether or not he used that knife..."
+"...and it doesn't matter when I called {n}the police!"
+"He's still the only one who went {n}into the room!!"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"There was the blackout!"
+
+bg witness
+fg wbench
+char sarah e=angry
+"Weren't you listening to me before?"
+"I would've still seen anybody coming {n}into that room... {n}And I didn't see {sfx shout-general}anybody!"
+"Parker entered."
+"Parker left."
+"Nobody else!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That certainly puts a damper on the {n}defense's case, doesn't it?"
+
+bg judge
+char judge e=nodding
+pause 50 script
+char judge e=normal
+"Yes. {n}If the defendant was the only {n}one to come in the room..."
+char judge e=warning
+"...then he's the only possible {n}murderer!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Let's close this case up."
+"There's no reason to make it longer {n}than it has to be."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(No! {p10}Not yet!)"
+"Wait, Your Honor!"
+"I request that the witness testify{n}again!"
+
+bg witness
+fg wbench
+char sarah e=normal
+"...{sfx realization}!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"We still haven't heard a detailed {n}report on the blackout!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You mean a detailed report on {n}nothing?"
+"You want her to testify on all the {n}suspicious people she didn't see pass {n}through?"
+
+bg defense
+fg dbench
+char phoenix e=pointing
+"There had to have been some gap {n}where the killer snuck in!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"The killer didn't sneak in. {n}{p20}He walked right past her."
+mus
+"{sfx shout-objection}She has testified to this very fact!"
+
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Crap...{n}{p20}Poor Mr. Parker.)"
+
+bg judge
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"I agree with Mr. Williamson on this."
+"There's no reason to hear from the {n}witness again."
+char sarah hide
+"Umm, actually...{p20}{next}"
+
+mus Arle Stage.ogg
+set _music_loop Arle Stage - loop.ogg
+bg witness
+fg wbench
+char sarah e=ditzy
+"Yeah, I'll testify!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Ms. Keyes, I'd really appreciate it if {n}you left those kind of decisions up {n}to me."
+
+bg witness
+fg wbench
+char sarah e=ditzy
+"No, you know, {p10}it's okay!{n}{p20}I'm totally fine with handling the {n}responsibility!"
+
+bg prosecution
+fg pbench
+char obadiah e=worried
+"That's... {p10}not what I meant."
+
+bg witness
+fg wbench
+char sarah e=ditzy
+"Let me do it, Mr. Judge! {n}I can tell you allll about how {n}it has to be Wayne!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"The witness WANTS to testify, {n}Your Honor."
+"Are you really going to deprive her of {n}that pleasure?"
+
+bg judge
+char judge e=surprised
+"Why... {p20}No, I suppose not."
+"If it means that much to you, I see no {n}reason not to."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"{sfx shout-general}This is absurd! {n}This will just be a waste of time!"
+
+bg witness
+fg wbench
+char sarah e=ditzy
+"Oh, quiet you..."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{delay 1}What..."
+
+bg witness
+fg wbench
+char sarah e=ditzy
+"I'm doing this for you though, {n}Feenie-poo."
+"So that means this Saturday..."
+char phoenix hide
+"{sfx shout-scream}Hey! {sfx shout-objection}Wait!"
+
+bg aide
+char maya e=bench-hum
+"Just agree to it, Nick."
+char phoenix hide
+"{c089}(Is that really the only way?!)"
+
+bg witness
+fg wbench
+char sarah e=ditzy
+"So, I guess...{n}{p20}A testimony, right?{n}{p20}...About the blackout, right?"
+mus
+
+script scene25sarahtestimony3

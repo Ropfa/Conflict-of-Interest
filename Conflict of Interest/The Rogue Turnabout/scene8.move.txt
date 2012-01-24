@@ -1,0 +1,30 @@
+label top
+bg reception
+
+list scene8move
+li Entrance
+li Penthouse
+showlist
+menu scene8
+
+label Entrance
+noflag securityupdate1 AND securityupdate2 AND sarahkeyestalk AND whatyousawtalk scene5
+flag securityupdate1 AND securityupdate2 AND sarahkeyestalk AND whatyousawtalk scene9
+label scene5
+mus
+script scene5menu
+label scene9
+mus
+delev security
+addev security2
+script scene9
+
+label Penthouse
+noflag sarahpsyche scene7
+flag sarahpsyche scene12
+label scene7
+mus
+script scene7menu
+label  scene12
+mus
+script scene12

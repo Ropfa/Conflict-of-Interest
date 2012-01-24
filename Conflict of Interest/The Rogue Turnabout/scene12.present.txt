@@ -1,0 +1,217 @@
+present
+label top
+menu scene12
+bg pent3
+
+label attorneybadge
+set _ev attorneybadge
+showevl
+char watters e=serious
+"So you're a defense lawyer.{n}{p5}Are you new?"
+char phoenix hide
+"Well, no... Not exactly."
+char watters e=confused
+"Huh? How come we've never {n}met then?"
+char phoenix hide
+"I've been taking a little break from {n}the courtroom."
+"You might've heard my name on the {n}news though. I helped set up the {n}new jurist system."
+hideevl
+char watters e=shock
+pause 30 script
+mus
+sfx shout-objection
+fg notsofast
+pause 5 script
+char watters e=angry
+"WAIT!!!"
+pause 30
+char watters e=thinking
+"When did we get a jury system?"
+char phoenix hide
+"{c089}(How can you be on law enforcement {n}and not know that?!)"
+mus Metropolis Zone.ogg
+set _music_loop Metropolis Zone - loop.ogg
+goto top
+
+label knife
+set _ev knife
+showevl
+char watters e=serious
+"No question about it, man.{n}That's what killed him."
+char phoenix hide
+"You found the knife beside the body?"
+char watters e=confident
+"Yeah, it's covered in the victim's {n}blood... and the defendant's fingerprints."
+"I'd say that's pretty decisive {n}evidence, wouldn't you?"
+char phoenix hide
+"Yes, it certainly is."
+"{c089}(No wonder Mr. Parker was worried I {n}wouldn't take his case!)"
+hideevl
+goto top
+
+label blackmail
+set _ev blackmail
+showevl
+char phoenix hide
+"It's clear form this letter that somebody was blackmailing the victim."
+"Unfortunately for him, he never made it to his meeting."
+char watters e=thinking
+"What do you think he was being blackmailed over?"
+char phoenix hide
+"{sfx shout-general}{char watters e=shock}You know more about this than I do!"
+char watters e=thinking
+"Oh, right."
+pause 50 script
+char watters e=serious
+"Nope. No idea."
+char phoenix hide
+"{c089}(Somebody tried to meet with the victim this morning... But a third party snuck in here and killed him before that could happen.)"
+hideevl
+goto top
+
+label autopsy
+set _ev autopsy
+showevl
+char watters e=shock
+pause 20
+char watters e=serious
+"Hey, whoa, hey.{n}I don't wanna read that thing any more than I have to."
+char phoenix hide
+"You've seen the actual body.{n}It can't be any worse than that."
+char watters e=serious
+"Look, I've seen death before.{n}I can handle it little blood.{n}But this was not a little!"
+"That guy's corpse is gonna give me nightmares!"
+"If you wanna show that off to somebody, go talk with {c940}Ms. Keyes{c999}. She seems to like that kind of stuff."
+hideevl
+goto top
+
+label rivales$
+set _ev rivales$
+showevl
+char phoenix hide
+"What do you know about the victim?"
+char watters e=confident
+"Michael Rivales. {n}Fifty-eight years old.{n}No living children."
+"He lived and worked out of this {n}building. Didn't come out much."
+"He was actually kind of famous. {n}You heard of him?"
+char phoenix hide
+"The name does sound familiar."
+"{c089}({c940}Rivales{c089}...{n}Where have I heard that name {n}before?"
+hideevl
+goto top
+
+label maya$
+char watters e=serious
+"What did you say your name was?{n}{p10}{delay 2}Maya..."
+char maya e=normal
+"Fey."
+char watters e=confused
+"Fey...{n}{p20}As in those ghost people?"
+char maya e=cheerful
+"We're not ghosts!{n}We're {c940}spirit mediums{c999}!"
+char watters e=confused
+"Oh, right. {p10}Sorry."
+pause 20 script
+"Ghosts creep me out.{n}I don't like them."
+char maya e=mad
+"Not ghosts! {sfx shout-general}Spirits!"
+char watters e=confused
+"Well, either way...{n}{p10}They're still creepy."
+char maya e=confident
+"Maybe someday I can channel {n}somebody for you, Mr. Watters."
+"Then you'll see they're not all bad!"
+char watters e=thinking
+"...{p10}I think I'll pass on that."
+goto top
+
+label watters$
+set _ev watters$
+showevl
+char watters e=smile
+"Detective Mark Watters at your {n}service, man!"
+char phoenix hide
+"It was nice of you to let us {n}investigate the scene."
+char watters e=smile
+"Nah, don't worry about it. I do what I {n}can to help. {p10}You seem like an okay {n}guy."
+char phoenix hide
+"You sure you won't get in trouble {n}over it?"
+char watters e=sad
+"I... {p10}Well... {p20}I might. {p20}Just don't tell {n}anyone though, yeah?"
+char watters e=confident
+"What they don't know can't hurt 'em! {n}It's only bad if we get caught!"
+char phoenix hide
+"{c089}(A police detective is the last person {n}I'd expect to hear that from.)"
+hideevl
+goto top
+
+label parker$
+set _ev parker$
+showevl
+char watters e=serious
+"Hey, good luck defending that guy. {n}You're gonna need it."
+char phoenix hide
+"What are the main points against {n}him?"
+char watters e=serious
+"Two things:"
+"One: {p10}His fingerprints are on {n}the murder weapon."
+"Two: {p10}He was scene entering the {n}crime scene around the time of death."
+char phoenix hide
+"Mr. Parker wouldn't kill anyone.{n}I know he's innocent. {p10}Somewhere {n}out there is proof of that."
+char watters e=confused
+"Well, let me know when you find it. {n}"He's such a nice guy" doesn't normally {n}seem to fly well."
+hideevl
+goto top
+
+label gallante$
+noflag gallantepresent nopresent
+flag gallantepresent yespresent
+label nopresent
+char phoenix hide
+"Detective, I was wondering if you {n}could tell me more about the {n}murderer."
+char watters e=confident
+"Well, he worked for the victim..."
+char watters e=thinking
+"Which is kind of odd, considering how {n}jittery the guy is..."
+char phoenix hide
+"No, not Mr. Parker...{n}{p20}{sfx realization}I was referring to Sir Gallante."
+music_fade_out
+char watters e=serious(blink)
+"........{delay 1}.......{n}{e angry}You weren't supposed to know about{n} that, man."
+char phoenix hide
+"{sfx realization}!!{n}{p20}{c089}(Urk!)"
+char watters e=angry
+"Only the police are supposed to {n}know that Parker is that guy."
+char phoenix hide
+"S-Sorry!!"
+char watters e=angry
+pause 60 script
+char watters e=confident
+"Heh! Don't sweat it!"
+"I don't know how you found out, {n}but ya did."
+"I might as well tell you what you want {n}to know, right?"
+char phoenix hide
+"{c089}("It's okay, Mr. Lawyer. I'm sure the {n}prosecution won't mind me telling {n}you everything!")"
+mus Investigation - Middlegame.ogg
+music_fade_in
+setflag gallantepresent
+goto top
+
+label yespresent
+char watters e=serious
+"That guy's been a real pain for us."
+"You couldn't even begin to imagine all the issues we've had."
+"It's all we can do to keep the public from finding out."
+char phoenix hide
+"{c089}("Hey, man! This is top secret... {p20}so don't tell anyone!")"
+goto top
+
+label none
+char watters e=serious
+"Sorry, man. I don't think I know {n}anything about that."
+char phoenix hide
+"But it's related to the case!"
+char watters e=thinking
+"Must not be, since I don't know {n}about it."
+char phoenix hide
+"..."
+goto top

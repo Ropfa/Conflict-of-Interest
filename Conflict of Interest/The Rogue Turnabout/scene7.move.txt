@@ -1,0 +1,17 @@
+label top
+bg pent2
+
+list scene7move
+li Reception
+showlist
+menu scene7
+
+label Reception
+noflag knifeget AND blackmailget AND witnessget AND windowget AND autopsyget scene6
+flag knifeget AND blackmailget AND witnessget AND windowget AND autopsyget scene8
+label scene6
+mus
+script scene6menu
+label scene8
+mus
+script scene8

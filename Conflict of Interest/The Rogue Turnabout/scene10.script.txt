@@ -1,0 +1,123 @@
+bg black
+nt
+"{c090}{center}{text}July 19, 5:30 PM{n}Wright Anything Agency"
+bg wrightanything fade
+pause 60
+char maya e=normal
+"It should be in here somewhere."
+char nothing
+pause 100 script
+char maya e=mad fade
+pause 40 script
+char phoenix hide
+"{c089}(This is the part where she tells me {n}that she can't find it in this mess.)"
+pause 30 script
+sfx zoom.wav
+pause 30 script
+char maya e=surprised
+
+char ??? hide
+"{sfx shout-general}Hey!{n}{p20}{sfx shout-loud}Open up!!"
+
+char maya e=surprised
+"Aah! {sfx shout-scream}Who's there?!"
+
+sfz zoom.wav
+char ??? hide
+"{sfx shout-objection}Lemme in!"
+
+char phoenix hide
+"{sfx shout-general}It's unlocked!"
+pause 60 script
+
+char ??? hide
+"{delay 1}...Oh."
+
+sfx dooropen.wav
+pause 60 script
+char black e=normal fade
+char black e=normal nametag=???
+"{delay 1}Whoooooooaaaaa...{n}Sorry 'bout that, dude."
+char black e=peace nametag=???
+"{delay 1}I guess the whole time I was pushing {n}instead of pulling!"
+
+char phoenix hide
+"..."
+
+char black e=pumped nametag=???
+"{sfx shout-general}Hey!!{n}{p10}{sfx shout-general}Are you doin' it?!"
+
+char phoenix hide
+"Doing what?"
+
+char black e=pumped nametag=???
+"{delay 1}Duuuuude, really?"
+"{delay 1}You were supposed to be defending {n}my buddy Wayne!"
+
+char phoenix hide
+"Oh, Mr. Parker?{n}Yes, I'm defending him.{p20}{n}Who are you?"
+
+mus Eccentric 2007.ogg
+
+char black e=peace nametag=???
+"{delay 1}I'm Virgil Black. {n}Wayne's buddy."
+
+char phoenix hide
+"{c089}(So this is the Virgil that Mr. Parker {n}told us about.)"
+set _ev black$
+addev black$
+"You and Mr. Parker are close?"
+
+char black e=peace
+"{delay 1}We're waaay close, dude."
+"{delay 1}That's how I know he's innocent. {n}Wayne'd never do something like {n}that!"
+
+char maya e=confident
+"We know he isn't Sir Gallante!"
+
+char black e=peace
+"{delay 1}All riiiiight! Thanks, dude! {n}Knew I could count on you."
+pause 60 script
+
+char black e=peace
+"..."
+
+char phoenix hide
+"Did you want to say anything else?"
+
+char black e=normal
+"{delay 1}Nah."
+
+char phoenix hide
+"Okay.{n}Well, it was nice meeting you, {n}Mr. Black."
+
+char black e=pumped
+"{delay 1}Whoooooaa, wait! Sorry, dude!"
+"{delay 1}I totally spaced and forgot that you {n}had an investigation to do! {n}Sorry to bother you!"
+
+char phoenix hide
+"Good..."
+
+mus
+char nothing
+sfx hideevidence.wav
+pause 20 script
+sfx GK doorslam.wav
+pause 20 script
+
+char phoenix hide
+"...bye."
+pause 60 script
+
+char maya e=thinking fade
+"He seems like a rather strange {n}person."
+
+char phoenix hide
+"He came over here just to wish us {n}good luck."
+"{c089}(I can tell that he's a very devoted {n}friend..."
+"{c089}(...but was that really all he {n}came over here for?)"
+
+char maya e=normal
+"The glue should be somewhere in {n}here."
+
+script scene10menu

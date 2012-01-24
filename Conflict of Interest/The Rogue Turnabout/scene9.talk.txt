@@ -1,0 +1,230 @@
+label top
+bg entrance
+
+list scene9talk1
+li Infiltrating the crime scene
+flag infiltratingtalk infiltratingtalk
+showlist
+list scene9talk2
+menu scene9
+label infiltratingtalk
+li Sir Gallante
+label scene9talk
+showlist
+menu scene9
+goto scene9talk
+
+label Infiltrating the crime scene
+char phoenix hide
+"Why do you want to see a murder {n}scene so much?"
+char cody e=angry
+"Really? You don't know?"
+char phoenix hide
+"No."
+char cody e=confident
+"Geez, pops. {n}I would've guess that a guy like you {n}would realize right away..."
+"I wanted to see {c940}one of his works{c999}!"
+char phoenix hide
+"Excuse me...{n}{p20}But what do you mean by "his"?"
+char cody e=confident
+"You know... {p10}him!{n}{c940}{p30}{sfx realization}Sir Gallante{c999}!"
+char phoenix hide
+"Sir Who?"
+char cody e=confident
+"{sfx realization}Sir Gallante!{n}{p20}{sfx realization2}The Tenebrous Templar!{n}{p20}{sfx realization3}The Terror of the Underworld!"
+char cody e=confident
+"...{n}{p40}{e sad}You really don't know, do you?"
+char phoenix hide
+"Sorry."
+char maya e=normal
+"Nick, Sir Gallante is a criminal that {n}the police have been chasing for {n}over three years."
+char cody e=angry
+"Hey! He's not a criminal!{n}{p20}{c940}He's a super hero!"
+char phoenix hide
+"A super hero?{n}{p10}How do I not know about this?!"
+char maya e=mad
+"Maybe if you actually paid attention {n}to the news instead of playing cards {n}all day..."
+char phoenix hide
+"{s1}*grumble*"
+pause 20 script
+"So, Cody... {p10}How do you know that {n}this "super hero" of yours was {n}the murderer?"
+char cody e=happy
+"I saw him!"
+sfx realization
+pause 60 script
+mus Suspense.ogg
+music_fade_in
+set _music_loop Suspense - loop.ogg
+char phoenix hide
+"You... {p10}You saw him?!"
+char cody e=happy
+"Yeah! It was early this morning."
+char phoenix hide
+"You weren't... {n}{p10}You didn't... {n}{p10}see it, {p20}did you?"
+char cody e=sad
+"No...{n}{p20}{e happy}But I did get a picture!"
+pause 30 script
+"{f}{next}"
+bg codysphoto
+char nothing
+"{f}{next}"
+pause 20 script
+mus Pinch!.ogg
+set _music_loop Pinch! - loop.ogg
+pause 20 script
+char phoenix hide
+"Wh-What the...?
+char cody hide
+"That's him alright! The one and only {n}Sir Gallante!"
+char phoenix hide
+"Why is he... {n}well..."
+sfx hideevidence
+"{f}{next}"
+bg entrance
+char cody e=happy
+"He's up there to deliver the righteous {n}hand of {sfx shout-scream}JUSTICE!!!"
+char phoenix hide
+"Um...{n}{p20}Okay..."
+char cody e=happy
+"He dresses up like a knight to {n}strike fear into the hearts {n}of all the evildoers!!"
+char maya e=thinking
+"I guess killing them isn't scary {n}enough."
+char phoenix hide
+"{c089}(Cody took that photo, so that {n}means he was here when the crime {n}happened.)"
+"{c089}(I wonder if he might've seen {n}anything else happen around here.)"
+set _ev codyphoto
+addev codyphoto
+fg codyphotoev name=codyphotoev
+nt
+"{sfx evidence updated}{c099}Cody's Photo added to the court {n}record."
+delete name=codyphotoev
+setflag infiltratingtalk
+goto top
+
+label Sir Gallante
+char cody e=happy
+char phoenix hide
+"So who is this Sir Gallant?"
+char cody e=angry
+"That's "Sir {sfx shout-general}Gallante," pops! {p10}{sfx shout-general}{n}Get it right!"
+char maya e=pumped
+"Yeah, Nick! {n}Get it right!"
+char phoenix hide
+"Well, how was I supposed to know {n}that was a silent E at the end?!"
+char cody e=confident
+"Sir Gallante's only the greatest {n}super hero who ever lived!"
+char maya e=mad
+"No way! {n}The Steel Samurai will never be {n}replaced!"
+char cody e=confident
+"{sfx shout-general}Hah! {p20}Steel Samurai's cool..."
+"But he's just a character on a {n}TV show."
+"Sir Gallante's the real thing!"
+char phoenix hide
+"So he actually goes around killing... {p20}{n}um... {p30}bad guys?"
+char cody e=confident
+"You got it!"
+char phoenix hide
+"{c089}(So in other words, he's a serial {n}killer.)"
+char cody e=happy
+"Sir Gallante is the savior of this city!" 
+"He's vanquishing all the evildoers so {n}that the good people can live in {n}peace!"
+set _ev poster
+showevl
+sfx showevidence.wav
+"Check it out."
+"I made it myself."
+char phoenix hide
+"I find it hard to believe somebody {n}actually goes around killing {n}criminals, dressed up like a knight."
+"{c089}(Although to be fair, I've seen {n}stranger things happen.)"
+char cody e=angry
+"You're just jealous because you {n}didn't think of it first."
+"He's the greatest!"
+char phoenix hide
+"What's this "Gallante's creed" your {n}poster talks about?"
+char cody e=confident
+"He's got two rules he needs to {n}follow..."
+"Protect the innocent... {n}{p10}{e happy}And slay the evil!"
+hideevl
+char phoenix hide
+"Slay the evil...{n}{p20}Definitely sounds like good role {n}model material there."
+char cody e=happy
+"You bet!"
+setflag sirgallantetalk
+addev poster
+fg posterev name=posterev
+nt
+"{sfx evidence updated.wav}{c099}Gallante Promo Poster added to the {n}court record."
+delete name=posterev
+pause 20 script
+char phoenix hide
+"Say, Cody...{n}{p10}How do you know so much about this {n}guy?"
+char cody e=happy
+"I'm his biggest fan! {n}I know all about him!"
+mus
+"{f}{next}"
+sfx dramapound.wav
+invert name=entrance
+pause 40 script
+bg black
+char cody e=happy
+sfx rolling.ogg
+pause 10
+bg 2-chain-bg
+char cody e=happy
+fg 1-lock-chain name=chains
+"{s 80 4}{next}"
+pause 20
+fg lock y=40 name=lock1
+"{f}{next}"
+sfx owned.ogg
+pause 70
+char phoenix hide
+"{c089}(What? A psychelock?)"
+"Cody, are you lying to me?"
+char cody e=angry
+"Well, I...{n}{p20}I...{n}{p20}{e sad}Yeah."
+pause 60
+
+sfx lockbreaks.wav
+delete name=lock1
+fg 1-lock-breaks y=68 x=-30
+
+//X= SUBTRACT 30 Y= ADD 28
+
+pause 20
+sfx rolling.ogg
+"{s 40 4}{next}"
+delete name=chains
+pause 80
+bg entrance fade
+char cody e=sad
+sfx testimony2.wav
+fg UnlockSuccessful name=unl
+penalty 100
+pause 30
+delete name=unl
+pause 60
+
+char phoenix hide
+"{c089}(Huh... {p20}I was expecting a bit more {n}than that.)"
+"What were you trying to hide from {n}me, Cody?"
+char cody e=sad
+"Hey, no way! {p10}I'm not even gonna {n}think about trying to hide stuff {n}from you this time!"
+char cody e=confident
+"You have those secret lawyer super {n}powers that tell when I'm lying!"
+pause 60 script
+char maya e=thinking
+"Um... {p20}Cody..."
+char phoenix hide
+"Let's just leave it, Maya.{n}Things might be easier this way."
+"{c089}(Haha! Did I really tell him that?)"
+mus Investigation - Opening.ogg
+set _music_loop Investigation - Opening - loop.ogg
+char cody e=angry
+"To be honest, pops, I really {n}don't know that much."
+"I just know what I've heard on the {n}news."
+"All that stuff I told you is public {n}information."
+char phoenix hide
+"{c089}(Well, I guess that clears that matter {n}up.)" 
+setflag sirgallantetalk
+goto top

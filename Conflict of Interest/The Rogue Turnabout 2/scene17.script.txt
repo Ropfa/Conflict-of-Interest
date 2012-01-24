@@ -1,0 +1,284 @@
+mus
+clear
+nt
+"{c090}{center}{type}July 20, 9:30 AM{n}District Court{n}Courtroom No. 3"
+pause 30
+
+sfx courtmurmur
+bg court fade
+pause 100
+fg ani-judge-gavel
+pause 30 script
+clear
+
+mus Court.ogg
+bg judge
+char judge e=normal
+"Court is now in session for the trial {n}of Wayne Parker."
+bg defense
+fg dbench
+char phoenix e=normal
+"The defense is ready, Your Honor."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"The prosecution is ready."
+bg judge
+char judge e=normal
+"You may give your opening {n}statements."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You Honor, we have been told {n}"Thou shalt not kill."" 
+"Everybody here has heard of the {n}so called "super hero" Sir Gallante, {n}who goes through our streets..."
+"...slaying criminals."
+"While his intentions may have been {n}good, his actions are still {n}inexcusable."
+"As evil as the victim, Michael Rivales, {n}may have been..."
+"...intentionally taking another {n}human's life is never the correct {n}course of action."
+"Gallante evaded us for some time, {p20}{n}but in the end, he has been captured."
+"Today, you see him before you for {n}what he truly is..."
+bg witness
+fg wbench
+char parker e=disturbed
+pause 30 script
+char obadiah hide
+"...Nothing more than a scared, pitiful {n}husk of a man."
+char parker e=freakout
+sfx shout-objection
+pause 30 script
+"{e crash}{s10}{sfx thud-body}{next}"
+pause 40 script
+bg judge
+char judge e=surprised
+"My, it's certainly hard to believe that {n}this quivering man would be capable {n}of murder!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Looks can be deceiving. {n}He may appear meek, but he is indeed {n}a vicious killer."
+"The prosecution will prove to you {n}today that the defendant, Wayne {n}Parker..."
+"...is not only the culprit in this {n}case... but also in all of Sir {n}Gallante's many killings."
+bg judge
+char judge e=normal
+"Thank you, Mr. Williamson."
+"It appears that you have everything {n}under control today."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"As always, Your Honor."
+bg aide
+char maya e=bench-hum
+"Wow, Nick!{n}Detective Watters was right."
+"This guy is good."
+char phoenix hide
+"{c089}(I'll definitely have to be on my toes {n}here.)"
+bg judge
+char judge e=normal
+"Does the defense have an opening {n}statement?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Your Honor, the defense believes {n}that Mr. Parker is innocent..."
+"Guilty of nothing more than being in {n}the wrong place at the wrong time."
+"I believe that the evidence shown {n}today will prove this."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You "believe"...?"
+bg defense
+fg dbench
+char phoenix e=normal
+"I... {e thinking}Yes, why?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If you truly have the evidence you {n}say you do, {p10}then you should not {n}"believe.""
+"You should "know.""
+bg defense
+fg dbench
+char phoenix e=normal
+"I'm... {p10}I'm sorry?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You should have had all your {n}answers before you walked through {n}that door."
+"Your normal tactics won't work {n}today, Wright."
+"I'm going to reveal you for the sham {n}that you are."
+bg defense
+fg dbench
+char phoenix e=normal
+sfx realization.wav
+"Sham?!"
+bg judge
+char judge e=surprised
+"Have you two met before?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No, Your Honor.{p30}{n}Never."
+bg aide
+char maya e=bench-strict
+"What was that all about?!"
+char phoenix hide
+"I'm not sure... {p20}But I get the feeling {n}that he isn't too fond of me."
+char maya e=bench-strict
+"He's never even met you! {p15}{n}You aren't a sham!!"
+char phoenix hide
+"Thank you."
+char phoenix hide
+"{c089}(Good old Maya will always be there {n}for me.)"
+set _ev obadiah$
+addev obadiah$
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Enough chitchat. {p20}{n}We've wasted enough time already."
+bg judge
+char judge e=warning
+"Yes! {n}Enough chitchat, Mr. Wright!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(He started it!)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"The victim, whom I'm sure you've all {n}heard of, was Michael Rivales..."
+"...crime king of the underworld in this {n}city."
+"The defendant was caught entering {n}the Rivales penthouse on the {n}thirtieth story of the Tower."
+bg judge
+char judge e=surprised
+"The thirtieth story? {p10}{n}That would be no easy task to climb {n}up!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Certainly not. {p10}{n}Nobody could be up there by mere {n}accident."
+"Which, {p5}of course, {p5}means that this {n}was premeditated."
+bg defense
+fg dbench
+char phoenix e=pointing
+sfx shout-objection
+"Wait just a minute! {p10}{n}You don't know that!"
+"There's plenty of other reasons he {n}could be up there!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Oh, really? {p20}{n}Like what?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Like... Well...{p40}{next}"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That's what I thought."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Dammit! {n}I can't let him get the upper hand this {n}early!)"
+bg judge
+char judge e=normal
+"I'd like to hear more about the arrest."
+bg prosecution
+fg pbench
+"For that, {p10}I have a witness."
+"She can tell you everything you need {n}to know."
+bg judge
+char judge e=nodding
+pause 40 script
+char judge e=normal
+"Very well. {n}Bring her in."
+
+bg black fade
+pause 60 script
+bg witness fade
+fg wbench 
+char sarah e=normal
+"Umm... Hi, everybody?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Please state your name and {n}occupation for the court."
+
+mus Arle Stage.ogg
+set _music_loop Arle Stage - loop.ogg
+
+bg witness
+fg wbench
+char sarah e=normal
+"My name's Sarah Keyes.{n}I was Mr. Rivales's secretary.{n}{p30}{e ditzy}Before he got gutted, that is."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Thank you for that image.)"
+bg witness
+fg wbench
+char sarah e=ditzy
+"I must say, it's so wonderful to be {n}testigating here today!!!"
+"I'm so glad I could witness this {n}murder and help you all solve it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Ms. Keyes, {p20}no sane person wants to {n}witness a murder."
+"Please keep comments like that to {n}yourself."
+bg witness
+fg wbench
+char sarah e=bored
+"Well, excuuuuuse me!{n}{p20}{e ditzy}Angry Prosecutor Man just doesn't {n}get me, does he, Feenie-poo?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Don't drag me into this!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"...{n}{p30}{delay 1}"Feenie-poo"?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"It's what she calls me."
+bg witness
+fg wbench
+char sarah e=ditzy
+"He's the greatest future boyfriend a {n}future girlfriend could hope for, {n}you know?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wright, you haven't attempted to {n}seduce the witness, have you?"
+bg defense
+fg dbench
+char phoenix e=sweating
+"{sfx shout-general}What?! {p10}{sfx whoops}No!"
+bg judge
+char judge e=warning
+"{sfx damage}Mr. Wright! Do you have any idea {n}how immoral something like that is?!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"N-No, Your Honor. I didn't..."
+bg witness
+fg wbench
+char sarah e=ditzy
+"It's okay, Feenie-poo."
+"You don't need to hide the fact that {n}I've stolen your precious little {sfx realization}heart."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Can we please just start the {n}testimony?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes. {p20}Let's."
+"Ms. Keyes, please tell us about when {n}you saw the defendant that night."
+bg witness
+fg wbench
+char sarah e=ditzy
+"Okie dokie, Loki!{p20}{n}I can do that!"
+
+mus
+char sarah e=ditzy
+fg TestimonyAnim fade name=tanim
+nt
+delete name=tanim
+"{n}{center}{c940}-- The Only One --"
+
+script scene18sarahtestimony1

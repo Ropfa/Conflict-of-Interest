@@ -1,0 +1,68 @@
+setflag penthouseget
+bg black
+nt
+"{c090}{center}{type}July 19, 1:11 PM{n}Rivales Tower{n}Penthouse Office"
+bg pent2 fade
+pause 60
+char phoenix hide
+"This must be that penthouse{n}we were told about."
+"It has a really nice view.{n}{p10}It must've been nice living{n}up here."
+char maya e=confident
+"You know, Nick...{n}{p20}You could move the Anything{n}Agency into a place like this."
+char phoenix hide
+"That will never happen."
+char maya e=normal
+"Sure it could! You'd just need to take {n}more than four cases a year."
+char phoenix hide
+"I'm very picky about who I work with!"
+pause 40 script
+
+char watters e=glasses fade
+char watters e=glasses nametag=???
+"Hey, man."
+
+char maya e=cheerful
+"Hello!"
+
+char watters e=glasses nametag=???
+"Sorry, but I'm gonna have to ask you {n}two to leave."
+"This is a crime scene."
+
+char phoenix hide
+set _ev attorneybadge
+"Actually, that's why I'm here.{sfx showevidence}{showevl}{n}I'm an attorney. My client{n}is the defendant in this case."
+hideevl
+
+sfx realization
+char watters e=glasses nametag=???
+"Really? {p10}Well, then.{n}{p20}I guess I owe you an apology."
+
+char phoenix hide
+"That won't be necessary."
+
+char watters e=serious nametag=???
+"Just doin' my job. Can't let {n}just anybody run around here, {n}and mess around with everything."
+char watters e=smile
+"Name's Mark Watters.{n}I'm the lead detective here."
+set _ev watters$
+addev watters$
+
+mus Metropolis Zone.ogg
+set _music_loop Metropolis Zone - loop.ogg
+
+char phoenix hide
+"I'm Phoenix Wright."
+
+char maya e=nod
+"And I'm Maya Fey!{n}{p10}{e cheerful}Pleased to meet you, Detective {n}Watters!"
+
+char watters e=smile
+"Nope. Pleasure's all mine.{n}Nice meeting you two."
+"Feel free to look around. Just don't {n}steal any of the evidence. We need {n}that stuff."
+
+char phoenix hide
+"Thank you."
+pause 40 script
+"{c089}(I think he just gave us free reign of {n}the crime scene...)"
+
+script scene7menu

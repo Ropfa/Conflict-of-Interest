@@ -1,0 +1,45 @@
+label top
+bg wrightanything
+
+list scene10move1
+li Detention Center
+flag parkerdirections rivalestower
+showlist
+list scene10move2
+menu scene10
+label rivalestower
+li Rivales Tower
+showlist
+menu scene10
+
+label Detention Center
+noflag gunget scene4
+flag gunget parkergone
+label scene4
+mus
+script scene4menu
+label parkergone
+mus
+script sceneparkergonemenu
+
+label Rivales Tower
+noflag entranceget scene5
+flag entranceget ifthen
+label scene5
+mus
+script scene5
+label ifthen
+noflag metcody scene5menu
+flag metcody ifthen2
+label scene5menu
+mus
+script scene5menu
+label ifthen2
+noflag glueget scene9
+flag glueget scene11
+label scene9
+mus
+script scene9menu
+label scene11
+mus
+script scene11

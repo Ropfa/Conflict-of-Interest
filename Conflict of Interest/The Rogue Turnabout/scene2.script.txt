@@ -7,12 +7,13 @@ mus Doubted People.ogg
 "{center}{c940}Nothing can stop that now..."
 char phoenix hide
 "*sniff*"
-char nothing
+nt
 "{center}{c940}Go now... {p10}my son... {p20}Leave me..."
 "{center}{c090}No. {p10}You're coming with me. {p10}{n}I have to save you!"
 "{center}{c940}You already have..."
 char phoenix hide
 "*sob*"
+nt
 "{center}{c940}You were right... {p20}{n}You were right about me..."
 "{center}{c940}Tell your sister... {p30}{n}{delay 1}you were right...{c999}"
 mus fade
@@ -95,7 +96,7 @@ char phoenix hide
 mus Steel Samurai ring tone.ogg
 set _ev newcell
 showevl
-pause 100
+pause 100 script
 char phoenix hide
 "I wonder who that could be."
 mus
@@ -110,7 +111,7 @@ char phoenix hide
 
 char nurse hide
 "I'm a nurse at the Eldoon Clinic{n}downtown."
-"I'm calling to tell you about a{n}Mr. Dick Gumshoe, who was just {n}brought here."
+"I'm calling to tell you about a{n}Mr. Richard Gumshoe, who was just {n}brought here."
 
 char phoenix hide
 "{s10}{sfx shout-general}Gumshoe's hurt?!"
@@ -133,7 +134,7 @@ char nurse hide
 char maya e=worried
 char phoenix hide
 "I..."
-pause 20
+pause 20 script
 sfx realization
 "{c089}(Wait, what?)"
 "...I'll be there right away."
@@ -142,7 +143,7 @@ char nurse hide
 "Thank you, Mr. Wright.{n}{p10}I'm sorry for any inconvenience.{p20}{n}Have a nice day!"
 
 char phoenix hide
-"Yes, {p10}good-bye."
+"Yes, {p10}goodbye."
 sfx phoneoff
 hideevl
 

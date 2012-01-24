@@ -1,0 +1,36 @@
+label top
+bg wrightanything
+
+list scene10talk
+li What to do
+li Any ideas?
+label scene10talk
+showlist
+menu scene10
+goto scene10talk
+
+label What to do
+char maya e=normal
+char phoenix hide
+"Where should we head from here?"
+char maya e=normal
+"Well, for starters, we should {n}probably check out the crime {n}scene."
+char maya e=thinking
+"But before that, we should go meet {n}our client."
+char maya e=normal
+"We don't actually know anything yet. {n}Let's just start with the basics."
+goto top
+
+label Any ideas?
+char maya e=normal
+char phoenix hide
+"Who do you think it was that called {n}us?"
+char maya e=thinking
+"I don't know... {n}{p5}But it must've been important."
+char phoenix hide
+"He seemed kind of on edge."
+char maya e=normal
+"Personally, I'm more interested in {n}who he wanted us to defend."
+char phoenix hide
+"{c089}(That does tend to be important as {n}well.)"
+goto top

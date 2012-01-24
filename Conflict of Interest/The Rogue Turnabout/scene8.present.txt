@@ -1,0 +1,287 @@
+present
+label top
+menu scene8
+bg reception
+char sarah e=ditzy
+
+label attorneybadge
+set _ev attorneybadge
+showevl
+char sarah e=ditzy
+"Ooooh, an attorney?{n}{p10}So you're cute AND rich!"
+char phoenix hide
+"{sfx whoops}{c089}(Ouch...)"
+goto top
+
+label blackout
+set _ev blackout
+showevl
+char sarah e=bored
+"The blackout was really scary.{n}{p10}I could barely see a thing!"
+char phoenix hide
+"Do you think anybody could've {n}slipped past you during that time?"
+char sarah e=bored
+"Mmm... {p10}No. {n}{p5}The doors here are pretty heavy."
+"I think I would've heard them even if I {n}didn't see them, you know?"
+char phoenix hide
+"{c089}(Somebody had to have come in! {n}If not, then Mr. Parker was the only {n}one who met with Rivales.)"
+"{c089}(And if that's true...)"
+showevl
+goto top
+
+label autopsy
+char phoenix hide
+"{c089}(I really don't think it would be a good {n}idea to ask her about that.)"
+"{c089}(Maya might not make it to the toilet {n}this time.)"
+goto top
+
+label maya$
+char sarah e=normal
+"So... {delay 1}You're Marla."
+char maya e=worried
+"Um...{n}{p15}"Maya"."
+char sarah e=normal
+"Right. {p20}And you help my Feenie-weenie {n}do stuff."
+char maya e=disheartened
+"I try."
+char sarah e=normal
+"Hmph.{e bored}{n}{p10}I'll give you an "E" for effort."
+char maya e=disheartened
+"Why doesn't she like me, Nick?"
+char sarah e=bored
+"Stop calling him that. His name isn't {n}'Nick'!"
+char phoenix hide
+"{c089}(It certainly isn't 'Feenie-weenie' {n}either!)"
+goto top
+
+label sarah$
+set _ev sarah$
+showevl
+char sarah e=bored
+"Ugh! I hate that photo.{n}{p10}The camera always seems to hate {n}me."
+char phoenix hide
+"I don't think it looks that bad."
+char sarah e=ditzy
+"Daaaaaw. Thank you, Feenie-weenie!"
+char phoenix hide
+"{sfx damage}{s5}Urk!"
+char sarah e=ditzy
+"You know, I knew you were the one {n}the moment you walked in."
+char phoenix hide
+"{c089}(Wow. She's certainly {n}straightforward.)"
+hideevl
+goto top 
+
+label rivales$
+set _ev rivales$
+showevl
+char phoenix hide
+"What would you say your {n}relationship with the victim was {n}like?"
+char sarah e=normal
+"Oh, you know...{n}{p10}He was my boss...{n}{p10}And I worked for him..."
+char phoenix hide
+"Is that all?"
+char sarah e=normal
+"We had our ups and downs."
+char phoenix hide
+"{c089}(She's being really vague whenever I {n}bring this topic up. Maybe I'm just not {n}asking the right questions?)"
+hideevl
+goto top
+
+label rivalesupdate$
+set _ev rivalesupdate$
+showevl
+char phoenix hide
+"Mr. Rivales wasn't a normal boss, {n}{p10}was he?"
+char sarah e=ditzy
+"No, I guess he wasn't. Most people {n}don't work and live in the same {n}building."
+char phoenix hide
+"That's not what I meant."
+"You worked for the leader of {n}organized crime in this city. {n}This was no ordinary job you had."
+mus
+char sarah e=normal
+"{sfx realization}Oh? {p40}Maybe you're right."
+"I suppose you'll want to hear more {n}about that too, right?"
+char sarah e=ditzy
+"Mmm...{n}{p10}Well, {p5}anything to make you happy!"
+mus Investigation - Core.ogg
+set _music_loop Investigation - Core - loop.ogg
+hideevl
+setflag presentrivales
+goto top
+
+label parker$
+set _ev parker$
+showevl
+char sarah e=normal
+"He did it."
+char phoenix hide
+"You sound really sure of yourself."
+char sarah e=normal
+"I know we worked together, but{e ditzy} he's {n}a murderer! I can't just keep quiet, {n}you know?"
+char phoenix hide
+"{c089}(My lawyer senses are tingling...{n}{p10}Do I detect hostility?)"
+hideevl
+goto top
+
+label gallante$
+set _ev gallante$
+showevl
+char phoenix hide
+"What do you think about Sir Gallante?"
+char sarah e=bored
+"I dunno. I think it's kind of weird to be running around in a costume, you know?"
+char phoenix hide
+"Yeah, I guess it is."
+"{c089}(I was hoping to get more out of her, but I guess I'll have to settle for that.)"
+hideevl
+goto top
+
+label magatama
+noflag sarahpsyche nopsyche
+flag sarahpsyche sarahpsyche
+label sarahpsyche
+script scenepsychesarah1
+
+label security
+char phoenix hide
+"{c089}(Which area should I look at the {n}footage for...?"
+
+label securitytop
+list securitytalk
+li Entrance
+li Reception
+li Penthouse
+label securitytalk
+showlist
+menu scene8
+goto securitytalk
+
+label Entrance
+char sarah e=normal
+"Ooh, that's a fun one to watch."
+"Let me show you my favorite part."
+pause 100 script
+char phoenix hide
+"......"
+"I don't get it. Is something supposed {n}to be happening here?"
+char sarah e=normal
+"Oh, sorry?{n}{p10}Here, let me fast forward it a bit."
+sfx rewind.wav
+pause 200 script
+char phoenix hide
+"......"
+"Still nothing."
+char sarah e=normal
+"You mean you don't find those {n}people out by the door to be totally {n}suspicious?"
+char phoenix hide
+"Not really. {p10}They haven't even {n}entered the building."
+char sarah e=normal
+"I think the girl in the white suit has a {n}weird haircut. It's all boxy and gross."
+char maya e=thinking
+"It must be boring having to watch {n}stuff like this every day."
+char sarah e=normal
+"Wayne enters the building around {n}5:30. Some guy collapses on the {n}sidewalk a little later."
+"Not much else happens."
+char phoenix hide
+"{c089}(If that guy is who I think he is, then {n}we already know both of those {n}things.)"
+goto securitytop
+
+label Reception
+char sarah e=ditzy
+"Wait til you see this."
+sfx type
+char nothing
+bg securitycamera
+mus
+"{f}{s10}{sfx dramapound}{next}"
+char phoenix hide
+"That's {p20}definitely him."
+char sarah hide
+"See? Wayne goes in. {n}Rivales doesn't come out."
+bg reception
+char sarah e=ditzy
+"Apart from Mr. Rivales himself, {n}there's only one person who enters {n}the room on this video."
+"...{p20}Wayne!"
+pause 80 script
+sfx realization.wav
+char phoenix hide
+"Hey, wait.{n}A large chunk of this video is missing."
+char sarah e=normal
+"Hm?"
+char phoenix hide
+"There's no footage from 5:38 til 6:27."
+char sarah e=normal
+"Oh, yeah. We had a power outage."
+"Did I forget to say that?"
+char phoenix hide
+"Yes.{n}{c089}{p10}(That's incredibly important!)"
+char sarah e=ditzy
+"Sooorry! {p10}We totally didn't have any {n}power then. {p10}No lights, {p5}no cameras, {n}{p5}nothing."
+"I think I got something on that {n}somewhere..."
+set _ev blackout
+addev blackout
+"Here it is!"
+fg blackoutev name=blackoutev
+nt
+"{sfx evidence updated.wav}{c099}Blackout Data added to the court {n}record."
+delete name=blackoutev
+pause 20 script
+setflag securityupdate1
+mus Arle Theme.ogg
+set _music_loop Arle Theme - loop.ogg
+goto securitytop
+
+label Penthouse
+char phoenix hide
+pause 60 script
+sfx realization
+paus 20 script
+"Hey, wait... There isn't any footage {n}of the crime scene!"
+char sarah e=normal
+"?{n}{p20}Oh, yeah. {p10}I know."
+char phoenix hide
+"Did it get deleted?"
+char sarah e=normal
+"No.{p20} It never existed."
+"Mr. Rivales had the cameras removed {n}from his room a while ago. He said {n}they spooked him, you know?"
+char maya e=thinking
+"Why would he do that?"
+char sarah e=bored
+"I dunno. Just didn't like them?"
+"If I had anything, I'd show you.{e ditzy} Then {n}you'd have undeniable proof that {n}Wayne totally disemboweled him!"
+char phoenix hide
+pause 40 script
+"I'm his defense attorney. I want to {n}prove his innocence, not his guilt."
+char sarah e=bored
+"Oh. {p10}Right."
+char maya e=worried
+"Psst... {p10}Hey, Nick!"
+char phoenix hide
+"What?"
+char maya e=worried
+"She isn't telling us everything. She's {n}been really vague about certain {n}things."
+char phoenix hide
+"I agree. She seems to be avoiding {n}giving us too many details."
+char maya e=pumped
+"Keep pressing! She's bound to tell {n}you everything sooner or later!"
+char sarah e=ditzy
+"Hey, um... {n}{p10}What are you two talking about?{n}{p20}{e bored}I'm still here, you know..."
+setflag securityupdate2
+goto securitytop
+
+label none
+label nopsyche
+char sarah e=normal
+"Is that a gift?"
+char phoenix hide
+"No, it's--{next}"
+char sarah e=ditzy
+"For {sfx idea}meeee?"
+char phoenix hide
+"{sfx shout-general}No!!"
+char sarah e=bored
+"{sfx whoops}Aw..."
+char phoenix hide
+"{c089}(I'd better find something that {n}catches her attention better.)"
+goto top

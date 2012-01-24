@@ -33,20 +33,16 @@ set security_desc A network of security cameras and alarms guard the Rivales Tow
 set security2_name Security System
 set security2_pic securitysystem
 set security2_desc A network of security cameras and alarms guard the Rivales Tower. They watch over every room except the penthouse at the top.
-
-set security3_name Security System
-set security3_pic securitysystem
-set security3_desc A network of security cameras and alarms guard the Rivales Tower.
-set security3_check check_security
-
-set security4_name Security System
-set security4_pic securitysystem
-set security4_desc A network of security cameras and alarms guard the Rivales Tower. They watch over every room except the penthouse at the top.
-set security4_check check_security
+set security2_check check_security
 
 set poster_name Sir Gallante Promo Poster
 set poster_pic poster2
-set poster_desc Drawn by Cody. Gallante's creed:{n}1) Protect the innocent{n}2) Slay the evil
+set poster_desc Drawn by Cody. {n}Gallante's creed:{n}1) Protect the innocent{n}2) Slay the evil
+
+set codyphoto_name Cody's Photo
+set codyphoto_pic photo
+set codyphoto_desc A picture that Cody took of a person on the roof of Rivales Tower.
+set codyphoto_check check_codyphoto
 
 set luminol_name Luminol
 set luminol_pic 4luminol
@@ -67,8 +63,8 @@ set gumshoe$_pic gumshoe
 set gumshoe$_desc Age: 40{n}Gender: Male{n}Injured the night of the crime. Can't remember what he was doing, due to a concussion.set parker$_name Wayne Parkerset parker$_pic parkerset parker$_desc Age: 39{n}Gender: Male{n}The defendant. Worked for the victim. He doesn't seem like he would have the willpower to commit a crime, let alone murder somebody.set watters$_name Mark Wattersset watters$_pic wattersset watters$_desc Age: 28{n}Gender: Male{n}The lead detective on the Sir Gallante investigation. He seems like a nice guy, if a bit unprofessional.set rivales$_name Michael Rivalesset rivales$_pic rivalesset rivales$_desc Age: 58{n}Gender: Male{n}The victim. He was killed in his penthouse office early this morning.
 
 set rivalesupdate$_name Michael Rivales
-set rivales$_pic rivales
-set rivales$_desc Age: 58{n}Gender: Male{n}The head of the Rivales Family, a group of dangerous criminals. He was in charge of most of the organized crime in the city.
+set rivalesupdate$_pic rivales
+set rivalesupdate$_desc Age: 58{n}Gender: Male{n}The head of the Rivales Family, a group of dangerous criminals. He was in charge of most of the organized crime in the city.
 
 set sarah$_name Sarah Keyes
 set sarah$_pic sarah
@@ -76,6 +72,6 @@ set sarah$_desc Age: 25{n}Gender: Female{n}The victim's secretary. She seems to 
 
 set cody$_name Cody Hackinsset cody$_pic codyset cody$_desc Age: 17{n}Gender: Male{n}A fanboy of Sir Gallante. Doesn't seem to have changed much, otherwise.set gallante$_name Sir Gallanteset gallante$_pic gallanteset gallante$_desc Age: ??{n}Gender: ??{n}A serial killer who has been murdering criminals for the past three years. The police have been leading an extensive investigation to find him.
 
-set black$_name Virgil Blackset black$_pic blackset black$_desc Age: 31{n}Gender: Male{n}A friend of my client. Contacted me and requested that I defend Mr. Parker.set obadiah$_name Obadiah Williamsonset obadiah$_pic obadiahset obadiah$_desc Age: 57{n}Gender: Male{n}A veteran prosecutor. He's been working with Detective Watters to bring down Sir Gallante.set pearl$_name Pearl Fey
+set black$_name Virgil Blackset black$_pic vblackset black$_desc Age: 31{n}Gender: Male{n}A friend of my client. Contacted me and requested that I defend Mr. Parker.set obadiah$_name Obadiah Williamsonset obadiah$_pic obadiahset obadiah$_desc Age: 57{n}Gender: Male{n}A veteran prosecutor. He's been working with Detective Watters to bring down Sir Gallante.set pearl$_name Pearl Fey
 set pearl$_pic pearl
 set pearl$_desc Age: 18{n}Gender: Female{n}Maya's younger cousin, who disappeared five years ago. I hope she's safe, wherever she is...

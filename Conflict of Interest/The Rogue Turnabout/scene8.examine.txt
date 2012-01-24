@@ -1,0 +1,61 @@
+label top
+bg reception
+
+examine
+region 187 85 8 10 picture
+region 177 96 75 33 desk
+region 110 59 63 43 security
+menu scene8
+
+label picture
+char phoenix hide
+"Who's this in the photo?"
+char sarah e=normal
+"That's me and my daddy."
+char sarah e=ditzy
+"I love my daddy!"
+char maya e=cheerful
+"You two look so happy in that {n}picture!"
+char sarah e=normal
+"Yeah, I know."
+char maya e=confident
+"You were really cute as a kid."
+char sarah e=ditzy
+"Yeah, I know that too."
+char phoenix hide
+"{c089}(Apparently, modesty isn't one of {n}this woman's virtues.)"
+goto top
+
+label desk
+char phoenix hide
+"This looks like Sarah's desk."
+goto top
+
+label security
+char maya e=thinking
+"This machine looks rather {n}complicated."
+char phoenix hide
+"It looks like the security control{n}system for the building."
+"Whoever runs it must be really{n}smart."
+pause 60
+sfx realization.wav
+char sarah e=normal fade
+pause 20
+"Oh...{p20}{e ditzy}{n}Teehee!{p10}{n}Thank you!"
+char phoenix hide
+"..."
+"{c089}(I'm at a loss of words.)"
+char sarah e=normal
+"Yeah, that would be me."
+char phoenix hide
+"I'd like to hear more about the {n}security system in this building."
+char sarah e=ditzy
+"Well, go ahead and ask!"
+"I'll tell you anything you want {n}to know."
+setflag securityget
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

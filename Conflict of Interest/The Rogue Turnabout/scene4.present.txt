@@ -4,8 +4,10 @@ menu scene4
 bg detentionnew
 
 label none
+fg detention
 char parker e=sad
 "Sorry, I don't think I can say{n}anything about that."
+char parker e=crying
 "I really wish I could...{n}{p20}*sniff*"
 char phoenix hide
 "{c089}(Please don't cry...{n}Please don't cry...{n}Please don't cry...)"

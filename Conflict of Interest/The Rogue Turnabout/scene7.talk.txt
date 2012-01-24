@@ -1,0 +1,158 @@
+label top
+bg pent2
+
+list scene7talk1
+li The crime scene
+li Gumshoe
+flag crimescenetalk crimescenetalk
+showlist
+label scene7talk2
+menu scene7
+label crimescenetalk
+li Witness
+flag knifeget knifeget
+showlist
+goto scene7talk2
+label scene7talk3
+menu scene7
+label knifeget
+li The murder weapon
+label scene7talk
+showlist
+menu scene7
+goto scene7talk3
+
+label The crime scene
+char watters e=serious
+char phoenix hide
+"You're fine with us investigating {n}the crime scene?"
+char watters e=smile
+"Yeah. Why not?"
+char phoenix hide
+"Well, we're civilians... {n}{p20}and you're with the prosecution..."
+char watters e=smile
+"So?"
+char phoenix hide
+"...{p20}Never mind."
+pause 40 script
+sfx realization
+mus
+char watters e=angry
+"Wait, are you one of those lowlife{n}attorneys who forges evidence?"
+"Because I'm totally uncool with that!"
+char phoenix hide
+"N-{s2}No! I wasn't planning anything like {n}that!"
+pause 80
+
+mus Metropolis Zone.ogg
+set _music_loop Metropolis Zone - loop.ogg
+char watters e=confident
+"Okay, I'll take your word for it."
+char phoenix hide
+"..."
+char watters e=nervous
+"Hey, uh, what's with that weird look {n}you're giving me?"
+char phoenix hide
+"..."
+"*sigh*"
+"What have you found so far?"
+char watters e=serious
+"Victim's name was {c940}Michael Rivales{c999}, {n}the owner of this tower."
+"He was killed early this morning."
+char phoenix hide
+"{c089}(Rivales... {p20}Where have I heard that {n}name before?)"
+set _ev rivales$
+addev rivales$
+"And the suspect worked for him?"
+char watters e=confident
+"You mean your client?{n}Yeah, that guy's guilty alright."
+"There's a witness and evidence and {n}everything."
+char phoenix hide
+"{c089}(Like always.)"
+char watters e=confident
+"I kinda like it when cases are this {n}easy. I wish we had more like this."
+setflag crimescenetalk
+goto top
+
+label Gumshoe
+char phoenix hide
+"Do you know Detective Gumshoe by {n}any chance?"
+char watters e=serious
+"Gumshoe? Yeah, I've known him {n}since I joined the force. {n}{p20}Great man."
+char phoenix hide
+"I'm assuming you know what {n}happened to him."
+char watters e=sad
+"Yeah, bummer that I'm all tied up {n}and can't go see him."
+"Tell him "hi" from me, will you?"
+char phoenix hide
+"I will."
+"...But actually, I wanted to talk about {n}what happened to him."
+char watters e=confused
+"Okay, shoot."
+char phoenix hide
+"When I spoke with him earlier, he said {n}that he was knocked unconscious{n}{c940}while passing through this area{c999}."
+char watters e=serious
+"Yeah. Weird coincidence, huh?"
+char phoenix hide
+"You really think it was just a {n}coincidence?"
+char watters e=serious
+"The murder took place three hundred {n}feet above where he was."
+"I don't think the two things are {n}related."
+char phoenix hide
+"If we examined the object he was hit {n}with, we might be able to connect it {n}to the crime."
+char watters e=confused
+"Aw, c'mon, man. Don't make this any {n}more complicated than it needs to be."
+char phoenix hide
+"{c089}(Doing a thorough investigation too {n}much work for you, Watters?)"
+goto top
+
+label Witness
+char phoenix hide
+"You mentioned that there was a {n}witness?"
+char watters e=smile
+"Yeah, she's somewhere around here."
+"She's the victim's secretary. {n}{p20}{e thinking}...I think."
+char phoenix hide
+"You "think"...?"
+char watters e=thinking
+"I dunno. She wasn't very clear on {n}what her duties were."
+char phoenix hide
+"Isn't it your job to find out these {n}things?"
+char watters e=serious
+"If you want, you can check the {n}reception area. She likes to hang {n}out there."
+setflag witnessget
+goto top
+
+label The murder weapon
+char watters e=serious
+"That knife was found next to the {n}body. It's got Parker's fingerprints {n}all over the handle."
+"No question about it, man... {n}{p10}That's what killed him."
+char phoenix hide
+"How did that little knife cause such {n}a big mess?"
+"I don't think I've ever seen a crime {n}scene this bloody."
+char watters e=serious
+"Well, consider yourself lucky you {n}didn't find the body."
+"That guy was barely still in one {n}piece when we got here."
+char maya e=surprised
+"{sfx shout-scream}Whaaat?!{n}{p20}That's disgusting!"
+char watters e=serious
+"Yeah, {p5}it was pretty nasty."
+char phoenix hide
+"He was really almost cut in half?"
+char watters e=serious
+"I won't go into all the gory details... {n}{p30}But yeah. {p10}Yeah, {p5}he was."
+"If you really want to know more, {n}you'll have to read about it later."
+set _ev autopsy
+addev autopsy
+fg autopsyev name=autopsyev
+nt
+"{sfx evidence updated.wav}{c099}Autopsy Report added to court {n}record."
+delete name=autopsyev
+setflag autopsyget
+char watters e=serious
+"The coroner just got done making {n}that. You can have a copy."
+"I know one thing for sure...{n}{p10}It wouldn't be easy to chop {n}somebody up like that." 
+"You'd have to be really strong."
+char phoenix hide
+"{c089}(Unfortunately for us, Mr. Parker fits {n}that description.)"
+goto top

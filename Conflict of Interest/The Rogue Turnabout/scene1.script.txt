@@ -60,6 +60,8 @@ pause 30
 bg pent fade
 "...{p80}{next}"
 pause 60
+char gallante e=shadow fade
+nt
 "There were no courts on earth {n}for men like him.{p60}{next}"
 "{f}{s10}{next}"
 bg flight

@@ -1,0 +1,458 @@
+set _list_back_button false
+set wrongevidence 1
+bg witness
+fg wbench
+char sarah e=ditzy
+
+fg TestimonyAnim name=tanim fade
+nt
+delete name=tanim
+"{n}{center}{c940}-- The Blackout --"
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
+bg witness
+fg wbench
+
+char sarah e=ditzy
+"{tbon}Even after the lights went out, I {n}could still see fine."
+"{tbon}I would've seen anybody coming up {n}the elevator or the stairs."
+"{tbon}Those are the only two ways into {n}the penthouse."
+"{tbon}Wayne's the only one I saw during {n}that time."
+
+mus
+bg black
+pause 30
+bg judge
+char judge e=normal
+"Hmm... Not only did the defendant {n}enter the room..."
+"...It was impossible for anybody else {n}to go in after him without the {n}witness knowing."
+bg witness
+fg wbench
+char sarah e=ditzy
+"Right."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Only one person had an opportunity {n}to attack the victim."
+"The rest doesn't matter."
+bg witness
+fg wbench
+char sarah e=ditzy
+"Right!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Only one person, huh?"
+bg witness
+fg wbench
+char sarah e=ditzy
+"Right!!!"
+bg aide
+char maya e=bench-ugh
+"This is just great! Things are looking {n}worse than before!"
+char phoenix hide
+"Yes, but this might also be the break {n}that we've been looking for."
+char maya e=bench-strict
+"If you say so..."
+
+bg witness
+fg wbench
+char sarah e=ditzy
+fg Cross-ExaminationAnim fade
+nt
+"{n}{center}{c940}-- The Blackout --"
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
+label start
+cross sarahtestimony3
+
+statement sarah3A
+bg witness
+fg wbench
+char sarah e=ditzy
+"Even after the lights went out, I {n}could still see fine."
+
+statement sarah3B
+bg witness
+fg wbench
+char sarah e=ditzy
+"I would've seen anybody coming up {n}the elevator or the stairs."
+
+statement sarah3C
+bg witness
+fg wbench
+char sarah e=ditzy
+"Those are the only two ways into {n}the penthouse."
+
+statement sarah3D
+bg witness
+fg wbench
+char sarah e=ditzy
+"Wayne's the only one I saw during {n}that time."
+endcross
+
+label comments
+bg defense
+fg dbench
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"Sarah! There has to be some way you {n}missed seeing the killer!"
+bg witness
+fg wbench
+char sarah e=ditzy
+"But I did see him!{n}It was Wayne!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"No, no, no... {n}{p10}The real killer!"
+bg witness
+fg wbench
+char sarah e=ditzy
+"Aw, wook at goo! {n}You're so cute when you're angry!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"I'd be a lot less angry if you were {n}more helpful."
+bg witness
+fg wbench
+char sarah e=ditzy
+"Sorry! {n}I can't lie in here, you know?{n}Wayne totally did it!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(She seems intent on getting Mr. {n}Parker convicted...)"
+goto start
+
+label press sarah3A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"How could you see without any light?"
+bg witness
+fg wbench
+char sarah e=normal
+"There's a window in that hallway."
+"The moon gave off enough light for {n}me to see."
+sfx screenwipe
+bg blueprints
+fg arrow y=-37 x=110
+char sarah hide
+"See? Right here!"
+char phoenix hide
+"That's a pretty small window."
+char sarah hide
+"Yeah, I actually think it's pretty {n}tacky to have it in there."
+sfx screenwipe
+bg defense
+fg dbench
+char phoenix e=thinking
+"Would moonlight alone be enough to {n}recognize another person?"
+bg witness
+fg wbench
+char sarah e=normal
+"Maybe not enough to recognize {n}someone..."
+"...{e ditzy}But that's kinda pointless if no one {n}showed up, you know?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"I guess so."
+bg witness 
+fg wbench
+char sarah e=normal
+"Which, I guess, brings me to my next {n}point..."
+resume
+
+label press sarah3B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"You didn't see anybody else during {n}the blackout?"
+bg witness
+fg wbench
+char sarah e=ditzy
+"Nope!"
+bg defense
+fg dbench
+char phoenix e=normal
+"Nobody... {n}{p15}{e sheepish}Nobody at all?"
+bg witness
+fg wbench
+char sarah e=ditzy
+"Nope!!"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"You sure about that?"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"She said no.{n}{p20}Stop badgering her."
+bg judge
+char judge e=normal
+"Sustained."
+"We have no reason to believe that {n}she saw anyone else."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Do I have evidence that proves {n}otherwise...?)"
+
+list proveotherwise
+li Show evidence
+li Let it pass
+showlist
+
+label Show evidence
+char phoenix e=pointing
+"{sfx shout-objection}The defense would like to show {n}evidence that shows she saw somebody {n}else!"
+bg judge
+char judge e=normal
+"What is this evidence...?"
+set _cr_back_button false
+present
+
+label Let it pass
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I don't think I have anything that {n}shows another person came through {n}the reception area...)"
+"{c089}(...Maybe she's telling the truth?)"
+resume
+
+label press sarah3C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"Could there be some other way?{n}{p20}A vent, perhaps?"
+bg witness
+fg wbench
+char sarah e=bored
+"Umm... {p10}No...{n}{p20}I don't...{n}{p20}I don't think so?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That's not good enough!"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Why are we arguing over how {n}embody might've snuck into {n}the room?"
+"There isn't anything to show that it {n}actually happened!"
+"Nobody else went up there. {n}{p15}{delay 1}End of story."
+bg defense
+fg dbench
+char phoenix e=pointing
+"If there was another way in, then her {n}testimony is completely invalid!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"It's up to you to prove that then, {n}{p10}isn't it?"
+"Please continue, Ms. Keyes."
+bg witness
+fg wbench
+char sarah e=ditzy
+"You bethca!"
+resume
+
+label press sarah3D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"There had to have been someone {n}else!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Do we really need to keep pressing {n}this point?"
+"She either saw somebody or she {n}didn't..."
+"...and she says she didn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"What if there was somebody she {n}couldn't see?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Again with the ninjas?"
+"Is this whole trial a big joke to you?"
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Stop trying to make me look like an {n}idiot!)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"By making excuses like that, you only {n}succeed in making yourself look like {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Stop reading my thoughts!)"
+resume
+
+label crimephoto sarah3C
+mus
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+script scene26
+
+label blueprints sarah3C
+mus
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+script scene26
+
+label none
+is wrongevidence 1 wrongevidence1
+is wrongevidence 2 wrongevidence2
+is wrongevidence 3 wrongevidence3
+
+label wrongevidence1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves that the {n}witness is lying!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Actually, no... {p15}{n}However, it does prove that you're {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Excuse me...?"
+bg judge
+char judge e=normal
+"I think what he's trying to say is that {n}a penalty is in order here."
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That didn't quite go as planned...)"
+pause 20 script
+set wrongevidence 2
+clear
+goto start
+
+label wrongevidence2
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+set wrongevidence 3
+clear 
+goto start
+
+label wrongevidence3
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Your Honor!{n}{p20}That statement contradicts the {n}evidence!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, it does...{p20}{n}{e pointing}And I can prove it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}You can't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I...{n}{p20}{e sweating}No, {p20}I can't."
+bg judge
+char judge e=normal
+"Perhaps you should think things {n}through before jumping to conclusions."
+"Then I wouldn't have to give you {n}penalties."
+char judge e=warning
+"{sfx shout-general}Like this one!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+pause 20 script
+set wrongevidence 1
+clear 
+goto start
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

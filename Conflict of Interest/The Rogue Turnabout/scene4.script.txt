@@ -1,39 +1,46 @@
 bg black
 nt
-"{c090}{center}{type}July 19, 10:30 AM{n}Detention Center{n}Visitor's Room"
+"{c090}{center}{type}July 19, 12:00 PM{n}Detention Center{n}Visitor's Room"
 bg detentionnew fade
+fg detention name=1
 pause 60
 char parker e=serious fade
-char parker
-pause 40
+pause 80
 sfx realization
-pause 20
+pause 60
+delete name=1
 char maya e=shock
 "{sfx shout-scream}AAAAAAAAAAHHHHHH!!!"
 char maya e=surprised
 "Nick, is this the guy we're{n}supposed to defend?!"
 "He looks like he's about to break {n}your kneecaps with a baseball bat!"
-char parker e=sad fade
+fg detention name=1
+char parker e=sad fade nametag=???
 "......"
 char parker e=crying
-pause 40
+pause 40 script
 char phoenix hide
 "I think you hurt his feelings, Maya."
 mus Doubted People.ogg
+delete name=1
 char maya e=worried
-"Um...{n}I'm sorry...{n}I guess I overreacted."
+"Um...{n}{p20}I'm sorry...{n}{p20}I guess I overreacted."
+fg detention name=1
 char parker e=crying
-pause 60
+pause 100 script
+delete name=1
 char maya e=worried
 "P-Please don't cry..."
-char parker e=sad
+pause 40 script
+fg detention name=1
+char parker e=sad nametag=???
 "Are you the lawyer Virgil called {n}for me?"
 char phoenix hide
 "I'm assuming so."
 "A man called me earlier, but he didn't {n}really tell me who I was supposed to {n}defend."
 
-char parker e=worried
-"...That's Virgil all right."
+char parker e=worried nametag=???
+"...{p20}That's Virgil all right."
 "My name's Wayne Parker."
 set _ev parker$
 addev parker$
@@ -44,7 +51,7 @@ char phoenix hide
 char parker e=worried
 "Wright...{n}{delay 1}Wright...{n}{delay 2}Phoe... nix...{next}"
 char parker e=disturbed
-"{sfx shout-general}PHOENIX WRI{sfx shout-loud}{char parker e=freakout}IIIIGHT?!"
+"{sfx shout-general}PHOENIX WRI{sfx shout-loud}{e freakout}IIIIGHT?!"
 char parker e=disturbed
 
 char phoenix hide
@@ -58,8 +65,8 @@ char phoenix hide
 "I guess so."
 
 char parker e=freakout
-"BWWHH{p10}{char parker hide}{sfx thud-body}{s20}AAAAAAAAAAAT?!"
-pause 60
+"BWWHH{p10}{e crash}{p2}AAA{p2}{sfx thud-body}{s20}AAAAAAAAAAAT?!"
+pause 60 script
 
 char phoenix hide
 "..."
@@ -76,34 +83,37 @@ char phoenix hide
 "Mr. Parker, are you opposed to me {n}defending you?"
 
 char parker e=worried
-"No, no... It's not that."
-"It's just...{n}{char parker e=serious}I wasn't expecting anybody to take my case..."
-"And now {char parker e=disturbed}Virgil brings me a legend!! {n}{sfx shout-loud}I CAN'T BELIEVE {char parker e=freakout}IT!!!{char parker e=disturbed}"
+"No, no... {p10}It's not that."
+"It's just...{n}{e serious}I wasn't expecting anybody to take {n}my case..."
+char parker e=disturbed
+"And now Virgil brings me a legend!! {n}{sfx shout-loud}I CAN'T BELIEVE IT!!!"
 mus
-pause 60
+pause 60 script
 char phoenix hide
 "Actually, I'm sorry to disappoint you, {n}Mr. Parker. But I haven't agreed to {n}defend you yet."
 
 char parker e=serious
 sfx realization
-"I...{n}{char parker e=sad}But you...{n}{char parker e=crying}But I..."
+"I...{n}{p10}{e sad}But you...{n}{p20}{e crying}But I..."
 
 char phoenix hide
 "...!"
 
+delete name=1
 char maya e=mad fade
 "Nick!{n}You made him cry again!"
 
 char phoenix hide
 "{c089}(Me?! You're the one who did it the {n}first time!)"
 
+fg detention name=1
 char parker e=crying
-"I shouldn't have gotten so excited... {n}Nobody'd defend a guy like me."
+"I shouldn't have gotten so excited... {n}{p20}Nobody'd defend a guy like me."
 
 char phoenix hide
-"Th-That's not what I meant!{n}I just need to ask a few questions {n}first!"
+"Th-{s2}That's not what I meant!{n}{p10}I just need to ask a few questions {n}first!"
 
 char parker e=crying
-"......Okay."
+"{delay 2}......Okay."
 
 script scene4menu

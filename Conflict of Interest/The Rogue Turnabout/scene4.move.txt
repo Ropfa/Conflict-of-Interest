@@ -1,17 +1,39 @@
 label top
 bg detentionnew
 
-list scene4move
+list scene4move1
 li Wright Anything Agency
+flag parkerdirections rivalestower
+showlist
+list scene4move2
+menu scene4
+label rivalestower
 li Rivales Tower
-
 showlist
 menu scene4
 
 label Wright Anything Agency
 mus
-script scene2menu
+script scene10menu
 
 label Rivales Tower
+noflag entranceget scene5
+flag entranceget ifthen
+label scene5
 mus
 script scene5
+label ifthen
+noflag metcody scene5b
+flag metcody ifthen2
+label scene5b
+mus
+script scene5menu
+label ifthen2
+noflag glueget scene9
+flag glueget ifthen3
+label scene9
+mus
+script scene9menu
+label ifthen3
+mus
+script scene11

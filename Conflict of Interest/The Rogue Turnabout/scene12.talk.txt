@@ -1,0 +1,220 @@
+label top
+bg pent3
+
+list scene12talk1
+li The crime scene
+li Witness
+li The murder weapon
+flag gallantepresent gallantepresent
+showlist
+label scene12talk2
+menu scene12
+label gallantepresent
+li Sir Gallante
+label scene12talk
+showlist
+menu scene12
+goto scene12talk2
+
+label The crime scene
+char watters e=serious
+char phoenix hide
+"You're fine with us investigating {n}the crime scene?"
+char watters e=smile
+"Yeah. Why not?"
+char phoenix hide
+"Well, we're civilians... {n}{p20}and you're with the prosecution..."
+char watters e=smile
+"So?"
+char phoenix hide
+"...{p20}Never mind."
+pause 40 script
+sfx realization
+mus
+char watters e=angry
+"Wait, are you one of those lowlife{n}attorneys who forges evidence?"
+"Because I'm totally uncool with that!"
+char phoenix hide
+"N-No! I wasn't planning anything like {n}that!"
+pause 80
+
+mus Metropolis Zone.ogg
+set _music_loop Metropolis Zone - loop.ogg
+char watters e=confident
+"Okay, I'll take your word for it."
+char phoenix hide
+"..."
+char watters e=nervous
+"Hey, uh, what's with that weird look {n}you're giving me?"
+char phoenix hide
+"..."
+"*sigh*"
+"What have you found so far?"
+char watters e=serious
+"Victim's name was {c940}Michael Rivales{c999}, {n}the owner of this tower."
+"He was killed early this morning."
+char phoenix hide
+"And the suspect worked for him?"
+char watters e=confident
+"You mean your client?{n}Yeah, that guy's guilty alright."
+"There's a witness and evidence and {n}everything."
+char phoenix hide
+"{c089}(Like always.)"
+char watters e=confident
+"I kinda like it when cases are this {n}easy. I wish we had more like this."
+goto top
+
+label Witness
+char phoenix hide
+"You mentioned that there was a {n}witness?"
+char watters e=smile
+"Yeah, she's somewhere around here."
+"She's the victim's secretary. {n}{p20}{e thinking}...I think."
+char phoenix hide
+"You "think"...?"
+char watters e=thinking
+"I dunno. She wasn't very clear on {n}what her duties were."
+char phoenix hide
+"Isn't it your job to find out these {n}things?"
+char watters e=serious
+"If you want, you can check the {n}reception area. She likes to hang {n}out there."
+goto top
+
+label The murder weapon
+char watters e=serious
+"That knife was found next to the {n}body. It's got Parker's fingerprints {n}all over the handle."
+"No question about it, man... {n}{p10}That's what killed him."
+char phoenix hide
+"How did that little knife cause such {n}a big mess?"
+"I don't think I've ever seen a crime {n}scene this bloody."
+char watters e=serious
+"Well, consider yourself lucky you {n}didn't find the body."
+"That guy was barely still in one {n}piece when we got here."
+char maya e=surprised
+"{sfx shout-scream}Whaaat?!{n}{p20}That's disgusting!"
+char watters e=serious
+"Yeah, {p5}it was pretty nasty."
+char phoenix hide
+"He was really almost cut in half?"
+char watters e=serious
+"I won't go into all the gory details... {n}{p30}But yeah. {p10}Yeah, {p5}he was."
+"I know one thing for sure...{n}It wouldn't be easy to chop {n}somebody up like that." 
+"You'd have to be really strong."
+char phoenix hide
+"{c089}(Unfortunately for us, Mr. Parker fits {n}that description.)"
+goto top
+
+label Sir Gallante
+char phoenix hide
+"Why are the police trying to keep Sir {n}Gallante's involvement here a {n}secret?"
+char watters e=serious
+"Actually, nobody was even supposed {n}to know he existed in the first {n}place..."
+"...but somebody with inside info {n}decided to go leak stuff to the {n}press a while back."
+"We've had to be careful who we talk {n}to ever since."
+char phoenix hide
+"He's been killing for a while now?"
+char watters e=serious
+"Oh yeah. {n}{p20}About three years now."
+"This was probably his biggest hit. I'm {n}sure you're aware that Rivales was {n}no ordinary man."
+pause 40 script
+
+"Sir Gallante started as just an {n}regular killer. But over time, his {n}methods, shall we say... evolved?"
+char maya e=thinking
+"Evolved?"
+
+char watters e=serious
+"Whenever it seemed we wer getting {n}close..."
+"...he'd always change up his MO so {n}that it was even more elaborate and {n}convoluted."
+"It's been really hard to keep up with."
+
+char phoenix hide
+"Somebody might still be leaking {n}information."
+char watters e=confused
+"Could be."
+char watters e=confused
+"In any case, {p20}{e confident}we got 'im now. Good {n}thing he slipped up this time, {n}right?"
+char phoenix hide
+"{c089}(Poor Mr. Parker...)"
+
+char watters e=serious
+"Sir Gallante {c940}always leaves his own {n}little mark after each crime{c999}. {n}{p20}A calling card of sorts."
+"It's how we can tell his crimes apart {n}from those of his copycats." 
+char phoenix hide
+"I'd imagine that a super hero has {n}quite a few imitators."
+char watters e=confused
+"No kidding."
+"Good things most of the people {n}trying to copy him are also the ones {n}who are dumb enough to get caught."
+
+char phoenix hide
+"{c089}(So they found a "calling card" that {n}Gallante leaves at the scene. {n}That's very interesting.)"
+char phoenix hide
+"Thank you for helping us, Detective."
+char watters e=smile
+"No problem, Phoenix."
+music_fade_out
+char watters e=serious
+"Oh, hey... {n}{p20}If you don't mind..."
+"...Please don't tell {c940}Mr. Williamson{c999} I let {n}you onto the crime scene today. {n}{p20}{e sad}He'd get mad."
+char phoenix hide
+"Mr. Williamson?"
+char watters e=thinking
+"You know him?"
+char phoenix hide
+"No, I've never heard of him."
+char watters e=serious
+"Really? {n}His name's Obadiah Williamson."
+"He's gonna be the prosecutor {n}tomorrow."
+"He's been doing it since before {n}either of us were born."
+"He's good."
+pause 80 script
+char phoenix hide
+"{sfx realization}That's it?"
+pause 40 script
+char watters e=serious
+"Yeah...{n}{p20}{e confused}You were expecting more?"
+char phoenix hide
+"No {p5}"He's gone undefeated for forty {n}years"?"
+"No {p5}"He's a prosecuting prodigy who {n}is legendary in his home country"?"
+"No {p5}"He crawled out of the pit of hell {n}to do battle with me"?"
+char watters e=confused
+"Uh...{n}{p20}No?"
+char watters e=thinking
+"I don't think he climbed out of hell, {n}at least..."
+char phoenix hide
+"Just "He's good"?"
+char watters e=confused
+"Yeah..."
+char phoenix hide
+"{c089}(That can't be right.{p10}{n}There's no way I would be facing a {n}normal human being.)"
+pause 40 script
+char watters e=confused
+"Do you usually face off against {n}hellspawn prosecutors, man?"
+char phoenix hide
+"...{p20}It's a long story."
+char watters e=thinking
+"I can't decide whether that's really {n}creepy or wicked awesome..."
+char phoenix hide
+"{c089}(Is my life really that interesting?)"
+music Investigation - Middlegame.ogg
+music_fade_in
+set _music_loop Investigation - Middlegame - loop.ogg
+char watters e=serious
+"Well, I gotta go.{n}It's been a long day."
+char maya e=cheerful
+"Goodbye!"
+char phoenix hide
+"Goodbye, Detective."
+char watters e=smile
+"Seeya tomorrow."
+char nothing
+pause 80 script
+sfx dooropen.wav
+pause 50 script
+char maya e=normal fade
+"He seems like a nice guy."
+char phoenix hide
+"I'm not entirely sure he's doing his {n}job the right way. But yes, I agree {n}with you."
+"{c089}(Watters said that Sir Gallante {n}leaves some sort of identifying {n}feature at each crime scene...)"
+"{c089}(...{p20}I can't see anything here that {n}might be it though.)"
+
+script scene13menu

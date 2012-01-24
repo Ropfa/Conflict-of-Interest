@@ -1,1 +1,4 @@
-set _textbox_wrap falseset _textbox_lines 3include evidenceaddev attorneybadgeaddev magatamaaddev maya$script scene1
+set _textbox_wrap falseset _textbox_lines 3include evidenceaddev attorneybadgeaddev magatamaaddev maya$
+
+set char_gallante_defsound bliplow.ogg
+set char_sarah_defsound blipfemale.oggscript scene1

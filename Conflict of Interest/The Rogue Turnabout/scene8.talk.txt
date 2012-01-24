@@ -1,0 +1,293 @@
+label top
+bg reception
+
+list scene8talk1
+li Sarah Keyes
+li What you saw
+flag securityget securitysystem
+showlist
+label scene8talk2
+menu scene8
+label securitysystem
+li Security system
+flag presentrivales rivalesfamily
+showlist
+goto scene8talk2
+label scene8talk3
+menu scene8
+label rivalesfamily
+li The Rivales Family
+label scene8talk
+showlist
+menu scene8
+goto scene8talk3
+
+label Sarah Keyes
+char phoenix hide
+"What exactly is it you do here, {p20}um...{p40} {n}Sarah?"
+char sarah e=normal
+"I'm Mr. Rivales's receptionist. {n}I also double as his security chief."
+"Well, I did, at least...{n}{p40}{e ditzy}Before he totally got split apart."
+char phoenix hide
+"S-{s2}split apart?!"
+char sarah e=ditzy
+"Oh, it was horrible!{n}I walk in there and find his body {n}nearly cut in two!{next}"
+"The worst part was his throat. I'm {n}pretty sure he died from choking on {n}his own blood or something, because {next}"
+"it was all seeping out of his wind pipe {n}like some kind of--{next}"
+char phoenix hide
+"{sfx shout-general}Ah! AHH!! {sfx shout-objection}Stop! Stop!!!"
+"{c089}(Where's the brain bleach when you {n}need it?!)"
+char sarah e=ditzy
+"I know. {p20}Gross, right?"
+char maya e=disheartened
+"I think I'm going to throw up..."
+char sarah e=ditzy
+"His intestines were pretty messed up {n}too."
+char maya e=shock
+sfx shout-shock.wav
+pause 60 script
+char maya e=worried
+"{sfx creak}Ohh..."
+char nothing
+sfx screenwipe
+pause 60 script
+char sarah e=ditzy fade
+"Bathroom's down the hall! {n}{p10}Heehee!"
+char phoenix hide
+"Could we {p20}possibly not talk about the {n}condition of the body anymore?"
+char sarah e=bored
+"Sorry. I sometimes forget that not {n}everybody can handle stuff like that." 
+"Is there something else you wanted {n}to discuss?"
+pause 60 script
+char sarah e=normal
+"How about you?"
+char phoenix hide
+"{sfx realization}M-me?"
+char sarah e=ditzy
+"Yes, you, silly!{n}Let's talk about you!{n}{p20}Are you seeing anyone right now?"
+char phoenix hide
+"Well, I--{p10}{next}"
+char sarah e=bored
+"You're not...{n}{p10}You're not with that Marla girl, {n}are you?!"
+char phoenix hide
+"Well, it's "Maya," actually.{n}And we're--{p20}{next}"
+char sarah e=ditzy
+"You're not? {sfx shout-objection}That's wonderful!{n}What are you doing this Saturday?"
+char phoenix hide
+"{s5}Bwuh? {p5}Well, I... {p10}Uh...{n}{p50}Hey, about your job here...{n}{p15}Could you tell me more about that?"
+char sarah e=bored
+"Oh... {p20}You want to talk about that..."
+char sarah e=ditzy
+"Well, I suppose that works!"
+char phoenix hide
+"{c089}(Nice save, Phoenix!)"
+char sarah e=normal
+"I've been working for Mr. Rivales{n}for a few years now."
+"He wasn't the best boss, but I'll take {n}what I can get, you know?" 
+char phoenix hide
+"What about Mr. Parker?"
+char sarah e=normal
+"Wayne started here long before I {n}joined. He was working for Mr. {n}Rivales when I was just a little girl."
+char phoenix hide
+"So if you're the security chief, and {n}he's a guard, {p5}does that make you his {n}boss?"
+char sarah e=ditzy
+"What? {sfx shout-general}Haha{sfx shout-general}haha!!"
+char phoenix hide
+"{c089}(What's so funny?)"
+char sarah e=ditzy
+"I love it when a guy can make me {n}laugh! {p20}Say, {p10}about this Saturday..."
+pause 40 script
+char maya e=disheartened fade
+"I'm back."
+char sarah e=bored
+"Oh... {n}{p10}{delay 1}It's you..."
+char phoenix hide
+"{c089}(Nice save, Maya!)"
+char maya e=disheartened
+"Am I interrupting anything?"
+char sarah e=bored
+"Yes.{p15}{next}"
+char phoenix hide
+"No."
+char sarah e=bored
+"*sigh*{n}{p10}...{n}{p20}No."
+char phoenix hide
+"{c089}(This woman's emotions are all over {n}the place!"
+setflag sarahkeyestalk
+goto top
+
+label What you saw
+char phoenix hide
+"Could you tell me about what you {n}saw this morning?"
+char sarah e=normal
+"Yep! He did it.{n}No question there."
+char phoenix hide
+"Wh-what do you mean he did it?"
+char sarah e=ditzy
+"Wayne, silly!{n}{p10}He strolled right in there and slashed {n}apart poor old Mr. Rivales!"
+char maya e=pumped
+"Mr. Parker's such a nice guy though! {n}He couldn't do that!"
+char sarah e=bored
+""Nice"...?{n}{p20}Are we talking about the same {n}person?"
+char maya e=pumped
+"Mr. Parker's nothing but a big teddy {n}bear! He wouldn't hurt a fly!"
+music_fade_out
+char sarah e=bored
+"......{p80}{n}{e ditzy}{sfx shout-general}Haha{sfx shout-general}haha!!"
+mus Arle Stage.ogg
+music_fade_in
+set _music_loop Arle Stage - loop.ogg
+"That's a good one!{n}You know, you're really funny, Marla!"
+char maya e=pumped
+"Hey! I'm not joking!"
+char sarah e=normal
+"You don't believe that he's the killer?{n}{p10}Wayne goes in, Rivales doesn't come {n}out."
+"He's the only one who could've done {n}it."
+char phoenix hide
+"That does make him look rather {n}suspicious..."
+"Did you actually see him commit the {n}murder?"
+char sarah e=normal
+"Nope. {p10}But it doesn't matter. {n}{p10}He's the only one who came through {n}here that night."
+char phoenix hide
+"Is it possible to come in another {n}way?"
+char sarah e=ditzy
+"Feenie-poo... {p10}We're on the thirtieth {n}story of this tower. This is the only {n}hall into that room."
+"{c940}There is no other way."
+char phoenix hide
+"Did Mr. Parker have a reason to want {n}him dead?"
+char sarah e=normal
+"Oh, {p5}I don't know. {p10}I'm sure there were {n}lotsa people who wanted it."
+char phoenix hide
+"Lots of people? What do you mean {n}by that?!"
+char sarah e=bored
+"Oh, you know..."
+pause 60 script
+char phoenix hide
+"Could you maybe go into a bit more {n}detail?"
+char sarah e=bored
+"Well, he was just kind of a {n}disagreeable guy. He got into lots of {n}arguments and stuff. {p20}You know."
+char phoenix hide
+"{c089}(Right... {p5}"Arguments".)"
+setflag whatyousawtalk
+goto top
+
+label Security system
+char sarah e=normal
+"This here is the control system for all {n}the security cameras in the tower."
+"I can see everything that goes on {n}from this desk."
+char phoenix hide
+"Do you keep any records?"
+char sarah e=normal
+"All the footage we've ever recorded {n}is stored in our databases."
+"Only the videos from the past three {n}days are on this computer though."
+char phoenix hide
+"You really store all the data you {n}record? Why would you need to do {n}that?"
+char sarah e=normal
+"Mr. Rivales liked to keep tabs on the {n}people he met with. {p20}For security {n}reasons, you know?"
+char phoenix hide
+"{c089}(The old videos don't really matter. {n}What I need to know about is what {n}was recorded this past night.)"
+char maya e=normal
+"Nick! We should check those videos.{n}{e pumped}There might be some really good {n}evidence!"
+set _ev security
+addev security
+fg securityev name=securityev
+nt
+"{sfx evidence updated.wav}{c099}Security System added to the court{n}record."
+delete name=securityev
+setflag securityget2
+goto top
+
+label The Rivales Family
+char sarah e=normal
+"Michael Rivales was the head of the {n}Rivales Family, as you seem to {n}already know."
+"He's been leading them for a while {n}now."
+char phoenix hide
+"I don't remember the Rivales Family {n}being this powerful."
+char sarah e=normal
+"They weren't always. {p10}They used to {n}have to compete with the other {n}families for power."
+"But all that's changed in the past {n}year or two."
+char phoenix hide
+"What happened?"
+char sarah e=normal
+"Two things:"
+"One: {p10}Their main rivals, the Kitakis, {n}dropped out of the business."
+"Two: {p10}The previous ruling family, the {n}Cadaverinis, {c940}were {sfx realization}murdered{c999}."
+mus
+char maya e=surprised
+"{sfx shout-scream}M-Murdered?"
+char sarah e=normal
+"Yep. The whooole family. They say {n}that Bruto himself was carved into {n}no less than seven pieces."
+char maya e=worried
+"Ew..."
+char sarah e=normal
+"It all happened just over the space of {n}a few days."
+"Nobody ever saw it coming."
+char phoenix hide
+"The Rivales Family had them {n}assassinated?"
+char sarah e=normal
+"You know, {p15}it's funny that you ask...{n}{p20}{sfx realization}because no."
+char phoenix hide
+"Then who did?"
+char sarah e=normal
+"Nobody knows...{n}{p30}But if you ask me...{n}{p20}It was {c940}Sir Gallante{c999}."
+"That's the rumor, at least."
+mus Investigation - Core.ogg
+set _music_loop Investigation - Core - loop.ogg
+pause 40 script
+"It really doesn't matter though."
+"With the Kitakis and Cadaverinis {n}gone, Michael Rivales was able to {n}take control of everything."
+"Assassinations, extortion, {n}smuggling... {p20}You name it."
+"He owned this city."
+char phoenix hide
+"{c089}(And now he's gone...)"
+set _ev gallante$
+addev gallante$
+pause 40 script
+char maya e=mad
+"He was such a horrible person! {n}How could you work for him?!"
+char sarah e=bored
+"Hey! Don't look at me like that! I didn't {n}exactly approve of his line of work. I {n}just did what had to be done."
+char phoenix hide
+"What does {sfx shout-general}{s5}that mean?"
+char sarah e=bored
+"Well, you know, {p10}bills had to be paid... {n}{p10}And Mr. Rivales did a very good job {n}of paying me."
+char phoenix hide
+"You worked for the mob just for the {n}money?!"
+char sarah e=bored
+"If you put it that way, I sound like a {n}horrible person..." 
+"But yep, {p10}that was the only reason."
+
+mus
+"{f}{next}"
+sfx dramapound.wav
+invert name=reception
+char sarah e=bored
+pause 40 script
+bg black
+char sara e=bored
+sfx rolling.ogg
+pause 10
+bg 2-chain-bg
+char sarah e=bored
+fg lockchains-2 name=chains2
+"{s 80 4}{next}"
+pause 20
+fg lock y=-8 x=65 name=lock1
+"{sfx Owned.ogg}{f}{next}"
+fg lock y=-8 x=-65 name=lock2
+pause 2
+"{sfx Owned.ogg}{f}{next}"
+pause 20
+char phoenix hide
+"{c089}(I knew it... {n}{p20}She isn't telling me the whole truth.)"
+delete name=chains2
+delete name=lock1
+delete name=lock2
+pause 20 script
+bg reception fade
+char sarah e=bored
+setflag sarahpsyche
+mus Arle Stage.ogg
+music_fade_in
+set _music_loop Arle Stage - loop.ogg
+goto top

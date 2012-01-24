@@ -1,0 +1,27 @@
+label top
+bg entrance
+
+list scene9move
+li Wright Anything Agency
+li Detention Center
+li Reception
+showlist
+menu scene9
+
+label Wright Anything Agency
+noflag sirgallantetalk AND puzzle menu
+flag sirgallantetalk AND puzzle scene10
+label menu
+mus
+script scene10menu
+label scene10
+mus
+script scene10
+
+label Reception
+mus
+script scene8menu
+
+label Detention Center
+mus
+script scene4menu

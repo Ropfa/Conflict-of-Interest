@@ -1,0 +1,112 @@
+noflag metcody didntmeetcody
+flag metcody metcody
+label didntmeetcody
+
+bg black
+nt
+"{c090}{center}{type}July 19, 4:00 PM{n}Rivales Tower{n}Front Entrance"
+bg entrance fade
+pause 60
+char ??? hide
+"{sfx shout-loud}Hey, c'mon! Let me in!"
+char police hide
+"I told you already, kid!{n}You're not getting in here!{n}Now get lost!"
+char ??? hide
+"You can't stop me, old man!{n}{sfx shout-general}I'll get in one way or {sfx shout-objection}another!"
+
+char phoenix hide
+"{c089}(It looks like that officer is having {n}trouble with some mouthy teenager.)"
+
+char ??? hide
+"You just {sfx shout-general}watch!{n}{p10}I'll be {sfx shout-loud}back!"
+
+char police hide
+"Whatever, kid! {p10}Just beat it!"
+
+char cody e=angry fade
+pause 60 script
+char cody e=angry nametag=???
+"What're {sfx shout-general}YOU looking at, pops?"
+
+char phoenix hide
+"Sorry. I didn't mean to stare.{n}You two were just making a rather {n}big scene."
+
+char cody e=angry nametag=???
+"Yeah? {p5}Well, it's that {sfx shout-general}cop's fault! He {n}won't let me into the crime scene up {n}there!"
+
+char phoenix hide
+"He has rules to follow.{n}He's just doing his job."
+
+char cody e=confident nametag=???
+"{sfx shout-general}Hah! No way!{n}I can go up there if I want!"
+
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 10 script
+
+char phoenix hide
+"Crime scenes should be left to the {n}proper authorities. You really don't {n}want to get messed up in them."
+
+char cody e=confident nametag=???
+"Yeah, right!{n}I've been to a crime scene before."
+"{delay 1}I know {delay 2}what...{n}{sfx realization}"
+char cody e=angry
+"Hey, do I know you, pops?"
+
+char phoenix hide
+"I don't think so."
+
+char cody e=happy nametag=???
+"{sfx realization2}Hey, I do! You're that lawyer man, {n}aren't you?"
+
+char phoenix hide
+""Lawyer man"...?"
+
+char cody e=happy nametag=???
+"{sfx realization3}Yeah, you are!{n}I recognized your "OBJECTION!""
+"It's me -- {p10}Cody Hackins! {n}{p10}Remember me?"
+
+pause 80 script
+char phoenix hide
+"{sfx whoops}Can't say that I do."
+
+char maya e=mad
+"{sfx shout-general}Nick! Cody was that little kid from my {n}first case as your assistant!"
+
+"{f}{next}"
+char nothing
+bg employeeA
+char cody e=young
+grey value=1
+pause 60 script
+char phoenix hide
+"Oh yeah... {n}I remember there being a boy who {n}witnessed the murder."
+pause 60 script
+"{f}{next}"
+grey value=0
+bg entrance
+char cody e=confident
+pause 60 script
+char phoenix hide
+"{c089}(I can see he's still having problems {n}with authority.)"
+
+mus Investigation - Opening.ogg
+set _music_loop Investigation - Opening - loop.ogg
+char maya e=cheerful
+"You've really grown up, Cody!"
+
+char cody e=confident
+"Well, it HAS been over ten years {n}since you last saw me."
+char cody e=happy
+"I still remember that trial like it was {n}yesterday!"
+"The Steel Samurai put on trial... {n}{p20}{sfx shout-loud}And Lawyer Man here saves his butt!"
+
+char maya e=confident
+"Wow, Nick.{n}{p10}You're a hero!"
+
+char phoenix hide
+"I guess... {p20}I guess I am."
+
+label metcody
+setflag metcody
+script scene9menu

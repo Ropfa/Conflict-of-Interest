@@ -1,0 +1,36 @@
+label top
+bg reception
+
+examine
+region 187 85 8 10 picture
+region 177 96 75 33 desk
+region 110 59 63 43 security
+menu scene6
+
+label picture
+char phoenix hide
+"It's a picture of a man and a little {n}girl."
+char maya e=normal
+"Do you think they might be{n}father and daughter?"
+char phoenix hide
+"Maybe."
+goto top
+
+label desk
+char phoenix hide
+"This looks like the receptionist's {n}desk."
+"Nobody's at it though."
+goto top
+
+label security
+char maya e=thinking
+"This machine looks rather {n}complicated."
+char phoenix hide
+"It looks like the security control{n}system for the building."
+"Whoever runs it must be really{n}smart."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

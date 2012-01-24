@@ -1,0 +1,173 @@
+label top
+bg pent2
+
+examine
+region 0 57 23 106 painting
+region 67 113 126 38 desk
+region 69 161 52 29 blood
+region 130 170 12 11 knife
+region 19 147 28 15 debris
+region 100 44 50 71 window
+region 34 43 66 71 city
+region 151 43 66 71 city
+menu scene7
+
+label knife
+char phoenix hide
+set _ev knife
+showevl
+"That knife...{n}{p10}Do you think it's the murder weapon?"
+char watters e=confident
+"I'd say so. {n}Wanna hear the best part?"
+"The defendant's fingerprints are all {n}over it. {p10}He even admitted it was his."
+char phoenix hide
+"Are you serious?!"
+char watters e=confident
+"Oh yeah. That guy didn't even bother {n}cleaning up after himself."
+hideevl
+"This case'll be open and shut. {n}Just watch."
+nt
+addev knife
+fg knifeev name=knifeev
+"{sfx evidence updated.wav}{c099}Parker's Knife added to the court {n}record."
+delete name=knifeev
+setflag knifeget
+goto top
+
+label desk
+noflag blackmailget needblackmail
+flag blackmailget dontneedblackmail
+label needblackmail
+char phoenix hide
+"That's a really nice desk."
+"{c089}(Definitely better than mine.)"
+char watters e=confident
+"Our tests showed that it's solid {n}mahogany. That man knew how to {n}live."
+char phoenix hide
+"Was there anything important inside {n}it?"
+char watters e=thinking
+"Actually we haven't checked that {n}yet."
+char phoenix hide
+"You had time to test what type of {n}wood it was, but not to skim {n}through its drawers?"
+char watters e=angry
+"{sfx shout-general}It's on my to-do list!"
+char phoenix hide
+"{sfx whoops}Here, let me look."
+char nothing
+char phoenix hide
+mus
+pause 100 script
+"{sfx realization}...!"
+mus Suspense.ogg
+music_fade_in
+set _music_loop Suspense.ogg
+pause 60 script
+"It's... {p20}It's..."
+char watters hide
+"{sfx shout-general}What is it? {sfx shout-general}What is it?!"
+pause 60 script
+music_fade_out
+set _ev parkingtickets
+showevr
+char phoenix hide
+"Unpaid parking tickets.{n}{p20}An entire drawer full of them."
+char watters e=thinking fade
+"Really...? {p20}That's it?"
+char phoenix hide
+"Well, {p20}that was rather anti-climactic."
+char maya e=thinking fade
+hideevr
+set _ev blackmail
+show evr
+"Why's that one a different color {n}from all the others?"
+char phoenix hide
+"Let's take a look."
+hideevr
+delete maya
+bg blackmailletter
+mus Suspense.ogg
+music_fade_in
+set _music_loop Suspense.ogg
+pause 60 script
+char phoenix hide
+"Maya... {p20}I don't think this is another {n}parking ticket."
+char maya hide
+"Somebody was trying to blackmail {n}him!"
+char watters hide
+"Looks like our victim was never able {n}to make it to the meeting."
+"6:00 AM.{n}He was killed at that same time."
+bg pent2
+char phoenix hide
+"{c089}(Did somebody try and stop him from {n}seeing the blackmailer?)"
+nt
+addev blackmail
+fg blackmailev name=blackmailev
+"{sfx evidence updated.wav}{c099}Blackmail Letter added to the court {n}record."
+delete name=blackmailev
+mus
+pause 40 script
+mus Metropolis Zone.ogg
+set _music_loop Metropolis Zone - loop.ogg
+setflag blackmailget
+goto top
+
+label dontneedblackmail
+char phoenix hide
+"That's a really nice desk."
+char maya e=thinking
+"Isn't it made out of mahogany?{n}Mr. Rivales must've been a rich man."
+goto top
+
+label painting
+char phoenix hide
+"The victim's taste in art was {n}certainly... {p20}interesting."
+char watters e=confused
+"Oh, come on, man!{n}{p10}That isn't what you're thinking!"
+"You're thinking {p10}"Why would any sane {n}person decorate their room with {n}that?!""
+char phoenix hide 
+"{c089}(Detective Watters: {p10}Mind reader.)"
+goto top
+
+label debris
+char phoenix hide
+"Looks like something got pretty {n}smashed up here."
+char watters e=serious
+"There was some kind of struggle. The {n}guy must've gone down fighting."
+goto top
+
+label window
+char phoenix hide
+"Why is that window open?!{n}{p10}{sfx shout-general}It's way too cold in here for that!"
+char watters e=serious
+"We're supposed to leave the crime {n}scenes as we found them. Believe me, {n}I'd love to close that thing."
+char phoenix hide
+"I wasn't even aware that you could {n}open windows on the top level of a {n}skyscraper."
+"Isn't that a safety hazard?"
+char watters e=serious
+"Beats me. Could be."
+char phoenix hide
+"{c089}(So {c940}the window was open when the {n}police found the body{c089}?)"
+"{c089}({delay 1}...But why?)"
+setflag windowget
+goto top
+
+label blood
+char maya e=disheartened
+"......{p20}That's a lot of blood."
+char phoenix hide
+"I've been to a lot of murder scenes, {n}but this might beat them all."
+"{c089}(The victim must have been slashed {n}clean apart to leave this much blood {n}behind.)"
+goto top
+
+label city
+char maya e=cheerful
+"Look at that view, Nick!"
+"You can see the whole city from up {n}here!"
+char phoenix hide
+"{c089}(Is this a bad time to say that I'm {n}afraid of heights?)"
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

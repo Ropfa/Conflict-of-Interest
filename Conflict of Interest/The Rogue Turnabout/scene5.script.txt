@@ -1,13 +1,14 @@
+setflag entranceget
 bg black
 nt
-"{c090}{center}{type}July 19, 11:30 AM{n}Rivales Tower{n}Front Entrance"
+"{c090}{center}{type}July 19, 1:00 PM{n}Rivales Tower{n}Front Entrance"
 bg entrance fade
 pause 60
 char maya e=surprised
-"Whoa... {n}Look at the size of that thing..."
+"Whoa... {n}{p20}Look at the size of that thing..."
 
 char phoenix hide
-"It's a really tall building.{n}No doubt about that."
+"It's a really tall building.{n}{p10}No doubt about that."
 
 char maya e=thinking
 "Could you imagine living in a {n}place like that...?"

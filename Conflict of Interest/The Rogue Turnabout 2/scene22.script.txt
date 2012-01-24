@@ -1,0 +1,218 @@
+bg defense
+fg dbench
+char phoenix e=thinking
+"Truth be told, I'm not exactly sure."
+"I have a very general idea though."
+
+bg judge
+char judge e=surprised
+"Tell me!"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"Gallante's mark."
+
+bg pent2
+char phoenix hide
+"We had a chance to investigate the {n}crime scene yesterday."
+"We found nothing out of the {n}ordinary."
+char obadiah hide
+"It looks like Detective Watters needs {n}some more supervision..."
+"...if he's letting a defense attorney {n}onto the scene."
+
+bg judge
+char judge e=normal
+"Mr. Williamson, did you know that the {n}mark was not found?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, I did.{n}{p20}However, that's irrelevant."
+mus
+"The marks are never found right {n}away."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"{sfx realization}Wait, what?"
+
+mus Investigation - Middlegame.ogg
+set _music_loop Investigation - Middlegame - loop.ogg
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Gallante doesn't leave his marks at {n}the scene of the crime. I never said {n}that..."
+"...and I'm sure that Detective {n}Watters didn't either."
+
+bg judge
+char judge e=surprised
+"Where does he leave them?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Usually in a nearby building. {n}They always have a photo of the {n}victim on the ground beside them."
+"It make it easy for us to identify his {n}hits."
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That's strange... Why were they so {n}confident that Sir Gallante is the killer?)"
+char phoenix e=normal
+"{c089}(They apparently haven't even found {n}the mark yet.)"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"We have other ways of telling when {n}he's killed somebody."
+"It's just never confirmed until we find {n}the mark."
+
+bg judge
+char judge e=normal
+"What are these ways?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Weapon type... {n}{p10}Position of the body... {n}{p10}Ferocity of the attack..."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That's all circumstantial until you find {n}the mark though!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Sometimes circumstantial is all you {n}need."
+"I believe that you're familiar with this {n}concept..."
+char obadiah e=angry
+"{delay 1}...aren't you, Wright?"
+
+bg defense
+fg dbench
+char phoenix e=normal(blink)
+"{c089}(Wait, {p10}is he referring to {sfx realization}{c940}that case{c089}?)"
+"{c089}(Why would he be upset about that?)"
+
+mus
+bg prosecution
+fg pbench
+char obadiah e=serious
+"The prosecution remains convinced {n}that Gallante was the culprit {n}here."
+"Unless you can somehow prove that {n}the defendant didn't commit this {n}crime..."
+"...I see no reason why we can't end {n}things here."
+
+bg judge
+char judge e=nodding
+pause 50 script
+char judge e=normal
+"Agreed."
+char phoenix hide
+"{c089}(Uh-oh. Looks like things just got {n}turned around again.)"
+pause 60 script
+
+bg witness
+fg wbench
+char sarah e=bored
+"Ferocity of the attack... {n}{p20}Ferocity of the attack..."
+char sarah e=normal
+"Hey, you know, I thought it was kind {n}of strange how Wayne had torn open {n}Mr. Rivales's body so much."
+"It seemed like overkill."
+char sarah e=ditzy
+"Now I realize why! {n}It's because he's Sir Gallante!"
+char sarah e=normal
+"A super hero has to be dramatic... {n}So he had to create a dramatic scene!"
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(If I want this to keep going, I'm going {n}to need this woman to talk more.)"
+"Sarah, you found the body, didn't {n}you?"
+
+bg witness
+fg wbench
+char sarah e=normal
+"Uh-huh."
+char phoenix hide
+"Would you like to say anything {n}about it?"
+char sarah e=ditzy
+"Only that it was totally messy!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I'd advise against questioning the {n}witness on the corpse."
+"She tends to get a bit {p30}{e worried}excited."
+
+bg witness
+fg wbench
+char sarah e=bored
+"Heeey...{n}{p20}That's not nice."
+
+bg defense
+fg dbench
+char phoenix e=thinking(blink)
+"{c089}(Do I want her to testify some {n}more?)"
+
+set_list_back_button false
+list scene22testify
+li I think I'll pass
+li Give me the gory details
+showlist
+
+label I think I'll pass
+bg defense
+fg dbench
+char phoenix e=normal
+"You may be right, Prosecutor."
+"I don't think we need or want her to {n}testify."
+bg aide
+char maya e=bench-strict
+"{sfx shout-general}Nick!"
+char phoenix hide
+"What?"
+char maya e=bench-strict
+"If you stop now, then the trial might {n}as well be over!"
+"We NEED her to keep talking!"
+char phoenix hide
+"Oh, right."
+bg defense
+fg dbench
+char phoenix e=sheepish
+"Um... I think I changed my mind. {n}I want Sarah to testify."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Fine. {p20}Have it your way..."
+char obadiah e=worried
+"But don't say I didn't warn you."
+script scene23sarahtestimony2
+
+label Give me the gory details
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(As much as I'd like to avoid it, this {n}might be our only chance.)"
+"The defense requests that the {n}witness testify about when she {n}found the body!"
+bg judge
+char judge e=normal
+"Well, Mr. Williamson?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"...Let her speak. {n}Nothing's going to change."
+"...But don't say that I didn't warn {n}you."
+bg judge
+char judge e=normal
+"Ms. Keyes, please tell us about your {n}discovery of the body."
+bg witness
+fg wbench
+char sarah e=ditzy
+"Umm... {p20}{sfx idea}Okay!"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"..."
+script scene23sarahtestimony2

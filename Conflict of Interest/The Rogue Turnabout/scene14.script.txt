@@ -1,0 +1,48 @@
+label top
+noflag bloodtried AND desktried AND paintingtried AND nonetried AND citytried luminolmode
+flag bloodtried AND desktried AND paintingtried AND nonetried AND citytried scene15
+label luminolmode
+bg pentluminol
+//70%
+
+examine
+region 0 57 23 106 painting
+region 67 113 126 38 desk
+region 69 161 52 29 blood
+region 34 43 183 71 city
+label ifback
+goto back
+
+label blood
+sfx luminol
+setflag bloodtried
+goto top
+
+label desk
+sfx luminol
+setflag desktried
+goto top
+
+label painting
+sfx luminol
+setflag paintingtried
+goto top
+
+label city
+sfx luminol
+setflag citytried
+goto top
+
+label none
+sfx luminol
+setflag nonetried
+goto top
+
+label scene15
+script scene15
+
+label back
+char phoenix hide
+"{c089}(No. {p20}We finally have the crime scene {n}to ourselves.)"
+"{c089}(This is the perfect opportunity to {n}for us. I'm not giving it up.)"
+goto top

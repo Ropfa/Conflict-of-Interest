@@ -1,9 +1,17 @@
+setflag receptionget
 bg black
 nt
-"{c090}{center}{type}July 19, 11:40 AM{n}Rivales Tower{n}Reception Area"
+"{c090}{center}{type}July 19, 1:10 PM{n}Rivales Tower{n}Reception Area"
 bg reception
 pause 60
-char gallante e=ba fade
-"Sup, foo?"
-char phoenix hide
-"Wassup."
+char maya e=thinking fade
+"There's nobody here."
+char maya e=surprised
+char forensics hide
+"If you're looking for {c940}Detective {n}Watters{c999}, he's in the penthouse {n}apartment just down the hall."
+char maya e=nod
+"Thank you!"
+char maya e=cheerful
+"Let's go, Nick!"
+
+script scene6menu

@@ -1,0 +1,3 @@
+bg pent3
+char maya
+menu scene13

@@ -1,0 +1,83 @@
+noflag metsarah didntmeetsarah
+flag metsarah metsarah
+label didntmeetsarah
+
+bg black
+nt
+"{c090}{center}{type}July 19, 2:45 PM{n}Rivales Tower{n}Reception Area"
+bg reception fade
+pause 60
+char sarah e=bored fade
+char sarah e=bored nametag=???
+"Excuse me, but do you have {n}clearance to be here?"
+"The police are--"
+sfx idea.wav
+char sarah e=normal
+"Oh!{n}{e ditzy}{p20}Why hello there!"
+mus Arle Stage.ogg
+set _music_loop Arle Stage - loop.ogg
+char phoenix hide
+"Hi. My name's Phoenix Wright.{n}I'm a defense lawyer."
+char sarah e=ditzy nametag=Keyes
+"I'm Sarah.{n}{p5}Sarah Keyes!"
+"It's a pleasure to meet you, Mr. {n}Phoenix! It's not often that I get {n}to meet such a cute lawyer!"
+char phoenix hide
+"Uh, thanks... {n}{p10}You must be the witness that {n}Detective Watters told us about."
+char sarah e=ditzy nametag=Keyes
+"Yeah, I guess I must be, you know?"
+"Sorry, but your client is totally {n}guilty!"
+char phoenix hide
+"You're sure about that?"
+char sarah e=ditzy nametag=Keyes
+"Absoposilutely sure!"
+char phoenix hide
+"Ms. Keyes, if it's all right with you, {n}I'd like to talk about the murder."
+char sarah e=ditzy nametag=Keyes
+"Oh, please... {p10}You don't have to be so {n}formal with little ol' me."
+"We're friends now! {n}Just call me "Sarah"."
+set _ev sarah$
+addev sarah$
+char phoenix hide
+"...Okay, {p20}Sarah.{n}{p20}Sorry if I made you feel {n}uncomfortable."
+char sarah e=ditzy
+"Oh, don't you worry about it, {n}Feenie-poo! {p5}No harm at all!"
+char phoenix hide
+"F-{p5}{s5}Feenie-poo...?"
+char sarah e=ditzy
+"You don't mind if I call you that, do {n}you? {p10}I think it sounds cute!"
+"A cute name for a cute boy!"
+char phoenix hide
+"You... {p10}I...{n}{p10}{sfx whoops}Bwuh?!"
+char sarah e=ditzy
+"If you don't like it, I can use {n}"Feenie-weenie" instead. Does that {n}sound better?"
+char phoenix hide
+"{c089}(That might actually be worse.)"
+char maya e=normal fade
+"Do you two know each other?"
+char phoenix hide
+"Not that I'm aware of."
+char sarah e=bored
+"Who are...{n}{p10}Who are you?!"
+char maya e=normal
+"Who, me?"
+char sarah e=bored
+"Yes... {p10}Who else would I be talking to?"
+char maya e=cheerful
+"My name's Maya Fey. {n}I'm Nick's assistant!"
+"Pleased to meet you, Sarah!"
+char sarah e=bored
+"{delay 1}......{p10}Ms. Keyes."
+char maya e=surprised
+"Huh...?"
+char sarah e=bored
+"{delay 1}Please call me "Ms. Keyes"."
+char maya e=surprised
+"Oh... {p10}Uh...{n}{p15}Sorry, Ms. Keyes."
+char sarah e=bored
+"Good."
+char phoenix hide
+"{c089}(Wow... Poor Maya.)"
+
+label metsarah
+setflag metsarah
+script scene8menu

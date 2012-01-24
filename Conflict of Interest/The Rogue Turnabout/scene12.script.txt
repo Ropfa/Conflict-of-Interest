@@ -1,0 +1,5 @@
+bg black
+nt
+"{c090}{center}{type}July 19, 8:00 PM{n}Rivales Tower{n}Penthouse Office"
+
+script scene12menu

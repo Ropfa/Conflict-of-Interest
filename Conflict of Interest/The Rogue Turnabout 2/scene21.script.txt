@@ -1,0 +1,135 @@
+bg defense
+fg dbench
+char phoenix e=thinking
+"Actually, I have a problem with the {n}idea that this was even one of the {n}Gallante killings to begin with."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{delay 1}...What?"
+
+bg aide
+char maya e=bench-strict
+"{sfx shout-shock}Nick! {p15}What are you talking about?"
+"Sir Gallante personally confessed to {n}us last night!"
+char phoenix hide
+"I know... {n}{p10}But they'd never believe that."
+"They'd accuse me of making it up to {n}cover for the defendant."
+"I'm just trying to buy Mr. Parker {n}some more time."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"What do you mean?{n}{p20}Of {sfx shout-general}course it was Sir Gallante!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"How can you be so sure?"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"The scene fits his current MO {n}to the T!"
+"His handwriting is all over {sfx shout-general}it!"
+
+bg judge
+char judge e=surprised
+"Wh-{p5}what?!{n}{p20}Why would he draw on the crime {n}scene?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Metaphorically speaking, of course."
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"I disagree.{n}{p20}Once again, something very {n}important is missing."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You disagree?{n}{p20}{sfx shout-general}Ha! {p20}This is rich!"
+"What do you know? {n}{p20}I've been chasing after this guy {n}for three years."
+"You didn't even know he existed until {n}yesterday!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Yesterday was enough."
+
+label redo
+bg pent2
+char phoenix hide
+"Detective Watters told me enough to {n}know that something very big is {n}missing from the crime scene."
+char judge hide
+"What's missing?{n}{p20}What are we looking for?"
+
+set _list_back_button false
+
+list scene21present
+li I can show you
+li I don't know
+showlist
+
+label I don't know
+script scene22
+
+label I can show you
+char phoenix hide
+"That question can be answered with {n}our evidence, Your Honor."
+char judge hide
+"Can it? {p15}Well then, {p10}please show me!"
+set _cr_back_button false
+present
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"It was this! This was missing!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If it was missing, then how'd you find {n}it?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"It was... {n}{p20}Well, you see, I...{n}{p25}{e sweating}{c089}(Right.)"
+bg judge
+char judge e=normal
+"So you weren't as sure about this as {n}you seemed."
+char judge e=warning
+"Let's try this again, Mr. Wright..."
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

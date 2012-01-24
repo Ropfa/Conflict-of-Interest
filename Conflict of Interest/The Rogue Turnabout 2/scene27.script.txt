@@ -1,0 +1,346 @@
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg blueprints
+char phoenix hide
+"Prosecutor, what did you say the {n}symbol on this map meant?"
+
+char obadiah hide
+"That's a window. {n}{p20}Why?"
+char phoenix hide
+"It just so happens that at the crime {n}scene..."
+
+sfx screenwipe
+bg defense
+fg dbench
+char phoenix e=confident
+paus 20 script
+mus Pursuit - Lying Coldly.ogg
+set _music_loop Pursuit - Lying Coldly - loop.ogg
+"...this particular window was open."
+
+bg judge
+char judge e=surprised
+"Why would there be an open {n}window?"
+"At that high up, it would be really {n}chilly!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Exactly."
+"There's no reasonable explanation {n}for the penthouse window to be {n}open... {p20}unless..."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{sfx shout-loud}ENOUGH!!!"
+
+bg defense
+fg dbench
+char phoenix e=ohshit
+"{sfx shout-shock}Gaak!!"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"I can think up a dozen good reasons {n}for somebody to open it! The fact it {n}was open means nothing!"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I think it does."
+"You wanted a way somebody could {n}sneak in... {e objecting}and I gave it to you!"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{sfx shout-general}Do you even know what you're {n}saying?!"
+"You expect anyone in this room to {n}buy that some person scaled a {n}thirty-story building..."
+"...and then entered one of the {n}windows from the outside?"
+"The mere thought of it is absurd!"
+"Those windows don't even open {n}from that direction!"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Wh-{p5}{s5}WHAT?!"
+
+delev crimephoto
+addev crimephoto2
+
+bg prosecution
+fg pbench
+char obadiah e=worried
+"We checked it. It's impossible to {n}enter from the outside without {n}breaking the glass..."
+char obadiah e=serious
+"...and, of course, that was intact."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"A window was still open though! {n}Somehow, for whatever reason, {n}somebody opened it!"
+"Detective Watters and his team were {n}ordered to leave the scene as they {n}found it..."
+char phoenix e=pointing
+"So it had to have been open when the {n}murder occurred!"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"It still doesn't prove that some kind {n}of ninja assassin climbed 350 feet up {n}the side of a building!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"No. It doesn't."
+"The window was just the entry point."
+"{c090}However, I can prove that somebody {n}else was up there who shouldn't have {n}been..."
+label redopresent
+set _cr_back_button false
+present
+
+label codyphoto
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=angry
+set _ev codyphoto
+showevl
+"Wh-{p5}What is this?!"
+"Why haven't I {s5}seen that photo {s5}yet?!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I'm sure you would've by now... {n}{p15}{e confident}if you'd let a certain teenager {n}onto the crime scene."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Don't you {sfx shout-loud}DARE tell me how to do my {n}job!"
+bg judge
+char judge e=surprised
+"There's some kind of robot on the {n}roof!"
+bg defense
+fg dbench
+char phoenix e=confident
+"Actually, Your Honor... {n}If I had to guess, I'd say that {n}it's a human."
+char phoenix e=objecting
+"And it's the human who killed Michael {n}Rivales!"
+
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You can't prove that person is {n}related to the crime!"
+"It's probably just a janitor fixing {n}something!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Really? {p20}Tell me, Prosecutor..."
+bg speedzoom stack name=zoom
+char phoenix e=zoom
+sfx shout-objection.wav
+"{f}What kind of {f}janitor would be {n}dressed up {f}like they're ready to {n}{f}slay a {f}dragon?!"
+delete name=zoom
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Nnngh..."
+
+bg judge
+char judge e=normal
+"You do bring up a good point, {n}Mr. Wright."
+"This figure on the roof is certainly {n}suspicious!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"I'd like to remind the court that {n}Sir Gallante is said to favor a {n}knight-themed motif..."
+"...Something we can also say about {n}our mystery prowler."
+char phoenix e=pointing
+"Since my client was seen by the {n}witness, entering through the {n}hallway..."
+"...He couldn't be the person on the {n}roof!"
+
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You're assuming this "knight" is the {n}killer."
+"Even if he was on the roof, how did {n}he make it into the penthouse?"
+
+bg defense
+fg dbench
+char phoenix e=pointing
+"{sfx shout-objection}Through the window!"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"That's a good twenty feet from the {n}top of the building!"
+"What, was this "knight" also some {n}kind of human arachnid?"
+bg speedzoom stack name=zoom
+fg nothing
+sfx shout-objection
+char obadiah e=zoom
+"{f}Last I checked, {f}people can't {f}climb {n}sol{f}id me{f}tal walls!!"
+delete name=zoom
+
+bg speedzoom stack name=zoom
+sfx shout-objection
+char phoenix e=zoom
+"{f}Somebody dressed as {f}Sir {f}Gallante {n}was hiding on the {f}roof when the {n}{f}crime happened!"
+delete name=zoom
+
+bg speedzoom stack name=zoom
+sfx shout-objection
+char obadiah e=zoom
+"{f}How did {f}he get into {f}that {f}room?!"
+delete name=zoom
+
+bg speedzoom stack name=zoom
+sfx shout-objection
+char phoenix e=zoom
+"{f}I {f}DON'T {f}KNOW{f}!{f}!{f}!{f}"
+delete name=zoom
+"{f}{next}"
+mus
+bg judge
+char judge e=surprised
+"..."
+pause 50 script
+"{f}{next}"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"..."
+pause 50 script
+"{f}{next}"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"..."
+pause 50 script
+"{f}{next}"
+
+bg aide
+char maya e=bench-profile
+"..."
+pause 50 script
+"{f}{next}"
+
+bg judge
+char judge e=normal
+"Well... It looks like neither side has {n}the answers to everything."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No, I suppose not."
+
+bg judge
+char judge e=normal
+"Perhaps it would be best if we {n}extended the trial."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"The defense is fine with this, {n}Your Honor."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"As is the prosecution."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"{c089}(We agree on something!)"
+
+bg judge
+char judge e=normal
+"Very well.{n}{p20}Court is adjourned until tomorrow."
+fg ani-judge-gavel
+pause 30 script
+bg courtsarah
+pause 100 script
+
+bg black fade
+pause 80 script
+mus
+pause 80
+mus Jingle - Slight Break.ogg
+bg tobecontinued fade
+pause 300
+mus
+bg nothing fade
+exit
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping at {n}straws and have no idea what you're {n}doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in {n}my courtroom!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+char phoenix e=thinking
+"{c090}(I know I have something that proves {n}there was an intruder that night...)"
+goto redopresent
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

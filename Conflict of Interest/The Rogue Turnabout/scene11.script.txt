@@ -1,0 +1,93 @@
+noflag gungot didntgetgun
+flag gungot gungot
+label didntgetgun
+
+bg entrance fade
+nt
+"{c090}{center}{type}July 19, 6:40 PM{n}Rivales Tower{n}Front Entrance"
+char cody e=happy fade
+"Hey, you're back!{n}{e confident}You ready to do this?"
+char maya e=pumped
+"Yeah! {p10}Let's do this!"
+char cody e=confident
+"{sfx shout-general}All right!!"
+char maya e=pumped 
+"{sfx shout-objection}YEEEEAAAAHHHH!!!"
+char phoenix hide
+"{c089}(Wow. {p10}These two...)"
+char nothing
+mus Tricks and Gimmicks.ogg
+//GUN PUZZLE FILLER
+
+mus
+char phoenix hide
+set _ev gun
+show evl
+"It's a gun."
+"It won't be working anytime soon...{n}{p20}But it's definitely a gun."
+hideevl
+delev smashed
+addev gun
+
+char maya e=thinking
+"That thing got really smashed up {n}when it fell."
+char cody e=confident
+"No kidding! That detective must've {n}gotten really hurt when it hit him."
+
+char phoenix hide
+"A gun hits Gumshoe at almost {n}exactly the same time that a murder {n}occurs in the building next to him."
+"That's too convenient for me to just {n}accept as a coincidence."
+
+char cody e=confident
+"Hey, if you think it came from the {n}crime scene, we should dust for {n}prints."
+"I have a fingerprinting kit at home. {n}We could use that!"
+
+char phoenix hide
+"That would be great, Cody."
+"{c089}(I'm not even going to ask why he {n}has one of those...)"
+
+char cody e=angry
+"I can meet you back here tomorrow {n}if you want."
+
+char phoenix hide
+"T-Tomorrow?"
+
+char cody e=sad
+"Hey, don't look at me like that!"
+"It's almost night, and it takes a long {n}time to get downtown!"
+
+char phoenix hide
+"No, it's fine. I guess we'll just have to {n}make do without it for now."
+"{c089}(And hopefully Mr. Parker won't be {n}found guilty by then.)"
+
+char maya e=pumped
+"Don't worry, Nick! We can do it! I {n}know that he didn't kill Mr. Rivales!"
+pause 40
+sfx realization.wav
+
+char cody e=angry
+"R-Rivales?!{n}As in {s5}{sfx shout-general}Michael Rivales?!"
+
+char phoenix hide
+"Yes. Friend of yours?"
+
+char cody e=confident
+"No way, pops! I'm not dumb enough {n}to get involved with {c940}the mob{c999}!"
+"You're saying that the dead guy this {n}time is THE Michael Rivales?"
+
+char phoenix hide
+"He's important enough to get "the" {n}in front of his name?"
+
+char cody e=confident
+"Of course! He's only the ruler of all {n}the crime in this city! He's the {n}baddest of the bad!"
+"I had no idea that Sir Gallante went {n}and killed HIM off! {n}This is so{sfx shout-objection} awesome!!!"
+delev rivales$
+addev rivalesupdate$
+
+char phoenix hide
+"{c089}(So Rivales was a criminal kingpin...)"
+"{c089}(I wonder if there's {c940}anybody else{c089} {n}who could tell us more about this.)"
+
+label gungot
+setflag gungot
+script scene11menu

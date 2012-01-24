@@ -1,0 +1,104 @@
+label top
+bg wrightanything
+
+examine
+region 214 6 42 82 books
+region 163 32 22 56 charley
+region 16 0 34 49 gramarye
+region 10 151 32 15 spaghetti
+region 123 113 68 22 table
+region 108 64 20 20 hulahat
+region 50 135 45 57 hulahat
+region 0 56 86 26 props
+region 93 14 158 63 props
+region 96 124 40 68 couch
+region 57 102 50 20 couch
+menu scene10
+
+label books
+char phoenix hide
+"Difficult-looking legal books."
+"I can't remember the last time I{n}opened one of them."
+goto top
+
+label charley
+char phoenix hide
+"This is Charley. He belonged to my {n}mentor, Mia, before she passed{n} away."
+"He's one of the few things around {n}here that hasn't changed."
+goto top
+
+label gramarye
+char phoenix hide
+"Zak Gramarye. He was a great {n}magician."
+"...{p20}And to be frank, he was also {n}kind of a jerk."
+goto top
+
+label spaghetti
+char phoenix hide
+"Why is this even here?"
+goto top
+
+label table
+char maya e=normal
+"We should probably clean this place {n}up. It might attract more clients."
+char phoenix hide
+"If they need us that badly, {char maya e=angry}they {n}won't care how messy the place is."
+goto top
+
+label hulahat
+char phoenix hide
+"Trucy's good at many things, but {n}cleaning up after herself isn't one of {n}them."
+char maya e=confident
+"She probably gets it from her father."
+char phoenix hide
+"You know she's not my biological {n}daughter, {p5}right?"
+char maya e=thinking
+"Oh... {p10}Yeah."
+goto top
+
+label props
+char phoenix hide
+"Props left over from Trucy's latest {n}magic show."
+goto top
+
+label couch
+noflag puzzle none
+flag puzzle glue
+
+label glue
+char phoenix hide
+"I wonder if it's under the couch {n}cushions."
+pause 60 script
+char maya e=normal
+"Yep. Here it is."
+set _ev superglue
+showevr
+pause 40 script
+char phoenix hide
+""Strong enough to bring together {n}warring nations.""
+pause 40 script
+"{c089}(I think that may be the most {n}politically incorrect slogan for glue {n}that I've ever seen.)"
+char maya e=normal
+"I bought that a few weeks ago to {n}work on some fliers. That stuff {n}will work on anything."
+char phoenix hide
+"Why did you need super glue to make {n}fliers?"
+char maya e=mad
+"They were special fliers!"
+hideevr
+sfx hideevidence
+char phoenix hide
+"Right..."
+"In any case, let's get this over with {n}and find out what that thing is."
+char maya e=thinking
+"We should go talk to Cody before we {n}put it back together."
+char maya e=normal
+"I think he'd like to know what it is too, {n}don't you?"
+char phoenix hide
+"{c089}(It would be rather rude to keep him {n}there waiting.)"
+setflag glueget
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

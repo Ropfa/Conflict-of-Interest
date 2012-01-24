@@ -1,0 +1,15 @@
+label top
+bg detentionnew
+
+list sceneparkergone
+li Wright Anything Agency
+li Rivales Tower
+showlist
+menu sceneparkergone
+
+label Wright Anything Agency
+mus
+script scene10menu
+
+label Rivales Tower
+script scene11menu

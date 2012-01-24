@@ -8,12 +8,12 @@ char maya e=normal
 "That's my old magatama."
 "How long has it been since you {n}got that?"
 char phoenix hide
-"It has to have been at least nine{n}years ago."
+"It has to have been at least nine{n}years."
 char maya e=thinking
 "Wow... It's hard to believe that{n}it's been that long."
 "I wonder if it still works."
 char phoenix hide
-"{c089}(I guess magic lie detectors must {n}have some kind of battery life...)"
+"{c089}(I guess magic lie detectors must {n}have some kind of battery life...?)"
 goto top
 
 label attorneybadge
@@ -22,7 +22,7 @@ char maya e=normal
 char phoenix hide
 "Yeah, it felt empty not having {n}one."
 char maya e=cheerful
-"You're probably gonna go show it {n}off to everyone you see{char maya e=pumped} so that they {n}know you're an attorney."
+"You're probably gonna go show it {n}off to everyone you see{char maya e=pumped} so that {n}they know you're an attorney."
 "Just like you always used to!"
 char phoenix hide
 "C'mon, Maya. I never did that."

@@ -1,0 +1,98 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"I'm sorry, but you're wrong."
+"There is at least one more way to get {n}into the penthouse suite."
+
+bg witness
+fg wbench
+char sarah e=bored
+"N...{p10}[s5}Nuh-uh!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Yuh-huh!"
+
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Try taking another look at that map. {n}Getting into that room wouldn't be {n}possible..."
+"...Not without going past Ms. Keyes, {n}at least."
+
+bg defense
+fg dbench
+char phoenix e=confident
+"It's you who need to look again, {n}Prosecutor."
+"You're overlooking something very {n}obvious."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Let me guess... The killer flew in."
+"Or no, wait...{p20}He teleported."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"No, the real answer is much more {n}simple than that."
+
+label top
+bg blueprints
+char phoenix hide
+"{c090}(How did the killer enter the room...?)"
+examine hide
+region 3 40 9 46 window
+
+label window
+script scene27
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim.ogg
+pause 5 script
+char phoenix hide
+"They might have come in through {n}here."
+char obadiah hide
+"{sfx shout-general}Bah! {p10}Stop wasting our time!"
+char phoenix hide
+"You don't think it was possible?"
+char obadiah hide
+"No! I don't!"
+"You're supposed to be showing how {n}Mystery Man Killer teleported into {n}the room..."
+"...not doing whatever it is you are {n}right now."
+char judge hide
+"Mr. Wright, please try to think things {n}through a bit more."
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+char obadiah hide
+"And try to make a bit more sense as {n}{sfx shout-general}well!"
+goto top
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

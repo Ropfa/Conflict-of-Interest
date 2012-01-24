@@ -1,0 +1,11 @@
+label top
+bg pent3
+
+list scene12move
+li Reception
+showlist
+menu scene12
+
+label Reception
+mus
+script scene12menu

@@ -1,0 +1,98 @@
+set _cr_button true
+
+bg black
+pause 60
+bg courtlobby fade
+
+nt
+"{center}{type}{c090}July 20, 9:18 AM{n}District Court{n}Defendant Lobby No. 3"
+
+mus Courtroom Lounge.ogg
+set _music_loop Courtroom Lounge - loop.ogg
+char parker e=sad fade
+pause 40
+char phoenix hide
+"Are you ready, Mr. Parker?"
+
+char parker e=disturbed
+"Am I... Am I {e freakout}READY?!{n}{p20}{e disturbed}I...{n}{p30}{e crying}I..."
+
+char phoenix hide
+"I'll take that as a "no"."
+
+char maya e=pumped
+"It's okay, Mr. Parker!{n}We'll prove you're innocent!"
+
+char parker e=worried
+"I... {p20}I knew I could count on you guys."
+
+char phoenix hide
+"{c089}(He doesn't sound too sure about {n}that.)"
+
+char parker e=worried
+"Do you know who's testifying {n}today?"
+
+char phoenix hide
+"I'm pretty sure it's going to be {n}Ms. Keyes."
+
+char parker e=worried
+"Sarah?{n}{p30}I could see that.{n}{p20}She never did like me."
+
+char phoenix hide
+"Really? {p10}She didn't seem too {n}antagonistic when we spoke {n}yesterday."
+
+char parker e=worried
+"She's good at hiding her true feelings. {n}{p20}You have to be when you're in this {n}business."
+"I'm sure there's a lot that little Sarah {n}wasn't telling you."
+
+bg black
+char sarah e=bored fade
+pause 30 script
+char phoenix hide
+"{c089}(She did have those psychelocks. {n}We never found out what was behind {n}them. I wonder what she's hiding...)"
+char sarah e=ditzy
+char phoenix hide
+"{c089}(...and if it has anything to do with {n}why she doesn't like Mr. Parker.)"
+
+bg courtlobby fade
+char maya e=thinking fade
+pause 20 script
+"Hey, Nick, I was thinking..."
+
+char phoenix hide
+"Yes?"
+
+char maya e=thinking
+"Is it really that bad that somebody {n}killed Mr. Rivales?"
+"If he was as bad as Cody says, then {n}everybody's probably better off {n}without him."
+
+char phoenix hide
+"Murder is murder, Maya. {n}{p10}It doesn't matter if the victim {n}deserved it or not."
+
+char maya e=thinking
+"But Sir Gallante's kind of a hero, isn't {n}he?" 
+"He's getting rid of organized crime in {n}the city."
+"Mr. Edgeworth had a friend who {n}broke the law to help others."
+
+char phoenix hide
+"Yes..."
+char maya e=surprised
+char phoenix hide
+"{sfx shout-shock}{f}But she didn't impale the people that {n}she stole from."
+
+char maya e=surprised
+"O-{p5}Okay!"
+
+char phoenix hide
+"People shouldn't try to take the law {n}into their own hands."
+"We have the police and courts for a {n}reason."
+pause 20 script
+
+char parker e=worried
+"..."
+
+char phoenix hide
+"It's almost time. We should head in."
+pause 20
+
+script scene17

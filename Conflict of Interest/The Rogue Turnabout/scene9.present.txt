@@ -1,0 +1,85 @@
+present
+label top
+menu scene9
+bg entrance
+char cody
+
+label gallante$
+char cody e=happy
+"He's a real hero!{n}Fighting crime like a boss!"
+char phoenix hide
+"I'm not sure it's best to be idolizing a murderer."
+char cody e=confident
+"Hah! You just don't understand these things."
+goto top
+
+label codyphoto
+char cody e=happy
+"He's a real hero!{n}Fighting crime like a boss!"
+char phoenix hide
+"I'm not sure it's best to be idolizing a {n}murderer."
+char cody e=confident
+"Hah! You just don't understand these {n}things."
+goto top
+
+label poster
+char cody e=happy
+"He's a real hero!{n}Fighting crime like a boss!"
+char phoenix hide
+"I'm not sure it's best to be idolizing a {n}murderer."
+char cody e=confident
+"Hah! You just don't understand these {n}things."
+goto top
+
+label smashed
+set _ev smashed
+showevl
+char phoenix hide
+"Cody, you were here when the {n}murder happened."
+"Would you by any chance recognize {n}this?"
+char cody e=angry
+"Hmm... {p10}Yeah, I think I do!"
+"That's what hit that detective guy, {n}isn't it?"
+char maya e=pumped
+"Really? Do you know what it was?"
+char cody e=happy
+"Nope!"
+char maya e=disheartened
+"Aww..."
+char cody e=angry
+"Whatever it is, it's made of some {n}kind of metal."
+"Have you tried putting it back {n}together yet?"
+char phoenix hide
+"No."
+char cody e=angry
+"{sfx shout-general}{s 10}Well, get on that!"
+hideevl
+char nothing
+mus Tricks and Gimmicks.ogg
+//PUZZLE FILLER
+
+mus
+char maya e=surprised
+"What just happened?{n}{e mad}Why did it fall apart?!"
+char phoenix hide
+"I've only got two hands.{n}It's hard to hold all the pieces {n}together."
+char maya e=thinking
+"Hmm...{n}{e normal}We have some super glue back at the {n}Agency."
+char phoenix hide
+"We do?{n}{c089}(Would that even work on metal?)"
+char maya e=normal
+"I could find it right away if we went {n}back."
+char phoenix hide
+"I really don't think super glue will hold {n}these pieces together for long..."
+"But it's better than nothing, I {n}suppose."
+char maya e=cheerful
+"Let's go!"
+char cody e=happy
+"I'll be waiting here for you guys!"
+setflag puzzle
+goto top
+
+label none
+char cody e=confident
+"Sorry, pops.{n}I don't know nothing about that."
+goto top
