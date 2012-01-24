@@ -17,7 +17,88 @@ char phoenix hide
 "{c089}(Wow. {p10}These two...)"
 char nothing
 mus Tricks and Gimmicks.ogg
-//GUN PUZZLE FILLER
+
+init_puzzle
+gui Button move_left name=gButton_left x=125 y=292 hotkey=k_left hold <-
+gui Button move_right name=gButton_right x=145 y=292 hotkey=k_right hold ->
+gui Button move_up name=gButton_up x=132 y=285 hotkey=k_up hold ^
+gui Button move_down name=gButton_down x=132 y=300 hotkey=k_down hold v
+gui Button skip_puzzle name=gButton_skip x=200 y=300 Skip
+{add_piece 60 101}
+{add_piece 60 108}
+{add_piece 79 103}
+{add_piece 85 104}
+{add_piece 79 100}
+{add_piece 86 119}
+{add_piece 94 120}
+{add_piece 104 103}
+{add_piece 102 110}
+
+label puzzle_loop
+gui Wait
+
+label pickpiece_1
+set aPiece 1
+goto puzzle_loop
+
+label pickpiece_2
+set aPiece 2
+goto puzzle_loop
+
+label pickpiece_3
+set aPiece 3
+goto puzzle_loop
+
+label pickpiece_4
+set aPiece 4
+goto puzzle_loop
+
+label pickpiece_5
+set aPiece 5
+goto puzzle_loop
+
+label pickpiece_6
+set aPiece 6
+goto puzzle_loop
+
+label pickpiece_7
+set aPiece 7
+goto puzzle_loop
+
+label pickpiece_8
+set aPiece 8
+goto puzzle_loop
+
+label pickpiece_9
+set aPiece 9
+goto puzzle_loop
+
+
+label move_left
+{move_piece -1 0}
+goto puzzle_loop
+
+label move_right
+{move_piece 1 0}
+goto puzzle_loop
+
+label move_up
+{move_piece 0 -1}
+goto puzzle_loop
+
+label move_down
+{move_piece 0 1}
+goto puzzle_loop
+
+
+label skip_puzzle
+set aPiece 9
+finish_puzzle
+delete name=gButton_left
+delete name=gButton_right
+delete name=gButton_up
+delete name=gButton_down
+delete name=gButton_skip
 
 mus
 char phoenix hide

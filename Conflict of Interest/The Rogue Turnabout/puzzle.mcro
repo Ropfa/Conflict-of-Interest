@@ -1,0 +1,50 @@
+macro init_puzzle
+set aPiece 0
+endmacro
+
+macro finish_puzzle
+// Loop through all the pieces.
+label each_piece$0
+is aPiece < 1 end$0
+
+joinvar lButton gButton_ $aPiece
+delete name=$lButton
+subvar aPiece 1
+
+goto each_piece$0
+
+label end$0
+endmacro
+
+macro add_piece
+addvar aPiece 1
+
+joinvar lButton gButton_ $aPiece
+joinvar lLabel pickpiece_ $aPiece
+joinvar lGraphic ev/part $aPiece
+
+joinvar lVar gButton_ $aPiece .x
+setvar $lVar $1
+joinvar lVar gButton_ $aPiece .y
+setvar $lVar $2
+
+gui Button $lLabel name=$lButton x=$1 y=$2 graphic=$lGraphic
+endmacro
+
+macro move_piece
+joinvar lButton gButton_ $aPiece
+joinvar lLabel pickpiece_ $aPiece
+joinvar lGraphic ev/part $aPiece
+getvar lX gButton_ $aPiece .x
+getvar lY gButton_ $aPiece .y
+addvar lX $1
+addvar lY $2
+
+joinvar lVar gButton_ $aPiece .x
+setvar $lVar $lX
+joinvar lVar gButton_ $aPiece .y
+setvar $lVar $lY
+
+delete name=$lButton
+gui Button $lLabel name=$lButton x=$lX y=$lY graphic=$lGraphic
+endmacro
