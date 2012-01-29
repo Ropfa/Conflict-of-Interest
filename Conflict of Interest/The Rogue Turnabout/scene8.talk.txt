@@ -131,11 +131,11 @@ char sarah e=bored
 ""Nice"...?{n}{p20}Are we talking about the same {n}person?"
 char maya e=pumped
 "Mr. Parker's nothing but a big teddy {n}bear! He wouldn't hurt a fly!"
-music_fade_out
+pause 60 script
 char sarah e=bored
 "......{p80}{n}{e ditzy}{sfx shout-general}Haha{sfx shout-general}haha!!"
+pause 40 script
 mus Arle Stage.ogg
-music_fade_in
 set _music_loop Arle Stage - loop.ogg
 "That's a good one!{n}You know, you're really funny, Marla!"
 char maya e=pumped
@@ -288,6 +288,5 @@ bg reception fade
 char sarah e=bored
 setflag sarahpsyche
 mus Arle Stage.ogg
-music_fade_in
 set _music_loop Arle Stage - loop.ogg
 goto top

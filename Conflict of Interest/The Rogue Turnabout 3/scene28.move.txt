@@ -1,0 +1,21 @@
+label top
+bg wrightanythingenvelope
+
+list scene28move
+li Detention Center
+li Rivales Tower
+li Hospital
+showlist
+menu scene28
+
+label Hospital
+mus
+script scene30menu
+
+label Detention Center
+mus
+script scene29
+
+label Rivales Tower
+mus
+script scene31menu

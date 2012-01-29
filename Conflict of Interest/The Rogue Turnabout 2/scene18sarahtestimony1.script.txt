@@ -62,7 +62,14 @@ char phoenix e=handsondesk
 bg witness 
 fg wbench
 char sarah e=ditzy
-fg Cross-ExaminationAnim fade
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=pvs x=255 speed=8 nowait
+scroll name=wvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
 nt
 "{n}{center}{c940}-- The Only One --"
 mus Confrontation - Moderato.ogg

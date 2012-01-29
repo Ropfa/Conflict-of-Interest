@@ -15,7 +15,7 @@ char phoenix hide
 "Are you ready, Mr. Parker?"
 
 char parker e=disturbed
-"Am I... Am I {e freakout}READY?!{n}{p20}{e disturbed}I...{n}{p30}{e crying}I..."
+"Am I... Am I {sfx shout-scream}{e freakout}READY?!{n}{p20}{e disturbed}I...{n}{p30}{e crying}I..."
 
 char phoenix hide
 "I'll take that as a "no"."
@@ -86,7 +86,7 @@ char maya e=surprised
 char phoenix hide
 "People shouldn't try to take the law {n}into their own hands."
 "We have the police and courts for a {n}reason."
-pause 20 script
+pause 40 script
 
 char parker e=worried
 "..."

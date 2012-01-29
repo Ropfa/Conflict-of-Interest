@@ -1,0 +1,32 @@
+label top
+bg detentionnew
+fg detention
+
+list scene29move1
+li Wright Anything Agency
+li Rivales Tower
+li Hospital
+flag blackdetention blacksapartment
+showlist
+list scene29move2
+menu scene29
+label blacksapartment
+li Black's Apartment
+showlist
+menu scene29
+
+label Hospital
+mus
+script scene30menu
+
+label Wright Anything Agency
+mus
+script scene28menu
+
+label Rivales Tower
+mus
+script scene31menu
+
+label Black's Apartment
+mus
+script scene32

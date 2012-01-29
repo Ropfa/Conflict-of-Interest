@@ -1,0 +1,301 @@
+label top
+bg detentionnew
+fg detention name=1
+
+list scene29talk1
+li Accusation of murder
+li Michael Rivales
+flag michaelrivalestalk michaelrivalestalk
+showlist
+list scene29talk2
+menu scene29
+label michaelrivalestalk
+li Leaving the business
+label scene29talk
+showlist
+menu scene29
+goto scene29talk
+
+label Accusation of murder
+char parker e=sad
+char phoenix hide
+"Do you have any idea why Sarah Keyes wants to see you convicted?"
+char parker e=sad 
+"If I knew, I'd tell you. Believe me."
+"You really can't blame her though...{n}What with how guilty I look."
+"I really did go into that room just before he was killed."
+char phoenix hide
+"What were you meeting with him about?"
+char parker e=worried
+"We discussed a few business matters."
+char phoenix hide
+"For how long?"
+char parker e=worried
+"Not too long, actually.{n}A few minutes at the most."
+char phoenix hide
+"You had to show up at 5:30 in the morning for only a few minutes?"
+"That must've been an important meeting."
+char parker e=worried
+"It was."
+char phoenix hide
+"Why did you bring your knife with you?"
+char parker e=serious
+"I... {e disturbed}Hey!{n}You don't think that I... Do you?!"
+char phoenix hide
+"You mean that you didn't bring it in there with you?"
+char parker e=disturbed
+"Of course not! I haven't seen that thing in weeks!"
+"I thought I lost it!"
+char phoenix hide
+"{c089}(And suddenly it winds up at a crime scene...)"
+"{c089}(...Of course, no court would ever believe that story.)"
+setflag accusationtalk
+
+noflag parkerpsyche AND accusationtalk scene29
+flag parkerpsyche AND accusationtalk ifthen
+label scene29
+goto top
+label ifthen
+noflag blackdetention blackdetention
+flag blackdetention ifthen2
+label blackdetention
+char parker e=sad
+"...Do you think you can actually win this?"
+char phoenix hide
+"I've been up against worse odds."
+char parker e=disturbed
+"But... They're not just trying to get me with one murder."
+"They're trying to prove that I'm a serial killer!"
+"IT'S ALL OVER FOR {e freakout}ME!!!"
+char parker e=sad fade
+"I'm as good as dead..."
+char black hide
+"{delay 1}Duuuuuude, Waaaaayyyynnne."
+"{delay 1}Come on! You gotta put a bit more faith in your lawyer."
+char parker e=serious
+"{sfx realization}!"
+delete name=1
+char black e=peace fade
+"{delay 1}You can't lose hope! This guy's here for you, buddy! All the way!"
+fg detention name=1
+char parker e=serious
+"I guess you're right... I"m sorry, Mr. Wright."
+char phoenix hide
+"Don't worry about it. I know how it can go."
+delete name=1
+char black e=peace
+"{delay 1}Hey again, Mr. Wright."
+"{delay 1}Just came by to check up on my buddy Wayne. Hope I'm not interrupting."
+char phoenix hide
+"I think we were about to leave anyways. We can come back later."
+char black e=normal
+"{delay 1}Hey, dude... I have something for you. {e peace}It might help your investigation!"
+char phoenix hide
+"Thank you."
+char black e=peace
+"..."
+char phoenix hide
+"..."
+"Are you going to give it to me?"
+char black e=pumped
+"{delay 1}...Oh. Right. {e normal}I kinda forgot it back at my apartment."
+char phoenix hide
+"Well, I guess we'll have to stop by there later today."
+char black e=peace
+"{delay 1}Awwwweeesoooommme!! I'll be expecting you."
+"{delay 1}You should stop by right away, and I'll have it for you."
+setflag blackdetention
+menu scene29
+label ifthen2
+goto top
+
+label Michael Rivales
+fg detention name=1
+char parker e=serious
+flag brokeparkerpsyche brokeparkerpsyche
+char phoenix hide
+"Mr. Parker, I think it's about time we talked about your job."
+char parker e=serious
+"There's really not much to say."
+char phoenix hide
+"Besides the fact that your boss was a criminal kingpin?"
+char parker e=sad
+"I... Well..."
+delete name=1
+char maya e=normal
+"A security guard working for the mob?"
+"There's gotta be some juicy stories in there!"
+fg detention name=1
+char parker e=sad
+"...No. Nothing interesting."
+mus
+"{f}{next}"
+sfx dramapound.wav
+invert name=detentionnew
+char parker e=sad
+pause 40 script
+bg black
+char parker e=sad
+sfx rolling.ogg
+pause 10
+bg 2-chain-bg
+char parker e=sad
+fg lockchains-2 name=chains2
+"{s 80 4}{next}"
+pause 20
+fg lock y=-8 x=65 name=lock1
+"{sfx Owned.ogg}{f}{next}"
+fg lock y=-8 x=-65 name=lock2
+pause 2
+"{sfx Owned.ogg}{f}{next}"
+pause 20
+char phoenix hide
+"{c089}(Aha! Now it's just time to find out what you're finding, Mr. Parker.)"
+delete name=chains2
+delete name=lock1
+delete name=lock2
+pause 20 script
+bg detentionnew fade
+fg detention name=1
+char parker e=sad
+setflag parkerpsyche
+mus Doubted People.ogg
+
+noflag parkerpsyche AND accusationtalk scene29
+flag parkerpsyche AND accusationtalk ifthen
+label scene29
+goto top
+label ifthen
+noflag blackdetention blackdetention
+flag blackdetention ifthen2
+label blackdetention
+char parker e=sad
+"...Do you think you can actually win this?"
+char phoenix hide
+"I've been up against worse odds."
+char parker e=disturbed
+"But... They're not just trying to get me with one murder."
+"They're trying to prove that I'm a serial killer!"
+"IT'S ALL OVER FOR {e freakout}ME!!!"
+char parker e=sad fade
+"I'm as good as dead..."
+char black hide
+"{delay 1}Duuuuuude, Waaaaayyyynnne."
+"{delay 1}Come on! You gotta put a bit more faith in your lawyer."
+char parker e=serious
+"{sfx realization}!"
+delete name=1
+char black e=peace fade
+"{delay 1}You can't lose hope! This guy's here for you, buddy! All the way!"
+fg detention name=1
+char parker e=serious
+"I guess you're right... I"m sorry, Mr. Wright."
+char phoenix hide
+"Don't worry about it. I know how it can go."
+delete name=1
+char black e=peace
+"{delay 1}Hey again, Mr. Wright."
+"{delay 1}Just came by to check up on my buddy Wayne. Hope I'm not interrupting."
+char phoenix hide
+"I think we were about to leave anyways. We can come back later."
+char black e=normal
+"{delay 1}Hey, dude... I have something for you. {e peace}It might help your investigation!"
+char phoenix hide
+"Thank you."
+char black e=peace
+"..."
+char phoenix hide
+"..."
+"Are you going to give it to me?"
+char black e=pumped
+"{delay 1}...Oh. Right. {e normal}I kinda forgot it back at my apartment."
+char phoenix hide
+"Well, I guess we'll have to stop by there later today."
+char black e=peace
+"{delay 1}Awwwweeesoooommme!! I'll be expecting you."
+"{delay 1}You should stop by right away, and I'll have it for you."
+setflag blackdetention
+menu scene29
+label ifthen2
+goto top
+
+label brokeparkerpsyche
+char parker e=serious
+"I'm not a security guard. {p20}I was one of Mr. Rivales's enforcers."
+delete name=1
+char maya e=thinking
+"An enforcer?"
+fg detention name=1
+char parker e=serious
+"If we don't like what somebody's doing, we'll send somebody to "persuade" them otherwise."
+char phoenix hide
+"So you {sfx shout-shock}kill people for a living?!"
+char parker e=freakout
+"NO!!!{n}{p20}{e disturbed}Hey! I didn't say that!"
+"I've never killed anybody in my life!!"
+"I just... {n}{p20}{e sad}I just...{n}{p30}Oh, who am I kidding?"
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+"{p20}I'm a bad man, Mr. Wright. I've done some very bad things in my life."
+char phoenix hide
+"How bad are we talking?"
+char parker e=sad
+"You should ask Sarah if you want to know that."
+char parker e=serious
+"I'm sure she could give you some very detailed descriptions."
+char phoenix hide
+"N-No thanks. I guess it's not really that important."
+delete name=1
+char maya e=disheartened
+"Wow. Who would have thought that we were defending a hitman?"
+fg detention name=1
+char parker e=disturbed
+"Heyheyheynonono!! I'm not a hitman!"
+"I swear, I've never killed anyone! {sfx shout-general}Honest!!!"
+char phoenix hide
+"Calm down! I believe you!"
+char parker e=sad
+"I didn't kill anybody..."
+"The truth is, {p20}I've always wanted to get out of this business{p20}, but I never could."
+goto top
+
+label Leaving the business
+fg detention name=1
+char parker e=sad
+"I got messed up with this stuff when I was a kid."
+"I was young and stupid back then. {p20}I thought it was the "cool" thing to do..."
+"Boy was I wrong."
+char phoenix hide
+"Mr. Black said something about this."
+char parker e=sad
+"Oh yeah. Virgil knows all about how I hate it."
+"He's told me a million times that I need to quit, but I just {p20}can't."
+char phoenix hide
+"Why not?"
+char parker e=crying
+"My boss, mainly.{n}{p20}Mr. Rivales."
+"I've been trying to leave for a long time now. {p20}That's why I was there that morning."
+"I was trying to convince him to let me go."
+"But, like always, he found some way to keep his hold on me."
+char phoenix hide
+"Why did he care so much about stopping you?"
+char parker e=crying
+"I worked very closely with him. I knew too much to just walk away."
+"He was a smart guy... He knew all the ways to get people to do what he wanted."
+char phoenix hide
+"{c089}(That sounds a lot like he was being blackmailed to keep his job.)"
+char parker e=sad
+"But I guess... Now that he's gone, I can finally live my own life."
+char phoenix hide
+"What are you going to do with it?"
+char parker e=sad
+"Well, if you two get me acquitted... {e serious}I think I might start by turning myself in."
+char phoenix hide
+"...Come again?"
+char parker e=serious
+"I need to atone for the things I've done."
+"I think that's a step in the right direction."
+char phoenix hide
+"{c089}(Being let out of jail, just so you can turn yourself in again.)"
+"{c089}(That's integrity, if nothing else.)"
+goto top

@@ -1,0 +1,33 @@
+set _cr_button false
+mus
+
+bg pent4
+
+"{f}{next}"
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+"{f}{next}"
+sfx dramapound.wav
+invert name=pent4
+char watters e=serious
+pause 40 script
+bg black
+char watters e=serious
+sfx rolling.ogg
+pause 10 script
+bg 2-chain-bg
+char parker e=sad
+fg 1-lock-chain name=chains
+"{s 80 4}{next}"
+pause 20 script
+fg lock y=40 name=lock1
+"{sfx Owned.ogg}{f}{next}"
+pause 20 script
+
+nt
+"{n}{center}{c940}-- The Hit List --"
+pause 60 script
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+char phoenix hide

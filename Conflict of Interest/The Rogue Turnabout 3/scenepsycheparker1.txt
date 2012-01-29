@@ -1,0 +1,226 @@
+set _cr_button false
+mus
+
+bg detentionnew
+fg detention
+
+"{f}{next}"
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+"{f}{next}"
+sfx dramapound.wav
+invert name=detentionnew
+invert name=detention
+char parker e=sad
+pause 40 script
+bg black
+char parker e=sad
+sfx rolling.ogg
+pause 10 script
+bg 2-chain-bg
+char parker e=sad
+fg lockchains-2 name=chains2
+"{s 80 4}{next}"
+pause 20 script
+fg lock y=-8 x=65 name=lock1
+"{sfx Owned.ogg}{f}{next}"
+fg lock y=-8 x=-65 name=lock2
+pause 2 script
+"{sfx Owned.ogg}{f}{next}"
+pause 20 script
+
+nt
+"{n}{center}{c940}-- Security Guard --"
+pause 60 script
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+char phoenix hide
+"Mr. Parker, I'd like for you to tell me about your job."
+
+label redolock1
+char parker e=worried
+"I already told you. {n}I guarded things."
+
+char phoenix hide
+"What kind of things?"
+
+char parker e=worried
+"*mumble* *mumble*"
+
+char phoenix hide
+"I had a feeling you might be hesitant."
+"{c090}It just so happens that I have something which shows what you "guarded"..."
+present
+label ifback
+goto back
+
+//PRESENT HIT LIST
+label hitlist
+mus
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char phoenix hide
+set _ev hitlist
+showevl
+sfx showevidence
+"Could you take a look at this?"
+
+char parker e=serious
+"What's that old crumple {delay 1}piece... of{delay 2} {sfx shout-objection}{e freakout}BWAHA!!"
+"{e disturbed}{sfx shout-loud}WHERE'D YOU FIND THAT THING?!"
+
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+char phoenix hide
+"So you recognize it?{n}That's good to know."
+"Perhaps you also know what I'm about to say."
+
+char parker e=disturbed
+"I have no ID{e freakout}EEEAAAAA!!!"
+char parker e=disturbed
+
+label redolock2
+char phoenix hide
+"The instructions read "Send Parker beforehand to try and settle things.""
+hideevl
+"{c090}The thing that you "guarded" is..."
+
+list parkerlocks
+li Michael Rivales
+li The Rivales Family's interests
+li Money
+showlist
+label ifback
+goto back
+
+label Michael Rivales
+char phoenix hide
+"You guarded Michael Rivales."
+"You were his bodyguard."
+char parker e=disturbed
+"I WAS NOT!!!"
+char phoenix hide
+"That's why you went into the penthouse. It was to check up on him to make sure he was safe."
+char parker e=disturbed
+"Bu-but no!!!"
+"If that was the case, I would've been more than just a few minutes, right?"
+"I would've had to be around the guy 24/7!!!"
+char phoenix hide
+"I guess you might have a point..."
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+goto redolock2
+
+label Money
+char phoenix hide
+"You guarded money that the Rivales Family had stolen."
+char parker e=disturbed
+"Money? Why would I guard that?"
+"We have banks and stuff for that kind of thing!"
+char phoenix hide
+"{c089}(I guess even the mob likes to earn a little interest.)"
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+goto redolock2
+
+label The Rivales Family's interests
+mus
+char phoenix hide
+"The thing you guarded wasn't actually a physical object at all, was it?"
+char parker e=disturbed
+"..."
+char phoenix hide
+"You "guarded" the Rivales Family's interests... as an enforcer."
+char parker e=disturbed
+"Bu-bu-{delay 1}bu-{delay 2}bu-{p20}{next}"
+"{e freakout}{sfx shout-scream}BWWWWWWAAAAAAAA{sfx shout-objection}AAARRRRRRGGGGG{sfx shout-loud}GGGGGG!!!{e crash}{p2}{sfx thud-body}{s20}"
+pause 60
+
+sfx lockbreaks.wav
+delete name=lock1
+fg 1-lock-breaks y=-8 x=65
+pause 30
+sfx lockbreaks.wav
+delete name=lock2
+fg 1-lock-breaks y=-8 x=-65
+pause 20
+sfx rolling.ogg
+"{s 40 4}{next}"
+delete name=chains2
+pause 80
+bg detentionnew fade
+sfx testimony2.wav
+fg UnlockSuccessful name=unl
+penalty 100
+pause 30
+delete name=unl
+pause 60
+setflag brokeparkerpsyche
+fg detention
+char parker e=sad fade
+"I'm... {e crying}I'm a bad man, Mr. Wright."
+"Sorry I lied to you."
+char phoenix hide
+"I'm curious to know why you wanted to hide that from me."
+char parker e=crying
+"Would you have taken my case if you knew what kind of guy I really am?"
+char phoenix hide
+"Did you kill Michael Rivales?"
+char parker e=sad
+"I... NO!!!"
+char phoenix hide
+"That's what you're on trial for."
+"If you aren't guilty of that, you don't deserve to be punished for it."
+"No matter what else you may have done in the past."
+char parker e=sad
+"*sniff*"
+char phoenix hide
+"Are you ready to talk now?"
+char parker e=sad
+"*sniff*{n}{p30}Yes..."
+script scene29menu
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char phoenix hide
+"You guarded this!"
+
+char parker e=serious
+"Huh?"
+
+char phoenix hide
+"Didn't you?"
+
+char parker e=disturbed
+"Pl-{s}Please don't look at me {sfx shout-loud}LIKE {e freakout}THAAAAAAT!!!{e crash}{p2}{sfx thud-body}{s20}"
+
+char phoenix hide
+"{c089}(That seemed to get a reaction out of him... Just not the right one.)"
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+char parker e=sad fade
+
+goto redolock1
+
+label back
+char phoenix hide
+"{c089}(I don't have the evidence I need {n}right now.)"
+"{c089}(I'll have to come back later when {n}I've gathered some more.)"
+pause 30
+script scene29menu
+
+label magafail
+mus
+char phoenix hide
+"{c089}(Gah! I'm pushing myself too much!)"
+"{c089}(I need to calm down, collect my {n}thoughts, and try again...)"
+penalty +1
+pause 20
+script scene29menu

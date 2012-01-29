@@ -1,5 +1,0 @@
-//EVIDENCEset attorneybadge_name Attorney's Badgeset attorneybadge_pic attorneybadgeset attorneybadge_descset magatama_name Magatamaset magatama_pic magatama2set magatama_desc This was a gift from Maya. It lets me see the secrets in people's hearts.//PROFILES
-
-set phoenix$_name Phoenix Wright
-set phoenix$_pic phoenix
-set phoenix$_desc Age: 34{n}Gender: Maleset maya$_name Maya Feyset maya$_pic mayaset maya$_desc Age: set lotta$_name Lotta Hartset lotta$_pic lottaset lotta$_descset victor$_name Victor Timmonsset victor$_pic victorset victor$_desc Age: deceased{n}Gender: Male{n}set payne$_name Winston Payneset payne$_pic payneset payne$_desc Age: set gumshoe$_name Dick Gumshoeset gumshoe$_pic gumshoeset gumshoe$_descset kylie$_name Kylie Washingtonset kylie$_pic kylieset kylie$_desc Age: 20{n}Gender: Female{n}A famous pop singer. She's apparently really popular with preteen girls.

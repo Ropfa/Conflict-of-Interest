@@ -1,0 +1,36 @@
+bg pent2 fade
+pause 60
+flag blackdetention nowatters
+
+setflag penthouseget2
+"{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{next}"
+char watters e=confident
+set _ev metal detecter
+showevl
+"{sfx shout-general}Ha! {sfx shout-general}Gotcha!"
+char phoenix hide
+set _ev attorneybadge
+showevr
+"Not quite."
+hideevr
+char watters e=sad
+"Aw, man... I thought I actually had something."
+char phoenix hide
+"Still working hard, Detective?"
+"{c089}(Or not.)"
+char watters e=smile
+"Yeah, Boss says we need to dig up some more stuff by tomorrow. I thought this metal detector would do the trick."
+char phoenix hide
+"Mind if we take another look around?"
+char watters e=confident
+"Not at all! You got any questions, you ask me, okay?"
+script scene34menu
+
+label nowatters
+"It doesn't look like Detective Watters is here."
+"We should come back later when he is."
+pause 50
+bg black fade
+pause 50
+bg reception fade
+script scene33menu

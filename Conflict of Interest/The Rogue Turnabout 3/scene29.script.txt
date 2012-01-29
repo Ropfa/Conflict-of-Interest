@@ -1,0 +1,18 @@
+bg detentionnew fade
+fg detention name=1
+nt
+"{c090}{center}{type}July 20, 1:00 PM{n}Detention Center{n}Visitor's Room"
+pause 60
+char parker e=sad fade
+
+char phoenix hide
+"How are you feeling, Mr. Parker?"
+
+char parker e=sad
+"*mumble*"
+
+char phoenix hide
+"That good, huh?"
+"{c089}(I really hope communication with this guy doesn't become an issue.)"
+
+script scene29menu

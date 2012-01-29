@@ -1,0 +1,23 @@
+label top
+bg entrance
+
+list scene31move
+li Wright Anything Agency
+li Detention Center
+li Reception
+showlist
+menu scene31
+
+label Detention Center
+script scene29menu
+
+label Wright Anything Agency
+script scene28menu
+
+label Reception
+noflag receptionget2 scene33
+flag receptionget2 scene33menu
+label scene33
+script scene33
+label scene33menu
+script scene33menu

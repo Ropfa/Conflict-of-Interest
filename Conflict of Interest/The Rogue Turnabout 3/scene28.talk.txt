@@ -1,0 +1,47 @@
+label top
+bg wrightanythingenvelope
+
+list scene28talk
+li What to do
+li Any ideas?
+label scene28talk
+showlist
+menu scene28
+goto scene28talk
+
+label What to do
+char phoenix hide
+"What do you think we should do?"
+char maya e=thinking
+"We've already taken a good look around the crime scene..."
+char maya e=normal
+"Why not go back?"
+char phoenix hide
+"Go back?"
+char maya e=normal
+"Yeah, go back. A second time through wouldn't hurt."
+char phoenix hide
+"Of all the things to do, your idea is to go back to a place that we've already searched?"
+char maya e=normal
+"We always return to the crime scene!"
+char phoenix hide
+"I'm pretty sure we've already found everything we need there."
+char maya e=mad
+"Hey, I don't see you coming up with any good ideas!"
+"You're just arguing because you don't want to go all the way to the top of that building again!"
+char phoenix hide
+"..."
+"{sfx whoops}*grumble*"
+goto top
+
+label Any ideas?
+char maya e=normal
+char phoenix hide
+"So. Who do you think did it?"
+char maya e=thinking
+"Hmm..."
+char maya e=normal
+"Sir Gallante."
+char phoenix hide
+"{c089}(...Well, duh.)"
+goto top

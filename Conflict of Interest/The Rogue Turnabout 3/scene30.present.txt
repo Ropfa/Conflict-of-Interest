@@ -1,0 +1,27 @@
+present
+label top
+menu scene30
+bg clinic
+
+label permission
+char gumshoe e=crash
+"That letter should be good enough to get you where you want."
+char phoenix hide
+"Thank you, Gumshoe."
+goto top
+
+label maya$
+char gumshoe e=crash
+"Sorry, pal. I don't know anything about that."
+pause 60 script
+char maya e=disheartened fade
+"Nick... {p20}Is his concussion really so bad that he doesn't remember me?"
+char phoenix hide
+"I'm sure... I'm sure he'll be fine."
+"{c089}(I was NOT expecting that.)"
+goto top
+
+label none
+char gumshoe e=crash
+"Sorry, pal. I don't know anything about that."
+goto top

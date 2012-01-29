@@ -1,0 +1,10 @@
+label top
+bg pent2
+
+list scene34move
+li Reception
+showlist
+menu scene34
+
+label Reception
+script scene33menu

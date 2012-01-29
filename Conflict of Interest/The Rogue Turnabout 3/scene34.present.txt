@@ -1,0 +1,77 @@
+present
+label top
+menu scene34
+bg pent2
+
+label rivalesupdate$
+char parker e=sad
+char phoenix hide
+"So... Was he a good boss?"
+char parker e=sad
+"No."
+char phoenix hide
+"..."
+"{c089}(That's about the answer I expected.)"
+goto top
+
+label sarah$
+char parker e=sad
+char phoenix hide
+"Does Sarah normally have... uh... problems{p20} with men?"
+char parker e=sad
+"She can be a bit impulsive."
+"It seems like every time I see her, she has a new boyfriend."
+delete name=1
+char maya e=thinking
+"Nick, you should probably think twice before you jump into a relationship like that."
+goto top
+
+label black$
+char parker e=sad
+char phoenix hide
+"Mr. Black seems like a very loyal friend."
+char parker e=serious
+"He is. He's always been there when I needed him."
+char phoenix hide
+"You're very lucky to have somebody like that."
+char parker e=serious
+"I know. {e sad}I just wish I could repay him for it somehow."
+goto top
+
+label knife
+char parker e=disturbed
+"That thing's been missing for {sfx shout-general}weeks! I {sfx shout-loud}SWEAR!!!"
+char phoenix hide
+"It's okay! We believe you!"
+char parker e=sad
+"O-Okay. {n}I... {e crying}I thought that..."
+char phoenix hide
+"{c089}(You really have to be careful about what you say around this guy.)"
+goto top
+
+label blueprints
+char phoenix hide
+"Is there really only one way in and out of the penthouse?"
+char parker e=sad
+"Yup. If there is anything else, only Mr. Rivales would've known about it."
+"You'd have to pass through reception, where Sarah was."
+char phoenix hide
+"{c089}(Darn. I was hoping for some sort of secret passage.)"
+goto top
+
+label magatama
+noflag parkerpsyche nopsyche
+flag parkerpsyche parkerpsyche
+label parkerpsyche
+script scenepsycheparker1
+
+label none
+label nopsyche
+fg detention
+char parker e=sad
+"Sorry, I don't think I can say{n}anything about that."
+char parker e=crying
+"I really wish I could...{n}{p20}*sniff*"
+char phoenix hide
+"{c089}(Please don't cry...{n}Please don't cry...{n}Please don't cry...)"
+goto top

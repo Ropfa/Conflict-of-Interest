@@ -1,0 +1,12 @@
+label top
+bg clinic
+
+examine
+region 30 40 20 20 camera
+region 200 80 25 70 guard
+menu scene30
+
+label none
+char phoenix hide
+"No clues here."
+goto top

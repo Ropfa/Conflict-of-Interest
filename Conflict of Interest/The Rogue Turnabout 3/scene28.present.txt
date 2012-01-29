@@ -1,0 +1,234 @@
+present
+label top
+menu scene28
+bg wrightanythingenvelope
+
+label magatama
+char maya e=normal
+"That's my old magatama."
+"How long has it been since you {n}got that?"
+char phoenix hide
+"It has to have been at least nine{n}years."
+char maya e=thinking
+"Wow... {p5}It's hard to believe that{n}it's been that long."
+"I wonder if it still works."
+char phoenix hide
+"{c089}(I guess magic lie detectors must {n}have some kind of battery life...)"
+goto top
+
+label attorneybadge
+char maya e=normal
+"I'll bet you're really excited to have {n}that thing again!"
+char phoenix hide
+"Yeah, it felt empty not having {n}one."
+char maya e=cheerful
+"You're probably gonna go show it {n}off to everyone you see{char maya e=pumped} so that {n}they know you're an attorney."
+"Just like you always used to!"
+char phoenix hide
+"C'mon, Maya. I never did that."
+"{c089}(...{p10}Did I?)"
+goto top
+
+label maya$
+char maya e=normal
+"Wow, I look really young in that {n}photo!"
+char phoenix hide
+"You think so?{n}It was just taken last month."
+char maya e=thinking
+"Was it? {n}I guess I haven't really aged much."
+goto top
+
+label sarah$
+char maya e=disheartened
+"Nick, why doesn't Ms. Keyes like me?"
+char phoenix hide
+"That's a question better answered {n}by her."
+char maya e=disheartened
+"She likes you so much...{n}{p10}What did I ever do to her?"
+char phoenix hide
+"Trust me...{n}{p10}Not all of that liking is wanted."
+goto top
+
+label parker$
+char maya e=thinking
+"I just can't see Mr. Parker as a killer."
+char phoenix hide
+"Neither can I. {p5}He doesn't seem like he {n}would have the stomach for it."
+"{f}{next}"
+sfx scenechange2
+bg detentionnew
+fg detention name=1
+char parker e=crying
+grey value=1
+pause 60
+char parker e=freakout
+pause 60
+"{e crash}{s10}{sfx thud-body}"
+pause 60
+"{f}{next}"
+sfx scenechange2
+grey value=0
+delete 1
+bg wrightanything
+char maya e=thinking
+char phoenix hide
+"{c089}(No, definitely not the type to have the {n}stomach for it...)"
+goto top
+
+label gumshoe$
+char maya e=normal
+"Gumshoe hasn't changed much, has {n}he?"
+char phoenix hide
+"Not really. He's still the same goofy {n}detective he always was."
+char maya e=normal
+"You've kind of changed yourself, {n}you know."
+char phoenix hide
+"Have I?"
+char maya e=thinking
+"Yeah, {p5}you're less...{n}{p20}What's the word...?{n}{p20}"Naive"."
+char phoenix hide
+"{delay 1}...Thanks."
+"{c089}(I think.)"
+goto top
+
+label cody$
+char maya e=normal
+"It's nice to see Cody again, don't you think?"
+char phoenix hide
+He's really grown since we last saw him."
+char maya e=angry
+"He's wrong though!"
+"{sfx shout-general}No one can replace the Steel Samurai! {n}Not even Sir Gallante!"
+char phoenix hide
+"Well, I would certainly hope that the defender of Neo Olde Tokyo hadn't been replaced by a serial killer."
+goto top
+
+label black$
+char maya e=normal
+char phoenix hide
+"What do you think of Mr. Black?"
+char maya e=normal
+"Peace and love, dude!"
+char phoenix hide
+"..."
+"{c089}(As awkward as it was hearing that come from Maya, I don't think I could've put it better myself.)"
+goto top
+
+label watters$
+char maya e=normal
+"I really like Detective Watters. He {n}seems nice."
+char phoenix hide
+"I'll admit that he's been more helpful {n}than the police force usually is."
+"But I'm a bit concerned about how {n}open he is."
+char maya e=normal
+"What do you mean?"
+char phoenix hide
+"I just think he trusts people more {n}than a police detective should."
+char maya e=thinking
+"Well, at least that makes our job {n}easier!"
+char phoenix hide
+"I guess we do have that to be {n}thankful for."
+goto top
+
+label gallante$
+char phoenix hide
+"So who is this Sir Gallante character?{n}And why does he dress up like a knight?"
+char maya e=pumped
+"You really don't know who Sir Gallante is, Nick? He's been all over the news!"
+"They call him "The Terror of the Underworld"."
+"He's killed, like, a million bad guys!"
+char phoenix hide
+"{c089}(Looks like the news have been exaggerating a bit on his accomplishments.)"
+goto top
+
+label poster
+char phoenix hide
+"So who is this Sir Gallante character?{n}And why does he dress up like a knight?"
+char maya e=pumped
+"You really don't know who Sir Gallante is, Nick? He's been all over the news!"
+"They call him "The Terror of the Underworld"."
+"He's killed, like, a million bad guys!"
+char phoenix hide
+"{c089}(Looks like the news have been exaggerating a bit on his accomplishments.)"
+goto top
+
+label codyphoto
+char phoenix hide
+"So who is this Sir Gallante character?{n}And why does he dress up like a knight?"
+char maya e=pumped
+"You really don't know who Sir Gallante is, Nick? He's been all over the news!"
+"They call him "The Terror of the Underworld"."
+"He's killed, like, a million bad guys!"
+char phoenix hide
+"{c089}(Looks like the news have been exaggerating a bit on his accomplishments.)"
+goto top
+
+label knife
+char maya e=disheartened
+"That knife is really bloody."
+char phoenix hide
+"Well, it IS a murder weapon."
+char maya e=disheartened
+"No matter how many crime scenes I {n}see, I can never get used to all {n}that blood."
+char phoenix hide
+"Agreed."
+"This was a fairly violent one though.{n}I doubt the next will be as bad."
+char maya e=disheartened
+"The next... {n}{p15}Ugh..."
+goto top
+
+label gun
+char maya e=thinking
+"Gumshoe was hit on the head with a gun."
+char phoenix hide
+"It looks that way."
+char maya e=thinking
+"I wonder why a gun fell out of the sky like that."
+char phoenix hide
+"{c089}(Could it have come from the crime scene?)"
+goto top
+
+label rivalesupdate$
+char maya e=mad
+"It's a good thing that guy is dead!"
+char phoenix hide
+"At least the city has one less crime lord to worry about now."
+goto top
+
+label obadiah$
+char maya e=mad
+"I don't like that guy! What's his problem?!"
+char phoenix hide
+"Honestly, I don't know. He seems to have some kind of issue with the both of us."
+char maya e=mad
+"Well, I think he's a real jerk!"
+"He tried to make you look like an idiot!"
+char phoenix hide
+"He kind of succeeded too."
+goto top
+
+label hitlist
+char maya e=disheartened
+"I can't believe the Rivales Family killed all those people. It's awful!"
+char phoenix hide
+"You want to know what's even worse?"
+"I think that's just the tip of the iceberg."
+goto top
+
+label rick
+char maya e=thinking
+"Who is this Rick person in the letter? Do you know him?"
+char phoenix hide
+"It's funny that you mention that."
+"I have a strange feeling that I do..."
+goto top
+
+label none
+char maya e=normal
+char phoenix hide
+"What do you think of this?"
+char maya e=normal
+"I don't think I'm the person{n}to be asking about that, Nick."
+char phoenix hide
+"{c089}(In other words: {p10}Nothing.)"
+goto top

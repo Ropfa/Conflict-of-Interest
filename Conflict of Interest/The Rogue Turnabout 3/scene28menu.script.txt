@@ -1,0 +1,4 @@
+bg wrightanythingenvelope
+char maya e=normal
+mus Gyakuten Sisters theme.ogg
+menu scene28

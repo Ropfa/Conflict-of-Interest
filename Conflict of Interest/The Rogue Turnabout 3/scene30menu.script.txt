@@ -1,0 +1,5 @@
+bg clinic
+char gumshoe e=crash
+mus I can do it when it counts, pal.ogg
+set _music_loop I can do it when it counts, pal - loop.ogg
+menu scene30

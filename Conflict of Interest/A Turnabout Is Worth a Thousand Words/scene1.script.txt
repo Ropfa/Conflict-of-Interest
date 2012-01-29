@@ -1,3 +1,0 @@
-set _cr_button falsebg bigblackmus Prologue.oggfg case1 fade x=50 y=260bg
-
-script scene2

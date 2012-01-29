@@ -1,0 +1,12 @@
+bg blacksapartment fade
+pause 60
+char phoenix hide
+"It doesn't look like Mr. Black is here."
+char maya e=thinking
+"That's strange."
+"Didn't he say to meet him here "right away"...?"
+char phoenix hide
+"Yes. We should probably check back later."
+"{c089}(He can't really be that forgetful...{p20} Can he?)"
+
+script scene32menu

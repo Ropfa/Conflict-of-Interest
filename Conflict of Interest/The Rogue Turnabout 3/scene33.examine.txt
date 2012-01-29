@@ -1,0 +1,33 @@
+label top
+bg reception
+
+examine
+region 187 85 8 10 picture
+region 177 96 75 33 desk
+region 110 59 63 43 security
+menu scene33
+
+label picture
+char phoenix hide
+"It's a picture of Sarah Keyes and her father."
+char maya e=cheerful
+"They look so happy together!"
+goto top
+
+label desk
+char phoenix hide
+"This looks like Sarah's {n}desk."
+"Nobody's at it though."
+goto top
+
+label security
+char maya e=thinking
+"This machine looks rather {n}complicated."
+char phoenix hide
+"She must have a lot of experience using this kind of stuff."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

@@ -1,0 +1,65 @@
+mus Tricks and Gimmicks.ogg
+label top
+bg pent2
+
+examine
+region 0 57 23 106 painting
+layerone
+region player2
+layertwo
+region player3
+layerthree
+region 67 113 126 38 desk
+layerone
+region dlayer2
+layertwo
+region dlayer3
+layerthree
+region 130 170 12 11 knife
+layerone
+region 120 160 32 31 klayer2
+layertwo
+region 105 145 62 61klayer3
+layerthree
+region sill
+layerone
+region slayer2
+layertwo
+region slayer3
+layerthree
+menu scene28
+
+label sill
+char phoenix hide
+"A metal window sill reacting to a metal detector."
+"Nothing strange here."
+goto top
+
+label desk
+char phoenix hide
+"Why's it reacting to a wooden desk?"
+char maya e=thinking
+"I don't think it's reacting to the desk, Nick..."
+"I think it's reacting to 
+goto top
+
+label knife
+char phoenix hide
+"Why is that knife still here?"
+"Shouldn't the forensics team be examining it?"
+char watters e=serious
+"I dunno. Maybe somebody just got lazy and left it here."
+goto top
+
+label painting
+mus
+char phoenix hide
+"That's funny."
+"Why would a metal detector be reacting to that painting?"
+char watters hide
+"Beats me. We'd better check it out though.
+
+label none
+char phoenix hide
+"No clues here."
+goto top

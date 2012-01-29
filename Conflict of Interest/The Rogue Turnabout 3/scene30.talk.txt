@@ -1,0 +1,56 @@
+label top
+bg clinic
+char gumshoe e=crash
+
+list scene30talk1
+li Detective Watters
+flag nopermission permission
+showlist
+list scene30talk2
+menu scene30
+label permission
+li Permission
+label scene30talk
+showlist
+menu scene30
+goto scene30talk
+
+label Detective Watters
+char phoenix hide
+"Detective Watters said that I'm supposed to wish you luck in recovering."
+char gumshoe e=crash
+"Mark? You know him?"
+char phoenix hide
+"We met just yesterday."
+"Do you two know each other well?"
+char gumshoe e=crash
+"Our relationship is mostly professional."
+"But yeah. I guess you could say that."
+char maya e=normal
+"He seems to think very highly of you."
+char gumshoe e=crash-laugh
+"Well, I have been on the force a lot longer than him. He kind of looks up to me as a sort of role model."
+char phoenix hide
+"{c089}(Gumshoe... A role model?!)"
+goto top
+
+label Permission
+char phoenix hide
+"Gumshoe, you're a police detective, aren't you?"
+char gumshoe e=crash-pumped
+"You bet, pal!"
+char phoenix hide
+"If you wanted to, you could give me access to the records room, couldn't you?"
+char gumshoe e=crash-pumped
+"Yeah, I probably could."
+char phoenix hide
+"Do you want to?"
+char gumshoe e=crash-laugh
+"Sure, why not?"
+set _ev permission
+addev permission
+nt
+"Written Permission added to the court record."
+char phoenix hide
+"{c089}(I feel like I'm taking the fact that he has a concussion and doesn't know what's going on...)"
+goto top
