@@ -16,94 +16,119 @@ char maya e=pumped
 char phoenix hide
 "{c089}(Wow. {p10}These two...)"
 char nothing
+bg background-3devidence fade
 mus Tricks and Gimmicks.ogg
 
-init_puzzle
-gui Button move_left name=gButton_left x=125 y=292 hotkey=k_left hold <-
-gui Button move_right name=gButton_right x=145 y=292 hotkey=k_right hold ->
-gui Button move_up name=gButton_up x=132 y=285 hotkey=k_up hold ^
-gui Button move_down name=gButton_down x=132 y=300 hotkey=k_down hold v
-gui Button skip_puzzle name=gButton_skip x=200 y=300 Skip
-{add_piece 60 101}
-{add_piece 60 108}
-{add_piece 79 103}
-{add_piece 85 104}
-{add_piece 79 100}
-{add_piece 86 119}
-{add_piece 94 120}
-{add_piece 104 103}
-{add_piece 102 110}
+{init_puzzle 9 }
+gui Button move_left name=gButton_left x=30 y=275 graphic=general/puzarrow_left hotkey=k_left hold
+gui Button move_right name=gButton_right x=70 y=275 graphic=general/puzarrow_right hotkey=k_right hold 
+gui Button move_up name=gButton_up x=50 y=255 graphic=general/puzarrow_up hotkey=k_up hold
+gui Button move_down name=gButton_down x=50 y=295 graphic=general/puzarrow_down hotkey=k_down hold
+{add_piece 40 21 165 250 }  // 1
+{add_piece 50 108 165 275 }  // 2
+{add_piece 79 93 165 300 }  // 3
+{add_piece 95 74 190 250 }  // 4
+{add_piece 69 50 190 275 }  // 5
+{add_piece 56 119 190 300 }  // 6
+{add_piece 124 70 215 250 }  // 7
+{add_piece 154 53 215 275 } // 8
+{add_piece 112 90 215 300 } // 9
+{link_piece 1 2 0 7 }
+{link_piece 1 3 19 2 }
+{link_piece 2 3 19 -5 }
+{link_piece 3 5 0 -3 }
+{link_piece 4 5 -6 -4 }
+{link_piece 5 6 7 19 }
+{link_piece 6 7 8 1 }
+{link_piece 5 8 25 3 }
+{link_piece 5 9 23 10 }
+{pick_piece 5 }
 
 label puzzle_loop
+
+isnot gPiece_1.selected do_puzzle_loop
+isnot gPiece_2.selected do_puzzle_loop
+isnot gPiece_3.selected do_puzzle_loop
+isnot gPiece_4.selected do_puzzle_loop
+isnot gPiece_5.selected do_puzzle_loop
+isnot gPiece_6.selected do_puzzle_loop
+isnot gPiece_7.selected do_puzzle_loop
+isnot gPiece_8.selected do_puzzle_loop
+isnot gPiece_9.selected do_puzzle_loop
+goto puzzle_complete
+
+label do_puzzle_loop
 gui Wait
 
 label pickpiece_1
-set aPiece 1
+{pick_piece 1}
 goto puzzle_loop
 
 label pickpiece_2
-set aPiece 2
+{pick_piece 2}
 goto puzzle_loop
 
 label pickpiece_3
-set aPiece 3
+{pick_piece 3}
 goto puzzle_loop
 
 label pickpiece_4
-set aPiece 4
+{pick_piece 4}
 goto puzzle_loop
 
 label pickpiece_5
-set aPiece 5
+{pick_piece 5}
 goto puzzle_loop
 
 label pickpiece_6
-set aPiece 6
+{pick_piece 6}
 goto puzzle_loop
 
 label pickpiece_7
-set aPiece 7
+{pick_piece 7}
 goto puzzle_loop
 
 label pickpiece_8
-set aPiece 8
+{pick_piece 8}
 goto puzzle_loop
 
 label pickpiece_9
-set aPiece 9
+{pick_piece 9}
 goto puzzle_loop
 
-
 label move_left
-{move_piece -1 0}
+{move_piece -1 0 }
+{pick_piece $aPiece }
 goto puzzle_loop
 
 label move_right
-{move_piece 1 0}
+{move_piece 1 0 }
+{pick_piece $aPiece }
 goto puzzle_loop
 
 label move_up
-{move_piece 0 -1}
+{move_piece 0 -1 }
+{pick_piece $aPiece }
 goto puzzle_loop
 
 label move_down
-{move_piece 0 1}
+{move_piece 0 1 }
+{pick_piece $aPiece }
 goto puzzle_loop
 
 
-label skip_puzzle
-set aPiece 9
+label puzzle_complete
 finish_puzzle
 delete name=gButton_left
 delete name=gButton_right
 delete name=gButton_up
 delete name=gButton_down
-delete name=gButton_skip
 
+bg entrance fade
 mus
 char phoenix hide
 set _ev gun
-show evl
+showevl
 "It's a gun."
 "It won't be working anytime soon...{n}{p20}But it's definitely a gun."
 hideevl

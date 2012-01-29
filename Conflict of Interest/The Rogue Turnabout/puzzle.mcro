@@ -1,50 +1,312 @@
 macro init_puzzle
 set aPiece 0
+set gNumPieces $1
 endmacro
 
+
 macro finish_puzzle
+set aPiece $gNumPieces
+
 // Loop through all the pieces.
 label each_piece$0
 is aPiece < 1 end$0
 
 joinvar lButton gButton_ $aPiece
 delete name=$lButton
-subvar aPiece 1
 
+joinvar lButton gSelectButton_ $aPiece
+delete name=$lButton
+
+subvar aPiece 1
 goto each_piece$0
 
 label end$0
 endmacro
+
 
 macro add_piece
 addvar aPiece 1
 
 joinvar lButton gButton_ $aPiece
 joinvar lLabel pickpiece_ $aPiece
-joinvar lGraphic ev/part $aPiece
+joinvar lGraphic fg/part $aPiece
 
 joinvar lVar gButton_ $aPiece .x
 setvar $lVar $1
 joinvar lVar gButton_ $aPiece .y
 setvar $lVar $2
+joinvar lVar gSelectButton_ $aPiece .x
+setvar $lVar $3
+joinvar lVar gSelectButton_ $aPiece .y
+setvar $lVar $4
 
 gui Button $lLabel name=$lButton x=$1 y=$2 graphic=$lGraphic
 endmacro
 
+
+macro link_piece
+
+set lPieceA $1
+set lPieceB $2
+set lOfsX $3
+set lOfsY $4
+
+joinvar lVar gLink_ $lPieceA . $lPieceB .canLink
+setvar $lVar true
+joinvar lVar gLink_ $lPieceA . $lPieceB .linked
+setvar $lVar false
+joinvar lVar gLink_ $lPieceA . $lPieceB .ofsX
+setvar $lVar $lOfsX
+joinvar lVar gLink_ $lPieceA . $lPieceB .ofsY
+setvar $lVar $lOfsY
+
+mulvar lOfsX -1
+mulvar lOfsY -1
+
+joinvar lVar gLink_ $lPieceB . $lPieceA .canLink
+setvar $lVar true
+joinvar lVar gLink_ $lPieceB . $lPieceA .linked
+setvar $lVar false
+joinvar lVar gLink_ $lPieceB . $lPieceA .ofsX
+setvar $lVar $lOfsX
+joinvar lVar gLink_ $lPieceB . $lPieceA .ofsY
+setvar $lVar $lOfsY
+
+endmacro
+
+
+macro pick_piece
+set lPiece $1
+is_ex aPiece == lPiece skipsound$0
+sfx typewriter
+label skipsound$0
+set aPiece $lPiece
+
+set lPiece $gNumPieces
+label each_piece$0
+is lPiece < 1 end$0
+
+joinvar lButton gSelectButton_ $lPiece
+delete name=$lButton suppress
+
+joinvar lVar gPiece_ $lPiece .selected
+is_ex lPiece == aPiece are_linked$0
+getvar lLinked gLink_ $aPiece . $lPiece .linked
+is lLinked are_linked$0
+
+setvar $lVar false
+joinvar lGraphic general/part $lPiece
+goto do_button$0
+label are_linked$0
+setvar $lVar true
+joinvar lGraphic general/part $lPiece select
+
+label do_button$0
+joinvar lLabel pickpiece_ $lPiece
+getvar lX gSelectButton_ $lPiece .x
+getvar lY gSelectButton_ $lPiece .y
+gui Button $lLabel name=$lButton x=$lX y=$lY graphic=$lGraphic
+
+subvar lPiece 1
+goto each_piece$0
+
+label end$0
+endmacro
+
+
+macro set_piece_loc
+joinvar lButton gButton_ $lPiece
+joinvar lLabel pickpiece_ $lPiece
+joinvar lGraphic fg/part $lPiece
+
+delete name=$lButton
+gui Button $lLabel name=$lButton x=$1 y=$2 graphic=$lGraphic
+
+joinvar lVar gButton_ $lPiece .x
+setvar $lVar $1
+joinvar lVar gButton_ $lPiece .y
+setvar $lVar $2
+endmacro
+
+
 macro move_piece
-joinvar lButton gButton_ $aPiece
-joinvar lLabel pickpiece_ $aPiece
-joinvar lGraphic ev/part $aPiece
-getvar lX gButton_ $aPiece .x
-getvar lY gButton_ $aPiece .y
+set lPiece $gNumPieces
+label each_piece$0
+is lPiece < 1 end$0
+
+is_ex lPiece == aPiece do_move$0
+getvar lLinked gLink_ $aPiece . $lPiece .linked
+is lLinked do_move$0
+joinvar lVar gButton_ $lPiece .moving
+setvar $lVar false
+goto next_piece$0
+
+label do_move$0
+joinvar lVar gButton_ $lPiece .moving
+setvar $lVar true
+getvar lX gButton_ $lPiece .x
+getvar lY gButton_ $lPiece .y
 addvar lX $1
 addvar lY $2
 
-joinvar lVar gButton_ $aPiece .x
-setvar $lVar $lX
-joinvar lVar gButton_ $aPiece .y
-setvar $lVar $lY
+{set_piece_loc $lX $lY }
 
-delete name=$lButton
-gui Button $lLabel name=$lButton x=$lX y=$lY graphic=$lGraphic
+label next_piece$0
+subvar lPiece 1
+goto each_piece$0
+
+label end$0
+check_piece_links
+endmacro
+
+
+macro check_piece_link
+
+getvar lX1 gButton_ $1 .x
+getvar lX2 gButton_ $2 .x
+getvar lY1 gButton_ $1 .y
+getvar lY2 gButton_ $2 .y
+
+getvar lOfsX gLink_ $1 . $2 .ofsX
+getvar lOfsY gLink_ $1 . $2 .ofsY
+subvar lX2 $lOfsX
+subvar lY2 $lOfsY
+
+set lDeltaX $lX2
+subvar lDeltaX $lX1
+is lDeltaX > 3 early_out$0
+is lDeltaX < -3 early_out$0
+
+set lDeltaY $lY2
+subvar lDeltaY $lY1
+is lDeltaY > 3 early_out$0
+is lDeltaY < -3 early_out$0
+
+// Mark them as linked (transitively).
+set gAnyLinkMade true
+{join_piece_sets $1 $2 $lDeltaX $lDeltaY }
+
+label early_out$0
+endmacro
+
+
+macro join_piece_sets
+print Joining $1 and $2
+
+// Everything in $1's set needs to move. Also, everything in $1 must be linked
+// to everything in $2.
+set lRoot1 $1
+set lRoot2 $2
+
+set lA $gNumPieces
+label each_piece_A$0
+is lA < 1 done_A$0
+
+// Is $lA linked to $1? If so, it must move.
+getvar lSkipped gPiece_ $lA .skipJoin
+print Is $lA skipped: $lSkipped
+is lSkipped next_piece_A$0
+is_ex lA == lRoot1 do_move$0
+getvar lLinked gLink_ $lA . $lRoot1 .linked
+is lLinked do_move$0
+goto next_piece_A$0
+
+// Move $lA to the right spot.
+label do_move$0
+print Moving $lA - $3 , $4 - under $1 and $2
+getvar lX gButton_ $lA .x
+getvar lY gButton_ $lA .y
+addvar lX $3
+addvar lY $4
+set lPiece $lA
+{set_piece_loc $lX $lY }
+
+set lB $gNumPieces
+label each_piece_B$0
+is lB < 1 next_piece_A$0
+
+// Is $lB linked to $2?
+is_ex lA == lB next_piece_B$0
+is_ex lB == lRoot2 do_link$0
+getvar lLinked gLink_ $lB . $lRoot2 .linked
+is lLinked do_link$0
+goto next_piece_B$0
+
+// Link $lA and $lB.
+label do_link$0
+print Linking $lA and $lB - under $1 and $2
+joinvar lVar gLink_ $lA . $lB .linked
+setvar $lVar true
+joinvar lVar gLink_ $lB . $lA .linked
+setvar $lVar true
+
+// Current $lB cannot become an $lA in this same loop.
+print Skipping $lB
+joinvar lVar gPiece_ $lB .skipJoin
+setvar $lVar true
+
+label next_piece_B$0
+subvar lB 1
+goto each_piece_B$0
+
+label next_piece_A$0
+subvar lA 1
+goto each_piece_A$0
+
+label done_A$0
+
+// Clear the skip list.
+set lA $gNumPieces
+label each_piece_C$0
+is lA < 1 done_C$0
+
+joinvar lVar gPiece_ $lA .skipJoin
+setvar $lVar false
+getvar lASDF $lVar
+print After clearing $lA : $lASDF
+
+subvar lA 1
+goto each_piece_C$0
+label done_C$0
+
+endmacro
+
+
+macro check_piece_links
+set gAnyLinkMade false
+
+set lI $gNumPieces
+label each_piece_I$0
+is lI < 1 done_I$0
+
+getvar lMoving gButton_ $lI .moving
+isnot lMoving next_piece_I$0
+
+set lJ $gNumPieces
+label each_piece_J$0
+is lJ < 1 next_piece_I$0
+
+is_ex lI == lJ next_piece_J$0
+getvar lMoving gButton_ $lJ .moving
+is lMoving next_piece_J$0
+getvar lCanLink gLink_ $lI . $lJ .canLink
+isnot lCanLink next_piece_J$0
+getvar lCanLink gLink_ $lI . $lJ .linked
+is lCanLink next_piece_J$0
+
+{check_piece_link $lI $lJ }
+
+label next_piece_J$0
+subvar lJ 1
+goto each_piece_J$0
+
+label next_piece_I$0
+subvar lI 1
+goto each_piece_I$0
+
+label done_I$0
+isnot gAnyLinkMade end$0
+sfx click
+
+label end$0
 endmacro
