@@ -8,4 +8,4 @@ addev maya$
 set char_gallante_defsound bliplow.ogg
 set char_sarah_defsound blipfemale.ogg
 
-script scene11
+script scene1
