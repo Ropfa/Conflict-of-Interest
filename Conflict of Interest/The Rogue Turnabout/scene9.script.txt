@@ -64,7 +64,7 @@ char phoenix hide
 
 char cody e=happy nametag=???
 "{sfx realization3}Yeah, you are!{n}I recognized your "OBJECTION!""
-"It's me -- {p10}Cody Hackins! {n}{p10}Remember me?"
+"It's me -- {p10}Cody Hackins! {n}{p20}Remember me?"
 
 pause 80 script
 char phoenix hide
@@ -80,7 +80,7 @@ char cody e=young
 grey value=1
 pause 60 script
 char phoenix hide
-"Oh yeah... {n}I remember there being a boy who {n}witnessed the murder."
+"Oh yeah... {n}{p20}I remember there being a boy who {n}witnessed the murder."
 pause 60 script
 "{f}{next}"
 grey value=0
@@ -99,7 +99,7 @@ char cody e=confident
 "Well, it HAS been over ten years {n}since you last saw me."
 char cody e=happy
 "I still remember that trial like it was {n}yesterday!"
-"The Steel Samurai put on trial... {n}{p20}{sfx shout-loud}And Lawyer Man here saves his butt!"
+"The Steel Samurai put on trial... {n}{p20}{sfx shout-objection}And Lawyer Man here saves his butt!"
 
 char maya e=confident
 "Wow, Nick.{n}{p10}You're a hero!"
