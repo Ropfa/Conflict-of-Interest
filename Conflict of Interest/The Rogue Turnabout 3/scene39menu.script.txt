@@ -1,0 +1,3 @@
+bg blacksapartment
+mus Eccentric 2007.ogg
+menu scene39

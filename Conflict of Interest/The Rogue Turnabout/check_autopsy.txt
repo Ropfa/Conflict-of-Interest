@@ -1,2 +1,2 @@
-bg autopsy_report fade y=192
+bg autopsy_report fade
 gui Back y=350

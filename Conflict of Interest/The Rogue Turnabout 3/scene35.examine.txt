@@ -1,0 +1,84 @@
+label top
+bg police
+
+examine
+region 171 83 73 75 computers
+region 8 69 97 77 computers
+region 159 54 73 16 badgers
+region 130 103 145 112 badgers
+region 120 51 21 26 chief
+menu scene35
+
+label computers
+char phoenix hide
+"All the police are hard at work, solving various crimes."
+char Chief hide
+"Hey, stop {sfx shout-general}that!"
+"It's no fun when the other team spawn camps!"
+char phoenix hide
+"...{p20}Except that one."
+goto top
+
+label badgers
+char phoenix hide
+"The Blue Badger..."
+char maya e=cheerful
+"And his wife - The Pink Badger!"
+char phoenix hide
+"His son, the Baby Badger."
+char maya e=pumped
+"Don't forget their nemesis, the Bad Badger!"
+char phoenix hide
+"And finally, that creepy thing lying on the floor over there."
+"What was that called again?"
+char maya e=normal
+"The Proto Badger! {n}{e sad}I remember having nightmares about that one."
+char phoenix hide
+"You know, I think that every time we come here, they have more of those things."
+goto top
+
+label chief
+noflag permissionpresent nopresent
+flag permissionpresent yespresent
+label nopresent
+char phoenix hide
+"Excuse me, Chief. I was wondering if I could have a moment of your time."
+char Chief hide
+"Of course!"
+"It's not like I have anything better to do!"
+char phoenix hide
+"I was wondering if we could get permission to check out the records room."
+char Chief hide
+"May I ask what you're looking for?"
+char maya e=pumped
+"We're gonna dig up some info on Sir Gallante!"
+char maya e=surprised
+char Chief hide
+"Oh no you don't!{n}That stuff is classified!"
+char maya e=worried
+char Chief hide
+"You'll need to get permission from somebody on the police force before I let you take a look at that stuff."
+char phoenix hide
+"Can't you just give us permission yourself?"
+char Chief hide
+"Of course not!{n}What kind of guy do you think I am?"
+char phoenix hide
+"{c089}(Drat. I guess he doesn't like me enough for that. I knew that would be too easy.)"
+setflag nopermission
+goto top
+
+label yespresent
+char Chief hide
+"Hey, you!"
+char phoenix hide
+"Who, me?"
+char Chief hide
+"Yeah, you! {p30}{n}Don't do drugs!"
+char phoenix hide
+"...Yes, sir."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

@@ -1,47 +1,171 @@
 label top
 bg pent2
 
-list scene28talk
-li What to do
-li Any ideas?
-label scene28talk
+list scene34talk1
+li The Trial
+li The Investigation
+flag safeget hitlisttalk
 showlist
-menu scene28
-goto scene28talk
+list scene34talk2
+menu scene34
+label hitlisttalk
+li The Hit List
+label scene34talk
+showlist
+menu scene34
+goto scene34talk
 
-label What to do
+label The Trial
+char watters e=smile
+"Say, nice job on that trial today."
+"I didn't think you'd actually be able to do it."
 char phoenix hide
-"What do you think we should do?"
+"I haven't won yet."
+char watters e=smile
+"Well... No.{n}But you managed to not lose on the first day."
+"That's something."
+char phoenix hide
+"I guess when you put it that way..."
+char watters e=confident
+"Boss Man Williamson always plans out his cases really well."
+"He likes making sure there aren't any holes."
+"You should've seen him after the trial."
+"That kid's photo showing up out of the blue really pissed him off."
+char phoenix hide
+"I could see that happening."
+char watters e=serious
+"Watch out for that guy, man. He hates you."
+char phoenix hide
+"I kind of picked that up."
+char watters e=serious
+"No, I mean it, man!"
+"The only reason he didn't totally chew you out was because you two were in court."
+"If you were to feel his wrath outside... {n}{p30}I pity you."
+char phoenix hide
+"Thanks for the warning, Detective. I'll keep that in mind."
 char maya e=thinking
-"We've already taken a good look around the crime scene..."
+"Why does he hate Nick so much?"
+char watters e=thinking
+"Eh... I dunno.{n}Maybe you cut him off in traffic or something?"
 char maya e=normal
-"Why not go back?"
+"No. {p20}Nick can't drive."
+char watters e=thinking
+"...{p20}{e serious}Wait, aren't you supposed to be a really successful lawyer?"
+"A guy your age..."
 char phoenix hide
-"Go back?"
-char maya e=normal
-"Yeah, go back. A second time through wouldn't hurt."
-char phoenix hide
-"Of all the things to do, your idea is to go back to a place that we've already searched?"
-char maya e=normal
-"We always return to the crime scene!"
-char phoenix hide
-"I'm pretty sure we've already found everything we need there."
-char maya e=mad
-"Hey, I don't see you coming up with any good ideas!"
-"You're just arguing because you don't want to go all the way to the top of that building again!"
-char phoenix hide
-"..."
-"{sfx whoops}*grumble*"
+"Let's... {p10}Let's change the subject."
 goto top
 
-label Any ideas?
-char maya e=normal
+label The Investigation
 char phoenix hide
-"So. Who do you think did it?"
-char maya e=thinking
-"Hmm..."
-char maya e=normal
-"Sir Gallante."
+"How's the investigation coming?"
+set _ev metal detecter
+showevl
+char watters e=serious
+"I'm supposed to be finding more evidence with this thing."
+char watters e=confused
+"So far I haven't been having much luck."
 char phoenix hide
-"{c089}(...Well, duh.)"
+"What are you hoping to find with a metal detector?"
+char watters e=thinking
+"Beats me. I doubt there's much left to find in here that we haven't already seen."
+char phoenix hide
+"You've already checked everywhere?"
+char watters e=thinking
+"Kinda."
+char phoenix hide
+"Kinda."
+char watters e=thinking
+"Yeah, kinda."
+char phoenix hide
+"{c089}(Maybe I should help him a bit.)"
+set _list_back_button false
+list metaldetector
+li Use the metal detector
+li Leave it to the professional
+showlist
+
+label Leave it to the professional
+char phoenix hide
+"{c089}(I'd better not get in the way here. He knows what he's doing.)"
+goto top
+
+label Use the metal detector
+char phoenix hide
+"Let me try using that thing."
+char watters e=serious
+"What, the metal detector?{n}You sure?"
+char phoenix hide
+"I've had some experience with them before. I know what I'm doing."
+char watters e=confident
+"Okay. Go for it, I guess."
+script metaldetecting
+
+label The Hit List
+char watters e=serious
+"Detective, do you have any idea who the people on this list were?"
+char watters e=sad
+"{delay 1}..."
+char phoenix hide
+"Detective?"
+char watters e=shock
+"Huh? {p10}{e thinking}Oh, I dunno..."
+"Probably just people they didn't like. They are the mafia, after all."
+char phoenix hide
+"Some of the hits on here are really old. I think I saw one from almost ten years ago."
+char maya e=normal
+"They're all pretty old, actually. All except for that last one."
+bg hitlist3
+pause 30 script
+char phoenix hide
+"{c089}(The last one... The one for Sir Gallante.)"
+"{c089}(It's the only one that doesn't have an X through it.)"
+"{c089}(I guess that means that he's the only one they never succeeded in catching.)"
+"I guess it would make sense that they would want him dead."
+bg pent2
+char maya e=disheartened
+"All these people are gone... Just because the Rivales Family didn't like them."
+char phoenix hide
+"They probably hired somebody to carry out the hits."
+char maya e=mad
+"It's so terrible that there are people out there who kill for money!"
+char watters e=serious
+"Yeah, it's pretty bad. {e sad}Kinda the way the world works though."
+char phoenix hide
+"Is everything okay?{n}You've been rather quiet since we found that list."
+char watters e=sad
+"Yeah... Everything's okay with me, man."
+
+mus
+"{f}{next}"
+sfx dramapound.wav
+invert name=entrance
+pause 40 script
+bg black
+char watters e=sad
+sfx rolling.ogg
+pause 10
+bg 2-chain-bg
+char watters e=sad
+fg 1-lock-chain name=chains
+"{s 80 4}{next}"
+pause 20
+fg lock y=40 name=lock1
+"{f}{next}"
+sfx owned.ogg
+pause 70
+
+char watters e=sad
+"Thanks for asking though."
+char phoenix hide
+"{c089}(Something IS wrong. He's trying to hide something...)"
+"{c089}(...and he's not doing a very good job of it. I think it's fairly obvious what it is.)"
+delete name=chains
+delete name=lock1
+pause 20 script
+bg pent2 fade
+char watters e=sad
+mus Metropolis Zone.ogg
+mus Metropolis Zone - loop.ogg
+setflag watterspsyche
 goto top

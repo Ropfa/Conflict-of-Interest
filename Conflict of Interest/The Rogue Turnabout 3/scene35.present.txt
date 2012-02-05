@@ -1,0 +1,39 @@
+present
+label top
+menu scene35
+bg police
+
+label permission
+set _ev permission
+showevl
+sfx showevidence
+char phoenix hide
+"Here you go, Chief."
+"Written permission from Detective Gumshoe to enter the records room."
+char Chief hide
+"Gumshoe said it was okay? Well, then I guess I'd better let you go, shouldn't I?"
+char maya e=nod
+"Yes, please!"
+char Chief hide
+"Just don't fool around in there. We just tidied up yesterday!"
+char phoenix hide
+"{c089}(How young does he think I am?)"
+hideevl
+"{c089}(Guess I don't need this anymore.)"
+delev permission
+nt
+"{sfx evidence updated.wav}{c099}Written Permission tossed into trash can."
+pause 20 script
+setflag permissionpresent
+goto top
+
+label none
+char Chief hide
+"What do you want me to do with this?"
+char phoenix hide
+"I just thought you might want to take a look at it."
+char Chief hide
+"Stop wasting my time! I have better things to do!"
+char phoenix hide
+"{c089}(Yes, getting to level 70 is indeed serious business.)"
+goto top

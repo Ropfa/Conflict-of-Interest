@@ -1,0 +1,162 @@
+set _cr_button false
+mus
+
+fg 1-lock-chain name=chains
+fg lock y=40 name=lock1
+
+set _ev hitlist
+showevl
+sfx showevidence
+char watters e=confused
+"The list...?"
+char phoenix hide
+"That's right."
+char watters e=confused
+"Isn't that kinda like using a word in its own definition?"
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+char phoenix hide
+"Not in this case."
+label redolock2
+char watters e=confused
+"{c090}The part I'm looking at is on this page..."
+
+set _list_back_button false
+list psychewatters
+li Page One
+li Page Two
+li Page Three
+showlist
+
+label Page One
+char phoenix hide
+"Page one."
+char watters e=thinking
+"Really now?"
+char phoenix hide
+"Yes."
+bg hitlist1
+"{c090}And this is the part that is related to you..."
+examine hide
+
+label Page Two
+char phoenix hide
+"Page two."
+char watters e=thinking
+"Really now?"
+char phoenix hide
+"Yes."
+bg hitlist2
+"{c090}And this is the part that is related to you..."
+examine hide
+region 137 99 92 78 sandra
+
+label Page Three
+char phoenix hide
+"Page three."
+char watters e=thinking
+"Really now?"
+char phoenix hide
+"Yes."
+bg hitlist3
+"{c090}And this is the part that is related to you..."
+examine hide
+
+label sandra
+mus
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+fg 1-lock-chain name=chains
+fg lock y=40 name=lock1
+char phoenix hide
+"Sandra Watters."
+char watters e=shock
+"{sfx realization}!"
+pause 20 script
+char watters e=sad
+pause 40 script
+char phoenix hide
+"You're not very good at hiding {n}secrets, Detective. Did you know that?"
+char watters e=sad
+"Yeah, I... {p20}I kinda did."
+char phoenix hide
+"This young woman has the same last {n}name as you."
+"A sister, perhaps?"
+char watters e=nervous
+"A... A s-{p10}{sfx shout-shock}{e shock}sister?!"
+
+sfx lockbreaks.wav
+delete name=lock1
+fg 1-lock-breaks y=68 x=-30
+pause 20
+sfx rolling.ogg
+"{s 40 4}{next}"
+delete name=chains
+pause 80
+bg pent4 fade
+char watters e=sad
+sfx testimony2.wav
+fg UnlockSuccessful name=unl
+penalty 100
+pause 30
+delete name=unl
+pause 60
+
+char watters e=sad
+"Okay. {p25}Ya got me, man."
+char phoenix hide
+"I'm sorry to bring this up."
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+char watters e=sad
+"No, it's okay."
+"I'm not afraid to talk about it."
+char phoenix hide
+"{c089}(...{p20}He's lying again. But I don't need a {n}magatama to see that.)"
+char watters e=sad
+"She died. {p25}A few years ago."
+"'Cept there's one thing you got {n}wrong."
+char phoenix hide
+"What's that?"
+char watters e=sad
+"She wasn't my sister...{p25}{n}She was my wife."
+script
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+fg 1-lock-chain name=chains
+fg lock y=40 name=lock1
+char watters e=thinking
+"Huh...?"
+"Nah, you're joking... Right?"
+char phoenix hide
+"No, I'm not joking."
+char watters e=serious
+"It's not a very good joke."
+char phoenix hide
+"I'm not {sfx shout-general}joking!"
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+char phoenix hide
+"{c089}(I guess that wasn't the right part.)"
+goto redolock2
+
+label back
+char phoenix hide
+"{c089}(I don't have the evidence I need {n}right now.)"
+"{c089}(I'll have to come back later when {n}I've gathered some more.)"
+pause 30
+script 
+
+label magafail
+mus
+char phoenix hide
+"{c089}(Gah! I'm pushing myself too much!)"
+"{c089}(I need to calm down, collect my {n}thoughts, and try again...)"
+penalty +1
+pause 20
+script 

@@ -1,0 +1,155 @@
+label top
+bg Abandonedbuildingday2
+
+examine
+region 25 97 31 66 stepladder
+region 33 54 49 30 vent
+region 86 159 17 5 blackmail
+region 118 114 8 6 photo
+region 220 132 25 29 sword
+region 148 72 32 38 window
+region 59 92 71 22 crates
+menu scene38
+
+label stepladder
+char phoenix hide
+"Just a regular old step-ladder."
+char maya e=normal
+"Nick, that's not a step-ladder. It's a ladder!"
+char phoenix hide
+"{c089}(You'd think that by now, we'd have this figured out.)"
+goto top
+
+label vent
+char maya e=normal
+"Hey, look. There's a vent up behind those boxes."
+"Do you think I could fit in there?"
+char phoenix hide
+"I don't know...{n}It looks pretty small."
+char maya e=mad
+"Are you saying I'm fat?"
+char phoenix hide
+"What?! No!"
+"{c089}(Where'd that come from? Sudden guilt trip from all the burgers?)"
+char maya e=pumped
+"I'm gonna go check it out!"
+char nothing
+sfx hideevidence
+pause 60 script
+sfx pocketwatch
+pause 15 script
+sfx pocketwatch
+pause 15 script
+sfx pocketwatch
+pause 15 script
+sfx pocketwatch
+pause 25 script
+sfx tong
+pause 30 script
+char phoenix hide
+"{c089}(Those screws certainly came out easily.
+sfx bodyflip
+char maya hide
+"See? Told you I could do it!"
+char phoenix hide
+"Sorry I ever doubted you."
+"{c089}(Only Maya would feel compelled to go crawling through random air vents.)"
+pause 30 script
+char maya hide
+"Hey, Nick!"
+sfx bodyflip
+"I found something!"
+pause 30 script
+char maya e=normal fade
+"Look!"
+set _ev strange
+showevl
+char phoenix hide
+"...{p20}What is it?"
+char maya e=thinking
+"I don't know. But somebody hid it in there... {e normal}So it must be important, right?"
+char phoenix hide
+"They did a pretty poor job of hiding it, seeing how easily you got that grating off."
+"{c089}(Maybe they were in a hurry to hide it?)"
+hideevl
+addev strange
+nt
+"Strange Device added to the court record."
+goto top
+
+label blackmail
+set _ev blackmail
+showevl
+char maya e=normal
+"Hey, there's a letter over here."
+char phoenix hide
+"Let's take a look at it."
+sfx pageturn
+pause 20 script
+char phoenix hide
+""I know you're holding back. If you don't want everybody to know the big secret...""
+pause 60 script
+sfx realization
+char maya e=surprised
+char phoenix hide
+pause 30 script
+"Hey, wait a minute... This is the exact same thing as the blackmail letter we found at the crime scene?"
+hidevl
+char maya e=thinking
+"Two blackmail notes? What do you think that means?"
+char phoenix hide
+"I have no idea..."
+delev blackmail
+addev blackmail2
+nt
+"Blackmail Letter updated in the court record."
+goto top
+
+label photo
+set _ev rivalesupdate$
+showevr
+sfx showevidence
+char phoenix hide
+"Huh. It's a photo of Michael Rivales."
+"{c089}(I wonder what it's doing in here.)"
+hideevr
+goto top
+
+label sword
+set _ev sword
+showevr
+char maya e=surprised
+"Is that... {c940}a sword{c999}?"
+char phoenix hide
+"It looks like some kind of claymore."
+"{c089}(That thing's probably taller than Maya is!"
+hideevr
+char maye e=disheartened
+"There's blood all over it!"
+char phoenix hide
+"I'm pretty sure we've just found our murder weapon, Maya."
+addev sword
+nt
+"Sword added to the court record."
+char maya e=worried
+"It's definitely big enough to slice a person in half."
+char phoenix hide
+"No doubt about that..."
+goto top
+
+label window
+char phoenix hide
+"That's the Rivales Tower, just outside the window."
+"It looks rather dark and ominous... {n}Rather fitting for it."
+goto top
+
+label crates
+char phoenix hide
+"These crates are all backed up against the wall."
+"Maybe this used to be a storage room of some sort."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

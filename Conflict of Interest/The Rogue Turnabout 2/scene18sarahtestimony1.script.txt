@@ -62,14 +62,16 @@ char phoenix e=handsondesk
 bg witness 
 fg wbench
 char sarah e=ditzy
+bg main name=main y=192 stack
 fg phoenixvs name=phoenixvs x=-255 y=165 stack
 fg williamsonvs name=willvs x=256 y=225 stack
-scroll name=pvs x=255 speed=8 nowait
-scroll name=wvs x=-256 speed=8 nowait
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
 fg Cross-ExaminationAnim stack fade
 pause 20
 delete name=phoenixvs
 delete name=willvs
+delete name=main
 nt
 "{n}{center}{c940}-- The Only One --"
 mus Confrontation - Moderato.ogg
@@ -160,7 +162,7 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char sarah e=normal
-"Nope. Mr. Rivales didn't like it when {n}people eavesdropped on his personal {n}conversations."
+"Nope. Mr. Rivales didn't like it when {n}people eavesdropped on his {n}personal conversations."
 char phoenix hide
 "He was a mob boss, after all..."
 char sarah e=ditzy
@@ -173,9 +175,9 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char sarah e=normal
-"Nope. {p10}He just came in and was all like {sound blipmale}{e bored}"I'm talking to Mr. Rivales!"{next}"
-"{sound blipfemale}{e normal}and I was all like {e ditzy}"Oh really?" {e normal}and he was all like {sound blipmale}{e bored}"Yeah really!"{next}"
-"{sound blipfemale}{e normal}and I was all like {e ditzy}"Nuh-uh!" {e normal}and he was all like {sound blipmale}{e bored}"Yuh-huh!"{next}"
+"Nope. {p10}He just came in and was all like {sound blipmale}{e bored}{n}"I'm talking to Mr. Rivales!"{next}"
+"{sound blipfemale}{e normal}and I was all like {e ditzy}"Oh really?" {e normal}and {n}he was all like {sound blipmale}{e bored}"Yeah really!"{next}"
+"{sound blipfemale}{e normal}and I was all like {e ditzy}"Nuh-uh!" {e normal}and he {n}was all like {sound blipmale}{e bored}"Yuh-huh!"{next}"
 "{sound blipfemale}{e normal}and I was all like--{p20}{next}"
 sfx /godot/objection.ogg
 fg ObjectionAnim
@@ -275,6 +277,7 @@ resume
 
 
 label security2 sarah1C
+set _cr_back_button true
 mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
@@ -325,7 +328,7 @@ char sarah e=bored
 "S-{s2}{p5}Sorry? {n}{p10}I must've forgotten that."
 bg defense
 fg dbench
-char phoenix deskslam
+char phoenix e=deskslam
 sfx deskslam.wav
 pause 50 script
 char phoenix e=handsondesk
@@ -338,6 +341,7 @@ script scene19
 
 
 label none
+set _cr_back_button true
 is wrongevidence 1 wrongevidence1
 is wrongevidence 2 wrongevidence2
 is wrongevidence 3 wrongevidence3
@@ -438,7 +442,7 @@ char phoenix e=handsondesk
 "I...{n}{p20}{e sweating}No, {p20}I can't."
 bg judge
 char judge e=normal
-"Perhaps you should think things {n}through before jumping to conclusions."
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
 "Then I wouldn't have to give you {n}penalties."
 char judge e=warning
 "{sfx shout-general}Like this one!"

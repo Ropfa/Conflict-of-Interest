@@ -1,2 +1,2 @@
-bg securitycamera fade y=192
+bg securitycamera fade
 gui Back y=350

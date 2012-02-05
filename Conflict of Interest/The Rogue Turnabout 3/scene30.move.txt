@@ -4,7 +4,6 @@ bg clinic
 list scene30move1
 li Wright Anything Agency
 li Rivales Tower
-li Detention Center
 flag blackdetention blacksapartment
 showlist
 list scene30move2

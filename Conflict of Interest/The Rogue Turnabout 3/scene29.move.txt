@@ -5,19 +5,23 @@ fg detention
 list scene29move1
 li Wright Anything Agency
 li Rivales Tower
-li Hospital
 flag blackdetention blacksapartment
 showlist
-list scene29move2
+label scene29move2
 menu scene29
 label blacksapartment
 li Black's Apartment
+flag youshallnotpass police
+showlist
+goto scene29move2
+label scene29move3
+menu scene29
+label police
+li Criminal Affairs
+label scene29move
 showlist
 menu scene29
-
-label Hospital
-mus
-script scene30menu
+goto scene28move3
 
 label Wright Anything Agency
 mus
@@ -30,3 +34,7 @@ script scene31menu
 label Black's Apartment
 mus
 script scene32
+
+label Criminal Affairs
+mus
+script scene35

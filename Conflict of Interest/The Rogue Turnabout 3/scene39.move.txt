@@ -1,0 +1,14 @@
+label top
+bg blacksapartment
+
+list scene39move1
+li Wright Anything Agency
+li Detention Center
+showlist
+menu scene39
+
+label Detention Center
+script scene29menu
+
+label Wright Anything Agency
+script scene28menu

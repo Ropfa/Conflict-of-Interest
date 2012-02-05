@@ -1,0 +1,27 @@
+bg reception
+
+
+pause 30 script
+char maya e=normal fade
+pause 60 script
+sfx realization
+pause 30 script
+char maya e=surprised
+char phoenix hide
+"Quick, Maya! {n}Hide!"
+char nothing
+sfx hideevidence
+pause 80 script
+
+char obadiah e=front-serious fade
+pause 30 script
+"......{n}What was that?"
+pause 60 script
+"......Hm."
+char nothing fade
+
+pause 80 script
+char maya e=normal fade
+"He left...{n}{e pumped}We can go back in now!"
+
+script scene42menu

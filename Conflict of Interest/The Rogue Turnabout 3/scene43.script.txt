@@ -1,0 +1,21 @@
+bg pent4
+
+char watters e=confident fade
+"Hey, you're back!"
+
+char maya e=pumped
+"We managed to sneak past Mr. Williamson!"
+
+char watters e=confident
+"Great! {n}{p20}...{p25}{e nervous}Wait, I mean no!{n}Bad! That's bad!"
+
+char phoenix hide
+"It's okay. He already got on the elevator."
+
+char watters e=sad
+"Phew! I thought he might've heard that!"
+
+char phoenix hide
+"{c089}(Alright, Watters.{n}It's time to see what you're hiding from us.)"
+
+script scene43menu

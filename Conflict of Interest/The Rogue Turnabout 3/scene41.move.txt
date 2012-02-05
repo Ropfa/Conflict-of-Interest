@@ -1,0 +1,18 @@
+label top
+bg ChelmeyBarton
+
+list scene41move
+li Wright Anything Agency
+li Detention Center
+li Records Room
+showlist
+menu scene41
+
+label Records Room
+script scene36menu
+
+label Wright Anything Agency
+script scene28menu
+
+label Detention Center
+script scene29menu

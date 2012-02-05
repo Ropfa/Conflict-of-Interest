@@ -10,105 +10,15 @@ region 19 147 28 15 debris
 region 100 44 50 71 window
 region 34 43 66 71 city
 region 151 43 66 71 city
-menu scene7
+menu scene34
 
 label knife
 char phoenix hide
-set _ev knife
-showevl
-"That knife...{n}{p10}Do you think it's the murder weapon?"
-char watters e=confident
-"I'd say so. {n}Wanna hear the best part?"
-"The defendant's fingerprints are all {n}over it. {p10}He even admitted it was his."
-char phoenix hide
-"Are you serious?!"
-char watters e=confident
-"Oh yeah. That guy didn't even bother {n}cleaning up after himself."
-hideevl
-"This case'll be open and shut. {n}Just watch."
-nt
-addev knife
-fg knifeev name=knifeev
-"{sfx evidence updated.wav}{c099}Parker's Knife added to the court {n}record."
-delete name=knifeev
-setflag knifeget
+"We proved yesterday that this knife wasn't actually the murder weapon."
+"Not much else to say about it right now, I guess."
 goto top
 
 label desk
-noflag blackmailget needblackmail
-flag blackmailget dontneedblackmail
-label needblackmail
-char phoenix hide
-"That's a really nice desk."
-"{c089}(Definitely better than mine.)"
-char watters e=confident
-"Our tests showed that it's solid {n}mahogany. That man knew how to {n}live."
-char phoenix hide
-"Was there anything important inside {n}it?"
-char watters e=thinking
-"Actually we haven't checked that {n}yet."
-char phoenix hide
-"You had time to test what type of {n}wood it was, but not to skim {n}through its drawers?"
-char watters e=angry
-"{sfx shout-general}It's on my to-do list!"
-char phoenix hide
-"{sfx whoops}Here, let me look."
-char nothing
-char phoenix hide
-mus
-pause 100 script
-"{sfx realization}...!"
-mus Suspense.ogg
-set _music_loop Suspense.ogg
-pause 80 script
-"It's... {p20}It's..."
-char watters hide
-"{sfx shout-general}What is it? {sfx shout-general}What is it?!"
-pause 80 script
-set _ev parkingtickets
-showevr
-char phoenix hide
-"Unpaid parking tickets.{n}{p20}An entire drawer full of them."
-char watters e=thinking fade
-"Really...? {p20}That's it?"
-char phoenix hide
-"Well, {p20}that was rather anti-climactic."
-char maya e=thinking fade
-hideevr
-set _ev blackmail
-show evr
-"Why's that one a different color {n}from all the others?"
-char phoenix hide
-"Let's take a look."
-hideevr
-delete maya
-bg blackmailletter
-mus Suspense.ogg
-set _music_loop Suspense.ogg
-pause 100 script
-char phoenix hide
-"Maya... {p20}I don't think this is another {n}parking ticket."
-char maya hide
-"Somebody was trying to blackmail {n}him!"
-char watters hide
-"Looks like our victim was never able {n}to make it to the meeting."
-"6:00 AM.{n}He was killed at that same time."
-bg pent2
-char phoenix hide
-"{c089}(Did somebody try and stop him from {n}seeing the blackmailer?)"
-nt
-addev blackmail
-fg blackmailev name=blackmailev
-"{sfx evidence updated.wav}{c099}Blackmail Letter added to the court {n}record."
-delete name=blackmailev
-mus
-pause 40 script
-mus Metropolis Zone.ogg
-set _music_loop Metropolis Zone - loop.ogg
-setflag blackmailget
-goto top
-
-label dontneedblackmail
 char phoenix hide
 "That's a really nice desk."
 char maya e=thinking
@@ -116,6 +26,16 @@ char maya e=thinking
 goto top
 
 label painting
+noflag safeget nosafe
+flag safeget yessafe
+label yessafe
+char phoenix hide
+"So that painting was hiding a secret safe behind it."
+char maya e=confident
+"Don't tell me you didn't see that coming!"
+goto top
+
+label nosafe
 char phoenix hide
 "The victim's taste in art was {n}certainly... {p20}interesting."
 char watters e=confused
@@ -145,7 +65,6 @@ char watters e=serious
 char phoenix hide
 "{c089}(So {c940}the window was open when the {n}police found the body{c089}?)"
 "{c089}({delay 1}...But why?)"
-setflag windowget
 goto top
 
 label blood

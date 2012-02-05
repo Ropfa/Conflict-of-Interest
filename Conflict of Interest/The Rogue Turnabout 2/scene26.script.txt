@@ -7,7 +7,7 @@ char phoenix e=normal
 bg witness
 fg wbench
 char sarah e=bored
-"N...{p10}[s5}Nuh-uh!"
+"N...{p10}{s5}Nuh-uh!"
 
 bg defense
 fg dbench
@@ -32,8 +32,8 @@ char phoenix e=confident
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Let me guess... The killer flew in."
-"Or no, wait...{p20}He teleported."
+"Let me guess... {p10}The killer flew in."
+"Or no, wait...{p20} He teleported."
 
 bg defense
 fg dbench

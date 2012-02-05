@@ -1,0 +1,7 @@
+setflag policeget
+bg black
+nt
+"{c090}{center}{type}July 20, 3:30 PM{n}Police Department{n}Criminal Affairs"
+bg police fade
+
+script scene35menu

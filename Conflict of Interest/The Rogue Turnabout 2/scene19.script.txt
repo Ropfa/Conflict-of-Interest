@@ -15,12 +15,11 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "Trivial?!"
-"{c089}(I'm willing to bet he told her to leave {n}that out!)"
 bg prosecution
 fg pbench
 char obadiah e=serious
 "Yes, {p20}trivial.{n}{p20}We don't need footage of the {n}murder..."
-"...because the point remains that the {n}defendant was the only one to have an {n}opportunity."
+"...because the point remains that the {n}defendant was the only one to have {n}an opportunity."
 
 bg witness
 fg wbench
@@ -42,9 +41,9 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(It's not a matter of if I want to...)"
-"{c089}({p10}...If I don't, then this trial's already over!"
+"{c089}({p10}...If I don't, then this trial's already {n}over!"
 "Mr. Williamson, I believe that {n}somebody else DID enter that room..."
-"...but managed to evade the security system."
+"...but managed to evade the security {n}system."
 
 bg prosecution
 fg pbench
@@ -76,6 +75,7 @@ char maya e=bench
 
 bg prosecution
 fg pbench
+char obadiah e=serious
 "Blind guessing gets you nowhere in {n}this world."
 "We are here in court to find solid {n}answers."
 
@@ -100,6 +100,7 @@ set _cr_back_button false
 present
 
 label blackout
+set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
@@ -125,7 +126,7 @@ char phoenix e=deskslam
 sfx deskslam.wav
 pause 50 script
 char phoenix e=handsondesk
-"You can't just ignore the fact that {n}for almost an hour, every camera in the {n}building wasn't working!"
+"You can't just ignore the fact that {n}for almost an hour, every camera in {n}the building wasn't working!"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -139,7 +140,7 @@ fg wbench
 char sarah e=bored
 "Huh? {p10}Me?"
 char obadiah hide
-"Ms. Keyes was stationed at the {n}reception desk. {p10}She would've {n}noticed anybody who came in the room."
+"Ms. Keyes was stationed at the {n}reception desk. {p10}She would've {n}seen anybody who came in the room."
 mus
 bg defense
 fg dbench
@@ -160,17 +161,17 @@ pause 30 script
 "Nobody could've gotten in without {n}me knowing."
 bg prosecution
 fg pbench
-char obadiah e=serious
+char obadiah e=document
 "Here are the floorplans for the {n}building."
 set _ev blueprints
 showevl
-char obadiah e=serious
+char obadiah e=document
 "You will see that what she says is {n}true."
 hideevl
 bg blueprints
 char obadiah hide
 "There is only one door leading into {n}the penthouse."
-"The only way to access this door is {n}through reception, where the witness was."
+"The only way to access this door is {n}through reception, where the {n}witness was."
 char judge hide
 "I see...{p20}{n}But what is this strange symbol on {n}the left side?"
 char obadiah hide
@@ -189,7 +190,7 @@ pause 20 script
 bg prosecution
 fg pbench
 char obadiah e=serious
-"The prosecution would also like to {n}present this photo of the crime scene."
+"The prosecution would also like to {n}present this photo of the crime {n}scene."
 bg pent2
 char judge hide
 "So much blood! That must've been a {n}very serious wound."
@@ -214,6 +215,7 @@ char phoenix e=sweating
 script scene20
 
 label none
+set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script

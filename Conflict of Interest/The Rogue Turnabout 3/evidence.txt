@@ -73,7 +73,7 @@ set hitlist_desc A list of people that the Rivales Family didn't like. Found in 
 set hitlist_check check_hitlist
 
 set gallantefiles_name Sir Gallante Investigation Files
-set gallantefiles_pic ev_PW__EvidenceLawBook_Jp
+set gallantefiles_pic SL9
 set gallantefiles_desc All the information that has been gathered by the investigation team. This is going to take a long time to read through...
 set gallantefiles_check check_gallantefiles
 

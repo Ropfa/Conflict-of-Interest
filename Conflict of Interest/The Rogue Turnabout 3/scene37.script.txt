@@ -1,0 +1,96 @@
+bg police fade
+pause 60
+char phoenix hide
+"Well, we got what we came for. We might as well leave now."
+char maya e=thinking
+"I hope they don't get too mad about the mess."
+char maya e=surprised
+char ??? hide
+"{sfx shout-angry}You!"
+char obadiah e=front-angry fade
+"What were you doing in the records room?"
+char phoenix hide
+"I'm investigating the case."
+char obadiah e=front-angry
+"{sfx shout-general}Not that! What the devil was all that racket going on in there?!"
+char phoenix hide
+"Oh, that... Well...{next}"
+char nothing
+sfx screenwipe
+char phoenix hide
+"...You see... {delay 1}that was..."
+pause 20 script
+char obadiah hide
+"{sfx shout-loud}GAH?!"
+char obadiah e=front-angry fade
+"It's a complete mess in there! You aren't even going to clean up after yourself?!"
+char maya e=surprised
+"S-Sorry! That was my fault. I was just trying to find something!"
+char obadiah e=front-angry
+"So you felt the need to throw every single piece of paper across the room?!"
+char maya e=surprised
+"I-I'll go clean it up right away!"
+char phoenix hide
+"You didn't have to be so hard on her."
+char obadiah e=front-angry
+"And why wouldn't I? You can't just come waltzing into the police department like you own it!"
+"There are people working here! Try showing a little class!"
+pause 60 script
+sfx realization
+"Oh. {p20}Wait.{p20} {delay 1}I forgot."
+"{delay 1}You're the great Phoenix Wright, legendary attorney."
+"{delay 1}You don't have to answer to anybody."
+char phoenix hide
+"Okay, I'm curious."
+"Every other prosecutor I've met has wanted to see me defeated for personal reasons."
+"But I hadn't even heard about you until yesterday. What's your problem?"
+char obadiah e=front-angry
+"Me? What's MY problem?!"
+"You're a disgrace to this court system. THAT'S my problem!"
+char phoenix hide
+"{sfx shout-scream}{s10}!!!"
+char obadiah e=front-angry
+"We may have never met before, Wright, but I know all about your reputation."
+"I've heard about all your so-called "legendary" cases, and how you won despite seemingly unbeatable odds."
+"Defense attorneys don't become "legendary" by having paper fights in the records room!"
+"I know there was more involved."
+char phoenix hide
+"Wait. {p20}You aren't..."
+"{sfx shout-objection}I was cleared of {c940}those charges{c999}!"
+char obadiah e=front-angry
+"One does have to wonder how far you'll go to keep that "legendary" status."
+pause 70 script
+char phoenix hide
+"I don't have to take this."
+"I'm going to go help Maya."
+char obadiah e=front-angry
+"I'll see you in court, Wright."
+"Don't try your little tricks..."
+bg black fade
+char obadiah hide
+"because they won't work this time..."
+char phoenix hide
+"{c089}(I helped Maya pick up the mess in the records room.)"
+"{c089}(I told her everything Williamson had said to me.)"
+"{c089}(By the time we finished, he had left. He'd probably already returned to the crime scene.)"
+bg police fade
+char maya e=disheartened
+"That guy scares me."
+"I'm not a huge fan myself."
+char maya e=pumped
+"D-Don't worry, Nick. I know that you work really hard at being an attorney!"
+"He's wrong about you!"
+char phoenix hide
+"It can't be helped. Let him think what he wants."
+char maya e=sad
+"*grumble*"
+pause 40 script
+char phoenix hide
+"{c089}(Last night, we witnessed Sir Gallante {c940}flying{c999} while over three hundred feet in the air.)"
+"{c089}(He landed on the building across the street from the Rivales Tower.)"
+"{c089}(If there's anything left to investigate, it's going to be there.)"
+"{c089}(In my experience, people can't fly...)"
+"{c089}(...but is there another explanation for what I saw with my own eyes?)"
+setflag angryoby
+
+script scene35menu

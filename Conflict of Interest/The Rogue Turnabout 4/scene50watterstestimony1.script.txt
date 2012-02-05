@@ -1,0 +1,153 @@
+set _list_back_button false
+set wrongevidence 1
+
+mus
+char watters e=angry
+fg TestimonyAnim fade name=tanim
+nt
+delete name=tanim
+"{n}{center}{c940}-- No Way, Man! --"
+
+mus Confrontation - Moderato.ogg
+set _music_loop Confrontation - Moderato - loop.ogg
+bg witness
+fg wbench
+
+
+label none
+set _cr_back_button true
+is wrongevidence 1 wrongevidence1
+is wrongevidence 2 wrongevidence2
+is wrongevidence 3 wrongevidence3
+
+label wrongevidence1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves that the {n}witness is lying!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Actually, no... {p15}{n}However, it does prove that you're {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Excuse me...?"
+bg judge
+char judge e=normal
+"I think what he's trying to say is that {n}a penalty is in order here."
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That didn't quite go as planned...)"
+pause 20 script
+set wrongevidence 2
+clear
+goto start
+
+label wrongevidence2
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+set wrongevidence 3
+clear 
+goto start
+
+label wrongevidence3
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Your Honor!{n}{p20}That statement contradicts the {n}evidence!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, it does...{p20}{n}{e pointing}And I can prove it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}You can't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I...{n}{p20}{e sweating}No, {p20}I can't."
+bg judge
+char judge e=normal
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
+"Then I wouldn't have to give you {n}penalties."
+char judge e=warning
+"{sfx shout-general}Like this one!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+pause 20 script
+set wrongevidence 1
+clear 
+goto start
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

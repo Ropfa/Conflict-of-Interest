@@ -58,15 +58,16 @@ char maya e=bench-strict
 bg witness
 fg wbench
 char sarah e=ditzy
+bg main name=main y=192 stack
 fg phoenixvs name=phoenixvs x=-255 y=165 stack
 fg williamsonvs name=willvs x=256 y=225 stack
-scroll name=pvs x=255 speed=8 nowait
-scroll name=wvs x=-256 speed=8 nowait
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
 fg Cross-ExaminationAnim stack fade
 pause 20
 delete name=phoenixvs
 delete name=willvs
-nt
+delete name=mainnt
 "{n}{center}{c940}-- The Blackout --"
 mus Confrontation - Presto.ogg
 set _music_loop Confrontation - Presto - loop.ogg
@@ -109,7 +110,7 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char sarah e=ditzy
-"But I did see him!{n}It was Wayne!"
+"But I did see him!{n}{p10}It was Wayne!"
 bg defense
 fg dbench
 char phoenix e=sweating
@@ -117,7 +118,7 @@ char phoenix e=sweating
 bg witness
 fg wbench
 char sarah e=ditzy
-"Aw, wook at goo! {n}You're so cute when you're angry!"
+"Aw, wook at joo! {n}You're so cute when you're angry!"
 bg defense
 fg dbench
 char phoenix e=sweating
@@ -125,7 +126,7 @@ char phoenix e=sweating
 bg witness
 fg wbench
 char sarah e=ditzy
-"Sorry! {n}I can't lie in here, you know?{n}Wayne totally did it!"
+"Sorry! {n}I can't lie in here, you know?{n}{p10}Wayne totally did it!"
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -153,7 +154,7 @@ char sarah hide
 char phoenix hide
 "That's a pretty small window."
 char sarah hide
-"Yeah, I actually think it's pretty {n}tacky to have it in there."
+"Yeah, I actually think it's kinda {n}tacky to have it in there."
 sfx screenwipe
 bg defense
 fg dbench
@@ -221,7 +222,7 @@ showlist
 
 label Show evidence
 char phoenix e=pointing
-"{sfx shout-objection}The defense would like to show {n}evidence that shows she saw somebody {n}else!"
+"{sfx shout-objection}The defense would like to show {n}evidence that shows she saw {n}somebody else!"
 bg judge
 char judge e=normal
 "What is this evidence...?"
@@ -258,7 +259,7 @@ pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Why are we arguing over how {n}embody might've snuck into {n}the room?"
+"Why are we arguing over how {n}somebody might've snuck into {n}the room?"
 "There isn't anything to show that it {n}actually happened!"
 "Nobody else went up there. {n}{p15}{delay 1}End of story."
 bg defense
@@ -273,7 +274,7 @@ char obadiah e=serious
 bg witness
 fg wbench
 char sarah e=ditzy
-"You bethca!"
+"You betcha!"
 resume
 
 label press sarah3D
@@ -314,6 +315,7 @@ char phoenix e=handsondesk
 resume
 
 label crimephoto sarah3C
+set _cr_back_button true
 mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
@@ -321,6 +323,7 @@ pause 5 script
 script scene26
 
 label blueprints sarah3C
+set _cr_back_button true
 mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
@@ -328,6 +331,7 @@ pause 5 script
 script scene26
 
 label none
+set _cr_back_button true
 is wrongevidence 1 wrongevidence1
 is wrongevidence 2 wrongevidence2
 is wrongevidence 3 wrongevidence3
@@ -428,7 +432,7 @@ char phoenix e=handsondesk
 "I...{n}{p20}{e sweating}No, {p20}I can't."
 bg judge
 char judge e=normal
-"Perhaps you should think things {n}through before jumping to conclusions."
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
 "Then I wouldn't have to give you {n}penalties."
 char judge e=warning
 "{sfx shout-general}Like this one!"

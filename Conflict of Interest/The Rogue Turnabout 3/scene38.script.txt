@@ -1,0 +1,15 @@
+setflag abandonedget
+bg black
+nt
+"{c090}{center}{type}July 20, 5:20 PM{n}Abandoned Warehouse
+
+bg Abandonedbuildingday2 fade
+pause 30 script
+char maya e=worried fade
+"Phew! He came in here?"
+
+char phoenix hide
+"{c089}(This place looks like it's about ready for demolition.)"
+"{c089}(But it's definitely where we saw Sir Gallante fly to.)"
+
+script scene38menu

@@ -8,12 +8,36 @@ showlist
 menu scene33
 
 label Entrance
+noflag youshallnotpass scene31
+flag youshallnotpass scene31b
+label scene31
 script scene31menu
+label scene31b
+script scene31b
 
 label Penthouse
 noflag penthouseget2 scene34
-flag penthouseget2 scene34b
+flag penthouseget2 ifthen
 label scene34
 script scene34
+label ifthen
+noflag youshallnotpass scene34b
+flag youshallnotpass ifthen2
 label scene34b
 script scene34menu
+label ifthen2
+noflag fingerprintsget youshallnotpass
+flag fingerprintsget fingerprintsget
+label youshallnotpass
+bg black fade
+pause 60 script
+bg pent2 fade
+pause 60 script
+char obadiah e=front-angry
+"*glare*"
+char phoenix hide
+"S-{sfx shout-general}{s5}Sorry!! Just took a wrong turn!"
+pause 20 script
+script scene33menu
+label fingerprintsget
+script scene

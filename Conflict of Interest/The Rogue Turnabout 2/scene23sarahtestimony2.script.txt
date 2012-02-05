@@ -41,14 +41,16 @@ char obadiah e=serious
 bg witness
 fg wbench
 char sarah e=normal
+bg main name=main y=192 stack
 fg phoenixvs name=phoenixvs x=-255 y=165 stack
 fg williamsonvs name=willvs x=256 y=225 stack
-scroll name=pvs x=255 speed=8 nowait
-scroll name=wvs x=-256 speed=8 nowait
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
 fg Cross-ExaminationAnim stack fade
 pause 20
 delete name=phoenixvs
 delete name=willvs
+delete name=main
 nt
 "{n}{center}{c940}-- Gutted to Death --"
 set show_2A2 false
@@ -329,7 +331,7 @@ char sarah e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I think that's enough.{n}{n}We don't want to hear any more of {n}your sick fantasies."
+"I think that's enough.{n}We don't want to hear any more of {n}your sick fantasies."
 bg witness
 fg wbench
 char sarah e=bored
@@ -420,7 +422,7 @@ char phoenix e=thinking
 "{c089}(Actually, I think Watters mentioned {n}that yesterday.)"
 bg judge
 char judge e=normal
-"This sounds very important. {n}Please update your testimony."
+"This sounds very important. {n}{p20}Please update your testimony."
 bg witness
 fg wbench
 char sarah e=normal
@@ -461,7 +463,7 @@ char sarah e=normal
 "It had a rather pretty blade. Such a {n}shame it was used the way that it {n}was."
 bg judge
 char judge e=normal
-"This sounds important.{n}Please update your testimony."
+"This sounds important.{n}{p20}Please update your testimony."
 bg witness
 fg wbench
 char sarah e=normal
@@ -489,7 +491,7 @@ char sarah e=normal
 "All his insides were spilling out onto {n}the floor."
 bg judge
 char judge e=normal
-"This sounds very important.{n}Please update your testimony."
+"This sounds very important.{n}{p20}Please update your testimony."
 bg witness
 fg wbench
 char sarah e=normal
@@ -526,7 +528,7 @@ char judge e=surprised
 "...where the defendant had {n}fingerprints on the murder weapon, {n}but was still innocent!"
 char phoenix hide
 "{c089}(I'll just let that one pass...)"
-"{c089}(This does make Mr. Parker look {n}really bad though."
+"{c089}(This does make Mr. Parker look {n}really bad though.)"
 resume
 
 label press sarah2C2
@@ -568,7 +570,7 @@ bg witness
 fg wbench
 char sarah e=normal
 "Weeeell..."
-"{spd 1}I could tell right away that he was {n}dead. Nobody could survive something {n}like that!{next}"
+"{spd 1}I could tell right away that he was {n}dead. Nobody could survive {n}something like that!{next}"
 "{spd 1}His whole torso was sliced open. It {n}was kinda like when you gut a {n}fish, you know?{next}"
 "{spd 1}How all the sinews and tissues are {n}cut up and the guts will spill {n}out onto your{next}"
 "{spd 1}counter right away. {sfx slap}KERSPLAT!!! {n}And that's what his {n}guts were like...{next}"
@@ -581,8 +583,8 @@ bg witness
 fg wbench
 char sarah e=ditzy
 "But it didn't just stop there..."
-"{spd 1}He was all chopped up all the way to {n}his throat! I'm betting that he choked to death{next}"
-"{spd 1}on his own blood, you know? That'd {n}be a totally disgusting way to go. I mean, it{next}"
+"{spd 1}He was all chopped up all the way to {n}his throat! I'm betting that he choked {n}to death{next}"
+"{spd 1}on his own blood, you know? That'd {n}be a totally disgusting way to go. I {n}mean, it{next}"
 "{spd 1}would be like you're dying and it's all {n}getting into your lungs and stuff and {next}"
 "{spd 1}you're like to yourself {e bored}"Hey, that's {n}my own blood I'm drowning in! Gross!"{next}"
 "You know?"
@@ -649,6 +651,7 @@ char sarah e=normal
 "It was pretty disgusting, and I was {n}pretty grossed out."
 bg prosecution
 fg pbench
+char obadiah e=serious
 "It would be a reasonable reaction to {n}finding a dead body."
 "The police have a record of the call. {n}We can confirm that Ms. Keyes is the {n}one who made it."
 bg witness
@@ -662,7 +665,7 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char sarah e=ditzy
-"Yep, I made the call from the phone in {n}reception. There's a video of me {n}doing it."
+"Yep, I made the call while I was in {n}reception. There's a video of me {n}doing it."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -716,6 +719,7 @@ label ifback
 goto back
 
 label blackout
+set _cr_back_button true
 mus
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
@@ -875,6 +879,7 @@ char phoenix e=thinking
 goto comments
 
 label autopsy sarah2C2
+set _cr_back_button true
 mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
@@ -1010,7 +1015,7 @@ char obadiah e=angry
 bg witness
 fg wbench
 char sarah e=normal
-"Whaaat? {n}{e ditzy}No, he would never do that {n}to me!"
+"Whaaat? {n}{p15}{e ditzy}No, he would never do that {n}to me!"
 mus Shibuya.ogg
 set _music_loop Shibuya - loop.ogg
 bg prosecution
@@ -1088,6 +1093,7 @@ setflag 2C4
 goto start
 
 label none
+set _cr_back_button true
 is wrongevidence 1 wrongevidence1
 is wrongevidence 2 wrongevidence2
 is wrongevidence 3 wrongevidence3
@@ -1188,7 +1194,7 @@ char phoenix e=handsondesk
 "I...{n}{p20}{e sweating}No, {p20}I can't."
 bg judge
 char judge e=normal
-"Perhaps you should think things {n}through before jumping to conclusions."
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
 "Then I wouldn't have to give you {n}penalties."
 char judge e=warning
 "{sfx shout-general}Like this one!"

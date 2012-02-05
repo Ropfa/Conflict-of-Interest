@@ -3,7 +3,7 @@ fg TakeThatAnim
 pause 5 script
 bg blueprints
 char phoenix hide
-"Prosecutor, what did you say the {n}symbol on this map meant?"
+"Prosecutor, what did you say this {n}symbol on the map meant?"
 
 char obadiah hide
 "That's a window. {n}{p20}Why?"
@@ -98,7 +98,10 @@ label redopresent
 set _cr_back_button false
 present
 
+//PRESENT CODY'S PHOTO
+
 label codyphoto
+set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
@@ -125,6 +128,8 @@ fg dbench
 char phoenix e=confident
 "Actually, Your Honor... {n}If I had to guess, I'd say that {n}it's a human."
 char phoenix e=objecting
+pause 30 script
+char phoenix e=pointing
 "And it's the human who killed Michael {n}Rivales!"
 
 sfx /godot/objection.ogg
@@ -137,10 +142,11 @@ char obadiah e=angry
 "It's probably just a janitor fixing {n}something!"
 
 bg defense
-fg dbench
+fg dbench name=1
 char phoenix e=confident
 "Really? {p20}Tell me, Prosecutor..."
 bg speedzoom stack name=zoom
+delete name=1
 char phoenix e=zoom
 sfx shout-objection.wav
 "{f}What kind of {f}janitor would be {n}dressed up {f}like they're ready to {n}{f}slay a {f}dragon?!"
@@ -180,12 +186,12 @@ char phoenix e=pointing
 "{sfx shout-objection}Through the window!"
 
 bg prosecution
-fg pbench
+fg pbench name=1
 char obadiah e=angry
 "That's a good twenty feet from the {n}top of the building!"
 "What, was this "knight" also some {n}kind of human arachnid?"
 bg speedzoom stack name=zoom
-fg nothing
+delete name=1
 sfx shout-objection
 char obadiah e=zoom
 "{f}Last I checked, {f}people can't {f}climb {n}sol{f}id me{f}tal walls!!"
@@ -215,6 +221,7 @@ char judge e=surprised
 "..."
 pause 50 script
 "{f}{next}"
+pause 5 script
 
 bg defense
 fg dbench
@@ -222,6 +229,7 @@ char phoenix e=handsondesk
 "..."
 pause 50 script
 "{f}{next}"
+pause 5 script
 
 bg prosecution
 fg pbench
@@ -229,12 +237,14 @@ char obadiah e=angry
 "..."
 pause 50 script
 "{f}{next}"
+pause 5 script
 
 bg aide
 char maya e=bench-profile
 "..."
 pause 50 script
 "{f}{next}"
+pause 5 script
 
 bg judge
 char judge e=normal
@@ -274,8 +284,6 @@ pause 100 script
 
 bg black fade
 pause 80 script
-mus
-pause 80
 mus Jingle - Slight Break.ogg
 bg tobecontinued fade
 pause 300
@@ -284,6 +292,7 @@ bg nothing fade
 exit
 
 label none
+set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
@@ -338,7 +347,7 @@ char judge e=normal
 "The jury has decided.{n}{p20}It is unanimous."
 "This court finds the defendant, {n}Wayne Parker...{next}"
 guilty
-pause 60
+pause 60 script
 char judge hide
 "The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
 "Court is adjourned."

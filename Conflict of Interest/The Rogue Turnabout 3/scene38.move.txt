@@ -1,0 +1,13 @@
+label top
+bg Abandonedbuildingday2
+
+list scene35move
+li Criminal Affairs
+li Rivales Tower
+showlist
+menu scene38
+
+label Criminal Affairs
+script scene35menu
+
+label Rivales Tower

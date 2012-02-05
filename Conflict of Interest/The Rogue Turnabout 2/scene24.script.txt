@@ -4,8 +4,8 @@ fg dbench
 char phoenix e=deskslam
 pause 50 script
 char phoenix e=handsondesk
-"Sarah... {n}I could accept a small slip-up..."
-"But your testimony has shown not {n}one, {p20}but TWO major contradictions!"
+"Sarah... {n}{p10}I could accept a small slip-up..."
+"But your testimony has shown not {n}one, {p10}but TWO major contradictions!"
 
 bg witness
 fg wbench
@@ -111,7 +111,6 @@ char sarah hide
 bg courtsarah
 char sarah hide
 "{sfx shout-angry}SHUT UP AND LISTEN TO ME WHILE {n}I'M TALKING!!!"
-pause 30 script
 sfx shockingreveal.wav
 pause 30 script
 char obadiah hide

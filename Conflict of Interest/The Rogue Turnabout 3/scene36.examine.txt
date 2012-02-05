@@ -1,0 +1,177 @@
+label top
+bg records
+
+examine
+region 127 72 20 57 drawerone
+region 176 97 55 94 drawertwo
+menu scene36
+
+label drawerone
+noflag foundfiles nofound
+flag foundfiles yesfound
+label nofound
+char maya e=normal
+char phoenix hide
+"The Sir Gallante files should be somewhere in this drawer."
+char maya e=cheerful
+"I'll check."
+char nothing
+sfx showevidence
+pause 60 script
+char maya hide
+"There's so much stuff in here! I wonder how they keep it all organized."
+char phoenix hide
+"They probably have a better system than the Anything Agency does."
+char maya hide
+"{sfx shout-scream}WHOA!!!"
+char phoenix hide
+"What? Did you find something?"
+pause 40 script
+char maya e=worried fade
+"Look at how big this folder is!"
+set _ev KG-8
+showevl
+sfx showevidence
+"{delay 1}SL-9... {p20}Case Files..."
+char phoenix hide
+"..."
+char maya e=worried
+"...{p40}{e cheerful}That sounds dumb!"
+hideevl
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx splat
+pause 10 script
+char nothing
+char phoenix hide
+"Wait, Maya! Don't just throw it on the floor!"
+char maya hide
+"Where are you, Sir Gallante?"
+set _ev 
+
+"Sir Gallante..."
+"Sir Gallante..."
+"Nope."
+char phoenix hide
+"Maya, you're making a mess!"
+char maya hide
+"Still nope."
+char phoenix hide
+"Here, let me try--{p20}{next}"
+set _ev
+
+char maya hide
+"Not you."
+
+set _ev pearl$
+showevr
+sfx showevidence
+pause 10 script
+hideevr
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx splat
+
+"Not you either."
+char phoenix hide
+"Wait a minute."
+"What was that?"
+"Maya, come look at this."
+char maya e=normal fade
+"What is it?"
+bg pearl report
+sfx showevidence
+pause 60 script
+char phoenix hide
+"That's... her."
+bg records
+sfx hideevidence
+char maya e=worried
+pause 60 script
+char maya e=sad
+pause 30 script
+"She'd be eighteen now."
+char phoenix hide
+"I know. It's been over five years."
+"{c089}(I still remember when we had to file this report...)"
+"{f}{next}"
+bg police
+char maya e=crying
+grey value=1
+mus Unspoken Feelings.ogg
+set _music_loop Unspoken Feelings - loop.ogg
+pause 60 script
+char phoenix hide
+"Gumshoe, can't you find her a bit faster? It's been almost a full day since she disappeared!"
+char gumshoe e=disheartend
+"I'm sorry, pal. We're doing everything we can."
+char phoenix hide
+"What if something happens while the police are searching?! There's a lot of horrible people out there!"
+char gumshoe e=headscratch
+pause 50 script
+char gumshoe e=disheartened
+"Believe me, I want to find her just as much as you do."
+"But these things don't always work out quickly. Nobody's so much as seen her yet."
+"I wouldn't be surprised if..."
+char maya e=sad
+"Don't say it... {e crying}Don't say it!"
+char gumshoe e=disheartened
+"...I'm sorry. I wish there was more I could do."
+mus
+bg black fade
+pause 60 script
+grey value=0
+bg records fade
+char maya e=sad
+"She's still missing."
+"After five years, they still haven't found her."
+"{e crying}Do you think we'll ever see her again, Nick?"
+char phoenix hide
+"...{p20}I don't know.{n}{p20}I hope so."
+"{c089}(We haven't seen or heard from Pearl in five years, so it's not likely...)"
+"{c089}(...But I don't have the heart to tell her that.)"
+char maya e=sad
+"I hope so too..."
+pause 100 script
+char phoenix hide
+"Hey, look what I found."
+set _ev SL9
+showevl
+"The Sir Gallante file."
+char maya e=surprised
+"Huh? How'd you find that so quickly?"
+char phoenix hide
+"It wasn't too hard."
+char maya e=mad
+"It was the only thing you left in the drawer!"
+hideevl
+addev pearl$
+addev gallantefiles
+
+setflag trashed
+goto top
+
+label yesfound
+char phoenix hide
+"We already found what we were looking for."
+goto top
+
+label drawertwo
+char maya e=normal
+"There's certainly a lot of files in here."
+char phoenix hide
+"Well, they do have to keep track of every single case that they investigate."
+char maya e=thinking
+"There must be an awful lot of killers running around out there."
+char phoenix hide
+"I don't think they're all murder cases, Maya."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

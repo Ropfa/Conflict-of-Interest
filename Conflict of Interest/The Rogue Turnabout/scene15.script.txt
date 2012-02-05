@@ -5,7 +5,7 @@ char phoenix hide
 "...{n}{p30}Nothing."
 
 char maya e=thinking
-"That's strange.{n}I was expecting to find something {n}really amazing."
+"That's strange.{n}{p15}I was expecting to find something {n}really amazing."
 "All we found was that stain where {n}Mr. Rivales died."
 
 char phoenix hide

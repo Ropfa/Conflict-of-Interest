@@ -1,0 +1,23 @@
+label top
+bg police
+
+list scene35move1
+li Wright Anything Agency
+li Detention Center
+flag permissionpresent records
+showlist
+list scene35move2
+menu scene35
+label records
+li Records Room
+showlist
+menu scene35
+
+label Wright Anything Agency
+script scene28menu
+
+label Detention Center
+script scene29menu
+
+label Records Room
+script scene36

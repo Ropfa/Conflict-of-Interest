@@ -1,0 +1,26 @@
+bg blacksapartment
+
+nt
+"{center}{type}{c090}July 20, 6:15 PM{n}Virgil Black's Apartment"
+pause 60 script
+
+char black e=peace fade
+"{delay 1}Hey, buddy!"
+
+char maya e=normal
+"You're finally here!"
+
+char black e=normal
+"{delay 1}Oh... Were you expecting me?"
+
+char phoenix hide
+"You did tell us several hours ago that you were going to be waiting for us here."
+
+char black e=peace
+"{delay 1}Oh...! I... I did, didn't I?"
+"{delay 1}Duuuude, sorry to keep you waiting."
+
+char phoenix hide
+"{c089}(The 70's were over a long time ago, "dude"... and you weren't even alive for them!)"
+
+script scene39menu

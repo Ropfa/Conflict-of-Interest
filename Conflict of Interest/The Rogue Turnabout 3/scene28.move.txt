@@ -1,10 +1,16 @@
 label top
 bg wrightanythingenvelope
 
-list scene28move
+list scene28move1
 li Detention Center
 li Rivales Tower
 li Hospital
+flag youshallnotpass police
+showlist
+list scene28move2
+menu scene28
+label police
+li Criminal Affairs
 showlist
 menu scene28
 
@@ -19,3 +25,7 @@ script scene29
 label Rivales Tower
 mus
 script scene31menu
+
+label Criminal Affairs
+mus
+script scene35menu

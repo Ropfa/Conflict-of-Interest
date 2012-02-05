@@ -7,7 +7,9 @@ addev blackout
 addev security2
 addev poster
 addev codyphoto
-addev luminoladdev maya$
+addev luminol
+addev blueprints
+addev crimephoto2addev maya$
 addev gumshoe$
 addev parker$
 addev black$

@@ -1,0 +1,91 @@
+set _cr_button false
+mus
+
+bg pent4
+
+"{f}{next}"
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+"{f}{next}"
+sfx dramapound.wav
+invert name=pent4
+char watters e=serious
+pause 40 script
+bg black
+char watters e=serious
+sfx rolling.ogg
+pause 10 script
+bg 2-chain-bg
+char parker e=sad
+fg 1-lock-chain name=chains
+"{s 80 4}{next}"
+pause 20 script
+fg lock y=40 name=lock1
+"{sfx Owned.ogg}{f}{next}"
+pause 20 script
+
+nt
+"{n}{center}{c940}-- The Hit List --"
+pause 60 script
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+char phoenix hide
+"Now that Williamson's gone, why don't we pick up where we left off?"
+char watters e=confused
+"Yeah? Where was that?"
+char phoenix hide
+"We were discussing the hit list that we found."
+char watters e=confused
+"Oh, yeah, right..."
+"Hey, I still don't really know anything about that."
+"I'll tell you if I learn anything though, 'kay?"
+char phoenix hide
+"I think you already know plenty, and you're just not telling me."
+char watters e=nervous
+"R-Really?"
+char phoenix hide
+"Totally, man."
+
+label redolock1
+"{c090}This shows that you are connected with the hit list..."
+present
+label ifback
+goto back
+
+//PRESENT HIT LIST
+label hitlist
+mus
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scenepsychewatters3
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char watters e=confused
+"No way, man.{p20}{n}That ain't right."
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+char phoenix hide
+"{c089}(Let's try that again...)"
+goto redolock1
+
+label back
+char phoenix hide
+"{c089}(I don't have the evidence I need {n}right now.)"
+"{c089}(I'll have to come back later when {n}I've gathered some more.)"
+pause 30
+script 
+
+label magafail
+mus
+char phoenix hide
+"{c089}(Gah! I'm pushing myself too much!)"
+"{c089}(I need to calm down, collect my {n}thoughts, and try again...)"
+penalty +1
+pause 20
+script 

@@ -1,0 +1,504 @@
+set _list_back_button false
+set wrongevidence 1
+
+mus
+char cody e=confident
+fg TestimonyAnim fade name=tanim
+nt
+delete name=tanim
+"{n}{center}{c940}-- The Tenebrous Templar --"
+
+mus Confrontation - Moderato.ogg
+set _music_loop Confrontation - Moderato - loop.ogg
+bg witness
+fg wbench
+
+char cody e=confident
+"{tbon}I got a really good picture of Sir Gallante sneaking in!"
+"{tbon}There was a power outage, so that Parker guy had lotsa time to prepare."
+char cody e=happy
+"{tbon}I probably took the picture after he killed Rivales."
+char cody e=confident
+"{tbon}Basically, Parker disguised himself during the blackout, then killed Rivales."
+
+mus
+bg black
+pause 30
+bg defense
+fg dbench
+char phoenix e=normal
+"C-Cody...?"
+bg witness
+fg wbench
+char cody e=sad
+"S-Sorry, pops. I don't got a choice."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(How did they manage to turn this around to make it look like Mr. Parker was the one on the roof?)"
+"{c089}(I can't help but think that Cody is blaming him, just to protect the real Sir Gallante.)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I hope you're ready, Wright."
+bg defense
+fg dbench
+char phoenix e=normal
+"Ready for what?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"The cross-examination, of course! Get on it!"
+bg judge
+char judge e=warning
+"Yes! Stop dawdling and wasting our time!"
+
+bg witness
+fg wbench
+char cody e=confident
+bg main name=main y=192 stack
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
+delete name=main
+nt
+"{n}{center}{c940}-- The Tenebrous Templar --"
+set show_cody1E false
+mus Confrontation - Moderato.ogg
+set _music_loop Confrontation - Moderato - loop.ogg
+label start
+cross codytestimony1
+noflag press1A AND press1B AND press1C AND press1D scene46
+flag press1A AND press1B AND press1C AND press1D addcody1E
+label addcody1E
+
+//PRESS ALL STATEMENTS
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"So, let me get this straight."
+"Supposedly, my client stashed his armor on the roof sometime before the murder."
+"Then, that morning, he entered the building... went past Ms. Keyes into the penthouse..."
+"...left the penthouse... went up to the roof... and then came down into the penthouse... again."
+bg witness
+fg wbench
+char cody e=happy
+"That about sums it up!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I thought I was supposed to be the one making up ridiculous stories around here.)"
+"{c089}(Why is it that when the prosecution does it, it's accepted as fact?)"
+bg witness
+fg wbench
+char cody e=angry
+"Except you forgot the most important part, pops."
+bg defense
+fg dbench
+char phoenix e=normal
+"What part's that?"
+bg witness
+fg wbench
+char cody e=happy
+"The part where he sliced and diced the bad guy!!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"That was sort of implied."
+bg witness
+fg wbench
+char cody e=confident
+"You can't just imply something like that!"
+"He carved up the baddest man in the city with just a little knife!"
+"Do you have any idea HOW AWESOME THAT IS?!"
+bg defense
+fg dbench
+char phoenix e=confident
+"{c089}(Aha! Here's my chance!)"
+"Cody, what you just said is very important."
+bg witness
+fg wbench
+char cody e=angry
+"Of course it is! That's what I've been saying!"
+bg defense
+fg dbench
+char phoenix e=normal
+"In that case, I don't suppose you'll mind adding it to your testimony."
+bg witness
+fg wbench
+char cody e=confident
+"Right away!"
+delflag press1A
+delflag press1B
+delflag press1C
+delflag press1D
+set show_cody1E true
+goto start
+
+label scene46
+statement cody1A
+bg witness
+fg wbench
+char cody e=confident
+"I got a really good photo of Sir Gallante sneaking in!"
+
+statement cody1B
+bg witness
+fg wbench
+char cody e=confident
+"There was a power outage, so that Parker guy had lotsa time to prepare."
+
+statement cody1C
+bg witness
+fg wbench
+char cody e=happy
+"I probably took the picture after he killed Rivales."
+
+statement cody1D
+bg witness
+fg wbench
+char cody e=confident
+"Basically, Parker disguised himself during the blackout, then killed Rivales."
+
+statement cody1E test=show_cody1E
+bg witness
+fg wbench
+char cody e=happy
+"WHAMO! Straight to the jugular with that knife!"
+
+label comments
+bg aide
+char maya e=bench-strict
+"What is Cody doing?!"
+"He knows that Mr. Parker didn't do it!"
+char phoenix hide
+"He's trying to shift the blame to Mr. Parker so that the real Sir Gallante can walk free."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(I'm disappointed in you, Cody. I didn't think you would sink that low.)"
+goto start
+
+label press cody1A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+set _ev codyphoto
+showevr
+char phoenix e=thinking
+"You're referring to this picture, right?"
+bg witness
+fg wbench
+char cody e=confident
+"Of course!"
+"What other real life genuine photo of Sir Gallante have you seen?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Well, none, I guess."
+bg witness
+fg wbench
+char cody e=happy
+"I'll bet if I went to the press, they'd pay me millions for it!"
+hidevr
+bg prosecution
+fg pbench
+char obadiah e=worried
+"That picture's police evidence now. You can't do that."
+bg witness
+fg wbench
+char cody e=sword
+"H-hey! {n}You can't tell me what to do!!"
+resume
+
+label press cody1B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"What do you mean by "prepare"?"
+bg witness
+fg wbench
+char cody e=angry
+"He was preparing to kill Rivales!"
+"While he was in the penthouse, the power went out."
+"He left, went past that secretary lady, then went up to the room and put on his armor."
+bg defense
+fg dbench
+char phoenix e=normal
+"Where did the armor come from? He definitely wasn't carrying it when the camera saw him."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Like the penthouse, the rooftop also didn't have cameras."
+"You could hide something, like armor, without it being found immediately."
+bg witness
+fg wbench
+char cody e=confident
+"Parker worked in that building, so it isn't like he didn't have plenty of time to stash it up there."
+bg defense
+fg dbench
+char phoenix e=normal
+"Did you search the rooftop? Is there actually any evidence that it was up there?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes. There were several signs that somebody had tampered with the roof."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Well, that's unfortunate. I was hoping that was just some wild theory he came up with.)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I'm not the kind to just come up with wild theories."
+"I know how to do my homework."
+resume
+
+label press cody1C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"When exactly did he change into the armor?"
+"Ms. Keyes didn't mention anything about it."
+bg witness
+fg wbench
+char cody e=angry
+"He went in beforehand without it to fool her. Then, he slipped out and changed into it."
+"After that, he went back into the penthouse again and..."
+"{sfx shout-shock}{f}WHAMO!!!"
+bg defense
+fg dbench
+char phoenix e=normal
+"Isn't that a lot of work?"
+"Why not just kill the victim the first time he was in the room?"
+bg witness
+fg wbench
+char cody e=confident
+"Cuz he's Sir Gallante! Duh!!"
+"He isn't going to kill the king of all crime without his signature armor!"
+"That'd ruin his reputation!!!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Apparently, Sir Gallante needs to get his priorities straight.)"
+resume
+
+label press cody1D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Am I the only one who has a problem with this theory?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes."
+bg judge
+char judge e=normal
+"Yes."
+bg witness
+fg wbench
+char cody e=happy
+"Yep!"
+bg aide
+char maya e=bench-strict
+"I can't believe Cody is going along with this, after what we found out yesterday!"
+"What is his problem?!"
+char phoenix hide
+"Sir Gallante is his idol. I think he's trying to protect him."
+char maya e=bench-profile
+"Cody! How could you?! You betrayed Nick!!"
+bg witness
+fg wbench
+char cody e=sad
+"H-Hey... Don't say that... It's not like that!
+resume
+
+label press cody1E
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"I don't recall ever discussing the autopsy report with you."
+"You seem to know a lot for somebody who only took one photo from three hundred feet away."
+bg witness
+fg wbench
+char cody e=angry
+"I came to the trial yesterday! I watched from the gallery."
+char cody e=confident
+"You didn't think I'd miss all this, did you?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Is this case really that important to you?"
+bg witness
+fg wbench
+char cody e=angry
+"That's a dumb question."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I guess it kind of was.)"
+resume
+
+label sword cody1E
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+script scene47
+
+label none
+set _cr_back_button true
+is wrongevidence 1 wrongevidence1
+is wrongevidence 2 wrongevidence2
+is wrongevidence 3 wrongevidence3
+
+label wrongevidence1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves that the {n}witness is lying!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Actually, no... {p15}{n}However, it does prove that you're {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Excuse me...?"
+bg judge
+char judge e=normal
+"I think what he's trying to say is that {n}a penalty is in order here."
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That didn't quite go as planned...)"
+pause 20 script
+set wrongevidence 2
+clear
+goto start
+
+label wrongevidence2
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+set wrongevidence 3
+clear 
+goto start
+
+label wrongevidence3
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Your Honor!{n}{p20}That statement contradicts the {n}evidence!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, it does...{p20}{n}{e pointing}And I can prove it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}You can't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I...{n}{p20}{e sweating}No, {p20}I can't."
+bg judge
+char judge e=normal
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
+"Then I wouldn't have to give you {n}penalties."
+char judge e=warning
+"{sfx shout-general}Like this one!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+pause 20 script
+set wrongevidence 1
+clear 
+goto start
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

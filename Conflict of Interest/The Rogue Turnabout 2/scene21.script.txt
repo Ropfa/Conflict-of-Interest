@@ -20,7 +20,7 @@ char phoenix hide
 bg prosecution
 fg pbench
 char obadiah e=angry
-"What do you mean?{n}{p20}Of {sfx shout-general}course it was Sir Gallante!"
+"What do you mean?{n}{p20}Of {sfx shout-general}course it was Sir {sfx shout-angry}Gallante!"
 
 bg defense
 fg dbench
@@ -39,7 +39,7 @@ char judge e=surprised
 
 bg prosecution
 fg pbench
-char obadiah e=serious
+char obadiah e=worried
 "Metaphorically speaking, of course."
 
 bg defense
@@ -85,6 +85,7 @@ set _cr_back_button false
 present
 
 label none
+set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script

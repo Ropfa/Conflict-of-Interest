@@ -1,2 +1,2 @@
-bg blueprints fade y=192
+bg pent2 fade
 gui Back y=350

@@ -54,9 +54,10 @@ char judge e=surprised
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Looks can be deceiving. {n}He may appear meek, but he is indeed {n}a vicious killer."
+"Looks can be deceiving."
+"He may appear meek, but he is indeed {n}a vicious killer."
 "The prosecution will prove to you {n}today that the defendant, Wayne {n}Parker..."
-"...is not only the culprit in this {n}case... but also in all of Sir {n}Gallante's many killings."
+"...is not only the culprit in this {n}case... {p20}but also in all of Sir {n}Gallante's many killings."
 bg judge
 char judge e=normal
 "Thank you, Mr. Williamson."
@@ -67,7 +68,7 @@ char obadiah e=serious
 "As always, Your Honor."
 bg aide
 char maya e=bench-hum
-"Wow, Nick!{n}Detective Watters was right."
+"Wow, Nick!{n}{p20}Detective Watters was right."
 "This guy is good."
 char phoenix hide
 "{c089}(I'll definitely have to be on my toes {n}here.)"
@@ -80,6 +81,9 @@ char phoenix e=normal
 "Your Honor, the defense believes {n}that Mr. Parker is innocent..."
 "Guilty of nothing more than being in {n}the wrong place at the wrong time."
 "I believe that the evidence shown {n}today will prove this."
+
+//END OPENING STATEMENTS
+
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -87,7 +91,7 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=normal
-"I... {e thinking}Yes, why?"
+"I... {e thinking}{p10}Yes, why?"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -134,7 +138,7 @@ char obadiah e=serious
 "Enough chitchat. {p20}{n}We've wasted enough time already."
 bg judge
 char judge e=warning
-"Yes! {n}Enough chitchat, Mr. Wright!"
+"Yes! {n}{p20}Enough chitchat, Mr. Wright!"
 bg defense
 fg dbench
 char phoenix e=sweating
@@ -142,7 +146,7 @@ char phoenix e=sweating
 bg prosecution
 fg pbench
 char obadiah e=serious
-"The victim, whom I'm sure you've all {n}heard of, was Michael Rivales..."
+"The victim, {p5}whom I'm sure you've all {n}heard of, {p5}was Michael Rivales..."
 "...crime king of the underworld in this {n}city."
 "The defendant was caught entering {n}the Rivales penthouse on the {n}thirtieth story of the Tower."
 bg judge
@@ -180,6 +184,7 @@ char judge e=normal
 "I'd like to hear more about the arrest."
 bg prosecution
 fg pbench
+char obadiah e=serious
 "For that, {p10}I have a witness."
 "She can tell you everything you need {n}to know."
 bg judge
@@ -187,6 +192,7 @@ char judge e=nodding
 pause 40 script
 char judge e=normal
 "Very well. {n}Bring her in."
+mus
 
 bg black fade
 pause 60 script
@@ -250,7 +256,7 @@ char phoenix e=sweating
 "{sfx shout-general}What?! {p10}{sfx whoops}No!"
 bg judge
 char judge e=warning
-"{sfx damage}Mr. Wright! Do you have any idea {n}how immoral something like that is?!"
+"{sfx damage}Mr. Wright! {p10}Do you have any idea {n}how immoral something like that is?!"
 bg defense
 fg dbench
 char phoenix e=sweating

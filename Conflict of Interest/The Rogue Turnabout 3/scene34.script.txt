@@ -1,6 +1,9 @@
-bg pent2 fade
-pause 60
 flag blackdetention nowatters
+
+bg pent2 fade
+nt
+"{c090}{center}{type}July 20, 2:00 PM{n}Rivales Tower{n}Penthouse Office"
+pause 50 script
 
 setflag penthouseget2
 "{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{next}"
@@ -27,6 +30,8 @@ char watters e=confident
 script scene34menu
 
 label nowatters
+bg pent2 fade
+pause 60 script
 "It doesn't look like Detective Watters is here."
 "We should come back later when he is."
 pause 50

@@ -1,0 +1,101 @@
+label top
+bg policeChelmeyBarton
+
+examine
+region 171 83 73 75 computers
+region 34 50 53 55 layton
+region 159 54 73 16 badgers
+region 130 103 145 112 badgers
+region 120 51 21 26 chief
+menu scene41
+
+label layton
+noflag laytonexamine nolayton
+flag laytonexamine yeslayton
+label nolayton
+char Inspector hide
+"Now see here! What kind of job do you people think you're running?"
+char Chief hide
+"I've already told you! We don't know where this Dan Polo guy is!"
+char Inspector hide
+"We followed him here!"
+char Chief hide
+"Your equipment must have been faulty."
+char Inspector hide
+"We were using the stuff that YOU lent us!"
+char Chief hide
+"Well, I don't know what to say."
+"By the way, what's a pair of English cops doing here in America?"
+"Shouldn't this be under our jurisdiction?"
+char Inspector hide
+"You clearly aren't doing your work properly!"
+char Chief hide
+"Irregardless, I'm going to have to ask you two to leave the search up to us. We can handle it."
+char Inspector hide
+""Irregardless"? What the devil is this?"
+char Police hide
+"I don't believe "irregardless" is actually a word, sir."
+char Inspector hide
+"It isn't! They can't even speak there own language in this country, much less catch a criminal!"
+char Police hide
+"How unfortunate, sir."
+char Inspector hide
+"Get the car ready. We're leaving."
+char Police hide
+"Yes, sir. Right away, sir."
+setflag laytonexamine
+goto top
+
+label yeslayton
+char Inspector hide
+"What are you waiting for?!"
+"I thought I told you to get the car ready!"
+char Police hide
+"So sorry, sir."
+"I just thought I'd finish my biscuit first, if you don't mind."
+"It's... mmm... quite good."
+goto top
+
+label computers
+char phoenix hide
+"All the police are hard at work, solving various crimes."
+char Chief hide
+"Hey, stop {sfx shout-general}that!"
+"It's no fun when the other team spawn camps!"
+char phoenix hide
+"...{p20}Except that one."
+goto top
+
+label badgers
+char phoenix hide
+"The Blue Badger..."
+char maya e=cheerful
+"And his wife - The Pink Badger!"
+char phoenix hide
+"His son, the Baby Badger."
+char maya e=pumped
+"Don't forget their nemesis, the Bad Badger!"
+char phoenix hide
+"And finally, that creepy thing lying on the floor over there."
+"What was that called again?"
+char maya e=normal
+"The Proto Badger! {n}{e sad}I remember having nightmares about that one."
+char phoenix hide
+"You know, I think that every time we come here, they have more of those things."
+goto top
+
+label chief
+char Chief hide
+"Hey, you!"
+char phoenix hide
+"Who, me?"
+char Chief hide
+"Yeah, you! {p30}{n}Don't do drugs!"
+char phoenix hide
+"...Yes, sir."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

@@ -130,7 +130,7 @@ char phoenix hide
 set _ev gun
 showevl
 "It's a gun."
-"It won't be working anytime soon...{n}{p20}But it's definitely a gun."
+"It won't be working anytime soon...{n}{p30}But it's definitely a gun."
 hideevl
 delev smashed
 addev gun

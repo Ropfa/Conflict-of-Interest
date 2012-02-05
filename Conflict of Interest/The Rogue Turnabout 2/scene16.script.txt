@@ -15,13 +15,13 @@ char phoenix hide
 "Are you ready, Mr. Parker?"
 
 char parker e=disturbed
-"Am I... Am I {sfx shout-scream}{e freakout}READY?!{n}{p20}{e disturbed}I...{n}{p30}{e crying}I..."
+"Am I... Am I {sfx shout-scream}{e freakout}READY?!{n}{p40}{e disturbed}I...{n}{p30}{e crying}I..."
 
 char phoenix hide
 "I'll take that as a "no"."
 
 char maya e=pumped
-"It's okay, Mr. Parker!{n}We'll prove you're innocent!"
+"It's okay, Mr. Parker!{n}{p10}We'll prove you're innocent!"
 
 char parker e=worried
 "I... {p20}I knew I could count on you guys."
@@ -42,7 +42,7 @@ char phoenix hide
 "Really? {p10}She didn't seem too {n}antagonistic when we spoke {n}yesterday."
 
 char parker e=worried
-"She's good at hiding her true feelings. {n}{p20}You have to be when you're in this {n}business."
+"She's good at hiding her true {n}feelings. {p20}You have to be when {n}you're in this business."
 "I'm sure there's a lot that little Sarah {n}wasn't telling you."
 
 bg black
@@ -90,6 +90,7 @@ pause 40 script
 
 char parker e=worried
 "..."
+pause 40 script
 
 char phoenix hide
 "It's almost time. We should head in."

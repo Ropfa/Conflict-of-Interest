@@ -1,4 +1,5 @@
 fg ani-judge-gavel
+pause 5 script
 bg judge
 char judge e=normal
 "I believe that we've heard enough."
@@ -39,7 +40,7 @@ bg prosecution
 fg pbench
 char obadiah e=serious
 "Sir Gallante leaves his mark after {n}each crime."
-"The nature of this mark is known only {n}to the top people on the investigation."
+"The nature of this mark is known only {n}to the top people on the {n}investigation."
 "When questioned, the defendant {n}knew a rather suspicious amount {n}about it."
 
 bg judge
@@ -52,6 +53,7 @@ char judge e=normal
 "Does the defense have anything to {n}say regarding this accusation?"
 
 mus Tricks and Gimmicks.ogg
+label redopresent
 bg aide
 char maya e=bench-strict
 "Nick! You'd better think up something {n}fast!"
@@ -59,7 +61,7 @@ char maya e=bench-strict
 char phoenix hide
 "I know! {n}I'm thinking! {n}I'm thinking!"
 char maya e=bench-strict
-"Remember everything Cody told us {n}about Sir Gallante! He gave us that {n}neat poster and everything!"
+"Remember everything Cody told us {n}about Sir Gallante! He gave us (c940}that {n}neat poster {c999}and everything!"
 char phoenix hide
 "I don't think Cody is the best person {n}to be looking to for information."
 char maya e=bench-strict
@@ -71,13 +73,13 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(I guess she's right.)"
-label redopresent
 char phoenix e=handsondesk
 "{c090}(Is there any evidence which shows {n}that Mr. Parker isn't Sir Gallante?"
 set _cr_back_button false
 present
 
 label security2
+set _cr_back_button true
 mus
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
@@ -111,7 +113,7 @@ bg defense
 fg dbench
 char phoenix e=document
 "It's not what I see, so much as it's {n}what I don't see."
-"Prosecutor, {p10}what is Sir Gallante {n}known for dressing up as when he kills {n}his victims?"
+"Prosecutor, {p10}what is Sir Gallante {n}known for dressing up as when he {n}kills his victims?"
 bg prosecution
 fg pbench
 char obadiah e=worried
@@ -167,6 +169,7 @@ char obadiah e=worried
 script scene21
 
 label none
+set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script

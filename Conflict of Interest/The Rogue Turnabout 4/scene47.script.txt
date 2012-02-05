@@ -1,0 +1,278 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"Cody, I don't know if you were aware of this..."
+"But it was proven yesterday that that the knife found at the scene wasn't the murder weapon."
+
+bg witness
+fg wbench
+char cody e=angry
+"Really? Because the cranky prosecutor there was babbling on and on about "knife this" and "knife that" earlier."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I was discussing how it WASN'T the murder weapon."
+"You know that."
+
+bg witness
+fg wbnech
+char cody e=angry
+"Yeah, I guess I already knew that maybe."
+char pheonix hide
+"How?"
+char cody e=confident
+"That picture I took!"
+
+bg codysphoto
+char cody hide
+"He has that huge sword. Why would he use a little dinky knife?"
+char maya hide
+"Nick! That's the same sword we found yesterday!"
+char judge hide
+"So the murder weapon was actually a sword?"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"Yes, Your Honor. A claymore. {n}A rather large sword."
+"We found it in a building across the street from the Tower."
+"It was covered in blood."
+
+bg judge
+char judge e=normal
+"A sword would certainly make it easier to cut somebody in half than a knife would."
+"Bailiff! Have this sword tested. See if the blood on it matches that of the victim."
+char Bailiff hide
+"Yes, sir!"
+bg black fade
+pause 60 script
+bg judge fade
+char judge e=normal
+char Bailiff hide
+"Sir, the results are back."
+"The DNA from the blood matches Michael Rivales."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Well, I suppose that matter's settled."
+"However, it changes nothing."
+mus Tricks and Gimmicks.ogg
+"I don't care what he was killed with. He died either way. That remains a fact."
+
+bg judge 
+char judge e=nodding
+pause 50 script
+char judge e=normal
+"I agree with Mr. Williamson on this point."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Unless I can poke a hole in their little theory, nothing has really changed.)"
+
+label redopresent
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Well, Wright?"
+"Do you have any objections that are actually relevant?"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"{c089}(They're saying that Mr. Parker climbed down from the roof and through the window.)"
+"{c090}(Do I have anything to disprove this?)"
+
+set _list_back_button false
+list scene47present
+li Yes
+li No
+showlist
+
+label No
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I guess there isn't really anything to disprove it.)"
+"{e normal}No, I don't."
+bg witness
+fg wbench
+char cody e=confident
+"Face it, you just can't argue with it!"
+"I know what I saw {c940}with my own eyes{c999)!"
+mus
+pause 20 script
+sfx dramapound
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Wh-what?"
+bg prosecution
+fg pbench
+char obadiah e=angry
+"What did you just say?!"
+bg witness 
+fg wbench
+char cody e=angry
+"Can't either of you two hear?"
+"I said I saw him do it!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Cody, you told me you didn't see the murder..."
+bg witness
+fg wbench
+char cody e=confident
+"I didn't... I saw him climb in the window!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Wait... This works out perfectly for me!)"
+"Thank you, Cody."
+"Your Honor! This wasn't mentioned in the witness's testimony."
+bg judge
+char judge e=normal
+"Mr. Hackins, would you mind testifying again?"
+bg witness
+fg wbench
+char cody e=confident
+"Sure thing, old man!"
+script scene48codytestimony2
+
+label Yes
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Of course I do!"
+"{c090}This shows that the killer couldn't have entered the room via the roof..."
+set _cr_back_button false
+present
+
+label crimephoto2
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"We discussed yesterday that the window can only be opened from the inside."
+sfx deskslam
+char phoenix e=deskslam
+pause 40 script
+char phoenix e=handsondesk
+"That means it was impossible for my client to enter through there!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Are you forgetting something?"
+"The defendant entered the room once before the murder."
+bg defense
+fg dbench
+char phoenix e=normal
+"{sfx idea}!"
+char phoenix e=sheepish
+"Oh... Heh... Yeah, that's right."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"He just opened the window while he was in there the first time..."
+"...making it possible to enter again from a new route."
+bg witness
+fg wbench
+char cody e=confident
+"Face it, you just can't argue with it!"
+"I know what I saw {c940}with my own eyes{c999)!"
+mus
+pause 20 script
+sfx dramapound
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Wh-what?"
+bg prosecution
+fg pbench
+char obadiah e=angry
+"What did you just say?!"
+bg witness 
+fg wbench
+char cody e=angry
+"Can't either of you two hear?"
+"I said I saw him do it!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Cody, you told me you didn't see the murder..."
+bg witness
+fg wbench
+char cody e=confident
+"I didn't... I saw him climb in the window!"
+"So it had to be open already for him!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Wait... This works out perfectly for me!)"
+"Thank you, Cody."
+"Your Honor! This wasn't mentioned in the witness's testimony."
+bg judge
+char judge e=normal
+"Mr. Hackins, would you mind testifying again?"
+bg witness
+fg wbench
+char cody e=confident
+"Sure thing, old man!"
+script scene48codytestimony2
+
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That's a rather pointless reason to dismiss anything."
+bg defense
+fg dbench
+char phoenix e=thinking
+"I think it makes perfect sense."
+bg judge
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"No. Please try again."
+sfx damage.wav
+pentaly -15
+is penalty 0 failure
+goto redopresent
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

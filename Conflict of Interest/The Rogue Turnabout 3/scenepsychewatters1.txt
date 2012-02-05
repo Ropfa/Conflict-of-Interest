@@ -31,3 +31,50 @@ pause 60 script
 mus 'Psyche Lock' 2007.ogg
 set _music_loop 'Psyche Lock' 2007 - loop.ogg
 char phoenix hide
+"Detective, I'd like to talk to you a bit more about this list we just found."
+char watters e=confused
+"Hey, I told you, man. I don't know anything about that."
+char phoenix hide
+"Your lie is as transparent as the glass on these windows."
+"I can prove that your are very familiar with the contents of this list."
+char watters e=nervous
+"R-really, man...?"
+char phoenix hide
+"Totally."
+"{c090}This evidence shows that you are very closely connected with{p20}{next}"
+char obadiah hide
+"Save it for another time, Wright."
+char watters e=shock
+char phoenix hide
+"{sfx realization}!!!"
+delete name=lock1
+delete name=chains
+bg pent2 fade
+pause 40 script
+mus Shibuya.ogg
+set _music_loop Shibuya - loop.ogg
+char obadiah e=front-serious fade
+"{sfx shout-general}What do you think you're doing on my crime scene?!"
+char phoenix hide
+"I... I was just..."
+char obadiah e=front-angry
+"{sfx shout-general}Out! {sfx shout-angry}{s10}Now!"
+char watters e=nervous
+"Hey, take it easy, boss.{n}He just wanted to--{p10}{next}"
+char obadiah e=front-angry
+"You let a defense attorney in here?! {sfx shout-angry}What were you thinking?!"
+char watters e=nervous
+"Hey, sorry, man."
+char obadiah e=front-angry
+"I don't normally cut salaries, but I might have to make an {sfx shout-general}exception for you!!"
+char watters e=nervous
+"Whoa, chill out..."
+"Uh, hey... {e sad}Sorry, Phoenix, but you'd better split."
+char obadiah e=front-angry
+"You're {sfx shout-loud}damn right he'd better!"
+char phoenix hide
+"I'm splitting! I'm splitting!"
+setflag youshallnotpass
+
+mus
+script scene33menu

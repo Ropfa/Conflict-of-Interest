@@ -58,7 +58,7 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(That's strange... Why were they so {n}confident that Sir Gallante is the killer?)"
+"{c089}(That's strange... Why were they so {n}confident that Sir Gallante is the {n}killer?)"
 char phoenix e=normal
 "{c089}(They apparently haven't even found {n}the mark yet.)"
 
@@ -123,7 +123,7 @@ char sarah e=normal
 char sarah e=ditzy
 "Now I realize why! {n}It's because he's Sir Gallante!"
 char sarah e=normal
-"A super hero has to be dramatic... {n}So he had to create a dramatic scene!"
+"A super hero has to be dramatic... {n}{p10}So he had to create a dramatic scene!"
 
 bg defense
 fg dbench
@@ -153,7 +153,7 @@ char sarah e=bored
 
 bg defense
 fg dbench
-char phoenix e=thinking(blink)
+char phoenix e=thinking
 "{c089}(Do I want her to testify some {n}more?)"
 
 set_list_back_button false
@@ -175,13 +175,13 @@ char phoenix hide
 "What?"
 char maya e=bench-strict
 "If you stop now, then the trial might {n}as well be over!"
-"We NEED her to keep talking!"
+"We {sfx realization}NEED her to keep talking!"
 char phoenix hide
 "Oh, right."
 bg defense
 fg dbench
 char phoenix e=sheepish
-"Um... I think I changed my mind. {n}I want Sarah to testify."
+"Um... {p10}I think I changed my mind. {n}{p10}I want Sarah to testify."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -202,8 +202,8 @@ char judge e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"...Let her speak. {n}Nothing's going to change."
-"...But don't say that I didn't warn {n}you."
+"...{p20}Let her speak. {n}Nothing's going to change."
+"...{p10}But don't say that I didn't warn {n}you."
 bg judge
 char judge e=normal
 "Ms. Keyes, please tell us about your {n}discovery of the body."

@@ -1,0 +1,101 @@
+present
+label top
+menu scene39
+bg blacksapartment
+
+label envelope
+set _ev envelope
+showevl
+char black e=pumped
+"{delay 1}Hey, that's it!"
+"{delay 1}That's what I wanted to give you! Quick, open it!"
+set _ev rick
+showevl
+"{delay 1}Yeeeah, that's it! That letter!"
+"{delay 1}I wanted to give it to you yesterday, but I just guess I got distracted."
+char phoenix hide
+"{c089}(Apparently his pointless little visit wasn't so pointless after all.)"
+"Where did you find this?"
+char black e=peace
+"{delay 1}In that building across the street from the Tower."
+char black e=pumped
+"{delay 1}I wanted to help, but the police wouldn't let me in there."
+"{delay 1}So I had to look for clues somewhere else."
+char phoenix hide
+"Well, it's a good thing you brought this to us. Thank you."
+delev envelope
+addev rick
+nt
+"Letter to Rick added to the court record."
+setflag rickget
+goto top
+
+label rick
+char phoenix hide
+"Who do you think wrote this?"
+char black e=normal
+"{delay 1}I dunno. Can't you just run some tests on it?"
+char phoenix hide
+"That would be easy if it was handwritten."
+"We could analyze the handwriting."
+"Unfortunately, it's typed."
+char black e=normal
+"{delay 1}Wow. Sorry 'bout that."
+goto top
+
+label gallante$
+char black e=pumped
+"{delay 1}You know what I think?"
+"{delay 1}I can't prove it... But Big Wins Kitaki quit because he was scareda that guy."
+char phoenix hide
+"Really? I seem to recall hearing a different story."
+char black e=peace
+"{delay 1}Nah. Guy just couldn't take it, so he quit."
+char phoenix hide
+"{c089}(You'd have to be pretty intimidating to scare a mob boss like that.)"
+goto top
+
+label parker$
+char phoenix hide
+"I don't think jail has been treating your friend very well."
+"He gets emotional pretty easily."
+char black e=peace
+"{delay 1}Naaah, he's always been like that."
+char phoenix hide
+"Are you sure he'll be okay?"
+char black e=peace
+"{delay 1}Heeey, don't worry, right?"
+"{delay 1}You'll have him out in a day or two."
+char phoenix hide
+"{c089}(That's an awful lot of faith you're putting in me... It's actually kind of flattering.)"
+goto top
+
+label black$
+char phoenix hide
+"Could you tell us some more about yourself?"
+char black e=peace
+"{delay 1}I grew up in the suburbs."
+"{delay 1}My mom was a brain surgeon and my dad was a rocket scientist."
+char phoenix hide
+"W-Wow, really...? Your family must've been well off."
+char black e=peace
+"{delay 1}Yeah, it was a pretty comfortable life."
+char phoenix hide
+"{c089}(And now he's jobless and bumming off his friend for rent money.)"
+goto top
+
+label rivalesupdate$
+char black e=pumped
+"{delay 1}That guy was dirty. Waaaay dirty." 
+"{delay 1}The city's better off without him."
+char phoenix hide
+"That's what everyone's saying."
+char black e=pumped
+"{delay 1}Well, they're right! You'd think so too if you'd heard some of the stuff Wayne's told me."
+goto top
+
+label none
+char black e=peace
+"{delay 1}Heeeeeey, take it easy, Mr. Wright."
+"{delay 1}Going around shoving things in people's faces is no way to make friends!"
+goto top
