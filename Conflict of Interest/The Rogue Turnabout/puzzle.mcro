@@ -95,11 +95,11 @@ getvar lLinked gLink_ $aPiece . $lPiece .linked
 is lLinked are_linked$0
 
 setvar $lVar false
-joinvar lGraphic general/part $lPiece
+joinvar lGraphic general/puzpiece_ $lPiece
 goto do_button$0
 label are_linked$0
 setvar $lVar true
-joinvar lGraphic general/part $lPiece select
+joinvar lGraphic general/puzpiece_ $lPiece select
 
 label do_button$0
 joinvar lLabel pickpiece_ $lPiece
@@ -131,17 +131,42 @@ endmacro
 
 macro move_piece
 set lPiece $gNumPieces
-label each_piece$0
-is lPiece < 1 end$0
+label each_piece_A$0
+is lPiece < 1 end_A$0
 
-is_ex lPiece == aPiece do_move$0
+is_ex lPiece == aPiece check_move_A$0
 getvar lLinked gLink_ $aPiece . $lPiece .linked
-is lLinked do_move$0
+is lLinked check_move_A$0
+goto next_piece_A$0
+
+label check_move_A$0
+getvar lX gButton_ $lPiece .x
+getvar lY gButton_ $lPiece .y
+addvar lX $1
+addvar lY $2
+is lX < 16 skip$0
+is lY < 16 skip$0
+is lX > 224 skip$0
+is lY > 160 skip$0
+
+label next_piece_A$0
+subvar lPiece 1
+goto each_piece_A$0
+label end_A$0
+
+
+set lPiece $gNumPieces
+label each_piece_B$0
+is lPiece < 1 end_B$0
+
+is_ex lPiece == aPiece do_move_B$0
+getvar lLinked gLink_ $aPiece . $lPiece .linked
+is lLinked do_move_B$0
 joinvar lVar gButton_ $lPiece .moving
 setvar $lVar false
-goto next_piece$0
+goto next_piece_B$0
 
-label do_move$0
+label do_move_B$0
 joinvar lVar gButton_ $lPiece .moving
 setvar $lVar true
 getvar lX gButton_ $lPiece .x
@@ -151,12 +176,13 @@ addvar lY $2
 
 {set_piece_loc $lX $lY }
 
-label next_piece$0
+label next_piece_B$0
 subvar lPiece 1
-goto each_piece$0
+goto each_piece_B$0
 
-label end$0
+label end_B$0
 check_piece_links
+label skip$0
 endmacro
 
 
