@@ -55,10 +55,10 @@ char phoenix hide
 char cody e=angry
 "{sfx shout-general}{s 10}Well, get on that!"
 hideevl
-char nothing
-mus Tricks and Gimmicks.ogg
-//PUZZLE FILLER
 
+script scene9puzzle stack
+
+bg entrance fade
 mus
 char maya e=surprised
 "What just happened?{n}{e mad}Why did it fall apart?!"

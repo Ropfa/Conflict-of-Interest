@@ -1,0 +1,139 @@
+char nothing
+bg background-3devidence fade
+bg main name=main y=192 stack
+mus Tricks and Gimmicks.ogg
+
+{init_puzzle 9 }
+gui Button move_left name=gButton_left x=30 y=275 graphic=general/puzarrow_left hotkey=k_left hold
+gui Button move_right name=gButton_right x=70 y=275 graphic=general/puzarrow_right hotkey=k_right hold 
+gui Button move_up name=gButton_up x=50 y=255 graphic=general/puzarrow_up hotkey=k_up hold
+gui Button move_down name=gButton_down x=50 y=295 graphic=general/puzarrow_down hotkey=k_down hold
+{add_piece 84 110 145 250 }  // 1
+{add_piece 136 43 145 275 }  // 2
+{add_piece 35 50 145 300 }   // 3
+{add_piece 94 137 170 250 }  // 4
+{add_piece 165 120 170 275 } // 5
+{add_piece 104 81 170 300 }  // 6
+{add_piece 52 34 195 250 }   // 7
+{add_piece 47 143 195 275 }  // 8
+{add_piece 171 73 195 300 }  // 9
+{link_piece 1 2 0 7 }
+{link_piece 1 3 19 2 }
+{link_piece 2 3 19 -5 }
+{link_piece 3 5 0 -3 }
+{link_piece 4 5 -6 -4 }
+{link_piece 5 6 7 19 }
+{link_piece 6 7 8 1 }
+{link_piece 5 8 25 3 }
+{link_piece 5 9 23 10 }
+{pick_piece 5 }
+
+label puzzle_loop
+
+set lSelectedCount 0
+isnot gPiece_1.selected count_piece_2
+addvar lSelectedCount 1
+
+label count_piece_2
+isnot gPiece_2.selected count_piece_3
+addvar lSelectedCount 1
+
+label count_piece_3
+isnot gPiece_3.selected count_piece_4
+addvar lSelectedCount 1
+
+label count_piece_4
+isnot gPiece_4.selected count_piece_5
+addvar lSelectedCount 1
+
+label count_piece_5
+isnot gPiece_5.selected count_piece_6
+addvar lSelectedCount 1
+
+label count_piece_6
+isnot gPiece_6.selected count_piece_7
+addvar lSelectedCount 1
+
+label count_piece_7
+isnot gPiece_7.selected count_piece_8
+addvar lSelectedCount 1
+
+label count_piece_8
+isnot gPiece_8.selected count_piece_9
+addvar lSelectedCount 1
+
+label count_piece_9
+isnot gPiece_9.selected tally_piece_count
+addvar lSelectedCount 1
+
+label tally_piece_count
+is lSelectedCount < 3 do_puzzle_loop
+goto puzzle_complete
+
+label do_puzzle_loop
+gui Wait
+
+label pickpiece_1
+{pick_piece 1}
+goto puzzle_loop
+
+label pickpiece_2
+{pick_piece 2}
+goto puzzle_loop
+
+label pickpiece_3
+{pick_piece 3}
+goto puzzle_loop
+
+label pickpiece_4
+{pick_piece 4}
+goto puzzle_loop
+
+label pickpiece_5
+{pick_piece 5}
+goto puzzle_loop
+
+label pickpiece_6
+{pick_piece 6}
+goto puzzle_loop
+
+label pickpiece_7
+{pick_piece 7}
+goto puzzle_loop
+
+label pickpiece_8
+{pick_piece 8}
+goto puzzle_loop
+
+label pickpiece_9
+{pick_piece 9}
+goto puzzle_loop
+
+label move_left
+{move_piece -1 0 }
+{pick_piece $aPiece }
+goto puzzle_loop
+
+label move_right
+{move_piece 1 0 }
+{pick_piece $aPiece }
+goto puzzle_loop
+
+label move_up
+{move_piece 0 -1 }
+{pick_piece $aPiece }
+goto puzzle_loop
+
+label move_down
+{move_piece 0 1 }
+{pick_piece $aPiece }
+goto puzzle_loop
+
+
+label puzzle_complete
+finish_puzzle
+delete name=gButton_left
+delete name=gButton_right
+delete name=gButton_up
+delete name=gButton_down
+endscript
