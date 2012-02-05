@@ -1,2 +1,4 @@
-set _order_cases variableset _case_1 The Rogue Turnabout
-set _case_2 The Rogue Turnabout 2set _case_3 Turnabout on the Webset _case_4 Turnabout Consequencesset _case_5 Turnabout into the Unknowncasemenu
+set _order_cases variable
+set _case_1 The Rogue Turnabout
+set _case_2 The Rogue Turnabout 2
+casemenu

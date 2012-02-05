@@ -151,7 +151,7 @@ char phoenix hide
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I am NOT joining in on this little fad."
+"I am NOT{s5} joining in on this little fad."
 goto start
 
 
@@ -402,7 +402,7 @@ char phoenix e=thinking
 "Could you tell us more about..."
 
 set _list_back_button false
-list statmentC
+list statementC
 li The knife's owner
 li The knife's design
 li The knife's victim
@@ -420,9 +420,16 @@ fg dbench
 char phoenix e=thinking
 "...Oh."
 "{c089}(Actually, I think Watters mentioned {n}that yesterday.)"
-bg judge
-char judge e=normal
-"This sounds very important. {n}{p20}Please update your testimony."
+"{c089}(Hmm...)"
+set _list_back_button false
+list statementC1
+li Add to the testimony
+li Forget it
+showlist
+
+label Add to the testimony
+char phoenix e=normal
+"This sounds very important. {n}{p20}Please add it to your testimony."
 bg witness
 fg wbench
 char sarah e=normal
@@ -430,6 +437,12 @@ char sarah e=normal
 set show_2C1 true
 set show_2C2 false
 set show_2C3 false
+resume
+
+label Forget it
+char phoenix e=thinking
+"{c089}(I don't think this is important.)"
+"{c089}(Maybe there's something else I {n}should ask about instead.)"
 resume
 
 label The knife's design
@@ -461,9 +474,19 @@ bg witness
 fg wbench
 char sarah e=normal
 "It had a rather pretty blade. Such a {n}shame it was used the way that it {n}was."
-bg judge
-char judge e=normal
-"This sounds important.{n}{p20}Please update your testimony."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Hmm...)"
+set _list_back_button false
+list statementC2
+li Add to the testimony
+li Forget it
+showlist
+
+label Add to the testimony
+char phoenix e=normal
+"This sounds very important. {n}{p20}Please add it to your testimony."
 bg witness
 fg wbench
 char sarah e=normal
@@ -471,6 +494,12 @@ char sarah e=normal
 set show_2C1 false
 set show_2C2 true
 set show_2C3 false
+resume
+
+label Forget it
+char phoenix e=thinking
+"{c089}(I don't think this is important.)"
+"{c089}(Maybe there's something else I {n}should ask about instead.)"
 resume
 
 label The knife's victim
@@ -489,9 +518,19 @@ fg wbench
 char sarah e=normal
 "His whole body was pretty much {n}slashed apart."
 "All his insides were spilling out onto {n}the floor."
-bg judge
-char judge e=normal
-"This sounds very important.{n}{p20}Please update your testimony."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Hmm...)"
+set _list_back_button false
+list statementC3
+li Add to the testimony
+li Forget it
+showlist
+
+label Add to the testimony
+char phoenix e=normal
+"This sounds very important. {n}{p20}Please add it to your testimony."
 bg witness
 fg wbench
 char sarah e=normal
@@ -499,6 +538,12 @@ char sarah e=normal
 set show_2C1 false
 set show_2C2 false
 set show_2C3 true
+resume
+
+label Forget it
+char phoenix e=thinking
+"{c089}(I don't think this is important.)"
+"{c089}(Maybe there's something else I {n}should ask about instead.)"
 resume
 
 label press sarah2C1
