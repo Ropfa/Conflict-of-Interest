@@ -1,3 +1,5 @@
+//PRESENT SECURITY SYSTEM
+
 fg ani-judge-gavel
 pause 5 script
 bg judge
@@ -61,7 +63,7 @@ char maya e=bench-strict
 char phoenix hide
 "I know! {n}I'm thinking! {n}I'm thinking!"
 char maya e=bench-strict
-"Remember everything Cody told us {n}about Sir Gallante! He gave us (c940}that {n}neat poster {c999}and everything!"
+"Remember everything Cody told us {n}about Sir Gallante! He gave us {c940}that {n}neat poster {c999}and everything!"
 char phoenix hide
 "I don't think Cody is the best person {n}to be looking to for information."
 char maya e=bench-strict
@@ -74,9 +76,11 @@ fg dbench
 char phoenix e=handsondesk
 "{c089}(I guess she's right.)"
 char phoenix e=handsondesk
-"{c090}(Is there any evidence which shows {n}that Mr. Parker isn't Sir Gallante?"
+"{c090}(Is there any evidence which shows {n}that Mr. Parker isn't Sir Gallante?)"
 set _cr_back_button false
 present
+
+//PRESENT SECURITY SYSTEM
 
 label security2
 set _cr_back_button true

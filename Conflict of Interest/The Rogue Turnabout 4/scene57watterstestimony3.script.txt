@@ -1,0 +1,1009 @@
+set _list_back_button false
+set wrongevidence 1
+
+char watters e=angry
+fg TestimonyAnim fade name=tanim
+nt
+delete name=tanim
+"{n}{center}{c940}-- The Real Sir Gallante --"
+
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
+bg witness
+fg wbench
+
+char watters e=angry
+"{tbon}Hey, man! I'm just a detective, alright?"
+"{tbon}There were lotsa people who knew about Sir Gallante."
+"{tbon}By your logic, it could've been any one of them!"
+char watters e=thinking
+"{tbon}Besides, we've been doing just fine on the investigation."
+"{tbon}Before Parker came along, we had tons of potential suspects..."
+char watters e=smirk
+"{tbon}...and I definitely wasn't one of them!"
+
+mus
+bg black
+pause 30
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That's all?"
+"I was expecting the great "Terror of the Underworld" to go out with better than that!"
+bg witness
+fg wbench
+char watters e=angry
+"H-Hey, man! No way you're gonna take me down like this! It won't end like this for me!"
+"Not here!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"There's no mask for you to hide behind now."
+"This time, I show everybody here the true monster that you are."
+bg witness
+fg wbench
+char watters e=angry
+"You {sfx shout-general}shut your face!"
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Will you two stop bickering and end this?!"
+bg witness
+fg wbench
+char watters e=nervous
+"R-Right. Sorry, sir."
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Watters...{n}{p20}Please don't disappoint me."
+bg witness
+fg wbench
+char watters e=nervous
+"..."
+bg aide
+char maya e=bench-profile
+char phoenix hide
+"This is it, Maya.{n}Everything ends here."
+char maya e=bench-profile
+"..."
+char phoenix hide
+"{c089}(Maya...?)"
+
+bg witness
+fg wbench
+char watters e=angry
+bg main name=main y=192 stack
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
+delete name=main
+nt
+"{n}{center}{c940}-- The Real Sir Gallante --"
+set show_watters3A true
+set show_watters3A1 false
+set show_watters3B true
+set show_watters3B1 false
+label start
+cross watterstestimony3
+noflag 3A1 AND 3B1 AND 3E scene57
+flag 3A1 AND 3B1 AND 3E scene58
+
+label scene58
+script scene58
+
+label scene57
+statement watters3A test=show_watters3A
+bg witness
+fg wbench
+char watters e=angry
+"Hey, man! I'm just a detective, alright?"
+
+statement watters3A1 test=show_watters3A1
+bg witness
+fg wbench
+char watters e=angry
+"Yeah, I was the lead detective. So what?"
+
+statement watters3B test=show_watters3B
+bg witness
+fg wbench
+char watters e=angry
+"There were lotsa people who knew about Sir Gallante."
+
+statement watters3B1 test=show_watters3B1
+bg witness
+fg wbench
+char watters e=angry
+"The task force were the only ones who knew about Sir Gallante."
+
+statement watters3C
+bg witness
+fg wbench
+char watters e=angry
+"By your logic, it could've been any one of them!"
+
+statement watters3D
+bg witness
+fg wbench
+char watters e=thinking
+"Besides, we've been doing just fine on the investigation."
+
+statement watters3E
+bg witness
+fg wbench
+char watters e=thinking
+"Before Parker came along, we had tons of potential suspects..."
+
+statement watters3F
+bg witness
+fg wbench
+char watters e=smirk
+"...and I definitely wasn't one of them!"
+endcross
+
+label comments
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(You can't escape this, Watters.)"
+"{c089}(I know you're Sir Gallante, and I'm going to make sure that you pay for your crimes.)"
+goto start
+
+label press watters3A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"What exactly was your role in the investigation?"
+bg witness
+fg wbench
+char watters e=angry
+"I was the lead guy on it."
+bg prosecution
+fg pbench
+char obadiah e=worried
+"The lead detective, to be more precise."
+bg defense
+fg dbench
+char phoenix e=thinking
+"The lead detective, huh?"
+"How much authority would that give him at the crime scene?"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"When I wasn't around? {n}{p30}Pretty much all of it."
+bg defense
+fg dbench
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"So you weren't "just" a detective. {e pointing}You were {c940}the lead detective{c999}."
+bg witness
+fg wbench
+char watters e=angry
+"Yeah, whatever. That doesn't make any difference."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"It's very important!" 
+"As the lead detective, you would have had more than enough opportunity to cover up for your crimes!"
+bg judge
+char judge e=normal
+"Detective, please amend your testimony."
+bg witness
+fg wbench
+char watters e=angry
+"Whatever."
+set show_watters3A false
+set show_watters3A1 true
+setflag 3A1
+resume
+
+label press watters3A1
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"You were in a rather convenient position."
+bg witness
+fg wbench
+char watters e=confused
+"Yeah? You think so?"
+bg defense
+fg dbench
+char phoenix e=normal
+"As the lead detective, you'd have access to all the evidence and information regarding the case."
+"You could manipulate it to your advantage."
+"You also had the authority to pull it off."
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Do you have anything to prove that something like that took place?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"W-Well, no..."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Then go back and try again."
+bg witness
+fg wbench
+char watters e=smirk
+"You heard him!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(This alone won't be enough to bring him down.)"
+"{c089}(But at least it's a step in the right direction.)"
+resume
+
+label press watters3B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"How many is "lots"?"
+bg witness
+fg wbench
+char watters e=confused
+"Everybody working on the case with me. {c940}The entire task force, pretty much{c999}."
+bg defense
+fg dbench
+char phoenix e=thinking
+"All those people had access to the information?"
+bg witness
+fg wbench
+char watters e=confused
+"Yeah, all of them."
+bg defense
+fg dbench
+char phoenix e=normal
+"The way Sir Gallante has been changing his modus operandi..."
+"...one would assume that he also has access to police information."
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah, but like I said, I'm not the only one that was true about."
+bg judge
+char judge e=normal
+"Detective, would you mind updating your testimony with this information?"
+bg witness
+fg wbench
+char watters e=confused
+"Sure thing, Your Honor."
+set show_watters3B false
+set show_watters3B1 true
+resume
+
+label press watters3B1
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"How many people were working on the investigation with you?"
+bg witness
+fg wbench
+char watters e=thinking
+"There was a small core group of about ten people."
+"We'd have others come in to help if we needed it."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Only ten people working on a case this big?"
+bg witness
+fg wbench
+char watters e=angry
+"The city hasn't been giving us the resources we need."
+"Plus, most people weren't willing to take the job."
+bg defense
+fg dbench
+char phoenix e=normal
+"Why not?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Fear can be a powerful thing."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That makes sense. I wouldn't want a large armored man to be mad at me either.)"
+char phoenix e=normal
+"Did anybody outside the task force have access to the case details?"
+bg witness
+fg wbench
+char watters e=angry
+"You either needed to be on the police force or have permission from somebody on it."
+"Other than that, {p10}no."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Nobody? Nobody at all?"
+bg witness
+fg wbench
+char watters e=angry
+"Hey, you heard me! {n}I said nobody!"
+bg defense
+fg dbench
+char phoenix e=normal
+"So the entire police department had the potential to know about the case."
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah, and you know what else...?"
+resume
+
+label press watters3C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Excuse me?"
+bg witness
+fg wbench
+char watters e=smirk
+"That's right! That's the kind of crazy logic you're trying to use on me!"
+"You're the guy who said that just cuz I knew about Sir Gallante, I'm him!"
+"Well, a whole bunch of people knew, so you can forget that!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"There's a difference between knowing confidential information and knowing who the killer was before it was proven."
+bg witness
+fg wbench
+char watters e=angry
+"I've been chasing this guy for years. I can recognize his work..."
+"...whether or not that stupid mark has been found."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That's you explanation for knowing who the killer was?"
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah, I got mad detective skills, man. I'm like a real life Sherlock Holmes."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"It doesn't take a genius to see the similarities in murders involving four-foot long swords."
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah, that's ri-{e shock}{sfx shout-general}HEY!!!"
+bg defense
+fg dbench
+char phoenix e=normal
+"All the murders were done with a sword?"
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Or at least a large bladed weapon."
+bg defense
+fg dbench
+char phoenix e=thinking
+"If that's the case, wouldn't that place more suspicion on Watters?"
+"The murder weapon here was originally thought be a knife."
+"Something like that would point away from it be Sir Gallante."
+bg judge
+char judge e=surprised
+"That's right! {e warning}Detective, what do you have to say about this?!"
+bg witness
+fg wbench
+char watters e=nervous
+"Well, {p10}I... {p20}Uh... {p20}The witness... {p20}Ms. Keyes... {p20}Crime scene... {p20}Found the knife..."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Mad detective sills, indeed.)"
+resume
+
+label press watters3D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That doesn't sound right."
+"You've been searching for three years and still haven't found him."
+bg witness
+fg wbench
+char watters e=thinking
+"We were getting kinda close though! {p30}Kinda."
+bg defense
+fg dbench
+char phoenix e=confident
+"Three years and "kinda" is the best you can do? I wonder why that is?"
+bg witness
+fg wbench
+char watters e=thinking
+"W-Well, I, uh..."
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Because he's incompetent."
+bg witness
+fg wbench
+char watters e=angry
+"Wh-What?! No way!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"It's better than the alternative, where Wright accuses you of sabotaging the investigation from within."
+bg witness
+fg wbench
+char watters e=angry
+"...{n}{p20}*mumble*"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What was that?"
+bg witness
+fg wbench
+char watters e=angry
+"I SAID I'M INCOMPETENT, OKAY?!"
+bg judge
+char judge e=normal
+"Well, now that we have it on record that Detective Watters is incompetent, I think we can continue."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Did that really just happen?)"
+resume
+
+label press watters3E
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"How many suspects were there?"
+bg witness
+fg wbench
+char watters e=confused
+"I dunno, man. A lot?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Care to name a few of them?"
+bg witness
+fg wbench
+char watters e=angry
+"I can't do that! That's confidential!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c090}(Implying that he's never told me confidential stuff before.)"
+"Aren't you just a bit disturbed that after three years..."
+"...your list of suspects has only been narrowed down to "a lot"?"
+bg witness
+fg wbench
+char watters e=nervous
+"Well, I guess that does sound kinda bad..."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Of course it sounds bad! After three years, you'd expect results!"
+char phoenix e=pointing
+"A lot of potential suspects isn't results!"
+bg witness
+fg wbench
+char watters e=angry
+"{sfx shout-general}That's not the point!"
+"The point is that there were already some suspicious people..."
+resume
+
+label press watters3F
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"I suppose you're right that you weren't originally a suspect."
+char phoenix e=normal
+"But you are now."
+bg witness
+fg wbench
+char watters e=angry
+"{sfx idea}!!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Whether or not you want to admit it, you are currently a suspect."
+"That's why you are here right now, testifying."
+bg witness
+fg wbench
+char watters e=angry
+"Hey, man. You're being totally uncool right now."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You know what else is uncool? {n}Murder."
+goto comments
+
+//PRESENT POSTER
+
+label poster watters3B1
+mus
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+"Watters, why would you lie about something so obvious?"
+bg witness
+fg wbench
+char watters e=angry
+"I don't know what you're talking about."
+bg defense
+fg dbench
+char phoenix e=document
+"Well, then you clearly haven't been paying attention."
+set _ev poster
+showevr
+sfx showevidence
+"The task force were far from being the only ones to know about Sir Gallante."
+"The fact this poster exists is proof enough of that."
+bg judge
+char judge e=surprised
+"What is this?"
+bg defense
+fg dbench
+char phoenix e=document
+"It's a poster. It was made by the witness, Cody Hackins."
+"As we all know, he is not a police officer. So how did he know about Sir Gallante?"
+hideevr
+char phoenix e=pointing
+"Because his existence had been leaked to the public. {p25}{sfx shout-objection}By you, Watters!!"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Don't go accusing him of that! There's nothing to suggest that--{p15}{next}"
+bg witness
+fg wbench
+char watters e=angry
+"Hey, I thought I told you to keep that a secret! You told me that you would..."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{delay 1}........."
+bg witness
+fg wbench
+char watters e=nervous
+"...Oh crap."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{delay 1}That was you?"
+bg witness
+fg wbench
+char watters e=nervous
+"It might've been..."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Watters, innocent or guilty... Things are not looking good for your future right now."
+bg witness
+fg wbench
+char watters e=angry
+"*glare*"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Don't give me that look!)"
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
+setflag 3B1
+goto start
+
+//PRESENT GALLANTE FILES
+
+label gallantefiles watters3E
+mus
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You're lying again."
+bg witness
+fg wbench
+char watters e=angry
+"No, I'm not!"
+bg defense
+fg dbench
+char phoenix e=document
+"It's all in here."
+set _ev gallantefiles
+showevr
+bg judge
+char judge e=surprised
+"That's a lot of paper!"
+hideevr
+bg defense
+fg dbench
+char phoenix e=document
+"Here, Your Honor. Let me make it easier for you."
+
+label redopage
+"{c090}The part I'm interested in is on this page..."
+set _list_back_button false
+
+label scene57gallantefiles1
+list scene57gallantefiles
+li Page One
+li Page Two
+li Page Three
+li Later
+showlist
+
+label Page One
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+"It's on here."
+bg judge
+char judge e=surprised
+"Where? I don't see it."
+bg defense
+fg dbench
+char phoenix e=document
+"Right here on... this... page..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wrong one?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"Yeah."
+bg judge
+char judge e=warning
+"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+sfx damage
+penalty -20
+is penalty 0 failure
+"Now show me the right page!"
+goto redopage
+
+//SHOW PAGE TWO
+
+label Page Two
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+"It says right here that you have no suspects in the case."
+bg judge
+char judge e=surprised
+"No suspects? {e warning}Detective Watters, you lied to us!"
+bg witness
+fg wbench
+char watters e=nervous
+"..."
+bg judge
+char judge e=warning
+"Why would you do that?"
+bg defense
+fg dbench
+char phoenix e=confident
+"People do strange things when they're nervous, don't the, Watters?"
+"You had to somehow avoid the fact that you are currently the ONLY person suspected to be Sir Gallante!"
+bg witness
+fg wbench
+char watters e=shock
+"{sfx shout-shock}G-GAH!!!"
+bg defense
+fg dbench
+char phoenix e=confident
+"Thankfully, all you've managed to do is make yourself look even more suspicious."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That was a rather pointless lie to make, Watters."
+bg witness
+fg wbench
+char watters e=nervous
+"Huh?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If you'd wanted to keep that little bit confidential, you could've just said so."
+bg witness
+fg wbench
+char watters e=nervous
+"H-{p5}Huh?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That's what you were doing, right? Trying to keep top secret information from getting out?"
+bg witness
+fg wbench
+char watters e=nervous
+"Y-y-yeah! That's it!!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(I almost had him!)"
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
+setflag 3E
+goto start
+
+label Page Three
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+"It's on here."
+bg judge
+char judge e=surprised
+"Where? I don't see it."
+bg defense
+fg dbench
+char phoenix e=document
+"Right here on... this... page..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wrong one?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"Yeah."
+bg judge
+char judge e=warning
+"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+sfx damage
+penalty -20
+is penalty 0 failure
+"Now show me the right page!"
+goto redopage
+
+label Later
+list scene57gallantefiles2
+li Earlier
+li Page Four
+li Page Five
+showlist
+
+label Earlier
+goto scene57gallantefiles1
+
+label Page Four
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+"It's on here."
+bg judge
+char judge e=surprised
+"Where? I don't see it."
+bg defense
+fg dbench
+char phoenix e=document
+"Right here on... this... page..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wrong one?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"Yeah."
+bg judge
+char judge e=warning
+"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+sfx damage
+penalty -20
+is penalty 0 failure
+"Now show me the right page!"
+goto redopage
+
+label Page Five
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+"It's on here."
+bg judge
+char judge e=surprised
+"Where? I don't see it."
+bg defense
+fg dbench
+char phoenix e=document
+"Right here on... this... page..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wrong one?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"Yeah."
+bg judge
+char judge e=warning
+"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+sfx damage
+penalty -20
+is penalty 0 failure
+"Now show me the right page!"
+goto redopage
+
+label none
+set _cr_back_button true
+is wrongevidence 1 wrongevidence1
+is wrongevidence 2 wrongevidence2
+is wrongevidence 3 wrongevidence3
+
+label wrongevidence1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves that the {n}witness is lying!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Actually, no... {p15}{n}However, it does prove that you're {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Excuse me...?"
+bg judge
+char judge e=normal
+"I think what he's trying to say is that {n}a penalty is in order here."
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That didn't quite go as planned...)"
+pause 20 script
+set wrongevidence 2
+clear
+goto start
+
+label wrongevidence2
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+set wrongevidence 3
+clear 
+goto start
+
+label wrongevidence3
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Your Honor!{n}{p20}That statement contradicts the {n}evidence!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, it does...{p20}{n}{e pointing}And I can prove it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}You can't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I...{n}{p20}{e sweating}No, {p20}I can't."
+bg judge
+char judge e=normal
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
+"Then I wouldn't have to give you {n}penalties."
+char judge e=warning
+"{sfx shout-general}Like this one!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+pause 20 script
+set wrongevidence 1
+clear 
+goto start
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

@@ -60,9 +60,9 @@ bg detentionnew
 fg detention name=1
 char parker e=crying
 grey value=1
-pause 60
+pause 60 script
 char parker e=freakout
-pause 60
+pause 60 script
 "{e crash}{s10}{sfx thud-body}"
 pause 60
 "{f}{next}"

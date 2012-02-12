@@ -49,7 +49,7 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "I think it does."
-"You wanted a way somebody could {n}sneak in... {e objecting}and I gave it to you!"
+"You wanted a way somebody could {n}sneak in... {e objecting}{sfx shout-objection}and I gave it to you!"
 
 bg prosecution
 fg pbench

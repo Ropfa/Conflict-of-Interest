@@ -2,7 +2,7 @@ label top
 bg reception
 
 examine
-region 187 85 8 10 picture
+region 184 84 10 13 picture
 region 177 96 75 33 desk
 region 110 59 63 43 security
 menu scene33

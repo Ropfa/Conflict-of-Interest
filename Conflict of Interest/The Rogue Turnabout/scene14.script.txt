@@ -3,7 +3,9 @@ noflag bloodtried AND desktried AND paintingtried AND nonetried AND citytried lu
 flag bloodtried AND desktried AND paintingtried AND nonetried AND citytried scene15
 label luminolmode
 bg pentluminol
+
 //70%
+//examine all marked areas to proceed
 
 examine
 region 0 57 23 106 painting

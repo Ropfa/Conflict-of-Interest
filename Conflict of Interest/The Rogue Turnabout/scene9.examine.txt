@@ -9,7 +9,7 @@ menu scene9
 
 label skyscraper
 char maya e=thinking
-"Why do they call them {n}"skyscrapers"? They don't "scrape" the sky... They just sort of poke up there."
+"Why do they call them {n}"skyscrapers"? They don't "scrape" {n}the sky... They just sort of poke up there."
 char phoenix hide
 "Maybe you should call up the writers {n}of the dictionary and give them a {n}piece of your mind."
 char maya e=pumped

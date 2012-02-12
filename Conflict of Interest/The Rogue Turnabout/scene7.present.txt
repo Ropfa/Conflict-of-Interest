@@ -51,10 +51,11 @@ hideevl
 goto top
 
 label blackmail
+char watters e=serious
 set _ev blackmail
 showevl
 char phoenix hide
-"It's clear from this letter that {n}somebody was blackmailing the victim."
+"It's clear from this letter that {n}somebody was blackmailing the {n}victim."
 "Unfortunately for him, he never made {n}it to his meeting."
 char watters e=thinking
 "What do you think he was being {n}blackmailed over?"
@@ -93,6 +94,7 @@ goto top
 label rivales$
 set _ev rivales$
 showevl
+char watters e=serious
 char phoenix hide
 "What do you know about the victim?"
 char watters e=confident

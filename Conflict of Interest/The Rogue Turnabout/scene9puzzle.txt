@@ -136,4 +136,9 @@ delete name=gButton_left
 delete name=gButton_right
 delete name=gButton_up
 delete name=gButton_down
+mus
+bg black
+pause 60
+sfx platecatch2
+pause 40
 endscript

@@ -60,7 +60,7 @@ set crimephoto2_check check_crimephoto
 
 set blueprints_name Building Floorplans
 set blueprints_pic floorplans
-set blueprints_desc
+set blueprints_desc The blueprints for the top story of the RIvales Tower.
 set blueprints_check check_blueprints//PROFILESset maya$_name Maya Feyset maya$_pic mayaset maya$_desc Age: 27{n}Gender: Female{n}The Master of the Kurain Channeling Technique. She's always been there to help when I needed her.
 
 set gumshoe$_name Dick Gumshoe

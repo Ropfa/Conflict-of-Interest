@@ -2,7 +2,8 @@ set _cr_button true
 
 bg black
 
-nt "{center}{type}{c090}July 21, 9:22 AM{n}District Court{n}Defendant Lobby No. 3"
+nt 
+"{center}{type}{c090}July 21, 9:22 AM{n}District Court{n}Courtroom No. 3"
 bg courtcody fade
 sfx courtmurmur
 pause 100

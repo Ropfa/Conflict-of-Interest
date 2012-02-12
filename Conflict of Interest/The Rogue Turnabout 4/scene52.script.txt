@@ -1,0 +1,156 @@
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=deskslam
+sfx deskslam
+pause 50 script
+char phoenix e=handsondesk
+"You DID show up at the Tower, Watters!"
+set _ev gun
+showevr
+"This gun proves it! Your fingerprints are all over it!"
+bg witness
+fg wbench
+char watters e=smirk
+"HAHAHA!! {n}{p20}You hear that? {n}{p20}My fingerprints are on it!"
+bg judge
+char judge e=warning
+"What is so funny, Mr. Watters?"
+bg witness
+fg wbench
+char watters e=smirk
+"That gun belongs to me. Of course my fingerprints are on it!"
+"And you know what else? It wasn't even at the crime scene!"
+"For all you know, it might've just gotten run over by a car or something!"
+bg defense
+fg dbench
+char phoenix e=headshake
+pause 50 script
+char phoenix e=confident
+"Your fingerprints aren't the only ones on it."
+"The victim's are too."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Th-The victim's?!"
+bg defense
+fg dbench
+char phoenix e=confident
+"That's right!"
+"Tell me, Detective, just how many times have you been in a situation..."
+"...where Michael Rivales... leader of the city's underworld..."
+"...has had a chance to hold your gun?"
+sfx courtmurmur
+bg witness
+fg wbench
+char watters e=nervous
+"......"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"There's only one way that could have happened... And that's if you met with him."
+"Admit it, Watters, {e objecting}you met with Rivales!"
+"{e pointing}I'm not sure how or why it happened, but at some point, he touched that pistol!"
+bg courtwatters
+sfx courtmurmur
+pause 100 script
+bg witness
+fg wbench
+char watters e=angry
+"...{n}...{n}...{p30}{next}"
+"Fine... I went there.{n}I was in the penthouse."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wh-wh...{e damage}{sfx shout-loud}WHAT?!"
+char obadiah e=angry
+"W-Watters?!"
+bg witness
+fg wbench
+char watters e=angry
+"Hey, I never said it was the day he died."
+"I was there the night before.{n}{p20}Maybe I just forgot my gun there."
+
+mus Tricks and Gimmicks.ogg
+
+bg aide
+char maya e=bench-hum
+"Nick, didn't you say that the fingerprints were from the past few days?"
+char phoenix hide
+"Y-Yes, {p20}I did."
+char maya e=bench-ugh
+"So that means there's no real way to prove that he was there when the murder happened!"
+char phoenix hide
+"No, there still is.{n}We'll just have to use something else."
+"{c089}(I think this gun's usefulness has worn off.)"
+bg defense
+fg dbench
+char phoenix e=normal
+"The defense can still prove that Watters was there at the time of the murder."
+label redo
+"{c090}This piece of evidence will reveal everything..."
+set _cr_back_button false
+present
+
+label rick
+set _cr_back_button true
+script scene53
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg prosecution
+fg pbench
+"What does this prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

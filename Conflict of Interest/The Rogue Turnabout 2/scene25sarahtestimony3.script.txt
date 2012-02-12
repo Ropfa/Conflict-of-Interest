@@ -67,7 +67,8 @@ fg Cross-ExaminationAnim stack fade
 pause 20
 delete name=phoenixvs
 delete name=willvs
-delete name=mainnt
+delete name=main
+nt
 "{n}{center}{c940}-- The Blackout --"
 mus Confrontation - Presto.ogg
 set _music_loop Confrontation - Presto - loop.ogg

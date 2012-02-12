@@ -75,6 +75,7 @@ setflag crimescenetalk
 goto top
 
 label Gumshoe
+char watters e=serious
 char phoenix hide
 "Do you know Detective Gumshoe by {n}any chance?"
 char watters e=serious
@@ -107,6 +108,7 @@ char phoenix hide
 goto top
 
 label Witness
+char watters e=serious
 char phoenix hide
 "You mentioned that there was a {n}witness?"
 char watters e=smile

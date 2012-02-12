@@ -112,7 +112,7 @@ char phoenix hide
 char sarah e=bored
 "*sigh*{n}{p10}...{n}{p20}No."
 char phoenix hide
-"{c089}(This woman's emotions are all over {n}the place!"
+"{c089}(This woman's emotions are all over {n}the place!)"
 setflag sarahkeyestalk
 goto top
 
@@ -131,6 +131,7 @@ char sarah e=bored
 ""Nice"...?{n}{p20}Are we talking about the same {n}person?"
 char maya e=pumped
 "Mr. Parker's nothing but a big teddy {n}bear! He wouldn't hurt a fly!"
+mus
 pause 60 script
 char sarah e=bored
 "......{p80}{n}{e ditzy}{sfx shout-general}Haha{sfx shout-general}haha!!"

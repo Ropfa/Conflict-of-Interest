@@ -65,6 +65,7 @@ char watters e=confident
 goto top
 
 label Witness
+char watters e=serious
 char phoenix hide
 "You mentioned that there was a {n}witness?"
 char watters e=smile
@@ -105,6 +106,7 @@ char phoenix hide
 goto top
 
 label Sir Gallante
+char watters e=serious
 char phoenix hide
 "Why are the police trying to keep Sir {n}Gallante's involvement here a {n}secret?"
 char watters e=serious

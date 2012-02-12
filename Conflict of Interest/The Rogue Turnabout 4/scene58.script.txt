@@ -1,0 +1,210 @@
+mus
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Let's take a look at everything we've covered..."
+mus Pursuit - Lying Coldly.ogg
+set _music_loop Pursuit - Lying Coldly - loop.ogg
+char phoenix e=handsondesk
+"First of all, Watters had access to all the information and evidence from the investigation."
+"He was in a better position than anyone else to manipulate things in his favor."
+
+bg witness
+fg wbench
+char watters e=angry
+"H-Hey, that's not cool!"
+"You can't accuse me just cuz I'm a detective!"
+
+bg defense
+fg dbench
+char phoenix e=headshake
+pause 50 script
+char phoenix e=confident
+"But wait, there's more!"
+"If "Sir Gallante" ever showed signs of knowing the police were onto him..."
+"...it would become clear that he had access to police information."
+"So you arranged for everything to go public."
+
+bg witness
+fg wbench
+char watters e=nervous
+"Th-{p4}That was an accident!"
+
+bg defense
+fg dbench
+char phoenix e=pointing
+"{sfx shout-objection}It was no accident, and you know it!"
+"With all the case details as public knowledge, the list of possible suspects exploded!"
+"Sir Gallante could now be literally anyone in the city!"
+"Not to mention all the confusion caused by people imitating their super hero idol."
+
+bg judge
+char judge e=surprised
+"So he did it to draw attention away from himself?"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Exactly! By leaking the case details, he destroyed the police's chances of ever finding the real killer."
+
+bg witness
+fg wbench
+char watters e=angry
+"Seriously, man?{n}Just why would I do any of that?"
+""Slay the evil"...?{n}That's not my thing."
+"I'm not some lunatic with a god complex!" 
+"There's no reason for me to go around killing mobsters in the middle of the night!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Sorry, Watters, but you aren't getting off that easily."
+"I've got proof that you had {c940}a very solid motive for becoming Sir Gallante{c999}!"
+
+bg witness
+fg wbench
+char watters e=nervous
+"......"
+
+label redo
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Alright, it's time to put the final nail in this guy's coffin!)"
+"{c090}(Detective Watters's motive was...)"
+set _cr_back_button false
+present
+
+label hitlist
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=confident
+"Remember what we talked about yesterday, Watters?"
+"You have a history with the Rivales Family."
+bg judge
+char judge e=surprised
+"He what?!"
+bg defense
+fg dbench name=1
+char phoenix e=document
+set _ev hitlist
+showevr
+"Nine years ago, your wife, Sandra, was murdered by an assassin hired by Michael Rivales."
+"You weren't able to live with yourself after that. You needed some way to continue her legacy."
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"Knowing that she had risked and lost everything fighting the mob, you chose to avenge her..."
+bg speedzoom stack name=zoom
+delete name=1
+sfx shout-objection
+char phoenix e=zoom
+"{f}...by brin{f}ging down the entire {f}Rivales {f}Family {f}single{f}handedly{f}!!!"
+delete name=zoom
+
+bg witness
+fg wbench
+char watters e=nervous
+"No!! {e shock}{e shout-shock}WAAAIT!!!"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Np waiting! You three-year reign of terror ends here, Gallante!"
+"I'm not going to sit and wait while you corrupt everything that our justice system stands for!"
+"Your victims may have been criminals, but they were still people."
+char phoenix e=pointing
+"{sfx shout-objection}Taking their lives makes you no better than them!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Watters... You didn't... You wouldn't..."
+
+bg witness
+fg wbench
+char watters e=breakdown1
+"{sfx shout-general}No! I... STOP!!!"
+
+bg defense
+fg dbench
+char phoenix e=pointing
+"You're no super hero!{n}You're nothing but a common killer!"
+"In fact, {p15}you're a disgrace to everything that your wife stood for!"
+"Well, Watters? What do you think about that?"
+
+mus
+
+bg witness
+fg wbench
+char watters e=breakdown1
+shake 450 nowait
+"{delay 1}You wanna... You wanna know what I think, man?{next}"
+pause 50 script
+"{delay 1}...Well, I'll... I'll tell you... I'll tell you what I think, man...{next}"
+pause 50 script
+"{delay 1}I think... that... {delay 2}this... is.........{next}"
+pause 50 script
+
+sfx deskslam
+char watters e=breakdown2
+"{s 5}No {s10}good..."
+pause 60 script
+bg black fade
+pause 60 script
+script scene59
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg witness
+fg wbench
+char watters e=nervous
+"Phew!{n}I thought you actually had something!"
+bg defense
+fg dbench
+char phoenix e=normal
+"I do... Don't I?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No."
+bg judge
+char judge e=normal
+"I think you should look things through a bit more."
+sfx damage
+penalty -20
+is penalty 0 failure
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

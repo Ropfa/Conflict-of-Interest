@@ -64,6 +64,7 @@ pause 80 script
 "It's... {p20}It's..."
 char watters hide
 "{sfx shout-general}What is it? {sfx shout-general}What is it?!"
+mus
 pause 80 script
 set _ev parkingtickets
 showevr

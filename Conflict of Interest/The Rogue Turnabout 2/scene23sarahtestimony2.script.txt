@@ -123,16 +123,13 @@ bg witness
 fg wbench
 char sarah e=normal
 "I rushed to call the police right away {n}after that!!"
-endcross
 
-isnot show_2D2 2D2
-statement sarah2D2
+statement sarah2D2 test=show_2D2
 bg witness
 fg wbench
 char sarah e=bored
 "I lost my phone and couldn't call the {n}police for a while..."
 endcross
-label 2D2
 
 
 label comments

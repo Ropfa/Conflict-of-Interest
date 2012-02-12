@@ -8,11 +8,246 @@ nt
 delete name=tanim
 "{n}{center}{c940}-- No Way, Man!, Part Two --"
 
-mus Confrontation - Moderato.ogg
-set _music_loop Confrontation - Moderato - loop.ogg
+mus Confrontation - Allegro.ogg
 bg witness
 fg wbench
 
+char watters e=angry
+"{tbon}That note was found in Rivales's office - not mine!"
+char watters e=thinking
+"{tbon}Why would I go there at 6 in the morning for a blackmail letter that had nothing to do with me?"
+char watters e=confused
+"{tbon}I'd never even seen it until you found it the other day."
+char watters e=smirk
+"{tbon}Since I didn't know, I didn't show up. It's simple!"
+
+mus
+bg black
+pause 30
+bg witness
+fg wbench
+char watters e=angry
+"There, you happy?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Not yet."
+bg witness
+fg wbench
+char watters e=angry
+"What's it gonna take to convince you I didn't go there?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You can't convince me of something that I know isn't true."
+bg judge
+char judge e=warning
+"Perhaps instead of trying to convince each other, you two should focus on convincing the rest of this court!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Needless banter before a needless testimony."
+"Your cross-examination, Wright."
+
+bg witness
+fg wbench
+char watters e=angry
+bg main name=main y=192 stack
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
+delete name=main
+nt
+"{n}{center}{c940}-- No Way, Man!, Part Two --"
+mus Confrontation - Allegro.ogg
+label start
+cross watterstestimony2
+
+statement watters2A
+bg witness
+fg wbench
+char watters e=angry
+"That note was found in Rivales's office - not mine!"
+
+statement watters2B
+bg witness
+fg wbench
+char watters e=thinking
+"Why would I go there at 6 in the morning for a blackmail letter that had nothing to do with me?"
+
+statement watters2C
+bg witness
+fg wbench
+char watters e=confused
+"I'd never even seen it until you found it the other day."
+
+statement watters2D
+bg witness
+fg wbench
+char watters e=smirk
+"Since I didn't know, I didn't show up. It's simple!"
+endcross
+
+label comments
+bg aide
+char maya e=bench-hum
+"Nick, did you really mean what you said?"
+"That you can prove {c940}he responded to the blackmail letter{c999}?"
+char phoenix hide
+"Yes. It's almost too easy."
+"He didn't do a very good job of covering his tracks."
+char maya e=bench-strict
+"Well, if you say so..."
+bg defense
+fg dbench
+char phoenix e=normal
+"{c089}(Everything is pointing to this man.)"
+"{c089}(I just need to hit him so hard he can't recover.)"
+goto start
+
+label press watters2A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+"We also found a copy of the letter. i was in an abandoned warehouse next to the Rivales Tower."
+bg witness
+fg wbench
+char watters e=angry
+"Yeah, but that doesn't mean {s5}I ever touched it!"
+bg defense
+fg dbench
+char phoenix e=normal
+"Maybe not... But it does imply that the target was somebody other than Rivales."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That could be literally anyone."
+"Your somebody doesn't have to be the detective."
+bg defense
+fg dbench
+char phoenix e=thinking
+"I guess that's true too."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Next time, try giving some solid evidence before you make an accusation."
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah!"
+resume
+
+label press watters2B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"Maybe you found it and wanted to investigate?"
+bg witness
+fg wbench
+char watters e=angry
+"Investigate what? {n}"Come to my place" isn't exactly a great description of where to meet."
+"Heck, the entire note's pretty vague."
+"The target is never identified. And it isn't even signed."
+"You have no way of proving that it was aimed at me!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Only somebody who knew about the note's contents would understand what it meant.)"
+"{c089}(Watters has to realize this.)"
+resume
+
+label press watters2C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"It's interesting, don't you think?"
+"Just how many things Maya and I had to help you find on your own crime scene."
+bg witness
+fg wbench
+char watters e=angry
+"Hey, hey, hey!{n}{p20}Don't try pulling that card!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"I wonder... Would you have ever "found" them if we hadn't been there?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If I may... {e worried}{p20}the detective has always been somewhat... {p20}lackluster in his duties."
+"This type of behavior is typical for him."
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah, that's right! {n}{p20}...{p20}{e nervous}I mean{e shock} HEY!!!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"His laziness and ineptitude shouldn't be confused for corruption."
+bg witness
+fg wbench
+char watters e=nervous
+"Hey! C'mon, Boss!"
+bg aide
+char maya e=bench-hum
+"I can't tell whether he's trying to defend him or not."
+resume
+
+label press watters2D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"Didn't show up, huh?"
+bg witness
+fg wbench
+char watters e=smirk
+"That's right!"
+"If I never read the note, I wouldn't have any reason to go to the Tower."
+"That punches a big huge hole right through your little theory, doesn't it?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Using that logic, if you did read the note, then you would've had a reason to go."
+bg witness
+fg wbench
+char watters e=thinking
+"Yeah, well, but I didn't... {e smirk}so ha!"
+bg defense
+fg dbench
+char phoenix e=normal
+"That's not a very compelling argument you're giving."
+bg witness
+fg wbench
+char watters e=smirk
+"Hey, it's real simple, man. Either I did or I didn't."
+"And you haven't proven that I did."
+bg defense
+fg dbench
+char phoenix e=normal
+"{c089}(It isn't simple. {n}These things never are.)"
+resume
+
+//PRESENT GUN AT FOURTH STATEMENT
+
+label gun watters2D
+mus
+script scene52
 
 label none
 set _cr_back_button true

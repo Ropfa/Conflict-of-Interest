@@ -41,7 +41,7 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(It's not a matter of if I want to...)"
-"{c089}({p10}...If I don't, then this trial's already {n}over!"
+"{c089}({p10}...If I don't, then this trial's already {n}over!)"
 "Mr. Williamson, I believe that {n}somebody else DID enter that room..."
 "...but managed to evade the security {n}system."
 

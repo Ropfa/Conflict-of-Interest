@@ -171,6 +171,7 @@ bg witness
 fg wbench
 char cody e=happy
 "WHAMO! Straight to the jugular with that knife!"
+endcross
 
 label comments
 bg aide
@@ -360,6 +361,7 @@ char phoenix e=thinking
 resume
 
 label sword cody1E
+mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script

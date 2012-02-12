@@ -1,5 +1,405 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"Cody, I think I know what cause your "light of justice"."
+bg witness
+fg wbench
+char cody e=confident
+"Really? Was it a thunderbolt from heaven?"
+bg defense
+fg dbench
+char phoenix e=headshake
+pause 50 script
+char phoenix e=normal
+"No... And I'm pretty sure you know what it actually was."
+
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+
+"It was the same piece of evidence that you and I have been examining together these past two days...{next}"
+set _ev gun
+showevr
+char phoenix e=objecting
+"...This gun!"
+bg prosecution
+fg pbench
+char obadiah e=damage
+"Wh-{sfx shout-general}What?!"
+bg judge
+char judge e=surprised
+"W-Wait a minute! Don't go waving that thing around in my courtroom!"
+bg defense
+fg dbench
+char phoenix e=confident
+"Don't worry, Your Honor. This gun is empty... and it won't be firing anytime soon."
+char phoenix e=thinking
+"In fact, I'd say it's a miracle we were even able to get it back in one piece."
+bg judge
+char judge e=surprised
+"I don't understand though. The victim was killed with a sword, not a gun."
+"We just established that."
+bg defense
+fg dbench
+char phoenix e=normal
+"It was fired that night. The witness even saw it. That was the flash of light that he saw!"
+"Whoever brought the gun into the penthouse clearly intended to harm somebody with it."
+bg prosecution
+char obadiah e=angry
+"Where did you find that?!"
+bg defense
+fg dbench
+char phoenix e=normal
+"It was found near the sidewalk of the Rivales Tower."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"So it wasn't actually at the crime scene?"
+bg defense
+fg dbench
+char phoenix e=confident
+"No... But it was smashed into a hundred little pieces."
+"And it has fingerprints on it that prove it was in the penthouse."
+"What better way to smash a gun that by dropping it out of a thirty-story building?"
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{delay 1}You {s5}knew about {s5}this, Mr. {s5}Hackins...?"
+bg witness
+fg wbench
+char cody e=confident
+"I might've."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Cody's testimony led us directly to this point. Did he...?)"
+"Cody, have you been intentionally putting holes into your testimony?"
+bg witness
+fg wbench
+char cody e=confident
+"I might've."
+bg prosecution
+fg pbench
+char obadiah e=damage
+"WHAT?!"
+bg witness
+fg wbench
+char cody e=confident
+"Hah! Face it, old man. No way you're winning against Mr. Wright today."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{s5}You intentionally {s5}sabotaged{s5}my{s5}case?!"
+bg witness
+fg wbench
+char cody e=angry
+"Hey, I just got in here and rattled off whatever it was you told me to say."
+char cody e=confident
+"I guess I slipped in some of my own parts too."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{delay 1}......"
+mus
+bg aide
+char maya e=bench-profile
+"Cody, I don't understand... {p20}Isn't Sir Gallante your idol?"
+"Why would you want to help us catch him?"
+bg witness
+fg wbench
+char cody e=confident
+"Hey, Sir Gallante's cool. But he's still a killer."
+"If I were to defend him in place of an innocent person, then I'd be going against his rules!"
+"{e happy}Protect the innocent!"
+bg defense
+fg dbench
+char phoenix e=normal
+"Protect the innocent..."
+bg witness
+fg wbench
+char cody e=happy
+"Yeah! That's what you're doing, right?"
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+"You could be a super hero too, pops!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I didn't know Cody thought that highly of me.)"
+bg witness
+fg wbench
+char cody e=happy
+"You're gonna take down the bad guy, right?"
+"Give him the epic finger point of justice!!"
+bg defense
+fg dbench
+char phoenix e=confident
+"That's the idea."
+bg judge
+char judge e=normal
+"Mr. Wright, it seems you have another idea of who may have killed the victim."
+bg defense
+fg dbench
+char phoenix e=confident
+"I do, Your Honor."
+"The real killer is the one who fired the gun."
+bg judge
+char judge e=normal
+"Well, perhaps you would mind telling us?"
+bg witness
+fg wbench
+char cody e=happy
+"All you from here, pops!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Alright, Phoenix. Here it comes!)"
+"{c090}I'm willing to bet that this person fired the gun..."
+label redo
+set _cr_back_button false
+set _evidence_present false
+present
+
+
 label rivaleupdate$
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+set _cr_back_button true
+bg defense
+fg dbench
+char phoenix e=confident
+"Obviously, it was Michael Rivales. His fingerprints are on the gun because he's the real killer!"
+char phoenix e=pointing
+"This wasn't a murder! It was a suicide! He shot himself!"
+sfx dramapound
+mus
+pause 50 script
+bg witness
+fg wbench
+char cody e=sad
+"..."
+pause 50 script
+bg aide
+char maya e=bench-ugh
+"..."
+pause 50 script
+bg judge
+char judge e=surprised
+"..."
+pause 50 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"What do you have to say to that, Williamson?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Nothing. I don't have to. Your stupidity speaks wonders for itself."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{sfx whoops}Urp! Hehe... I was just joking anyway."
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+"{c090}{e thinking}It was actually this person..."
+goto redo
+
+//PRESENT WATTERS' PROFILE
 
 label watters$
+mus
+sfx /phoenix/takethat.ogg
+pause 5 script
+set _cr_back_button true
+set _ev watters$
+showevl
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Pfft..."
+pause 50 script
+sfx realization
+"...Wait, are you being serious?"
+"You aren't actually... Are you?"
+bg defense
+fg dbench
+char phoenix e=nodding
+pause 50 script
+char phoenix e=normal
+"The defense would like to formally accuse Detective Mark Watters for the murder of Michael Rivales."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You are!"
+bg judge
+char judge e=normal
+"This is a very serious move you're making, Mr. Wright."
+"I trust that you have evidence to back up your claim?"
+bg defense
+fg dbench
+char phoenix e=normal
+"I do. Detective Watters's fingerprints were on the gun."
+bg judge
+char judge e=normal
+"That is certainly suspicious."
+"Bailiff! Please send for the detective. I want him to testify for us."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You'd better know what you're doing, Wright..."
+bg black fade
+pause 60 script
+bg courtwatters fade
+sfx courtmurmur
+pause 100 script
+fg ani-judge-gavel
+pause 30 script
+bg judge
+char judge e=warning
+"Order! Order!!"
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Please state your name and occupation."
+bg witness
+fg wbench
+char watters e=smile
+"Name's Mark Watters. I'm a detective."
+pause 40 script
+char watters e=confused
+"Hey, Boss... Shouldn't I be, uh, investigating the crime scene?"
+"I don't really have anything new to report yet."
+bg judge
+char judge e=normal
+"I'm afraid that will have to wait."
+bg court watters
+sfx courtmurmur
+pause 100 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+sfx courtmurmur
+"{c089}(Doesn't he realize it yet?)"
+bg witness
+fg wbench
+char watters e=nervous
+"Hey, why's everyone looking at me so weird? It's creeping me out."
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Detective Mark Watters, you have been accused of the murder of Michael Rivales."
+"Do you have anything to say for yourself?"
+bg witness
+fg wbench
+char watters e=confused
+".........{delay 1}{n}.........{e angry}{sfx shockingreveal}"
+pause 60 script
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+"What. {p30}The. {p30}Hell. {p30}Man."
+bg judge
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"Detective, I do not approve of that kind of language in my courtroom."
+bg witness
+fg wbench
+char watters e=angry
+"{sfx shout-general}Screw that! I'm being accused of killing a guy and you think I'm just gonna sit back and take it?!"
+"Do you even have any grounds for this?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wright believes that he does."
+bg witness
+fg wbench
+char watters e=angry
+"Well, screw you, Wright! I can't believe you'd backstab me like this!!"
+bg defense
+fg dbench
+char phoenix e=normal
+"You seem like a nice guy, Watters... But I can't ignore your crimes."
+bg witness
+fg wbench
+char watters e=angry
+"C'mon, man! You can't really think that I did it."
+bg defense
+fg dbench
+char phoenix e=normal
+"If I didn't, you wouldn't be here right now."
+bg witness
+fg wbench
+char watters e=smirk
+"Ha! Well, then. I'd like to see you prove anything!"
+bg defense
+fg dbench
+char phoenix e=nodding
+pause 50 script
+char phoenix e=normal
+"Challenge accepted."
+bg witness
+fg wbench
+char watters e=angry
+"Wh-what?"
+bg defense
+fg dbench
+char phoenix e=confident
+"You want me to prove it? I will."
+bg witness
+fg wbench
+char watters e=smirk
+"Ha! HA! HAHA!! We'll see, man! We'll see!"
+"I'll show you you're full of it! I'll show EVERYBODY here!!"
+script scene50watterstestimony1
 
 label none
+sfx /phoenixe/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"It was this person!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Do you normally go around accusing random people until you get it right?"
+bg judge
+char judge e=nodding
+pause 50 script
+"Yes. He does."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Ouch, Your Honor. Ouch.)"
+sfx damage.wav
+penalty -20
+is penalty 0 failure
+char phoenix e=normal
+"Actually, I was wrong. It was this person..."
+pause 20 script
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

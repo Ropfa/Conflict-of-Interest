@@ -1,6 +1,6 @@
 bg black
 nt
-"{c090}{center}{text}July 19, 5:30 PM{n}Wright Anything Agency"
+"{c090}{center}{type}July 19, 5:30 PM{n}Wright Anything Agency"
 bg wrightanything fade
 pause 60
 char maya e=normal

@@ -32,7 +32,7 @@ goto top
 label autopsy
 char phoenix hide
 "{c089}(I really don't think it would be a good {n}idea to ask her about that.)"
-"{c089}(Maya might not make it to the toilet {n}this time.)"
+"{c089}(She seems to get a bit too{n}enthusiastic...)"
 goto top
 
 label maya$
@@ -75,6 +75,7 @@ goto top
 label rivales$
 set _ev rivales$
 showevl
+char sarah e=normal
 char phoenix hide
 "What would you say your {n}relationship with the victim was {n}like?"
 char sarah e=normal
@@ -91,6 +92,7 @@ goto top
 label rivalesupdate$
 set _ev rivalesupdate$
 showevl
+char sarah e=normal
 char phoenix hide
 "Mr. Rivales wasn't a normal boss, {n}{p10}was he?"
 char sarah e=ditzy
@@ -127,13 +129,14 @@ goto top
 label gallante$
 set _ev gallante$
 showevl
+char sarah e=normal
 char phoenix hide
-"What do you think about Sir Gallante?"
+"What do you think about Sir {n}Gallante?"
 char sarah e=bored
-"I dunno. I think it's kind of weird to be running around in a costume, you know?"
+"I dunno. {p20}I think it's kind of weird to be {n}running around in a costume, you know?"
 char phoenix hide
 "Yeah, I guess it is."
-"{c089}(I was hoping to get more out of her, but I guess I'll have to settle for that.)"
+"{c089}(I was hoping to get more out of her, {n}but I guess I'll have to settle {n}for that.)"
 hideevl
 goto top
 
@@ -226,10 +229,10 @@ fg blackoutev name=blackoutev
 nt
 "{sfx evidence updated.wav}{c099}Blackout Data added to the court {n}record."
 delete name=blackoutev
-pause 20 script
-setflag securityupdate1
 mus Arle Theme.ogg
 set _music_loop Arle Theme - loop.ogg
+pause 20 script
+setflag securityupdate1
 goto securitytop
 
 label Penthouse

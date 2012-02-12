@@ -2,7 +2,7 @@ set _list_back_button false
 set wrongevidence 1
 
 mus
-char watters e=angry
+char watters e=smirk
 fg TestimonyAnim fade name=tanim
 nt
 delete name=tanim
@@ -13,6 +13,402 @@ set _music_loop Confrontation - Moderato - loop.ogg
 bg witness
 fg wbench
 
+char watters e=smirk
+"{tbon}Just because there was a blackout, doesn't mean I went there."
+char watters e=thinking
+"{tbon}I mean, that tower's over thirty stories tall, and the elevators woulda been out."
+"{tbon}No way am I gonna run up and down something like that."
+char watters e=serious
+"{tbon}Plus, I don't exactly want to get involved with the mob."
+
+mus
+bg black
+pause 30
+bg prosecution
+fg pbench
+char obadiah e=serious
+"This is a very serious accusation you're making here. I hope you can back up what you're saying."
+bg witness
+fg wbench
+char watters e=smirk
+"Ya hear that, man? Boss's got my back!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(I don't care who has your back here. You can't escape from what you've done, Watters!)"
+
+bg witness
+fg wbench
+char watters e=smirk
+bg main name=main y=192 stack
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
+delete name=main
+nt
+"{n}{center}{c940}-- No Way, Man! --"
+set show_watters1C true
+set show_watters1C1 false
+mus Confrontation - Moderato.ogg
+set _music_loop Confrontation - Moderato - loop.ogg
+label start
+cross watterstestimony1
+
+statement watters1A
+bg witness
+fg wbench
+char watters e=smirk
+"Just because there was a blackout, doesn't mean I went there."
+
+statement watters1B
+bg witness
+fg wbench
+char watters e=thinking
+"I mean, that tower's over thirty stories tall, and the elevators woulda been out."
+
+statement watters1C test=show_watters1C
+bg witness
+fg wbench
+char watters e=thinking
+"No way am I gonna run up and down something like that."
+
+statement watters1C1 test=show_watters1C1
+bg witness
+fg wbench
+char watters e=serious
+"I'd have to have a really good reason to run up and down sixty flights of stairs."
+
+statement watters1D
+bg witness
+fg wbench
+char watters e=serious
+"Plus, I don't exactly want to get involved with the mob."
+endcross
+
+label comments
+bg aide
+char maya e=bench
+"Do you see anything wrong with his testimony, Nick?"
+char phoenix hide
+"He's claiming that he didn't have any reason to go there, which I know is wrong."
+"I think I've finally found out what {c940}a certain piece of evidence{c999} means."
+char maya e=bench
+"Well, then show it! You know what to do!"
+goto start
+
+label press watters1A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"If you weren't there, then where were you?"
+bg witness
+fg wbench
+char watters e=angry
+"Hey, that doesn't matter!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"I think it does. If you can't prove where you were, then you don't have an alibi."
+bg witness
+fg wbench
+char watters e=angry
+"I... Well, I was at home, okay? You know, like any normal person would be?"
+bg defense
+fg dbench
+char phoenix e=deskslam
+sfx deskslam
+pause 50 script
+char phoenix e=handsondesk
+""I was at home" isn't an alibi!"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I want proof. {p25}Proof that he was there when the murder took place."
+"Until you give me that, it doesn't matter where he says he was or wasn't."
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah! That's right!"
+resume
+
+label press watters1B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"Why do you say that?"
+bg witness
+fg wbench
+char watters e=angry
+"No power, no elevators, right?"
+"Duh. You're the one who brought that up."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Right..."
+bg witness
+fg wbench
+char watters e=serious
+"The only other way would be the stairs."
+"Even I'm not crazy enough to try that."
+bg judge
+char judge e=normal
+"Thirty flights of stairs would tire you out rather quickly."
+char judge e=surprised
+"Why, if I were to try it, I think I would pass out!"
+bg witness
+fg wbench
+char watters e=serious
+"Yeah, no kidding!"
+"I mean, come on..."
+resume
+
+label press watters1C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"Whoever said anything about running?{n}You could've walked."
+bg witness
+fg wbench
+char watters e=angry
+"You're kinda missing the point. I'm not gonna waste my time going up and down those stairs."
+"It would be bad enough going up, but then I'd have to go all the way back down again."
+bg defense
+fg dbench
+char phoenix e=normal
+"The blackout was the only opportunity to safely infiltrate the building."
+"Taking the stairs was a necessary sacrifice."
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That would, of course, require Detective Watters to have known about the power outage beforehand."
+"I don't suppose that you have evidence showing that the power failure was planned."
+bg defense
+fg dbench
+char phoenix e=thinking
+"N-No. I don't."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Ha!"
+bg witness
+fg wbench
+char watters e=smirk
+"Yeah! Ha!
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Don't get cocky, Watters. This is just round one.)"
+bg witness
+fg wbench
+char watters e=smirk
+"Since I didn't know it was gonna happen, that means if I did show up there..."
+"...I would've planned to use the elevator instead."
+"I would've needed some really important reason to still go up there, even after seeing that it was out."
+bg defense
+fg dbench
+char phoenix e=normal
+"So if you DID have a good reason, you would do it?"
+bg witness
+fg wbench
+char watters e=angry
+"W-Well, yeah... I guess."
+bg defense
+fg dbench
+char phoenix e=normal
+"Maybe you should change your testimony to reflect that then."
+bg witness
+fg wbench
+char watters e=angry
+"Y-Yeah, okay."
+set show_watters1C false
+set show_watters1C1 true
+resume
+
+label press watters1C1
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Murder isn't a good enough reason for you?"
+bg witness
+fg wbench
+char watters e=nervous
+"Hey, I didn't murder anyone!"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Stop badgering the detective!"
+"You've done nothing to prove anything yet."
+bg judge
+char judge e=nodding
+pause 50 script
+char judge e=normal
+"Objection sustained."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(This isn't getting me anywhere.)"
+"{c089}(I'll need to actually show them my proof if I want to make progress.)"
+resume
+
+label press watters1D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"Who mentioned anything about getting involved with the mob?"
+bg witness
+fg wbench
+char watters e=angry
+"Well, uh... Isn't that the only reason anybody would show up there?"
+"Especially at that time of day."
+bg defense
+fg dbench
+char phoenix e=thinking
+"I guess I can't really think of any other reasons myself."
+bg witness
+fg wbench
+char watters e=angry
+"You don't want to get messed up with those guys. They'll ruin you."
+char phoenix hide
+"{c089}(I guess there really isn't any arguing with that.)"
+resume
+
+//PRESENT BLACKMAIL LETTER
+
+label blackmail watters1C1
+mus
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"What if you did have a good reason?"
+"What if there was a reason that you couldn't refuse?"
+bg witness
+fg wbench
+char watters e=nervous
+"Waddaya mean?{n}Like what?"
+bg defense
+fg dbench
+char phoenix e=confident
+"What if... you were being blackmailed?"
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+bg witness
+fg wbench
+char watters e=nervous
+"Black-{s5}{p 5}{sfx shout-shock}{e shock}what?"
+bg defense
+fg dbench
+char phoenix e=confident
+"You heard me."
+set _ev blackmail
+showevr
+"When we found this letter, I automatically assumed that Rivales was its target."
+"But what if that wasn't the case?"
+bg witness
+fg wbench
+char watters e=nervous
+"Come on! Of course it was for Rivales! We found it in his office!"
+bg defense
+fg dbench
+char phoenix e=confident
+"Are you saying that there's somebody out there who was actually stupid enough to try and blackmail a crime boss?"
+bg witness
+fg wbench
+char watters e=nervous
+"{sfx idea}!!"
+bg defense
+fg dbench
+char phoenix e=confident
+"The note we found was nothing more than a copy Rivales kept for himself."
+"I found an identical note yesterday... The one I'm sure belonged to the real target!"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What, might I ask, was he supposedly being blackmailed over?"
+"It would have to be something serious."
+bg witness
+fg wbench
+char watters e=nervous
+"Hey, I've got nothing to hide, man!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(I've come this far, but I still know so little.)"
+"{c089}(I still don't have any idea what this "big secret" the note talked about was.)"
+mus
+"I... I don't know."
+bg witness
+fg wbench
+char watters e=smirk
+"HAHA!!{n}{p20}You hear that, Boss?{n}He doesn't know!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, I can hear just fine."
+"The existence of a copy of the letter doesn't point to the witness at all."
+bg defense
+fg dbench
+char phoenix e=normal
+"Maybe not."
+char phoenix e=confident
+"But I can prove that he responded to it."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"{sfx idea}!!"
+char obadiah e=serious2
+"..."
+bg defense
+fg dbench
+char phoenix e=normal
+"Detective, perhaps you'd like to talk to us about the blackmail note?
+bg witness
+fg wbench
+char watters e=nervous
+"I... I dunno... I..."
+bg judge
+char judge e=normal
+"Whether or not it was directed at you is a serious matter, and certainly a solid motive for murder."
+"This court requests further testimony. I expect you to give it."
+bg witness
+fg wbench
+char watters e=angry
+"...Fine."
+script scene51watterstestimony2
 
 label none
 set _cr_back_button true

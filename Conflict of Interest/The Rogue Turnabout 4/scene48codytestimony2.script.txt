@@ -80,7 +80,56 @@ mus Confrontation - Moderato.ogg
 set _music_loop Confrontation - Moderato - loop.ogg
 label start
 cross codytestimony2
+noflag press2A AND press2B AND press2C scene48
+flag press2A AND press2B AND press2C addcody2D
+label addcody2D
 
+//PRESS ALL STATEMENTS
+bg defense
+fg dbench
+char phoenix e=thinking
+"Did anything interesting happen when you saw Sir Gallante enter the building?"
+bg witness
+fg wbench
+char cody e=happy
+"YEAH! It was all interesting!!
+bg defense
+fg dbench
+char phoenix e=normal
+"Well... Anything that's worth discussing? Did anything seem strange?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Stranger than a knight climbing through a window in a skyscraper?"
+bg witness
+fg wbench
+char cody e=angry
+"Not really."
+"There was a little flash of light, but that couldn't have been too important."
+bg defense
+fg dbench
+char phoenix e=normal
+"A flash of light?"
+bg witness
+fg wbench
+char cody e=confident
+"Yeah, you know, as in "BOOM! Rivales just got brought to justice!!""
+bg defense
+fg dbench
+char phoenix e=thinking
+"Oh. {p 20}That kind of flash of light."
+"{e normal}Maybe you'd like to tell me a bit more about this flash of justice light?"
+bg witness
+fg wbench
+char cody e=happy
+"You got it, pops!"
+delflag press2A
+delflag press2B
+delflag press2C
+set show_cody2D true
+goto start
+
+label scene48
 statement cody2A
 bg witness
 fg wbench
@@ -104,6 +153,7 @@ bg witness
 fg wbench
 char cody e=angry
 "There was a small flash of light. I don't know what it was."
+endcross
 
 label comments
 bg aide
@@ -118,27 +168,154 @@ label press cody2A
 sfx /phoenix/holdit.ogg
 fg HoldItAnim
 pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Cody, did you--{p15}{next}"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Why is this the first time I'm hearing about this?!"
+bg witness
+fg wbench
+char cody e=confident
+"You never asked."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"That was the whole point of interrogating you yesterday!!"
+bg witness
+fg wbench
+char cody e=confident
+"Well, geez, sorry."
+"I guess you just didn't ask the right questions."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You little...{n}{p20}...{n}{p20}{e serious}No matter."
+"You can just tell us what you saw now."
+bg witness
+fg wbench
+char cody e=angry
+"I was just getting to that!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I thought I was supposed to be the one doing the cross-examination here.)"
+resume
 
 label press cody2B
 sfx /phoenix/holdit.ogg
 fg HoldItAnim
 pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"You saw it through your camera?"
+bg witness
+fg wbench
+char cody e=confident
+"Yeah! It's got this sweet zoom feature."
+"It lets you see stuff that's really far away."
+set _ev codyphoto
+showevl
+"Why do you think that picture I showed you turned out so well?"
+"If I didn't have the zoom on, I wouldn't have been able to see anything!"
+hideevl
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Which, I suppose, opens up the question of why you were spying on the Rivales penthouse in the first place."
+bg witness
+fg wbench
+char cody e=sword
+"H{s5}-Hey! Don't try to make {sfx shout-general}ME look like the bad guy here!"
+bg aide
+char maya e=bench-hum
+"If I know Cody, he was probably trying to be some kind of private investigator."
+char phoenix hide 
+"He should consider him lucky."
+"Spying on the mafia isn't exactly a safe thing to do."
+resume
 
 label press cody2C
 sfx /phoenix/holdit.ogg
 fg HoldItAnim
 pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"How do you know that?"
+bg witness
+fg wbench
+char cody e=angry
+"Well, I just know! {e confident}Wha else would Sir Gallante do when he's cornered his victim?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You didn't actually see it happen though!"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You spent the better part of yesterday trying to prove that the person on the roof killed the victim..."
+"...and now you're trying to say that he didn't?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, {p20}I guess..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"{sfx shout-general}Make up your mind!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"{sfx whoops}{c089}(Well... drat.)"
+resume
 
 label press cody2D
 sfx /phoenix/holdit.ogg
 fg HoldItAnim
 pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"Could you describe this flash?"
+bg witness
+fg wbench
+char cody e=angry
+"It was real quick. I just barely saw it."
+"I think I could only see it because it was still dark outside."
+bg defense
+fg dbench
+char phoenix e=thinking
+"So it was a small, quick flash of light."
+bg witness
+fg wbench
+char cody e=happy
+"Yep! It was the light of JUSTICE being delivered!"
+bg defense
+fg dbench
+char phoenix e=normal
+"Does that look any different from any other flash of light?"
+bg witness
+fg wbench
+char cody e=confident
+"Well, I guess not... But sometimes you can just tell these things!"
+resume
 
 label gun cody2D
 mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script
+script scene49
 
 label none
 set _cr_back_button true

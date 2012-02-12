@@ -1,0 +1,314 @@
+bg black
+
+nt
+"{c090}You know what? This deal's over."
+
+nt
+"{c940}I'm sorry... But I can't let you do that."
+
+pause 40 script
+sfx gunshot3
+
+pause 30 script
+sfx knifethrow.wav
+sfx shout-scream.wav
+"{f}{f}{f}{f}{next}"
+bg blood
+pause 20
+sfx shout-loud.wav
+pause 80
+
+bg pent fade
+pause 40
+char watters e=angry fade
+
+nt
+"{c090}There were no courts on earth for men like him."
+"{f}{s10}{next}"
+
+
+bg black
+pause 60 script
+
+fg ani-judge-gavel
+pause 30
+
+mus Court.ogg
+
+bg judge
+char judge e=normal
+"It appears that this trial has come to an end."
+"Sir Gallante's three year killing spree is over."
+
+bg witness
+fg wbench
+char watters e=sad
+"Please... Everybody..."
+"Your Honor! I didn't do it!"
+
+bg judge
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"It shames me to know that one of this city's detectives would resort to mass murder."
+"Bailiff, please escort him out."
+char Bailiff hide
+"Yes, Your Honor."
+
+bg witness
+fg wbench
+char watters e=sad
+"Boss! You know I didn't do it!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"......{sfx realization}{e serious2}!!!"
+
+bg judge
+char judge e=normal
+"If there are no further objections, I will let the jury decide their verdict."
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"{delay 1}......"
+
+bg judge
+char judge e=normal
+"Very well."
+
+mus
+bg black fade
+pause 60 script
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"No!! Your Honor, stop!!"
+"You can't convict Detective Watters!"
+
+bg judge
+char judge e=surprised
+pause 40 script
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"The defense has already proven that he was at the scene of the crime..."
+"...and that he had a good reason to want the victim dead, as well!"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"My client is innocent, Prosecutor."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"Yes, that's all that matters to you, isn't it?!"
+"Proving your client innocent!"
+"I should have expected as much from you... {p25}A defense attorney!"
+"All you care about is getting him off the hook!"
+"Men like that detective spend their lives making this city safe for scumbags like you!"
+"This is how you repay him?!"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"Defending us isn't supposed to extend to murdering other in cold blood."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"He never killed anyone!{n}I doubt he even knows how to use that gun!"
+"You're trying to frame him!!!"
+
+bg judge
+char judge e=warning
+"Mr. Williamson, if you have proof that the witness is innocent, then please show us now."
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"I... {p20}Well, I don't actually have any solid proof."
+pause 50 script
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+"But as I said before... {c940}It's impossible for him to be Sir Gallante{c999}."
+"He may have been in the Rivales penthouse that morning..."
+"...but for every other time Sir Gallante killed somebody..."
+"...he has an airtight alibi."
+
+bg judge
+char judge e=normal
+"Where was that?"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"With me!"
+"It's all there in those files Wright and his friend snatched from the records room..."
+"...But I suppose you just "happened" to overlook that, didn't you?"
+
+sfx screenwipe
+bg Gallantefiles-2
+char obadiah hide
+"Every single time a Rivales thug was murdered, Watters was at the police station..."
+
+sfx hideevidence
+bg prosecution
+fg pbench
+char obadiah e=angry
+"...working to bring Gallante down!"
+"We have very detailed records of the time he spent investigating."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That doesn't clear him for the murder of MIchael Rivales."
+"He even admitted to being at the scene!"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"This was one of Gallante's murders though!"
+"If Watters isn't Gallante, then he didn't do it!"
+
+bg judge 
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"I don't believe that it was even proven beyond a doubt that Sir Gallante committed this crime."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{sfx shout-shock}!!"
+
+bg judge
+char judge e=normal
+"His identifying mark has yet to be found."
+"Until then, everything else can be seen as circumstantial."
+
+mus
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"......"
+
+bg judge
+char judge e=normal
+"Now if there is nothing else, I would like for the jury to begin their deliberation."
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"I hope you're happy, Wright."
+"You've just destroyed the life of an innocent man."
+
+bg black fade
+pause 60 script
+sfx shout-objection
+fg HoldItAnim
+pause 10 script
+bg courtwatters
+pause 10 script
+sfx dramapound
+
+bg judge
+char judge e=surprised
+pause 60 script
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+pause 60 script
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+pause 60 script
+
+bg judge
+char judge e=surprised
+pause 60 script
+"Yes, Miss Fey?"
+
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+
+bg aide
+char maya e=bench-profile
+shake
+sfx dramapound
+pause 30 script
+"The defense requests a third day to investigate."
+char phoenix hide
+"We... {sfx realization}We do?"
+char maya e=bench-strict
+"Yes!"
+
+bg judge
+char judge e=surprised
+"But you've already won."
+
+bg aide
+char maya e=bench-profile
+"That's not what matters!"
+"If we put the wrong person away in the process, then it will all have been for nothing."
+char maya e=bench-strict
+"Isn't that right, Nick?"
+char phoenix hide
+"R-{p5}Right."
+char maya e=bench-strict
+"C'mon, Nick!{n}Doesn't it seem strange to you how Mr. Watters never admitted to killing anyone?"
+"He claimed he was innocent, right up until the very end!"
+char phoenix hide
+"{c089}(Even in the face of overwhelming evidence...)"
+"{c089}(Is it true...? Have we really made a huge mistake?"
+"{c089}({c940}Is Mark Watters really innocent{c089}?)"
+
+bg judge
+char judge e=normal
+"Mr. Wright, as you are the defendant's attorney, I will leave this decision up to you."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{delay 1}...Yes."
+"I would like a final day to complete the investigation."
+
+bg judge
+char judge e=normal
+"Mr. Williamson?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"I've waited three years for this case to end."
+"I can wait one more day."
+
+bg judge
+char judge e=normal
+"Both sides seem rather adamant to prolong the trial. {n}{p20}A third day will be granted."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(This certainly didn't end the way I expected it to.)"
+"{c089}(Now there are {c940}two people{c089} that I need to prove innocent."
+"{c089}I know what I have to do tomorrow... I need to clear Detective Watters's name...)"
+
+bg black fade
+pause 80 script
+mus
+pause 80
+mus Jingle - Slight Break.ogg
+bg tobecontinued fade
+pause 300
+mus
+bg nothing fade
+exit

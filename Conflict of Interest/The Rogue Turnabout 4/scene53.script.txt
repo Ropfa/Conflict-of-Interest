@@ -1,0 +1,164 @@
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=document
+set _ev rick
+showevr
+"I'd like the court to look at this letter."
+bg judge
+char judge e=normal
+"Would you care to read it for us, Mr. Williamson?"
+hideevr
+showevl
+bg prosecution
+fg pbench
+char obadiah e=serious
+"It reads 'Rick, I need your help. It's important. Please meet me tomorrow at 5:20 AM..."
+"...Don't tell anyone you're coming.'{n}{p20}It isn't signed."
+hideevl
+bg witness
+fg wbench
+char watters e=thinking
+"Since it's not signed, that means you can't prove anything."
+bg defense
+fg dbench
+char phoenix e=normal
+"Maybe I can't... But there's somebody out there who can."
+bg witness
+fg wbench
+char watters e=thinking
+"Who's that?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Rick."
+bg prosecution
+fg pbench
+char obadiah e=worried
+"Rick?"
+bg defense
+fg dbench
+char phoenix e=document
+"A person named Rick met with the author of this note. He can tell us everything."
+bg judge
+char judge e=surprised
+"Who is Rick?{n}I don't know any Rick."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c090}Actually, Your Honor..."
+label redo
+set _cr_back_button false
+set _evidence_present false
+present
+
+//PRESENT GUMSHOE'S PROFILE
+
+label gumshoe$
+set _cr_back_button true
+mus
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"Everybody here has met Rick before."
+"{e confident}He is none other than Detective Dick Gumshoe."
+bg witness
+fg wbench
+char watters e=nervous
+"B-bu-but-{sfx shout-shock}{e shock}NO!!!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Aha! A reaction!)"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"You want us to have Detective Gumshoe testify?"
+bg defense
+fg dbench
+char phoenix e=normal
+"If Gumshoe is the Rick in question, then all our questions can be answered."
+"If not... then you have nothing to worry about, Prosecutor."
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Hm."
+bg judge
+char judge e=normal
+"Mr. Williamson?"
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Yes, yes.{n}{p20}I'll allow him to testify."
+bg witness
+fg wbench
+char watters e=nervous
+"Bu-bu-bu-bu-bu..."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Watters is starting to look nervous.)"
+"{c089}(I think he's finally starting to realize how bad things look for him.)"
+bg black fade
+pause 60 script
+script scene54
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This is Rick!"
+bg judge
+char judge e=normal
+"That doesn't look like a Rick to me."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Are you sure?{n}What exactly does a Rick look like?"
+bg judge
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"Not like that."
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"Now that you mention it, maybe it doesn't really look like a Rick after all."
+"{c090}However, this looks exactly like a Rick..."
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

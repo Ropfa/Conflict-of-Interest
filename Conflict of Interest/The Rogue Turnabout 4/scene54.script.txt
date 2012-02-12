@@ -1,0 +1,111 @@
+bg black
+bg courtlobby fade
+
+nt
+"{center}{type}{c090}July 22, 11:37 AM{n}Defendant Lobby No. 3"
+
+mus Courtroom Lounge.ogg
+set _music_loop Courtroom Lounge - loop.ogg
+char parker e=serious fade
+pause 40
+"Y-YOU GOT 'IM!!"
+"That guy's cornered, Mr. Wright!"
+
+char phoenix hide
+"As soon as Gumshoe takes the stand, we can expose Watters's excuses for the lies they are."
+
+char parker e=worried
+"You think he'll try and lie to protect his friend?"
+
+char phoenix hide
+"I don't believe that Gumshoe would do that."
+"What I'm worried about is {c940}his amnesia{c999}.
+
+char parker e=serious
+"A-Amnesia?!"
+
+char phoenix hide
+"Gumshoe can't remember a lot of what happened that morning."
+
+char parker e=disturbed
+"B-but {sfx shout-general}THAT'S NO {e freakout}{sfx shout-objection}GOOD!!!"
+char parker e=sad
+
+char phoenix hide
+"{c089}(Indeed. I wonder how I'm going to manage to get past that.)"
+
+char maya e=disheartened
+"I think they're about ready, Nick."
+
+char phoenix hide
+"It's almost over, Maya. Just a little more and we'll have him."
+
+char maya e=disheartened
+"R-{p5}Right."
+
+char phoenix hide
+"Is something wrong?"
+
+char maya e=sad
+"N-{p5}No.{p20}{n}I'm fine."
+
+char phoenix hide
+"{c089}(That's funny. I wonder what's bothering her.)"
+
+bg black fade
+pause 100 script
+
+bg courtgumshoe fade
+sfx courtmurmur
+pause 100 script
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Please state your name and occupation."
+
+bg witness
+fg wbench
+char gumshoe e=normal
+"Dick Gumshoe.{n}I'm a homicide detective"
+
+bg judge
+char judge e=surprised
+"Detective, I understand that you were injured recently."
+
+bg witness
+fg wbench
+char gumshoe e=normal
+"Yes, sir.{n}{p20}I got hit on the head pretty badly."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Detective Gumshoe has recovered physically, but is still suffering from amnesia, due to the blow."
+"His testimony may be rather limited."
+
+bg witness
+fg wbench
+char gumshoe e=disheartened
+"S-Sorry, sir.{n}I'll do my best!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Nobody will blame you if you can't remember anything."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(My entire case is resting on Gumshoe now. If this doesn't work...)"
+
+bg judge
+char judge e=normal
+"Detective Gumshoe, I would like for you to please tell us everything that you can remember."
+
+bg witness
+fg wbench
+char gumshoe e=confident
+"You got it, Your Honor!"
+
+script scene55gumshoetestimony1
