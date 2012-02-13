@@ -8,8 +8,8 @@ macro finish_puzzle
 set aPiece $gNumPieces
 
 // Loop through all the pieces.
-label each_piece$0
-is aPiece < 1 end$0
+label each_piece_A$0
+is aPiece < 1 end_A$0
 
 joinvar lButton gButton_ $aPiece
 delete name=$lButton
@@ -17,10 +17,20 @@ delete name=$lButton
 joinvar lButton gSelectButton_ $aPiece
 delete name=$lButton
 
-subvar aPiece 1
-goto each_piece$0
+set lPiece $gNumPieces
+label each_piece_B$0
+is lPiece < 1 end_B$0
 
-label end$0
+joinvar lVar gLink_ $aPiece . $lPiece .linked
+setvar $lVar false
+
+subvar lPiece 1
+goto each_piece_B$0
+label end_B$0
+
+subvar aPiece 1
+goto each_piece_A$0
+label end_A$0
 endmacro
 
 
