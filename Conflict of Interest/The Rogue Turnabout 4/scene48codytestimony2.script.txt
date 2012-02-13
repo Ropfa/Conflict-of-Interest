@@ -1,7 +1,11 @@
+//PRESS ALL STATEMENTS
+
 set _list_back_button false
 set wrongevidence 1
 
 mus
+bg witness
+fg wbench
 char cody e=angry
 fg TestimonyAnim fade name=tanim
 nt
@@ -14,10 +18,10 @@ bg witness
 fg wbench
 
 char cody e=angry
-"{tbon}I saw Sir Gallante climb through that window!"
-"{tbon}Yeah, it was kinda far away... But I could see it through my camera!"
+"{tbon}I saw Sir Gallante climb through that {n}window!"
+"{tbon}Yeah, it was kinda far away... {n}But I could see it through my camera!"
 char cody e=confident
-"{tbon}I just know he killed Rivales while he was in there!"
+"{tbon}I just know he killed Rivales while he {n}was in there!"
 
 mus
 bg black
@@ -25,7 +29,7 @@ pause 30
 bg prosecution
 fg pbench
 char obadiah e=serious
-"And by "Sir Gallante," you really mean the "the defendant." Correct?"
+"And by "Sir Gallante," {p10}you really mean {n}the "the defendant." {n}{p15}Correct?"
 bg witness
 fg wbench
 char cody e=angry
@@ -38,16 +42,16 @@ char obadiah e=serious
 bg witness
 fg wbench
 char cody e=confident
-"Heh. You don't know nothing yet, pops."
+"Heh. {p10}You don't know nothing yet, {n}pops."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Cody, you know Mr. Parker didn't do it."
-"It's pretty low of you to go through with this, just to protect a killer you admire."
+"Cody, you know Mr. Parker didn't do {n}it."
+"It's pretty low of you to go through {n}with this, just to protect a killer {n}you admire."
 bg witness
 fg wbench
 char cody e=confident
-"Seriously, pops? You haven't figured it out yet?"
+"Seriously, pops? {p15}{n}You haven't figured it out yet?"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -55,10 +59,11 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(I'm just as confused as Williamson here. Was there something I was supposed to realize by now?)"
+"{c089}(I'm just as confused as Williamson {n}here.)"
+"{c089}(Was there something I was supposed {n}to realize by now?)"
 bg judge
 char judge e=normal
-"The defense may begin the cross-examination."
+"The defense may begin the {n}cross-examination."
 
 bg witness
 fg wbench
@@ -88,24 +93,24 @@ label addcody2D
 bg defense
 fg dbench
 char phoenix e=thinking
-"Did anything interesting happen when you saw Sir Gallante enter the building?"
+"Did anything interesting happen when {n}you saw Sir Gallante enter the {n}building?"
 bg witness
 fg wbench
 char cody e=happy
-"YEAH! It was all interesting!!
+"{sfx shout-scream}YEAH! {n}It was all interesting!!
 bg defense
 fg dbench
 char phoenix e=normal
-"Well... Anything that's worth discussing? Did anything seem strange?"
+"Well... {p10}Anything that's worth {n}discussing? Did anything {n}seem strange?"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Stranger than a knight climbing through a window in a skyscraper?"
+"Stranger than a knight climbing {n}through a window in a skyscraper?"
 bg witness
 fg wbench
 char cody e=angry
 "Not really."
-"There was a little flash of light, but that couldn't have been too important."
+"There was a little flash of light, but {n}that couldn't have been too important."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -113,12 +118,13 @@ char phoenix e=normal
 bg witness
 fg wbench
 char cody e=confident
-"Yeah, you know, as in "BOOM! Rivales just got brought to justice!!""
+"Yeah, you know, as in..."
+"{sfx shout-shock}"BOOM! {p10}Rivales just got brought {n}to justice!!""
 bg defense
 fg dbench
 char phoenix e=thinking
 "Oh. {p 20}That kind of flash of light."
-"{e normal}Maybe you'd like to tell me a bit more about this flash of justice light?"
+"{e normal}Maybe you'd like to tell me a bit more {n}about this flash of justice light?"
 bg witness
 fg wbench
 char cody e=happy
@@ -134,34 +140,34 @@ statement cody2A
 bg witness
 fg wbench
 char cody e=angry
-"I saw Sir Gallante climb through that window!"
+"I saw Sir Gallante climb through that {n}window!"
 
 statement cody2B
 bg witness
 fg wbench
 char cody e=angry
-"Yeah, it was kinda far away... But I could see it through my camera!"
+"Yeah, it was kinda far away... {n}But I could see it through my camera!"
 
 statement cody2C
 bg witness
 fg wbench
 char cody e=confident
-"{tbon}I just know he killed Rivales while he was in there!"
+"{tbon}I just know he killed Rivales while he {n}was in there!"
 
 statement cody2D test=show_cody2D
 bg witness
 fg wbench
 char cody e=angry
-"There was a small flash of light. I don't know what it was."
+"There was a small flash of light. {n}I don't know what it was."
 endcross
 
 label comments
 bg aide
 char maya e=bench-hum
-"Did you know that Cody saw Sir Gallante go through the window?"
+"Did you know that Cody saw Sir {n}Gallante go through the window?"
 char phoenix hide
 "No, I didn't."
-"{c089}(It's certainly convenient that little bit of information came out just now.)"
+"{c089}(It's certainly convenient that little {n}bit of information came out just now.)"
 goto start
 
 label press cody2A
@@ -178,7 +184,7 @@ pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Why is this the first time I'm hearing about this?!"
+"Why is this the first time I'm hearing {n}about this?!"
 bg witness
 fg wbench
 char cody e=confident
@@ -186,17 +192,17 @@ char cody e=confident
 bg prosecution
 fg pbench
 char obadiah e=angry
-"That was the whole point of interrogating you yesterday!!"
+"That was the whole point of {n}interrogating you yesterday!!"
 bg witness
 fg wbench
 char cody e=confident
 "Well, geez, sorry."
-"I guess you just didn't ask the right questions."
+"I guess you just didn't ask the right {n}questions."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"You little...{n}{p20}...{n}{p20}{e serious}No matter."
-"You can just tell us what you saw now."
+"You little...{n}{p20}...{n}{p20}{e serious}{p20}No matter."
+"You can just tell us what you saw {n}now."
 bg witness
 fg wbench
 char cody e=angry
@@ -204,7 +210,8 @@ char cody e=angry
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(I thought I was supposed to be the one doing the cross-examination here.)"
+"{c089}(I thought I was supposed to be the {n}one doing the cross-examination {n}here.)"
+setflag press2A
 resume
 
 label press cody2B
@@ -218,27 +225,29 @@ char phoenix e=normal
 bg witness
 fg wbench
 char cody e=confident
-"Yeah! It's got this sweet zoom feature."
-"It lets you see stuff that's really far away."
+"Yeah! {n}It's got this sweet zoom feature."
+"It lets you see stuff that's really far {n}away."
 set _ev codyphoto
 showevl
-"Why do you think that picture I showed you turned out so well?"
-"If I didn't have the zoom on, I wouldn't have been able to see anything!"
+"Why do you think that picture I {n}took turned out so well?"
+"If I hadn't had the zoom on, I {n}wouldn't have been able to see {n}anything!"
 hideevl
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"Which, I suppose, opens up the question of why you were spying on the Rivales penthouse in the first place."
+"Which, I suppose, opens up the {n}question..."
+"...of why you were spying on the {n}Rivales penthouse in the first {n}place."
 bg witness
 fg wbench
 char cody e=sword
-"H{s5}-Hey! Don't try to make {sfx shout-general}ME look like the bad guy here!"
+"H{s5}-Hey! {n}Don't try to make {sfx shout-general}ME look like the {n}bad guy here!"
 bg aide
 char maya e=bench-hum
-"If I know Cody, he was probably trying to be some kind of private investigator."
+"If I know Cody, he was probably {n}trying to be some kind of private {n}investigator."
 char phoenix hide 
 "He should consider him lucky."
-"Spying on the mafia isn't exactly a safe thing to do."
+"Spying on the mafia isn't exactly a {n}safe thing to do."
+setflag press2B
 resume
 
 label press cody2C
@@ -252,19 +261,20 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char cody e=angry
-"Well, I just know! {e confident}Wha else would Sir Gallante do when he's cornered his victim?"
+"Well, I just {sfx shout-general}know!"
+"{e confident}What else would Sir Gallante do {n}when he's cornered his victim?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"You didn't actually see it happen though!"
+"You didn't actually see it happen {n}though!"
 sfx /godot/objection.ogg
 fg ObjectionAnim
 pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=serious
-"You spent the better part of yesterday trying to prove that the person on the roof killed the victim..."
-"...and now you're trying to say that he didn't?"
+"You spent the better part of {n}yesterday proving that the person {n}on the roof killed the victim..."
+"...and now you're trying to say that {n}he didn't?"
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -276,7 +286,8 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=sweating
-"{sfx whoops}{c089}(Well... drat.)"
+"{sfx whoops}{c089}(Well... {p10}drat.)"
+setflag press2C
 resume
 
 label press cody2D
@@ -290,8 +301,8 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char cody e=angry
-"It was real quick. I just barely saw it."
-"I think I could only see it because it was still dark outside."
+"It was real quick. {p10}I just barely saw it."
+"I think I could only see it because it {n}was still dark outside."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -299,15 +310,15 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char cody e=happy
-"Yep! It was the light of JUSTICE being delivered!"
+"Yep! It was the light of {sfx shout-scream}JUSTICE {n}being delivered!"
 bg defense
 fg dbench
 char phoenix e=normal
-"Does that look any different from any other flash of light?"
+"Does that look any different from {n}any other flash of light?"
 bg witness
 fg wbench
 char cody e=confident
-"Well, I guess not... But sometimes you can just tell these things!"
+"Well, I guess not... {p20}{n}But sometimes you can just tell {n}these things!"
 resume
 
 label gun cody2D

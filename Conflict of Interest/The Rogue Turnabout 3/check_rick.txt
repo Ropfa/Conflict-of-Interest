@@ -1,0 +1,2 @@
+bg lettertorick fade
+gui Back y=350

@@ -15,7 +15,7 @@ mus Court.ogg
 bg judge
 char judge e=normal
 "Court is in session again."
-"Mr. Williamson, I understand that you have a new witness today."
+"Mr. Williamson, I understand that {n}you have a new witness today."
 
 bg witness
 fg wbench
@@ -25,46 +25,46 @@ char cody e=sad
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Your Honor, this is the boy who took the photo we saw yesterday."
+"Your Honor, {p10}this is the boy who took {n}the photo we saw yesterday."
 
 bg witness
 fg wbench
 char cody e=angry
-"H-Hey! I'm not a boy!{n}{e confident}I'm an adolescent!"
+"H{p5}-Hey! {p15}I'm not a boy!{n}{p20}{e confident}I'm an adolescent!"
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Whatever term you prefer to use is irrelevant to the case at hand."
+"Whatever term you prefer to use is {n}irrelevant to the case at hand."
 
 bg witness
 fg wbench
 char cody e=sad
-"Y-Yes, sir..."
+"Y{p5}{s}-Yes, sir..."
 
 bg defense
 fg dbench
 char phoenix e=normal
-"{c089}(Do my eyes deceive me...? Or did this guy really manage to tame Cody Hackins?)"
+"{c089}(Do my eyes deceive me...? {p20}Or did {n}this guy really manage to tame {n}Cody Hackins?)"
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Witness, please state your name and occupation for the court."
+"Witness, please state your name and {n}occupation for the court."
 
 bg witness
 fg wbench
-char cody e=sad
+char cody e=angry
 "My name's Cody Hackins.{n}{p20}I'm a senior in high school."
 
 bg judge
 char judge e=normal
-"Mr. Hackins, you took a photo the morning of the crime."
-"I would like for you to testify about that."
+"Mr. Hackins, you took a photo the {n}morning of the crime."
+"I would like for you to testify about {n}that."
 
 bg witness
 fg wbench
 char cody e=confident
-"Right... Here goes."
+"Right... {p20}Here goes."
 
 script scene46codytestimony1

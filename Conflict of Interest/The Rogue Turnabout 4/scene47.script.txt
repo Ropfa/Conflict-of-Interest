@@ -1,57 +1,59 @@
 bg defense
 fg dbench
 char phoenix e=normal
-"Cody, I don't know if you were aware of this..."
-"But it was proven yesterday that that the knife found at the scene wasn't the murder weapon."
+"Cody, I don't know if you were aware {n}of this..."
+"But it was already proven that the {n}knife found at the scene wasn't {n}the murder weapon."
 
 bg witness
 fg wbench
 char cody e=angry
-"Really? Because the cranky prosecutor there was babbling on and on about "knife this" and "knife that" earlier."
+"Really? Because the cranky {n}prosecutor there was babbling on {n}and on about it earlier."
+""Knife this"...{p15}{n}"Knife that"...{p15}{n}He wouldn't shut up about it."
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I was discussing how it WASN'T the murder weapon."
+"I was discussing how it WASN'T the {n}murder weapon."
 "You know that."
 
 bg witness
-fg wbnech
+fg wbench
 char cody e=angry
-"Yeah, I guess I already knew that maybe."
-char pheonix hide
+"Yeah, I guess I already knew that {n}maybe."
+char phoenix hide
 "How?"
 char cody e=confident
 "That picture I took!"
 
 bg codysphoto
 char cody hide
-"He has that huge sword. Why would he use a little dinky knife?"
+"He has that huge sword."
+"Why would he use a little dinky {n}knife?"
 char maya hide
-"Nick! That's the same sword we found yesterday!"
+"Nick! That's the same sword we {n}found yesterday!"
 char judge hide
-"So the murder weapon was actually a sword?"
+"So the murder weapon was actually a {n}sword?"
 
 bg defense
 fg dbench
 char phoenix e=normal
-"Yes, Your Honor. A claymore. {n}A rather large sword."
-"We found it in a building across the street from the Tower."
+"Yes, Your Honor. {p10}A claymore. {n}{p10}A rather large one."
+"We found it in a building across the {n}street from the Tower."
 "It was covered in blood."
 
 bg judge
 char judge e=normal
-"A sword would certainly make it easier to cut somebody in half than a knife would."
-"Bailiff! Have this sword tested. See if the blood on it matches that of the victim."
+"A sword would certainly make it {n}easier to cut somebody in half {n}than a knife would."
+"Bailiff! Have this sword tested. {n}See if the blood on it matches that {n}of the victim."
 char Bailiff hide
 "Yes, sir!"
 bg black fade
 pause 60 script
-bg judge fade
+bg judge
 char judge e=normal
 char Bailiff hide
 "Sir, the results are back."
-"The DNA from the blood matches Michael Rivales."
+"The DNA from the blood matches {n}Michael Rivales."
 
 bg prosecution
 fg pbench
@@ -59,31 +61,31 @@ char obadiah e=serious
 "Well, I suppose that matter's settled."
 "However, it changes nothing."
 mus Tricks and Gimmicks.ogg
-"I don't care what he was killed with. He died either way. That remains a fact."
+"I don't care what he was killed with. {n}He died either way. {n}That remains a fact."
 
 bg judge 
 char judge e=nodding
 pause 50 script
 char judge e=normal
-"I agree with Mr. Williamson on this point."
+"I agree with Mr. Williamson on this {n}point."
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Unless I can poke a hole in their little theory, nothing has really changed.)"
+"{c089}(Unless I can poke a hole in their little {n}theory, nothing has really changed.)"
 
 label redopresent
 bg prosecution
 fg pbench
 char obadiah e=serious
 "Well, Wright?"
-"Do you have any objections that are actually relevant?"
+"Do you have any objections that are {n}actually relevant?"
 
 bg defense
 fg dbench
 char phoenix e=normal
-"{c089}(They're saying that Mr. Parker climbed down from the roof and through the window.)"
-"{c090}(Do I have anything to disprove this?)"
+"{c089}(They're saying that Mr. Parker {n}climbed down from the roof and {n}through the window.)"
+"{c090}(Do I have anything to disprove {n}this?)"
 
 set _list_back_button false
 list scene47present
@@ -95,20 +97,20 @@ label No
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(I guess there isn't really anything to disprove it.)"
+"{c089}(I guess there isn't really anything to {n}disprove it.)"
 "{e normal}No, I don't."
 bg witness
 fg wbench
 char cody e=confident
 "Face it, you just can't argue with it!"
-"I know what I saw {c940}with my own eyes{c999)!"
+"I know what I saw {c940}with my own eyes{c999}!"
 mus
 pause 20 script
 sfx dramapound
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Wh-what?"
+"Wh-{p5}what?"
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -121,20 +123,20 @@ char cody e=angry
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Cody, you told me you didn't see the murder..."
+"Cody, you told me you didn't see the {n}murder..."
 bg witness
 fg wbench
 char cody e=confident
-"I didn't... I saw him climb in the window!"
+"I didn't... {p15}{n}I saw him climb in the window!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Wait... This works out perfectly for me!)"
+"{c089}(Wait... {p10}This works out perfectly for {n}me!)"
 "Thank you, Cody."
-"Your Honor! This wasn't mentioned in the witness's testimony."
+"Your Honor! This wasn't mentioned in {n}the witness's testimony."
 bg judge
 char judge e=normal
-"Mr. Hackins, would you mind testifying again?"
+"Mr. Hackins, would you mind {n}testifying again?"
 bg witness
 fg wbench
 char cody e=confident
@@ -144,9 +146,12 @@ script scene48codytestimony2
 label Yes
 bg defense
 fg dbench
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
 char phoenix e=handsondesk
 "Of course I do!"
-"{c090}This shows that the killer couldn't have entered the room via the roof..."
+"{c090}This shows that the killer couldn't {n}have entered the room via the roof..."
 set _cr_back_button false
 present
 
@@ -158,17 +163,17 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"We discussed yesterday that the window can only be opened from the inside."
+"We discussed yesterday that the {n}window can only be opened from {n}the inside."
 sfx deskslam
 char phoenix e=deskslam
 pause 40 script
 char phoenix e=handsondesk
-"That means it was impossible for my client to enter through there!"
+"That means it was impossible for my {n}client to enter through there!"
 bg prosecution
 fg pbench
 char obadiah e=serious
 "Are you forgetting something?"
-"The defendant entered the room once before the murder."
+"The defendant entered the room {n}once before the murder."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -178,20 +183,20 @@ char phoenix e=sheepish
 bg prosecution
 fg pbench
 char obadiah e=serious
-"He just opened the window while he was in there the first time..."
-"...making it possible to enter again from a new route."
+"He just opened the window while he {n}was in there the first time..."
+"...making it possible to enter again {n}from a new route."
 bg witness
 fg wbench
 char cody e=confident
 "Face it, you just can't argue with it!"
-"I know what I saw {c940}with my own eyes{c999)!"
+"I know what I saw {c940}with my own eyes{c999}!"
 mus
 pause 20 script
 sfx dramapound
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Wh-what?"
+"Wh-{p5}what?"
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -204,21 +209,21 @@ char cody e=angry
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Cody, you told me you didn't see the murder..."
+"Cody, you told me you didn't see the {n}murder..."
 bg witness
 fg wbench
 char cody e=confident
-"I didn't... I saw him climb in the window!"
-"So it had to be open already for him!"
+"I didn't... {p15}{n}I saw him climb in the window!"
+"So it had to already be open for him!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Wait... This works out perfectly for me!)"
+"{c089}(Wait... {p10}This works out perfectly for {n}me!)"
 "Thank you, Cody."
-"Your Honor! This wasn't mentioned in the witness's testimony."
+"Your Honor! This wasn't mentioned in {n}the witness's testimony."
 bg judge
 char judge e=normal
-"Mr. Hackins, would you mind testifying again?"
+"Mr. Hackins, would you mind {n}testifying again?"
 bg witness
 fg wbench
 char cody e=confident
@@ -238,7 +243,7 @@ char phoenix e=pointing
 bg prosecution
 fg pbench
 char obadiah e=serious
-"That's a rather pointless reason to dismiss anything."
+"That's a rather pointless reason to {n}dismiss anything."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -249,7 +254,7 @@ pause 50 script
 char judge e=normal
 "No. Please try again."
 sfx damage.wav
-pentaly -15
+penalty -15
 is penalty 0 failure
 goto redopresent
 

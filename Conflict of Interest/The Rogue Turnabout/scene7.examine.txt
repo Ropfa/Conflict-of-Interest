@@ -93,7 +93,7 @@ char maya hide
 "Somebody was trying to blackmail {n}him!"
 char watters hide
 "Looks like our victim was never able {n}to make it to the meeting."
-"6:00 AM.{n}He was killed at that same time."
+"6:00 AM.{p10}{n}He was killed at that same time."
 bg pent2
 char phoenix hide
 "{c089}(Did somebody try and stop him from {n}seeing the blackmailer?)"

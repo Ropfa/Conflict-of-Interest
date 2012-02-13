@@ -19,9 +19,9 @@ goto scene29talk
 label Accusation of murder
 char parker e=sad
 char phoenix hide
-"Do you have any idea why Sarah Keyes wants to see you convicted?"
+"Do you have any idea why Sarah {n}Keyes wants to see you {n}convicted?"
 char parker e=sad 
-"If I knew, I'd tell you. Believe me."
+"If I knew, I'd tell you. {n}Believe me."
 "You really can't blame her though...{n}What with how guilty I look."
 "I really did go into that room just before he was killed."
 char phoenix hide

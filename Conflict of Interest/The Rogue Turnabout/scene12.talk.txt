@@ -125,7 +125,7 @@ char maya e=thinking
 "Evolved?"
 
 char watters e=serious
-"Whenever it seemed we wer getting {n}close..."
+"Whenever it seemed we were getting {n}close..."
 "...he'd always change up his MO so {n}that it was even more elaborate and {n}convoluted."
 "It's been really hard to keep up with."
 

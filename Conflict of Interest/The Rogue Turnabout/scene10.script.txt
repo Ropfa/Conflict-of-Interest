@@ -31,7 +31,7 @@ char phoenix hide
 pause 60 script
 
 char ??? hide
-"{delay 1}...Oh."
+"{delay 1}...{sfx realization}Oh."
 
 sfx dooropen.wav
 pause 60 script
@@ -120,4 +120,5 @@ char phoenix hide
 char maya e=normal
 "The glue should be somewhere in {n}here."
 
+setflag metblack
 script scene10menu

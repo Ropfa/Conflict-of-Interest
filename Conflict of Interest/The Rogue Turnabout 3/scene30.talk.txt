@@ -17,21 +17,21 @@ goto scene30talk
 
 label Detective Watters
 char phoenix hide
-"Detective Watters said that I'm supposed to wish you luck in recovering."
+"Detective Watters said that I'm {n}supposed to wish you luck in {n}recovering."
 char gumshoe e=crash
 "Mark? You know him?"
 char phoenix hide
 "We met just yesterday."
 "Do you two know each other well?"
 char gumshoe e=crash
-"Our relationship is mostly professional."
+"Our relationship is mostly {n}professional."
 "But yeah. I guess you could say that."
 char maya e=normal
 "He seems to think very highly of you."
 char gumshoe e=crash-laugh
-"Well, I have been on the force a lot longer than him. He kind of looks up to me as a sort of role model."
+"Well, I have been on the force a lot {n}longer than him. He kind of looks up {n}to me as a sort of role model."
 char phoenix hide
-"{c089}(Gumshoe... A role model?!)"
+"{c089}(Gumshoe... {p20}A role model?!)"
 goto top
 
 label Permission

@@ -1,7 +1,11 @@
+//PRESS ALL STATEMENTS
+
 set _list_back_button false
 set wrongevidence 1
 
 mus
+bg witness
+fg wbench
 char cody e=confident
 fg TestimonyAnim fade name=tanim
 nt
@@ -14,12 +18,12 @@ bg witness
 fg wbench
 
 char cody e=confident
-"{tbon}I got a really good picture of Sir Gallante sneaking in!"
-"{tbon}There was a power outage, so that Parker guy had lotsa time to prepare."
+"{tbon}I got a really good picture of Sir {n}Gallante sneaking in!"
+"{tbon}There was a power outage, so that {n}Parker guy had lotsa time to {n}prepare."
 char cody e=happy
-"{tbon}I probably took the picture after he killed Rivales."
+"{tbon}I probably took the picture after he {n}killed Rivales."
 char cody e=confident
-"{tbon}Basically, Parker disguised himself during the blackout, then killed Rivales."
+"{tbon}Basically, Parker disguised himself {n}during the blackout, then killed {n}Rivales."
 
 mus
 bg black
@@ -35,8 +39,9 @@ char cody e=sad
 bg defense
 fg dbench
 char phoenix e=sweating
-"{c089}(How did they manage to turn this around to make it look like Mr. Parker was the one on the roof?)"
-"{c089}(I can't help but think that Cody is blaming him, just to protect the real Sir Gallante.)"
+"{c089}(How did they manage to turn this {n}around to make it look like Mr. {n}Parker was the one on the roof?)"
+char phoenix e=thinking
+"{c089}(I can't help but think that Cody is {n}blaming him, just to protect the real {n}Sir Gallante.)"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -48,10 +53,10 @@ char phoenix e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"The cross-examination, of course! Get on it!"
+"The cross-examination, of course! {n}{p20}Get on it!"
 bg judge
 char judge e=warning
-"Yes! Stop dawdling and wasting our time!"
+"Yes! {n}{p15}Stop dawdling and wasting our time!"
 
 bg witness
 fg wbench
@@ -83,22 +88,22 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "So, let me get this straight."
-"Supposedly, my client stashed his armor on the roof sometime before the murder."
-"Then, that morning, he entered the building... went past Ms. Keyes into the penthouse..."
-"...left the penthouse... went up to the roof... and then came down into the penthouse... again."
+"Supposedly, my client stashed his {n}armor on the roof sometime before {n}the murder."
+"Then, that morning, he entered the {n}building... went past Ms. Keyes {n}into the penthouse..."
+"...left the penthouse... went up to the {n}roof... and then came down into the {n}penthouse... {p15}again."
 bg witness
 fg wbench
-char cody e=happy
+char cody e=confident
 "That about sums it up!"
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(I thought I was supposed to be the one making up ridiculous stories around here.)"
-"{c089}(Why is it that when the prosecution does it, it's accepted as fact?)"
+"{c089}(I thought I was supposed to be the {n}one making up ridiculous stories {n}around here.)"
+"{c089}(Why is it that when the prosecution {n}does it, it's accepted as fact?)"
 bg witness
 fg wbench
 char cody e=angry
-"Except you forgot the most important part, pops."
+"Except you forgot the most {n}important part, pops."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -106,7 +111,7 @@ char phoenix e=normal
 bg witness
 fg wbench
 char cody e=happy
-"The part where he sliced and diced the bad guy!!"
+"The part where he sliced and diced {n}the bad guy!!"
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -114,22 +119,22 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char cody e=confident
-"You can't just imply something like that!"
-"He carved up the baddest man in the city with just a little knife!"
-"Do you have any idea HOW AWESOME THAT IS?!"
+"You can't just imply something like {n}that!"
+"He carved up the baddest man in the {n}city with just a little knife!"
+"Do you have any idea {sfx shout-objection}{sfx shout-general}{n}HOW AWESOME THAT IS?!"
 bg defense
 fg dbench
 char phoenix e=confident
 "{c089}(Aha! Here's my chance!)"
-"Cody, what you just said is very important."
+"Cody, what you just said is very {n}important."
 bg witness
 fg wbench
 char cody e=angry
-"Of course it is! That's what I've been saying!"
+"{s4}{sfx shout-general}Of course it is! {n}That's what I've been saying!"
 bg defense
 fg dbench
 char phoenix e=normal
-"In that case, I don't suppose you'll mind adding it to your testimony."
+"In that case, I don't suppose you'll {n}mind adding it to your testimony."
 bg witness
 fg wbench
 char cody e=confident
@@ -146,44 +151,44 @@ statement cody1A
 bg witness
 fg wbench
 char cody e=confident
-"I got a really good photo of Sir Gallante sneaking in!"
+"I got a really good photo of Sir {n}Gallante sneaking in!"
 
 statement cody1B
 bg witness
 fg wbench
 char cody e=confident
-"There was a power outage, so that Parker guy had lotsa time to prepare."
+"There was a power outage, so that {n}Parker guy had lotsa time to {n}prepare."
 
 statement cody1C
 bg witness
 fg wbench
 char cody e=happy
-"I probably took the picture after he killed Rivales."
+"I probably took the picture after he {n}killed Rivales."
 
 statement cody1D
 bg witness
 fg wbench
 char cody e=confident
-"Basically, Parker disguised himself during the blackout, then killed Rivales."
+"Basically, Parker disguised himself {n}during the blackout, then killed {n}Rivales."
 
 statement cody1E test=show_cody1E
 bg witness
 fg wbench
 char cody e=happy
-"WHAMO! Straight to the jugular with that knife!"
+"{sfx shout-scream}WHAMO! Straight to the jugular with {n}that knife!"
 endcross
 
 label comments
 bg aide
 char maya e=bench-strict
-"What is Cody doing?!"
+"{sfx shout-general}What is Cody doing?!"
 "He knows that Mr. Parker didn't do it!"
 char phoenix hide
-"He's trying to shift the blame to Mr. Parker so that the real Sir Gallante can walk free."
+"He's trying to shift the blame to {n}Mr. Parker so that the real {n}Sir Gallante can walk free."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(I'm disappointed in you, Cody. I didn't think you would sink that low.)"
+"{c089}(I'm disappointed in you, Cody. {n}I didn't think you would sink {n}that low.)"
 goto start
 
 label press cody1A
@@ -192,15 +197,15 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=thinking
 set _ev codyphoto
 showevr
-char phoenix e=thinking
-"You're referring to this picture, right?"
+"You're referring to this picture, {n}right?"
 bg witness
 fg wbench
 char cody e=confident
 "Of course!"
-"What other real life genuine photo of Sir Gallante have you seen?"
+"What other real life genuine photo of {n}Sir Gallante have you seen?"
 bg defense
 fg dbench
 char phoenix e=normal
@@ -208,16 +213,17 @@ char phoenix e=normal
 bg witness
 fg wbench
 char cody e=happy
-"I'll bet if I went to the press, they'd pay me millions for it!"
+"I'll bet if I went to the press, they'd {n}pay me millions for it!"
 hidevr
 bg prosecution
 fg pbench
 char obadiah e=worried
-"That picture's police evidence now. You can't do that."
+"That picture's police evidence now. {n}You can't do that."
 bg witness
 fg wbench
 char cody e=sword
-"H-hey! {n}You can't tell me what to do!!"
+"{sfx shout-shock}H-hey! {n}You can't tell {sfx shout-objection}me what to do!!"
+setflag press1A
 resume
 
 label press cody1B
@@ -232,38 +238,39 @@ bg witness
 fg wbench
 char cody e=angry
 "He was preparing to kill Rivales!"
-"While he was in the penthouse, the power went out."
-"He left, went past that secretary lady, then went up to the room and put on his armor."
+"While he was in the penthouse, the {n}power went out."
+"He left, {p10}went past that secretary {n}lady, {p10}then went up to the room and {n}put on his armor."
 bg defense
 fg dbench
 char phoenix e=normal
-"Where did the armor come from? He definitely wasn't carrying it when the camera saw him."
+"Where did the armor come from? {n}He definitely wasn't carrying it {n}when the camera saw him."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Like the penthouse, the rooftop also didn't have cameras."
-"You could hide something, like armor, without it being found immediately."
+"Like the penthouse, the rooftop also {n}didn't have cameras."
+"You could hide something, like armor, {n}without it being found immediately."
 bg witness
 fg wbench
 char cody e=confident
-"Parker worked in that building, so it isn't like he didn't have plenty of time to stash it up there."
-bg defense
-fg dbench
-char phoenix e=normal
-"Did you search the rooftop? Is there actually any evidence that it was up there?"
-bg prosecution
-fg pbench
-char obadiah e=serious
-"Yes. There were several signs that somebody had tampered with the roof."
+"Parker worked in that building, so it {n}isn't like he didn't have plenty of {n}time to stash it up there."
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(Well, that's unfortunate. I was hoping that was just some wild theory he came up with.)"
+"Did you search the rooftop? {n}Is there actually any evidence that {n}it was up there?"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I'm not the kind to just come up with wild theories."
+"Yes. {p10}There were several signs that {n}somebody had tampered with the {n}roof."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Well, that's unfortunate. {p20}I was {n}hoping that was just some wild {n}theory he came up with.)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I'm not the kind to just come up with {n}wild theories."
 "I know how to do my homework."
+setflag press1B
 resume
 
 label press cody1C
@@ -273,29 +280,32 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=thinking
-"When exactly did he change into the armor?"
-"Ms. Keyes didn't mention anything about it."
+"When exactly did he change into the {n}armor?"
+"Ms. Keyes didn't mention anything {n}about it."
 bg witness
 fg wbench
 char cody e=angry
-"He went in beforehand without it to fool her. Then, he slipped out and changed into it."
-"After that, he went back into the penthouse again and..."
-"{sfx shout-shock}{f}WHAMO!!!"
+"He went in beforehand without it to {n}fool her."
+char cody e=confident
+"Then, he slipped out and changed {n}into it."
+"After that, he went back into the {n}penthouse again and..."
+"{sfx shout-shock}{f}{s}{f}WHAMO!!!"
 bg defense
 fg dbench
 char phoenix e=normal
 "Isn't that a lot of work?"
-"Why not just kill the victim the first time he was in the room?"
+"Why not just kill the victim the first {n}time he was in the room?"
 bg witness
 fg wbench
 char cody e=confident
-"Cuz he's Sir Gallante! Duh!!"
-"He isn't going to kill the king of all crime without his signature armor!"
+"'Cuz he's Sir Gallante! {p5}Duh!!"
+"He isn't going to kill the king of all {n}crime without his signature armor!"
 "That'd ruin his reputation!!!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Apparently, Sir Gallante needs to get his priorities straight.)"
+"{c089}(Apparently, Sir Gallante needs to {n}get his priorities straight.)"
+setflag press1C
 resume
 
 label press cody1D
@@ -305,7 +315,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Am I the only one who has a problem with this theory?"
+"Am I the only one who has a problem {n}with this theory?"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -319,16 +329,17 @@ char cody e=happy
 "Yep!"
 bg aide
 char maya e=bench-strict
-"I can't believe Cody is going along with this, after what we found out yesterday!"
+"I can't believe Cody is going along {n}with this, after what we found out {n}yesterday!"
 "What is his problem?!"
 char phoenix hide
-"Sir Gallante is his idol. I think he's trying to protect him."
+"Sir Gallante is his idol. {n}{p10}I think he's trying to protect him."
 char maya e=bench-profile
-"Cody! How could you?! You betrayed Nick!!"
+"{sfx shout-shock}Cody! {p15}How could you?! {n}{p20}You betrayed Nick!!"
 bg witness
 fg wbench
 char cody e=sad
-"H-Hey... Don't say that... It's not like that!
+"{sfx whoops}H-Hey... {p20}Don't say that... {p20}It's not like that!"
+setflag press1D
 resume
 
 label press cody1E
@@ -338,22 +349,22 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"I don't recall ever discussing the autopsy report with you."
-"You seem to know a lot for somebody who only took one photo from three hundred feet away."
+"I don't recall ever discussing the {n}autopsy report with you."
+"You seem to know a lot for {n}somebody who only took one photo {n}from three hundred feet away."
 bg witness
 fg wbench
 char cody e=angry
-"I came to the trial yesterday! I watched from the gallery."
+"I came to the trial yesterday! {n}I watched from the gallery."
 char cody e=confident
-"You didn't think I'd miss all this, did you?"
+"You didn't think I'd miss all this, {n}did you?"
 bg defense
 fg dbench
 char phoenix e=normal
-"Is this case really that important to you?"
+"Is this case really that important to {n}you?"
 bg witness
 fg wbench
 char cody e=angry
-"That's a dumb question."
+"{sfx shout-general}That's a dumb question."
 bg defense
 fg dbench
 char phoenix e=thinking

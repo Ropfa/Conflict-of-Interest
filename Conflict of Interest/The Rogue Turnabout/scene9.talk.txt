@@ -15,6 +15,7 @@ menu scene9
 goto scene9talk
 
 label Infiltrating the crime scene
+char cody e=angry
 char phoenix hide
 "Why do you want to see a murder {n}scene so much?"
 char cody e=angry
@@ -110,7 +111,7 @@ char cody e=angry
 char maya e=pumped
 "Yeah, Nick! {n}Get it right!"
 char phoenix hide
-"Well, how was I supposed to know {n}that was a silent E at the end?!"
+"Well, how was I supposed to know {n}that it wasn't a silent E at {n}the end?!"
 char cody e=confident
 "Sir Gallante's only the greatest {n}super hero who ever lived!"
 char maya e=mad
@@ -216,7 +217,7 @@ pause 60 script
 char maya e=thinking
 "Um... {p20}Cody..."
 char phoenix hide
-"Let's just leave it, Maya.{n}Things might be easier this way."
+"Let's just leave it, Maya.{n}{p10}Things might be easier this way."
 "{c089}(Haha! Did I really tell him that?)"
 mus Investigation - Opening.ogg
 set _music_loop Investigation - Opening - loop.ogg

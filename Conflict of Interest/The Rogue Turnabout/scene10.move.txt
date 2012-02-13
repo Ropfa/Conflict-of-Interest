@@ -13,8 +13,8 @@ showlist
 menu scene10
 
 label Detention Center
-noflag gunget scene4
-flag gunget parkergone
+noflag gungot scene4
+flag gungot parkergone
 label scene4
 mus
 script scene4menu

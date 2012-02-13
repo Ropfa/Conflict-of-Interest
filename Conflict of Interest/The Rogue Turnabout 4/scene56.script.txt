@@ -1,33 +1,33 @@
 bg defense
 fg dbench
 char phoenix e=confident
-"That way, if anything went wrong for him, you would be waiting right outside the front door."
+"That way, if anything went wrong for {n}him, you would be waiting right {n}outside the front door."
 
 bg witness
 fg wbench
 char gumshoe e=pumped
-"Detective Gumshoe to the rescue, pal!"
+"Detective Gumshoe to the rescue, {n}pal!"
 
 bg prosecution
 fg pbench
 char obadiah e=angry
-"But something did go wrong. Why was he never alerted?"
+"But something did go wrong. {n}{p15}Why was he never alerted?"
 
 bg defense
 fg dbench
 char phoenix e=thinking
-"I think that part's pretty clear. {e confident}He was unconscious."
-"He couldn't have known whether or not his help was needed."
+"I think that part's pretty clear. {p20}{n}{e confident}He was unconscious."
+"He couldn't have known whether or {n}not his help was needed."
 
 bg witness
 fg wbench
 char gumshoe e=pumped
-"I think we talked for about twenty minutes before he went in."
+"I think we talked for about twenty {n}minutes before he went in."
 
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Tw-Twenty minutes... But that would mean he went in..."
+"Tw{p5}-Twenty minutes... {n}{p15}But that would mean he went in..."
 
 bg defense
 fg dbench
@@ -37,14 +37,15 @@ char phoenix e=confident
 bg prosecution
 fg pbench
 char obadiah e=damage
-"A-AH!!"
+"A-{sfx shout-angry}AH!!"
 
 bg witness
 fg wbench
 char gumshoe e=pumped
-"I tried to talk him out of it, but he wouldn't listen!"
-"He wasn't the nice, carefree Mark I knew. He was like some kind of cornered animal!"
-"I was worried he might do something really stupid!"
+"I tried to talk him out of it, but he {n}wouldn't listen!"
+"He wasn't the nice, carefree Mark {n}I knew."
+"He was like some kind of cornered {n}animal!"
+"I was worried he might do something {n}really stupid!"
 
 mus
 
@@ -56,18 +57,19 @@ char obadiah e=angry
 bg defense
 fg dbench
 char phoenix e=confident
-"You know what this means. All that evidence I had earlier...?"
+"You know what this means. {n}All that evidence I had earlier...?"
 "I now have a witness to back it up."
-"Gumshoe has just testified that he met with Watters that morning."
-"He entered the Rivales Tower... and he looked frightened enough to do something very, {p20}very {p20}stupid."
-"A stupid mistake... {p20}{delay 1}like, perhaps, murder?"
+"Gumshoe has just testified that he {n}met with Watters that morning."
+"He entered the Rivales Tower... {n}and he looked frightened enough to {n}do something {p10}very, {p20}very {p20}stupid."
+"A stupid mistake... {n}{p20}{delay 1}like, perhaps, murder?"
 
+bg courtgumshoe
 sfx courtmurmur
-pause 80 script
+pause 100 script
 
 sfx shout-objection
 fg notsofast
-pause 5 script
+pause 10 script
 
 bg witness
 fg wbench
@@ -75,7 +77,7 @@ char watters e=angry
 sfx dramapound
 "{s5}{next}"
 pause 40 script
-"{delay 1}You're a real piece of work. You know that, Wright?"
+"{delay 1}You're a real piece of work. {n}You know that, Wright?"
 
 bg defense
 fg dbench
@@ -88,25 +90,16 @@ set _music_loop Pinch! - loop.ogg
 bg witness
 fg wbench
 char watters e=angry
-"Maybe you're still forgetting that there was nowhere for me to hide in that building."
-"I needed to get into that penthouse, right?"
+"Maybe you're still forgetting that {n}there was nowhere for me to hide in {n}that building."
+"I needed to get into that penthouse, {n}right?"
 "So how'd I do it? {n}{p20}{delay 1}How'd I get in there?"
-
-bg defense
-fg dbench
-char phoenix e=handsondesk
-"You climbed down from the roof and through the window."
-
-bg witness
-fg wbench
-char watters e=angry
-"Right, right, right.{n}{p20}We all know that story...{n}But how'd I get up there?"
-"I would've had to sneak past Sarah Keyes."
+"How'd I get up there?"
+"I would've had to sneak past Sarah {n}Keyes."
 
 bg prosecution
 fg pbench
 char obadiah e=angry
-"He's right. You still haven't shown how he got up there in the first place."
+"He's right. You still haven't shown {n}how he got up there in the first {n}place."
 
 bg defense
 fg dbench
@@ -123,11 +116,11 @@ showlist
 
 label It was too dark
 char phoenix e=confident
-"It was too dark for her to see anything. He was able to slip by without her noticing."
+"It was too dark for her to see {n}anything. He was able to slip by {n}without her noticing."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Weren't you paying attention yesterday?"
+"Weren't you paying attention {n}yesterday?"
 "She said that she could see just fine!"
 "{f}{next}"
 bg witness
@@ -156,7 +149,7 @@ char phoenix e=handsondesk
 "He sneaked past her."
 bg prosecution
 fg pbench
-char obadiah e=seriou2
+char obadiah e=serious2
 "Ninjas?"
 bg defense
 fg dbench
@@ -166,11 +159,11 @@ bg prosecution
 fg pbench
 char obadiah e=serious2
 "Have you taken a look at the guy?"
-"He's about as unstealthy as you can get!"
+"He's about as unstealthy as you can {n}{sfx shout-general}get!"
 bg witness
 fg wbench
 char watters e=confused
-"Hey, what are you talking about? I can be sneaky if I want!"
+"Hey, what are you talking about? {n}I can be sneaky if I want!"
 bg prosecution
 fg pbench
 char obadiah e=serious2
@@ -182,9 +175,9 @@ char watters e=shock
 bg prosecution
 fg pbench
 char obadiah e=serious
-"You've been in that hallway. You know it isn't exactly the most spacious area."
-"By saying he managed to sneak past a woman whose sole purpose was to guard the victim...
-"...you aren't complimenting Detective Watters... You're insulting Ms. Keyes."
+"You've been in that hallway. {n}You know it isn't exactly the {n}most spacious area."
+"By saying he managed to sneak past {n}a woman whose sole purpose was to {n}guard the victim...
+"...you aren't complimenting Detective {n}Watters... {p20}You're insulting Ms. Keyes."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -193,11 +186,11 @@ goto redo
 
 label Sarah was distracted
 char phoenix e=confident
-"He managed to slip past her while she was distracted."
+"He managed to slip past her while she {n}was distracted."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"By what?{p20}It better have been big for her to completely overlook a man running through the hallway."
+"By what?{p20} It better have been big for {n}her to completely overlook a man running {n}through the hallway."
 bg defense
 fg dbench
 char phoenix e=confident
@@ -215,12 +208,12 @@ bg defense
 fg dbench
 char phoenix e=normal
 "She was distracted by the blackout."
-"{e pointing}She was trying to figure out how to get everything running again!"
+"{e pointing}She was trying to figure out how to {n}get everything running again!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I'd think that somebody who's livelihood depended on those computer would recognize a power failure."
-"She'd have realized that it was pointless."
+"I'd think that somebody whose {n}livelihood depended on that system {n}would recognize a power failure."
+"She'd have realized that it was {n}pointless."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -251,12 +244,12 @@ bg defense
 fg dbench
 char phoenix e=normal
 "She was distracted by the blackout."
-"{e pointing}She was trying to figure out how to get everything running again!"
+"{e pointing}She was trying to figure out how to {n}get everything running again!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I'd think that somebody who's livelihood depended on those computer would recognize a power failure."
-"She'd have realized that it was pointless."
+"I'd think that somebody whose {n}livelihood depended on that system {n}would recognize a power failure."
+"She'd have realized that it was {n}pointless."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -286,8 +279,8 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=thinking
-"Perhaps you've noticed my client? {e confident}He's rather hard to miss."
-"{e objecting}He's what distracted Ms. Keyes!"
+"Perhaps you've noticed my client? {n}{p15}{e confident}He's rather hard to miss."
+"{e objecting}{sfx shout-objection}He's what distracted Ms. Keyes!"
 bg judge
 char judge e=surprised
 "Wh-What do you mean?"
@@ -297,16 +290,17 @@ bg blueprints
 //MARKERS FILLER
 
 char phoenix hide
-"The defendant entered the building while the power was still on. We have video footage of this."
-"After the power went out, he started leaving... and passed right by reception and Ms. Keyes."
+"The defendant entered the building {n}while the power was still on. We {n}have video footage of this."
+"After the power went out, he started {n}leaving..."
+"...and passed right by reception and {n}Ms. Keyes."
 char obadiah hide
-"So you're saying that at that point, all her attention was directed at him?"
+"So you're saying that at that point, {n}all her attention was directed at {n}him?"
 char watters hide
-"Wait, man. If that was the case, Parker would've seen me."
+"Wait, man. {n}If that was the case, Parker {n}would've seen me."
 char judge hide
 "Yes, that's right!"
 char watters hide
-"Keyes's attention may have been turned the other way, but I would've still been in sight of the big guy."
+"Keyes's attention may have been {n}turned the other way, but I would've {n}still been in sight of the big guy."
 
 sfx screenwipe
 bg defense
@@ -322,7 +316,7 @@ char watters e=nervous
 bg defense
 fg dbench
 char phoenix e=confident
-"If you two were in there at the same time, there's no way he could have missed you."
+"If you two were in there at the same {n}time, there's no way he could have {n}missed you."
 
 bg witness
 fg wbench
@@ -332,7 +326,7 @@ char watters e=nervous
 bg defense
 fg dbench
 char phoenix e=confident
-"Not quite> That would mean that there is {sfx dramapound}{c940}another potential witness{c999}."
+"Not quite. That would mean that {n}there is {sfx dramapound}{c940}another {n}potential witness{c999}."
 
 mus
 bg witness
@@ -348,7 +342,7 @@ bg speedzoom stack name=zoom
 delete name=1
 sfx shout-objection
 char phoenix e=zoom
-"{f}Shall we {f}have my client {f}testify as to whether {f}or not he {f}saw you?!"
+"{f}Shall we {f}have my client {f}testify as to {n}whether {f}or not he {f}saw you?!"
 delete name=zoom
 
 bg witness
@@ -359,7 +353,7 @@ char watters e=angry
 bg defense
 fg dbench
 char phoenix e=confident
-"So no? You don't want that? You might as well be confessing then."
+"So no? You don't want that? {n}You might as well be confessing."
 
 bg witness
 fg wbench
@@ -370,31 +364,31 @@ bg judge
 char judge e=headshake
 pause 50 script
 char judge e=warning
-"Detective, I don't believe you realize just how guilty you've made yourself look."
+"Detective, I don't believe you realize {n}just how guilty you've made yourself {n}look."
 
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"*sigh*{n}Watters..."
+"*sigh*{n}{p20}Watters..."
 
 bg witness
 fg wbench
 char watters e=nervous
-"H-Hey, I didn't mean that. I just got a little carried away is all."
+"H-Hey, I didn't mean that. {n}I just got a little carried away {n}is all."
 
 bg judge
 char judge e=normal
-"I believe that is something that we can let the jurors decide."
+"I believe that is something that we {n}can let the jury decide."
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Your Honor, if I may... I'd like to continue the trial just a little bit longer."
+"Your Honor, if I may... I'd like to {n}continue the trial just a little {n}bit longer."
 
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"You've already proven that we have a new suspect. Let's just finish this."
+"You've already proven that we have {n}a new suspect. {p10}Let's just finish {n}this."
 
 bg defense
 fg dbench
@@ -409,14 +403,14 @@ char obadiah e=serious2
 bg defense
 fg dbench
 char phoenix e=confident
-"Yesterday, you said something that I believe also applies to right now..."
-""We can't have that man walking away only charged with one murder now, can we?..."
-"...It would be an injustice to the dead.""
+"Yesterday, you said something that I {n}believe also applies to right now..."
+""We can't have that man walking {n}away only charged with one murder {n}now, can we?..."
+"{delay 1}...It would be an injustice to the {n}dead.""
 
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"...{sfx realization}{e serious}!{n}{p30}W-Wait... But that's... {e angry}Are you...?"
+"...{p15}{sfx realization}{e serious}!{n}{p30}W-Wait... {p15}But that's... {p20}{e angry}Are you...?"
 
 bg defense
 fg dbench
@@ -424,7 +418,12 @@ char phoenix e=confident
 mus Confess the Truth.ogg
 set _music_loop Confess the Truth - loop.ogg
 "Oh, I am."
-"{e objecting}{sfx shout-objection}Mark Watters, {e pointing}I'm accusing you of being Sir Gallante!"
+"{e objecting}{sfx shout-objection}Mark Watters, {e pointing}I'm accusing you of {n}being Sir Gallante!"
+
+bg witness
+fg wbench
+char watters e=shock
+"{sfx shout-general}WHAAAA?{n}{sfx shout-scream}HEEEY!!!"
 
 sfx /godot/objection.ogg
 fg ObjectionAnim
@@ -432,25 +431,25 @@ pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Hold it! This doesn't even make a lick of sense!"
+"Hold it! This doesn't even make a lick {n}of sense!"
 
 bg judge
 char judge e=normal
-"Overruled. Let's hear what the defense has to say."
+"Overruled. Let's hear what the {n}defense has to say."
 
 bg defense
 fg dbench
 char phoenix e=normal
-"The prosecution's case for this being a Gallante killing hasn't made any sense since this case started."
-"There hasn't been any evidence to support it!"
-"The mark was never found, and it wasn't until later that they learned about Cody's photograph."
+"The prosecution's case for this being {n}a Gallante killing hasn't made any {n}sense since this case started."
+"There hasn't been any evidence to {n}support it!"
+"The mark was never found, and it {n}wasn't until later that they {n}learned about Cody's photograph."
 char phoenix e=confident
-"So... Tell me Watters... Why were you so certain that Sir Gallante was the culprit here?"
+"So... {p20}Tell me Watters... {p20}{n}Why were you so certain that Sir {n}Gallante was the culprit here?"
 
 bg witness
 fg wbench
 char watters e=nervous
-"{sfx shout-shock}!!!{n}{p25}Well, I... Well, that's actually a funny story..."
+"{sfx shout-shock}!!!{n}{p25}Well, I... Well, that's actually a funny {n}story..."
 
 bg defense
 fg dbench
@@ -458,12 +457,13 @@ sfx deskslam
 char phoenix e=deskslam
 pause 50 script
 char phoenix e=handsondesk
-"You knew because you were the killer! {e pointing}{sfx shout-objection}{c940}You are Sir Gallante{c999}!!!"
+"You knew because you were the {n}killer!"
+"{e pointing}{sfx shout-objection}{c940}You are {f}Sir {f}Gallante{c999}!!!"
 
 bg witness
 fg wbench
 char watters e=shock
-"{sfx shout-shock}NoOoO{sfx shout-objection}oOoOoOoO!!!"
+"{sfx shout-shock}N{s}oO{s}oO{sfx shout-objection}oOo{s}OoOoO!!!"
 
 sfx /godot/objection.ogg
 fg ObjectionAnim
@@ -471,8 +471,8 @@ pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Detective... Don't make this harder on yourself."
-"We all know why it's {c940}impossible for you to be Sir Gallante{c999}."
+"Detective... Don't make this harder {n}on yourself."
+"We all know why it's {c940}impossible for {n}you to be Sir Gallante{c999}."
 
 bg witness
 fg wbench
@@ -482,12 +482,12 @@ char watters e=nervous
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Why don't you just explain it, so we can end this farce?"
+"Why don't you just explain it, so we {n}can end this farce?"
 
 bg witness
 fg wbench
 char watters e=nervous
-"O-Okay, Boss. {e smirk}I'll do that!"
+"O-Okay, Boss. {p20}{e smirk}I'll do that!"
 mus
 script scene57watterstestimony3
 
@@ -509,11 +509,11 @@ char phoenix e=pointing
 "It's a {sfx shout-objection}distraction!"
 bg judge
 char judge e=normal
-"I'm not sure even I could get distracted by that?"
+"I'm not sure even I could get {n}distracted by that!"
 bg defense
 fg dbench
 char phoenix e=thinking
-"Are you sure? I think it's rather eye-catching."
+"Are you sure? {n}{p10}I think it's rather eye-catching."
 bg judge
 char judge e=headshake
 pause 50 script
@@ -522,14 +522,14 @@ char judge e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Clearly something intended to distract us from the fact that you're off track."
+"Clearly something intended to {n}distract us from the fact that {n}you're off track."
 sfx damage.wav
 penalty -20
 is penalty 0 failure
 bg defense
 fg dbench
 char phoenix e=thinking
-"Hm... Well, in that case, maybe this is what distracted her..."
+"Hmm... {n}Well, in that case, maybe {n}this is what distracted her..."
 goto redopresent
 
 label failure

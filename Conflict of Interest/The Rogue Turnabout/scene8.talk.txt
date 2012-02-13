@@ -23,6 +23,7 @@ menu scene8
 goto scene8talk3
 
 label Sarah Keyes
+char sarah e=normal
 char phoenix hide
 "What exactly is it you do here, {p20}um...{p40} {n}Sarah?"
 char sarah e=normal
@@ -117,6 +118,7 @@ setflag sarahkeyestalk
 goto top
 
 label What you saw
+char sarah e=normal
 char phoenix hide
 "Could you tell me about what you {n}saw this morning?"
 char sarah e=normal

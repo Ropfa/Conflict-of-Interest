@@ -137,7 +137,7 @@ char phoenix hide
 pause 20 script
 sfx realization
 "{c089}(Wait, what?)"
-"...I'll be there right away."
+"...{p10}I'll be there right away."
 
 char nurse hide
 "Thank you, Mr. Wright.{n}{p10}I'm sorry for any inconvenience.{p20}{n}Have a nice day!"

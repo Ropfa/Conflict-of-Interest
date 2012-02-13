@@ -12,16 +12,16 @@ goto top
 
 label maya$
 char gumshoe e=crash
-"Sorry, pal. I don't know anything about that."
-pause 60 script
+"Sorry, pal. I don't know anything {n}about that."
+pause 80 script
 char maya e=disheartened fade
-"Nick... {p20}Is his concussion really so bad that he doesn't remember me?"
+"Nick... {p20}Is his concussion really so bad {n}that he doesn't remember me?"
 char phoenix hide
-"I'm sure... I'm sure he'll be fine."
+"I'm sure... {p20}I'm sure he'll be fine."
 "{c089}(I was NOT expecting that.)"
 goto top
 
 label none
 char gumshoe e=crash
-"Sorry, pal. I don't know anything about that."
+"Sorry, pal. I don't know anything {n}about that."
 goto top

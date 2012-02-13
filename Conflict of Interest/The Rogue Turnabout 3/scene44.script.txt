@@ -1,2 +1,97 @@
 bg pent4
 char watters e=sad
+char phoenix hide
+"You were married?"
+
+char watters e=sad
+"Yeah. Sandy was an officer with me down at the precinct."
+"We met at the academy."
+
+char maya e=disheartened
+"What was she like?"
+
+char watters e=sad
+"She was amazing!"
+"She always knew what she believed in and was willing to stand up for it."
+"I think that's what drew me to her."
+
+char phoenix hide
+"It's hard to find people nowadays who are willing to stand up for what's right."
+
+char watters e=sad
+"Yeah. She was so full of conviction."
+"Naive conviction{p20}, but conviction."
+
+char phoenix hide
+"Naive...?"
+
+char watters e=sad
+"She was convinced that she could fight the mob."
+"Everybody told her it couldn't be done.{p20} I...{p20} I told her it couldn't be done."
+"But she wouldn't listen."
+"She got a bit too close... Did a few things they didn't like..."
+"...and she died for it."
+"All the people on that list are politicians and police officers who've tried to fight the Family over the years."
+"Of all the things we might've found today... I never imagined it would be that."
+
+char phoenix hide
+"Those people died doing the right thing."
+
+char watters e=sad
+"That doesn't matter! Don't you see, man?"
+"They all tried to be good people, and they died for it. Sandy died for it!"
+"There's no justice in that!"
+mus
+char watters e=angry
+"That's how this crappy world works! It's sickening!"
+"Sometimes I feel like I'm the only one in this department who actually gives a damn!"
+
+pause 80 script
+
+char phoenix hide
+"Feel better?"
+
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+
+char watters e=angry
+"Y-{e angry}Yeah... {n}I shouldn't have said that stuff."
+"You probably haven't noticed this about me yet... but I kinda have a big mouth."
+
+char phoenix hide
+"{c089}(No, Mr. Watters... That was the first thing I noticed about you.)"
+
+char watters e=sad
+"It happened a while back. Some reporter guy comes up to me, starts asking a few questions..."
+"...and before I know it, I've told him half the stuff we know."
+"Can't remember his name. He smelled kinda funny though."
+
+char phoenix hide
+"Mint?"
+
+char watters e=confused
+"...Yeah. {p20}{n}How'd you know?"
+
+char phoenix hide
+"Just a guess."
+"So you were the one who leaked the information on Sir Gallante?"
+
+char watters e=sad
+"Please don't tell the boss man. He'd get mad at me."
+
+char phoenix hide
+"I don't think you'll have to worry about him getting angry about that."
+"{c089}(He'll have a lot more to be angry about soon enough.)"
+"{c089}(Past experience has taught me that it's a bad idea to reveal your hand too early.)"
+"{c089}(Now's not the time to confront Watters. I'll save that for tomorrow in court...)"
+
+bg black fade
+pause 80 script
+mus
+pause 80
+mus Jingle - Slight Break.ogg
+bg tobecontinued fade
+pause 300
+mus
+bg nothing fade
+exit

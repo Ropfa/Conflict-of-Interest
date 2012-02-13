@@ -9,15 +9,21 @@ menu scene8
 
 label Entrance
 noflag securityupdate1 AND securityupdate2 AND sarahkeyestalk AND whatyousawtalk scene5
-flag securityupdate1 AND securityupdate2 AND sarahkeyestalk AND whatyousawtalk scene9
+flag securityupdate1 AND securityupdate2 AND sarahkeyestalk AND whatyousawtalk ifthen
 label scene5
 mus
 script scene5menu
+label ifthen
+noflag glueget scene9
+flag glueget ifthen2
 label scene9
 mus
 delev security
 addev security2
 script scene9
+label ifthen2
+mus
+script scene11menu
 
 label Penthouse
 noflag sarahpsyche scene7

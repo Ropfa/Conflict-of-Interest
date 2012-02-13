@@ -1,22 +1,22 @@
 bg defense
 fg dbench
 char phoenix e=normal
-"Cody, I think I know what cause your "light of justice"."
+"Cody, I think I know what cause your {n}"light of justice"."
 bg witness
 fg wbench
 char cody e=confident
-"Really? Was it a thunderbolt from heaven?"
+"Really? Was it a thunderbolt from {n}the heavens?"
 bg defense
 fg dbench
 char phoenix e=headshake
 pause 50 script
 char phoenix e=normal
-"No... And I'm pretty sure you know what it actually was."
+"No... {n}And I'm pretty sure you know {n}what it actually was."
 
 mus Objection.ogg
 set _music_loop Objection - loop.ogg
 
-"It was the same piece of evidence that you and I have been examining together these past two days...{next}"
+"It was the same piece of evidence {n}that you and I have been examining {n}together these past two days...{next}"
 set _ev gun
 showevr
 char phoenix e=objecting
@@ -24,42 +24,44 @@ char phoenix e=objecting
 bg prosecution
 fg pbench
 char obadiah e=damage
-"Wh-{sfx shout-general}What?!"
+"Wh-{sfx shout-angry}What?!"
 bg judge
 char judge e=surprised
-"W-Wait a minute! Don't go waving that thing around in my courtroom!"
+"W-Wait a minute! {n}{p15}Don't go waving that thing {n}around in my courtroom!"
 bg defense
 fg dbench
 char phoenix e=confident
-"Don't worry, Your Honor. This gun is empty... and it won't be firing anytime soon."
+"Don't worry, Your Honor. {n}This gun is empty..."
+"...and it won't be firing anytime soon."
 char phoenix e=thinking
-"In fact, I'd say it's a miracle we were even able to get it back in one piece."
+"In fact, I'd say it's a miracle we were {n}even able to get it back in one piece."
 bg judge
 char judge e=surprised
-"I don't understand though. The victim was killed with a sword, not a gun."
+"I don't understand though. {n}The victim was killed with a {n}sword, not a gun."
 "We just established that."
 bg defense
 fg dbench
 char phoenix e=normal
-"It was fired that night. The witness even saw it. That was the flash of light that he saw!"
-"Whoever brought the gun into the penthouse clearly intended to harm somebody with it."
+"It was fired that night. The witness {n}even saw it. That was the flash of {n}light that he saw!"
+"Whoever brought the gun into the {n}penthouse clearly intended to harm {n}somebody with it."
 bg prosecution
+fg pbench
 char obadiah e=angry
 "Where did you find that?!"
 bg defense
 fg dbench
 char phoenix e=normal
-"It was found near the sidewalk of the Rivales Tower."
+"It was found near the sidewalk of the {n}Rivales Tower."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"So it wasn't actually at the crime scene?"
+"So it wasn't actually at the crime {n}scene?"
 bg defense
 fg dbench
 char phoenix e=confident
-"No... But it was smashed into a hundred little pieces."
-"And it has fingerprints on it that prove it was in the penthouse."
-"What better way to smash a gun that by dropping it out of a thirty-story building?"
+"No... {p10}But it was smashed into a {n}hundred little pieces on the ground."
+"And it has fingerprints on it that {n}prove it was in the penthouse."
+"What better way to smash a gun than {n}by dropping it out of a thirty {n}story building?"
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -71,8 +73,8 @@ char cody e=confident
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(Cody's testimony led us directly to this point. Did he...?)"
-"Cody, have you been intentionally putting holes into your testimony?"
+"{c089}(Cody's testimony led us directly to {n}this point. {p15}Did he...?)"
+"Cody, have you been intentionally {n}putting holes into your testimony?"
 bg witness
 fg wbench
 char cody e=confident
@@ -80,71 +82,72 @@ char cody e=confident
 bg prosecution
 fg pbench
 char obadiah e=damage
-"WHAT?!"
+"{sfx damage}WHAT?!"
 bg witness
 fg wbench
 char cody e=confident
-"Hah! Face it, old man. No way you're winning against Mr. Wright today."
+"{sfx shout-general}Hah! {n}Face it, old man."
+"No way you're winning against {n}Mr. Wright today."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"{s5}You intentionally {s5}sabotaged{s5}my{s5}case?!"
+"{s5}You intentionally {s5}sabotaged{s5} my{s5} {n}case?!"
 bg witness
 fg wbench
 char cody e=angry
-"Hey, I just got in here and rattled off whatever it was you told me to say."
+"Hey, I just got in here and rattled off {n}whatever it was you told me to say."
 char cody e=confident
-"I guess I slipped in some of my own parts too."
+"I guess I slipped in some of my own {n}parts too."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"{delay 1}......"
+"{delay 2}......"
 mus
 bg aide
 char maya e=bench-profile
-"Cody, I don't understand... {p20}Isn't Sir Gallante your idol?"
-"Why would you want to help us catch him?"
+"Cody, I don't understand... {p20}{n}Isn't Sir Gallante your idol?"
+"Why would you want to help us catch {n}him?"
 bg witness
 fg wbench
 char cody e=confident
-"Hey, Sir Gallante's cool. But he's still a killer."
-"If I were to defend him in place of an innocent person, then I'd be going against his rules!"
+"Hey, Sir Gallante's cool. {p10}{n}But he's still a killer."
+"If I were to defend him in place of an {n}innocent guy, then I'd be going against {n}his rules!"
 "{e happy}Protect the innocent!"
 bg defense
 fg dbench
 char phoenix e=normal
-"Protect the innocent..."
+"{sfx shout-objection}Protect the innocent..."
 bg witness
 fg wbench
 char cody e=happy
-"Yeah! That's what you're doing, right?"
+"Yeah! {n}That's what you're doing, right?"
 mus Objection.ogg
 set _music_loop Objection - loop.ogg
 "You could be a super hero too, pops!"
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(I didn't know Cody thought that highly of me.)"
+"{c089}(I didn't know Cody thought that {n}highly of me.)"
 bg witness
 fg wbench
 char cody e=happy
-"You're gonna take down the bad guy, right?"
-"Give him the epic finger point of justice!!"
+"You're gonna take down the bad guy, {n}right?"
+"Give him the epic finger point of {sfx shout-objection}{n}justice!!"
 bg defense
 fg dbench
 char phoenix e=confident
 "That's the idea."
 bg judge
 char judge e=normal
-"Mr. Wright, it seems you have another idea of who may have killed the victim."
+"Mr. Wright, it seems you have {n}another idea of who may have {n}killed the victim."
 bg defense
 fg dbench
 char phoenix e=confident
 "I do, Your Honor."
-"The real killer is the one who fired the gun."
+"The real killer is the one who fired the {n}gun."
 bg judge
 char judge e=normal
-"Well, perhaps you would mind telling us?"
+"Well, perhaps you would mind telling {n}us?"
 bg witness
 fg wbench
 char cody e=happy
@@ -153,14 +156,14 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(Alright, Phoenix. Here it comes!)"
-"{c090}I'm willing to bet that this person fired the gun..."
+"{c090}I'm willing to bet that this person {n}fired the gun..."
 label redo
 set _cr_back_button false
-set _evidence_present false
+setvar _allow_present_evidence false
 present
 
 
-label rivaleupdate$
+label rivalesupdate$
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
@@ -168,9 +171,9 @@ set _cr_back_button true
 bg defense
 fg dbench
 char phoenix e=confident
-"Obviously, it was Michael Rivales. His fingerprints are on the gun because he's the real killer!"
+"Obviously, it was Michael Rivales. {n}His fingerprints are on the gun {n}because he's the real killer!"
 char phoenix e=pointing
-"This wasn't a murder! It was a suicide! He shot himself!"
+"{sfx shout-objection}This wasn't a murder! {n}It was a suicide! {n}He shot himself!"
 sfx dramapound
 mus
 pause 50 script
@@ -190,15 +193,15 @@ pause 50 script
 bg defense
 fg dbench
 char phoenix e=pointing
-"What do you have to say to that, Williamson?"
+"What do you have to say to that, {n}Williamson?"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Nothing. I don't have to. Your stupidity speaks wonders for itself."
+"Nothing. I don't have to. {p20}{n}Your stupidity speaks wonders for {n}itself."
 bg defense
 fg dbench
 char phoenix e=sweating
-"{sfx whoops}Urp! Hehe... I was just joking anyway."
+"{sfx whoops}Urp! {n}{p20}Hehe... I was just joking anyway."
 mus Objection.ogg
 set _music_loop Objection - loop.ogg
 "{c090}{e thinking}It was actually this person..."
@@ -211,42 +214,43 @@ mus
 sfx /phoenix/takethat.ogg
 pause 5 script
 set _cr_back_button true
-set _ev watters$
-showevl
 bg prosecution
 fg pbench
 char obadiah e=serious
+set _ev watters$
+showevl
 "Pfft..."
 pause 50 script
 sfx realization
-"...Wait, are you being serious?"
-"You aren't actually... Are you?"
+pause 30 script
+"...{p10}Wait, are you being serious?"
+"You aren't actually... {p20}Are you?"
 bg defense
 fg dbench
 char phoenix e=nodding
 pause 50 script
 char phoenix e=normal
-"The defense would like to formally accuse Detective Mark Watters for the murder of Michael Rivales."
+"The defense would like to formally {n}accuse Detective Mark Watters for {n}the murder of Michael Rivales."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"You are!"
+"{sfx damage}You are!"
 bg judge
 char judge e=normal
-"This is a very serious move you're making, Mr. Wright."
-"I trust that you have evidence to back up your claim?"
+"This is a very serious move you're {n}making, Mr. Wright."
+"I trust that you have evidence to {n}back up your claim?"
 bg defense
 fg dbench
 char phoenix e=normal
-"I do. Detective Watters's fingerprints were on the gun."
+"I do. {n}{p15}Detective Watters's fingerprints {n}were on the gun."
 bg judge
 char judge e=normal
 "That is certainly suspicious."
-"Bailiff! Please send for the detective. I want him to testify for us."
+"Bailiff! Please send for the detective. {n}{p10}I want him to testify for us."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"You'd better know what you're doing, Wright..."
+"You'd better know what you're {n}doing, Wright..."
 bg black fade
 pause 60 script
 bg courtwatters fade
@@ -260,53 +264,53 @@ char judge e=warning
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"Please state your name and occupation."
+"Please state your name and {n}occupation."
 bg witness
 fg wbench
 char watters e=smile
-"Name's Mark Watters. I'm a detective."
+"Name's Mark Watters. {n}I'm a detective."
 pause 40 script
 char watters e=confused
-"Hey, Boss... Shouldn't I be, uh, investigating the crime scene?"
-"I don't really have anything new to report yet."
+"Hey, Boss... {n}Shouldn't I be, uh, investigating {n}the crime scene?"
+"I don't really have anything new to {n}report yet."
 bg judge
 char judge e=normal
 "I'm afraid that will have to wait."
-bg court watters
-sfx courtmurmur
-pause 100 script
+bg witness
+fg wbench
+char watters e=confused
+"Huh?{n}Whaddaya mean?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-sfx courtmurmur
 "{c089}(Doesn't he realize it yet?)"
 bg witness
 fg wbench
 char watters e=nervous
-"Hey, why's everyone looking at me so weird? It's creeping me out."
+"Hey, why's everyone looking at me {n}so weird? It's creeping me out."
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"Detective Mark Watters, you have been accused of the murder of Michael Rivales."
-"Do you have anything to say for yourself?"
+"Detective Mark Watters, you have {n}been accused of the murder of {n}Michael Rivales."
+"Do you have anything to say for {n}yourself?"
 bg witness
 fg wbench
-char watters e=confused
-".........{delay 1}{n}.........{e angry}{sfx shockingreveal}"
+char watters e=serious(blink)
+".........{delay 2}{n}.........{e angry}{sfx shockingreveal}"
 pause 60 script
 mus Suspense.ogg
 set _music_loop Suspense - loop.ogg
-"What. {p30}The. {p30}Hell. {p30}Man."
+"What. {p20}The. {p20}Hell. {p20}Man."
 bg judge
 char judge e=headshake
 pause 50 script
 char judge e=normal
-"Detective, I do not approve of that kind of language in my courtroom."
+"Detective, I do not approve of that {n}kind of language in my courtroom."
 bg witness
 fg wbench
 char watters e=angry
-"{sfx shout-general}Screw that! I'm being accused of killing a guy and you think I'm just gonna sit back and take it?!"
-"Do you even have any grounds for this?"
+"{sfx shout-general}Screw that! {p20}I'm being accused of {n}killing a guy and you think I'm just {n}gonna sit back and take it?!"
+"Do you even have any grounds for {n}{sfx shout-general}this?"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -314,23 +318,23 @@ char obadiah e=serious
 bg witness
 fg wbench
 char watters e=angry
-"Well, screw you, Wright! I can't believe you'd backstab me like this!!"
+"Well, screw you, Wright! {n}I can't believe you'd backstab {n}me like this!!"
 bg defense
 fg dbench
 char phoenix e=normal
-"You seem like a nice guy, Watters... But I can't ignore your crimes."
+"You seem like a nice guy, Watters... {p10}{n}But I can't ignore your crimes."
 bg witness
 fg wbench
 char watters e=angry
-"C'mon, man! You can't really think that I did it."
+"C'mon, man! {n}You can't really think that I did it."
 bg defense
 fg dbench
 char phoenix e=normal
-"If I didn't, you wouldn't be here right now."
+"If I didn't, you wouldn't be here {n}right now."
 bg witness
 fg wbench
 char watters e=smirk
-"Ha! Well, then. I'd like to see you prove anything!"
+"{sfx shout-general}Ha! {p10}Well, then. {p10}I'd like to see you {n}prove anything!"
 bg defense
 fg dbench
 char phoenix e=nodding
@@ -348,12 +352,12 @@ char phoenix e=confident
 bg witness
 fg wbench
 char watters e=smirk
-"Ha! HA! HAHA!! We'll see, man! We'll see!"
-"I'll show you you're full of it! I'll show EVERYBODY here!!"
+"{sfx shout-general}Ha! {p15}{sfx shout-general}HA! {p20}{sfx shout-general}HA{sfx shout-general}HA!! {n}{p20}We'll see, man! We'll see!"
+"I'll show you you're full of it! {n}I'll show EVERYBODY here!!"
 script scene50watterstestimony1
 
 label none
-sfx /phoenixe/takethat.ogg
+sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
 bg defense
@@ -363,10 +367,11 @@ char phoenix e=pointing
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Do you normally go around accusing random people until you get it right?"
+"Do you normally go around accusing {n}random people until you get it {n}right?"
 bg judge
 char judge e=nodding
 pause 50 script
+char judge e=normal
 "Yes. He does."
 bg defense
 fg dbench
@@ -376,7 +381,7 @@ sfx damage.wav
 penalty -20
 is penalty 0 failure
 char phoenix e=normal
-"Actually, I was wrong. It was this person..."
+"{c090}Actually, I was wrong. It was this {n}person..."
 pause 20 script
 goto redo
 

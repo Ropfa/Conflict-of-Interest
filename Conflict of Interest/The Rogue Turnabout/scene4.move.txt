@@ -13,6 +13,18 @@ showlist
 menu scene4
 
 label Wright Anything Agency
+noflag sirgallantetalk AND puzzle menu
+flag sirgallantetalk AND puzzle ifthen
+label menu
+mus
+script scene10menu
+label ifthen
+noflag metblack scene10
+flag metblack ifthen2
+label scene10
+mus
+script scene10
+label ifthen2
 mus
 script scene10menu
 

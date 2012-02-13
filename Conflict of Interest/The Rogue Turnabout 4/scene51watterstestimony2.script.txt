@@ -2,6 +2,8 @@ set _list_back_button false
 set wrongevidence 1
 
 mus
+bg witness
+fg wbench
 char watters e=angry
 fg TestimonyAnim fade name=tanim
 nt
@@ -13,13 +15,13 @@ bg witness
 fg wbench
 
 char watters e=angry
-"{tbon}That note was found in Rivales's office - not mine!"
+"{tbon}That note was found in Rivales's {n}office - not mine!"
 char watters e=thinking
-"{tbon}Why would I go there at 6 in the morning for a blackmail letter that had nothing to do with me?"
+"{tbon}Why would I go there at 6 in the {n}morning for a blackmail letter that {n}had nothing to do with me?"
 char watters e=confused
-"{tbon}I'd never even seen it until you found it the other day."
+"{tbon}I'd never even seen it until you found {n}it the other day."
 char watters e=smirk
-"{tbon}Since I didn't know, I didn't show up. It's simple!"
+"{tbon}Since I didn't know, I didn't show up. {n}It's simple!"
 
 mus
 bg black
@@ -35,18 +37,19 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char watters e=angry
-"What's it gonna take to convince you I didn't go there?"
+"What's it gonna take to convince {n}you I didn't go there?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"You can't convince me of something that I know isn't true."
+"You can't convince me of something {n}that I know isn't true."
 bg judge
 char judge e=warning
-"Perhaps instead of trying to convince each other, you two should focus on convincing the rest of this court!"
+"Perhaps instead of trying to {n}convince each other..."
+"...you two should focus on {n}convincing the rest of this court!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Needless banter before a needless testimony."
+"Needless banter before a needless {n}testimony."
 "Your cross-examination, Wright."
 
 bg witness
@@ -72,42 +75,42 @@ statement watters2A
 bg witness
 fg wbench
 char watters e=angry
-"That note was found in Rivales's office - not mine!"
+"That note was found in Rivales's {n}office - not mine!"
 
 statement watters2B
 bg witness
 fg wbench
 char watters e=thinking
-"Why would I go there at 6 in the morning for a blackmail letter that had nothing to do with me?"
+"Why would I go there at 6 in the {n}morning for a blackmail letter that {n}had nothing to do with me?"
 
 statement watters2C
 bg witness
 fg wbench
 char watters e=confused
-"I'd never even seen it until you found it the other day."
+"I'd never even seen it until you found {n}it the other day."
 
 statement watters2D
 bg witness
 fg wbench
 char watters e=smirk
-"Since I didn't know, I didn't show up. It's simple!"
+"Since I didn't know, I didn't show up. {n}It's simple!"
 endcross
 
 label comments
 bg aide
 char maya e=bench-hum
-"Nick, did you really mean what you said?"
-"That you can prove {c940}he responded to the blackmail letter{c999}?"
+"Nick, did you really mean what you {n}said?"
+"That you can prove {c940}he responded to {n}the blackmail letter{c999}?"
 char phoenix hide
 "Yes. It's almost too easy."
-"He didn't do a very good job of covering his tracks."
+"He didn't do a very good job of {n}covering his tracks."
 char maya e=bench-strict
 "Well, if you say so..."
 bg defense
 fg dbench
 char phoenix e=normal
 "{c089}(Everything is pointing to this man.)"
-"{c089}(I just need to hit him so hard he can't recover.)"
+"{c089}(I just need to hit him so hard he can't {n}recover.)"
 goto start
 
 label press watters2A
@@ -117,20 +120,20 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=document
-"We also found a copy of the letter. i was in an abandoned warehouse next to the Rivales Tower."
+"We also found a copy of the letter. it {n}was in an abandoned warehouse next {n}to the Rivales Tower."
 bg witness
 fg wbench
 char watters e=angry
-"Yeah, but that doesn't mean {s5}I ever touched it!"
+"Yeah, but that doesn't mean {s5}I ever {n}touched it!"
 bg defense
 fg dbench
 char phoenix e=normal
-"Maybe not... But it does imply that the target was somebody other than Rivales."
+"Maybe not... But it does imply that {n}the target was somebody other than {n}Rivales."
 bg prosecution
 fg pbench
 char obadiah e=serious
 "That could be literally anyone."
-"Your somebody doesn't have to be the detective."
+"Your somebody doesn't have to be {n}the detective."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -138,7 +141,7 @@ char phoenix e=thinking
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Next time, try giving some solid evidence before you make an accusation."
+"Next time, try giving some solid {n}evidence before you make an {n}accusation."
 bg witness
 fg wbench
 char watters e=smirk
@@ -152,18 +155,18 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=thinking
-"Maybe you found it and wanted to investigate?"
+"Maybe you found it and wanted to {n}investigate?"
 bg witness
 fg wbench
 char watters e=angry
-"Investigate what? {n}"Come to my place" isn't exactly a great description of where to meet."
+"Investigate what? {n}"Come to my place" isn't exactly a {n}great description of where to meet."
 "Heck, the entire note's pretty vague."
-"The target is never identified. And it isn't even signed."
-"You have no way of proving that it was aimed at me!"
+"The target is never identified. {n}And it isn't even signed."
+"You have no way of proving that it {n}was aimed at me!"
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(Only somebody who knew about the note's contents would understand what it meant.)"
+"{c089}(Only somebody who knew about the {n}note's contents would understand {n}what it meant.)"
 "{c089}(Watters has to realize this.)"
 resume
 
@@ -175,35 +178,35 @@ bg defense
 fg dbench
 char phoenix e=normal
 "It's interesting, don't you think?"
-"Just how many things Maya and I had to help you find on your own crime scene."
+"Just how many things Maya and I had {n}to help you find on your own crime {n}scene."
 bg witness
 fg wbench
 char watters e=angry
-"Hey, hey, hey!{n}{p20}Don't try pulling that card!"
+"Hey, {sfx shout-general}hey, hey!{n}{p20}Don't try pulling that card!"
 bg defense
 fg dbench
 char phoenix e=thinking
-"I wonder... Would you have ever "found" them if we hadn't been there?"
+"I wonder... {p15}Would you have ever {n}"found" them if we hadn't been there?"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"If I may... {e worried}{p20}the detective has always been somewhat... {p20}lackluster in his duties."
-"This type of behavior is typical for him."
+"If I may... {e worried}{p20}the detective has always {n}been somewhat... {p20}lackluster in {n}his duties."
+"This type of behavior is typical for {n}him."
 bg witness
 fg wbench
 char watters e=smirk
-"Yeah, that's right! {n}{p20}...{p20}{e nervous}I mean{e shock} HEY!!!"
+"{sfx shout-general}Yeah, that's right! {n}{p20}...{p20}{e nervous}I mean{e shock} {sfx whoops}HEY!!!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"His laziness and ineptitude shouldn't be confused for corruption."
+"His laziness and ineptitude shouldn't {n}be confused for corruption."
 bg witness
 fg wbench
 char watters e=nervous
 "Hey! C'mon, Boss!"
 bg aide
 char maya e=bench-hum
-"I can't tell whether he's trying to defend him or not."
+"I can't tell whether he's trying to {n}defend him or not."
 resume
 
 label press watters2D
@@ -218,24 +221,24 @@ bg witness
 fg wbench
 char watters e=smirk
 "That's right!"
-"If I never read the note, I wouldn't have any reason to go to the Tower."
-"That punches a big huge hole right through your little theory, doesn't it?"
+"If I never read the note, I wouldn't {n}have any reason to go to the Tower."
+"That punches a big huge hole right {n}through your little theory, doesn't {n}it?"
 bg defense
 fg dbench
 char phoenix e=thinking
-"Using that logic, if you did read the note, then you would've had a reason to go."
+"Using that logic, if you did read the {n}note, then you would've had a reason {n}to go."
 bg witness
 fg wbench
 char watters e=thinking
-"Yeah, well, but I didn't... {e smirk}so ha!"
+"Yeah, well, but I didn't... {p20}{sfx shout-general}{e smirk}so ha!"
 bg defense
 fg dbench
 char phoenix e=normal
-"That's not a very compelling argument you're giving."
+"That's not a very compelling {n}argument you're giving."
 bg witness
 fg wbench
 char watters e=smirk
-"Hey, it's real simple, man. Either I did or I didn't."
+"Hey, it's real simple, man. {n}Either I did or I didn't."
 "And you haven't proven that I did."
 bg defense
 fg dbench
@@ -245,7 +248,7 @@ resume
 
 //PRESENT GUN AT FOURTH STATEMENT
 
-label gun watters2D
+label gun2 watters2D
 mus
 script scene52
 

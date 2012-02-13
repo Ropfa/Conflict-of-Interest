@@ -16,6 +16,7 @@ menu scene4
 goto scene4talk
 
 label Wayne Parker
+char parker e=sad
 char phoenix hide
 "Could you tell me a bit about {n}yourself, Mr. Parker?"
 char parker e=disturbed

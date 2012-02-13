@@ -64,7 +64,7 @@ set crimephoto2_check check_crimephoto
 
 set blueprints_name Building Floorplans
 set blueprints_pic floorplans
-set blueprints_desc
+set blueprints_desc The blueprints for the top story of the RIvales Tower.
 set blueprints_check check_blueprints
 
 set hitlist_name Hit List

@@ -1,6 +1,8 @@
 set _list_back_button false
 set wrongevidence 1
 
+bg witness
+fg wbench
 char watters e=angry
 fg TestimonyAnim fade name=tanim
 nt
@@ -13,12 +15,12 @@ bg witness
 fg wbench
 
 char watters e=angry
-"{tbon}Hey, man! I'm just a detective, alright?"
-"{tbon}There were lotsa people who knew about Sir Gallante."
-"{tbon}By your logic, it could've been any one of them!"
+"{tbon}Hey, man! I'm just a detective, {n}alright?"
+"{tbon}There were lotsa people who knew {n}about Sir Gallante."
+"{tbon}By your logic, it could've been any {n}one of them!"
 char watters e=thinking
-"{tbon}Besides, we've been doing just fine on the investigation."
-"{tbon}Before Parker came along, we had tons of potential suspects..."
+"{tbon}Besides, we've been doing just fine {n}on the investigation."
+"{tbon}Before Parker came along, we had {n}tons of potential suspects..."
 char watters e=smirk
 "{tbon}...and I definitely wasn't one of them!"
 
@@ -29,17 +31,17 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "That's all?"
-"I was expecting the great "Terror of the Underworld" to go out with better than that!"
+"I was expecting the great "Terror of {n}the Underworld" to go out with {n}better than that!"
 bg witness
 fg wbench
 char watters e=angry
-"H-Hey, man! No way you're gonna take me down like this! It won't end like this for me!"
-"Not here!"
+"H-Hey, man! No way you're gonna {n}take me down like this!"
+"It won't end like this for me!{n}{p15}Not here!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"There's no mask for you to hide behind now."
-"This time, I show everybody here the true monster that you are."
+"There's no mask for you to hide {n}behind now."
+"This time, I show everybody here the {n}true monster that you are."
 bg witness
 fg wbench
 char watters e=angry
@@ -47,7 +49,7 @@ char watters e=angry
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Will you two stop bickering and end this?!"
+"Will you two stop bickering and end {n}this already?!"
 bg witness
 fg wbench
 char watters e=nervous
@@ -65,7 +67,7 @@ char maya e=bench-profile
 char phoenix hide
 "This is it, Maya.{n}Everything ends here."
 char maya e=bench-profile
-"..."
+"{delay 1}..."
 char phoenix hide
 "{c089}(Maya...?)"
 
@@ -84,6 +86,8 @@ delete name=willvs
 delete name=main
 nt
 "{n}{center}{c940}-- The Real Sir Gallante --"
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
 set show_watters3A true
 set show_watters3A1 false
 set show_watters3B true
@@ -101,43 +105,43 @@ statement watters3A test=show_watters3A
 bg witness
 fg wbench
 char watters e=angry
-"Hey, man! I'm just a detective, alright?"
+"Hey, man! I'm just a detective, {n}alright?"
 
 statement watters3A1 test=show_watters3A1
 bg witness
 fg wbench
 char watters e=angry
-"Yeah, I was the lead detective. So what?"
+"Yeah, I was the lead detective. {n}So what?"
 
 statement watters3B test=show_watters3B
 bg witness
 fg wbench
 char watters e=angry
-"There were lotsa people who knew about Sir Gallante."
+"There were lotsa people who knew {n}about Sir Gallante."
 
 statement watters3B1 test=show_watters3B1
 bg witness
 fg wbench
 char watters e=angry
-"The task force were the only ones who knew about Sir Gallante."
+"The task force were the only ones {n}who knew about Sir Gallante."
 
 statement watters3C
 bg witness
 fg wbench
 char watters e=angry
-"By your logic, it could've been any one of them!"
+"By your logic, it could've been any {n}one of them!"
 
 statement watters3D
 bg witness
 fg wbench
 char watters e=thinking
-"Besides, we've been doing just fine on the investigation."
+"Besides, we've been doing just fine {n}on the investigation."
 
 statement watters3E
 bg witness
 fg wbench
 char watters e=thinking
-"Before Parker came along, we had tons of potential suspects..."
+"Before Parker came along, we had {n}tons of potential suspects..."
 
 statement watters3F
 bg witness
@@ -151,7 +155,7 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(You can't escape this, Watters.)"
-"{c089}(I know you're Sir Gallante, and I'm going to make sure that you pay for your crimes.)"
+"{c089}(I know you're Sir Gallante, and I'm {n}going to make sure that you pay for {n}your crimes.)"
 goto start
 
 label press watters3A
@@ -161,7 +165,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"What exactly was your role in the investigation?"
+"What exactly was your role in the {n}investigation?"
 bg witness
 fg wbench
 char watters e=angry
@@ -169,12 +173,12 @@ char watters e=angry
 bg prosecution
 fg pbench
 char obadiah e=worried
-"The lead detective, to be more precise."
+"The lead detective, to be more {n}precise."
 bg defense
 fg dbench
 char phoenix e=thinking
 "The lead detective, huh?"
-"How much authority would that give him at the crime scene?"
+"How much authority would that give {n}him at the crime scene?"
 bg prosecution
 fg pbench
 char obadiah e=worried
@@ -185,19 +189,19 @@ sfx deskslam
 char phoenix e=deskslam
 pause 50 script
 char phoenix e=handsondesk
-"So you weren't "just" a detective. {e pointing}You were {c940}the lead detective{c999}."
+"So you weren't "just" a detective. {n}{e pointing}You were {c940}the lead detective{c999}!"
 bg witness
 fg wbench
 char watters e=angry
-"Yeah, whatever. That doesn't make any difference."
+"Yeah, whatever. {n}{sfx shout-general}That doesn't make any difference."
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "It's very important!" 
-"As the lead detective, you would have had more than enough opportunity to cover up for your crimes!"
+"As the lead detective, you had {n}more than enough opportunity to {n}cover up for your crimes!"
 bg judge
 char judge e=normal
-"Detective, please amend your testimony."
+"Detective, please amend your {n}testimony."
 bg witness
 fg wbench
 char watters e=angry
@@ -214,7 +218,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=thinking
-"You were in a rather convenient position."
+"You were in a rather convenient {n}position."
 bg witness
 fg wbench
 char watters e=confused
@@ -222,16 +226,17 @@ char watters e=confused
 bg defense
 fg dbench
 char phoenix e=normal
-"As the lead detective, you'd have access to all the evidence and information regarding the case."
-"You could manipulate it to your advantage."
-"You also had the authority to pull it off."
+"As the lead detective, you'd have {n}access to all the evidence and {n}information regarding the case."
+"You could manipulate it to your {n}advantage."
+char phoenix e=confident
+"You also had the authority to pull it {n}off."
 sfx /godot/objection.ogg
 fg ObjectionAnim
 pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Do you have anything to prove that something like that took place?"
+"Do you have anything to prove that {n}something like that took place?"
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -247,8 +252,8 @@ char watters e=smirk
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(This alone won't be enough to bring him down.)"
-"{c089}(But at least it's a step in the right direction.)"
+"{c089}(This alone won't be enough to bring {n}him down.)"
+"{c089}(But at least it's a step in the right {n}direction.)"
 resume
 
 label press watters3B
@@ -262,11 +267,11 @@ char phoenix e=normal
 bg witness
 fg wbench
 char watters e=confused
-"Everybody working on the case with me. {c940}The entire task force, pretty much{c999}."
+"Everybody working on the case with {n}me. {c940}The entire task force, {n}pretty much{c999}."
 bg defense
 fg dbench
 char phoenix e=thinking
-"All those people had access to the information?"
+"All those people had access to the {n}information?"
 bg witness
 fg wbench
 char watters e=confused
@@ -274,15 +279,15 @@ char watters e=confused
 bg defense
 fg dbench
 char phoenix e=normal
-"The way Sir Gallante has been changing his modus operandi..."
-"...one would assume that he also has access to police information."
+"The way Sir Gallante has been {n}changing his modus operandi..."
+"...one would assume that he also has {n}access to police information."
 bg witness
 fg wbench
 char watters e=smirk
-"Yeah, but like I said, I'm not the only one that was true about."
+"Yeah, but like I said, I'm not the only {n}one that was true about."
 bg judge
 char judge e=normal
-"Detective, would you mind updating your testimony with this information?"
+"Detective, would you mind updating {n}your testimony with this {n}information?"
 bg witness
 fg wbench
 char watters e=confused
@@ -298,21 +303,21 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"How many people were working on the investigation with you?"
+"How many people were working on {n}the investigation with you?"
 bg witness
 fg wbench
 char watters e=thinking
-"There was a small core group of about ten people."
-"We'd have others come in to help if we needed it."
+"There was a small core group of {n}about ten people."
+"We'd have others come in to help if {n}we needed it."
 bg defense
 fg dbench
 char phoenix e=thinking
-"Only ten people working on a case this big?"
+"Only ten people working on a case {n}this big?"
 bg witness
 fg wbench
 char watters e=angry
-"The city hasn't been giving us the resources we need."
-"Plus, most people weren't willing to take the job."
+"The city hasn't been giving us the {n}resources we need."
+"Plus, most people weren't willing to {n}take the job."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -324,13 +329,13 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(That makes sense. I wouldn't want a large armored man to be mad at me either.)"
+"{c089}(That makes sense. I wouldn't want a {n}large armored man to be mad at me {n}either.)"
 char phoenix e=normal
-"Did anybody outside the task force have access to the case details?"
+"Did anybody outside the task force {n}have access to the case details?"
 bg witness
 fg wbench
 char watters e=angry
-"You either needed to be on the police force or have permission from somebody on it."
+"You either needed to be on the police {n}force or have permission from {n}somebody on it."
 "Other than that, {p10}no."
 bg defense
 fg dbench
@@ -343,7 +348,7 @@ char watters e=angry
 bg defense
 fg dbench
 char phoenix e=normal
-"So the entire police department had the potential to know about the case."
+"So the entire police department had {n}the potential to know about the case."
 bg witness
 fg wbench
 char watters e=smirk
@@ -361,30 +366,31 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char watters e=smirk
-"That's right! That's the kind of crazy logic you're trying to use on me!"
-"You're the guy who said that just cuz I knew about Sir Gallante, I'm him!"
-"Well, a whole bunch of people knew, so you can forget that!"
+"That's right! That's the kind of crazy {n}logic you're trying to use on me!"
+"You're the guy who said that just {n}cuz I knew about Sir Gallante, {n}I'm him!"
+"Well, a whole bunch of people knew, {n}so you can forget that!"
 bg defense
 fg dbench
 char phoenix e=sweating
-"There's a difference between knowing confidential information and knowing who the killer was before it was proven."
+"There's a difference between {n}knowing confidential information..."
+"...and knowing who the killer {n}was before it was proven."
 bg witness
 fg wbench
 char watters e=angry
-"I've been chasing this guy for years. I can recognize his work..."
-"...whether or not that stupid mark has been found."
+"I've been chasing this guy for years. {n}I can recognize his work..."
+"...whether or not that stupid mark {n}has been found."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"That's you explanation for knowing who the killer was?"
+"That's you explanation for knowing {n}who the killer was?"
 bg witness
 fg wbench
 char watters e=smirk
-"Yeah, I got mad detective skills, man. I'm like a real life Sherlock Holmes."
+"Yeah, I got mad detective skills, man. {n}I'm like a real life Sherlock Holmes."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"It doesn't take a genius to see the similarities in murders involving four-foot long swords."
+"It doesn't take a genius to see the {n}similarities in murders involving {n}four-foot long swords."
 bg witness
 fg wbench
 char watters e=smirk
@@ -392,7 +398,7 @@ char watters e=smirk
 bg defense
 fg dbench
 char phoenix e=normal
-"All the murders were done with a sword?"
+"All the murders were done with a {n}sword?"
 bg prosecution
 fg pbench
 char obadiah e=serious2
@@ -400,16 +406,16 @@ char obadiah e=serious2
 bg defense
 fg dbench
 char phoenix e=thinking
-"If that's the case, wouldn't that place more suspicion on Watters?"
-"The murder weapon here was originally thought be a knife."
-"Something like that would point away from it be Sir Gallante."
+"If that's the case, wouldn't that {n}place more suspicion on Watters?"
+"The murder weapon here was {n}originally thought be a knife."
+"Something like that would point away {n}from it be Sir Gallante."
 bg judge
 char judge e=surprised
-"That's right! {e warning}Detective, what do you have to say about this?!"
+"That's right! {e warning}Detective, what do you {n}have to say about this?!"
 bg witness
 fg wbench
 char watters e=nervous
-"Well, {p10}I... {p20}Uh... {p20}The witness... {p20}Ms. Keyes... {p20}Crime scene... {p20}Found the knife..."
+"Well, {p10}I... {p20}Uh... {p20}The witness... {n}{p20}Ms. Keyes... {p20}Crime scene... {n}{p20}Found the knife..."
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -424,15 +430,15 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "That doesn't sound right."
-"You've been searching for three years and still haven't found him."
+"You've been searching for three {n}years and still haven't found him."
 bg witness
 fg wbench
 char watters e=thinking
-"We were getting kinda close though! {p30}Kinda."
+"We were getting kinda close though! {n}{p30}Kinda."
 bg defense
 fg dbench
 char phoenix e=confident
-"Three years and "kinda" is the best you can do? I wonder why that is?"
+"Three years and "kinda" is the best {n}you can do? I wonder why that is?"
 bg witness
 fg wbench
 char watters e=thinking
@@ -447,15 +453,16 @@ char obadiah e=serious
 bg witness
 fg wbench
 char watters e=angry
-"Wh-What?! No way!"
+"Wh-{sfx shout-shock}What?! No {sfx shout-general}way!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"It's better than the alternative, where Wright accuses you of sabotaging the investigation from within."
+"It's better than the alternative..."
+"...where Wright accuses you of {n}sabotaging the investigation {n}from within."
 bg witness
 fg wbench
 char watters e=angry
-"...{n}{p20}*mumble*"
+"...{n}{p25}*mumble*"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -463,10 +470,10 @@ char obadiah e=serious
 bg witness
 fg wbench
 char watters e=angry
-"I SAID I'M INCOMPETENT, OKAY?!"
+"{sfx shout-angry}I SAID I'M INCOMPETENT, {sfx shout-general}OKAY?!"
 bg judge
 char judge e=normal
-"Well, now that we have it on record that Detective Watters is incompetent, I think we can continue."
+"Well, now that we have it on record {n}the witness is incompetent, I think {n}we can continue."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -484,7 +491,7 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char watters e=confused
-"I dunno, man. A lot?"
+"I dunno, man. {n}A lot?"
 bg defense
 fg dbench
 char phoenix e=normal
@@ -496,24 +503,24 @@ char watters e=angry
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c090}(Implying that he's never told me confidential stuff before.)"
-"Aren't you just a bit disturbed that after three years..."
-"...your list of suspects has only been narrowed down to "a lot"?"
+"{c090}(Implying that he's never told me {n}confidential stuff before.)"
+"Aren't you just a bit disturbed that {n}after three years..."
+"...your list of suspects has only been {n}narrowed down to "a lot"?"
 bg witness
 fg wbench
 char watters e=nervous
-"Well, I guess that does sound kinda bad..."
+"Well, I guess that does sound kinda {n}bad..."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Of course it sounds bad! After three years, you'd expect results!"
+"Of course it sounds bad! {n}After three years, you'd expect {n}results!"
 char phoenix e=pointing
-"A lot of potential suspects isn't results!"
+"A lot of potential suspects isn't {n}results!"
 bg witness
 fg wbench
 char watters e=angry
 "{sfx shout-general}That's not the point!"
-"The point is that there were already some suspicious people..."
+"The point is that there were already {n}some suspicious people..."
 resume
 
 label press watters3F
@@ -523,7 +530,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=thinking
-"I suppose you're right that you weren't originally a suspect."
+"I suppose you're right that you {n}weren't originally a suspect."
 char phoenix e=normal
 "But you are now."
 bg witness
@@ -533,12 +540,12 @@ char watters e=angry
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Whether or not you want to admit it, you are currently a suspect."
-"That's why you are here right now, testifying."
+"Whether or not you want to admit it, {n}you are currently a suspect."
+"That's why you are here right now, {n}testifying."
 bg witness
 fg wbench
 char watters e=angry
-"Hey, man. You're being totally uncool right now."
+"Hey, man. {n}You're being totally uncool right {n}now."
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -555,42 +562,41 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=document
-"Watters, why would you lie about something so obvious?"
+"Watters, why would you lie about {n}something so obvious?"
 bg witness
 fg wbench
 char watters e=angry
-"I don't know what you're talking about."
+"I don't know what you're talking {n}about."
 bg defense
 fg dbench
 char phoenix e=document
-"Well, then you clearly haven't been paying attention."
+"Well, then you clearly haven't been {n}paying attention."
 set _ev poster
 showevr
 sfx showevidence
-"The task force were far from being the only ones to know about Sir Gallante."
-"The fact this poster exists is proof enough of that."
+"The task force were far from being {n}the only ones to know about {n|Sir Gallante."
+"The fact this poster exists is proof {n}enough of that."
 bg judge
 char judge e=surprised
 "What is this?"
 bg defense
 fg dbench
 char phoenix e=document
-"It's a poster. It was made by the witness, Cody Hackins."
-"As we all know, he is not a police officer. So how did he know about Sir Gallante?"
-hideevr
+"It's a poster. It was made by the {n}witness, Cody Hackins."
+"As we all know, he is not a police {n}officer. So how did he know about {n}Sir Gallante?"
 char phoenix e=pointing
-"Because his existence had been leaked to the public. {p25}{sfx shout-objection}By you, Watters!!"
+"Because his existence had been {n}leaked to the public. {p25}{sfx shout-objection}{n}By you, Watters!!"
 sfx /godot/objection.ogg
 fg ObjectionAnim
 pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Don't go accusing him of that! There's nothing to suggest that--{p15}{next}"
+"Don't go accusing him of that! {n}There's nothing to suggest that--{p15}{next}"
 bg witness
 fg wbench
 char watters e=angry
-"Hey, I thought I told you to keep that a secret! You told me that you would..."
+"Hey, I thought I told you to keep that {n}a secret! You told me that you would..."
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -598,7 +604,7 @@ char obadiah e=angry
 bg witness
 fg wbench
 char watters e=nervous
-"...Oh crap."
+"...{p20}Oh crap."
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -610,7 +616,7 @@ char watters e=nervous
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Watters, innocent or guilty... Things are not looking good for your future right now."
+"Watters, innocent or guilty... {n}Things are not looking good for {n}your future right now."
 bg witness
 fg wbench
 char watters e=angry
@@ -644,18 +650,19 @@ fg dbench
 char phoenix e=document
 "It's all in here."
 set _ev gallantefiles
-showevr
 bg judge
 char judge e=surprised
 "That's a lot of paper!"
-hideevr
 bg defense
 fg dbench
 char phoenix e=document
-"Here, Your Honor. Let me make it easier for you."
+"Here, Your Honor. Let me make it {n}easier for you."
 
 label redopage
-"{c090}The part I'm interested in is on this page..."
+bg defense
+fg dbench
+char phoenix e=document
+"{c090}The part I'm interested in is on this {n}page..."
 set _list_back_button false
 
 label scene57gallantefiles1
@@ -680,7 +687,7 @@ char judge e=surprised
 bg defense
 fg dbench
 char phoenix e=document
-"Right here on... this... page..."
+"Right here on... {p10}this... {p20}{delay 1}page..."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -691,7 +698,7 @@ char phoenix e=sheepish
 "Yeah."
 bg judge
 char judge e=warning
-"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+"Mr. Wright, I don't have time to sit {n}here all day, waiting for you to sift {n}through those files!"
 sfx damage
 penalty -20
 is penalty 0 failure
@@ -707,22 +714,22 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=document
-"It says right here that you have no suspects in the case."
+"It says right here that you have no {n}suspects in the case."
 bg judge
 char judge e=surprised
-"No suspects? {e warning}Detective Watters, you lied to us!"
+"No suspects? {e warning}Detective Watters, {n}you lied to us!"
 bg witness
 fg wbench
 char watters e=nervous
-"..."
+"......"
 bg judge
 char judge e=warning
 "Why would you do that?"
 bg defense
 fg dbench
 char phoenix e=confident
-"People do strange things when they're nervous, don't the, Watters?"
-"You had to somehow avoid the fact that you are currently the ONLY person suspected to be Sir Gallante!"
+"People do strange things when {n}they're nervous, don't they, {n}Watters?"
+"You had to somehow avoid the fact {n}that you are currently the ONLY {n}person suspected to be Gallante!"
 bg witness
 fg wbench
 char watters e=shock
@@ -730,11 +737,11 @@ char watters e=shock
 bg defense
 fg dbench
 char phoenix e=confident
-"Thankfully, all you've managed to do is make yourself look even more suspicious."
+"Thankfully, all you've managed to do {n}is make yourself look even more {n}suspicious."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"That was a rather pointless lie to make, Watters."
+"{delay 1}That was a rather pointless lie to {n}make, Watters."
 bg witness
 fg wbench
 char watters e=nervous
@@ -742,7 +749,7 @@ char watters e=nervous
 bg prosecution
 fg pbench
 char obadiah e=serious
-"If you'd wanted to keep that little bit confidential, you could've just said so."
+"If you'd wanted to keep that little bit {n}confidential, you could've just said so."
 bg witness
 fg wbench
 char watters e=nervous
@@ -750,7 +757,7 @@ char watters e=nervous
 bg prosecution
 fg pbench
 char obadiah e=serious
-"That's what you were doing, right? Trying to keep top secret information from getting out?"
+"That's what you were doing, right? {n}Trying to keep top secret {n}information from getting out?"
 bg witness
 fg wbench
 char watters e=nervous
@@ -778,7 +785,7 @@ char judge e=surprised
 bg defense
 fg dbench
 char phoenix e=document
-"Right here on... this... page..."
+"Right here on... {p10}this... {p20}{delay 1}page..."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -789,7 +796,7 @@ char phoenix e=sheepish
 "Yeah."
 bg judge
 char judge e=warning
-"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+"Mr. Wright, I don't have time to sit {n}here all day, waiting for you to sift {n}through those files!"
 sfx damage
 penalty -20
 is penalty 0 failure
@@ -820,7 +827,7 @@ char judge e=surprised
 bg defense
 fg dbench
 char phoenix e=document
-"Right here on... this... page..."
+"Right here on... {p10}this... {p20}{delay 1}page..."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -831,7 +838,7 @@ char phoenix e=sheepish
 "Yeah."
 bg judge
 char judge e=warning
-"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+"Mr. Wright, I don't have time to sit {n}here all day, waiting for you to sift {n}through those files!"
 sfx damage
 penalty -20
 is penalty 0 failure
@@ -852,7 +859,7 @@ char judge e=surprised
 bg defense
 fg dbench
 char phoenix e=document
-"Right here on... this... page..."
+"Right here on... {p10}this... {p20}{delay 1}page..."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -863,7 +870,7 @@ char phoenix e=sheepish
 "Yeah."
 bg judge
 char judge e=warning
-"Mr. Wright, I don't have time to sit here all day, waiting for you to sift through those files!"
+"Mr. Wright, I don't have time to sit {n}here all day, waiting for you to sift {n}through those files!"
 sfx damage
 penalty -20
 is penalty 0 failure

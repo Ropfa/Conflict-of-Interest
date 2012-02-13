@@ -67,7 +67,7 @@ char phoenix hide
 char maya e=thinking
 "Hmm...{n}{e normal}We have some super glue back at the {n}Agency."
 char phoenix hide
-"We do?{n}{c089}(Would that even work on metal?)"
+"We do?{n}{p10}{c089}(Would that even work on metal?)"
 char maya e=normal
 "I could find it right away if we went {n}back."
 char phoenix hide

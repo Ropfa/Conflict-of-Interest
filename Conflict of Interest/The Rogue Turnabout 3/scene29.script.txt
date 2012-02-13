@@ -1,3 +1,5 @@
+setflag parkergetday2
+
 bg detentionnew fade
 fg detention name=1
 nt

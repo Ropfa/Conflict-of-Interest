@@ -7,29 +7,29 @@ char phoenix e=deskslam
 sfx deskslam
 pause 50 script
 char phoenix e=handsondesk
-"You DID show up at the Tower, Watters!"
+"You DID show up at the Tower, {n}Watters!"
 set _ev gun
 showevr
-"This gun proves it! Your fingerprints are all over it!"
+"This gun proves it! {n}Your fingerprints are all over it!"
 bg witness
 fg wbench
 char watters e=smirk
-"HAHAHA!! {n}{p20}You hear that? {n}{p20}My fingerprints are on it!"
+"{sfx shout-general}HAHA{sfx shout-general}HA!! {n}{p20}You hear that? {n}{p20}My fingerprints are on it!"
 bg judge
 char judge e=warning
 "What is so funny, Mr. Watters?"
 bg witness
 fg wbench
 char watters e=smirk
-"That gun belongs to me. Of course my fingerprints are on it!"
-"And you know what else? It wasn't even at the crime scene!"
-"For all you know, it might've just gotten run over by a car or something!"
+"That gun belongs to me. Of course {n}my fingerprints are on it!"
+"And you know what else? {n}It wasn't even at the crime scene!"
+"For all you know, it might've just {n}gotten run over by a car or something!"
 bg defense
 fg dbench
 char phoenix e=headshake
 pause 50 script
 char phoenix e=confident
-"Your fingerprints aren't the only ones on it."
+"Your fingerprints aren't the only {n}nes on it."
 "The victim's are too."
 bg prosecution
 fg pbench
@@ -39,9 +39,8 @@ bg defense
 fg dbench
 char phoenix e=confident
 "That's right!"
-"Tell me, Detective, just how many times have you been in a situation..."
-"...where Michael Rivales... leader of the city's underworld..."
-"...has had a chance to hold your gun?"
+"Tell me, Detective, just how many {n}times have you been in a situation..."
+"...where Michael Rivales... {n}leader of the city's underworld...{n}...has had a chance to hold your gun?"
 sfx courtmurmur
 bg witness
 fg wbench
@@ -50,47 +49,47 @@ char watters e=nervous
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"There's only one way that could have happened... And that's if you met with him."
-"Admit it, Watters, {e objecting}you met with Rivales!"
-"{e pointing}I'm not sure how or why it happened, but at some point, he touched that pistol!"
+"There's only one way that could {n}have happened... And that's if you {n}met with him."
+"Admit it, Watters, {e objecting}{sfx shout-objection}you met with {n}Rivales!"
+"{e pointing}I'm not sure how or why it happened, {n}but at some point, he touched {n}that pistol!"
 bg courtwatters
 sfx courtmurmur
 pause 100 script
 bg witness
 fg wbench
 char watters e=angry
-"...{n}...{n}...{p30}{next}"
-"Fine... I went there.{n}I was in the penthouse."
+"...{n}{p20}...{n}{p20}...{p30}{next}"
+"Fine... {p20}I went there.{n}{p20}I was in the penthouse."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Wh-wh...{e damage}{sfx shout-loud}WHAT?!"
+"Wh-wh...{e damage}{sfx shout-angry}WHAT?!"
 char obadiah e=angry
 "W-Watters?!"
 bg witness
 fg wbench
 char watters e=angry
-"Hey, I never said it was the day he died."
+"Hey, I never said it was the day he {n}died."
 "I was there the night before.{n}{p20}Maybe I just forgot my gun there."
 
 mus Tricks and Gimmicks.ogg
 
 bg aide
 char maya e=bench-hum
-"Nick, didn't you say that the fingerprints were from the past few days?"
+"Nick, didn't you say that the {n}fingerprints were from the past {n}few days?"
 char phoenix hide
 "Y-Yes, {p20}I did."
 char maya e=bench-ugh
-"So that means there's no real way to prove that he was there when the murder happened!"
+"So that means there's no real way to {n}prove that he was there when the {n}murder happened!"
 char phoenix hide
-"No, there still is.{n}We'll just have to use something else."
-"{c089}(I think this gun's usefulness has worn off.)"
+"No, there still is.{n}We'll just have to use something {n}else."
+"{c089}(I think this gun's usefulness has {n}worn off.)"
 bg defense
 fg dbench
 char phoenix e=normal
-"The defense can still prove that Watters was there at the time of the murder."
+"The defense can still prove that {n}Watters was there at the time of {n}the murder."
 label redo
-"{c090}This piece of evidence will reveal everything..."
+"{c090}This piece of evidence will reveal {n}everything..."
 set _cr_back_button false
 present
 
@@ -105,6 +104,7 @@ fg TakeThatAnim
 pause 5 script
 bg prosecution
 fg pbench
+char obadiah e=serious
 "What does this prove?"
 bg defense
 fg dbench
@@ -129,6 +129,7 @@ fg dbench
 char phoenix e=sweating
 "{c089}(Urk...)"
 pause 20 script
+char phoenix e=thinking
 goto redo
 
 label failure

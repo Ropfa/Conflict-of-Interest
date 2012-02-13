@@ -1,7 +1,7 @@
 set _textbox_wrap falseset _textbox_lines 3include evidenceaddev attorneybadgeaddev magatama
-addev gun
-addev knife
-addev blackmail
+addev gun2
+addev knife2
+addev blackmail2
 addev autopsy
 addev blackout
 addev security2
@@ -23,6 +23,7 @@ addev watters$
 addev cody$
 addev rivalesupdate$
 addev gallante$
+addev obadiah$
 addev pearl$
 
 set char_gallante_defsound bliplow.ogg

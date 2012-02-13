@@ -1,7 +1,7 @@
-bg detentionnew
+bg pent2
 pause 60 script
 
 char phoenix hide
 "{c089}(It doesn't look like Mr. Parker {n}is available right now.)"
 
-menu sceneparkergone
+menu scenewattersgone

@@ -176,7 +176,7 @@ char phoenix hide
 "No, not Mr. Parker...{n}{p20}{sfx realization}I was referring to Sir Gallante."
 music_fade_out
 char watters e=serious(blink)
-"........{delay 1}.......{n}{e angry}You weren't supposed to know about{n} that, man."
+"........{delay 1}.......{n}{e angry}You weren't supposed to know about{n}that, man."
 char phoenix hide
 "{sfx realization}!!{n}{p20}{c089}(Urk!)"
 char watters e=angry

@@ -133,7 +133,7 @@ char sarah e=normal
 char phoenix hide
 "What do you think about Sir {n}Gallante?"
 char sarah e=bored
-"I dunno. {p20}I think it's kind of weird to be {n}running around in a costume, you know?"
+"I dunno. {p20}I think it's kind of weird to be {n}running around in a costume, you {n}know?"
 char phoenix hide
 "Yeah, I guess it is."
 "{c089}(I was hoping to get more out of her, {n}but I guess I'll have to settle {n}for that.)"
@@ -232,6 +232,8 @@ delete name=blackoutev
 mus Arle Theme.ogg
 set _music_loop Arle Theme - loop.ogg
 pause 20 script
+char sarah e=ditzy
+"Maybe that will help you get {n}the guilty verdict you want!"
 setflag securityupdate1
 goto securitytop
 

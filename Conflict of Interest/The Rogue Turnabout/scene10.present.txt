@@ -62,6 +62,7 @@ char parker e=crying
 grey value=1
 pause 60 script
 char parker e=freakout
+grey value=1
 pause 60 script
 "{e crash}{s10}{sfx thud-body}"
 pause 60
@@ -96,11 +97,11 @@ char maya e=normal
 "It's nice to see Cody again, don't you think?"
 char phoenix hide
 He's really grown since we last saw him."
-char maya e=angry
+char maya e=mad
 "He's wrong though!"
 "{sfx shout-general}No one can replace the Steel Samurai! {n}Not even Sir Gallante!"
 char phoenix hide
-"Well, I would certainly hope that the defender of Neo Olde Tokyo hadn't been replaced by a serial killer."
+"Well, I would certainly hope that the {n}defender of Neo Olde Tokyo hadn't been {n}replaced by a serial killer."
 goto top
 
 label black$
@@ -111,7 +112,7 @@ char maya e=normal
 "Peace and love, dude!"
 char phoenix hide
 "..."
-"{c089}(As awkward as it was hearing that come from Maya, I don't think I could've put it better myself.)"
+"{c089}(As awkward as it was hearing that {n}come from Maya, I don't think I {n}could've put it better myself.)"
 goto top
 
 label watters$
@@ -131,36 +132,39 @@ char phoenix hide
 goto top
 
 label gallante$
+char maya e=normal
 char phoenix hide
-"So who is this Sir Gallante character?{n}And why does he dress up like a knight?"
+"So who is this Sir Gallante character?{n}And why does he dress up like a {n}knight?"
 char maya e=pumped
-"You really don't know who Sir Gallante is, Nick? He's been all over the news!"
-"They call him "The Terror of the Underworld"."
+"You really don't know who Sir {n}Gallante is, Nick? He's been {n}all over the news!"
+"They call him "The Terror of the {n}Underworld"."
 "He's killed, like, a million bad guys!"
 char phoenix hide
-"{c089}(Looks like the news have been exaggerating a bit on his accomplishments.)"
+"{c089}(Looks like the news have been {n}exaggerating a bit on his accomplishments.)"
 goto top
 
 label poster
+char maya e=normal
 char phoenix hide
-"So who is this Sir Gallante character?{n}And why does he dress up like a knight?"
+"So who is this Sir Gallante character?{n}And why does he dress up like a {n}knight?"
 char maya e=pumped
-"You really don't know who Sir Gallante is, Nick? He's been all over the news!"
-"They call him "The Terror of the Underworld"."
+"You really don't know who Sir {n}Gallante is, Nick? He's been {n}all over the news!"
+"They call him "The Terror of the {n}Underworld"."
 "He's killed, like, a million bad guys!"
 char phoenix hide
-"{c089}(Looks like the news have been exaggerating a bit on his accomplishments.)"
+"{c089}(Looks like the news have been {n}exaggerating a bit on his accomplishments.)"
 goto top
 
 label codyphoto
+char maya e=normal
 char phoenix hide
-"So who is this Sir Gallante character?{n}And why does he dress up like a knight?"
+"So who is this Sir Gallante character?{n}And why does he dress up like a {n}knight?"
 char maya e=pumped
-"You really don't know who Sir Gallante is, Nick? He's been all over the news!"
-"They call him "The Terror of the Underworld"."
+"You really don't know who Sir {n}Gallante is, Nick? He's been {n}all over the news!"
+"They call him "The Terror of the {n}Underworld"."
 "He's killed, like, a million bad guys!"
 char phoenix hide
-"{c089}(Looks like the news have been exaggerating a bit on his accomplishments.)"
+"{c089}(Looks like the news have been {n}exaggerating a bit on his accomplishments.)"
 goto top
 
 label knife
@@ -179,13 +183,13 @@ goto top
 
 label gun
 char maya e=thinking
-"Gumshoe was hit on the head with a gun."
+"Gumshoe was hit on the head with a {n}gun."
 char phoenix hide
 "It looks that way."
 char maya e=thinking
-"I wonder why a gun fell out of the sky like that."
+"I wonder why a gun fell out of the sky {n}like that."
 char phoenix hide
-"{c089}(Could it have come from the crime scene?)"
+"{c089}(Could it have come from the crime {n}scene?)"
 goto top
 
 label smashed

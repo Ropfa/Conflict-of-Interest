@@ -65,7 +65,7 @@ char maya e=surprised
 
 char gallante e=ba
 "These things are unimportant."
-"All that matter is this..."
+"All that matters is this..."
 "As defender of this city, it is my {n}duty to protect the innocent..."
 "...and I know that Sir Parker is {n}innocent."
 "He must not be found guilty {n}tomorrow."

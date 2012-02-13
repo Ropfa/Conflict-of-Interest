@@ -3,18 +3,18 @@ mus
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Let's take a look at everything we've covered..."
+"Let's take a look at everything {n}we've covered..."
 mus Pursuit - Lying Coldly.ogg
 set _music_loop Pursuit - Lying Coldly - loop.ogg
 char phoenix e=handsondesk
-"First of all, Watters had access to all the information and evidence from the investigation."
-"He was in a better position than anyone else to manipulate things in his favor."
+"First of all, Watters had access to all {n}the information and evidence from {n}the investigation."
+"He was in a better position than {n}anyone else to manipulate things {n}in his favor."
 
 bg witness
 fg wbench
 char watters e=angry
-"H-Hey, that's not cool!"
-"You can't accuse me just cuz I'm a detective!"
+"H-Hey, that's not {sfx shout-damage}cool!"
+"You can't accuse me just cuz I'm a {n}detective!"
 
 bg defense
 fg dbench
@@ -22,56 +22,56 @@ char phoenix e=headshake
 pause 50 script
 char phoenix e=confident
 "But wait, there's more!"
-"If "Sir Gallante" ever showed signs of knowing the police were onto him..."
-"...it would become clear that he had access to police information."
-"So you arranged for everything to go public."
+"If "Sir Gallante" ever showed signs {n}of knowing the police were onto him..."
+"...it would become clear that he had {n}access to police information."
+"So you arranged for everything to {n}go public."
 
 bg witness
 fg wbench
 char watters e=nervous
-"Th-{p4}That was an accident!"
+"Th-{p4}{s}That was an accident!"
 
 bg defense
 fg dbench
 char phoenix e=pointing
 "{sfx shout-objection}It was no accident, and you know it!"
-"With all the case details as public knowledge, the list of possible suspects exploded!"
-"Sir Gallante could now be literally anyone in the city!"
-"Not to mention all the confusion caused by people imitating their super hero idol."
+"With all the case details as public {n}knowledge, the list of possible {n}suspects exploded!"
+"Sir Gallante could now be literally {n}anyone in the city!"
+"Not to mention all the confusion {n}caused by people imitating their {n}super hero idol."
 
 bg judge
 char judge e=surprised
-"So he did it to draw attention away from himself?"
+"So he did it to draw attention away {n}from himself?"
 
 bg defense
 fg dbench
 char phoenix e=confident
-"Exactly! By leaking the case details, he destroyed the police's chances of ever finding the real killer."
+"Exactly! By leaking the case details, {n}he destroyed the police's chances of {n}ever finding the real killer."
 
 bg witness
 fg wbench
 char watters e=angry
-"Seriously, man?{n}Just why would I do any of that?"
-""Slay the evil"...?{n}That's not my thing."
-"I'm not some lunatic with a god complex!" 
-"There's no reason for me to go around killing mobsters in the middle of the night!"
+"Seriously, {sfx shout-general}man?{n}Just why would I do any of that?"
+""Slay the evil"...?{n}{p20}That's not my thing."
+"I'm not some lunatic with a {sfx damage}god {n}complex!" 
+"There's no reason for me to go {n}around killing mobsters in the {n}middle of the night!"
 
 bg defense
 fg dbench
 char phoenix e=confident
-"Sorry, Watters, but you aren't getting off that easily."
-"I've got proof that you had {c940}a very solid motive for becoming Sir Gallante{c999}!"
+"Sorry, Watters, {p10}but you aren't {n}getting off that easily."
+"I've got proof that you had {c940}a very {n}solid motive for becoming Sir {n}Gallante{c999}!"
 
 bg witness
 fg wbench
 char watters e=nervous
-"......"
+"{delay 1}......"
 
 label redo
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Alright, it's time to put the final nail in this guy's coffin!)"
+"{c089}(Alright, it's time to put the final nail in {n}this guy's coffin!)"
 "{c090}(Detective Watters's motive was...)"
 set _cr_back_button false
 present
@@ -84,70 +84,75 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=confident
-"Remember what we talked about yesterday, Watters?"
-"You have a history with the Rivales Family."
+"Remember what we talked about {n}yesterday, Watters?"
+"You have a history with the Rivales {n}Family."
 bg judge
 char judge e=surprised
 "He what?!"
 bg defense
 fg dbench name=1
+char phoenix e=normal
+"I almost wish that the witness was {n}motivated by nothing other than {n}bloodlust."
+"The real story is much more tragic."
 char phoenix e=document
 set _ev hitlist
 showevr
-"Nine years ago, your wife, Sandra, was murdered by an assassin hired by Michael Rivales."
-"You weren't able to live with yourself after that. You needed some way to continue her legacy."
+"Nine years ago, your wife, Sandra, {n}was murdered by an assassin hired {n}by Michael Rivales."
+"You weren't able to live with yourself {n}after that. You needed some way to {n}continue her legacy."
 sfx deskslam
 char phoenix e=deskslam
 pause 50 script
 char phoenix e=handsondesk
-"Knowing that she had risked and lost everything fighting the mob, you chose to avenge her..."
+"Knowing that she had risked and lost {n}everything fighting the mob, you {n}chose to avenge her..."
+hidevr
 bg speedzoom stack name=zoom
 delete name=1
 sfx shout-objection
 char phoenix e=zoom
-"{f}...by brin{f}ging down the entire {f}Rivales {f}Family {f}single{f}handedly{f}!!!"
+"{f}...by brin{f}ging down the entire {f}Rivales {f}{n}Family {f}single{f}handedly{f}!!!"
 delete name=zoom
 
 bg witness
 fg wbench
 char watters e=nervous
-"No!! {e shock}{e shout-shock}WAAAIT!!!"
+"No!! {e shock}{sfx shout-shock}WAAAIT!!!"
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Np waiting! You three-year reign of terror ends here, Gallante!"
-"I'm not going to sit and wait while you corrupt everything that our justice system stands for!"
-"Your victims may have been criminals, but they were still people."
+"No waiting! {n}Your three-year reign of terror {n}ends here, Gallante!"
+"I'm not going to sit and wait while you {n}corrupt everything that our justice {n}system stands for!"
+"Your victims may have been {n}criminals, but they were still {n}people!"
 char phoenix e=pointing
-"{sfx shout-objection}Taking their lives makes you no better than them!"
+"{sfx shout-objection}Taking their lives makes you no {n}better than them!"
 
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"Watters... You didn't... You wouldn't..."
+"Watters... You didn't... {n}{p20}You wouldn't..."
 
 bg witness
 fg wbench
 char watters e=breakdown1
-"{sfx shout-general}No! I... STOP!!!"
+"{sfx shout-general}No! I... {p10}STOP!!!"
 
 bg defense
 fg dbench
 char phoenix e=pointing
-"You're no super hero!{n}You're nothing but a common killer!"
-"In fact, {p15}you're a disgrace to everything that your wife stood for!"
-"Well, Watters? What do you think about that?"
+"You're no super hero!{n}{p15}You're nothing but a common killer!"
+"In fact, {p15}you're a disgrace to {n}everything that your wife stood for!"
+"Well, Watters? {n}What do you think about that?"
 
 mus
 
 bg witness
 fg wbench
 char watters e=breakdown1
+pause 60 script
 shake 450 nowait
-"{delay 1}You wanna... You wanna know what I think, man?{next}"
+"{delay 1}You wanna... You wanna know what I {n}think, man?{next}"
 pause 50 script
-"{delay 1}...Well, I'll... I'll tell you... I'll tell you what I think, man...{next}"
+"{delay 1}...Well, I'll... I'll tell you... I'll tell you {n}what I think, man...{next}"
 pause 50 script
 "{delay 1}I think... that... {delay 2}this... is.........{next}"
 pause 50 script
@@ -168,18 +173,18 @@ pause 5 script
 bg witness
 fg wbench
 char watters e=nervous
-"Phew!{n}I thought you actually had something!"
+"Phew!{n}{p15}I thought you actually had {n}something!"
 bg defense
 fg dbench
 char phoenix e=normal
-"I do... Don't I?"
+"I do... {p20}Don't I?"
 bg prosecution
 fg pbench
 char obadiah e=serious
 "No."
 bg judge
 char judge e=normal
-"I think you should look things through a bit more."
+"I think you should look things {n}through a bit more."
 sfx damage
 penalty -20
 is penalty 0 failure

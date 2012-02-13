@@ -14,8 +14,20 @@ showlist
 menu scene30
 
 label Detention Center
+noflag parkergetday2 scene29
+flag parkergetday2 ifthen
+label scene29
+mus
+script scene29
+label ifthen
+noflag penthouseget2 menu
+flag penthouseget2 ifthen2
+label menu
 mus
 script scene29menu
+label ifthen2
+mus
+script sceneparkergone2menu
 
 label Wright Anything Agency
 mus

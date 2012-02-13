@@ -926,11 +926,11 @@ mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script
-set _ev knife
-showevr
 bg defense
 fg dbench
 char phoenix e=document
+set _ev knife
+showevr
 "A five-inch blade, huh?"
 bg witness
 fg wbench

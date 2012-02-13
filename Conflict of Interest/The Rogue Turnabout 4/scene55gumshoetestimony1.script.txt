@@ -2,6 +2,8 @@ set _list_back_button false
 set wrongevidence 1
 
 mus
+bg witness
+fg wbench
 char gumshoe e=confident
 fg TestimonyAnim fade name=tanim
 nt
@@ -27,12 +29,12 @@ pause 30
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(Well, this is no good. I could've figured out everything he just said by reading that letter.)"
+"{c089}(Well, this is no good. I could've {n}figured out everything he just said{n}from that letter.)"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"As I suspected, the testimony is rather vague."
-"I'm afraid we won't be getting much out of it."
+"As I suspected, the testimony is {n}rather vague."
+"I'm afraid we won't be getting much {n}out of it."
 bg witness
 fg wbench
 char gumshoe e=disheartened
@@ -41,15 +43,17 @@ bg prosecution
 fg pbench
 char obadiah e=serious
 "I don't doubt that, Detective."
-"However, in your condition, it looks like you won't be able to do much else."
+"However, in your condition, it looks {n}like you won't be able to do much {n}else."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Hold on! I still need to cross-examine him!"
+"Hold on! {n}I still need to cross-examine him!"
 bg judge
 char judge e=normal
-"I'm not sure what you're hoping to find, Mr. Wright. The witness clearly doesn't remember anything."
-"But you do have a right to cross-examine him. You may proceed."
+"I'm not sure what you're hoping to {n}find, Mr. Wright."
+"The witness clearly doesn't {n}remember anything."
+"But you do have a right to {n}cross-examine him."
+"You may proceed."
 
 bg witness
 fg wbench
@@ -66,6 +70,7 @@ delete name=willvs
 delete name=main
 nt
 "{n}{center}{c940}-- That Morning Downtown --"
+mus Confrontation - Allegro.ogg
 set show_gumshoe1A true
 set show_gumshoe1A1 false
 set show_gumshoe1C true
@@ -84,11 +89,11 @@ char obadiah e=serious
 "Well, I think that's about enough."
 bg judge
 char judge e=normal
-"Detective, I am sorry to say this, but your testimony is a bit too vague for me to accept."
+"Detective, I am sorry to say this, {n}but your testimony is a bit too vague {n}for me to accept."
 bg witness
 fg wbench
 char gumshoe e=disheartened
-"Sorry for wasting your time, everyone."
+"Sorry for wasting your time, {n}everyone."
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -96,16 +101,16 @@ char phoenix e=handsondesk
 bg prosecution
 fg pbench
 char obadiah e=serious
-"So far all you've done is prove that he didn't meet with himself."
+"So far all you've done is prove that {n}he didn't meet with himself."
 bg witness
 fg wbench
 char gumshoe e=thinking
-"Yeah, I guess you're right.{n}{e disheartened}There's no way I could've met with Rick."
+"Yeah, I guess you're right.{n}{p20}{e disheartened}There's no way I could've met with {n}Rick."
 fg ani-judge gavel
 pause 30 script
 bg judge
 char judge e=normal
-"We've heard enough. I see no reason to prolong this trial."
+"We've heard enough. {n}I see no reason to prolong {n}this trial."
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -114,13 +119,13 @@ pause 60 script
 bg witness
 fg wbench
 char gumshoe e=thinking
-"Now that you mention it though, he did kind of look like a Rick."
-"Maybe we have the same last name?"
+"Now that you mention it though, he {n}did kind of look like a Rick."
+"Maybe we have the same name?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
 sfx idea
-"G-Gumshoe, what did you just say?"
+"G{p5}-Gumshoe, what did you just say?"
 bg witness
 fg wbench
 char gumshoe e=normal
@@ -128,15 +133,15 @@ char gumshoe e=normal
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Did you just say that you remember what he looked like?"
+"Did you just say that you remember {n}what he looked like?"
 bg witness
 fg wbench
 char gumshoe e=pumped
-"{sfx realization}...!{n}{p20}Yeah!"
+"{sfx realization}...!{n}{p25}Yeah!"
 bg defense
 fg dbench
 char phoenix e=pointing
-"Quick! Describe him!{n}What did he look like?"
+"Quick! Describe him!{n}{p15}What did he look like?"
 bg witness
 fg wbench
 char gumshoe e=normal
@@ -157,28 +162,28 @@ char obadiah e=serious
 "Stop trying to lead the witness!"
 bg witness
 fg wbench
-char gumshoe e=disheartend
+char gumshoe e=disheartened
 "I-It wouldn't matter anyway."
-"I can't remember what Mark looks like."
+"I can't remember what Mark looks {n}like."
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "{sfx realization}You can't?"
-"{c089}(This is great! {n}{p25}Well, I mean... not for Gumshoe, but...)"
+"{c089}(This is great! {p25}Well, I mean... {n}not for Gumshoe, but...)"
 bg judge
 char judge e=normal
-"Mr. Wright, you seem to be very interested in this."
+"Mr. Wright, you seem to be very {n}interested in this."
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "Of course, Your Honor!"
 char phoenix e=pointing
-"He can remember what the other man looked like! It's definitely important!"
+"He can remember what the other man {n}looked like! It's definitely {n}important!"
 bg judge
 char judge e=nodding
 pause 50 script
 char judge e=normal
-"Detective, please revise your testimony."
+"Detective, please revise your {n}testimony."
 bg witness
 fg wbench
 char gumshoe e=pumped
@@ -186,7 +191,7 @@ char gumshoe e=pumped
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(This just turned the entire case back in our favor!)"
+"{c089}(This just turned the entire case back {n}in our favor!)"
 mus Confrontation - Allegro.ogg
 delflag gumshoepresent1
 delflag gumshoepresent2
@@ -206,51 +211,51 @@ statement gumshoe1A1 test=show_gumshoe1A1
 bg witness
 fg wbench
 char gumshoe e=normal
-"I met with {c940}somebody {c999}that morning."
+"I met with {c940}somebody {c090}that morning."
 
 statement gumshoe1B
 bg witness
 fg wbench
 char gumshoe e=thinking
-"He needed my help with {c940}something{c999}."
+"He needed my help with {c940}something{c090}."
 
 statement gumshoe1C test=show_gumshoe1C
 bg witness
 fg wbench
 char gumshoe e=normal
-"So, we met at {c940}a place at a time{c999}."
+"So, we met at {c940}a place at a time{c090}."
 
 statement gumshoe1C1 test=show_gumshoe1C1
 bg witness
 fg wbench
 char gumshoe e=normal
-"We met a little after 5 AM {c940}somewhere {c999}near the Rivales Tower."
+"We met a little after 5 AM {c940}somewhere {n}{c090}near the Rivales Tower."
 
 statement gumshoe1D
 bg witness
 fg wbench
 char gumshoe e=normal
-"He brought {c940}something {c999}with him."
+"He brought {c940}something {c090}with him."
 
 statement gumshoe1E
 bg witness
 fg wbench
 char gumshoe e=normal
-"I brought {c940}something {c999}with me too."
+"I brought {c940}something {c090}with me too."
 
 statement gumshoe1F test=show_gumshoe1F
 bg witness
 fg wbench
 char gumshoe e=confident
-"I can sort of remember what he looked like.
+"I can sort of remember what he {n}looked like.
 endcross
 
 label comments
 bg aide
 char maya e=bench-hum
-"There's a lot of somethings in his testimony."
+"There's a lot of somethings in his {n}testimony."
 char phoenix hide
-"It's up to me to figure out what they all are."
+"It's up to me to figure out what they {n}all are."
 char maya e=bench-strict
 "What if he can't remember?"
 char phoenix hide
@@ -258,6 +263,7 @@ char phoenix hide
 goto start
 
 label press gumshoe1A
+mus
 sfx /phoenix/holdit.ogg
 fg HoldItAnim
 pause 5 script
@@ -276,7 +282,7 @@ char phoenix e=sheepish
 bg witness
 fg wbench
 char gumshoe e=mad
-"What do you mean?{n}Of course I did!"
+"{sfx damage}What do you mean?{n}{p10}Of course I did!"
 bg defense
 fg dbench
 char phoenix e=sweating
@@ -284,15 +290,16 @@ char phoenix e=sweating
 bg witness
 fg wbench
 char gumshoe e=normal
-"{sfx idea}Oh... {p20}{n}{e laugh}You're right!{p15} I am!"
+"{sfx idea}Oh... {p20}{n}{e laughing}You're right!{p15} I am!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Have fun with the rest of this testimony, Wright."
+"Have fun with the rest of this {n}testimony, Wright."
 bg defense
 fg dbench
 char phoenix e=sweating
 "{c089}(Oh, shut up.)"
+mus Confrontation - Allegro.ogg
 set show_gumshoe1A false
 set show_gumshoe1A1 true
 setflag gumshoepresent1
@@ -317,7 +324,7 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=thinking
-"Maybe it was someone you know well? ...Someone you work with?"
+"Maybe it was someone you know {n}well? {n}{p20}...{p20}Someone you work with?"
 bg witness
 fg wbench
 char gumshoe e=disheartened
@@ -325,8 +332,8 @@ char gumshoe e=disheartened
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(I think I'm just asking the wrong questions.)"
-"{c089}(I should try approaching this from a different angle.)"
+"{c089}(I think I'm just asking the wrong {n}questions.)"
+"{c089}(I should try approaching this from a {n}different angle.)"
 char phoenix e=normal
 "What did you two meet for?"
 bg witness
@@ -342,7 +349,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"So the person you met with was a he?"
+"So the person you met with was a {n}he?"
 bg witness
 fg wbench
 char gumshoe e=pumped
@@ -354,7 +361,7 @@ char phoenix e=thinking
 bg prosecution
 fg pbench
 char obadiah e=serious
-"This narrows down our list of suspects to only approximately half the city."
+"This narrows down our list of {n}suspects to only approximately {n}half the city."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -364,9 +371,9 @@ fg wbench
 char gumshoe e=pumped
 "I don't know!"
 char phoenix hide
-"{c089}(I wonder how many times I'll have to hear that phrase.)"
+"{c089}(I wonder how many times I'll have to {n}hear that phrase.)"
 char gumshoe e=normal
-"Whoever he was, he must've needed me pretty badly."
+"Whoever he was, he must've needed {n}me pretty badly."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -374,12 +381,12 @@ char phoenix e=normal
 bg witness
 fg wbench
 char gumshoe e=normal
-"Well, he wouldn't have brought met out that there early for no good reason, right?"
-"I knew it had to be important, so I went to help him."
+"Well, he wouldn't have brought me {n}out there that early for no good {n}reason, right?"
+"I knew it had to be important, so I {n}went to help him."
 bg defense
 fg dbench
 char phoenix e=sheepish
-"Important enough to remember, maybe?"
+"Important enough to remember, {n}maybe?"
 bg witness
 fg wbench
 char gumshoe e=disheartened
@@ -413,18 +420,19 @@ set _cr_back_button false
 present
 
 label rick
+set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"Gumshoe, I think I might know where and when you met."
-"Did you, by any chance, meet at 5:20 near the Rivales Tower?"
+"Gumshoe, I think I might know where {n}and when you met."
+"Did you, by any chance, meet at 5:20 {n}near the Rivales Tower?"
 bg witness
 fg wbench
 char gumshoe e=normal
-"You know, now that you mention it... {e pumped}I think that's right!"
+"You know, now that you mention it... {n}{p15}{e pumped}I think that's right!"
 bg defense
 fg dbench
 char phoenix e=confident
@@ -435,7 +443,7 @@ char obadiah e=serious
 "Hmph."
 set show_gumshoe1C false
 set show_gumshoe1C1 true
-resume
+goto start
 
 label press gumshoe1C1
 sfx /phoenix/holdit.ogg
@@ -448,34 +456,34 @@ char phoenix e=normal
 bg witness
 fg wbench
 char gumshoe e=confident
-"That's right! We were supposed to meet there."
+"That's right! {n}We were supposed to meet there."
 bg defense
 fg dbench
 char phoenix e=thinking
 "{c089}(That's exactly what the note said.)"
-"{c089}(I wonder if there's anything else we can find out about this.)"
-"By "near", do you mean outside on the sidewalk?"
+"{c089}(I wonder if there's anything else we {n}can find out about this.)"
+"By "near", do you mean outside on {n}the sidewalk?"
 bg witness
 fg wbench
 char gumshoe e=headscratch
-pause 50 script
+pause 65 script
 char gumshoe e=thinking
 "No, I don' think that was it."
-"I mean, I must've gone out later, since I got hit, but before I think we were inside and... {e headscratch}"
+"I mean, I must've gone out later, {n}since I got hit, but before I think{n} we were inside and... {e headscratch}"
 pause 50 script
 "{e disheartened}No, maybe that's not it."
-"{e normal}Maybe we were outside the whole time and... {p20}{e disheartened}Oh... No..."
+"{e normal}Maybe we were outside the whole {n}time and... {p20}{e disheartened}{n}Oh... No..."
 bg defense
 fg dbench
 char phoenix e=normal
-"{c089}(This must be really hard for him. I have to keep pushing him in the right direction.)"
+"{c089}(This must be really hard for him. {n}I have to keep pushing him in the {n}right direction.)"
 char phoenix e=thinking
-"Gumshoe, I think we can specify things even more here..."
-"{c090}This can show the exact location of your meeting..."
+"Gumshoe, I think we can specify {n}things even more here..."
+"{c090}This can show the exact location of {n}your meeting..."
 set _cr_back_button false
 present
 
-label blackmail
+label blackmail2
 set _cr_back_button true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
@@ -493,7 +501,7 @@ char gumshoe e=thinking
 bg defense
 fg dbench
 char phoenix e=normal
-"Well, we happened to find this copy in an abandoned warehouse across the street from Rivales Tower."
+"Well, we happened to find this copy {n}in an abandoned warehouse across {n}the street from Rivales Tower."
 bg prosecution
 fg pbench
 char obadiah e=serious2
@@ -502,28 +510,30 @@ bg defense
 fg dbench
 char phoenix e=thinking
 "Wouldn't it make sense?"
-"The other person was being blackmailed by Rivales, so he contacted Gumshoe, his friend, to come help him."
-"They met up in the building immediately before the meeting with Rivales was to take place."
+"The other person was being {n}blackmailed by Rivales..."
+char phoenix e=normal
+"...so he contacted Gumshoe, {n}his friend, to come help {n}him."
+"They met up in the building {n}immediately before the meeting {n}with Rivales was to take place."
 hidevr
 bg prosecution
 fg pbench
 char obadiah e=serious
-"...Well, Gumshoe?"
+"...{p20}Well, Gumshoe?"
 bg witness
 fg wbench
 char gumshoe e=pumped
-"............"
+"{delay 1}............{p20}"
 bg judge
 char judge e=normal
-"It doesn't look like the witness can remember."
+"It doesn't look like the witness can {n}remember."
 bg witness
 fg wbench
 char gumshoe e=disheartened
-"..........."
+"{delay 1}..........."
 char phoenix hide
-"{c089}(Great. I don't think that did anything.)"
+"{c089}(Great. I don't think that did {n}anything.)"
 setflag gumshoepresent2
-resume
+goto start
 
 label press gumshoe1D
 sfx /phoenix/holdit.ogg
@@ -549,12 +559,13 @@ bg defense
 fg dbench
 char phoenix e=thinking
 "You, scared?"
-"{c089}(That must have been a very powerful emotion for him to remember it so well.)"
+"{c089}(That must have been a very {n}powerful emotion for him to {n}remember it so well.)"
 "What were you afraid of?"
 bg witness
 fg wbench
 char gumshoe e=normal
-"I... I can't remember exactly.{n}But I think that I wasn't really afraid for myself."
+"I... I can't remember exactly.{n}{p25}But I think that I wasn't really afraid {n}for myself."
+char gumshoe e=mad
 "I was scared for the other guy."
 char phoenix hide
 "{c089}(What does THAT mean?!)"
@@ -567,7 +578,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"Could you describe what you brought?"
+"Could you describe what you {n}brought?"
 bg witness
 fg wbench
 char gumshoe e=confident
@@ -598,7 +609,7 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char gumshoe e=thinking
-"Well, it's kind of hard to describe him. He was just an ordinary guy."
+"Well, it's kind of hard to describe him. {n}He was just an ordinary guy."
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -610,7 +621,7 @@ char gumshoe e=normal
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Did he have any distinguishing features? Tattoos? Scars?"
+"Did he have any distinguishing {n}features? Tattoos? Scars?"
 bg witness
 fg wbench
 char gumshoe e=normal
@@ -618,20 +629,21 @@ char gumshoe e=normal
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Would you remember him if you saw him?"
+"Would you remember him if you saw {n}him?"
 bg witness
 fg wbench
 char gumshoe e=confident
-"Oh yeah. Right away!"
+"Oh yeah. {p10}Right away!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Bingo! You've done it again, Phoenix.)"
+"{c089}(Bingo! You've done it again, {n}Phoenix.)"
 resume
 
 label rick gumshoe1A
-sfx /phoenix/objection.ogg
-fg ObjectionAnim
+mus
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
@@ -648,7 +660,7 @@ char phoenix e=sheepish
 bg witness
 fg wbench
 char gumshoe e=mad
-"What do you mean?{n}Of course I did!"
+"{sfx damage}What do you mean?{n}{p10}Of course I did!"
 bg defense
 fg dbench
 char phoenix e=sweating
@@ -656,21 +668,23 @@ char phoenix e=sweating
 bg witness
 fg wbench
 char gumshoe e=normal
-"{sfx idea}Oh... {p20}{n}{e laugh}You're right!{p15} I am!"
+"{sfx idea}Oh... {p20}{n}{e laughing}You're right!{p15} I am!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Have fun with the rest of this testimony, Wright."
+"Have fun with the rest of this {n}testimony, Wright."
 bg defense
 fg dbench
 char phoenix e=sweating
 "{c089}(Oh, shut up.)"
+mus Confrontation - Allegro.ogg
 set show_gumshoe1A false
 set show_gumshoe1A1 true
 setflag gumshoepresent1
 goto start
 
-label blackmail gumshoe1D
+label blackmail2 gumshoe1D
+mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script
@@ -679,16 +693,16 @@ fg dbench
 char phoenix e=confident
 set _ev blackmail
 showevr
-"Gumshoe, I'll bet you were scared of this blackmail letter, weren't you?"
+"Gumshoe, I'll bet you were scared of {n}this blackmail letter, weren't you?"
 hideevr
 bg witness
 fg wbench
 char gumshoe e=normal
-"Uh... No.{n}No, I don't think I was."
+"Uh... {p10}No.{n}{p20}No, I don't think I was."
 bg defense
 fg dbench
 char phoenix e=normal
-"R-Really?{n}Are you sure?"
+"R{p5}-Really?{n}{p10}Are you sure?"
 bg witness
 fg wbench
 char gumshoe e=thinking
@@ -700,22 +714,24 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char gumshoe e=normal
-"Yeah, it is... But the thing I remember wasn't a piece of paper."
+"Yeah, it is... {p20}{n}But the thing I remember wasn't {n}a piece of paper."
 "It was made of {c940}metal{c999}, I think."
 bg defense
 fg dbench
 char phoenix e=thinking
 "{c089}(Hmm... Metal...)"
+mus Confrontation - Allegro.ogg
 goto start
 
-label gun gumshoe1D
+label gun2 gumshoe1D
+mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"You said that this item made you feel scared, right?"
+"You said that this item made you feel {n}scared, right?"
 bg witness
 fg wbench
 char gumshoe e=mad
@@ -724,24 +740,24 @@ bg defense
 fg dbench
 char phoenix e=confident
 set _ev gun
-"Well, it just so happens that I have with me something that most people would find to be very scary..."
+"Well, it just so happens that I have {n}something that most people would find {n}to be very scary..."
 showevr
 "...a gun."
 bg witness
 fg wbench
 char gumshoe e=pumped
+set _ev gun2
 "Hey, be careful with those things, pal!"
 char gumshoe e=mad
 "You'll shoot your eye out!"
 bg defense
 fg dbench
 char phoenix e=confident
-"Not with this one. It's broken. Remember?"
-hidevr
+"Not with this one. It's broken. {n}{p10}Remember?"
 bg witness
 fg wbench
 char gumshoe e=thinking
-"............"
+"{delay 1}............"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -749,18 +765,20 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char gumshoe e=thinking
-"......{e disheartened}......"
+"{delay 1}......{e disheartened}......"
 bg judge
 char judge e=normal
-"Perhaps we should continue to cross-examination."
+"Perhaps we should continue the {n}cross-examination."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Dangit! C'mon, Gumshoe! Remember!)"
+"{c089}(Dangit! C'mon, Gumshoe! {n}{p10}Remember!)"
+mus Confrontation - Allegro.ogg
 setflag gumshoepresent3
 goto start
 
 label rick gumshoe1E
+mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script
@@ -769,7 +787,7 @@ fg dbench
 char phoenix e=normal
 set _ev rick
 showevr
-"Gumshoe, was this what you brought?"
+"Gumshoe, was this what you {n}brought?"
 bg witness
 fg wbench
 char gumshoe e=thinking
@@ -777,31 +795,33 @@ char gumshoe e=thinking
 bg defense
 fg dbench
 char phoenix e=normal
-"Somebody called you to the Rivales Tower. This note proves that much."
-"You brought it there, and then discarded it later."
+"Somebody called you to the Rivales {n}Tower. This note proves that much."
+"You brought it there, and then {n}discarded it later."
 hidevr
 bg witness
 fg wbench
 char gumshoe e=thinking
-"............"
+"{delay 1}............"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"You know, you weren't the only one who was called there."
-"There was another person... and I'm willing to bet it was the man who sent you that note."
+"You know, you weren't the only one {n}who was called there."
+"There was another person... {p20}and I'm {n}willing to bet it was the man who {n}sent you that note."
 bg witness
 fg wbench
 char gumshoe e=thinking
-"......{e disheartened}......"
+"{delay 1}......{e disheartened}......"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Please? Something?{n}Anything?)"
+"{c089}(Please? Something?{n}{p20}...Anything?)"
+mus Confrontation - Allegro.ogg
 setflag gumshoepresent4
 goto start
 
 label watters$ gumshoe1F
-sfx/phoenix/objection.ogg
+mus
+sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script
 bg defense
@@ -809,20 +829,20 @@ fg dbench
 char phoenix e=confident
 set _ev watters$
 showevr
-"Gumshoe, did the man you met with happen to look like this?"
+"Gumshoe, did the man you met with {n}happen to look like this?"
 bg witness
 fg wbench
 char gumshoe e=thinking
-"......{e disheartened}......"
+"{delay 1}......{e disheartened}......"
 char phoenix hide
 "{c089}({s5}NO!!!)"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Hmph. Your Honor...?"
+"Hmph. {p20}Your Honor...?"
 bg judge
 char judge e=normal
-"Yes. This case is very clear. I see no reason to--{p20}{next}"
+"Yes. This case is very clear. {n}I see no reason to--{p20}{next}"
 char judge e=surprised
 char gumshoe hide
 "Wait a minute..."
@@ -837,6 +857,7 @@ bg black fade
 pause 60 script
 "{f}{next}"
 bg lettertorick
+grey value=1
 sfx dramapound
 pause 50 script
 "{f}{next}"
@@ -854,8 +875,8 @@ pause 30 script
 "{f}{next}"
 char watters e=serious fade
 pause 20 script
-bg black fade
-char watters e=serious fade
+bg black stack fade
+char watters e=serious
 pause 30 script
 char nothing fade
 "{f}{f}{f}{next}"
@@ -863,18 +884,19 @@ mus I can do it when it counts, pal.ogg
 set _music_loop I can do it when it counts, pal - loop.ogg
 bg witness
 fg wbench
+grey value=0
 char gumshoe e=pumped
-"Y-Yeah, pal!{n}It's all coming back to me!"
-"That man! He's the one!!"
+"Y-Yeah, pal!{n}{p20}It's all coming back to me!"
+"That man! {sfx shout-general}He's the one!!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"We all know who the man in that photo is..."
-"{e objecting}...{sfx shout-objection}It's Detective Mark Watters!"
+"We all know who the man in that {n}photo is..."
+"{e objecting}{p50}{e pointing}...{sfx shout-objection}It's Detective Mark Watters!"
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Wh-what?! O-Objection, Your Honor!"
+"Wh-what?! {sfx damage}{n}O-Objection, Your Honor!"
 bg judge 
 char judge e=headshake
 pause 50 script
@@ -888,17 +910,20 @@ pause 60 script
 char gumshoe hide
 "That's right! Mark was there!"
 char watters e=nervous
+grey value=1
 char gumshoe hide
-"He was really on edge. He had that blackmail letter and his gun with him."
-"I took the yellow letter with me because I was confused about it."
+"He was really on edge. He had that {n}blackmail letter and his gun with {n}him."
+"I took the yellow letter with me {n}because I was confused about it."
 char watters e=thinking
+grey value=1
 char gumshoe hide
-"After he explained everything to me, I set it down on one of the crates and left it there."
+"After he explained everything to me, {n}I set it down on one of the crates {n}and left it there."
 char watters e=nervous
+grey value=1
 char gumshoe hide
-"Mark told me that he was going to go meet with Michael Rivales."
-"He knw it was too dangerous to go in there alone though, so he had me wait outside..."
-"{f}{next}"
+"Mark told me that he was going to go {n}meet with Michael Rivales."
+"He knew it was too dangerous to go in {n}there alone though, so he had me wait {n}outside..."
+"{f}{f}{next}"
 grey value=0
 bg witness
 fg wbench

@@ -9,11 +9,11 @@ nt
 pause 60 script
 
 char maya e=normal fade
-"Well, the trial went better than I thought it would."
+"Well, the trial went better than I {n}thought it would."
 char maya e=thinking
-"We didn't get a guilty verdict right away."
+"We didn't get a guilty verdict right {n}away."
 char phoenix hide
-"I'm sure that was a relief to Mr. Parker."
-"{c089}(We should probably check up on him, to see how he's doing.)"
+"I'm sure that was a relief to Mr. {n}Parker."
+"{c089}(We should probably check up on him, {n}to see how he's doing.)"
 
 script scene28menu

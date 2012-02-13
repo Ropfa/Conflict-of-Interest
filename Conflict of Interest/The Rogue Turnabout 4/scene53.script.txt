@@ -1,3 +1,5 @@
+//PRESENT GUMSHOE'S PROFILE
+
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
@@ -9,23 +11,22 @@ showevr
 "I'd like the court to look at this letter."
 bg judge
 char judge e=normal
-"Would you care to read it for us, Mr. Williamson?"
-hideevr
-showevl
+"Would you care to read it for us, {n}Mr. Williamson?"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"It reads 'Rick, I need your help. It's important. Please meet me tomorrow at 5:20 AM..."
-"...Don't tell anyone you're coming.'{n}{p20}It isn't signed."
+showevl
+"It reads 'Rick, I need your help. {n}It's important. Please meet me {n}tomorrow at 5:20 AM..."
+"...Don't tell anyone you're coming.'{n}{p25}It isn't signed."
 hideevl
 bg witness
 fg wbench
 char watters e=thinking
-"Since it's not signed, that means you can't prove anything."
+"Since it's not signed, that means {n}you can't prove anything."
 bg defense
 fg dbench
 char phoenix e=normal
-"Maybe I can't... But there's somebody out there who can."
+"Maybe I can't... {p20}But {n}there's somebody out there {n}who can."
 bg witness
 fg wbench
 char watters e=thinking
@@ -41,10 +42,10 @@ char obadiah e=worried
 bg defense
 fg dbench
 char phoenix e=document
-"A person named Rick met with the author of this note. He can tell us everything."
+"A person named Rick met with the {n}author of this note. He can tell {n}us everything."
 bg judge
 char judge e=surprised
-"Who is Rick?{n}I don't know any Rick."
+"Who is Rick?{n}{p20}I don't know any Rick."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -66,7 +67,7 @@ bg defense
 fg dbench
 char phoenix e=normal
 "Everybody here has met Rick before."
-"{e confident}He is none other than Detective Dick Gumshoe."
+"{e confident}He is none other than Detective Dick {n}Gumshoe."
 bg witness
 fg wbench
 char watters e=nervous
@@ -78,12 +79,12 @@ char phoenix e=handsondesk
 bg prosecution
 fg pbench
 char obadiah e=worried
-"You want us to have Detective Gumshoe testify?"
+"You want us to have Detective {n}Gumshoe testify?"
 bg defense
 fg dbench
 char phoenix e=normal
-"If Gumshoe is the Rick in question, then all our questions can be answered."
-"If not... then you have nothing to worry about, Prosecutor."
+"If Gumshoe is the Rick in question, {n}then all our questions can be {n}answered."
+"If not... then you have nothing to {n}worry about, Prosecutor."
 bg prosecution
 fg pbench
 char obadiah e=serious2
@@ -102,8 +103,8 @@ char watters e=nervous
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Watters is starting to look nervous.)"
-"{c089}(I think he's finally starting to realize how bad things look for him.)"
+"{c089}(Watters is starting to look {n}nervous.)"
+"{c089}(I think he's finally starting to realize {n}how bad things look for him.)"
 bg black fade
 pause 60 script
 script scene54
@@ -123,7 +124,7 @@ char judge e=normal
 bg defense
 fg dbench
 char phoenix e=thinking
-"Are you sure?{n}What exactly does a Rick look like?"
+"Are you sure?{n}{p15}What exactly does a Rick look like?"
 bg judge
 char judge e=headshake
 pause 50 script
@@ -135,8 +136,8 @@ is penalty 0 failure
 bg defense
 fg dbench
 char phoenix e=thinking
-"Now that you mention it, maybe it doesn't really look like a Rick after all."
-"{c090}However, this looks exactly like a Rick..."
+"Now that you mention it, maybe it {n}doesn't really look like a Rick {n}after all."
+"{c090}However, this looks exactly like a {n}Rick..."
 goto redo
 
 label failure
