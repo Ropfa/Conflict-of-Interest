@@ -1,4 +1,9 @@
-set _textbox_wrap falseset _textbox_lines 3include evidenceaddev attorneybadgeaddev magatama
+set _textbox_wrap false
+set _textbox_lines 3
+include evidence
+
+addev attorneybadge
+addev magatama
 addev gun
 addev knife2
 addev blackmail
@@ -9,7 +14,8 @@ addev poster
 addev codyphoto
 addev luminol
 addev blueprints
-addev crimephoto2addev maya$
+addev crimephoto2
+addev maya$
 addev gumshoe$
 addev parker$
 addev black$
@@ -21,4 +27,6 @@ addev gallante$
 addev obadiah$
 
 set char_gallante_defsound bliplow.ogg
-set char_sarah_defsound blipfemale.oggscript scene28
+set char_sarah_defsound blipfemale.ogg
+
+script scene28

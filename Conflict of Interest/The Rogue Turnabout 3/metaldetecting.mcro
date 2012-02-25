@@ -1,20 +1,47 @@
-macro layerone
-label begin1
+macro layeractual
 sfx beep
-pause 15
-goto begin1
+pause 5
+sfx beep
+pause 5
+sfx beep
+pause 5
+sfx beep
+pause 5
+sfx beep
+pause 5
+sfx beep
+pause 5
+endmacro
+
+macro layerone
+sfx beep
+pause 15 script
+sfx beep
+pause 15 script
+sfx beep
+pause 15 script
+sfx beep
+pause 15 script
+sfx beep
+pause 15 script
 endmacro
 
 macro layertwo
-label begin2
 sfx beep
-pause 35
-goto begin2
+pause 35 script
+sfx beep
+pause 35 script
+sfx beep
+pause 35 script
+sfx beep
+pause 35 script
 endmacro
 
 macro layerthree
-label begin3
 sfx beep
-pause 50
-goto begin3
+pause 50 script
+sfx beep
+pause 50 script
+sfx beep
+pause 50 script
 endmacro

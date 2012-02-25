@@ -1,6 +1,7 @@
 mus Tricks and Gimmicks.ogg
-label top
 bg pent2
+label top
+bg pent2 x=0 y=192 name=metaldetectingbottom stack
 
 examine
 region 0 70 21 28 painting
@@ -15,16 +16,7 @@ region 30 113 226 16 sill
 region 25 108 236 26 slayer1
 region 20 103 246 36 slayer2
 region 15 88 256 66 slayer3
-label ifback
 goto back
-
-label sill
-"{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{next}"
-pause 20 script
-char phoenix hide
-"A metal window sill reacting to a {n}metal detector."
-"Nothing strange here."
-goto top
 
 label slayer1
 layerone
@@ -36,16 +28,6 @@ goto top
 
 label slayer3
 layerthree
-goto top
-
-label knife
-"{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{next}"
-pause 20 script
-char phoenix hide
-"Why is that knife still here?"
-"Shouldn't the forensics team be {n}examining it?"
-char watters hide
-"I dunno. Maybe somebody just got {n}lazy and left it here."
 goto top
 
 label klayer1
@@ -72,10 +54,31 @@ layer player3
 layerthree
 goto top
 
+label sill
+layeractual
+pause 20 script
+delete name=metaldetectingbottom
+char phoenix hide
+"A metal window sill reacting to a {n}metal detector."
+"Nothing strange here."
+goto top
+
+label knife
+layeractual
+pause 20 script
+delete name=metaldetectingbottom
+char phoenix hide
+"Why is that knife still here?"
+"Shouldn't the forensics team be {n}examining it?"
+char watters hide
+"I dunno. Maybe somebody just got {n}lazy and left it here."
+goto top
+
 label painting
 mus
-"{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{next}"
+layeractual
 pause 20 script
+delete name=metaldetectingbottom
 char phoenix hide
 "That's funny."
 "Why would a metal detector be {n}reacting to that painting?"
