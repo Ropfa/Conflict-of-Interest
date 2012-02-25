@@ -22,33 +22,33 @@ char phoenix hide
 "Do you have any idea why Sarah {n}Keyes wants to see you {n}convicted?"
 char parker e=sad 
 "If I knew, I'd tell you. {n}Believe me."
-"You really can't blame her though...{n}What with how guilty I look."
-"I really did go into that room just before he was killed."
+"You really can't blame her though...{n}{p20}What with how guilty I look."
+"I really did go into that room just {n}before he was killed."
 char phoenix hide
-"What were you meeting with him about?"
+"What were you meeting with him {n}about?"
 char parker e=worried
-"We discussed a few business matters."
+"We discussed a few business {n}matters."
 char phoenix hide
 "For how long?"
 char parker e=worried
-"Not too long, actually.{n}A few minutes at the most."
+"Not too long, actually.{n}{p10}A few minutes at the most."
 char phoenix hide
-"You had to show up at 5:30 in the morning for only a few minutes?"
-"That must've been an important meeting."
+"You had to show up at 5:30 in the {n}morning for only a few minutes?"
+"That must've been an important {n}meeting."
 char parker e=worried
 "It was."
 char phoenix hide
-"Why did you bring your knife with you?"
+"Why did you bring your knife with {n}you?"
 char parker e=serious
-"I... {e disturbed}Hey!{n}You don't think that I... Do you?!"
+"I... {e disturbed}{sfx shout-general}Hey!{n}{p15}You don't think that I... {p15}{sfx damage}Do you?!"
 char phoenix hide
-"You mean that you didn't bring it in there with you?"
+"You mean that you didn't bring it in {n}there with you?"
 char parker e=disturbed
-"Of course not! I haven't seen that thing in weeks!"
+"{sfx shout-general}Of course not! {n}{p10}I haven't seen that {sfx shout-general}thing in {sfx shout-general}weeks!"
 "I thought I lost it!"
 char phoenix hide
-"{c089}(And suddenly it winds up at a crime scene...)"
-"{c089}(...Of course, no court would ever believe that story.)"
+"{c089}(And suddenly it winds up at a crime {n}scene...)"
+"{c089}(...Of course, no court would ever {n}believe that story.)"
 setflag accusationtalk
 
 noflag parkerpsyche AND accusationtalk scene29
@@ -60,36 +60,39 @@ noflag blackdetention blackdetention
 flag blackdetention ifthen2
 label blackdetention
 char parker e=sad
-"...Do you think you can actually win this?"
+"...Do you think you can actually win {n}this?"
 char phoenix hide
 "I've been up against worse odds."
 char parker e=disturbed
-"But... They're not just trying to get me with one murder."
-"They're trying to prove that I'm a serial killer!"
-"IT'S ALL OVER FOR {e freakout}ME!!!"
-char parker e=sad fade
+"But... {p10}They're not just trying to get {n}me with one murder."
+"They're trying to prove that I'm a {n}{sfx shout-objection}serial killer!"
+"{sfx shout-general}IT'S ALL OVER FOR {sfx shout-loud}{e freakout}ME!!!"
+char parker e=sad
 "I'm as good as dead..."
+pause 60 script
 char black hide
 "{delay 1}Duuuuuude, Waaaaayyyynnne."
-"{delay 1}Come on! You gotta put a bit more faith in your lawyer."
+"{delay 1}Come on! You gotta put a bit more {n}faith in your lawyer."
 char parker e=serious
 "{sfx realization}!"
+pause 50 script
 delete name=1
 char black e=peace fade
-"{delay 1}You can't lose hope! This guy's here for you, buddy! All the way!"
+"{delay 1}You can't lose hope! {n}This guy's here for you, buddy! {n}All the way!"
 fg detention name=1
 char parker e=serious
-"I guess you're right... I"m sorry, Mr. Wright."
+"I guess you're right... {n}{p15}I'm sorry, Mr. Wright."
 char phoenix hide
-"Don't worry about it. I know how it can go."
+"Don't worry about it. {n}I know how it can go."
 delete name=1
 char black e=peace
 "{delay 1}Hey again, Mr. Wright."
-"{delay 1}Just came by to check up on my buddy Wayne. Hope I'm not interrupting."
+"{delay 1}Just came by to check up on my {n}buddy Wayne. Hope I'm not {n}interrupting."
 char phoenix hide
-"I think we were about to leave anyways. We can come back later."
+"I think we were about to leave {n}anyway. We can come back later."
 char black e=normal
-"{delay 1}Hey, dude... I have something for you. {e peace}It might help your investigation!"
+"{delay 1}Hey, dude... {n}I have something for you." 
+"{e peace}It might help your investigation!"
 char phoenix hide
 "Thank you."
 char black e=peace
@@ -98,36 +101,36 @@ char phoenix hide
 "..."
 "Are you going to give it to me?"
 char black e=pumped
-"{delay 1}...Oh. Right. {e normal}I kinda forgot it back at my apartment."
+"{delay 1}...{p25}Oh. Right." 
+"{e normal}I kinda forgot it back at my {n}apartment."
 char phoenix hide
-"Well, I guess we'll have to stop by there later today."
+"Well, I guess we'll have to stop by {n}there later today."
 char black e=peace
-"{delay 1}Awwwweeesoooommme!! I'll be expecting you."
-"{delay 1}You should stop by right away, and I'll have it for you."
+"{delay 1}Awwwweeesoooommme!! {n}{p20}I'll be expecting you."
+"{delay 1}You should stop by right away, and {n}I'll have it for you."
 setflag blackdetention
 menu scene29
 label ifthen2
 goto top
 
 label Michael Rivales
-fg detention name=1
 char parker e=serious
 flag brokeparkerpsyche brokeparkerpsyche
 char phoenix hide
-"Mr. Parker, I think it's about time we talked about your job."
+"Mr. Parker, I think it's about time we {n}talked about your job."
 char parker e=serious
 "There's really not much to say."
 char phoenix hide
-"Besides the fact that your boss was a criminal kingpin?"
+"Besides the fact that your boss was {n}a criminal kingpin?"
 char parker e=sad
-"I... Well..."
+"I... {p20}{delay 1}Well..."
 delete name=1
 char maya e=normal
-"A security guard working for the mob?"
-"There's gotta be some juicy stories in there!"
+"A security guard working for the {n}mafia?"
+"There's gotta be some juicy stories {n}in there!"
 fg detention name=1
 char parker e=sad
-"...No. Nothing interesting."
+"...{p25}No. {p20}Nothing interesting."
 mus
 "{f}{next}"
 sfx dramapound.wav
@@ -150,7 +153,7 @@ pause 2
 "{sfx Owned.ogg}{f}{next}"
 pause 20
 char phoenix hide
-"{c089}(Aha! Now it's just time to find out what you're finding, Mr. Parker.)"
+"{c089}(Aha! {p15}Now it's just time to find out {n}what you're hiding, Mr. Parker.)"
 delete name=chains2
 delete name=lock1
 delete name=lock2
@@ -170,36 +173,39 @@ noflag blackdetention blackdetention
 flag blackdetention ifthen2
 label blackdetention
 char parker e=sad
-"...Do you think you can actually win this?"
+"...Do you think you can actually win {n}this?"
 char phoenix hide
 "I've been up against worse odds."
 char parker e=disturbed
-"But... They're not just trying to get me with one murder."
-"They're trying to prove that I'm a serial killer!"
-"IT'S ALL OVER FOR {e freakout}ME!!!"
-char parker e=sad fade
+"But... {p10}They're not just trying to get {n}me with one murder."
+"They're trying to prove that I'm a {n}{sfx shout-objection}serial killer!"
+"{sfx shout-general}IT'S ALL OVER FOR {sfx shout-loud}{e freakout}ME!!!"
+char parker e=sad
 "I'm as good as dead..."
+pause 60 script
 char black hide
 "{delay 1}Duuuuuude, Waaaaayyyynnne."
-"{delay 1}Come on! You gotta put a bit more faith in your lawyer."
+"{delay 1}Come on! You gotta put a bit more {n}faith in your lawyer."
 char parker e=serious
 "{sfx realization}!"
+pause 50 script
 delete name=1
 char black e=peace fade
-"{delay 1}You can't lose hope! This guy's here for you, buddy! All the way!"
+"{delay 1}You can't lose hope! {n}This guy's here for you, buddy! {n}All the way!"
 fg detention name=1
 char parker e=serious
-"I guess you're right... I"m sorry, Mr. Wright."
+"I guess you're right... {n}{p15}I'm sorry, Mr. Wright."
 char phoenix hide
-"Don't worry about it. I know how it can go."
+"Don't worry about it. {n}I know how it can go."
 delete name=1
 char black e=peace
 "{delay 1}Hey again, Mr. Wright."
-"{delay 1}Just came by to check up on my buddy Wayne. Hope I'm not interrupting."
+"{delay 1}Just came by to check up on my {n}buddy Wayne. Hope I'm not {n}interrupting."
 char phoenix hide
-"I think we were about to leave anyways. We can come back later."
+"I think we were about to leave {n}anyway. We can come back later."
 char black e=normal
-"{delay 1}Hey, dude... I have something for you. {e peace}It might help your investigation!"
+"{delay 1}Hey, dude... {n}I have something for you." 
+"{e peace}It might help your investigation!"
 char phoenix hide
 "Thank you."
 char black e=peace
@@ -208,12 +214,13 @@ char phoenix hide
 "..."
 "Are you going to give it to me?"
 char black e=pumped
-"{delay 1}...Oh. Right. {e normal}I kinda forgot it back at my apartment."
+"{delay 1}...{p25}Oh. Right." 
+"{e normal}I kinda forgot it back at my {n}apartment."
 char phoenix hide
-"Well, I guess we'll have to stop by there later today."
+"Well, I guess we'll have to stop by {n}there later today."
 char black e=peace
-"{delay 1}Awwwweeesoooommme!! I'll be expecting you."
-"{delay 1}You should stop by right away, and I'll have it for you."
+"{delay 1}Awwwweeesoooommme!! {n}{p20}I'll be expecting you."
+"{delay 1}You should stop by right away, and {n}I'll have it for you."
 setflag blackdetention
 menu scene29
 label ifthen2
@@ -221,81 +228,84 @@ goto top
 
 label brokeparkerpsyche
 char parker e=serious
-"I'm not a security guard. {p20}I was one of Mr. Rivales's enforcers."
+"I'm not a security guard. {p20}I was one of {n}Mr. Rivales's enforcers."
 delete name=1
 char maya e=thinking
 "An enforcer?"
 fg detention name=1
 char parker e=serious
-"If we don't like what somebody's doing, we'll send somebody to "persuade" them otherwise."
+"If we don't like what somebody's {n}doing, we'll send somebody to {n}"persuade" them otherwise."
 char phoenix hide
 "So you {sfx shout-shock}kill people for a living?!"
 char parker e=freakout
-"NO!!!{n}{p20}{e disturbed}Hey! I didn't say that!"
-"I've never killed anybody in my life!!"
+"{sfx shout-shock}NO!!!{n}{p20}{e disturbed}{sfx shout-general}Hey! I didn't say that!"
+"I've never killed anybody in my {sfx damage}life!!"
+mus
 "I just... {n}{p20}{e sad}I just...{n}{p30}Oh, who am I kidding?"
 mus Reminiscence ~ KG-8 Case.ogg
 set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
-"{p20}I'm a bad man, Mr. Wright. I've done some very bad things in my life."
+"{p20}I'm a bad man, Mr. Wright. I've done {n}so many bad things in my life."
 char phoenix hide
 "How bad are we talking?"
 char parker e=sad
-"You should ask Sarah if you want to know that."
+"You should ask Sarah if you want to {n}know that."
 char parker e=serious
-"I'm sure she could give you some very detailed descriptions."
+"I'm sure she could give you some {n}very detailed descriptions."
 char phoenix hide
-"N-No thanks. I guess it's not really that important."
+"N-No thanks. I guess it's not really {n}that important."
 delete name=1
 char maya e=disheartened
-"Wow. Who would have thought that we were defending a hitman?"
+"Wow. Who would have thought that {n}we were defending a hitman?"
 fg detention name=1
 char parker e=disturbed
-"Heyheyheynonono!! I'm not a hitman!"
-"I swear, I've never killed anyone! {sfx shout-general}Honest!!!"
+"{sfx damage}Heyhey{sfx damage}heyno{sfx damage}nono!! {p15}{n}I'm not a hitman!"
+"I swear, I've never killed anyone! {n}{sfx shout-general}Honest!!!"
 char phoenix hide
-"Calm down! I believe you!"
+"Calm down! {n}I believe you!"
 char parker e=sad
 "I didn't kill anybody..."
-"The truth is, {p20}I've always wanted to get out of this business{p20}, but I never could."
+"The truth is, {p20}I've always wanted to {n}get out of this business{p20}, {n}but I never could."
+setflag michaelrivalestalk
 goto top
 
 label Leaving the business
 fg detention name=1
 char parker e=sad
-"I got messed up with this stuff when I was a kid."
-"I was young and stupid back then. {p20}I thought it was the "cool" thing to do..."
+"I got messed up with this stuff when {n}I was a kid."
+"I was young and stupid back then. {p20}{n}I thought it was the "cool" thing {n}to do..."
 "Boy was I wrong."
 char phoenix hide
 "Mr. Black said something about this."
 char parker e=sad
-"Oh yeah. Virgil knows all about how I hate it."
-"He's told me a million times that I need to quit, but I just {p20}can't."
+"Oh yeah. Virgil knows all about how I {n}hate it."
+"He's told me a million times that I {n}need to quit, but I just {p20}can't."
 char phoenix hide
 "Why not?"
 char parker e=crying
 "My boss, mainly.{n}{p20}Mr. Rivales."
-"I've been trying to leave for a long time now. {p20}That's why I was there that morning."
-"I was trying to convince him to let me go."
-"But, like always, he found some way to keep his hold on me."
+"I've been trying to leave for a long {n}time now. {p20}That's why I was there {n}that morning."
+"I was trying to convince him to let {n}me go."
+"But, like always, he found some way {n}to keep his hold on me."
 char phoenix hide
-"Why did he care so much about stopping you?"
+"Why did he care so much about {n}stopping you?"
 char parker e=crying
-"I worked very closely with him. I knew too much to just walk away."
-"He was a smart guy... He knew all the ways to get people to do what he wanted."
+"I worked very closely with him. {n}{p10}I knew too much to just walk away."
+"He was a smart guy... {p20}He knew all the {n}ways to get people to do what he {n}wanted."
 char phoenix hide
-"{c089}(That sounds a lot like he was being blackmailed to keep his job.)"
+"{c089}(That sounds a lot like he was being {n}blackmailed to keep his job.)"
 char parker e=sad
-"But I guess... Now that he's gone, I can finally live my own life."
+"But I guess... {p15}{n}Now that he's gone, I can finally {n}live my own life."
 char phoenix hide
 "What are you going to do with it?"
 char parker e=sad
-"Well, if you two get me acquitted... {e serious}I think I might start by turning myself in."
+"Well, if you two get me acquitted... {n}{p10}{e serious}I think I might start by turning {n}myself in."
 char phoenix hide
-"...Come again?"
+"...{p20}Come again?"
 char parker e=serious
-"I need to atone for the things I've done."
-"I think that's a step in the right direction."
+"I need to atone for the things I've {n}done."
+"I think that's a step in the right {n}direction."
 char phoenix hide
-"{c089}(Being let out of jail, just so you can turn yourself in again.)"
+"{c089}(Being let out of jail, just so you can {n}turn yourself in again.)"
 "{c089}(That's integrity, if nothing else.)"
+setflag theatoner
 goto top

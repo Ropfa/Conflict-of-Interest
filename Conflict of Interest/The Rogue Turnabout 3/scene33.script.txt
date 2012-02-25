@@ -3,11 +3,10 @@ bg reception fade
 pause 60
 char maya e=thinking fade
 char phoenix hide
-"I don't see Sarah Keyes anywhere here."
+"I don't see Sarah Keyes anywhere {n}here."
 char forensics hide
-"If you're looking for the witness, she's currently being questioned down at the police station."
-"Prosecutor Williamson was upset at all the flaws in her testimony today."
-char phoenix hide
-"{c089}(I guess that would make sense.)"
+"If you're looking for the witness, {n}she's currently being questioned{n}down at the police station."
+"Prosecutor Williamson was upset at {n}all the flaws in her testimony {n}today."
+pause 50 script
 
 script scene33menu

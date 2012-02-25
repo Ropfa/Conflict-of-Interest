@@ -18,59 +18,62 @@ goto scene34talk
 label The Trial
 char watters e=smile
 "Say, nice job on that trial today."
-"I didn't think you'd actually be able to do it."
+"I didn't think you'd actually be able to {n}do it."
 char phoenix hide
 "I haven't won yet."
 char watters e=smile
-"Well... No.{n}But you managed to not lose on the first day."
+"Well... No.{n}{p15}But you managed to not lose on the {n}first day."
 "That's something."
 char phoenix hide
 "I guess when you put it that way..."
 char watters e=confident
-"Boss Man Williamson always plans out his cases really well."
-"He likes making sure there aren't any holes."
-"You should've seen him after the trial."
-"That kid's photo showing up out of the blue really pissed him off."
+"Boss Man Williamson always plans {n}out his cases really well."
+"He likes making sure there aren't any {n}holes."
+char watters e=nervous
+"You should've seen him after the {n}trial."
+"That kid's photo showing up out of {n}the blue really pissed him off."
 char phoenix hide
 "I could see that happening."
 char watters e=serious
-"Watch out for that guy, man. He hates you."
+"Watch out for that guy, man. {n}{p20}He hates you."
 char phoenix hide
 "I kind of picked that up."
 char watters e=serious
 "No, I mean it, man!"
-"The only reason he didn't totally chew you out was because you two were in court."
-"If you were to feel his wrath outside... {n}{p30}I pity you."
+"The only reason he didn't totally {n}chew you out was because you two {n}were in court."
+"If you were to feel his wrath {n}outside... {n}{p30}I pity you."
 char phoenix hide
-"Thanks for the warning, Detective. I'll keep that in mind."
+"Thanks for the warning, Detective.{n}{p10}I'll keep that in mind."
 char maya e=thinking
 "Why does he hate Nick so much?"
 char watters e=thinking
-"Eh... I dunno.{n}Maybe you cut him off in traffic or something?"
+"Eh... I dunno.{n}{p15}Maybe you cut him off in traffic or {n}something?"
 char maya e=normal
 "No. {p20}Nick can't drive."
 char watters e=thinking
-"...{p20}{e serious}Wait, aren't you supposed to be a really successful lawyer?"
+"...{p30}{e serious}{p20}Wait, aren't you supposed to be a {n}really successful lawyer?"
+char watters e=confused
 "A guy your age..."
 char phoenix hide
 "Let's... {p10}Let's change the subject."
 goto top
 
 label The Investigation
+char watters e=smile
 char phoenix hide
 "How's the investigation coming?"
 set _ev metal detecter
 showevl
 char watters e=serious
-"I'm supposed to be finding more evidence with this thing."
+"I'm supposed to be finding more {n}evidence with this thing."
 char watters e=confused
-"So far I haven't been having much luck."
+"So far I haven't been having much {n}luck."
 char phoenix hide
-"What are you hoping to find with a metal detector?"
+"What are you hoping to find with a {n}metal detector?"
 char watters e=thinking
-"Beats me. I doubt there's much left to find in here that we haven't already seen."
+"Beats me. {p10}I doubt there's much left {n}to find in here that we haven't {n}already seen."
 char phoenix hide
-"You've already checked everywhere?"
+"You've already checked {n}everywhere?"
 char watters e=thinking
 "Kinda."
 char phoenix hide
@@ -87,54 +90,57 @@ showlist
 
 label Leave it to the professional
 char phoenix hide
-"{c089}(I'd better not get in the way here. He knows what he's doing.)"
+"{c089}(I'd better not get in the way here. {n}{p10}He knows what he's doing.)"
 goto top
 
 label Use the metal detector
 char phoenix hide
 "Let me try using that thing."
 char watters e=serious
-"What, the metal detector?{n}You sure?"
+"What, the metal detector?{n}{p15}You sure?"
 char phoenix hide
-"I've had some experience with them before. I know what I'm doing."
+"I've had some experience with them {n}before. {p10}I know what I'm doing."
 char watters e=confident
-"Okay. Go for it, I guess."
+"Okay. {p10}Go for it, I guess."
 script metaldetecting
 
 label The Hit List
 char watters e=serious
-"Detective, do you have any idea who the people on this list were?"
-char watters e=sad
-"{delay 1}..."
+char phoenix hide
+"Detective, do you have any idea who {n}the people on this list were?"
+char watters e=serious
+"{p20}{e sad}{delay 1}..."
 char phoenix hide
 "Detective?"
 char watters e=shock
-"Huh? {p10}{e thinking}Oh, I dunno..."
-"Probably just people they didn't like. They are the mafia, after all."
+"Huh? {p15}{e thinking}Oh, I dunno..."
+"Probably just people they didn't like? {n}They are the mafia, after all."
 char phoenix hide
-"Some of the hits on here are really old. I think I saw one from almost ten years ago."
+"Some of the hits on here are really {n}old. I think I saw one from almost {n}twenty years ago."
 char maya e=normal
-"They're all pretty old, actually. All except for that last one."
+"They're all pretty old, actually. {n}All except for that last one."
 bg hitlist3
 pause 30 script
 char phoenix hide
-"{c089}(The last one... The one for Sir Gallante.)"
-"{c089}(It's the only one that doesn't have an X through it.)"
-"{c089}(I guess that means that he's the only one they never succeeded in catching.)"
-"I guess it would make sense that they would want him dead."
+"{c089}(The last one... {p10}{n}The one for {c940}Sir Gallante{c089}.)"
+"{c089}(It's the only one that doesn't have {n}an X through it.)"
+"{c089}(That must mean that he's the {n}only one they never succeeded in {n}catching.)"
+"I guess it would make sense that {n}they would want him dead."
 bg pent2
 char maya e=disheartened
-"All these people are gone... Just because the Rivales Family didn't like them."
+pause 40 script
+"All these people are gone... {n}Just because the Rivales Family {n}didn't like them."
 char phoenix hide
-"They probably hired somebody to carry out the hits."
+"They probably hired somebody to {n}carry out the hits."
 char maya e=mad
-"It's so terrible that there are people out there who kill for money!"
+"It's so terrible that there are people {n}out there who kill for money!"
+pause 30 script
 char watters e=serious
-"Yeah, it's pretty bad. {e sad}Kinda the way the world works though."
+"Yeah, it's pretty bad. {p20}{n}{e sad}Kinda the way the world works {n}though."
 char phoenix hide
-"Is everything okay?{n}You've been rather quiet since we found that list."
+"Is everything okay?{n}{p20}You've been rather quiet since we {n}found that list."
 char watters e=sad
-"Yeah... Everything's okay with me, man."
+"Yeah... {n}{p20}Everything's okay with me, man."
 
 mus
 "{f}{next}"
@@ -158,8 +164,8 @@ pause 70
 char watters e=sad
 "Thanks for asking though."
 char phoenix hide
-"{c089}(Something IS wrong. He's trying to hide something...)"
-"{c089}(...and he's not doing a very good job of it. I think it's fairly obvious what it is.)"
+"{c089}(Something IS wrong. {n}{p15}He's trying to hide something...)"
+"{c089}(...and he's not doing a very good job {n}of it. I think it's fairly obvious {n}what it is.)"
 delete name=chains
 delete name=lock1
 pause 20 script

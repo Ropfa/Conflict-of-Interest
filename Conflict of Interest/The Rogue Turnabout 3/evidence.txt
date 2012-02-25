@@ -115,3 +115,35 @@ set cody$_name Cody Hackinsset cody$_pic codyset cody$_desc Age: 17{n}Gender: 
 set black$_name Virgil Blackset black$_pic vblackset black$_desc Age: 31{n}Gender: Male{n}A friend of my client. Contacted me and requested that I defend Mr. Parker.set obadiah$_name Obadiah Williamsonset obadiah$_pic obadiahset obadiah$_desc Age: 57{n}Gender: Male{n}A veteran prosecutor. He's been working with Detective Watters to bring down Sir Gallante.set pearl$_name Pearl Fey
 set pearl$_pic pearl
 set pearl$_desc Age: 18{n}Gender: Female{n}Maya's younger cousin, who disappeared five years ago. I hope she's safe, wherever she is...
+
+set blackprint$_name Virgil Black
+set blackprint$_pic thumbprint-black
+set blackprint$_desc Age: 31{n}Gender: Male
+
+set codyprint$_name Cody Hackins
+set codyprint$_pic thumbprint-cody
+set codyprint$_desc Age: 17{n}Gender: Male
+
+set gumshoeprint$_name Dick Gumshoe
+set gumshoeprint$_pic thumbprint-gumshoe
+set gumshoeprint$_desc Age: 40{n}Gender: Male
+
+set keyesprint$_name Sarah Keyes
+set keyesprint$_pic thumbprint-keyes
+set keyesprint$_desc Age: 25{n}Gender: Female
+
+set obadiahprint$_name Obadiah Williamson
+set obadiahprint$_pic thumbprint-obadiah
+set obadiahprint$_desc Age: 57{n}Gender: Male
+
+set parkerprint$_name Wayne Parker
+set parkerprint$_pic thumbprint-parker
+set parkerprint$_desc Age: 39{n}Gender: Male
+
+set rivalesprint$_name Michael Rivales
+set rivalesprint$_pic thumbprint-rivales
+set rivalesprint$_desc Age: 58{n}Gender: Male
+
+set wattersprint$_name Mark Watters
+set wattersprint$_pic thumbprint-watters
+set wattersprint$_desc Age: 28{n}Gender: Male

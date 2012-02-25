@@ -7,4 +7,5 @@ showlist
 menu scene34
 
 label Reception
+mus
 script scene33menu

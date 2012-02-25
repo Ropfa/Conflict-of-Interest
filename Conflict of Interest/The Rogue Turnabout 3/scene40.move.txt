@@ -1,0 +1,32 @@
+label top
+bg entrance
+
+list scene40move
+li Wright Anything Agency
+li Detention Center
+li Reception
+li Abandoned Warehouse
+showlist
+menu scene40
+
+label Detention Center
+mus
+script scene29menu
+
+label Wright Anything Agency
+mus
+script scene28menu
+
+label Reception
+noflag ninjas scene42
+flag ninjas scene42menu
+label scene42
+mus
+script scene42
+label scene42menu
+mus
+script scene42menu
+
+label Abandoned Warehouse
+mus
+script scene39menu

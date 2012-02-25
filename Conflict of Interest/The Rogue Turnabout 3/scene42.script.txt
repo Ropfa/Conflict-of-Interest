@@ -1,4 +1,6 @@
 bg reception
+nt
+"{c090}{center}{type}July 20, 9:10 PM{n}Rivales Tower{n}Reception Area"
 
 
 pause 30 script
@@ -15,7 +17,7 @@ pause 80 script
 
 char obadiah e=front-serious fade
 pause 30 script
-"......{n}What was that?"
+"......{n}{p30}What was that?"
 pause 60 script
 "......Hm."
 char nothing fade
@@ -23,5 +25,7 @@ char nothing fade
 pause 80 script
 char maya e=normal fade
 "He left...{n}{e pumped}We can go back in now!"
+
+setflag ninjas
 
 script scene42menu

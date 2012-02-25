@@ -1,0 +1,19 @@
+label top
+bg reception
+
+list scene42move
+li Entrance
+li Penthouse
+showlist
+menu scene42
+
+label Entrance
+script scene40menu
+
+label Penthouse
+noflag gotcha scene43
+flag gotcha scene43menu
+label scene43
+script scene43
+label scene43menu
+script scene43menu

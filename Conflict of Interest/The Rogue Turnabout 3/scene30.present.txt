@@ -5,7 +5,7 @@ bg clinic
 
 label permission
 char gumshoe e=crash
-"That letter should be good enough to get you where you want."
+"That letter should be good enough to {n}get you where you want."
 char phoenix hide
 "Thank you, Gumshoe."
 goto top

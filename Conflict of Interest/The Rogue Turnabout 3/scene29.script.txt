@@ -15,6 +15,6 @@ char parker e=sad
 
 char phoenix hide
 "That good, huh?"
-"{c089}(I really hope communication with this guy doesn't become an issue.)"
+"{c089}(I really hope communication with {n}this guy doesn't become an {n}issue.)"
 
 script scene29menu

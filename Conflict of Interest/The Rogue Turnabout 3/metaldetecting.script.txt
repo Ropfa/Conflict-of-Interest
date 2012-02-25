@@ -3,55 +3,144 @@ label top
 bg pent2
 
 examine
-region 0 57 23 106 painting
-layerone
-region player2
-layertwo
-region player3
-layerthree
+region 0 70 21 28 painting
+region 0 75 26 38 player1
+region 0 60 31 48 player2
+region 0 45 61 78 player3
 region 130 170 12 11 knife
-layerone
+region 125 165 22 21 klayer1
 region 120 160 32 31 klayer2
-layertwo
 region 105 145 62 61 klayer3
-layerthree
-region sill
-layerone
-region slayer2
-layertwo
-region slayer3
-layerthree
+region 30 113 226 16 sill
+region 25 108 236 26 slayer1
+region 20 103 246 36 slayer2
+region 15 88 256 66 slayer3
 label ifback
 goto back
 
 label sill
+"{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{next}"
+pause 20 script
 char phoenix hide
-"A metal window sill reacting to a metal detector."
+"A metal window sill reacting to a {n}metal detector."
 "Nothing strange here."
 goto top
 
+label slayer1
+layerone
+goto top
+
+label slayer2
+layertwo
+goto top
+
+label slayer3
+layerthree
+goto top
+
 label knife
+"{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{next}"
+pause 20 script
 char phoenix hide
 "Why is that knife still here?"
-"Shouldn't the forensics team be examining it?"
-char watters e=serious
-"I dunno. Maybe somebody just got lazy and left it here."
+"Shouldn't the forensics team be {n}examining it?"
+char watters hide
+"I dunno. Maybe somebody just got {n}lazy and left it here."
+goto top
+
+label klayer1
+layerone
+goto top
+
+label klayer2
+layertwo
+goto top
+
+label klayer3
+layerthree
+goto top
+
+label player1
+layerone
+goto top
+
+layer player2
+layertwo
+goto top
+
+layer player3
+layerthree
 goto top
 
 label painting
 mus
+"{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{next}"
+pause 20 script
 char phoenix hide
 "That's funny."
-"Why would a metal detector be reacting to that painting?"
+"Why would a metal detector be {n}reacting to that painting?"
 char watters hide
-"Beats me. We'd better check it out though.
-
+"Beats me. {n}{p10}We'd better check it out though."
+bg black
+pause 40 script
+sfx shift
+pause 80 script
+bg pent2
+char watters e=thinking
+sfx realization
+set _ev evidence locker
+showevl
+char phoenix hide
+"A safe...?"
+char watters e=thinking
+"{sfx shout-general}Yo! {n}Forensics guy!"
+char Forensics hide
+"I have a name, you know."
+char watters e=thinking
+"Yeah. {n}Break this thing open, will you?"
+pause 30 script
+sfx handcuffs
+pause 60 script
+sfx metaldoor2
+pause 60 script
+set _ev hitlist2
+showevr
+char watters e=confused
+"Huh...?"
+"Wh{p5}-What's this?"
+char phoenix hide
+"It was valuable enough to hide in {n}there. {p15}It must be important."
+sfx showevidence
+bg hitlist2 fade
+pause 60 script
+char maya hide
+"Why are there red X's through all {n}those people's faces?"
+pause 60 script
+char phoenix hide
+"Maya...{n}{p20}I think this might be a hit list."
+sfx hideevidence
+bg pent2
+char maya e=surprised
+"{sfx shout-general}What?{n}{p10}No way!"
+char phoenix hide
+"These are all people that the Rivales {n}Family had killed."
+char maya e=pumped
+"Th{p5}-That's horrible!"
+char phoenix hide
+"{c089}(All that blood on the Rivales Family's {n}hands...)"
+char watters e=sad fade
+char phoenix hide
+"{c089}(I wonder if our friend the detective {n}knows any more about this.)"
+fg hitlistev name=hitlistev
+addev hitlist
+nt
+"{sfx evidence updated.wav}{c099}Hit list added to the court record."
+delete name=hitlistev
+pause 20 script
 setflag safeget
 menu scene34
 
 label none
-char phoenix hide
-"No clues here."
 goto top
 
 label back

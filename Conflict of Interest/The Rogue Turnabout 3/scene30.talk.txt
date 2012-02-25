@@ -19,7 +19,7 @@ label Detective Watters
 char phoenix hide
 "Detective Watters said that I'm {n}supposed to wish you luck in {n}recovering."
 char gumshoe e=crash
-"Mark? You know him?"
+"Mark? {p10}You know him?"
 char phoenix hide
 "We met just yesterday."
 "Do you two know each other well?"
@@ -31,26 +31,28 @@ char maya e=normal
 char gumshoe e=crash-laugh
 "Well, I have been on the force a lot {n}longer than him. He kind of looks up {n}to me as a sort of role model."
 char phoenix hide
-"{c089}(Gumshoe... {p20}A role model?!)"
+"{c089}(Gumshoe... {p20}{sfx realization}A role model?!)"
 goto top
 
 label Permission
 char phoenix hide
-"Gumshoe, you're a police detective, aren't you?"
+"Gumshoe, you're a police detective, {n}aren't you?"
 char gumshoe e=crash-pumped
 "You bet, pal!"
 char phoenix hide
-"If you wanted to, you could give me access to the records room, couldn't you?"
+"If you wanted to, you could give me {n}access to the records room, {n}couldn't you?"
 char gumshoe e=crash-pumped
 "Yeah, I probably could."
 char phoenix hide
 "Do you want to?"
 char gumshoe e=crash-laugh
 "Sure, why not?"
-set _ev permission
+fg permissionev name=permissionev
 addev permission
 nt
-"Written Permission added to the court record."
+"{sfx evidence updated.wav}{c099}Written Permission added to the {n}court record."
+delete name=permissionev
+pause 20 script
 char phoenix hide
-"{c089}(I feel like I'm taking the fact that he has a concussion and doesn't know what's going on...)"
+"{c089}(I feel like I'm taking advantage of {n}the fact that he has a concussion {n}and doesn't know what's going on...)"
 goto top

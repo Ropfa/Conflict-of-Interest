@@ -1,21 +1,24 @@
 bg pent4
+nt
+"{c090}{center}{type}July 20, 9:11 PM{n}Rivales Tower{n}Penthouse Office"
 
 char watters e=confident fade
 "Hey, you're back!"
 
 char maya e=pumped
-"We managed to sneak past Mr. Williamson!"
+"We managed to sneak past Mr. {n}Williamson!"
 
 char watters e=confident
-"Great! {n}{p20}...{p25}{e nervous}Wait, I mean no!{n}Bad! That's bad!"
+"Great! {n}{p20}...{p25}{e nervous}Wait, I mean no!{n}{sfx shout-general}Bad! {p15}That's {sfx shout-general}bad!"
 
 char phoenix hide
-"It's okay. He already got on the elevator."
+"It's okay. He already got on the {n}elevator."
 
 char watters e=sad
-"Phew! I thought he might've heard that!"
+"Phew! I thought he might've heard {n}that!"
 
 char phoenix hide
-"{c089}(Alright, Watters.{n}It's time to see what you're hiding from us.)"
+"{c089}(Alright, Watters. It's time to see {n}what you're hiding from us.)"
+setflag gotcha
 
 script scene43menu

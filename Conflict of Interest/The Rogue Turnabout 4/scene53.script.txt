@@ -16,7 +16,7 @@ bg prosecution
 fg pbench
 char obadiah e=serious
 showevl
-"It reads 'Rick, I need your help. {n}It's important. Please meet me {n}tomorrow at 5:20 AM..."
+"It reads {p15}'Rick, I need your help. {n}It's important. Please meet me {n}tomorrow at 5:20 AM..."
 "...Don't tell anyone you're coming.'{n}{p25}It isn't signed."
 hideevl
 bg witness

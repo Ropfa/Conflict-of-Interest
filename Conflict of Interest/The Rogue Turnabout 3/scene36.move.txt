@@ -1,0 +1,26 @@
+label top
+bg records
+
+list scene36
+li Criminal Affairs
+showlist
+showlist
+menu scene36
+
+label Criminal Affairs
+noflag trashed scene35
+flag trashed ifthen
+label scene35
+script scene35menu
+label ifthen
+noflag angryoby scene37
+flag angryoby ifthen2
+label scene37
+script scene37
+label ifthen2
+noflag fingerprintsget menu
+flag fingerprintsget cameo
+label menu
+script scene35menu
+label cameo
+script scene41

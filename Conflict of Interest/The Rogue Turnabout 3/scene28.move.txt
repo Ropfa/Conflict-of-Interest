@@ -31,14 +31,44 @@ label menu
 mus
 script scene29menu
 label ifthen2
+noflag rickget AND talkedtoblack1 AND talkedtoblack2 noparker
+flag rickget AND talkedtoblack1 AND talkedtoblack2 yesparker
+label noparker
 mus
 script sceneparkergone2menu
+label yesparker
+mus
+script scene29menu
 
 
 label Rivales Tower
+noflag theatoner AND swordget AND strangeget AND blackmail2get scene31
+flag theatoner AND swordget AND strangeget AND blackmail2get ifthen
+label scene31
 mus
 script scene31menu
+label ifthen
+noflag fingerprintsget scene40
+flag fingerprintsget scene40menu
+label scene40
+mus
+script scene40
+label scene40menu
+mus
+script scene40menu
 
 label Criminal Affairs
+noflag policestationget scene35
+flag policestationget ifthen
+label scene35
+mus
+script scene35
+label ifthen
+noflag fingerprintsget menu
+flag fingerprintsget cameo
+label menu
 mus
 script scene35menu
+label cameo
+mus
+script scene41menu

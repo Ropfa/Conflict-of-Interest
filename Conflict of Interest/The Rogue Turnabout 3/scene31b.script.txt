@@ -2,12 +2,12 @@ bg entrance fade
 nt
 "{c090}{center}{type}July 20, 3:00 PM{n}Rivales Tower{n}Front Entrance"
 pause 60
-char maya e=normal
+char maya e=normal fade
 char phoenix hide
-"Going up and down that building is really starting to wear me out."
+"Going up and down that building is {n}really starting to wear me out."
 
 char maya e=normal
-"It can't be that bad. We're using the elevator."
+"It can't be that bad. {n}{p10}We're using the elevator."
 
 mus Steel Samurai ring tone.ogg
 set _ev newcell
@@ -21,40 +21,47 @@ sfx phoneoff
 "Hello."
 
 char cody hide
-"Hey, pops!"
+"Hey, {sfx shout-general}pops!"
 
 char phoenix hide
 "Hello, Cody."
 
 char cody hide
-"I got that fingerprinting kit I told you about! I'm heading downtown right now!"
+"I got that fingerprinting kit I told you {n}about!"
+"I'm heading downtown right now!"
 
 char phoenix hide
 "Okay. We can meet you later."
 
 char cody hide
 "Okay. Same place as last time!"
-"Oh, and also... You should probably stop by the police station and pick up some of their files on Sir Gallante."
+"Oh, and also..."
+"You should probably stop by the {n}police station and pick up some of {n}their {c940}files on Sir Gallante{c999}."
 
 char phoenix hide
 "What kind of files?"
 
 char cody hide
-"You know... files! All their records that they've kept on him."
+"You know... {p10}files! {n}{p15}All their records that they've {n}kept on him."
+"I'm sure that'd help you somehow."
 
 char phoenix hide
-"Wouldn't stuff like that be confidential?"
+"Wouldn't stuff like that be {n}confidential?"
 
 char cody hide
-"You're helping them solve the case, aren't you?"
-"Just ask the chief! I'm sure he'd give you permission."
-"This is so awesome! I can't wait to solve a real crime!"
+"Nah. {p10}You're helping them solve the {n}case, aren't you?"
+"Just ask the chief! {n}I'm sure he'd give you permission."
+"This is so awesome! {n}I can't wait to solve a real crime!"
 "Seeya later, pops!"
 
 char phoenix hide
 "See you soon, Cody."
+pause 60 script
 sfx phoneoff
-"{c089}(We should head down to the police station and get those files.)"
+hideevl
+"{c089}(We should head down to the police {n}station and get those files.)"
 "{c089}(They might come in handy later.)"
+
+setflag codycall
 
 script scene31menu

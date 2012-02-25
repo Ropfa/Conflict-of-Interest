@@ -267,7 +267,7 @@ char phoenix e=normal
 bg witness
 fg wbench
 char watters e=confused
-"Everybody working on the case with {n}me. {c940}The entire task force, {n}pretty much{c999}."
+"Everybody working on the case with {n}me. {c940}{p15}The entire task force, {n}pretty much{c999}."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -344,7 +344,7 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char watters e=angry
-"Hey, you heard me! {n}I said nobody!"
+"Hey, you {sfx shout-general}heard me! {n}I said {sfx shout-general}nobody!"
 bg defense
 fg dbench
 char phoenix e=normal
@@ -408,10 +408,10 @@ fg dbench
 char phoenix e=thinking
 "If that's the case, wouldn't that {n}place more suspicion on Watters?"
 "The murder weapon here was {n}originally thought be a knife."
-"Something like that would point away {n}from it be Sir Gallante."
+"Something like that would point away {n}from it be Gallante."
 bg judge
 char judge e=surprised
-"That's right! {e warning}Detective, what do you {n}have to say about this?!"
+"That's right! {p15}{e warning}Detective, what do you {n}have to say about this?!"
 bg witness
 fg wbench
 char watters e=nervous
@@ -462,7 +462,7 @@ char obadiah e=serious
 bg witness
 fg wbench
 char watters e=angry
-"...{n}{p25}*mumble*"
+"...{n}{p25}{delay 1}*mumble*"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -473,7 +473,7 @@ char watters e=angry
 "{sfx shout-angry}I SAID I'M INCOMPETENT, {sfx shout-general}OKAY?!"
 bg judge
 char judge e=normal
-"Well, now that we have it on record {n}the witness is incompetent, I think {n}we can continue."
+"Well, now that we have it on record {n}that the witness is incompetent, I {n}think we can continue."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -491,7 +491,7 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char watters e=confused
-"I dunno, man. {n}A lot?"
+"I dunno, man. {n}{p15}A lot?"
 bg defense
 fg dbench
 char phoenix e=normal
@@ -515,7 +515,7 @@ fg dbench
 char phoenix e=handsondesk
 "Of course it sounds bad! {n}After three years, you'd expect {n}results!"
 char phoenix e=pointing
-"A lot of potential suspects isn't {n}results!"
+"{sfx shout-objection}A lot of potential suspects isn't {n}results!"
 bg witness
 fg wbench
 char watters e=angry
@@ -574,8 +574,8 @@ char phoenix e=document
 set _ev poster
 showevr
 sfx showevidence
-"The task force were far from being {n}the only ones to know about {n|Sir Gallante."
-"The fact this poster exists is proof {n}enough of that."
+"The task force were far from being {n}the only ones to know about {n}Sir Gallante."
+"The fact this exists is proof enough {n}of that."
 bg judge
 char judge e=surprised
 "What is this?"
@@ -583,7 +583,7 @@ bg defense
 fg dbench
 char phoenix e=document
 "It's a poster. It was made by the {n}witness, Cody Hackins."
-"As we all know, he is not a police {n}officer. So how did he know about {n}Sir Gallante?"
+"As we all know, he is not a police {n}officer. {p20}So how did he know about {n}Sir Gallante?"
 char phoenix e=pointing
 "Because his existence had been {n}leaked to the public. {p25}{sfx shout-objection}{n}By you, Watters!!"
 sfx /godot/objection.ogg
@@ -596,7 +596,7 @@ char obadiah e=angry
 bg witness
 fg wbench
 char watters e=angry
-"Hey, I thought I told you to keep that {n}a secret! You told me that you would..."
+"Hey, I thought I told you to keep that {n}a secret! You told me that you {n}would..."
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -604,7 +604,7 @@ char obadiah e=angry
 bg witness
 fg wbench
 char watters e=nervous
-"...{p20}Oh crap."
+"...{p30}Oh crap."
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -717,7 +717,7 @@ char phoenix e=document
 "It says right here that you have no {n}suspects in the case."
 bg judge
 char judge e=surprised
-"No suspects? {e warning}Detective Watters, {n}you lied to us!"
+"No suspects? {p15}{e warning}Detective Watters, {n}you lied to us!"
 bg witness
 fg wbench
 char watters e=nervous
@@ -728,7 +728,7 @@ char judge e=warning
 bg defense
 fg dbench
 char phoenix e=confident
-"People do strange things when {n}they're nervous, don't they, {n}Watters?"
+"People do strange things when {n}they're nervous, {p15}don't they, {n}Watters?"
 "You had to somehow avoid the fact {n}that you are currently the ONLY {n}person suspected to be Gallante!"
 bg witness
 fg wbench
@@ -749,7 +749,7 @@ char watters e=nervous
 bg prosecution
 fg pbench
 char obadiah e=serious
-"If you'd wanted to keep that little bit {n}confidential, you could've just said so."
+"If you'd wanted to keep that little bit {n}confidential, you could've just said {n}so."
 bg witness
 fg wbench
 char watters e=nervous

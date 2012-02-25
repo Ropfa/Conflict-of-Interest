@@ -20,22 +20,20 @@ char phoenix hide
 goto top
 
 label hawk
-sfx hawk.ogg
-char maya e=surprised
-"What was that?"
 set _ev hawk
-showevr
-sfx showevidence
-pause 10
+showevl
 sfx hawk.ogg
-char maya e=thinking
-char phoenix hide
-"It looks like some kind of hawk."
-sfx alitawings
 char maya e=cheerful
-"Doesn't it look kind of like it's sitting {n}guard over this place?"
+"Hello, Mr. Hawk!"
+pause 40 script
+sfx hawk.ogg
+pause 40 script
+char maya e=normal
+"He says hi back, Nick."
 char phoenix hide
-"Kind of."
+"I didn't know you could talk to {n}animals."
+char maya e=thinking
+"Neither did I."
 goto top
 
 label door

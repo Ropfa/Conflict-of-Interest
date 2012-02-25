@@ -1,7 +1,7 @@
 bg defense
 fg dbench
 char phoenix e=normal
-"Cody, I think I know what cause your {n}"light of justice"."
+"Cody, I think I know what caused your {n}"light of justice"."
 bg witness
 fg wbench
 char cody e=confident
@@ -47,7 +47,7 @@ char phoenix e=normal
 bg prosecution
 fg pbench
 char obadiah e=angry
-"Where did you find that?!"
+"Where did you find {sfx damage}that?!"
 bg defense
 fg dbench
 char phoenix e=normal
@@ -61,7 +61,7 @@ fg dbench
 char phoenix e=confident
 "No... {p10}But it was smashed into a {n}hundred little pieces on the ground."
 "And it has fingerprints on it that {n}prove it was in the penthouse."
-"What better way to smash a gun than {n}by dropping it out of a thirty {n}story building?"
+"What better way to smash a gun {n}than by dropping it out of a thirty {n}story building?"
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -111,7 +111,7 @@ bg witness
 fg wbench
 char cody e=confident
 "Hey, Sir Gallante's cool. {p10}{n}But he's still a killer."
-"If I were to defend him in place of an {n}innocent guy, then I'd be going against {n}his rules!"
+"If I were to defend him in place of an {n}innocent guy, then I'd be going {n}against his rules!"
 "{e happy}Protect the innocent!"
 bg defense
 fg dbench
@@ -164,6 +164,7 @@ present
 
 
 label rivalesupdate$
+setvar _allow_present_evidence true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
@@ -210,6 +211,7 @@ goto redo
 //PRESENT WATTERS' PROFILE
 
 label watters$
+setvar _allow_present_evidence true
 mus
 sfx /phoenix/takethat.ogg
 pause 5 script
@@ -357,6 +359,7 @@ char watters e=smirk
 script scene50watterstestimony1
 
 label none
+setvar _allow_present_evidence true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script

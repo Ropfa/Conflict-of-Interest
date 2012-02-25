@@ -114,7 +114,7 @@ char maya e=thinking fade
 
 char phoenix hide
 "He came over here just to wish us {n}good luck."
-"{c089}(I can tell that he's a very devoted {n}friend..."
+"{c089}(I can tell that he's a very devoted {n}friend...)"
 "{c089}(...but was that really all he {n}came over here for?)"
 
 char maya e=normal

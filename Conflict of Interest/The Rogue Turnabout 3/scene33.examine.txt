@@ -9,14 +9,14 @@ menu scene33
 
 label picture
 char phoenix hide
-"It's a picture of Sarah Keyes and her father."
+"It's a picture of Sarah Keyes and her {n}father."
 char maya e=cheerful
 "They look so happy together!"
 goto top
 
 label desk
 char phoenix hide
-"This looks like Sarah's {n}desk."
+"This looks like Sarah's desk."
 "Nobody's at it though."
 goto top
 
@@ -24,7 +24,7 @@ label security
 char maya e=thinking
 "This machine looks rather {n}complicated."
 char phoenix hide
-"She must have a lot of experience using this kind of stuff."
+"She must have a lot of experience {n}using this kind of stuff."
 goto top
 
 label none

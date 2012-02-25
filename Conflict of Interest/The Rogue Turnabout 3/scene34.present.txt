@@ -33,26 +33,27 @@ mus Metropolis Zone.ogg
 set _music_loop Metropolis Zone - loop.ogg
 goto top
 
-label knife
+label knife2
 set _ev knife
 showevl
 char watters e=serious
 "No question about it, man.{n}That's what killed him."
 char phoenix hide
-"Actually, we proved earlier today that it wasn't."
+"Actually, we proved earlier today {n}that it wasn't."
 char watters e=thinking
-"Er, well, um... {n}Mmph...{n}?"
+"Er, {p10}well, {p10}um... {n}{p20}Mmph...{n}{p20}?"
 "Guess not?"
 goto top
 
 label blackmail
+char watters e=serious
 set _ev blackmail
 showevl
 char phoenix hide
-"It's clear form this letter that somebody was blackmailing the victim."
-"Unfortunately for him, he never made it to his meeting."
+"It's clear from this letter that {n}somebody was blackmailing the {n}victim."
+"Unfortunately for him, he never made {n}it to his meeting."
 char watters e=thinking
-"What do you think he was being blackmailed over?"
+"What do you think he was being {n}blackmailed over?"
 char phoenix hide
 "{sfx shout-general}{char watters e=shock}You know more about this than I do!"
 char watters e=thinking
@@ -61,7 +62,8 @@ pause 50 script
 char watters e=serious
 "Nope. No idea."
 char phoenix hide
-"{c089}(Somebody tried to meet with the victim this morning... But a third party snuck in here and killed him before that could happen.)"
+"{c089}(Somebody tried to meet with the {n}victim this morning..."
+"{c089}(...But a third party snuck in {n}here and killed him before that could {n}happen.)"
 hideevl
 goto top
 
@@ -69,15 +71,18 @@ label autopsy
 set _ev autopsy
 showevl
 char watters e=shock
-pause 20
+pause 60 script
 char watters e=serious
-"Hey, whoa, hey.{n}I don't wanna read that thing any more than I have to."
+"Hey, whoa, hey.{n}I don't wanna read that thing any {n}more than I have to."
 char phoenix hide
 "You've seen the actual body.{n}It can't be any worse than that."
 char watters e=serious
-"Look, I've seen death before.{n}I can handle it little blood.{n}But this was not a little!"
-"That guy's corpse is gonna give me nightmares!"
-"If you wanna show that off to somebody, go talk with {c940}Ms. Keyes{c999}. She seems to like that kind of stuff."
+"Look, I've seen death before.{n}I can handle it little blood...{n}{p20}But this was not a little!"
+char watters e=sad
+"That guy's corpse is gonna give me {n}nightmares!"
+char watters e=thinking
+"If you wanna show that off to {n}somebody, go talk with {c940}Ms. Keyes{c999}."
+"She seems to like that kind of stuff."
 hideevl
 goto top
 
@@ -85,7 +90,7 @@ label hitlist
 set _ev hitlist
 showevl
 char watters e=serious
-"Of all the things we might've found, a hit list definitely wasn't what I was expecting."
+"Of all the things we might've found, {n}a hit list definitely wasn't what {n}I was expecting."
 goto top
 
 label maya$
@@ -153,29 +158,32 @@ goto top
 label gallante$
 char watters e=serious
 "That guy's been a real pain for us."
-"You couldn't even begin to imagine all the issues we've had."
-"It's all we can do to keep the public from finding out."
+"You couldn't even begin to imagine all {n}the issues we've had."
+"It's all we can do to keep the public {n}from finding out."
 char phoenix hide
-"{c089}("Hey, man! This is top secret... {p20}so don't tell anyone!")"
+"{c089}("Hey, man! This is top secret... {p20}{n}so don't tell anyone!")"
 goto top
 
 label sarah$
+char watters e=serious
 char phoenix hide
 "Have you seen Ms. Keyes today?"
 char watters e=serious
-"No. Were you looking for her?"
+"No. {p10}Were you looking for her?"
 char phoenix hide
-"I just wanted to discuss a few things with her."
+"I just wanted to discuss a few things {n}with her."
 char watters e=confused
 "Hey, yeah, that's right."
-"You two have something going on this Saturday, don't you?"
+"You two have something going on {n}this Saturday, don't you?"
+"I think I heard about that."
 char phoenix hide
 "N-{s5}{sfx shout-general}No!!"
 char maya e=thinking
-"Wow. Word about that sure spread quickly."
+"Wow. Word about that sure spread {n}quickly."
 goto top
 
 label rivalesupdate$
+char watters e=serious
 char phoenix hide
 "What do you know about the victim?"
 char watters e=confident
@@ -183,21 +191,22 @@ char watters e=confident
 "He lived and worked out of this {n}building. Didn't come out much."
 "He was actually kind of famous. {n}You heard of him?"
 char phoenix hide
-"From what I've heard, he ran nearly all the crime in the city."
+"From what I've heard, he ran nearly {n}all the crime in the city."
 "He was a pretty horrible man."
 char watters e=serious
 "Yeah. He kind of totally was."
 char phoenix hide
-"{c089}(Kind of... totally?)"
+"{c089}(Kind of... {sfx realization}totally?)"
 goto top
 
 label magatama
-noflag watterspsyche nopsyche
+noflag watterspsyche none
 flag watterspsyche watterspsyche
 label watterspsyche
 script scenepsychewatters1
 
 label none
+label nopsyche
 char watters e=serious
 "Sorry, man. I don't think I know {n}anything about that."
 char phoenix hide

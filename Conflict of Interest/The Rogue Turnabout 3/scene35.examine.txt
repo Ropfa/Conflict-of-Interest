@@ -11,10 +11,10 @@ menu scene35
 
 label computers
 char phoenix hide
-"All the police are hard at work, solving various crimes."
+"All the police are hard at work, {n}solving various crimes."
 char Chief hide
-"Hey, stop {sfx shout-general}that!"
-"It's no fun when the other team spawn camps!"
+"Hey, stop {sfx shout-general}that!!"
+"It's no fun when the other team {n}spawn camps!"
 char phoenix hide
 "...{p20}Except that one."
 goto top
@@ -23,18 +23,18 @@ label badgers
 char phoenix hide
 "The Blue Badger..."
 char maya e=cheerful
-"And his wife - The Pink Badger!"
+"And his wife {p15}- The Pink Badger!"
 char phoenix hide
 "His son, the Baby Badger."
 char maya e=pumped
-"Don't forget their nemesis, the Bad Badger!"
+"Don't forget their nemesis, the {n}Bad Badger!"
 char phoenix hide
-"And finally, that creepy thing lying on the floor over there."
+"And finally, that creepy thing lying on {n}the floor over there."
 "What was that called again?"
 char maya e=normal
-"The Proto Badger! {n}{e sad}I remember having nightmares about that one."
+"The Proto Badger! {n}{e sad}I remember having nightmares about {n}that one."
 char phoenix hide
-"You know, I think that every time we come here, they have more of those things."
+"You know, I think that every time we {n}come here, they have more of those {n}things."
 goto top
 
 label chief
@@ -42,28 +42,29 @@ noflag permissionpresent nopresent
 flag permissionpresent yespresent
 label nopresent
 char phoenix hide
-"Excuse me, Chief. I was wondering if I could have a moment of your time."
+"Excuse me, Chief.{p15} I was wondering if {n}I could have a moment of your time."
 char Chief hide
 "Of course!"
-"It's not like I have anything better to do!"
 char phoenix hide
-"I was wondering if we could get permission to check out the records room."
+"I was wondering if we could get {n}permission to check out the {n}records room."
 char Chief hide
 "May I ask what you're looking for?"
 char maya e=pumped
-"We're gonna dig up some info on Sir Gallante!"
+"We're gonna dig up some info on {n}Sir Gallante!"
 char maya e=surprised
 char Chief hide
-"Oh no you don't!{n}That stuff is classified!"
+"Oh no you {sfx shout-general}don't!{n}{p20}That stuff is classified!"
 char maya e=worried
 char Chief hide
-"You'll need to get permission from somebody on the police force before I let you take a look at that stuff."
+"You'll need to get permission from {n}{c940}somebody on the police force{c999} before {n}I let you take a look at that stuff."
+char maya e=sad
 char phoenix hide
-"Can't you just give us permission yourself?"
+"Can't you just give us permission {n}yourself?"
 char Chief hide
-"Of course not!{n}What kind of guy do you think I am?"
+"Of course {sfx shout-general}not!{n}{p15}What kind of guy do you think I am?"
 char phoenix hide
-"{c089}(Drat. I guess he doesn't like me enough for that. I knew that would be too easy.)"
+"{c089}(Drat. I guess he doesn't like me {n}enough for that.)"
+"{c089}(I knew that would be too easy.)"
 setflag nopermission
 goto top
 
@@ -75,7 +76,7 @@ char phoenix hide
 char Chief hide
 "Yeah, you! {p30}{n}Don't do drugs!"
 char phoenix hide
-"...Yes, sir."
+"...{p15}Yes, sir."
 goto top
 
 label none

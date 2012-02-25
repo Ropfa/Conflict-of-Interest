@@ -1,41 +1,29 @@
-flag blackdetention nowatters
-
 bg pent2 fade
 nt
 "{c090}{center}{type}July 20, 2:00 PM{n}Rivales Tower{n}Penthouse Office"
 pause 50 script
 
 setflag penthouseget2
-"{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{sfx beep}{p 20}{next}"
+"{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 50}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 35}{sfx beep}{p 15}{sfx beep}{p 15}{sfx beep}{p 15}{sfx beep}{p 15}{sfx beep}{p 15}{sfx beep}{p 15}{sfx beep}{p 15}{sfx beep}{p 15}{sfx beep}{p 15}{next}"
+"{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{p5}{sfx beep}{next}"
 char watters e=confident
 set _ev metal detecter
 showevl
-"{sfx shout-general}Ha! {sfx shout-general}Gotcha!"
+"{sfx shout-general}Ha! {sfx shout-objection}Gotcha!"
 char phoenix hide
 set _ev attorneybadge
 showevr
 "Not quite."
 hideevr
 char watters e=sad
-"Aw, man... I thought I actually had something."
+"{sfx whoops}Aw, man... {n}{p15}I thought I actually had {n}something."
 char phoenix hide
 "Still working hard, Detective?"
-"{c089}(Or not.)"
 char watters e=smile
-"Yeah, Boss says we need to dig up some more stuff by tomorrow. I thought this metal detector would do the trick."
+"Yeah, Boss says we need to dig up {n}some more stuff by tomorrow."
+"I thought this metal detector would {n}do the trick."
 char phoenix hide
 "Mind if we take another look around?"
 char watters e=confident
-"Not at all! You got any questions, you ask me, okay?"
+"Not at all! {n}You got any questions, you ask {n}me, okay?"
 script scene34menu
-
-label nowatters
-bg pent2 fade
-pause 60 script
-"It doesn't look like Detective Watters is here."
-"We should come back later when he is."
-pause 50
-bg black fade
-pause 50
-bg reception fade
-script scene33menu

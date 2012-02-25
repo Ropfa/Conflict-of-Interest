@@ -20,7 +20,7 @@ char maya e=normal
 char phoenix hide
 "It's a lava lamp."
 char maya e=confident
-"Oh, come on. I think I'm old enough to recognize a--{p20}{next}"
+"Oh, come on. {n}I think I'm old enough to {n}recognize a--{p20}{next}"
 char phoenix hide
 "It's a lava lamp."
 char maya e=mad
@@ -29,11 +29,11 @@ goto top
 
 label mess
 char phoenix hide
-"Mr. Black doesn't seem to clean up much around here."
+"Mr. Black doesn't seem to clean up {n}much around here."
 char maya e=confident
 "..."
 char phoenix hide
-"{c089}(I know exactly what's going on in that head of hers right now.)"
+"{c089}(I know exactly what's going on in {n}that head of hers right now.)"
 goto top
 
 label none

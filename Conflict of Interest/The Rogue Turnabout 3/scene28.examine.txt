@@ -37,19 +37,32 @@ char phoenix hide
 goto top
 
 label envelope
+noflag rickget norick
+flag rickget yesrick
+label norick
 set _ev envelope
 showevl
 sfx showevidence
 char phoenix hide
 "What's this?"
-""Dear Mr. Wright, I thought you might find this useful in your case. Good luck!""
+""Dear Mr. Wright, I thought you {n}might find this useful in your case.{p10}{n}Good luck!""
 char maya e=thinking
 "Who's it from?"
 char phoenix hide
 "I don't know. It isn't signed."
-"{c089}(Did the sender just expect me to know who it was from?)"
+"{c089}(Did the sender just expect me to {n}know who it was from?)"
+hideevl
+fg envelopeev name=envelopeev
 addev envelope
+nt
+"{sfx evidence updated.wav}{c099}Envelope added to the court record."
 setflag envelopeget
+goto top
+
+label yesrick
+char phoenix hide
+"Mr. Black went out and found this{n}letter for us."
+"I'm sure it will come in handy{n}somehow."
 goto top
 
 label hulahat

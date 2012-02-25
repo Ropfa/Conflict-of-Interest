@@ -1,17 +1,20 @@
 macro layerone
 label begin1
-"{sfx beep}{p20}{next}"
+sfx beep
+pause 15
 goto begin1
 endmacro
 
 macro layertwo
 label begin2
-"{sfx beep}{p35}{next}"
+sfx beep
+pause 35
 goto begin2
 endmacro
 
 macro layerthree
 label begin3
-"{sfx beep}{p50}{next}"
+sfx beep
+pause 50
 goto begin3
 endmacro

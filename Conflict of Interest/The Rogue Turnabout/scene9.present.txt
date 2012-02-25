@@ -61,9 +61,9 @@ script scene9puzzle stack
 bg entrance fade
 mus
 char maya e=surprised
-"What just happened?{n}{e mad}Why did it fall apart?!"
+"What just happened?{n}{p15}{e mad}Why did it fall apart?!"
 char phoenix hide
-"I've only got two hands.{n}It's hard to hold all the pieces {n}together."
+"I've only got two hands.{n}{p15}It's hard to hold all the pieces {n}together."
 char maya e=thinking
 "Hmm...{n}{e normal}We have some super glue back at the {n}Agency."
 char phoenix hide

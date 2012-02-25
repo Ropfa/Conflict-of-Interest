@@ -1,8 +1,9 @@
 set _cr_button false
 mus
 
-fg 1-lock-chain name=chains
+fg lockchains-1 name=chains
 fg lock y=40 name=lock1
+char watters e=confused
 
 set _ev hitlist
 showevl
@@ -12,14 +13,15 @@ char watters e=confused
 char phoenix hide
 "That's right."
 char watters e=confused
-"Isn't that kinda like using a word in its own definition?"
+"Isn't that kinda like using a word in its {n}own definition?"
 mus 'Psyche Lock' 2007.ogg
 set _music_loop 'Psyche Lock' 2007 - loop.ogg
 char phoenix hide
 "Not in this case."
 label redolock2
 char watters e=confused
-"{c090}The part I'm looking at is on this page..."
+char phoenix hide
+"{c090}The part I'm looking at is on this {n}page..."
 
 set _list_back_button false
 list psychewatters
@@ -36,7 +38,7 @@ char watters e=thinking
 char phoenix hide
 "Yes."
 bg hitlist1
-"{c090}And this is the part that is related to you..."
+"{c090}And this is the part that is related to {n}you..."
 examine hide
 
 label Page Two
@@ -47,7 +49,7 @@ char watters e=thinking
 char phoenix hide
 "Yes."
 bg hitlist2
-"{c090}And this is the part that is related to you..."
+"{c090}And this is the part that is related to {n}you..."
 examine hide
 region 137 99 92 78 sandra
 
@@ -59,16 +61,18 @@ char watters e=thinking
 char phoenix hide
 "Yes."
 bg hitlist3
-"{c090}And this is the part that is related to you..."
+"{c090}And this is the part that is related to {n}you..."
 examine hide
 
 label sandra
+bg black
 mus
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
-fg 1-lock-chain name=chains
+fg lockchains-1 name=chains
 fg lock y=40 name=lock1
+char watters e=thinking
 char phoenix hide
 "Sandra Watters."
 char watters e=shock
@@ -77,7 +81,7 @@ pause 20 script
 char watters e=sad
 pause 40 script
 char phoenix hide
-"You're not very good at hiding {n}secrets, Detective. Did you know that?"
+"You're not very good at hiding {n}secrets, Detective. {p15}Did you know {n}that?"
 char watters e=sad
 "Yeah, I... {p20}I kinda did."
 char phoenix hide
@@ -113,21 +117,22 @@ char watters e=sad
 "No, it's okay."
 "I'm not afraid to talk about it."
 char phoenix hide
-"{c089}(...{p20}He's lying again. But I don't need a {n}magatama to see that.)"
+"{c089}(...{p30}He's lying again. But I don't need a {n}magatama to see that.)"
 char watters e=sad
 "She died. {p25}A few years ago."
 "'Cept there's one thing you got {n}wrong."
 char phoenix hide
 "What's that?"
 char watters e=sad
-"She wasn't my sister...{p25}{n}She was my wife."
-script
+"She wasn't my sister...{p30}{n}She was my wife."
+script scene44
 
 label none
+bg black
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
-fg 1-lock-chain name=chains
+fg lockchains-1 name=chains
 fg lock y=40 name=lock1
 char watters e=thinking
 "Huh...?"
@@ -150,7 +155,7 @@ char phoenix hide
 "{c089}(I don't have the evidence I need {n}right now.)"
 "{c089}(I'll have to come back later when {n}I've gathered some more.)"
 pause 30
-script 
+script scene43menu
 
 label magafail
 mus
@@ -159,4 +164,4 @@ char phoenix hide
 "{c089}(I need to calm down, collect my {n}thoughts, and try again...)"
 penalty +1
 pause 20
-script 
+script scene43menu

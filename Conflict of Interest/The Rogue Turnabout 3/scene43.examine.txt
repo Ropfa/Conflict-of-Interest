@@ -1,0 +1,81 @@
+label top
+bg pent4
+
+examine
+region 0 57 23 106 painting
+region 67 113 126 38 desk
+region 69 161 52 29 blood
+region 130 170 12 11 knife
+region 19 147 28 15 debris
+region 100 44 50 71 window
+region 34 43 66 71 city
+region 151 43 66 71 city
+menu scene43
+
+label knife
+char phoenix hide
+"We proved today that this knife {n}wasn't actually the murder {n}weapon."
+"Not much else to say about it right {n}now, I guess."
+goto top
+
+label desk
+char phoenix hide
+"That's a really nice desk."
+char maya e=thinking
+"Isn't it made out of mahogany?{n}Mr. Rivales must've been a rich man."
+goto top
+
+label painting
+noflag safeget nosafe
+flag safeget yessafe
+label yessafe
+char phoenix hide
+"So that painting was hiding a secret safe behind it."
+char maya e=confident
+"Don't tell me you didn't see that coming!"
+goto top
+
+label nosafe
+char phoenix hide
+"The victim's taste in art was {n}certainly... {p20}interesting."
+char watters e=confused
+"Oh, come on, man!{n}{p10}That isn't what you're thinking!"
+"You're thinking {p10}"Why would any sane {n}person decorate their room with {n}that?!""
+char phoenix hide 
+"{c089}(Detective Watters: {p10}Mind reader.)"
+goto top
+
+label debris
+char phoenix hide
+"Looks like something got pretty {n}smashed up here."
+char watters e=serious
+"There was some kind of struggle. The {n}guy must've gone down fighting."
+goto top
+
+label window
+char maya e=disheartened
+"Brr!{n}It's so cold in here!"
+char phoenix hide
+"Detective Watters said that they left {n}it open to preserve the original {n}conditions of the crime scene."
+goto top
+
+label blood
+char maya e=disheartened
+"......{p20}That's a lot of blood."
+char phoenix hide
+"I've been to a lot of murder scenes, {n}but this might beat them all."
+"{c089}(The victim must have been slashed {n}clean apart to leave this much blood {n}behind.)"
+goto top
+
+label city
+char maya e=cheerful
+"Look at that view, Nick!"
+"You can see the whole city from up {n}here!"
+char phoenix hide
+"{c089}(Is this a bad time to say that I'm {n}afraid of heights?)"
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

@@ -1,4 +1,4 @@
-setflag policeget
+setflag policestationget
 bg black
 nt
 "{c090}{center}{type}July 20, 3:30 PM{n}Police Department{n}Criminal Affairs"

@@ -1,7 +1,7 @@
 setflag recordsget
 bg black
 nt
-"{c090}{center}{type}July 20, 4:15 PM{n}Police Department{n}Records Room"
+"{c090}{center}{type}July 20, 4:45 PM{n}Police Department{n}Records Room"
 bg records fade
 
 script scene36menu

@@ -1,13 +1,21 @@
 label top
-bg Abandonedbuildingday2
+bg blacksapartment
 
-list scene35move
-li Criminal Affairs
-li Rivales Tower
+list scene38move
+li Hospital
+li Detention Center
 showlist
 menu scene38
 
-label Criminal Affairs
-script scene35menu
+label Detention Center
+noflag rickget AND talkedtoblack1 AND talkedtoblack2 noparker
+flag rickget AND talkedtoblack1 AND talkedtoblack2 yesparker
+label noparker
+mus
+script sceneparkergone2menu
+label yesparker
+mus
+script scene29menu
 
-label Rivales Tower
+label Hospital
+script scene30menu

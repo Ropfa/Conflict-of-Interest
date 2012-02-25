@@ -64,7 +64,7 @@ pause 60 script
 char parker e=freakout
 grey value=1
 pause 60 script
-"{e crash}{s10}{sfx thud-body}"
+"{e crash}{s10}{sfx thud-body}{next}"
 pause 60
 "{f}{next}"
 sfx scenechange2
@@ -73,7 +73,7 @@ delete 1
 bg wrightanything
 char maya e=thinking
 char phoenix hide
-"{c089}(No, definitely not the type to have the {n}stomach for it...)"
+"{c089}(No, definitely not the type to have {n}the stomach for it...)"
 goto top
 
 label gumshoe$

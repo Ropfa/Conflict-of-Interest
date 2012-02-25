@@ -1,0 +1,213 @@
+label top
+bg blacksapartment
+
+list scene38talk1
+li Relation with Parker
+li Something for you
+li The Rivales Family
+flag terrortalk terrortalk
+showlist
+list scene38talk2
+menu scene38
+label terrortalk
+li The Terror of the Underworld
+label scene38talk
+showlist
+menu scene38
+goto scene38talk
+
+label Relation with Parker
+char black e=normal
+char phoenix hide
+"How long have you known Mr. {n}Parker?"
+char black e=normal
+"{delay 1}Duuude, it's been... {p10}I dunno... {p10}{n}{e peace}A looong time."
+char maya e=confident
+"You ran all over the city just to find a {n}lawyer for him."
+"He must mean a lot to you."
+char black e=peace
+"{delay 1}Yeah! {n}{p10}Like I said, we're real close."
+"{delay 1}We're best buds. {n}He even pays my rent for me."
+char phoenix hide
+"He {sfx realization}what?"
+char black e=normal
+"{delay 1}Yeaaah. I'm unemployed, so he has {n}to help me out a bit."
+char phoenix hide
+"Can't you just find a job?"
+char black e=peace
+"{delay 1}Hey, working's a scam, dude."
+"{delay 1}I don't wanna get tied down like {n}that."
+char phoenix hide
+"{c089}(Says the man who depends on his {n}friend to keep from starving in {n}the streets.)"
+char maya e=thinking
+"Maybe we should convince Mr. {n}Parker to pay for the {n}Anything Agency's rent too."
+char phoenix hide
+"I'd rather not rip off our clients."
+setflag talkedtoblack1
+goto top
+
+label Something for you
+char black e=normal
+noflag rickget norick
+flag rickget yesrick
+label norick
+char phoenix hide
+"You said you had something for us?"
+char black e=normal
+"I... {n}{e pumped}{sfx shout-general}I DID!!! {n}{sfx shout-damage}CRAP!!!"
+"{delay 1}Sorry, dude."
+char nothing
+sfx showevidence
+pause 50 script
+char black hide
+"Crap{sfx shout-general}crapcrapcrap!!! {n}Where'd I put it?!"
+pause 20 script
+"{sfx shout-general}Dangit!!!"
+pause 50 script
+char black e=normal fade
+pause 30 script
+"{delay 1}Eh... {p15}Sorry. {n}{p15}Can't find it."
+char phoenix hide
+"Do you remember where you last had {n}it?"
+char black e=normal
+"{delay 1}I guess I could check everywhere {n}else I've been in the past day."
+char phoenix hide
+"Maybe we can help you. {n}What did it look like?"
+char black e=peace
+"{delay 1}Yellow."
+char phoenix hide
+"..."
+"{c089}(Well, that isn't very much to go on.)"
+goto top
+
+label yesrick
+char phoenix hide
+"This letter may be incredibly useful in {n}the trial tomorrow. {p10}Thank you."
+bg lettertorick
+char phoenix hide
+"Two people were planning to meet at {n}the Rivales Tower right before the {n}murder happened."
+"The sender... {p15}and whoever this Rick {n}person is."
+char black hide
+"{delay 1}It's all a conspiracy, dude. {p20}They're all {n}plotting against us!"
+sfx hideevidence
+bg blacksapartment
+char maya e=thinking
+"Whoever wrote it sounded like it was {n}pretty urgent."
+char phoenix hide
+"{c089}(Could it have been our mystery {n}blackmailer?)"
+goto top
+
+label The Rivales Family
+char black
+char phoenix hide
+"Mr. Parker is rather reluctant to tell {n}us about his job. Could you fill us {n}in a bit?"
+char black e=pumped
+"{delay 1}Heeeey, {p20}if Wayne don't wanna talk {n}about it, then it's not my place {n}to either."
+"{delay 1}He's real ashamed about it."
+char phoenix hide
+"Ashamed?"
+char black e=pumped
+"{delay 1}Yeah... {p20}Waaaay ashamed."
+"{delay 1}He hates that job..."
+"{delay 1}{e normal}Although now his boss is dead, {n}I don't think he'll be hanging around."
+"{e peace}{delay 1}Wayne's a good guy. {n}{p10}Real pure at heart."
+"I know he'll do the right thing."
+char phoenix hide
+"With their leader gone, I doubt the {n}Rivales Family will hold as much {n}power."
+char black e=normal
+"{delay 1}Yeah, {p10}hopefully with Old Mikey {n}gone, they'll turn to infighting... {n}{p10}Break up from within."
+"{e peace}{delay 1}Too early to tell though."
+char maya e=thinking
+"Why aren't the police doing anything {n}to stop them?"
+char black e=pumped
+"{delay 1}Duuude, {p20}don't trust any of those {n}cops you see."
+"{delay 1}They're all dirty. {n}{p10}Workin' for the mob."
+char phoenix hide
+"That's not {sfx shout-general}true! {n}I know plenty of police officers {n}who are decent people!"
+char black e=pumped
+"{delay 1}Yeah, there are good ones..." 
+"{delay 1}But they're way to scared of the mob {n}to do anything about it."
+"{delay 1}Bad or good, the police aren't gonna {n}touch those guys."
+char maya e=disheartened
+"So nobody's going to do anything?"
+char phoenix hide
+"{c090}(No... There is one person who has {n}been doing something about the {n}Rivales Family...)"
+label redogallantepresent
+setvar _allow_present_evidence false
+present
+label ifback
+goto back
+
+label gallante$
+setvar _allow_present_evidence true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char phoenix hide
+"Mr. Black, I'm sure that by now, {n}you've heard of Sir Gallante."
+char black e=pumped
+"Duuuude?"
+"All of Wayne's co-workers are being {n}murdered. Of {sfx shout-objection}course I'm gonna hear {n}about it!"
+char maya e=normal
+"I'll bet you're scared for him."
+char black e=pumped
+"Real scared! {n}What if Wayne was {sfx shout-general}next?"
+"That guy's a total {sfx shout-objection}creepo!"
+setflag terrortalk
+goto top
+
+label The Terror of the Underworld
+char black e=pumped
+"That guy's {sfx damage}crazy!"
+char phoenix hide
+"I take it you're not a big fan?"
+char black e=pumped
+"{sfx shout-general}Of course not!"
+"He has some sort of vendetta {n}against the Rivales Family. {n}He's tryinta kill 'em all!"
+"I don't think Wayne realizes just how {n}much danger he's in!"
+char maya e=confident
+"You know... We've seen Sir Gallante."
+char black e=pumped
+"{delay 1}WHOOOOOOOOAAAAA?! {n}{p20}Really?!"
+char phoenix hide
+"Last night, he confronted us at the {n}crime scene."
+char black e=pumped
+"{delay 1}And you're still alive?!"
+char phoenix hide
+"Yep. He just showed up, talked a bit, {n}and then, um..."
+"...{p20}flew away."
+char black e=pumped
+"He... {p25}{delay 1}{e normal}Huh?"
+char phoenix hide{n}we saw."
+bg flight
+char phoenix hide
+"He flew across the street and landed {n}on another building."
+char black hide
+"{delay 1}Whooa, {p20}and I thought all that super {n}hero stuff was just rumors."
+"{delay 1}You really saw him fly?{n}{p15}Whoosh?"
+char phoenix hide
+"Whoosh."
+bg blacksapartment
+char maya e=thinking
+"You know, it might actually be a good {n}idea to check out that building."
+char black e=pumped
+"{delay 1}Hey, yeeaah.{n}{p15}You oughta look there."
+"{delay 1}I'll bet he left some stuff behind."
+char phoenix hide
+"{c089}(I guess that will have to be our next {n}destination.)"
+setflag talkedtoblack2
+goto top
+
+label none
+setvar _allow_present_evidence true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+char nothing
+pause 5 script
+char phoenix hide
+"{c089}(No, that's not it.)"
+"{c090}(Somebody else has been taking a {n}very active role in dealing with {n}organized crime...)"
+goto redogallantepresent
+
+label back
+script scene38menu

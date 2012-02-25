@@ -21,7 +21,7 @@ fg dbench
 char phoenix e=headshake
 pause 50 script
 char phoenix e=confident
-"But wait, there's more!"
+"But wait, {p10}there's more!"
 "If "Sir Gallante" ever showed signs {n}of knowing the police were onto him..."
 "...it would become clear that he had {n}access to police information."
 "So you arranged for everything to {n}go public."
@@ -51,7 +51,7 @@ char phoenix e=confident
 bg witness
 fg wbench
 char watters e=angry
-"Seriously, {sfx shout-general}man?{n}Just why would I do any of that?"
+"Seriously, {sfx shout-general}man?{n}Just why would I do {sfx shout-objection}any of that?"
 ""Slay the evil"...?{n}{p20}That's not my thing."
 "I'm not some lunatic with a {sfx damage}god {n}complex!" 
 "There's no reason for me to go {n}around killing mobsters in the {n}middle of the night!"
@@ -104,7 +104,7 @@ char phoenix e=deskslam
 pause 50 script
 char phoenix e=handsondesk
 "Knowing that she had risked and lost {n}everything fighting the mob, you {n}chose to avenge her..."
-hidevr
+hideevr
 bg speedzoom stack name=zoom
 delete name=1
 sfx shout-objection
@@ -134,7 +134,7 @@ char obadiah e=serious2
 bg witness
 fg wbench
 char watters e=breakdown1
-"{sfx shout-general}No! I... {p10}STOP!!!"
+"{sfx shout-general}No! I... {p20}{sfx damage}STOP!!!"
 
 bg defense
 fg dbench
@@ -149,20 +149,23 @@ bg witness
 fg wbench
 char watters e=breakdown1
 pause 60 script
-shake 450 nowait
-"{delay 1}You wanna... You wanna know what I {n}think, man?{next}"
+"{delay 1}You wanna... {p20}You wanna know what I {n}think, man?{next}"
 pause 50 script
-"{delay 1}...Well, I'll... I'll tell you... I'll tell you {n}what I think, man...{next}"
+"{delay 1}...{p10}Well, I'll... {p20}I'll tell you... {p20}I'll tell you {n}what I think, man...{next}"
 pause 50 script
-"{delay 1}I think... that... {delay 2}this... is.........{next}"
+"{delay 1}I think... {p15}that... {delay 2}{p15}this... {p20}is.........{next}"
 pause 50 script
 
 sfx deskslam
 char watters e=breakdown2
-"{s 5}No {s10}good..."
+"{s 5}No {e breakdown3}{s10}good...{next}"
+char nothing
+pause 20 script
+sfx thud-body
+"{s10}{next}"
 pause 60 script
 bg black fade
-pause 60 script
+pause 100 script
 script scene59
 
 label none

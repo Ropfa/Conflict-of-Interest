@@ -17,7 +17,27 @@ label Wright Anything Agency
 script scene28menu
 
 label Detention Center
+noflag parkergetday2 scene29
+flag parkergetday2 ifthen
+label scene29
+script scene29
+label ifthen
+noflag penthouseget2 menu
+flag penthouseget2 ifthen2
+label menu
+script scene29menu
+label ifthen2
+noflag rickget AND talkedtoblack1 AND talkedtoblack2 noparker
+flag rickget AND talkedtoblack1 AND talkedtoblack2 yesparker
+label noparker
+script sceneparkergone2menu
+label yesparker
 script scene29menu
 
 label Records Room
+noflag recordsget scene36
+flag recordsget menu
+label scene36
 script scene36
+label menu
+script scene36menu

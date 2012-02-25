@@ -2,6 +2,7 @@ bg pent2
 pause 60 script
 
 char phoenix hide
-"{c089}(It doesn't look like Mr. Parker {n}is available right now.)"
+"It doesn't look like Detective {n}Watters is here."
+"We should come back later when he {n}is."
 
 menu scenewattersgone

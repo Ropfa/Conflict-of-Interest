@@ -1,3 +1,4 @@
-bg blacksapartment
-mus Eccentric 2007.ogg
+bg Abandonedbuildingday2
+mus Investigation - Middlegame.ogg
+set _music_loop Investigation - Middlegame - loop.ogg
 menu scene39

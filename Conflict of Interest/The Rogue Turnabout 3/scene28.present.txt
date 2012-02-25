@@ -64,7 +64,7 @@ pause 60
 char parker e=freakout
 grey value=1
 pause 60
-"{e crash}{s10}{sfx thud-body}"
+"{e crash}{s10}{sfx thud-body}{next}"
 pause 60
 "{f}{next}"
 sfx scenechange2
@@ -73,7 +73,7 @@ delete 1
 bg wrightanything
 char maya e=thinking
 char phoenix hide
-"{c089}(No, definitely not the type to have the {n}stomach for it...)"
+"{c089}(No, definitely not the type to have {n}the stomach for it...)"
 goto top
 
 label gumshoe$
@@ -192,6 +192,17 @@ char phoenix hide
 "{c089}(Could it have come from the crime {n}scene?)"
 goto top
 
+label gun2
+char maya e=thinking
+"Gumshoe was hit on the head with a {n}gun."
+char phoenix hide
+"It looks that way."
+char maya e=thinking
+"I wonder why a gun fell out of the sky {n}like that."
+char phoenix hide
+"{c089}(Could it have come from the crime {n}scene?)"
+goto top
+
 label rivalesupdate$
 char maya e=mad
 "It's a {sfx shout-general}good thing that guy is dead!"
@@ -213,10 +224,10 @@ goto top
 
 label hitlist
 char maya e=disheartened
-"I can't believe the Rivales Family killed all those people. It's awful!"
+"I can't believe the Rivales Family {n}killed all those people. It's awful!"
 char phoenix hide
-"You want to know what's even worse?"
-"I think that's just the tip of the iceberg."
+"You want to know what's even {n}worse?"
+"I think that's just the tip of the {n}iceberg."
 goto top
 
 label rick

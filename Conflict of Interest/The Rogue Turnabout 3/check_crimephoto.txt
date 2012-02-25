@@ -1,2 +1,2 @@
-bg crimephoto fade
+bg pent2 fade
 gui Back y=350

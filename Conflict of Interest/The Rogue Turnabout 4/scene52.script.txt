@@ -23,13 +23,13 @@ fg wbench
 char watters e=smirk
 "That gun belongs to me. Of course {n}my fingerprints are on it!"
 "And you know what else? {n}It wasn't even at the crime scene!"
-"For all you know, it might've just {n}gotten run over by a car or something!"
+"For all you know, it might've just {n}gotten run over by a car or {n}something!"
 bg defense
 fg dbench
 char phoenix e=headshake
 pause 50 script
 char phoenix e=confident
-"Your fingerprints aren't the only {n}nes on it."
+"Your fingerprints aren't the only {n}ones on it."
 "The victim's are too."
 bg prosecution
 fg pbench
@@ -40,7 +40,7 @@ fg dbench
 char phoenix e=confident
 "That's right!"
 "Tell me, Detective, just how many {n}times have you been in a situation..."
-"...where Michael Rivales... {n}leader of the city's underworld...{n}...has had a chance to hold your gun?"
+"...where Michael Rivales... {n}leader of the city's underworld...{n}{p15}{delay 1}...has had a chance to hold your gun?"
 sfx courtmurmur
 bg witness
 fg wbench
@@ -51,7 +51,7 @@ fg dbench
 char phoenix e=handsondesk
 "There's only one way that could {n}have happened... And that's if you {n}met with him."
 "Admit it, Watters, {e objecting}{sfx shout-objection}you met with {n}Rivales!"
-"{e pointing}I'm not sure how or why it happened, {n}but at some point, he touched {n}that pistol!"
+"{e pointing}I'm not sure how or why it happened, {n}but at some point, he touched {n}that revolver!"
 bg courtwatters
 sfx courtmurmur
 pause 100 script
@@ -65,7 +65,7 @@ fg pbench
 char obadiah e=serious
 "Wh-wh...{e damage}{sfx shout-angry}WHAT?!"
 char obadiah e=angry
-"W-Watters?!"
+"W{p5}-Watters?!"
 bg witness
 fg wbench
 char watters e=angry

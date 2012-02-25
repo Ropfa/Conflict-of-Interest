@@ -1,0 +1,112 @@
+present
+label top
+menu scene38
+bg blacksapartment
+
+label envelope
+set _ev envelope
+showevl
+sfx showevidence
+char black e=pumped
+"{delay 1}Hey, that's {sfx shout-objection}it!"
+"{delay 1}That's what I wanted to give you! {p15}{n}{sfx shout-general}Quick, open it!"
+hideevl
+set _ev rick
+showevl
+"{delay 1}Yeeeah, that's it! {n}{p20}That letter!"
+"{delay 1}I wanted to give it to you yesterday, {n}but I guess I just got distracted."
+char phoenix hide
+"{c089}(Apparently his pointless little visit {n}wasn't so pointless after all.)"
+"Where did you find this?"
+char black e=peace
+"{delay 1}In that building across the street {n}from the Tower."
+char black e=pumped
+"{delay 1}I wanted to help, but the police {n}wouldn't let me in there."
+"{delay 1}So I had to look for clues somewhere {n}else."
+char phoenix hide
+hideevl
+"Well, it's a good thing you brought {n}this to us. {p10}Thank you."
+delev envelope
+fg rickev name=rickev
+delev envelope
+addev rick
+nt
+"{sfx evidence updated.wav}{c099}Letter to Rick added to the court {n}record."
+setflag rickget
+forgetlist scene38talk1
+goto top
+
+label rick
+char black e=peace
+char phoenix hide
+"Who do you think wrote this?"
+char black e=normal
+"{delay 1}I dunno. {n}{p10}Can't you just run some tests on it?"
+char phoenix hide
+"That would be easy if it was {n}handwritten."
+"We could analyze the handwriting."
+"Unfortunately, it's typed."
+char black e=normal
+"{delay 1}Wow. {p15}Sorry 'bout that."
+goto top
+
+label gallante$
+char black e=pumped
+"{delay 1}You know what I think?"
+"{delay 1}I can't prove it... {n}{p15}But I think Big Wins Kitaki quit {n}because he was scareda that guy."
+char phoenix hide
+"Really? I seem to recall hearing a {n}different story."
+char black e=peace
+"{delay 1}Nah. {n}Guy just couldn't take it, so he {n}quit."
+char phoenix hide
+"{c089}(You'd have to be pretty intimidating {n}to scare a mob boss like that.)"
+goto top
+
+label parker$
+char black e=peace
+char phoenix hide
+"I don't think jail has been treating {n}your friend very well."
+"He gets emotional pretty easily."
+char black e=peace
+"{delay 1}Naaah, {p20}he's always been like that."
+char phoenix hide
+"Are you sure he'll be okay?"
+char black e=peace
+"{delay 1}Heeey, {p20}don't worry, right?"
+"{delay 1}You'll have him out in a day or two."
+char phoenix hide
+"{c089}(That's an awful lot of faith you're {n}putting in me..."
+"{c089}(It's actually kind of flattering.)"
+goto top
+
+label black$
+char black e=peace
+char phoenix hide
+"Could you tell us some more about {n}yourself?"
+char black e=peace
+"{delay 1}I grew up in the suburbs."
+"{delay 1}My mom was a brain surgeon and my {n}dad was a rocket scientist."
+char phoenix hide
+"W-Wow, really...? {n}{p15}Your family must've been well off."
+char black e=peace
+"{delay 1}Yeah, it was a pretty comfortable life."
+char phoenix hide
+"{c089}(And now he's jobless and bumming {n}off his friend for rent money.)"
+goto top
+
+label rivalesupdate$
+char black e=pumped
+"{delay 1}That guy was dirty. {n}{p20}Waaaay dirty." 
+"{delay 1}The city's better off without him."
+char phoenix hide
+"That's what everyone's saying."
+char black e=pumped
+"{delay 1}Well, they're {sfx shout-general}right!"
+"{delay 1}You'd think so too if you'd heard {n}some of the stuff Wayne's told me."
+goto top
+
+label none
+char black e=peace
+"{delay 1}Heeeeeey, take it easy, Mr. Wright."
+"{delay 1}Going around shoving things in {n}people's faces is no way to {n}make friends!"
+goto top

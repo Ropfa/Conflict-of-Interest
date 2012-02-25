@@ -1,2 +1,2 @@
 bg blueprints fade
-gui Back y =350
+gui Back y=350

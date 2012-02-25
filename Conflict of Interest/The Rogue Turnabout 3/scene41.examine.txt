@@ -1,5 +1,5 @@
 label top
-bg policeChelmeyBarton
+bg ChelmeyBarton
 
 examine
 region 171 83 73 75 computers
@@ -14,54 +14,54 @@ noflag laytonexamine nolayton
 flag laytonexamine yeslayton
 label nolayton
 char Inspector hide
-"Now see here! What kind of job do you people think you're running?"
+"Now see {sfx shout-general}here! What kind of {sfx damage}job do {n}you people think you're running?"
 char Chief hide
-"I've already told you! We don't know where this Dan Polo guy is!"
+"I've already told you! We don't know {n}where this {c940}Dan Polo {c999}guy is!"
 char Inspector hide
-"We followed him here!"
+"We {sfx damage}followed him here!"
 char Chief hide
-"Your equipment must have been faulty."
+"Your equipment must have been {n}faulty."
 char Inspector hide
-"We were using the stuff that YOU lent us!"
+"We were using the stuff that {sfx damage}YOU {n}lent us!"
 char Chief hide
 "Well, I don't know what to say."
-"By the way, what's a pair of English cops doing here in America?"
-"Shouldn't this be under our jurisdiction?"
+"By the way, what's a pair of English {n}cops doing here in America?"
+"Shouldn't this be under our {n}jurisdiction?"
 char Inspector hide
-"You clearly aren't doing your work properly!"
+"You {sfx shout-general}clearly aren't doing your work {n}properly!"
 char Chief hide
-"Irregardless, I'm going to have to ask you two to leave the search up to us. We can handle it."
+"Irregardless, I'm going to have to ask {n}you two to leave the search up to us. {n}We can handle it."
 char Inspector hide
-""Irregardless"? What the devil is this?"
+""Irregardless"...? {n}What the devil is this?"
 char Police hide
-"I don't believe "irregardless" is actually a word, sir."
+"I don't believe "irregardless" is {n}actually a word, sir."
 char Inspector hide
-"It isn't! They can't even speak there own language in this country, much less catch a criminal!"
+"It {sfx damage}isn't! They can't even speak there {n}own language in this country, much {n}less catch a criminal!"
 char Police hide
 "How unfortunate, sir."
 char Inspector hide
 "Get the car ready. We're leaving."
 char Police hide
-"Yes, sir. Right away, sir."
+"Yes, sir. {n}Right away, sir."
 setflag laytonexamine
 goto top
 
 label yeslayton
 char Inspector hide
-"What are you waiting for?!"
-"I thought I told you to get the car ready!"
+"What are you waiting {sfx shout-general}for?!"
+"I thought I told you to get the car {n}ready!"
 char Police hide
 "So sorry, sir."
-"I just thought I'd finish my biscuit first, if you don't mind."
+"I just thought I'd finish my biscuit {n}first, if you don't mind."
 "It's... mmm... quite good."
 goto top
 
 label computers
 char phoenix hide
-"All the police are hard at work, solving various crimes."
+"All the police are hard at work, {n}solving various crimes."
 char Chief hide
-"Hey, stop {sfx shout-general}that!"
-"It's no fun when the other team spawn camps!"
+"Hey, stop {sfx shout-general}that!!"
+"It's no fun when the other team {n}spawn camps!"
 char phoenix hide
 "...{p20}Except that one."
 goto top
@@ -70,18 +70,18 @@ label badgers
 char phoenix hide
 "The Blue Badger..."
 char maya e=cheerful
-"And his wife - The Pink Badger!"
+"And his wife {p15}- The Pink Badger!"
 char phoenix hide
 "His son, the Baby Badger."
 char maya e=pumped
-"Don't forget their nemesis, the Bad Badger!"
+"Don't forget their nemesis, the {n}Bad Badger!"
 char phoenix hide
-"And finally, that creepy thing lying on the floor over there."
+"And finally, that creepy thing lying on {n}the floor over there."
 "What was that called again?"
 char maya e=normal
-"The Proto Badger! {n}{e sad}I remember having nightmares about that one."
+"The Proto Badger! {n}{e sad}I remember having nightmares about {n}that one."
 char phoenix hide
-"You know, I think that every time we come here, they have more of those things."
+"You know, I think that every time we {n}come here, they have more of those {n}things."
 goto top
 
 label chief

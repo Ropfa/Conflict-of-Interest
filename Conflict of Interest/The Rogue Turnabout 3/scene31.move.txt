@@ -1,14 +1,39 @@
 label top
 bg entrance
 
-list scene31move
+list scene31move1
 li Wright Anything Agency
 li Detention Center
 li Reception
+flag rickget AND talkedtoblack1 AND talkedtoblack2 abandoned
+showlist
+list scene31move2
+menu scene31
+label abandoned
+li Abandoned Warehouse
 showlist
 menu scene31
 
 label Detention Center
+noflag parkergetday2 scene29
+flag parkergetday2 ifthen
+label scene29
+mus
+script scene29
+label ifthen
+noflag penthouseget2 menu
+flag penthouseget2 ifthen2
+label menu
+mus
+script scene29menu
+label ifthen2
+noflag rickget AND talkedtoblack1 AND talkedtoblack2 noparker
+flag rickget AND talkedtoblack1 AND talkedtoblack2 yesparker
+label noparker
+mus
+script sceneparkergone2menu
+label yesparker
+mus
 script scene29menu
 
 label Wright Anything Agency
@@ -21,3 +46,6 @@ label scene33
 script scene33
 label scene33menu
 script scene33menu
+
+label Abandoned Warehouse
+script scene39

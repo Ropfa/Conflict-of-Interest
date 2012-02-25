@@ -215,7 +215,7 @@ char obadiah e=serious
 bg witness
 fg wbench
 char watters e=smirk
-"Yeah! Ha!"
+"Yeah! {sfx shout-general}Ha!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -378,7 +378,7 @@ mus
 bg witness
 fg wbench
 char watters e=smirk
-"{sfx shout-general}HA{sfx shout-general}HA!!{n}{p20}You hear that, Boss?{n}He doesn't know!"
+"{sfx shout-general}HA{sfx shout-general}HA!!{n}{p20}You hear that, Boss?{p10}{n}He doesn't know!"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -399,7 +399,7 @@ char obadiah e=serious2
 bg defense
 fg dbench
 char phoenix e=normal
-"Detective, perhaps you'd like to talk {n}to us about the blackmail note?
+"Detective, perhaps you'd like to talk {n}to us about the blackmail note?"
 bg witness
 fg wbench
 char watters e=nervous
@@ -411,7 +411,7 @@ char judge e=normal
 bg witness
 fg wbench
 char watters e=angry
-"...{p15}Fine."
+"...{p15}{delay 1}Fine."
 script scene51watterstestimony2
 
 label none

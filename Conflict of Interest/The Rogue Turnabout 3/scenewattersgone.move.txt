@@ -1,0 +1,10 @@
+label top
+bg pent2
+
+list scenewattersgone
+li Reception
+showlist
+menu sceneparkergone
+
+label Reception
+script scene33menu

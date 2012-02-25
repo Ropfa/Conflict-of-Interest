@@ -1,7 +1,7 @@
 label top
 bg pent3
 
-list scene12talk1
+list scene7talk1
 li The crime scene
 li Witness
 li The murder weapon

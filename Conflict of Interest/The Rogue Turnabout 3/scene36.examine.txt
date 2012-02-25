@@ -7,21 +7,21 @@ region 176 97 55 94 drawertwo
 menu scene36
 
 label drawerone
-noflag foundfiles nofound
-flag foundfiles yesfound
+noflag trashed nofound
+flag trashed yesfound
 label nofound
 char maya e=normal
 char phoenix hide
-"The Sir Gallante files should be somewhere in this drawer."
+"The Sir Gallante files should be {n}somewhere in this drawer."
 char maya e=cheerful
 "I'll check."
 char nothing
 sfx showevidence
 pause 60 script
 char maya hide
-"There's so much stuff in here! I wonder how they keep it all organized."
+"There's so much stuff in here! I {n}wonder how they keep it all {n}organized."
 char phoenix hide
-"They probably have a better system than the Anything Agency does."
+"They probably have a better system {n}than the Anything Agency does."
 char maya hide
 "{sfx shout-scream}WHOA!!!"
 char phoenix hide
@@ -32,7 +32,7 @@ char maya e=worried fade
 set _ev KG-8
 showevl
 sfx showevidence
-"{delay 1}SL-9... {p20}Case Files..."
+"{delay 1}KG-8... {p20}Case Files..."
 char phoenix hide
 "..."
 char maya e=worried
@@ -46,58 +46,143 @@ sfx splat
 pause 10 script
 char nothing
 char phoenix hide
-"Wait, Maya! Don't just throw it on the floor!"
+"Wait, Maya! Don't just throw it on the {n}floor!"
 char maya hide
 "Where are you, Sir Gallante?"
-set _ev 
-
-"Sir Gallante..."
-"Sir Gallante..."
-"Nope."
-char phoenix hide
-"Maya, you're making a mess!"
-char maya hide
-"Still nope."
-char phoenix hide
-"Here, let me try--{p20}{next}"
-set _ev
-
-char maya hide
-"Not you."
-
-set _ev pearl$
-showevr
+set _ev hitlist2
 sfx showevidence
-pause 10 script
+showevr
+"Sir Gallante..."
 hideevr
 sfx knifethrow
 pause 2 script
 sfx hideevidence
 pause 5 script
 sfx splat
-
+pause 20 script
+set _ev letter
+sfx showevidence
+showevr
+"Sir Gallante..."
+hideevr
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx splat
+pause 20 script
+set _ev autopsyreport
+sfx showevidence
+showevl
+pause 10 script
+set _ev blackout
+showevr
+pause 10 script
+"Nope."
+hideevl
+sfx knifethrow
+pause 2 script
+hideevr
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx hideevidence
+pause 2 script
+sfx splat
+pause 5 script
+sfx splat
+pause 20 script
+char phoenix hide
+"Maya, you're making a mess!"
+set _ev autopsyreport2
+showevl
+sfx showevidence
+char maya hide
+"Still nope."
+hideevl
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx splat
+pause 20 script
+char phoenix hide
+"Here, let me try--{p20}{next}"
+set _ev pearl$
+sfx showevidence
+showevr
+set _ev news
+sfx hideevidence
+showevl
+char maya hide
+"Not you."
+hideevl
+sfx knifethrow
+pause 2 script
+hideevr
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx hideevidence
+pause 2 script
+sfx splat
+pause 5 script
+sfx splat
+pause 20 script
+set _ev bolginiapaper
+sfx showevidence
+showevl
 "Not you either."
+hideevl
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx splat
+pause 20 script
 char phoenix hide
 "Wait a minute."
+set _ev autopsyreport
+sfx showevidence
+showevr
+pause 5 script
+hideevr
+sfx knifethrow
+pause 2 script
+sfx hideevidence
+pause 5 script
+sfx splat
+pause 20 script
 "What was that?"
+set _ev pearl$
+showevl
 "Maya, come look at this."
+pause 20 script
 char maya e=normal fade
 "What is it?"
-bg pearl report
+bg pearlreport
 sfx showevidence
 pause 60 script
 char phoenix hide
-"That's... her."
+"That's... {p20}her."
 bg records
 sfx hideevidence
 char maya e=worried
 pause 60 script
 char maya e=sad
-pause 30 script
-"She'd be eighteen now."
+pause 50 script
+"{delay 1}She'd be eighteen now."
 char phoenix hide
-"I know. It's been over five years."
-"{c089}(I still remember when we had to file this report...)"
+"I know. {p20}It's been over five years."
+"{c089}(I still remember when we had to file {n}this report...)"
+fg black fade
+pause 60 script
 "{f}{next}"
 bg police
 char maya e=crying
@@ -106,49 +191,61 @@ mus Unspoken Feelings.ogg
 set _music_loop Unspoken Feelings - loop.ogg
 pause 60 script
 char phoenix hide
-"Gumshoe, can't you find her a bit faster? It's been almost a full day since she disappeared!"
-char gumshoe e=disheartend
-"I'm sorry, pal. We're doing everything we can."
+"Gumshoe, can't you find her a bit {n}faster?" 
+"It's been almost two days since {n}she disappeared!"
+char gumshoe e=disheartened
+grey value=1
+"I'm sorry, pal. We're doing {n}everything we can."
 char phoenix hide
-"What if something happens while the police are searching?! There's a lot of horrible people out there!"
+"What if something {sfx shout-general}happens while the {n}police are searching?!"
+"There's a lot of horrible people {n}out there!"
 char gumshoe e=headscratch
+grey value=1
 pause 50 script
 char gumshoe e=disheartened
-"Believe me, I want to find her just as much as you do."
-"But these things don't always work out quickly. Nobody's so much as seen her yet."
+grey value=1
+"Believe me, I want to find her just as {n}much as you do."
+"But these things don't always work {n}out quickly. {p20}Nobody's so much as {n}seen her yet."
 "I wouldn't be surprised if..."
 char maya e=sad
-"Don't say it... {e crying}Don't say it!"
+grey value=1
+"Don't say it... {p30}{e crying}Please don't say it!"
 char gumshoe e=disheartened
-"...I'm sorry. I wish there was more I could do."
+grey value=1
+"...{p30}I'm sorry. {n}{p20}I wish there was more I could do."
 mus
 bg black fade
-pause 60 script
+pause 80 script
 grey value=0
 bg records fade
 char maya e=sad
 "She's still missing."
-"After five years, they still haven't found her."
-"{e crying}Do you think we'll ever see her again, Nick?"
+"After five years, they still haven't {n}found her."
+"{e crying}Do you think we'll ever see her again, {n}Nick?"
 char phoenix hide
-"...{p20}I don't know.{n}{p20}I hope so."
-"{c089}(We haven't seen or heard from Pearl in five years, so it's not likely...)"
-"{c089}(...But I don't have the heart to tell her that.)"
+"...{p20}I don't know.{n}{p30}I hope so."
+"{c089}(We haven't seen or heard from {n}Pearl in five years, so it's not {n}likely...)"
+"{c089}(...But I don't have the heart to tell {n}her that.)"
+pause 60 script
 char maya e=sad
-"I hope so too..."
+"{delay 1}I hope so too..."
 pause 100 script
 char phoenix hide
 "Hey, look what I found."
 set _ev SL9
 showevl
-"The Sir Gallante file."
+"{sfx realization}The Sir Gallante file we were {n}looking for."
 char maya e=surprised
-"Huh? How'd you find that so quickly?"
+"{sfx shout-general}Huh? {n}{p20}How'd you find that so quickly?"
 char phoenix hide
 "It wasn't too hard."
 char maya e=mad
-"It was the only thing you left in the drawer!"
+char phoenix hide
+"It was the only thing you left in the {n}drawer!"
 hideevl
+fg gallantefilesev name=gallantefilesev
+nt
+"{sfx evidence updated.wav}{c099}Sir Gallante Investigation Files added {n}to the court record."
 addev pearl$
 addev gallantefiles
 
@@ -158,17 +255,18 @@ goto top
 label yesfound
 char phoenix hide
 "We already found what we were looking for."
+"Might as well leave."
 goto top
 
 label drawertwo
 char maya e=normal
 "There's certainly a lot of files in here."
 char phoenix hide
-"Well, they do have to keep track of every single case that they investigate."
+"Well, they do have to keep track of {n}every single case that they {n}investigate."
 char maya e=thinking
-"There must be an awful lot of killers running around out there."
+"There must be an awful lot of killers {n}running around out there."
 char phoenix hide
-"I don't think they're all murder cases, Maya."
+"I don't think they're all murder cases, {n}Maya."
 goto top
 
 label none

@@ -21,6 +21,7 @@ pause 80
 bg pent fade
 pause 40
 char watters e=angry fade
+pause 60 script
 
 nt
 "{c090}There were no courts on earth for {n}men like him."
@@ -110,7 +111,7 @@ fg pbench
 char obadiah e=angry
 "Yes, that's all that matters to you, {n}isn't it?!"
 "Proving your client innocent!"
-"I should have expected as much from {n}you... {p25}A defense attorney!"
+"I should have expected as much from {n}you... {p25}{sfx damage}A defense attorney!"
 "All you care about is getting him off {n}the hook!"
 "Men like that detective spend their {n}lives making this city safe for {n}{sfx shout-general}scumbags like you!"
 "This is how you repay him?!"
@@ -118,7 +119,7 @@ char obadiah e=angry
 bg defense
 fg dbench
 char phoenix e=normal
-"Defending us isn't supposed to {n}extend to murdering other in {n}cold blood."
+"Defending us isn't supposed to {n}extend to murdering others in {n}cold blood."
 
 bg prosecution
 fg pbench
@@ -137,7 +138,7 @@ char obadiah e=serious2
 pause 50 script
 mus Suspense.ogg
 set _music_loop Suspense - loop.ogg
-"But as I said before... {c940}It's impossible {n}for him to be Sir Gallante{c999}."
+"But as I said before... {c940}It's impossible {n}for him to be Gallante{c999}."
 "He may have been in the Rivales {n}penthouse that morning..."
 "...but for every other time Gallante {n}killed somebody..."
 "...he has an airtight alibi."
@@ -149,7 +150,7 @@ char judge e=normal
 bg prosecution
 fg pbench
 char obadiah e=angry
-"With {sfx shout-damage}me!"
+"With {sfx damage}me!"
 "It's all there in those files Wright and {n}his friend snatched from the records {n}room..."
 "...But I suppose you just "happened" {n}to overlook that, didn't you?"
 
@@ -168,7 +169,7 @@ char obadiah e=angry
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"That doesn't clear him for the murder {n}of MIchael Rivales."
+"That doesn't clear him for the murder {n}of Michael Rivales."
 "He even admitted to being at the {n}scene!"
 
 bg prosecution
@@ -181,7 +182,7 @@ bg judge
 char judge e=headshake
 pause 50 script
 char judge e=normal
-"I don't believe that it was even {n}proven beyond a doubt that Sir {n}Gallante committed this crime."
+"I don't believe that it was ever {n}proven beyond a doubt that Sir {n}Gallante committed this crime."
 
 bg prosecution
 fg pbench
@@ -215,8 +216,9 @@ sfx shout-objection
 fg HoldItAnim
 pause 10 script
 bg courtwatters
-pause 10 script
+pause 60 script
 sfx dramapound
+pause 30 script
 
 bg judge
 char judge e=surprised
@@ -269,7 +271,7 @@ char maya e=bench-strict
 "He claimed he was innocent, right up {n}until the very end!"
 char phoenix hide
 "{c089}(Even in the face of overwhelming {n}evidence...)"
-"{c089}(Is it true...? Have we really made a {n}huge mistake?"
+"{c089}(Is it true...? Have we really made a {n}huge mistake?)"
 "{c089}({c940}Is Mark Watters really innocent{c089}?)"
 
 bg judge
@@ -279,7 +281,7 @@ char judge e=normal
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{delay 1}...{p10}Yes."
+"{delay 1}...{p15}Yes."
 "I would like a final day to complete {n}the investigation."
 
 bg judge
@@ -300,8 +302,8 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(This certainly didn't end the way I {n}expected it to.)"
-"{c089}(Now there are {c940}two people{c089} that I {n}need to prove innocent."
-"{c089}I know what I have to do tomorrow... {n}I need to clear Detective Watters's name...)"
+"{c089}(Now there are {c940}two people{c089} that I {n}need to prove innocent.)"
+"{c089}(I know what I have to do tomorrow... {n}I need to clear Detective Watters's {n}name...)"
 
 bg black fade
 pause 80 script

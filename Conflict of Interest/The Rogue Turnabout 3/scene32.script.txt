@@ -4,9 +4,9 @@ char phoenix hide
 "It doesn't look like Mr. Black is here."
 char maya e=thinking
 "That's strange."
-"Didn't he say to meet him here "right away"...?"
+"Didn't he say to meet him here {n}"right away"...?"
 char phoenix hide
-"Yes. We should probably check back later."
-"{c089}(He can't really be that forgetful...{p20} Can he?)"
+"Yes. We should probably check back {n}later."
+"{c089}(He can't really be that forgetful...{p20} {n}Can he?)"
 
 script scene32menu

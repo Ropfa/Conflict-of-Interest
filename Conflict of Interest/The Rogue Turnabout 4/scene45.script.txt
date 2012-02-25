@@ -3,7 +3,7 @@ set _cr_button true
 bg black
 
 nt 
-"{center}{type}{c090}July 21, 9:22 AM{n}District Court{n}Courtroom No. 3"
+"{center}{type}{c090}July 21, 9:30 AM{n}District Court{n}Courtroom No. 3"
 bg courtcody fade
 sfx courtmurmur
 pause 100
@@ -30,7 +30,7 @@ char obadiah e=serious
 bg witness
 fg wbench
 char cody e=angry
-"H{p5}-Hey! {p15}I'm not a boy!{n}{p20}{e confident}I'm an adolescent!"
+"H{p5}-{sfx shout-general}Hey! {p15}I'm not a boy!{n}{p20}{e confident}I'm an adolescent!"
 
 bg prosecution
 fg pbench

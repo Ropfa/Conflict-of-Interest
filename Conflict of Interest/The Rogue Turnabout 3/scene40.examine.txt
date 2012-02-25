@@ -1,0 +1,61 @@
+label top
+bg entrance
+
+examine
+region 85 0 171 100 skyscraper
+region 65 40 14 20 hawk
+region 145 100 45 52 door
+menu scene40
+
+label skyscraper
+char maya e=thinking
+"Why do they call them {n}"skyscrapers"? They don't "scrape" {n}the sky..."
+"They just sort of poke up there."
+char phoenix hide
+"Maybe you should call up the writers {n}of the dictionary and give them a {n}piece of your mind."
+char maya e=pumped
+"You know what?{n}I will!"
+char phoenix hide
+"{c089}(Note to self: {p10}Be sure to record that {n}conversation if it ever happens.)"
+goto top
+
+label hawk
+set _ev hawk
+showevl
+sfx hawk.ogg
+char maya e=cheerful
+"Hello, Mr. Hawk!"
+pause 40 script
+sfx hawk.ogg
+pause 40 script
+char maya e=normal
+"He says hi back, Nick."
+char phoenix hide
+"I didn't know you could talk to {n}animals."
+char maya e=thinking
+"Neither did I."
+goto top
+
+label door
+char maya e=cheerful
+"I love revolving doors!{n}They're like little tiny vortexes {n}of fun!"
+char phoenix hide
+"Don't even {sfx shout-general}think about playing {n}around in that doorway!"
+char maya e=surprised
+char phoenix hide
+"There are other people who need to {n}leave and enter that building!"
+char maya e=sad
+"*mumble*"
+char phoenix hide
+"Tell you what, Maya. {n}After this case, I'll take you{n}to the Sunshine Coliseum."
+"You can spend the whole day {n}spinning around in the revolving {n}doors there."
+char maya e=cheerful
+"Really, Nick?"
+char phoenix hide
+"{c089}(This girl gives a new definition to the {n}term "easily amused".)"
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

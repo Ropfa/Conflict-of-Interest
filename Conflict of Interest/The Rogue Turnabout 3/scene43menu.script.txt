@@ -1,0 +1,4 @@
+bg pent4
+mus Metropolis Zone.ogg
+set _music_loop Metropolis Zone - loop.ogg
+menu scene43

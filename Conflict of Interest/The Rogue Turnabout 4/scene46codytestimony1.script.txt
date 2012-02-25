@@ -222,7 +222,7 @@ char obadiah e=worried
 bg witness
 fg wbench
 char cody e=sword
-"{sfx shout-shock}H-hey! {n}You can't tell {sfx shout-objection}me what to do!!"
+"{sfx shout-shock}H-hey! {n}{p15}You can't tell {sfx shout-objection}me what to do!!"
 setflag press1A
 resume
 
@@ -298,7 +298,7 @@ char phoenix e=normal
 bg witness
 fg wbench
 char cody e=confident
-"'Cuz he's Sir Gallante! {p5}Duh!!"
+"'Cuz he's Sir Gallante! {p5}{sfx shout-general}Duh!!"
 "He isn't going to kill the king of all {n}crime without his signature armor!"
 "That'd ruin his reputation!!!"
 bg defense
@@ -338,7 +338,7 @@ char maya e=bench-profile
 bg witness
 fg wbench
 char cody e=sad
-"{sfx whoops}H-Hey... {p20}Don't say that... {p20}It's not like that!"
+"{sfx whoops}H-Hey... {p20}Don't say that... {n}{p20}It's not like that!"
 setflag press1D
 resume
 

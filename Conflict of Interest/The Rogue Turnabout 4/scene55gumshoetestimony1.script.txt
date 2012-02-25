@@ -163,7 +163,7 @@ char obadiah e=serious
 bg witness
 fg wbench
 char gumshoe e=disheartened
-"I-It wouldn't matter anyway."
+"I{p5}-It wouldn't matter anyway."
 "I can't remember what Mark looks {n}like."
 bg defense
 fg dbench
@@ -286,7 +286,7 @@ char gumshoe e=mad
 bg defense
 fg dbench
 char phoenix e=sweating
-"No, Gumshoe. YOU'RE Rick."
+"No, Gumshoe. {p15}YOU'RE Rick."
 bg witness
 fg wbench
 char gumshoe e=normal
@@ -361,7 +361,7 @@ char phoenix e=thinking
 bg prosecution
 fg pbench
 char obadiah e=serious
-"This narrows down our list of {n}suspects to only approximately {n}half the city."
+"This narrows down our list of {n}suspects to approximately half {n}the city."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -472,7 +472,7 @@ char gumshoe e=thinking
 "I mean, I must've gone out later, {n}since I got hit, but before I think{n} we were inside and... {e headscratch}"
 pause 50 script
 "{e disheartened}No, maybe that's not it."
-"{e normal}Maybe we were outside the whole {n}time and... {p20}{e disheartened}{n}Oh... No..."
+"{e normal}Maybe we were outside the whole {n}time and... {p25}{e disheartened}{n}Oh... {p25}No..."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -642,8 +642,8 @@ resume
 
 label rick gumshoe1A
 mus
-sfx /phoenix/holdit.ogg
-fg HoldItAnim
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
 pause 5 script
 bg defense
 fg dbench
@@ -664,7 +664,7 @@ char gumshoe e=mad
 bg defense
 fg dbench
 char phoenix e=sweating
-"No, Gumshoe. YOU'RE Rick."
+"No, Gumshoe. {p15}YOU'RE Rick."
 bg witness
 fg wbench
 char gumshoe e=normal
@@ -740,7 +740,7 @@ bg defense
 fg dbench
 char phoenix e=confident
 set _ev gun
-"Well, it just so happens that I have {n}something that most people would find {n}to be very scary..."
+"Well, it just so happens that I have {n}something that most people would {n}find to be very scary..."
 showevr
 "...a gun."
 bg witness
@@ -833,7 +833,7 @@ showevr
 bg witness
 fg wbench
 char gumshoe e=thinking
-"{delay 1}......{e disheartened}......"
+"{delay 1}............{n}......{e disheartened}......"
 char phoenix hide
 "{c089}({s5}NO!!!)"
 bg prosecution
@@ -862,23 +862,29 @@ sfx dramapound
 pause 50 script
 "{f}{next}"
 bg blackmailletter
+grey value=1
 sfx dramapound
 pause 35 script
 "{f}{next}"
 bg entrance
+grey value=1
 sfx dramapound
 pause 30 script
 "{f}{next}"
 bg Abandonedbuildingday2
+grey value=1
 sfx dramapound
 pause 30 script
 "{f}{next}"
-char watters e=serious fade
-pause 20 script
-bg black stack fade
 char watters e=serious
-pause 30 script
+grey value=1
+pause 60 script
+bg black 
+char watters e=serious
+grey value=1
+pause 60 script
 char nothing fade
+pause 20 script
 "{f}{f}{f}{next}"
 mus I can do it when it counts, pal.ogg
 set _music_loop I can do it when it counts, pal - loop.ogg
@@ -886,13 +892,13 @@ bg witness
 fg wbench
 grey value=0
 char gumshoe e=pumped
-"Y-Yeah, pal!{n}{p20}It's all coming back to me!"
+"Y{p5}-Yeah, pal!{n}{p20}It's all coming back to me!"
 "That man! {sfx shout-general}He's the one!!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "We all know who the man in that {n}photo is..."
-"{e objecting}{p50}{e pointing}...{sfx shout-objection}It's Detective Mark Watters!"
+"{e objecting}{sfx shout-objection}{p50}{e pointing}...It's Detective Mark Watters!"
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -922,7 +928,7 @@ char watters e=nervous
 grey value=1
 char gumshoe hide
 "Mark told me that he was going to go {n}meet with Michael Rivales."
-"He knew it was too dangerous to go in {n}there alone though, so he had me wait {n}outside..."
+"He knew it was too dangerous to go {n}in there alone though, so he had me {n}wait outside..."
 "{f}{f}{next}"
 grey value=0
 bg witness

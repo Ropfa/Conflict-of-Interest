@@ -1,7 +1,7 @@
 set _cr_button false
 mus
 
-bg pent4
+bg pent2
 
 "{f}{next}"
 sfx /phoenix/takethat.ogg
@@ -9,7 +9,7 @@ fg TakeThatAnim
 pause 5 script
 "{f}{next}"
 sfx dramapound.wav
-invert name=pent4
+invert name=pent2
 char watters e=serious
 pause 40 script
 bg black
@@ -17,7 +17,7 @@ char watters e=serious
 sfx rolling.ogg
 pause 10 script
 bg 2-chain-bg
-char parker e=sad
+char watters e=serious
 fg 1-lock-chain name=chains
 "{s 80 4}{next}"
 pause 20 script
@@ -31,19 +31,20 @@ pause 60 script
 mus 'Psyche Lock' 2007.ogg
 set _music_loop 'Psyche Lock' 2007 - loop.ogg
 char phoenix hide
-"Detective, I'd like to talk to you a bit more about this list we just found."
+"Detective, I'd like to talk to you a bit {n}more about this list we just found."
 char watters e=confused
-"Hey, I told you, man. I don't know anything about that."
+"Hey, I told you, man. {n}I don't know anything about that."
 char phoenix hide
-"Your lie is as transparent as the glass on these windows."
-"I can prove that your are very familiar with the contents of this list."
+"Your lie is as transparent as the glass {n}on these windows."
+"I can prove that your are very {n}familiar with the contents of {n}this list."
 char watters e=nervous
 "R-really, man...?"
 char phoenix hide
 "Totally."
-"{c090}This evidence shows that you are very closely connected with{p20}{next}"
+"{c090}This evidence shows that you are {n}very closely connected with{p20}{next}"
 char obadiah hide
 "Save it for another time, Wright."
+mus
 char watters e=shock
 char phoenix hide
 "{sfx realization}!!!"
@@ -54,27 +55,31 @@ pause 40 script
 mus Shibuya.ogg
 set _music_loop Shibuya - loop.ogg
 char obadiah e=front-serious fade
-"{sfx shout-general}What do you think you're doing on my crime scene?!"
+"{sfx shout-general}What do you think you're doing on {n}my crime scene?!"
 char phoenix hide
-"I... I was just..."
+"I... {p10}I was just..."
 char obadiah e=front-angry
 "{sfx shout-general}Out! {sfx shout-angry}{s10}Now!"
 char watters e=nervous
 "Hey, take it easy, boss.{n}He just wanted to--{p10}{next}"
 char obadiah e=front-angry
-"You let a defense attorney in here?! {sfx shout-angry}What were you thinking?!"
+"You let a {sfx shout-general}defense attorney in here?! {sfx shout-angry}{s10}{n}What were you thinking?!"
 char watters e=nervous
 "Hey, sorry, man."
 char obadiah e=front-angry
-"I don't normally cut salaries, but I might have to make an {sfx shout-general}exception for you!!"
+"I don't normally cut salaries, but I {n}might have to make an {sfx shout-general}exception {n}for you!!"
 char watters e=nervous
 "Whoa, chill out..."
-"Uh, hey... {e sad}Sorry, Phoenix, but you'd better split."
+"Uh, hey... {e sad}Sorry, Phoenix, but you'd {n}better split."
 char obadiah e=front-angry
 "You're {sfx shout-loud}damn right he'd better!"
 char phoenix hide
 "I'm splitting! I'm splitting!"
+sfx screenwipe
+fg black fade
+mus
+pause 60 script
 setflag youshallnotpass
 
-mus
+bg reception fade
 script scene33menu

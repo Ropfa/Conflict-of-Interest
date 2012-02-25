@@ -133,6 +133,10 @@ showevl
 "It won't be working anytime soon...{n}{p30}But it's definitely a gun."
 hideevl
 delev smashed
+fg gunev name=gunev
+nt
+"{sfx evidence updated.wav}{c090}Broken Gun added to the court {n}record."
+delete name=gunev
 addev gun
 
 char maya e=thinking

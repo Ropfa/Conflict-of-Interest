@@ -14,8 +14,8 @@ menu scene34
 
 label knife
 char phoenix hide
-"We proved yesterday that this knife wasn't actually the murder weapon."
-"Not much else to say about it right now, I guess."
+"We proved today that this knife {n}wasn't actually the murder {n}weapon."
+"Not much else to say about it right {n}now, I guess."
 goto top
 
 label desk
@@ -53,18 +53,10 @@ char watters e=serious
 goto top
 
 label window
+char maya e=disheartened
+"Brr!{n}It's so cold in here!"
 char phoenix hide
-"Why is that window open?!{n}{p10}{sfx shout-general}It's way too cold in here for that!"
-char watters e=serious
-"We're supposed to leave the crime {n}scenes as we found them. Believe me, {n}I'd love to close that thing."
-char phoenix hide
-"I wasn't even aware that you could {n}open windows on the top level of a {n}skyscraper."
-"Isn't that a safety hazard?"
-char watters e=serious
-"Beats me. Could be."
-char phoenix hide
-"{c089}(So {c940}the window was open when the {n}police found the body{c089}?)"
-"{c089}({delay 1}...But why?)"
+"Detective Watters said that they left {n}it open to preserve the original {n}conditions of the crime scene."
 goto top
 
 label blood

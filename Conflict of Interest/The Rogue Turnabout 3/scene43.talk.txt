@@ -1,0 +1,78 @@
+label top
+bg pent4
+
+list scene43talk
+li The Hit List
+showlist
+menu scene43
+goto scene43talk
+
+label The Hit List
+char watters e=serious
+char phoenix hide
+"Detective, do you have any idea who {n}the people on this list were?"
+char watters e=serious
+"{p20}{e sad}{delay 1}..."
+char phoenix hide
+"Detective?"
+char watters e=shock
+"Huh? {p15}{e thinking}Oh, I dunno..."
+"Probably just people they didn't like? {n}They are the mafia, after all."
+char phoenix hide
+"Some of the hits on here are really {n}old. I think I saw one from almost {n}twenty years ago."
+char maya e=normal
+"They're all pretty old, actually. {n}All except for that last one."
+bg hitlist3
+pause 30 script
+char phoenix hide
+"{c089}(The last one... {p10}{n}The one for {c940}Sir Gallante{c089}.)"
+"{c089}(It's the only one that doesn't have {n}an X through it.)"
+"{c089}(That must mean that he's the {n}only one they never succeeded in {n}catching.)"
+"I guess it would make sense that {n}they would want him dead."
+bg pent2
+char maya e=disheartened
+pause 40 script
+"All these people are gone... {n}Just because the Rivales Family {n}didn't like them."
+char phoenix hide
+"They probably hired somebody to {n}carry out the hits."
+char maya e=mad
+"It's so terrible that there are people {n}out there who kill for money!"
+char watters e=serious
+"Yeah, it's pretty bad. {p20}{n}{e sad}Kinda the way the world works {n}though."
+char phoenix hide
+"Is everything okay?{n}{p20}You've been rather quiet since we {n}found that list."
+char watters e=sad
+"Yeah... {n}{p20}Everything's okay with me, man."
+
+mus
+"{f}{next}"
+sfx dramapound.wav
+invert name=pent4
+pause 40 script
+bg black
+char watters e=sad
+sfx rolling.ogg
+pause 10
+bg 2-chain-bg
+char watters e=sad
+fg 1-lock-chain name=chains
+"{s 80 4}{next}"
+pause 20
+fg lock y=40 name=lock1
+"{f}{next}"
+sfx owned.ogg
+pause 70
+
+char watters e=sad
+"Thanks for asking though."
+char phoenix hide
+"{c089}(Something IS wrong. {n}{p15}He's trying to hide something...)"
+"{c089}(...and he's not doing a very good job {n}of it. I think it's fairly obvious {n}what it is.)"
+delete name=chains
+delete name=lock1
+pause 20 script
+bg pent4 fade
+char watters e=sad
+mus Metropolis Zone.ogg
+mus Metropolis Zone - loop.ogg
+goto top

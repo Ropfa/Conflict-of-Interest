@@ -1,7 +1,7 @@
 label top
 bg reception
 
-list scene32move
+list scene33move
 li Entrance
 li Penthouse
 showlist
@@ -9,35 +9,45 @@ menu scene33
 
 label Entrance
 noflag youshallnotpass scene31
-flag youshallnotpass scene31b
+flag youshallnotpass ifthen
 label scene31
 script scene31menu
+label ifthen
+noflag codycall scene31b
+flag codycall 31menu2
 label scene31b
 script scene31b
+label 31menu2
+script scene31menu
 
 label Penthouse
+noflag blackdetention wattersgone
+flag blackdetention ifthen
+label wattersgone
+script scenewattersgonemenu
+label ifthen
 noflag penthouseget2 scene34
-flag penthouseget2 ifthen
+flag penthouseget2 ifthen2
 label scene34
 script scene34
-label ifthen
+label ifthen2
 noflag youshallnotpass scene34b
-flag youshallnotpass ifthen2
+flag youshallnotpass ifthen3
 label scene34b
 script scene34menu
-label ifthen2
+label ifthen3
 noflag fingerprintsget youshallnotpass
 flag fingerprintsget fingerprintsget
 label youshallnotpass
-bg black fade
-pause 60 script
+bg black 
+pause 30 script
 bg pent2 fade
 pause 60 script
 char obadiah e=front-angry
-"*glare*"
+"......"
 char phoenix hide
 "S-{sfx shout-general}{s5}Sorry!! Just took a wrong turn!"
 pause 20 script
 script scene33menu
 label fingerprintsget
-script scene
+script scene43

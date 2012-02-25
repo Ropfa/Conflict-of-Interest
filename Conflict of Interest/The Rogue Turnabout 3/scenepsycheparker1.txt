@@ -3,6 +3,7 @@ mus
 
 bg detentionnew
 fg detention
+char parker e=sad
 
 "{f}{next}"
 sfx /phoenix/takethat.ogg
@@ -36,7 +37,7 @@ pause 60 script
 mus 'Psyche Lock' 2007.ogg
 set _music_loop 'Psyche Lock' 2007 - loop.ogg
 char phoenix hide
-"Mr. Parker, I'd like for you to tell me about your job."
+"Mr. Parker, I'd like for you to tell me {n}about your job."
 
 label redolock1
 char parker e=worried
@@ -46,11 +47,11 @@ char phoenix hide
 "What kind of things?"
 
 char parker e=worried
-"*mumble* *mumble*"
+"*mumble* {p10}*mumble*"
 
 char phoenix hide
 "I had a feeling you might be hesitant."
-"{c090}It just so happens that I have something which shows what you "guarded"..."
+"{c090}It just so happens that I have {n}something which shows what you {n}"guarded"..."
 present
 label ifback
 goto back
@@ -68,23 +69,23 @@ sfx showevidence
 "Could you take a look at this?"
 
 char parker e=serious
-"What's that old crumple {delay 1}piece... of{delay 2} {sfx shout-objection}{e freakout}BWAHA!!"
+"What's that old crumple {delay 1}piece... of{delay 2} {sfx shout-objection}{e freakout}{n}BWAHA!!"
 "{e disturbed}{sfx shout-loud}WHERE'D YOU FIND THAT THING?!"
+hideevl
 
 mus 'Psyche Lock' 2007.ogg
 set _music_loop 'Psyche Lock' 2007 - loop.ogg
 char phoenix hide
-"So you recognize it?{n}That's good to know."
-"Perhaps you also know what I'm about to say."
+"So you recognize it?{n}{p15}That's good to know."
+"Perhaps you also know what I'm {n}about to say."
 
 char parker e=disturbed
-"I have no ID{e freakout}EEEAAAAA!!!"
+"I have no ID{e freakout}{sfx shout-objection}EEEAAAAA!!!"
 char parker e=disturbed
 
 label redolock2
 char phoenix hide
-"The instructions read "Send Parker beforehand to try and settle things.""
-hideevl
+"The instructions read "Send Parker {n}beforehand to try and settle {n}things.""
 "{c090}The thing that you "guarded" is..."
 
 list parkerlocks
@@ -100,13 +101,13 @@ char phoenix hide
 "You guarded Michael Rivales."
 "You were his bodyguard."
 char parker e=disturbed
-"I WAS NOT!!!"
+"I WAS {sfx shout-loud}NOT!!!"
 char phoenix hide
-"That's why you went into the penthouse. It was to check up on him to make sure he was safe."
+"That's why you went into the {n}penthouse. It was to check up {n}on him to make sure he was safe."
 char parker e=disturbed
-"Bu-but no!!!"
-"If that was the case, I would've been more than just a few minutes, right?"
-"I would've had to be around the guy 24/7!!!"
+"Bu-but {sfx shout-general}no!!!"
+"If that was the case, I would've been {n}there more than just a few minutes, {n}right?"
+"I would've had to be around the guy {n}24/7!!!"
 char phoenix hide
 "I guess you might have a point..."
 sfx damage.wav
@@ -116,12 +117,12 @@ goto redolock2
 
 label Money
 char phoenix hide
-"You guarded money that the Rivales Family had stolen."
+"You guarded money that the Rivales {n}Family had stolen."
 char parker e=disturbed
 "Money? Why would I guard that?"
-"We have banks and stuff for that kind of thing!"
+"We have banks and stuff for that {n}kind of thing!"
 char phoenix hide
-"{c089}(I guess even the mob likes to earn a little interest.)"
+"{c089}(I guess even the mob likes to earn a {n}little interest.)"
 sfx damage.wav
 penalty -20
 is penalty 0 magafail
@@ -130,23 +131,23 @@ goto redolock2
 label The Rivales Family's interests
 mus
 char phoenix hide
-"The thing you guarded wasn't actually a physical object at all, was it?"
+"The thing you guarded wasn't {n}actually a physical object at {n}all, was it?"
 char parker e=disturbed
 "..."
 char phoenix hide
-"You "guarded" the Rivales Family's interests... as an enforcer."
+"You "guarded" the Rivales Family's {n}interests... {p20}{c940}as an enforcer{c999}."
 char parker e=disturbed
-"Bu-bu-{delay 1}bu-{delay 2}bu-{p20}{next}"
-"{e freakout}{sfx shout-scream}BWWWWWWAAAAAAAA{sfx shout-objection}AAARRRRRRGGGGG{sfx shout-loud}GGGGGG!!!{e crash}{p2}{sfx thud-body}{s20}"
+"Bu-bu-{delay 1}bu-{delay 2}bu-{p30}{next}"
+"{e freakout}{sfx shout-scream}BWWWWWWAAAAAAAA{sfx shout-objection}AAARRRR{n}RRRRRRRRR{sfx shout-shock}RRGGGGG{sfx shout-loud}GGGGGG!!!{e crash}{p2}{sfx thud-body}{s20}"
 pause 60
 
 sfx lockbreaks.wav
 delete name=lock1
-fg 1-lock-breaks y=-8 x=65
+fg 1-lock-breaks y=20 x=35
 pause 30
 sfx lockbreaks.wav
 delete name=lock2
-fg 1-lock-breaks y=-8 x=-65
+fg 1-lock-breaks y=20 x=-95
 pause 20
 sfx rolling.ogg
 "{s 40 4}{next}"
@@ -160,28 +161,29 @@ pause 30
 delete name=unl
 pause 60
 setflag brokeparkerpsyche
+forgetlist scene29talk1
 fg detention
 char parker e=sad fade
-"I'm... {e crying}I'm a bad man, Mr. Wright."
+"I'm... {p20}{e crying}I'm a bad man, Mr. Wright."
 "Sorry I lied to you."
 char phoenix hide
-"I'm curious to know why you wanted to hide that from me."
+"I'm curious to know why you wanted {n}to hide that from me."
 char parker e=crying
-"Would you have taken my case if you knew what kind of guy I really am?"
+"Would you have taken my case if {n}you knew what kind of guy I {n}really am?"
 char phoenix hide
 "Did you kill Michael Rivales?"
 char parker e=sad
-"I... NO!!!"
+"I... {p10}{sfx damage}NO!!!"
 char phoenix hide
 "That's what you're on trial for."
-"If you aren't guilty of that, you don't deserve to be punished for it."
-"No matter what else you may have done in the past."
+"If you aren't guilty of that, you don't {n}deserve to be punished for it."
+"No matter what else you may have {n}done in the past."
 char parker e=sad
 "*sniff*"
 char phoenix hide
 "Are you ready to talk now?"
 char parker e=sad
-"*sniff*{n}{p30}Yes..."
+"*sniff*{n}{p30}{delay 1}Yes..."
 script scene29menu
 
 label none
@@ -198,14 +200,15 @@ char phoenix hide
 "Didn't you?"
 
 char parker e=disturbed
-"Pl-{s}Please don't look at me {sfx shout-loud}LIKE {e freakout}THAAAAAAT!!!{e crash}{p2}{sfx thud-body}{s20}"
+"Pl-{s}Please don't look at me {sfx shout-loud}LIKE {e freakout}{n}THAAAAAAT!!!{e crash}{p2}{sfx thud-body}{s20}"
 
 char phoenix hide
-"{c089}(That seemed to get a reaction out of him... Just not the right one.)"
+"{c089}(That seemed to get a reaction out {n}of him... Just not the right one.)"
 sfx damage.wav
 penalty -20
 is penalty 0 magafail
 char parker e=sad fade
+pause 60 script
 
 goto redolock1
 

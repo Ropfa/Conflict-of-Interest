@@ -1,1 +1,261 @@
 bg entrance
+nt
+"{c090}{center}{type}July 20, 8:30 PM{n}Rivales Tower{n}Front Entrance"
+char maya e=normal fade
+pause 60 script
+char maya e=pumped
+"Hey, Nick!"
+"There's somebody running at us."
+
+pause 30 script
+
+char phoenix hide
+"Looks like he finally made it."
+
+pause 60 script
+
+char cody e=angry fade
+pause 20 script
+"{sfx realization}Hey, pops!"
+
+char phoenix hide
+"Did you bring the fingerprint analysis {n}kit?"
+
+char cody e=confident
+"You bet!{n}{p20}I can't wait to get started!"
+
+set _ev gun
+showevl
+
+mus Tricks and Gimmicks.ogg
+
+char cody e=angry
+"You know how to do this, right?"
+"Just spread some aluminum powder {n}on the gun."
+sfx spray2
+hideevl
+set _ev gkgundust
+showevl
+"Now you just blow it off."
+
+char maya e=pumped
+"{sfx blowing}PPPPPPPPPPPPPFFFFFFFFFFFFFFFF{n}{p60}{sfx blowing}PPPPPPPPPPPPPFFFFFFFFFFFFFFFF{n}{p80}{sfx blowing}PPPPPPPPPPPPPFFFFFFFFFFFFFFFF"
+hideevl
+set _ev gkgunprints
+showevl
+
+pause 80 script
+
+char phoenix hide
+"That was a bit excessive, don't you {n}think?"
+
+char maya e=confident
+"Well, it worked!"
+
+char phoenix hide
+"It looks like two pairs of fingerprints {n}showed up."
+
+char maya e=surprised
+"{sfx shout-shock}Two?!"
+
+char phoenix hide
+"Yeah, and they're both pretty fresh."
+"I'd bet that they're only a few days {n}old at the most."
+
+char maya e=thinking
+"So from the morning that Mr. Rivales {n}was killed?"
+
+char phoenix hide
+"That's the idea."
+
+label redoprints
+char cody e=angry
+"Well?! {n}{sfx shout-general}Hurry up, pops!{n}Whose are they?"
+set _ev rivalesprint$
+showevr
+delev maya$
+delev gumshoe$
+delev parker$
+delev watters$
+delev rivalesupdate$
+delev sarah$
+delev cody$
+delev gallante$
+delev black$
+delev obadiah$
+delev pearl$
+addev gumshoeprint$
+addev parkerprint$
+addev wattersprint$
+addev rivalesprint$
+addev keyesprint$
+addev codyprint$
+addev blackprint$
+addev obadiahprint$
+setvar _allow_present_evidence false
+set _cr_back_button false
+present
+
+label rivalesprint$
+set _cr_back_button true
+hideevr
+sfx scan
+pause 70 script
+sfx scan 
+pause 70 script
+sfx scan
+pause 90 script
+sfx success
+nt
+"{c090}{n}{center}Match found."
+pause 40 script
+char phoenix hide
+"One of the sets belongs to the {n}victim... Michael Rivales."
+char cody e=confident
+"So that proves it!{n}{p20}It came from the crime scene!"
+char phoenix hide
+"I think it does."
+"That certainly looks bad for {c940}the {n}other person whose prints are on {n}here{c999}..."
+set _ev wattersprint$
+showevr
+delev maya$
+delev gumshoe$
+delev parker$
+delev watters$
+delev rivalesupdate$
+delev sarah$
+delev cody$
+delev gallante$
+delev black$
+delev obadiah$
+delev pearl$
+addev gumshoeprint$
+addev parkerprint$
+addev wattersprint$
+addev rivalesprint$
+addev keyesprint$
+addev codyprint$
+addev blackprint$
+addev obadiahprint$
+setvar _allow_present_evidence false
+set _cr_back_button false
+present
+
+//FINGERPRINT IDENTIFICATION FILLER
+
+label wattersprint$
+setvar _allow_present_evidence true
+setvar _cr_back_button true
+delev gumshoeprint$
+delev parkerprint$
+delev wattersprint$
+delev rivalesprint$
+delev keyesprint$
+delev codyprint$
+delev blackprint$
+delev obadiahprint$
+addev maya$
+addev gumshoe$
+addev parker$
+addev watters$
+addev rivalesupdate$
+addev sarah$
+addev cody$
+addev gallante$
+addev black$
+addev obadiah$
+addev pearl$
+hideevl
+hideevr
+sfx scan
+pause 70 script
+sfx scan 
+pause 70 script
+sfx scan
+pause 90 script
+sfx success
+nt
+"{c090}{n}{center}Match found."
+mus
+pause 40 script
+char phoenix hide
+"...{p30}Detective Watters."
+sfx realization
+char maya e=surprised
+"Wh-wh-{e shock}{sfx shout-scream}whaaat?!"
+char maya e=worried
+char phoenix hide
+"His fingerprints are on this gun... {n}{p15}A gun that I'm fairly certain came {n}from the crime scene."
+hideevl
+char maya e=worried
+"But what was he doing there?"
+char phoenix hide
+"I don't know. {n}{p10}It does raise a lot of questions."
+"{c089}(And none of the answers look good.)"
+char cody e=angry
+"Hey... {p15}What if that guy's actually {n}{sfx shout-objection}{e confident}SIR GALLANTE?"
+"H-he...{n}{p15}{spd 1}{e happy}I have to meet him!!!"
+char phoenix hide
+"H{p5}-Hold on, Cody."
+"I don't think you'll want to go {n}confronting him about that."
+char cody e=confident
+"Aw, c'mon, pops!"
+pause 80 script
+char Police hide
+"{sfx shout-general}Hey! {p10}You!"
+char cody e=angry
+"Wh-whuh?"
+char Police hide
+"{sfx shout-general}You're that kid with the camera!"
+char cody e=angry
+"That's me. {p20}So?"
+char Police hide
+"You're coming with me!"
+"Prosecutor Williamson wants you to {n}testify tomorrow."
+"We're going to ask you a few {n}questions about what you saw."
+char cody e=angry
+"No way! But I--{e nothing}{sfx screenwipe}{p20}{sfx shout-shock}Hey!! {n}{p20}Let {sfx shout-objection}go of me!!"
+pause 60 script
+char maya e=thinking fade
+"Well, there goes Cody."
+mus Investigation - Core.ogg
+set _music_loop Investigation - Core - loop.ogg
+char maya e=worried
+"Nick, you don't think Detective {n}Watters did it, do you?"
+char phoenix hide
+"If things happened the way I think {n}they happened, then he's the only {n}one who could have done it."
+char maya e=sad
+"That can't be right... {n}{p15}{delay 1}He seemed like such a nice guy."
+char phoenix hide
+"{c089}(I think it's about time to pay our {n}friend the good detective another {n}visit.)"
+fg gun 
+delev gun
+addev gun2
+fg gunev name=gunev
+nt
+"{c090}{sfx evidence updated.wav}Gun updated in the court record."
+delete name=gunev
+setflag fingerprintsget
+
+script scene40menu
+
+
+label none
+hideevr
+set _cr_back_button true
+sfx scan
+pause 70 script
+sfx scan 
+pause 70 script
+sfx scan
+pause 90 script
+nt
+"{c090}{n}{center}Match not found."
+pause 40 script
+char maya e=thinking
+"I don't think so, Nick."
+char cody e=angry
+"Nope! The prints on the gun don't {n}match up with that person at all!"
+char phoenix hide
+"{sfx whoops}Whoops. Sorry, my mistake..."
+goto redoprints

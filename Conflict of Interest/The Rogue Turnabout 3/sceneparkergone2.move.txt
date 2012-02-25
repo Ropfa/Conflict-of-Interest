@@ -1,13 +1,21 @@
 label top
 bg detentionnew
 
-list sceneparkergone
+list sceneparkergone2move1
 li Wright Anything Agency
 li Rivales Tower
-li Hospital
 li Black's Apartment
+flag youshallnotpass police
 showlist
-menu sceneparkergone
+goto sceneparkergone2move2
+label sceneparkergone2move3
+menu sceneparkergone2
+label police
+li Criminal Affairs
+label sceneparkergone2move
+showlist
+menu sceneparkergone2
+goto sceneparkergone2move3
 
 label Wright Anything Agency
 mus
@@ -16,8 +24,34 @@ script scene28menu
 label Rivales Tower
 script scene31menu
 
-label Hospital
-script scene30menu
-
 label Black's Apartment
+noflag trashed scene32
+flag trashed ifthen
+label scene32
+mus
 script scene32
+label ifthen
+noflag blacksapartmentget scene38
+flag blacksapartmentget scene38menu
+label scene38
+mus
+script scene38
+label scene38menu
+mus
+script scene38menu
+
+label Criminal Affairs
+noflag policestationget scene35
+flag policestationget ifthen
+label scene35
+mus
+script scene35
+label ifthen
+noflag fingerprintsget menu
+flag fingerprintsget cameo
+label menu
+mus
+script scene35menu
+label cameo
+mus
+scene41menu

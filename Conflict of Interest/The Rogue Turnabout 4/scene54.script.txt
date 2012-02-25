@@ -19,7 +19,7 @@ char parker e=worried
 
 char phoenix hide
 "I don't believe that Gumshoe would {n}do that."
-"What I'm worried about is {c940}his{n} amnesia{c999}.
+"What I'm worried about is {c940}his{n} amnesia{c999}."
 
 char parker e=serious
 "A-Amnesia?!"
@@ -82,7 +82,7 @@ char gumshoe e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Detective Gumshoe has recovered {n}physically, but is still {n}suffering from amnesia."
+"Detective Gumshoe has recovered {n}physically, but is still suffering {n}from amnesia."
 "His testimony may be rather limited."
 
 bg witness

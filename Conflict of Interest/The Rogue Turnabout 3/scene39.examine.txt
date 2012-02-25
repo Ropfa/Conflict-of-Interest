@@ -1,50 +1,171 @@
 label top
-bg blacksapartment
+bg Abandonedbuildingday2
 
 examine
-region 142 176 25 14 book
-region 100 63 11 29 bong
-region 20 158 117 32 mess
-region 115 100 47 59 mess
-menu scene32
+region 25 97 31 66 stepladder
+region 33 54 49 30 vent
+region 86 159 17 5 blackmail
+region 118 114 8 6 photo
+region 220 132 25 29 sword
+region 148 72 32 38 window
+region 59 92 71 22 crates
+menu scene39
 
-label book
+label stepladder
 char phoenix hide
-"I think I've heard of this book before."
-char black e=peace
-"{delay 1}Have you? It's real good. You should read it sometime."
+"Just a regular old step-ladder."
 char maya e=normal
-"Nick's not really a big reader."
-char maya e=thinking
-"I can't remember the last time I saw him look through our bookshelf."
+"Nick, that's not a step-ladder. {n}It's a ladder!"
 char phoenix hide
-"Well, I have a feeling that this might be just slightly more entertaining than whatever I'd find in there."
+"{c089}(You'd think that by now, we'd have {n}this figured out.)"
 goto top
 
-label bong
+label vent
+noflag strangeget noget
+flag strangeget yesget
+label noget
 char maya e=normal
-"Hey, Nick, is that a--{p20}{next}"
+"Hey, look. There's a vent up {n}behind those boxes."
+"Do you think I could fit in there?"
 char phoenix hide
-"It's a lava lamp."
-char maya e=confident
-"Oh, come on. I think I'm old enough to recognize a--{p20}{next}"
-char phoenix hide
-"It's a lava lamp."
+"I don't know...{n}{p20}It looks pretty small."
 char maya e=mad
-"..."
+"Are you saying I'm {sfx shout-general}fat?"
+char phoenix hide
+"What?! {p10}No!"
+"{c089}(Where'd that come from? Sudden {n}guilt trip from all the burgers?)"
+char maya e=pumped
+"I'm gonna go check it {sfx shout-general}out!"
+char nothing
+sfx hideevidence
+pause 60 script
+sfx pocketwatch
+pause 25 script
+sfx pocketwatch
+pause 25 script
+sfx pocketwatch
+pause 25 script
+sfx pocketwatch
+pause 35 script
+sfx tong
+pause 30 script
+char phoenix hide
+"{c089}(Those screws certainly came out {n}easily.
+sfx bodyflip
+char maya hide
+"See? {n}{p15}Told you I could do it!"
+char phoenix hide
+"Sorry I ever doubted you."
+"{c089}(Only Maya would feel compelled to {n}go crawling through random air {n}vents.)"
+pause 30 script
+char maya hide
+"Hey, Nick!"
+sfx bodyflip
+"I found something!"
+pause 30 script
+char maya e=normal fade
+"{sfx realization}Look!"
+set _ev strange
+showevl
+char phoenix hide
+"{p20}...{n}{p20}What is it?"
+char maya e=thinking
+"I don't know. {p15}But somebody hid it in {n}there..."
+"{e normal}So it must be important, right?"
+char phoenix hide
+"They did a pretty poor job of hiding it, {n}seeing how easily you got that {n}grating off."
+"{c089}(Maybe they were in a hurry to hide {n}it?)"
+hideevl
+addev strange
+fg strangeev name=strangeev
+nt
+"{c099}{sfx evidence updated}Strange Device added to the court {n}record."
+delete name=strangeev
+setflag strangeget
 goto top
 
-label mess
-char maya e=normal
-"You don't seem to clean up much around here, Mr. Black."
-char black e=peace
-"{delay 1}Duuuuude, I got better things to worry about."
-char maya e=thinking
-"That's what Nick always says."
-char black e=peace
-"{delay 1}See? Dude knows what I'm saying."
+label yesget
 char phoenix hide
-"{c089}(Virgil Black, I think this might be the start of a beautiful friendship.)"
+"No real need for anybody to go {n}crawling through there again."
+goto top
+
+label blackmail
+set _ev blackmail
+showevl
+char maya e=normal
+"Hey, there's a letter over here."
+char phoenix hide
+"Let's take a look at it."
+sfx pageturn
+pause 20 script
+char phoenix hide
+""I know you're holding back. If you {n}don't want {delay 1}everybody to know the {n}big {delay 2}secret...""
+pause 60 script
+sfx realization
+char maya e=surprised
+char phoenix hide
+pause 30 script
+"Hey, wait a minute... {p10}This is the exact {n}same thing as the blackmail letter we {n}found at the crime scene!"
+hidevl
+char maya e=thinking
+"Two blackmail notes? {n}What do you think that means?"
+char phoenix hide
+"I have no idea..."
+hideevl
+delev blackmail
+addev blackmail2
+fg blackmailev name=blackmailev
+nt
+"{sfx evidence updated}{c099}Blackmail Letter updated in the court {n}record."
+delete name=blackmailev
+setflag blackmail2get
+goto top
+
+label photo
+set _ev rivalesupdate$
+showevr
+sfx showevidence
+char phoenix hide
+"Huh. {p15}It's a photo of Michael Rivales."
+"{c089}(I wonder what it's doing in here.)"
+hideevr
+goto top
+
+label sword
+set _ev sword
+showevr
+char maya e=surprised
+"Is that... {p15}{c940}a sword{c999}?"
+char phoenix hide
+"It looks like some kind of claymore."
+"{c089}(That thing's probably taller than {n}Maya is!)"
+hideevr
+char maya e=disheartened
+"There's blood all over it!"
+char phoenix hide
+"I'm pretty sure we've just found our {n}murder weapon, Maya."
+addev sword
+fg swordev name=swordev
+nt
+"{sfx evidence updated.wav}{c099}Sword added to the court record."
+delete name=swordev
+char maya e=worried
+"It's definitely big enough to slice a {n}person in half."
+char phoenix hide
+"No doubt about that..."
+setflag swordget
+goto top
+
+label window
+char phoenix hide
+"That's the Rivales Tower, just {n}outside the window."
+"It looks rather dark and ominous... {n}{p15}Rather fitting for it."
+goto top
+
+label crates
+char phoenix hide
+"These crates are all backed up {n}against the wall."
+"Maybe this used to be a storage {n}room of some sort."
 goto top
 
 label none

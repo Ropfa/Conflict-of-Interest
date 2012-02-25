@@ -4,7 +4,7 @@ bg detentionnew
 examine
 region 30 40 20 20 camera
 region 200 80 25 70 guard
-menu sceneparkergone
+menu sceneparkergone2
 
 label camera
 char maya e=mad

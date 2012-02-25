@@ -34,9 +34,33 @@ mus
 script scene28menu
 
 label Rivales Tower
+noflag theatoner AND swordget AND strangeget AND blackmail2get scene31
+flag theatoner AND swordget AND strangeget AND blackmail2get ifthen
+label scene31
 mus
 script scene31menu
+label ifthen
+noflag fingerprintsget scene40
+flag fingerprintsget scene40menu
+label scene40
+mus
+script scene40
+label scene40menu
+mus
+script scene40menu
 
 label Black's Apartment
+noflag trashed scene32
+flag trashed ifthen
+label scene32
 mus
 script scene32
+label ifthen
+noflag blacksapartmentget scene38
+flag blacksapartmentget scene38menu
+label scene38
+mus
+script scene38
+label scene38menu
+mus
+script scene38menu

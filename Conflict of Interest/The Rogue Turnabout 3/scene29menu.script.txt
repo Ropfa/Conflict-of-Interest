@@ -1,5 +1,5 @@
 bg detentionnew
 fg detention name=1
-char parker
+char parker e=sad
 mus Doubted People.ogg
 menu scene29

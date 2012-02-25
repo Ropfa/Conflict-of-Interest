@@ -1,14 +1,23 @@
 label top
-bg blacksapartment
+bg Abandonedbuildingday2
 
-list scene39move1
-li Wright Anything Agency
-li Detention Center
+list scene39move
+li Rivales Tower
 showlist
 menu scene39
 
-label Detention Center
-script scene29menu
-
-label Wright Anything Agency
-script scene28menu
+label Rivales Tower
+noflag theatoner AND swordget AND strangeget AND blackmail2get scene31
+flag theatoner AND swordget AND strangeget AND blackmail2get ifthen
+label scene31
+mus
+script scene31menu
+label ifthen
+noflag codyday2 scene40
+flag codyday2 scene40menu
+label scene40
+mus
+script scene40
+label scene40menu
+mus
+script scene40menu

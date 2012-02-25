@@ -1,15 +1,28 @@
-setflag abandonedget
-bg black
-nt
-"{c090}{center}{type}July 20, 5:20 PM{n}Abandoned Warehouse
+bg blacksapartment
 
-bg Abandonedbuildingday2 fade
-pause 30 script
-char maya e=worried fade
-"Phew! He came in here?"
+nt
+"{center}{type}{c090}July 20, 6:45 PM{n}Virgil Black's Apartment"
+pause 60 script
+
+char black e=peace fade
+"{delay 1}Hey, buddy!"
+
+char maya e=normal
+"You're finally here!"
+
+char black e=normal
+"{delay 1}Oh... {p20}Were you expecting me?"
 
 char phoenix hide
-"{c089}(This place looks like it's about ready for demolition.)"
-"{c089}(But it's definitely where we saw Sir Gallante fly to.)"
+"You did tell us several hours ago that {n}you were going to be waiting for us {n}here."
+
+char black e=pumped
+"{delay 1}Oh...! {p20}I... {p15}I did, didn't I?"
+char black e=peace
+"{delay 1}Duuuude, sorry to keep you waiting."
+
+char phoenix hide
+"{c089}(The 70's were over a long time ago, {n}"dude"... {p20}and you weren't even alive {n}for them!)"
+setflag blacksapartmentget
 
 script scene38menu

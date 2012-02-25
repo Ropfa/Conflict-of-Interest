@@ -2,9 +2,52 @@ label top
 bg clinic
 
 examine
-region 30 40 20 20 camera
-region 200 80 25 70 guard
+region 100 70 25 29 far
+region 217 84 38 55 nurse
+region 128 83 28 55 crutches
+region 0 60 97 99 reception
 menu scene30
+
+label far
+char phoenix hide
+"I wonder where that door leads."
+"There's an Authorized Personnel {n}Only sign over it... So I probably {n}shouldn't go check it out."
+"I suppose that it'll just have to {n}remain one of life's many {n}mysteries."
+goto top
+
+label nurse
+char Nurse hide
+"Welcome to the Eldoon Clinic, sir."
+"We are pleased to be back in {n}business again, serving you."
+char phoenix hide
+"This clinic ran into some tough times {n}a while back and had to shut down."
+"But it looks like they were able to get {n}things running again."
+goto top
+
+label crutches
+char phoenix hide
+"This man is a recovering patient."
+"He appears to have some sort of leg {n}injury."
+"I hope he makes a speedy recovery."
+pause 60 script
+char Patient hide
+"Wow, what a weirdo..."
+"Narrating everything he sees out {n}loud..."
+goto top
+
+label reception
+char phoenix hide
+"This must be the waiting area."
+"They're watching a news broadcast {n}on my case."
+char Man hide
+"I'm willing to bet that Williamson guy {n}killed him."
+"Those prosecutors always turn out {n}to be murderers."
+char Woman hide
+"I actually think it was the defense {n}lawyer."
+"I've seen plenty of those be killers {n}too."
+char phoenix hide
+"Huh.{n}{p20}I wasn't aware that I was being {n}considered as a suspect."
+goto top
 
 label none
 char phoenix hide

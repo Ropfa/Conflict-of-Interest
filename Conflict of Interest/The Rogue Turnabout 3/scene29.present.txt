@@ -43,21 +43,22 @@ char parker e=serious
 goto top
 
 label knife2
+fg detention name=1
 char parker e=disturbed
-"That thing's been missing for {sfx shout-general}weeks! I {sfx shout-loud}SWEAR!!!"
+"That thing's been missing for {sfx shout-general}weeks! {n}I {sfx shout-loud}SWEAR!!!"
 char phoenix hide
 "It's okay! We believe you!"
 char parker e=sad
 "O-Okay. {n}I... {e crying}I thought that..."
 char phoenix hide
-"{c089}(You really have to be careful about what you say around this guy.)"
+"{c089}(You really have to be careful about {n}what you say around this guy.)"
 goto top
 
 label blueprints
+fg detention name=1
 char parker e=sad
 char phoenix hide
 "Is there really only one way in and {n}out of the penthouse?"
-fg detention name=1
 char parker e=sad
 "Yup. If there is anything else, only {n}Mr. Rivales would've known about it."
 "You'd have to pass through {n}reception, where Sarah was."
