@@ -15,33 +15,18 @@ endmacro
 
 macro layerone
 sfx beep
-pause 15 script
-sfx beep
-pause 15 script
-sfx beep
-pause 15 script
-sfx beep
-pause 15 script
-sfx beep
-pause 15 script
+sfx after=15 beep
+sfx after=30 beep
+sfx after=45 beep
 endmacro
 
 macro layertwo
 sfx beep
-pause 35 script
-sfx beep
-pause 35 script
-sfx beep
-pause 35 script
-sfx beep
-pause 35 script
+sfx after=30 beep
+sfx after=60 beep
 endmacro
 
 macro layerthree
 sfx beep
-pause 50 script
-sfx beep
-pause 50 script
-sfx beep
-pause 50 script
+sfx after=40 beep
 endmacro
