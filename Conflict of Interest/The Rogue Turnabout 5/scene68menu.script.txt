@@ -1,0 +1,5 @@
+bg reception
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+char sarah e=normal
+menu scene68

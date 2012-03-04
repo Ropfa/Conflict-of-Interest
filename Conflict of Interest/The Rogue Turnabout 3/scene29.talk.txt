@@ -91,7 +91,7 @@ char black e=peace
 char phoenix hide
 "I think we were about to leave {n}anyway. We can come back later."
 char black e=normal
-"{delay 1}Hey, dude... {n}I have something for you." 
+"{delay 1}Hey, dude... {n}{p10}I have something for you." 
 "{e peace}It might help your investigation!"
 char phoenix hide
 "Thank you."
@@ -204,7 +204,7 @@ char black e=peace
 char phoenix hide
 "I think we were about to leave {n}anyway. We can come back later."
 char black e=normal
-"{delay 1}Hey, dude... {n}I have something for you." 
+"{delay 1}Hey, dude... {n}{p10}I have something for you." 
 "{e peace}It might help your investigation!"
 char phoenix hide
 "Thank you."

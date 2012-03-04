@@ -1,0 +1,4 @@
+bg wrightanything
+char maya
+mus Gyakuten Sisters theme.ogg
+menu scene60

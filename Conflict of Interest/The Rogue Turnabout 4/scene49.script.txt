@@ -1,7 +1,7 @@
 bg defense
 fg dbench
 char phoenix e=normal
-"Cody, I think I know what caused your {n}"light of justice"."
+"Cody, I think I know what caused {n}your "light of justice"."
 bg witness
 fg wbench
 char cody e=confident

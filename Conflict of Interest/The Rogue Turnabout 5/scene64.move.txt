@@ -1,0 +1,16 @@
+label top
+bg blacksapartment
+
+list scene64move
+li Wright Anything Agency
+li Detention Center
+showlist
+menu scene64
+
+label Wright Anything Agency
+mus
+script scene60menu
+
+label Detention Center
+mus
+script scenewattersgone2

@@ -1,0 +1,29 @@
+label top
+bg pent2
+
+list scene66move
+li Reception
+showlist
+menu scene66
+
+label Reception
+noflag obytalk1 AND obytalk2 AND dumbbird scene65menu
+flag obytalk1 AND obytalk2 AND dumbbird ifthen
+label scene65menu
+mus
+script scene65menu
+label ifthen
+noflag sarahagain scene67
+flag sarahagain ifthen2
+label scene67
+mus
+script scene67
+label ifthen2
+noflag brokesarahpsyche scene67menu
+flag brokesarahpsyche scene68menu
+label scene67menu
+mus
+script scene67menu
+label scene68menu
+mus
+script scene68menu

@@ -223,8 +223,8 @@ goto top
 label gun2
 char watters e=serious
 char phoenix hide
-"{c089}(Past experience has taught me that it's a bad idea to reveal your hand too early.)"
-"{c089}(I don't want this guy getting aggressive with me... yet.)"
+"{c089}(Past experience has taught me that {n}it's a bad idea to reveal your {n}hand too early.)"
+"{c089}(I don't want this guy getting {n}aggressive with me... {p15}yet.)"
 goto top
 
 label magatama

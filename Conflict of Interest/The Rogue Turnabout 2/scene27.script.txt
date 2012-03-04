@@ -288,6 +288,7 @@ mus Jingle - Slight Break.ogg
 bg tobecontinued fade
 pause 300
 mus
+pause 300
 bg nothing fade
 exit
 

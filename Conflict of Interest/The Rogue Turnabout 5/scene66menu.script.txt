@@ -1,0 +1,5 @@
+bg pent2
+mus Shibuya.ogg
+set _music_loop Shibuya - loop.ogg
+char obadiah e=front-serious
+menu scene66

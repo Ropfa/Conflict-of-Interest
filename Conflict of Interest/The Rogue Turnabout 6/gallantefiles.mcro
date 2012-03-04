@@ -1,0 +1,27 @@
+macro gpage2
+bg Gallantefiles-2 fade
+gui Button {gpage1} x=90 y=200 Page 1
+gui Button {gpage3} x=140 y=200 Page 3
+endmacro
+
+macro gpage1
+bg Gallantefiles fade
+gui Button {gpage2} x=140 y=200 Page 2
+endmacro
+
+macro gpage3
+bg Gallantefiles-3 fade
+gui Button {gpage2} x=90 y=200 Page 2
+gui Button {gpage4} x=140 y=200 Page 4
+endmacro
+
+macro gpage4
+bg Gallantefiles-4 fade
+gui Button {gpage3} x=90 y=200 Page 3
+gui Button {gpage5} x=140 y=200 Page 5
+endmacro
+
+macro gpage5
+bg Gallantefiles-5 fade
+gui Button {gpage4} x=90 y=200 Page 4
+endmacro

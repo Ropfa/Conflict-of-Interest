@@ -1,0 +1,5 @@
+bg reception
+mus Arle Stage.ogg
+set _music_loop Arle Stage - loop.ogg
+char sarah e=normal
+menu scene67

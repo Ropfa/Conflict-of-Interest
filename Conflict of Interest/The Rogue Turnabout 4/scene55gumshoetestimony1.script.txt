@@ -247,7 +247,7 @@ statement gumshoe1F test=show_gumshoe1F
 bg witness
 fg wbench
 char gumshoe e=confident
-"I can sort of remember what he {n}looked like.
+"I can sort of remember what he {n}looked like."
 endcross
 
 label comments
@@ -482,6 +482,54 @@ char phoenix e=thinking
 "{c090}This can show the exact location of {n}your meeting..."
 set _cr_back_button false
 present
+
+label rick
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+set _ev rick
+bg defense
+fg dbench
+char phoenix e=normal
+showevr
+"Would this jog your memory?"
+bg witness
+fg wbench
+char gumshoe e=thinking
+"Can't say that it would."
+bg defense
+fg dbench
+char phoenix e=normal
+"Well, we happened to find this in{n}an abandoned warehouse across {n}the street from Rivales Tower."
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"The letter addressed to Rick?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"The fact that this was found in{n}the warehouse is pretty solid proof{n}that the meeting took place there."
+hidevr
+bg prosecution
+fg pbench
+char obadiah e=serious
+"...{p20}Well, Gumshoe?"
+bg witness
+fg wbench
+char gumshoe e=pumped
+"{delay 1}............{p20}"
+bg judge
+char judge e=normal
+"It doesn't look like the witness can {n}remember."
+bg witness
+fg wbench
+char gumshoe e=disheartened
+"{delay 1}..........."
+char phoenix hide
+"{c089}(Great. I don't think that did {n}anything.)"
+setflag gumshoepresent2
+goto start
 
 label blackmail2
 set _cr_back_button true

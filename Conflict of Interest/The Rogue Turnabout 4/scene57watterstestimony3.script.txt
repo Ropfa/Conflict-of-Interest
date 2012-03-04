@@ -729,7 +729,8 @@ bg defense
 fg dbench
 char phoenix e=confident
 "People do strange things when {n}they're nervous, {p15}don't they, {n}Watters?"
-"You had to somehow avoid the fact {n}that you are currently the ONLY {n}person suspected to be Gallante!"
+"You had to somehow avoid the fact {n}that there are currently only TWO {n}people suspected to be Gallante..."
+"...and you are one of them."
 bg witness
 fg wbench
 char watters e=shock

@@ -1,0 +1,33 @@
+label top
+bg detentionnew
+
+examine
+region 30 40 20 20 camera
+region 200 80 25 70 guard
+menu scene29
+
+label camera
+char maya e=mad
+"Nick!"
+"Now's not the time to be making{n}silly faces at the camera!"
+char phoenix hide
+"Oh, come on!{n}{p10}I saw you doing it just thirty {n}seconds ago!"
+char maya e=confident
+"Yeah?{p10}{n}Well, I'm not the lawyer!"
+goto top
+
+label guard
+char phoenix hide
+"{c089}(It seems like every time I come here, {n}it's the same exact guard standing in {n}the same exact position.)"
+"{c089}(It's almost as if he's a permanent {n}fixture of the building.)"
+pause 60 script
+char guard hide
+"Please don't stare at me like that, sir.{n}It makes me nervous."
+char phoenix hide
+"{c089}(Ack!! He lives!)"
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

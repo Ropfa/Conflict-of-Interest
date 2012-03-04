@@ -1,0 +1,17 @@
+bg blacksapartment fade
+setflag blacksapartmentday3
+
+nt
+"{center}{type}{c090}July 21, 5:30 PM{n}Virgil Black's Apartment"
+pause 60 script
+
+char black e=normal fade
+"{delay 1}Heeeey, Mr. Wright."
+char black e=peace
+"{delay 1}Just got back from visiting Wayne {n}again."
+char phoenix hide
+"If you don't mind, I'd like to ask you a {n}few questions again."
+char black e=peace
+"{delay 1}Go ahead. {p20}I got nothing to hide."
+
+script scene69menu

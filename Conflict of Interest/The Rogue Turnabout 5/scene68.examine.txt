@@ -1,0 +1,30 @@
+label top
+bg reception
+
+examine
+region 184 84 10 13 picture
+region 177 96 75 33 desk
+region 110 59 63 43 security
+menu scene68
+
+label picture
+char sarah e=crying
+"Daddy..."
+goto top
+
+label desk
+char phoenix hide
+"This looks like Sarah's desk."
+goto top
+
+label security
+char maya e=thinking
+"This machine looks rather {n}complicated."
+char phoenix hide
+"She must have a lot of experience {n}using this kind of stuff."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

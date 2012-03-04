@@ -1,0 +1,46 @@
+label top
+bg detentionnew
+
+list scenewattersgone2move
+li Wright Anything Agency
+li Rivales Tower
+li Black's Apartment
+li Criminal Affairs
+showlist
+menu scenewattersgone2
+
+label Wright Anything Agency
+mus
+script scene60menu
+
+label Rivales Tower
+noflag entranceday3 scene62
+flag entranceday3 ifthen
+label scene62
+mus
+script scene62
+label ifthen
+noflag dumbbird scene62menu
+flag dumbbird 62b
+label scene62menu
+mus
+script scene62menu
+label 62b
+mus
+script scene62bmenu
+
+label Black's Apartment
+noflag dumbbird AND obytalk1 AND obytalk2 scene64
+flag dumbbird AND obytalk1 AND obytalk2 ifthen
+label scene64
+script scene64menu
+label ifthen
+noflag blacksapartmentday3 scene69
+flag blacksapartmentday3 scene69menu
+label scene69
+script scene69
+label scene69menu
+script scene69menu
+
+label Criminal Affairs
+script scene63menu

@@ -1,0 +1,2 @@
+bg codysphoto fade
+gui Back y=350

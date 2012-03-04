@@ -1,0 +1,354 @@
+bg defense
+fg dbench
+char phoenix e=document
+"Page five."
+"You can clearly see that it says "All of the identified victim..."
+"...have had connections with the Rivales crime syndicate.""
+
+bg witness
+fg wbench
+char parker e=disturbed
+"{sfx idea}...!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Bruto Cadaverini was hardly a member of that group."
+"In fact, he was one of your main rivals!"
+"Do you get it? {e objecting}{sfx shout-objection}Sir Gallante didn't kill the Cadaverinis!"
+
+bg witness
+fg wbench
+char parker e=disturbed
+"B{p5}-Bu{p5}-But that's NOT WHAT I {e freakout}{sfx shout-objection}WAS TOLD!!!"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I don't know who did it, but the police apparently have reason to believe that it was someone else."
+
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=worried
+"Go a bit easier on your client, Wright. He didn't know."
+"Do you recall what I told you yesterday?"
+
+sfx scenechange2
+"{f}{next}"
+bg pent2
+char obadiah e=front-serious
+grey value=1
+"Gallante has achieved quite a lot of fame among the more impressionable."
+"There have been several attempts to copy his work... {e front-worried}{p20}{n}most failed horribly."
+"The police have had to keep a close eye on who we talk to about the {n}case."
+"We try to keep the details classified, so that we can tell the fake Gallantes from the real one."
+"{f}{next}"
+sfx scenechange2
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What Mr. Parker just said... that was one of the things that we've managed to keep a secret."
+"...Even from the Rivales Family."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"That means..."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"...They never realized that they were {c940}the sold target of Gallante{c999}."
+
+bg witness
+fg wbench
+char parker e=disturbed
+"Wh-bu-hu-{e freakout}{sfx shout-loud}BLWAAAAAAAAAAAA{e crash}{p2}AAAGGGGG{sfx thud-body}{s20}GGGGHHHHH!!!"
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(The Rivales Family never realized that Sir Gallante was specifically targeting them...)"
+"{c089}(Maybe even their leader never did. {n}{p30}{sfx idea}{delay 1}But then...)"
+char phoenix e=normal
+"{c089}(If what we just discussed has only been known to the police force, then {c940}somebody{c940} out there knows too much.)"
+
+char phoenix e=normal
+"I think I know the identity of Sir Gallante."
+"{c090}Given the circumstances, I'd say that {c940}this person{c090} has a lot of explaining to do..."
+label redogallante
+set _cr_back_button false
+setvar _allow_present_evidence false
+present
+
+label gallante$
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"{sfx shout-objection}It was Sir Gallante! He's the murderer!"
+bg courtparker
+pause 80 script
+nt
+"{delay 1}......"
+pause 60 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Well, you're an observant one, aren't you?"
+bg defense
+fg dbench
+char phoenix e=pointing
+"I'm right!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I know you are. Nobody's questioning whether Gallante is the killer."
+"It's who's behind the mask that matters!"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"Oh... Right.{p20} Hehe."
+sfx damage
+penalty -15
+is penalty 0 failure
+char phoenix e=thinking
+"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+goto redogallante
+
+label watters$
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{sfx damage}Watters?!"
+bg defense
+fg dbench
+char phoenix e=confident
+"Yes. All the evidence points to him."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"I thought we agreed yesterday that he was innocent!"
+"You defense lawyers are all the same... Not a good one among the lot of you!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+sfx realization
+"Sorry, I'll{p10}{e sheepish}-I'll revise that last bit."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"{sfx shout-angry}Good!"
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+goto redogallante
+
+label parker$
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg witness
+fg wbench
+char parker e=disturbed
+"BBB{e freakout}{sfx shout-objection}WWWWWWHO{sfx shout-loud}OOOOOO?!"
+bg defense
+fg dbench
+char phoenix e=pointing
+"It was you, Mr. Parker! You killed the victim!"
+bg witness
+char parker e=disturbed
+"NO I DI{e freakout}{sfx shout-loud}IIIIIIIDDD{sfx shout-objection}DDD{e crash}{p2}NNNN'{sfx thud-body}{s20}T!!!"
+bg judge
+char judge e=surprised
+"Why is the defense accusing their own client?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Change of heart, perhaps?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Oh wait. No, that's not what I was doing!"
+bg aide
+char maya e=bench-strict
+"Seriously, Nick?!"
+"I think that was the only thing these past few days that he HASN'T overreated to!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+goto redogallante
+
+label obadiah$
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"It was--{p15}{next}"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Oh, no you don't... Don't even think about it."
+"Accusing the prosecutor of murder? That whole routine isn't going to work this time, Wright."
+bg defense
+fg dbench
+char phoenix e=sheepish
+"S{p5}-Sorry..."
+char phoenix e=thinking
+"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+goto redogallante
+
+label black$
+set _cr_back_button true
+setvar allow_present_evidence true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"You haven't been there, Mr. Parker... But over the past few days, I've spoken with your friend, Virgil Black."
+bg witness
+fg wbench
+char parker e=disturbed
+"V{p5}-Virgil? What does he have to do with this?"
+bg defense
+fg dbench
+char phoenix e=normal
+"I believe that he knows a bit to much about this serial killer..."
+sfx screenwipe
+bg blacksapartment
+char black e=pumped
+grey value=1
+"{sfx shout-general}Of course not!"
+"He has some sort of vendetta {n}against the Rivales Family. {n}He's tryinta kill 'em all!"
+char phoenix hide
+"And then later..."
+pause 30 script
+screenwipe
+"{f}{f}{f}{next}"
+char black e=pumped
+grey value=1
+"{delay 1}That Sir Gallante guy isn't gonna stop {n}until he gets every last one of those {n}Rivales people!"
+"{f}{f}{f}{next}"
+bg defense
+fg dbench
+char phoenix e=normal
+"The comments seemed innocent at the time. But with what Mr. Williamson has just told us..."
+char phoenix e=objecting
+"I can come up with {sfx shout-objection}{e pointing}no other explanation than that Virgil Black is none other than Sir Gallante himself!!"
+bg witness
+fg wbench
+char parker e=freakout
+"VIIIIIRRRRGIIIIIILLLLL?!{n}BBBBWWWWWWWHHHHAAAAAATTTTT?!{e crash}{p2}{s20}{sfx thud-body}"
+bg court
+sfx courtmurmur
+pause 100 script
+fg ani-judge-gavel-loop
+pause 45 script
+bg judge
+char judge e=warning
+"Order! Order!!"
+"Mr. Wright, are you sure about this?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Is there any other way he could have known?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"......{p40}{n}Somebody go fetch Mr. Black."
+"Let's see what he has to say for himself."
+char Bailiff hide
+"Right away, sir."
+bg judge
+char judge e=normal
+"We will have a recess until the suspect arrives."
+fg ani-judge-gavel
+pause 30
+bg black fade
+script scene81
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"{sfx shout-objection}It was this person!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What are you talking about? They don't have anything to do with the murder!"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Are you sure?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Are you?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, no... {p20}Not exactly."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Apparently not. Thanks for wasting our time though."
+bg judge
+char judge e=warning
+"Yes, thank you indeed!"
+sfx damage
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=normal
+"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+goto redogallante
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

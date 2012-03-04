@@ -1,0 +1,176 @@
+label top
+noflag hawkget AND fuseget AND cordget keepgoing
+flag hawkget AND fuseget AND cordget endgame
+label keepgoing
+bg rooftophawk
+
+examine
+region 190 30 18 22 hawk
+region 204 152 32 22 cord
+region 178 160 26 14 cord
+region 218 72 25 54 stairs
+region 46 98 111 26 edge
+region 34 52 7 76 rod
+region 194 89 8 13 fuse
+menu scene73
+
+label hawk
+set _ev hawk
+showevl
+sfx hawk
+char phoenix hide
+"Oh, great. {n}{p20}It's that bird again."
+char maya e=thinking
+"I wonder what it's doing all the way {n}up here."
+char phoenix hide
+"Get out of here!{n}{p10}{sfx shout-general}Shoo!{n}{p10}Nobody likes you!"
+sfx hawk
+char maya e=normal
+"That's the same bird that was with {n}Sir Gallante, isn't it?"
+char phoenix hide
+"Dumb bird."
+char maya e=thinking
+"Do you think it might be his pet?"
+char phoenix hide
+"You hear {sfx shout-general}that? {n}You're nothing but a stupid {sfx damage}bird!"
+sfx hawk
+pause 10 script
+sfx alitawings
+char maya e=normal
+"Maybe it's his faithful sidekick who {n}goes everywhere with him."
+char phoenix hide
+"{sfx shout-angry}Don't take people's attorney badges!"
+sfx alitawings
+hideevl
+char maya e=mad
+"{sfx shout-general}Nick! Stop shouting at the bird and {n}pay attention to me!"
+fg hawkev name=hawkev
+nt
+"{c099}{sfx evidence updated.wav}Hawk added to the court record."
+addev hawk
+delete name=hawkev
+pause 20 script
+setflag hawkget
+goto top
+
+label cord
+set _ev cord
+showevl
+char phoenix hide
+"Does this seem out of place to you?"
+"I can't really see any reason a giant {n}rolled up cord would be lying here {n}on the roof."
+char maya e=normal
+"I wonder how long it is."
+hideevl
+sfx hideevidence
+char nothing
+char phoenix hide
+"Maya, don't run so fast up here!"
+char maya hide
+"Whoa! Nick, look at this!"
+set _ev longwire
+showevl
+"There's still a lot left too!"
+char phoenix hide
+"That's nice... Just please don't stand {n}so close to the edge!"
+"{c089}(I know she's just doing that to bug {n}me!)"
+char maya hide
+"I'll bet this thing could stretch all the {n}way to that building across the street!"
+pause 60 script
+sfx realization
+char phoenix hide
+"Wait..."
+"{c089}(Could it be...?)"
+hideevl
+fg cordev name=cordev
+nt
+"{sfx evidence updated.wav}{c099}Cord added to the court record."
+addev cord
+delete name=cordev
+pause 20 script
+setflag cordget
+goto top
+
+label stairs
+char phoenix hide
+"Thirty flights of stairs to get up {n}here..."
+"...and thirty more to go down."
+"It's times like this that I'm thankful {n}for elevators."
+goto top
+
+label edge
+char maya e=normal
+"I wonder why they don't have a {n}safety railing up here."
+char phoenix hide
+"D{p5}-Don't get so close to the edge, {n}Maya."
+char maya e=cheerful
+"I'm okay. I'm not going to fa--{n}{e shock}{sfx shout-scream}{p5}{s 10}{e nothing}aaaaaa{sfx shout-objection}AAAAA{sfx shout-scream}AAAA{sfx shout-objection}AA!!!"
+char phoenix hide
+"{sfx shout-scream}{s 5}MAYA!!!"
+pause 80 script
+char maya e=confident fade
+pause 60 script
+char phoenix hide
+"That wasn't funny."
+char maya e=confident
+"Problem, Nick?"
+goto top
+
+label rod
+char maya e=thinking
+"Why's there a giant pole there?"
+char phoenix hide
+"That's a lightning rod. It's there in {n}case the building gets struck by {n}lightning."
+char maya e=sad
+"I feel kind of bad for the pole."
+char phoenix hide
+"..."
+goto top
+
+label fuse
+set _ev fuse
+sfx showevidence
+showevl
+char phoenix hide
+"That's a fuse box."
+char maya e=normal
+"What's that funny thing on it?"
+char phoenix hide
+"I'm not sure."
+"I don't think they normally have stuff {n}like this."
+char maya e=pumped
+"Well, {sfx shout-general}pick it up! {n}I want to know what it is!!"
+pause 30 script
+sfx tazer
+char maya e=surprised
+pause 10 script
+sfx spotlight
+hideevl
+set _ev fusebox-tampered
+showevl
+pause 5 script
+sfx computer2
+pause 60 script
+char maya e=surprised
+"{sfx shout-shock}{s 5}Aah!{p15} What'd you do?!"
+char phoenix hide
+"{sfx shout-general}I don't know! {n}{p10}I just touched it and it happened!"
+char maya e=surprised
+"{sfx shout-objection}Fix it!"
+char phoenix hide
+"Don't look at me! {n}{p10}I'm a lawyer, not an electrician."
+fg fuseev name=fuseev
+nt
+"{sfx evidence updated.wav}{c099}Fuse box added to the court record."
+delete name=fuseev
+addev fuse
+setflag fuseget
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top
+
+label endgame
+script scene74

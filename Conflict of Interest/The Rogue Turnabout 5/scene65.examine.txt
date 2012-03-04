@@ -1,0 +1,49 @@
+label top
+bg reception
+
+examine
+region 184 84 10 13 picture
+region 177 96 75 33 desk
+region 110 59 63 43 security
+menu scene65
+
+label picture
+char phoenix hide
+"It's a picture of Sarah Keyes and her {n}father."
+char maya e=cheerful
+"They look so happy together!"
+pause 50 script
+char phoenix hide
+"You know, I don't think I really got a {n}good look at this earlier."
+bg keyesphoto fade
+char maya hide
+"She looks so cute in there!"
+char phoenix hide
+"So happy too."
+pause 50 script
+"{c089}(That's strange. Why do I get the {n}feeling that I've seen the man in {n}this photo somewhere before?)"
+fg keyesphotoev name=keyesphotoev
+addev keyesphoto
+nt
+"{sfx evidence updated.wav}{c099}Keyes family photo added to the {n}court record."
+delete name=keyesphotoev
+pause 20 script
+goto top
+
+label desk
+char phoenix hide
+"This looks like Sarah's desk."
+"Nobody's at it though."
+goto top
+
+label security
+char maya e=thinking
+"This machine looks rather {n}complicated."
+char phoenix hide
+"She must have a lot of experience {n}using this kind of stuff."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

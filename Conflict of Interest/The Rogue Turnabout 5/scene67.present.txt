@@ -1,0 +1,138 @@
+present
+label top
+menu scene67
+bg reception
+char sarah e=ditzy
+
+label attorneybadge
+set _ev attorneybadge
+showevl
+char sarah e=ditzy
+"Ooooh, an attorney?{n}{p10}So you're cute AND rich!"
+char phoenix hide
+"{sfx whoops}{c089}(Ouch...)"
+goto top
+
+label autopsy
+char phoenix hide
+"{c089}(I really don't think it would be a good {n}idea to ask her about that.)"
+"{c089}(She seems to get a bit too{n}enthusiastic...)"
+goto top
+
+label maya$
+char sarah e=normal
+"So... {delay 1}You're Marla."
+char maya e=worried
+"Um...{n}{p15}"Maya"."
+char sarah e=normal
+"Right. {p20}And you help my Feenie-weenie {n}do stuff."
+char maya e=disheartened
+"I try."
+char sarah e=normal
+"Hmph.{e bored}{n}{p10}I'll give you an "E" for effort."
+char maya e=disheartened
+"Why doesn't she like me, Nick?"
+char sarah e=bored
+"Stop calling him that. His name isn't {n}'Nick'!"
+char phoenix hide
+"{c089}(It certainly isn't 'Feenie-weenie' {n}either!)"
+goto top
+
+label sarah$
+set _ev sarah$
+showevl
+char sarah e=bored
+"Ugh! I hate that photo.{n}{p10}The camera always seems to hate {n}me."
+char phoenix hide
+"I don't think it looks that bad."
+char sarah e=ditzy
+"Daaaaaw. Thank you, Feenie-weenie!"
+char phoenix hide
+"{sfx damage}{s5}Urk!"
+char sarah e=ditzy
+"You know, I knew you were the one {n}the moment you walked in."
+char phoenix hide
+"{c089}(Wow. She's certainly {n}straightforward.)"
+hideevl
+goto top 
+
+label rivalesupdate$
+set _ev rivalesupdate$
+showevl
+char sarah e=normal
+"So I guess I'm kind of unemployed {n}now, right?"
+"Because my boss is dead?"
+"I mean, I'd better start sending my {n}resume out to other places."
+char phoenix hide
+"{c089}(Qualifications: {p15{Worked for the {n}mafia.)"
+"{c089}(Don't know how well that would go {n}over for most employers out there.)"
+goto top
+
+label parker$
+set _ev parker$
+showevl
+char sarah e=normal
+"He did it."
+char phoenix hide
+"You sound really sure of yourself."
+char sarah e=normal
+"I know we worked together, but{e ditzy} he's {n}a murderer! I can't just keep quiet, {n}you know?"
+char phoenix hide
+"{c089}(My lawyer senses are tingling...{n}{p10}Do I detect hostility?)"
+hideevl
+goto top
+
+label gallante$
+set _ev gallante$
+showevl
+char sarah e=normal
+char phoenix hide
+"What do you think about Sir {n}Gallante?"
+char sarah e=bored
+"I dunno. {p20}I think it's kind of weird to be {n}running around in a costume, you {n}know?"
+char phoenix hide
+"Yeah, I guess it is."
+"{c089}(I was hoping to get more out of her, {n}but I guess I'll have to settle {n}for that.)"
+hideevl
+goto top
+
+label magatama
+noflag sarahpsyche nopsyche
+flag sarahpsyche sarahpsyche
+label sarahpsyche
+script scenepsychesarah1
+
+label keyesphoto
+char phoenix hide
+"Who's this in the photo?"
+char sarah e=normal
+"That's me and my daddy."
+char sarah e=ditzy
+"I love my daddy!"
+char maya e=cheerful
+"You two look so happy in that {n}picture!"
+char sarah e=normal
+"Yeah, I know."
+char maya e=confident
+"You were really cute as a kid."
+char sarah e=ditzy
+"Yeah, I know that too."
+char phoenix hide
+"{c089}(Apparently, modesty isn't one of {n}this woman's virtues.)"
+goto top
+
+label none
+label nopsyche
+char sarah e=normal
+"Is that a gift?"
+char phoenix hide
+"No, it's--{next}"
+char sarah e=ditzy
+"For {sfx idea}meeee?"
+char phoenix hide
+"{sfx shout-general}No!!"
+char sarah e=bored
+"{sfx whoops}Aw..."
+char phoenix hide
+"{c089}(I'd better find something that {n}catches her attention better.)"
+goto top

@@ -1,0 +1,5 @@
+bg detentionnew
+fg detention name=1
+char watters
+mus Doubted People.ogg
+menu scene61

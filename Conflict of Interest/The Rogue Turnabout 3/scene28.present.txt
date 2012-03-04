@@ -238,6 +238,13 @@ char phoenix hide
 "I have a strange feeling that I do..."
 goto top
 
+label pearl$
+char maya e=normal
+char phoenix hide
+"{c089}(Maya seems to be in a better mood {n}now.)"
+"{c089}(I don't want to ruin that by bringing{n}that up again.)"
+goto top
+
 label none
 char maya e=normal
 char phoenix hide

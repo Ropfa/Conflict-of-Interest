@@ -1,0 +1,15 @@
+macro page2
+bg hitlist2 fade
+gui Button {page1} x=90 y=200 Page 1
+gui Button {page3} x=140 y=200 Page 3
+endmacro
+
+macro page1
+bg hitlist1 fade
+gui Button {page2} x=140 y=200 Page 2
+endmacro
+
+macro page3
+bg hitlist3 fade
+gui Button {page2} x=90 y=200 Page 2
+endmacro

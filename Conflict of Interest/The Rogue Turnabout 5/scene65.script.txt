@@ -1,0 +1,16 @@
+setflag receptionget3
+bg reception fade
+nt
+"{c090}{center}{type}July 21, 3:29{n}Rivales Tower{n}Penthouse Office"
+pause 60
+char maya e=thinking fade
+char phoenix hide
+"I wonder who they left in charge of {n}the investigation, now that Watters {n}is in custody."
+char forensics hide
+"If you're looking for Detective {n}Gumshoe, he's currently in the {n}penthouse."
+"They're hoping to finish up the {n}investigation today."
+char phoenix hide
+"{c089}(This guy seems to know everybody {n}around here.)"
+pause 50 script
+
+script scene65menu

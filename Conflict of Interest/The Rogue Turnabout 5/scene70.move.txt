@@ -1,0 +1,11 @@
+label top
+bg Abandonedbuildingday3
+
+list scene70move
+li Rivales Tower
+showlist
+menu scene70
+
+label Rivales Tower
+mus
+script scene62bmenu

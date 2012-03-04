@@ -1,0 +1,89 @@
+set _cr_button true
+
+bg black
+nt
+"{center}{type}{c090}July 22, 9:24 AM{n}District Court{n}Defendant Lobby No. 3"
+pause 80 script
+char phoenix hide
+"{c089}(It's almost time... Where is he?)"
+
+bg courtlobby fade
+mus Courtroom Lounge.ogg
+set _music_loop Courtroom Lounge - loop.ogg
+char maya e=normal fade
+"Are you ready, Nick?"
+
+char phoenix hide
+"Just about."
+"We learned a lot of new things yesterday. Things that bring a completely new meaning to everything."
+
+char maya e=thinking
+"Careful today! We don't want to let everybody know that the police force were working with the Rivales Family."
+
+char phoenix hide
+"Don't worry. I'll be careful how I say things."
+
+char maya e=disheartened
+"The police would never be able to recover from a scandal like that!"
+
+char phoenix hide
+"Speaking of the mafia, where is Mr. Parker?"
+"He should have been here a while ago."
+
+char Forensics hide
+"If you're looking for the defendant, he's in the prosecutor's lobby."
+"He's being prepped for his testimony."
+
+char maya e=thinking
+"So Prosecutor Williamson is going to have him testify today..."
+
+char phoenix hide
+"I guess so."
+
+char maya e=normal
+"...Do you think he really killed him?"
+
+char phoenix hide
+"No, I don't believe that he killed Rivales."
+
+char maya e=disheartened
+"Not Mr. Rivales... Ms. Keyes's father."
+
+mus
+"{f}{next}"
+bg reception
+char sarah e=normal
+grey value=1
+"There's no question in my mind."
+"The man you're defending is a monster. He's evil."
+"{f}{next}"
+
+bg courtlobby
+char maya e=disheartened
+char phoenix hide
+"If he did, I'm not sure there's much we could do about it."
+"The statute of limitations has already passed."
+
+char maya e=pumped
+"How could he do something like that...?"
+"Maybe you shouldn't defend him anymore!"
+
+char phoenix hide
+"I couldn't do that to him after coming this far. And anyways..."
+mus Court.ogg
+"...apart from Mr. Parker, Detective Watters is currently the top suspect."
+
+char maya e=disheartened
+"That's right..."
+
+char phoenix hide
+"If I were to stop defending Mr. Parker now, somebody else would take over..."
+"...and I can't guarantee that they'd be pushing for a happy ending for Watters."
+
+char maya e=pumped
+"It's all up to us then! Let's do this!! MAAAAAYYYAAAA {sfx hideevidence}{e nothing}FEEE{sfx metaldoor2}EEEEYYYYYYY!!!"
+pause 50 script
+"{c089}(Today I'm going to have not one person to prove innocent, but two.)"
+"{c089}(Hopefully, I can pull it off.)"
+
+script scene76

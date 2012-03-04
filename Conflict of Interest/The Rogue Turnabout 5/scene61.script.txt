@@ -1,0 +1,60 @@
+setflag wattersdetention
+bg detentionnew fade
+fg detention name=1
+nt
+"{c090}{center}{type}July 21, 2:00 PM{n}Detention Center{n}Visitor's Room"
+pause 60
+char watters e=sad fade
+pause 60 script
+sfx idea
+char watters e=angry
+"!!!"
+sfx screenwipe
+char nothing fade
+
+char phoenix hide
+"Hey, wait!"
+
+char watters hide
+"{sfx shout-general}Man, I got nothing to say to you!"
+
+char phoenix hide
+"Detective, please!"
+"I want to help clear your name, but I {n}can't do that unless I know what {n}happened that morning."
+
+pause 60 script
+
+char watters e=angry fade
+pause 60 script
+"..."
+
+char phoenix hide
+"..."
+
+char watters e=angry
+"Well...?{n}{p20}There something you'd like to say?"
+
+char phoenix hide
+"Yes, {p10}I'd like to talk about--{p10}{next}"
+
+char watters e=angry
+"Before that."
+
+pause 30 script
+
+char phoenix hide
+"I{p20}-I'm sorry."
+
+char watters e=angry
+"Okay."
+
+char phoenix hide
+"Do you forgive me?"
+
+char watters e=angry
+"No."
+
+char phoenix hide
+"{c089}(Well, at least he's talking...)"
+
+script scene61menu

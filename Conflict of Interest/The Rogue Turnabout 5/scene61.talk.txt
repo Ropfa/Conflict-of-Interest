@@ -1,0 +1,270 @@
+label top
+char watters
+bg detentionnew
+
+list scene61talk1
+li The trial
+li That morning
+flag thatmorningtalk workingwiththemob
+showlist
+label scene61talk2
+menu scene61
+label workingwiththemob
+li Working with the mob
+flag workingwiththemobtalk themeeting
+showlist
+goto scene61talk2
+label scene61talk3
+menu scene61
+label themeeting
+li The meeting
+label scene61talk
+showlist
+menu scene61
+goto scene61talk3
+
+label The trial
+fg detention name=1
+char watters e=serious
+char phoenix hide
+"So, um... {p15}Sorry about the trial today."
+char watters e=angry
+"Sorry...?{n}{p25}{sfx shout-general}Sorry?!{n}{p25}You accused me of {sfx shout-objection}murder, man!!"
+char phoenix hide
+"It was an honest mistake..."
+char watters e=angry
+"I try to help you out a bit with your {n}investigation and this is what you do {n}to me?!"
+"I'm in {sfx damage}prison, man!!"
+"Boss always told me not to mix with {n}you defense lawyers. {n}{p15}{delay 1}Now I see why."
+char phoenix hide
+"If you cooperate with me a bit, I'm {n}sure I can get everything cleared up."
+"I just need you to--{p20}{next}"
+char watters e=angry
+"Oh, right! {p10}{sfx shout-general}Cooperate!{n}{p10}That's the first thing that's on my {n}mind!"
+char phoenix hide
+"Look, I really want to help you, but I {n}can't unless you're willing to talk."
+char watters e=angry
+"{delay 1}......"
+char phoenix hide
+"And it also might've helped if you {n}hadn't made yourself look so guilty."
+char watters e=angry
+"...{p25}{e sad}{n}Heh... {p15}Yeah, man. {p15}I gotcha."
+goto top
+
+label That morning
+fg detention name=1
+char watters e=serious
+char phoenix hide
+"What were you doing in the Rivales {n}Tower?"
+char watters e=sad
+"It's like you said, man...{n}{p20}He had {c940}blackmail{c999} on me."
+char phoenix hide
+"What kind of blackmail?"
+char watters e=sad
+"{delay 1}.........{n}{p30}You've heard the rumors, right?"
+sfx screenwipe
+"{f}{next}"
+bg blacksapartment
+char black e=pumped
+grey value=1
+"{delay 1}Duuude, {p20}don't trust any of those {n}cops you see."
+"{delay 1}They're all dirty. {n}{p10}Workin' for the mob."
+sfx screenwipe
+"{f}{next}"
+bg detentionnew
+fg detention name=1
+char watters e=sad
+char phoenix hide
+"You mean the ones about how you {n}were working for the Family?"
+char watters e=sad
+"Yeah, those ones."
+char phoenix hide
+"Was that actually true?"
+char watters e=serious
+"Yes... {p15}and no."
+"It wasn't really "for them" {p10}so much {n}as it was "with them"."
+delete name=1
+char maya e=mad
+"H{p5}-How {sfx shout-general}could you, Mr. Watters?!{n}{p15}Those are horrible people!"
+fg detention name=1
+char watters e=serious
+"It wasn't just me. {p10}It was everybody. {p15}{n}{c940}The entire police force{c999}."
+char phoenix hide
+"The {sfx shout-general}ENTIRE police force?!"
+char watters e=serious
+"Yeah, you heard right."
+delete name=1
+char maya e=sad
+"I thought we could trust the police..."
+fg detention name=1
+char watters e=angry
+"{sfx damage}You see? {n}{p10}That's why I had to go there!"
+"Rivales was threatening to go public {n}with that information!"
+char watters e=sad
+"There'd been rumors all right,{p10} but if it {n}was ever confirmed..."
+"...people would lose all their faith in {n}us!"
+setflag thatmorningtalk
+goto top
+
+label Working with the mob
+fg detention name=1
+char watters e=serious
+char phoenix hide
+"Why would the police want to work {n}with the Rivales Family?"
+char watters e=sad
+"It was sort of out of obligation, I {n}guess. We both had a common goal."
+char phoenix hide
+"What was that?"
+char watters e=sad
+"{delay 1}......{p20}{n}{e serious}Sir Gallante."
+"He's been killing off the Rivales {n}Family for a while now."
+"The police don't want a vigilante {n}running loose..."
+"The Rivales people don't wanna be {n}dead."
+"Neither of us had the resources to {n}deal with it alone... {p20}So we pooled {n}them together."
+char phoenix hide
+"I can understand that, I guess."
+delete name=1
+char maya e=mad
+"Well, I {sfx shout-general}can't!"
+fg detention name=1
+char watters e=angry
+"{sfx damage}See?! {p10}{n}It doesn't matter if we had good {n}intentions!"
+"The public would never be able to {n}understand the predicament we were {n}in."
+"Just the fact that we'd even spoken {n}to those guys would be enough to {n}destroy our public image!"
+char watters e=sad
+"And he knew it too..."
+"Rivales was planning to reveal our {n}partnership to the press."
+char phoenix hide
+"Why would he do {sfx shout-general}that?!"
+char watters e=sad
+"I think he might've thought we were {n}gonna backstab him as soon as we {n}captured Sir Gallante."
+"He just wanted to be one step ahead."
+char phoenix hide
+"When you work in that business, you probably {n}need to be kind of paranoid."
+char watters e=sad
+"No kidding."
+setflag workingwiththemobtalk
+goto top
+
+label The meeting
+fg detention name=1
+char watters e=sad
+char phoenix hide
+"So Rivales set up a meeting with you {n}to discuss the blackmail?"
+char watters e=sad
+"Yeah. {p15}He contacted me and told me {n}to meet him there."
+"I had Rick come along as backup, but {n}I went into the Tower alone, as {n}requested."
+char phoenix hide
+"Why you?"
+char watters e=sad
+"He said it was cuz I was the one {n}heading up the Sir Gallante {n}investigation."
+"I know more about that guy than {n}anybody else... {p15}'cept maybe Mr. {n}Williamson and Sir Gallante himself."
+char phoenix hide
+"The note says "I know you're holding{n}back"..."
+"What did it mean by that?"
+char watters e=serious
+"The police were holding a few of the {n}case details back from the Family." 
+"They weren't too happy when they {n}found out."
+char watters e=angry
+"{sfx shout-general}But, you know... {n}{p10}It was for a {sfx shout-objection}good reason!"
+"I mean, do you have any idea what {n}they woulda done if they'd gotten {n}him first?!"
+char watters e=confused
+"It definitely wasn't gonna be jail time!"
+char phoenix hide
+"So Rivales wanted all the evidence {n}that you'd been hiding from him."
+char watters e=confused
+"Well, {p10}once again, that's just what he {n}said."
+char phoenix hide
+"...{p25}But it wasn't really the case."
+char watters e=serious
+"No. {p10}Like you, he'd come to the {n}conclusion that {s5}I was Sir Gallante."
+"I didn't realize the real reason I'd {n}been called there until it was too {n}late."
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+"{f}{f}{next}"
+bg grapple
+sfx shout-shock
+pause 50 script
+char watters hide
+"When I got there, he attacked me! {n}{p10}We fought for a bit, but he {n}overpowered me..."
+"{f}{f}{next}"
+sfx shout-objection
+bg cornered
+char watters hide
+"...and stole my gun!"
+"If things had gone his way, I would be {n}dead right now."
+char maya hide
+"{sfx shout-scream}That's horrible!! {p15}{n}How did you get away?"
+char watters hide
+"{delay 1}He saved me."
+char phoenix hide
+"Who saved you?"
+"{c089}(I think I already know the answer to {n}that... {p10}But I still have to ask.)"
+char watters hide
+"Right as Rivales was about to pull the {n}trigger..."
+fg gallantemini x=60 y=-7 fade
+char watters hide
+"...Sir Gallante showed up."
+"I don't know how he got in there {n}without either of us knowing...{p10} {n}But it happened."
+"I called out to him."
+mus
+"{sfx shout-shock}You! Whoever you are! {p10}{n}{sfx shout-objection}PLEASE HELP ME!!!"
+bg black
+sfx knifethrow.wav
+sfx shout-scream.wav
+"{f}{f}{f}{f}{next}"
+bg blood
+pause 20
+sfx shout-loud.wav
+pause 150
+bg detentionnew
+fg detention name=1
+char watters e=serious
+fade
+"I tried contacting Rick, {p10}but he didn't {n}respond."
+"After that, I panicked and ran out of {n}the building without even thinking."
+delete name=1
+char maya e=worried
+"You sure are lucky that he was there {n}to protect you!"
+fg detention name=1
+char watters e=serious
+"Was it luck?{p20}{n}I've been wondering that."
+"He showed up on the same morning... {n}{p15}at the exact same time that I was {n}meeting with Rivales."
+"There couldn't have been any way he {n}knew, {p10}could there?"
+char phoenix hide
+"{c089}(It does seem like an awfully big {n}coincidence.)"
+pause 60 script
+"Detective, before I go, I want you to {n}answer one more question for me."
+char watters e=serious
+"Yeah?"
+char phoenix hide
+"Did you kill Michael Rivales?"
+char watters e=angry
+"......"
+char phoenix hide
+"I just have to be sure."
+char watters e=angry
+"{delay 1}No."
+char phoenix hide
+"{c089}(No reaction. I'm pretty sure he's {n}telling the truth.)"
+"Thank you. That should be all."
+char watters e=angry
+"Good. I don't wanna spend any more {sfx shout-general}{n}time talking to you than I need to!"
+"Look, man. You'd better get me off {n}the hook tomorrow."
+"I still can't believe you tried to {sfx damage}pin {n}this on me!"
+char phoenix hide
+"I said I was sorry!"
+char watters e=angry
+"And I said that I don't care! {n}Sorry's not gonna get me out of {n}here!"
+"You betrayed me, man! {n}That's real low of you!"
+char phoenix hide
+"..."
+char watters e=angry
+"Yeah, "..." is right! {n}{p10}Now get outta here!"
+char nothing fade
+pause 80 script
+char phoenix hide
+"{c089}(Don't worry, Watters. I'll make sure {n}you're found innocent.)"
+"{c089}(I'll fix this mess... {p20}{delay 1}somehow.)"
+setflag whatthehellhero
+script scenewattersgone2menu

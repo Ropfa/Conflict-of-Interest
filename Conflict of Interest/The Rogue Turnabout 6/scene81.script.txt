@@ -1,0 +1,142 @@
+bg black
+pause 30 script
+bg courtlobby fade
+
+nt
+"{center}{type}{c090}July 22, 10:42 AM{n}District Court{n}Defendant Lobby No. 3"
+mus Courtroom Lounge.ogg
+set _music_loop Courtroom Lounge - loop.ogg
+
+char parker e=sad fade
+"Mr. Wright! Do you really think that Virgil did it?"
+
+char phoenix hide
+"He definitely has a lot of explaining to do."
+
+char parker e=crying
+"I... I just can't believe that Virgil could kill anyone..."
+
+pause 60 script
+char phoenix hide
+"I was wondering the same thing about you."
+
+mus
+
+char parker e=serious
+"Huh...? What do you mean?!"
+
+char phoenix hide
+"Mr. Parker, did you kill Sarah Keyes's father?"
+
+char parker e=serious
+"{delay 1}...{n}{p30}{e worried}Oh. {p30}That."
+
+char phoenix hide
+"She's convinced that you murdered her father when she was a child."
+
+char parker e=worried
+"Well, that explains why she hates me so much."
+"I can see why she'd think that."
+
+char maya e=surprised
+"You{p5}-You didn't actually do it, did you?!"
+
+char parker e=worried
+"No.{p25} I told you I'm not a killer.{n}{p30}{delay 1}And that's the truth."
+
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+
+"But I also said that I've committed several horrible crimes.{p25} {delay 1}That's true as well."
+"My worst crime of all... has been standing by and doing nothing."
+"I was there when her father died."
+
+char phoenix hide
+"If it wasn't you, then who did it?"
+
+char parker e=serious
+"It was an assassin hired by Mr. Rivales."
+"I was supposed to go along in case things got dirty."
+"I watched as he shot Mr. Locke in the heart."
+"I watched as that six-year old girl held her daddy in her arms..."
+"...weeping as his life spilled out onto her tiny little body."
+"I watched... and did nothing."
+"I guess I just never made the connection that Sarah was that little girl... all grown up."
+
+char phoenix hide
+"She's held a grudge against you all these years."
+
+char parker e=serious
+"I didn't do it... I know there's no way I can prove it."
+"You'll have to just take my word for it."
+
+char phoenix hide
+"{c089}(With the statute of limitations past, there's nothing we could do even if he had.)"
+
+mus
+
+char maya e=thinking
+"You know, I almost suspected Ms. Keyes for a while yesterday."
+
+char phoenix hide
+"This isn't over. I'm sure she still has a role to play in this."
+
+bg black fade
+pause 30 script
+bg courtblack fade
+pause 60 script
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Please state your name and occupation for the court."
+
+bg witness
+fg wbench
+char black e=normal
+"{delay 1}My name is Virgil Black... {n}{p20}I'm unemployed."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Mr. Black, you have been accused of being the vigilante known as Sir Gallante."
+"Wright over there claims that you told him things which should have been known only to the police..."
+"...and the killer, of course."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You told me that Sir Gallante has been singling out the Rivales Family."
+
+bg witness
+fg wbench
+char black e=peace
+"{delay 1}I did? Are you makin' stuff up, dude?"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Don't play dumb."
+
+bg witness
+fg wbench
+char black e=normal
+"{delay 1}Sorry, dude. I tend to forget things kinda easily."
+
+bg judge
+char judge e=normal
+"Mr. Black, I have a hard time believing that you would be able to come to that conclusion by yourself."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"We've been passing the crimes off as separate incidents."
+"An average civilian couldn't have known."
+
+bg witness
+fg wbench
+char black e=pumped
+"{delay 1}Heyheyheyhey...{p30} You guys need to take it a bit easier."
+"{delay 1}Let me explain everything..."
+
+script scene82blacktestimony1

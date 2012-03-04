@@ -1,0 +1,121 @@
+//EVIDENCEset attorneybadge_name Attorney's Badgeset attorneybadge_pic attorneybadgeset attorneybadge_desc My attorney's badge. I never leave home without it.set magatama_name Magatamaset magatama_pic magatama2set magatama_desc This was a gift from Maya. It lets me see the secrets in people's hearts.
+
+set smashed_name Smashed Object
+set smashed_pic smashedobject
+set smashed_desc Hit Gumshoe in the head and gave him a concussion. Used to be "an object of some sort."
+
+set gun2_name Broken Gun
+set gun2_pic gkgun
+set gun2_desc Hit Gumshoe on the head before shattering on the pavement. Has the fingerprints of both Detective Watters and Michael Rivales.
+
+set knife2_name Parker's Knife
+set knife2_pic knife
+set knife2_desc Despite all the blood, it's not the murder weapon.
+
+set blackmail2_name Blackmail Letter
+set blackmail2_pic blackmail
+set blackmail2_desc A blackmail letter found at the crime scene. Another copy was found in the warehouse across the street.
+set blackmail2_check check_blackmail
+
+set autopsy_name Autopsy Report
+set autopsy_pic autopsyreport
+set autopsy_desc Victim died at approximately 6:00 AM. Death was caused by a massive wound from a bladed weapon.
+set autopsy_check check_autopsy
+
+set blackout_name Blackout Data
+set blackout_pic blackout
+set blackout_desc The building had a power failure from 5:38 to 6:27 AM.
+
+set security2_name Security System
+set security2_pic securitysystem
+set security2_desc A network of security cameras and alarms guard the Rivales Tower. They watch over every room except the penthouse at the top.
+set security2_check check_security
+
+set poster_name Sir Gallante Promo Poster
+set poster_pic poster2
+set poster_desc Drawn by Cody. {n}Gallante's creed:{n}1) Protect the innocent{n}2) Slay the evil
+
+set codyphoto_name Cody's Photo
+set codyphoto_pic photo
+set codyphoto_desc A picture that Cody took of a person on the roof of Rivales Tower.
+set codyphoto_check check_codyphoto
+
+set luminol_name Luminol
+set luminol_pic 4luminol
+set luminol_desc Used to find blood stains, even if they've been wiped off.
+
+set crimephoto2_name Crime Scene Photo
+set crimephoto2_pic photo
+set crimephoto2_desc A photo taken by the forensics team. The penthouse windows only open from the inside.
+set crimephoto2_check check_crimephoto
+
+set blueprints_name Building Floorplans
+set blueprints_pic floorplans
+set blueprints_desc The blueprints for the top story of the RIvales Tower.
+set blueprints_check check_blueprints
+
+set hitlist_name Hit List
+set hitlist_pic list
+set hitlist_desc A list of people that the Rivales Family didn't like. Found in a safe in the penthouse.
+set hitlist_check check_hitlist
+
+set gallantefiles_name Sir Gallante Investigation Files
+set gallantefiles_pic SL9
+set gallantefiles_desc All the information that has been gathered by the investigation team. This is going to take a long time to read through...
+set gallantefiles_check check_gallantefiles
+
+set rick_name Letter to Rick
+set rick_pic letter
+set rick_desc Received from Virgil Black after he investigated the abandoned building across from Rivales Tower.
+set rick_check check_rick
+
+set sword_name Sword
+set sword_pic sword
+set sword_desc A giant sword. It's definitely the murder weapon.
+
+set strange_name Strange Device
+set strange_pic strangedevice
+set strange_desc I'm not really sure what this is.
+
+set harness_name Harness
+set harness_pic harness
+set harness_desc It looks like a harness used for bungee jumping. One part was found on the Rivales Tower roof, and the other inside the warehouse.
+
+set keyesphoto_name Keyes Family Photo
+set keyesphoto_pic old photo
+set keyesphoto_desc Sarah Keyes and her father.
+set keyesphoto_check check_keyesphoto
+
+set mark_name Blood Skull
+set mark_pic bloodskull
+set mark_desc Sir Gallante's mark. He leaves it behind after each of his murders.
+
+set cord_name Long Cord
+set cord_pic gkwire
+set cord_desc A really long cord. Found on the roof of the Rivales Tower.
+set hawk_name Hawk
+set hawk_pic hawk
+set hawk_desc Sir Gallante's faithful sidekick. I guess every super hero needs one.
+
+set fuse_name Fuse Box
+set fuse_pic fusebox
+set fuse_desc Controls the power supply for the Tower. It looks like somebody's been messing around with it.
+//PROFILESset maya$_name Maya Feyset maya$_pic mayaset maya$_desc Age: 27{n}Gender: Female{n}The Master of the Kurain Channeling Technique. She's always been there to help when I needed her.
+
+set gumshoe$_name Dick Gumshoe
+set gumshoe$_pic gumshoe
+set gumshoe$_desc Age: 40{n}Gender: Male{n}Injured the night of the crime. Can't remember what he was doing, due to a concussion.set parker$_name Wayne Parkerset parker$_pic parkerset parker$_desc Age: 39{n}Gender: Male{n}The defendant. Worked for the victim. He doesn't seem like he would have the willpower to commit a crime, let alone murder somebody.set watters$_name Mark Wattersset watters$_pic wattersset watters$_desc Age: 28{n}Gender: Male{n}The lead detective on the Sir Gallante investigation. He seems like a nice guy, if a bit unprofessional.set rivales$_name Michael Rivalesset rivales$_pic rivalesset rivales$_desc Age: 58{n}Gender: Male{n}The victim. He was killed in his penthouse office early this morning.
+
+set rivalesupdate$_name Michael Rivales
+set rivalesupdate$_pic rivales
+set rivalesupdate$_desc Age: 58{n}Gender: Male{n}The head of the Rivales Family, a group of dangerous criminals. He was in charge of most of the organized crime in the city.
+
+set sarah$_name Sarah Keyes
+set sarah$_pic sarah
+set sarah$_desc Age: 25{n}Gender: Female{n}The victim's secretary. She seems to have an unhealthy obsession with violence. Saw Parker enter the crime scene the night of the murder.
+
+set cody$_name Cody Hackinsset cody$_pic codyset cody$_desc Age: 17{n}Gender: Male{n}A fanboy of Sir Gallante. Doesn't seem to have changed much, otherwise.set gallante$_name Sir Gallanteset gallante$_pic gallanteset gallante$_desc Age: ??{n}Gender: ??{n}A serial killer who has been murdering criminals for the past three years. The police have been leading an extensive investigation to find him.
+
+set black$_name Virgil Blackset black$_pic vblackset black$_desc Age: 31{n}Gender: Male{n}A friend of my client. Contacted me and requested that I defend Mr. Parker.set obadiah$_name Obadiah Williamsonset obadiah$_pic obadiahset obadiah$_desc Age: 57{n}Gender: Male{n}A veteran prosecutor. He's been working with Detective Watters to bring down Sir Gallante.set pearl$_name Pearl Fey
+set pearl$_pic pearl
+set pearl$_desc Age: 18{n}Gender: Female{n}Maya's younger cousin, who disappeared five years ago. I hope she's safe, wherever she is...

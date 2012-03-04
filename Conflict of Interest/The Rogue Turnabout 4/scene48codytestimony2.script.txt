@@ -245,7 +245,7 @@ bg aide
 char maya e=bench-hum
 "If I know Cody, he was probably {n}trying to be some kind of private {n}investigator."
 char phoenix hide 
-"He should consider him lucky."
+"He should consider himself {n}lucky."
 "Spying on the mafia isn't exactly a {n}safe thing to do."
 setflag press2B
 resume

@@ -1,0 +1,49 @@
+setflag sarahagain
+delflag sarahpsyche
+bg reception
+nt
+"{center}{c090}{type}July 21, 3:55 PM{n}Rivales Tower{n}Reception Area"
+
+pause 60
+
+char sarah e=normal
+pause 30 script
+sfx realization
+pause 30 script
+
+char sarah e=ditzy
+"Oh, Feenie-poo! You're back!"
+mus Arle Stage.ogg
+set _music_loop Arle Stage - loop.ogg
+
+char phoenix hide
+"Hello, Mr. K--{p15}{n}Hello, Sarah."
+
+char sarah e=ditzy
+"You don't know how lonely I've been {n}without you!"
+
+char maya e=cheerful
+"Sarah! {n}We didn't see you at all yesterday!"
+
+char sarah e=bored
+"Why are...{n}{p10}Why are YOU here?!"
+
+char maya e=surprised
+"{sfx damage}I'm helping Nick!"
+
+char sarah e=bored
+"He doesn't need your help. {n}{p10}He knows how to do his job."
+
+char maya e=disheartened
+"S{p5}-Sorry. I didn't mean to--{p10}{next}"
+
+char phoenix hide
+"Maybe we should change the topic to {n}something less confrontational. {p20}{n}Like murder."
+
+char sarah e=bored
+"Look what you started, Marla. {n}You made him all upset."
+
+char phoenix hide
+"{c089}{sfx whoops}(*sigh*)"
+
+script scene67menu

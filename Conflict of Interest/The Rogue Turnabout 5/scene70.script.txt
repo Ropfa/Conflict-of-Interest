@@ -1,0 +1,18 @@
+setflag abandonedget2
+bg black
+nt
+"{c090}{center}{type}July 21, 4:30 PM{n}Abandoned Warehouse"
+
+bg Abandonedbuildingday3 fade
+pause 30 script
+char maya e=thinking
+"Does it look to you like this room has {n}changed since yesterday?"
+
+char phoenix hide
+"It does."
+"I can't quite put my finger on it... {p15}{n}but something's off."
+
+char maya e=pumped
+"Let's check it out!"
+
+script scene70menu

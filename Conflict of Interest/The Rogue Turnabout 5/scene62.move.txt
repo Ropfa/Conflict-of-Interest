@@ -1,0 +1,27 @@
+label top
+bg entrance
+
+list scene62move
+li Wright Anything Agency
+li Detention Center
+li Reception
+showlist
+menu scene62
+
+label Wright Anything Agency
+mus
+script scene60menu
+
+label Detention Center
+mus
+script scenewattersgone2
+
+label Reception
+noflag receptionget3 scene65
+flag receptionget3 scene65menu
+label scene65
+mus
+script scene65
+label scene65menu
+mus
+script scene65menu

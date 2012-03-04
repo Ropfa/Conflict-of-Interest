@@ -3,4 +3,6 @@ set _case_1 The Rogue Turnabout
 set _case_2 The Rogue Turnabout 2
 set _case_3 The Rogue Turnabout 3
 set _case_4 The Rogue Turnabout 4
+set _case_5 The Rogue Turnabout 5
+set _case_6 The Rogue Turnabout 6
 casemenu

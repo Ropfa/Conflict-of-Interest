@@ -1,0 +1,66 @@
+setflag pentget3
+bg pent2
+nt
+"{center}{c090}{type}July 21, 3:30 PM{n}Rivales Tower{n}Penthouse Office"
+pause 60 script
+sfx realization
+char ??? hide
+"Hey, it's you again, pal!"
+
+mus I can do it when it counts, pal.ogg
+set _music_loop I can do it when it counts, pal - loop.ogg
+
+char gumshoe e=confident fade
+char phoenix hide
+"Are you in charge of the {n}investigation now, Gumshoe?"
+
+char gumshoe e=confident
+"Yeah, after Mark was accused, he {n}was taken off the case."
+
+char phoenix hide
+"{c089}(How many times am I going to have {n}to have this conversation today?)"
+"It looks like you've made a solid {n}recovery. Congratulations on that."
+
+char gumshoe e=confident
+"Hey, thanks!"
+
+char obadiah hide
+"Detective Gumshoe was released {n}from the hospital earlier today."
+char gumshoe e=pumped
+char obadiah hide
+"I made the decision to have him {n}replace Watters."
+
+mus
+
+char gumshoe e=pumped
+"Urp!"
+
+char phoenix hide
+"{c089}(Uh-oh.)"
+
+pause 40 script
+
+char obadiah e=front-serious fade
+pause 40 script
+"Wright."
+
+char phoenix hide
+"Williamson."
+
+mus Shibuya.ogg
+set _music_loop Shibuya - loop.ogg
+
+char obadiah e=front-angry
+"You... {p15}I can't believe you have the {n}nerve to show up here, after what {n}you did to Watters!"
+
+char phoenix hide
+"I'm here to clear his name."
+
+char obadiah e=front-angry
+"What, today's charade make you {n}feel all guilty inside?"
+
+char phoenix hide
+"No. It's not like that at all."
+"{c089}(...{p20}Is it?)"
+
+script scene66menu

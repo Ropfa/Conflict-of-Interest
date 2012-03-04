@@ -1,0 +1,180 @@
+set _cr_button false
+
+fg lockchains-2 name=chains
+fg lock y=-8 x=-65 name=lock2
+char sarah e=bored
+
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+
+char phoenix hide
+"You knew him pretty well then."
+
+char sarah e=bored
+"No, not really."
+"I just said the name sounded familiar."
+
+char phoenix hide
+"I don't think so. {p10}I'd say you were {n}pretty close."
+
+char sarah e=bored
+"Nope! I swear nothing happened {n}between us! No need to get all {n}jealous!"
+
+char phoenix hide
+"I'm not {sfx shout-general}jealous! You weren't lovers {n}with this man."
+"{c090}However, you were connected with {n}him in another way..."
+label redo
+present
+label ifback
+goto back
+
+//PRESENT KEYES FAMILY PHOTO
+label keyesphoto
+mus
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char phoenix hide
+"He was your father."
+char sarah e=normal
+"My {p25}{sfx realization}daddy?"
+char phoenix hide
+"Look closely..."
+sfx showevidence
+bg hitlist3
+"The man on this hit list..."
+sfx hideevidence
+bg keyesphoto
+"...and the man in this photo... {p20}{n}are the same person."
+bg black
+fg lockchains-2 name=chains
+fg lock y=-8 x=-65 name=lock2
+char sarah e=bored
+"But we have different last names! {p10}{n}We couldn't be related!"
+char phoenix hide
+"I'm sure that's what you wanted {n}Rivales to think."
+"It's not very hard to change your {n}name in this world."
+char sarah e=bored
+"Well... Okay... I-It's... {p15}It's true."
+"Michael Rivales had my daddy killed."
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+label redo2
+char phoenix hide
+"{c090}The real reason you started working {n}for the Rivales Family was..."
+
+set _list_back_button
+list psychesarah2
+li For money
+li For the thrill
+li For revenge
+showlist
+label ifback
+goto back
+
+label For money
+char phoenix hide
+"You joined him so that you could {n}profit from the mob's illegal {n}activities."
+pause 80 script
+char sarah e=bored
+"...{p20}Haven't we been talking this whole {n}time so that you could prove me {n}wrong about that?"
+char phoenix hide
+"...{p20}{n}Oh.{p20} That's right."
+"{c089}(I must be some kind of huge idiot to {n}guess that.)"
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+goto redo2
+
+label For the thrill
+char phoenix hide
+"You enjoyed the thrill of being {n}involved in organized crime."
+pause 60 script
+char sarah e=bored
+"...{p20}No, can't say that I do."
+"You'd have to be some kind of sicko {n}to like that."
+char phoenix hide
+"{c089}(And you aren't?)"
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+goto redo2
+
+label For revenge
+mus
+char phoenix hide
+"You joined so that you could have {n}revenge."
+char sarah e=bored
+"Th{p5}-That's a bit extreme, don't you {n}think?"
+char phoenix hide
+"Not at all."
+"He murdered your father... {n}{p10}and you wanted to repay him."
+"You needed to have close access to {n}him, so you started working as his {n}assistant."
+char sarah e=bored
+"I've been here for a few years {n}though. If I'd wanted revenge, {n}I'd have done it a long time ago!"
+char phoenix hide
+"Maybe the opportunity never {n}presented itself. {p15}Maybe you {n}were just too scared."
+"Does it really matter?"
+char sarah e=bored
+"No, I... {p25}{delay 1}I guess not."
+
+sfx lockbreaks.wav
+delete name=lock2
+fg 1-lock-breaks y=20 x=-95
+pause 20
+sfx rolling.ogg
+"{s 40 4}{next}"
+delete name=chains2
+pause 80
+bg reception fade
+char sarah e=bored
+sfx testimony2.wav
+fg UnlockSuccessful name=unl
+penalty 100
+pause 30
+delete name=unl
+pause 60
+setflag brokesarahpsyche
+char sarah e=bored
+"I guess... I guess I just can't hide {n}anything from you...... {e quiver}{p 60}{e crying}{n}you know?"
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+script scene68menu
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char sarah e=bored
+"Is that supposed to show how I knew {n}him?"
+char phoenix hide
+"Yes."
+char sarah e=bored
+"Well, sorry... {e ditzy}But it really doesn't!"
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+char phoenix hide
+"I thought it did?"
+char sarah e=normal
+"No, sweetie. {p15}It didn't."
+char phoenix hide
+"I guess not... {p20}But this does."
+"{c090}This shows how you were connected {n}to Mr. Locke..."
+goto redo
+
+label back
+char phoenix hide
+"{c089}(I don't have the evidence I need {n}right now.)"
+"{c089}(I'll have to come back later when {n}I've gathered some more.)"
+pause 30
+script scene67menu
+
+label magafail
+mus
+char phoenix hide
+"{c089}(Gah! I'm pushing myself too much!)"
+"{c089}(I need to calm down, collect my {n}thoughts, and try again...)"
+penalty +1
+pause 20
+script scene67menu

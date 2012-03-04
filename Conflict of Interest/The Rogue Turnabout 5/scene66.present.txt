@@ -1,0 +1,18 @@
+present
+label top
+menu scene66
+bg pent2
+
+
+label none
+char obadiah e=front-serious
+char phoenix hide
+"Could I ask you about th--{p10}{next}"
+char obadiah e=front-serious
+"No."
+char phoenix hide
+"But I just--{p10}{next}"
+char obadiah e=front-angry
+"{sfx shout-general}I said {sfx shout-angry}NO!!"
+"I'm not about to go sharing the {n}details of my case with a sleazy {n}attorney like you."
+goto top

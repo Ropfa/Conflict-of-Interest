@@ -1,0 +1,4 @@
+bg blacksapartment
+char black e=normal
+mus Eccentric 2007.ogg
+menu scene69

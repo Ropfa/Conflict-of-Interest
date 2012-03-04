@@ -1,0 +1,157 @@
+label top
+bg reception
+
+list scene68talk1
+li The victim
+flag mrparker mrparker
+showlist
+list scene68talk2
+menu scene68
+label mrparker
+li Mr. Parker
+label scene68talk
+showlist
+menu scene68
+goto scene68talk
+
+label The victim
+char sarah e=crying
+char phoenix hide
+"All this time, you've been working for {n}a man you hated?"
+char sarah e=crying
+"{delay 1}...{p20}Uh-huh."
+char phoenix hide
+"I can't even imagine what it was like."
+char maya e=worried
+"Ms. Keyes, my mother left me when I {n}was very young."
+"I know what it's like to lose {n}somebody close to you."
+char sarah e=crying
+"M{p5}-My daddy was killed when I was a {n}little girl."
+"He was a judge who convicted some {n}of the Rivales thugs."
+"The Family didn't like that."
+fg black name=black fade
+pause 80 script
+char Hitman hide
+"End of the line, Locke."
+char Locke hide
+"Pl-Please. Not here. {p20}I beg you!"
+char Hitman hide
+"Good a place as any."
+char sarah hide
+"Daddy? {p15}Who is that man?"
+char Locke hide
+"Please! Not in front of my daughter!"
+char Hitman hide
+"She'll have to learn someday."
+mus
+sfx gunshot3
+pause 60 script
+char sarah hide
+"{sfx shout-objection}DAAAADDDYYYYYY!!!"
+sfx gunshot3
+pause 20 script
+sfx gunshot3
+pause 20 script
+"{f}{f}{f}{next}"
+sfx shout-scream.wav
+bg blood
+pause 20
+char sarah hide
+"{sfx shout-objection}EEEEEEEEEEKKK!!!"
+fg blood
+pause 100
+bg reception stack fade
+fg blood name=blood nowait
+char sarah e=crying fade
+pause 20 script
+delete name=blood
+fade start=100 end=0 speed=1 name=blood
+pause 80 script
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+char sarah e=crying
+"The killer was never arrested... and {n}the statue of litigations passed a {n}long time ago."
+"He'll never be punished for it."
+char phoenix hide
+"{c089}(That's actually the "statute of {n}limitations"...)"
+"{c089}(...but I don't think that now's the {n}time to be correcting her on that.)"
+char maya e=mad
+"The Rivales Family are such creeps!"
+"They have all their henchmen and {n}use them to do all the dirty work!"
+char sarah e=bored
+"No."
+char phoenix hide
+"No?"
+char sarah e=bored
+"It wasn't just one of his goons. {p20}{n}{delay 1}Parker killed him."
+mus
+sfx dramapound
+char phoenix hide
+"Wh{p5}-wh{p10}-{sfx shout-scream}WHAA{sfx shout-objection}AAT?!"
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+setflag mrparker
+goto top
+
+label Mr. Parker
+char sarah e=bored
+char phoenix hide
+"What do you mean Mr. {sfx shout-general}Parker killed {n}your father?!"
+char sarah e=bored
+"I know it was him. {p10}He was there when {n}Daddy died."
+char phoenix hide
+"You're absolutely certain?"
+char sarah e=bored
+"It was a long time ago... {p20}But there's {n}no way I can ever forget that."
+"I can see him staring down at me as if {n}it was yesterday."
+"There's no question in my mind."
+"The man you're defending is a {n}monster. He's evil."
+mus
+"But nothing will ever be done about {n}it..."
+char sarah e=quiver
+pause 60 script
+mus Reminiscence ~ KG-8 Case.ogg
+set _music_loop Reminiscence ~ KG-8 Case - loop.ogg
+char sarah e=crying
+"...because of you legal people and {n}your laws."
+"The statue of litigations says that {n}once fifteen years has passed, a {n}crime never "legally" happened."
+"It's been nineteen years."
+"Do you want to try telling me that my {n}daddy was never shot in front of my {n}eyes?"
+char phoenix hide
+"N{p5}-No..."
+char sarah e=crying
+"Because of that law, the police aren't {n}able to lift a finger."
+"Parker is able go on an live his little {n}life as if he never did any wrong."
+char phoenix hide
+"You must really hate him..."
+char sarah e=crying
+"Of course I do."
+"But do you know what I hate even {n}more...?"
+mus
+"I hate the system that allows men like {n}him and Rivales to roam free."
+"I hate the police who were too {n}scared to confront them a long {n}time ago."
+"Nobody's actually ever done {n}anything to fight the evil in {n}this world."
+char maya e=pumped
+"Th-That's what Nick and I are trying {n}to do right now!"
+char sarah e=bored
+"No. You're all content to sit behind {n}your little lawyer's benches and {n}shout and point fingers."
+"Finger pointing didn't bring Rivales {n}down."
+"It was a {s5}{sfx shout-shock}blade to the chest."
+"Sir Gallante is the greatest thing to {n}happen to this city in a very long {n}time."
+char phoenix hide
+"Murdering people is no way to solve a {n}problem! No matter how terrible they {n}are!"
+char sarah e=bored
+"Rivales would've gotten the death {n}penalty anyway, had he ever been {n}taken to trial."
+"Is it really so much different?"
+char phoenix hide
+"Well, I..."
+char sarah e=bored
+"He got what was coming to him. {p20}{n}He deserved it."
+char phoenix hide
+"{c089}(I don't think there's any point trying {n}to argue the matter with her.)"
+pause 50 script
+char phoenix hide
+"Well, that's one mystery solved."
+"{c089}(I think this case is finally starting to {n}make sense.)"
+setflag mynameisinigomontoya
+goto top

@@ -1,0 +1,49 @@
+label top
+bg wrightanything
+
+list scene60talk
+li The trial
+li Any ideas?
+label scene60talk
+showlist
+menu scene60
+goto scene60talk
+
+label The trial
+char maya e=thinking
+"So are you really defending two {n}people now?"
+char phoenix hide
+"Not exactly."
+"My client is still Mr. Parker, but {n}Detective Watters is also a suspect {n}now."
+"I'm going to have to make sure that {n}nothing bad happens to either of {n}them."
+char maya e=sad
+"It would be our fault if anything did."
+char phoenix hide
+"Not our fault, Maya. {p15}Mine."
+char maya e=sad
+"I still feel bad for what happened."
+char phoenix hide
+"You shouldn't. {p10}If it wasn't for you, {n}things would have ended much {n}differently."
+char maya e=disheartened
+"I knew it was kind of strange..."
+"But there was all that evidence {n}pointing to him, so I didn't know {n}what to say."
+char phoenix hide
+"At least you finally spoke up in the {n}end."
+"{c089}(That's more than I did.)"
+goto top
+
+label Any ideas?
+char maya e=normal
+char phoenix hide
+"Well, I'm officially stumped. {n}Where do you think we should go next?"
+char maya e=thinking
+"Mr. Watters might have a lot of the {n}answers we're looking for."
+"After all, he was there."
+char phoenix hide
+"Great. That ought to be an {n}interesting conversation."
+char maya e=normal
+"I'm sure he won't be that mad, right?{p30}{n}...{p20}{e disheartened}Right?"
+char phoenix hide
+"{c089}(Watters was there the morning the {n}murder took place.)"
+"{c089}(Is it possible that he was also in the {n}room when it happened?)"
+goto top

@@ -1,0 +1,118 @@
+set _cr_button false
+mus
+
+fg lockchains-2 name=chains
+fg lock y=-8 x=65 name=lock1
+fg lock y=-8 x=-65 name=lock2
+
+char sarah e=bored
+"Oh, no... I'm no assassin, {n}Feenie-weenie."
+"I'd never join up just so I could kill {n}people."
+char phoenix hide
+"I'm not suggesting that you killed all {n}the people on here. You're too young {n}for that."
+
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+
+char sarah e=bored
+"Phew! You had me so worried!"
+
+char phoenix hide
+"However, I do think that the people {n}on this list are still very important {n}to you."
+
+char sarah e=bored
+"What? {n}{p15}Why would I care about all of them?"
+
+char phoenix hide
+"Not all of them... {p15}{n}Just one, actually."
+label redolist
+"There is one person on here who was {n}very special to you..."
+"{c090}...and that person is on this page..."
+
+set _list_back_button
+list psychesarah
+li Page Two
+li Page Three
+showlist
+
+label Page Two
+char phoenix hide
+"Page two."
+char sarah e=bored
+"Page...{n}{p10}Page two?!"
+char phoenix hide
+"Yes."
+bg hitlist2
+"{c090}And this is the person I'm thinking {n}of..."
+examine hide
+
+label Page Three
+char phoenix hide
+"Page three."
+char sarah e=bored
+"Page...{n}{p10}Page three?!"
+char phoenix hide
+"Yes."
+bg hitlist3
+"{c090}And this is the person I'm thinking {n}of..."
+examine hide
+region 27 15 85 79 locke
+
+//HIGHLIGHT CHARLES LOCKE
+label locke
+mus
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg black
+fg lockchains-2 name=chains
+fg lock y=-8 x=65 name=lock1
+fg lock y=-8 x=-65 name=lock2
+char sarah e=bored
+char phoenix hide
+"This man right here... {p20}{n}You knew him, didn't you?"
+char sarah e=bored
+"{sfx realization}Charles Locke...?"
+"Well, {p15}I guess the name does sound {n}kinda familiar..."
+sfx lockbreaks.wav
+delete name=lock1
+fg 1-lock-breaks y=20 x=35
+pause 30
+script scenepsychesarah3
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg black
+fg lockchains-2 name=chains
+fg lock y=-8 x=65 name=lock1
+fg lock y=-8 x=-65 name=lock2
+char sarah e=bored
+"Who's that?"
+char phoenix hide
+"You don't recognize this person?"
+char sarah e=bored
+"No... {p20}Sorry."
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+char phoenix hide
+"{c089}(I guess that wasn't the right one.)"
+goto redolist
+
+label back
+char phoenix hide
+"{c089}(I don't have the evidence I need {n}right now.)"
+"{c089}(I'll have to come back later when {n}I've gathered some more.)"
+pause 30
+script scene67menu
+
+label magafail
+mus
+char phoenix hide
+"{c089}(Gah! I'm pushing myself too much!)"
+"{c089}(I need to calm down, collect my {n}thoughts, and try again...)"
+penalty +1
+pause 20
+script scene67menu

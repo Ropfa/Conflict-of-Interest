@@ -1,0 +1,11 @@
+label top
+bg detentionnew
+
+list scene61move
+li Wright Anything Agency
+showlist
+menu scene61
+
+label Wright Anything Agency
+mus
+script scene60menu

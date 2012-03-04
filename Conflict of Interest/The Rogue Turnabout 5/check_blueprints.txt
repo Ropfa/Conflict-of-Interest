@@ -1,0 +1,2 @@
+bg blueprints fade
+gui Back y=350

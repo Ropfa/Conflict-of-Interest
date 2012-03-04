@@ -104,7 +104,7 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(Watters is starting to look {n}nervous.)"
-"{c089}(I think he's finally starting to realize {n}how bad things look for him.)"
+"{c089}(I think he's finally realizing how{n}bad things look for him.)"
 bg black fade
 pause 60 script
 script scene54

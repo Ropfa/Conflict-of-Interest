@@ -1,0 +1,53 @@
+label top
+bg blacksapartment
+
+examine
+region 142 176 25 14 book
+region 100 63 11 29 bong
+region 20 158 117 32 mess
+region 115 100 47 59 mess
+menu scene69
+
+label book
+char phoenix hide
+"I think I've heard of this book before."
+char black e=peace
+"{delay 1}Have you? {p10}It's real good. {n}{p10}You should read it sometime."
+char maya e=normal
+"Nick's not really a big reader."
+char maya e=thinking
+"I can't remember the last time I saw {n}him look through our bookshelf."
+char phoenix hide
+"Well, I have a feeling that this might {n}be just slightly more entertaining {n}than whatever I'd find in there."
+goto top
+
+label bong
+char maya e=normal
+"Hey, Nick, is that a--{p20}{next}"
+char phoenix hide
+"It's a lava lamp."
+char maya e=confident
+"Oh, come on. I think I'm old enough to {n}recognize a--{p20}{next}"
+char phoenix hide
+"It's a lava lamp."
+char maya e=mad
+"..."
+goto top
+
+label mess
+char maya e=normal
+"You don't seem to clean up much {n}around here, Mr. Black."
+char black e=peace
+"{delay 1}Duuuuude, {p15}I got better things to {n}worry about."
+char maya e=thinking
+"That's what Nick always says."
+char black e=peace
+"{delay 1}See? {p10}{n}Dude knows what I'm saying."
+char phoenix hide
+"{c089}(Virgil Black, I think this might be the {n}start of a beautiful friendship.)"
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

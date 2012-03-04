@@ -1,0 +1,106 @@
+label top
+bg blacksapartment
+
+list scene69talk1
+li A good friend
+flag goodfriendtalk waynesworld
+showlist
+list scene69talk2
+menu scene69
+label waynesworld
+li Wayne's World
+label scene69talk
+showlist
+menu scene69
+goto scene69talk
+
+label A good friend
+char black e=normal
+char phoenix hide
+"How was your visit to the detention {n}center?"
+char black e=peace
+"{delay 1}It went real good."
+"{delay 1}I've been there about seven times in {n}the past three days."
+char maya e=thinking
+"Wow, seven? That's more than {n}we've talked to him!"
+char black e=normal
+"{delay 1}Hey, {p10}he's my buddy, remember? I {n}gotta do what I can to help."
+char phoenix hide
+"You're a very loyal friend, Mr. Black. {n}He's lucky to have somebody like you."
+char black e=normal
+"{delay 1}We're real open with each other."
+char black e=peace
+"{delay 1}I'm probably the only guy out there {n}who understands him."
+char phoenix hide
+"What do you mean by that?"
+char black e=pumped
+"{delay 1}{sfx shout-general}Do you have any idea how much {n}stress a job like that makes?"
+"{delay 1}Everybody's always scareda him {n}because of his job."
+"{delay 1}Nobody out there seems to realize {n}that he wants nothing to do with {n}it."
+"{delay 1}He talks to me all the time about it."
+char phoenix hide
+"You mean he tells you about what {n}goes on with the Rivales Family?"
+char black e=normal
+"{delay 1}Yeah, dude. {p15}Wayne tells me {n}everything."
+char phoenix hide
+"Everybody needs to vent {n}occasionally."
+char maya e=thinking
+"Nick screams at the tree in our office {n}sometimes."
+char maya e=normal
+"I hope Mr. Parker never has to resort {n}to that."
+char black e=pumped
+"{delay 1}Duuuuude,{p20} that's, {p10}like, {p10}the last thing {n}he has to be worried about."
+"{delay 1}His boss, the police, and now this Sir {n}Gallante creep? He's got it pretty {n}bad."
+setflag goodfriendtalk
+goto top
+
+label Wayne's World
+char black e=pumped
+char phoenix hide
+"Mr. Parker seems to have a lot of {n}troubles in his life."
+char black e=pumped
+"{delay 1}You don't know the half of it, dude."
+"{delay 1}I just wish there was more that I {n}could do."
+char phoenix hide
+"He told us that he's been meaning to {n}quit for a while."
+char black e=normal
+"{delay 1}Yeeeeeah,{p20} his jerkface boss was {n}always hanging stuff over his {n}head."
+"{delay 1}He was way to scared to do anything."
+char maya e=normal
+"But that's all over now, right? {n}And everything will be better?"
+char black e=pumped
+"{delay 1}Nooooo,{p20} it doesn't end {sfx shout-general}here!"
+"{delay 1}That Sir Gallante guy isn't gonna stop {n}until he gets every last one of those {n}Rivales people!"
+"{delay 1}Don't you see how much trouble {n}Wayne's in?!"
+char phoenix hide
+"He doesn't have anything to be {n}worried about."
+"I'm going to make sure that we catch {n}Gallante before tomorrow's trial is {n}over."
+char black e=peace
+"{delay 1}Sweeeeeeet,{p20} duuuuuuude."
+char black e=normal
+"{delay 1}You're doin' a good thing, dude. {n}{p15}I know I couldn't. {n}{p15}{e peace}Real brave of you."
+char phoenix hide
+"Brave? What do you mean?"
+char black e=normal
+"{delay 1}Well, you know... {p15}Sir Gallante."
+"{delay 1}He goes around killing gangsters and {n}flying out windows and all that."
+"{e peace}{delay 1}Dude's a complete badass!"
+char phoenix hide
+"{c089}(Suddenly, I feel very faint...)"
+char black e=normal
+"{delay 1}A dude like him'd probably be way {n}mad if somebody tried to confront {n}him."
+"{delay 1}If he knows you're onto him, he might {n}try coming after you."
+char phoenix hide
+"{c089}(Suddenly, I feel even fainter...)"
+char black e=peace
+"{delay 1}Like I said, dude. {p15}{n}Real brave of you."
+char maya e=pumped
+"Mr. {sfx shout-general}Black, are you saying that Sir {n}Gallante would try to kill Nick?"
+"I thought he was supposed to be a {n}hero!"
+char black e=normal
+"{delay 1}Right, {p10}but people get desperate when {n}the heat's on."
+"{delay 1}{e peace}Who can say how he'd react?"
+char phoenix hide
+"{c089}(He wouldn't really go against his {n}own rules... {p15}would he?)"
+setflag iamozymandius
+goto top

@@ -1,0 +1,14 @@
+label top
+bg police
+
+list scene63move
+li Wright Anything Agency
+li Detention Center
+showlist
+menu scene63
+
+label Wright Anything Agency
+script scene60menu
+
+label Detention Center
+script scenewattersgone2

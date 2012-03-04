@@ -1,0 +1,43 @@
+bg Abandonedluminol
+mus Tricks and Gimmicks.ogg
+
+label top 
+noflag mark3 luminolmode
+flag mark3 scene70c
+label luminolmode
+
+examine
+region 105 100 17 21 mark
+menu scene70
+
+label mark
+noflag mark1 mark1
+flag mark1 mark2
+label mark1
+sfx luminol
+bg Abandonedluminol1
+setflag mark1
+goto top
+label mark2
+noflag mark2 mark2
+flag mark2 mark3
+label mark2
+bg Abandonedluminol2
+sfx luminol
+setflag mark2
+goto top
+label mark3
+sfx luminol
+bg Abandonedluminol3
+pause 10 script
+sfx success
+setflag mark3
+goto top
+
+label none
+sfx luminol
+goto top
+
+label scene70c
+mus 
+script scene70c

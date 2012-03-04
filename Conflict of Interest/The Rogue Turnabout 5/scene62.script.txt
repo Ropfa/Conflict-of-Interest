@@ -1,0 +1,26 @@
+setflag entranceday3
+bg entrance
+nt
+"{c090}{center}{type}July 21, 3:00 PM{n}Rivales Tower{n}Front Entrance"
+pause 60
+char cody hide
+"You're back, pops!"
+char cody e=angry fade
+"This's the third day in a row!"
+char phoenix hide
+"My work isn't over until I know the {n}full truth."
+char cody e=confident
+"Yeah, that was crazy today. {p15}{n}The trial was a doozy!"
+"I was sure we were chasing the right {n}guy!"
+char phoenix hide
+"I was too..."
+char cody e=angry
+"So who do you think it is now?"
+char phoenix hide
+"I'm not sure."
+"{c089}(Who DO I think it is now?)"
+char cody e=confident
+"Oh well, right?"
+"{e happy}This means I get another day to play {n}detective!"
+
+script scene62menu

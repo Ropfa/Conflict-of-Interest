@@ -301,7 +301,7 @@ char watters e=angry
 "You don't want to get messed up {n}with those guys."
 "They'll ruin you."
 char phoenix hide
-"{c089}(I guess there really isn't any arguing {n}with that.)"
+"{c089}(There really isn't any arguing {n}with that.)"
 resume
 
 //PRESENT BLACKMAIL LETTER
@@ -355,7 +355,16 @@ bg defense
 fg dbench
 char phoenix e=confident
 "The note we found was nothing more {n}than a copy Rivales kept for {n}himself."
-"I found an identical note yesterday... {n}The one I'm sure belonged to the real {n}target!"
+bg witness
+fg wbench
+char watters e=smirk
+"Ha! Why would he do that?!"
+bg defense
+fg dbench
+char phoenix e=normal
+"Does it really matter so much why he{n}did it?"
+"There were two copies of the note."
+"I found an identical one yesterday... {n}{e pointing}The one I'm sure belonged to the real {n}target!"
 sfx /godot/objection.ogg
 fg ObjectionAnim
 pause 5 script

@@ -1,0 +1,57 @@
+label top
+bg wrightanything
+
+examine
+region 214 6 42 82 books
+region 163 32 22 56 charley
+region 16 0 34 49 gramarye
+region 10 151 32 15 spaghetti
+region 108 64 20 20 hulahat
+region 50 135 45 57 hulahat
+region 0 56 86 26 props
+region 93 14 158 63 props
+menu scene60
+
+label books
+char phoenix hide
+"Difficult-looking legal books."
+"I can't remember the last time I{n}opened one of them."
+goto top
+
+label charley
+char phoenix hide
+"This is Charley. He belonged to my {n}mentor, Mia, before she passed{n} away."
+"He's one of the few things around {n}here that hasn't changed."
+goto top
+
+label gramarye
+char phoenix hide
+"Zak Gramarye. He was a great {n}magician."
+"...{p20}And to be frank, he was also {n}kind of a jerk."
+goto top
+
+label spaghetti
+char phoenix hide
+"Why is this even here?"
+goto top
+
+label hulahat
+char phoenix hide
+"Trucy's good at many things, but {n}cleaning up after herself isn't one of {n}them."
+char maya e=confident
+"She probably gets it from her father."
+char phoenix hide
+"You know she's not my biological {n}daughter, {p5}right?"
+char maya e=thinking
+"Oh... {p10}Yeah."
+goto top
+
+label props
+char phoenix hide
+"Props left over from Trucy's latest {n}magic show."
+goto top
+
+label none
+char phoenix hide
+"No clues here."
+goto top

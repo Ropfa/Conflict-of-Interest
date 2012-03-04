@@ -1,0 +1,50 @@
+label top
+bg entrance2
+
+list scene62bmove
+li Wright Anything Agency
+li Detention Center
+li Reception
+li Abandoned Warehouse
+showlist
+menu scene62b
+
+label Wright Anything Agency
+mus
+script scene60menu
+
+label Detention Center
+mus
+script scenewattersgone2
+
+label Reception
+noflag receptionget3 scene65
+flag receptionget3 ifthen
+label scene65
+mus
+script scene65
+label ifthen
+noflag obytalk1 AND obytalk2 scene65menu
+flag obytalk1 AND obytalk2 ifthen2
+label scene65menu
+mus
+script scene65menu
+label ifthen2
+noflag sarahagain scene67
+flag sarahagain ifthen3
+label scene67
+mus
+script scene67
+label ifthen3
+noflag brokesarahpsyche scene67menu
+flag brokesarahpsyche scene68menu
+label scene67menu
+mus
+script scene67menu
+label scene68menu
+mus
+script scene68menu
+
+label Abandoned Warehouse
+mus
+script scene70

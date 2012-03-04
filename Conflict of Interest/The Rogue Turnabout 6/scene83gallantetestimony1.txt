@@ -1,0 +1,480 @@
+set _list_back_button false
+set wrongevidence 1
+
+bg witness
+fg wbench
+char gallante e=ba
+fg TestimonyAnim fade name=tanim
+nt
+delete name=tanim
+"{n}{center}{c940}-- A Mere Fanboy --"
+
+mus Confrontation - Allegro.ogg
+bg witness
+fg wbench
+
+char gallante e=ba
+"{tbon}Alas, I am not the real hero."
+"{tbon}I am but one of his imitators{p20} - his copycats."
+"{tbon}Twas not I who scaled that fortress and slew the beast."
+"{tbon}I wish I had been there to witness such an event."
+
+mus
+bg black
+pause 30
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You disappoint me, Mr. Black."
+"Of all the people you could choose to look up to, you picked a criminal?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"He's no copycat, Williamson. This man's the real thing!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"We'll see. {p20}{sfx realization}Mr. Black...?"
+bg witness
+fg wbench
+char gallante e=ba
+"Yes, Sir Prosecutor?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If you are innocent as you say you are, then you need not worry."
+"I won't let Wright do to you what he did to Detective Watters."
+bg witness
+fg wbench
+char gallante e=ba
+"Much obliged, Sir Prosecutor. I knew I could count on you."
+
+bg witness
+fg wbench
+char gallante e=ba
+bg main name=main y=192 stack
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
+delete name=main
+nt
+"{n}{center}{c940}-- A Mere Fanboy --"
+mus Confrontation - Allegro.ogg
+set show_gallante1C1 false
+label start
+cross gallantetestimony1
+
+statement gallante1A
+bg witness
+fg wbench
+char gallante e=ba
+"Alas, I am not the real hero."
+
+statement gallante1B
+bg witness
+fg wbench
+char gallante e=ba
+"I am but one of his imitators{p20} - his copycats."
+
+statement gallante1C
+bg witness
+fg wbench
+char gallante e=ba
+"Twas not I who scaled that fortress and slew the beast."
+
+statement gallante1C1 test show_gallante1C1
+bg witness
+fg wbench
+char gallante e=ba
+"The all-seeing eye slept that morn, preventing me from proving my innocence to you now."
+
+statement gallante1D
+bg witness
+fg wbench
+char gallante e=ba
+"I wish I had been there to witness such an event."
+
+label comments
+bg witness
+fg wbench
+char gallante e=ba
+"Your words fall on deaf ears, Sir Lawyer."
+"You are alone in this quest to convict me... Would it not be wiser to simply surrender?"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Never..."
+bg witness
+fg wbench
+char gallante e=ba
+"Only a fool does not give up when he sees he is beaten. You have nothing to fight me with."
+goto start
+
+label press gallante1A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Sir Gallante is not a hero!"
+bg witness
+fg wbench
+char gallante e=hunch
+"How dare you question him!"
+sfx shiny
+char gallante e=unsheathe
+"The Tenebrous Templar is far greater than you will ever be!"
+bg judge
+char judge e=surprised
+"L{p5}-L{p5}-L{p5}-Let's keep things civilized in here! Mr. Black, please put that toy away!"
+bg aide
+char maya e=bench-ugh
+"The judge's eyesight must be really bad if he thinks that thing's a toy."
+"How did he even get that thing in here?!"
+char phoenix hide
+"It does give some unfortunate implications for the safety measures in this building."
+bg judge
+char judge e=normal
+"Please continue, Mr. Black."
+resume
+
+label press gallante1B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You've been saying this whole investigation that you hate him."
+"Why the sudden change?"
+bg witness
+fg wbench
+char gallante e=ba
+"Perhaps I was ashamed and have been hiding my true allegiance from you."
+"I believed that my obsession would be seen as a sign of weakness."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"It's because of people like you that the investigation has lasted three years."
+"There have been too many red herrings for me to even count!"
+bg judge
+char judge e=surprised
+"Isn't a herring a kind of fish?"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"No, Your Honor. A red herring is a lead which ends up going nowhere."
+bg judge
+char judge e=warning
+"So these fish have been distracting you from finding the real criminal!"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"Er... Not exactly."
+"However, as long as the imitators don't actually try to reenact the crimes..."
+"...there isn't really anything we can arrest them for."
+"There aren't any crimes against wearing a costume."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(I should have seen this coming.)"
+"{c089}(He's trying to prove he's innocent by saying that he was pretending to be himself!)"
+resume
+
+label press gallante1C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"What is that supposed to mean?!"
+bg witness
+fg wbench
+char gallante e=ba
+"Perhaps my poetic license is too much for you to comprehend."
+"I was referring to Michael Rivales and his tower."
+bg judge
+char judge e=surprised
+"Ah, poetry. I love poetry!"
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Th{p5}-That wasn't poetry. That was..."
+bg witness
+fg wbench
+char gallante e=ba
+"I shall refrain from it in the future if it bothers you, Sir Wright."
+bg judge
+char judge e=warning
+"Well, I hope you're happy! Now we don't get any more poetry!"
+char phoenix hide
+"{c089}(Oh, come on! How am I the bad guy here?!)"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Are we really supposed to take your word for it that you didn't do it?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"We have no reason to believe that he did."
+bg witness
+fg wbench
+char gallante e=ba
+"Yes, in fact, it was only a cruel twist of fate that I do not stand before you today with proof of my innocence."
+bg defense
+fg dbench
+char phoenix e=normal
+"P-Proof?"
+bg witness
+fg wbench
+char gallante e=ba
+"I do not actually have it, as I said... But I know that it once existed."
+bg judge
+char judge e=surprised
+"Hurry, Mr. Black! I want to hear all about this proof!"
+set show_gallante1C1 true
+resume
+
+label press gallante1C1
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"...{p20}Huh?"
+bg witness
+fg wbench
+char gallante e=ba
+"The Rivales Clan has eyes everywhere."
+"They see all. {n}{p20}Hear all.{p20} {n}Know all."
+bg judge
+char judge e=normal
+"An all-seeing eye? {e headshake}{p50}{e normal}I don't think I like the sound of that!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I'm sure he was being metaphorical, Your Honor."
+bg witness
+fg wbench
+char gallante e=ba
+"Yes, you are correct, Sir Prosecutor."
+"That was, once again, poetic license. I apologize."
+bg judge
+char judge e=surprised
+"O{p5}-Oh! Poetry! {n}In that case, it's perfectly fine!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"Will the witness please try to make more sense?"
+bg judge
+char judge e=warning
+"Overruled!"
+bg defense
+fg dbench
+char phoenix e=sweating
+"But I didn't even object!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"He said overruled.{p20}{n}Stop whining."
+bg aide
+char maya e=bench-strict
+"Why don't you like poetry, Nick?"
+char phoenix hide
+"Not you too, Maya..."
+resume
+
+label press gallante1D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That's rather morbid. A man was brutally slaughtered."
+bg witness
+fg wbench
+char gallante e=ba
+"Not a man, but a devil. {n}{p10}A demon incarnate.{n}{p10}His blight has been cured."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"It isn't okay to celebrate the death of anyone!"
+bg witness
+fg wbench
+char gallante e=ba
+"The righteous have triumphed over the wicked. Tis enough reason to celebrate as any."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"When civilians take the law into their own hands, we're left with anarchy."
+"Is that what you want for us?"
+bg witness
+fg wbench
+char gallante e=hunch
+"This city is a hive of scum and villainy. {sfx shiny}{e unsheathe}"
+"The only solution is to cleanse the evil that dwells among us."
+"Sir Gallante is the only hope for this cesspool of wickedness."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You're insane."
+bg witness
+fg wbench
+char gallante e=hunch
+"Perhaps. However, I do not believe that there is a law against insanity."
+goto comments
+
+//PRESENT SECURITY SYSTEM
+
+label security2 gallante1C1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+script scene84
+
+label none
+set _cr_back_button true
+is wrongevidence 1 wrongevidence1
+is wrongevidence 2 wrongevidence2
+is wrongevidence 3 wrongevidence3
+
+label wrongevidence1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves that the {n}witness is lying!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Actually, no... {p15}{n}However, it does prove that you're {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Excuse me...?"
+bg judge
+char judge e=normal
+"I think what he's trying to say is that {n}a penalty is in order here."
+sfx damage.wav
+penalty -20
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That didn't quite go as planned...)"
+pause 20 script
+set wrongevidence 2
+clear
+goto start
+
+label wrongevidence2
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -20
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+set wrongevidence 3
+clear 
+goto start
+
+label wrongevidence3
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Your Honor!{n}{p20}That statement contradicts the {n}evidence!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, it does...{p20}{n}{e pointing}And I can prove it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}You can't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I...{n}{p20}{e sweating}No, {p20}I can't."
+bg judge
+char judge e=normal
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
+"Then I wouldn't have to give you {n}penalties."
+char judge e=warning
+"{sfx shout-general}Like this one!"
+sfx damage.wav
+penalty -20
+is penalty 0 failure
+pause 20 script
+set wrongevidence 1
+clear 
+goto start
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

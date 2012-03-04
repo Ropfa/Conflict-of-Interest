@@ -1,0 +1,105 @@
+bg Abandonedluminol3
+pause 30
+sfx shockingreveal
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+
+pause 60 script
+
+char phoenix hide
+"{c089}("A symbol, drawn with blood."{n}...{p20}Just like the file said.)"
+"{c089}(There's no question what that thing {n}is.)"
+
+char maya e=worried
+"Is{p5}-Is that...
+
+char phoenix hide
+"I think it is, Maya. {n}It's {c940}Sir Gallante's mark{c999}."
+
+mus
+char gallante hide
+"Yes, that is correct."
+
+"{f}{f}{f}{next}"
+bg Abandonedbuildingday3
+pause 50 script
+
+char gallante e=ba fade
+sfx shockingreveal
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+char gallante e=ba
+"Your progress in the case is {n}impeccable, Sir Wright."
+"It appears that I have {n}underestimated you."
+"A rather foolish mistake on my part. {n}It will not happen again, I assure {n}you."
+
+char phoenix hide
+"{sfx shout-general}Don't come any closer!"
+
+char maya e=pumped
+"Y{p5}-Y{p10}-Yeah! {p15}S{p5}-S{p5}-Stay b{p5}-back!!"
+
+char phoenix hide
+"Maya, get behind me."
+
+char gallante e=ba
+"You fear me? {p15}As well you should."
+"I was friendly with you before, Sir {n}Wright..."
+"...But things are different now."
+
+char phoenix hide
+"The pressure's on a bit? Feeling the {n}noose tighten around you yet?"
+
+char gallante e=ba
+"I do not wish to resort to hostilities {n}against a fellow servant of justice."
+"You would be wise to cease your {n}investigation immediately."
+
+char phoenix hide
+"You're not going to do anything to {n}either of us."
+
+char gallante e=ba
+"I will do what I must."
+"I am protector of this city. {n}If I fall, the city falls."
+"You will not stand in my way, Sir {n}Wright."
+
+char maya e=disheartened
+"N{p5}-Nick. P{p5}-Please... {p15}Let's go..."
+
+char gallante e=unsheathe
+"You should heed the lady's advice."
+
+mus
+pause 50 script
+sfx alitawings
+pause 30 script
+"{f}{f}{f}{next}"
+char gallante e=hawk
+pause 60 script
+sfx realization
+pause 40 script
+char phoenix hide
+"{c089}(It's that bird!)"
+"{c089}(It came, almost as if he called it...)"
+
+char maya e=disheartened
+"Nick, I'm scared..."
+
+char phoenix hide
+"..."
+
+char gallante e=hawk
+"..."
+
+char phoenix hide
+"Fine. {p20}We'll go."
+
+char gallante e=hawk
+"You are a wise man."
+
+char phoenix hide
+"You win this round, Gallante."
+
+bg black fade
+setflag thetenebroustemplar
+pause 60 script
+script scene71

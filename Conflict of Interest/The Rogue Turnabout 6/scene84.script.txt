@@ -1,0 +1,188 @@
+bg defense
+fg dbench
+char phoenix e=normal
+set _ev security2
+showevr
+"Is this your "all-seeing eye"?"
+
+bg witness
+fg wbench
+char gallante e=ba
+"Ah, yes. You are a perceptive one."
+
+bg defense
+fg dbench
+char phoenix e=confident
+"That's what I thought."
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+"Are you forgetting something?{p20}{n}There were no cameras in the penthouse."
+"Even if the power had been working, there wouldn't have been any footage of the crime!"
+
+bg witness
+fg wbench
+char gallante e=hunch
+"{sfx shout-shock}{s5}!!!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"There's a reason the crime had to happen there, and there alone."
+"That was the only place in the building where the killer could not be seen!"
+
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"As much as I'd like to entertain your hypothesis, there is a rather large flaw with it."
+"There's no way he could've avoided the cameras on his way up."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"The power was out."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"How would he have known that? A blackout isn't the kind of thing that you plan for."
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c090}Isn't it...?"
+label redo
+set _cr_back_button false
+present
+
+label fuse
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"I'd actually say that the blackout wasn't random at all. {p20}It was all part of the plan."
+set _ev fuse
+showevr
+char phoenix e=thinkign
+"The fuse box on the roof had been tampered with."
+"There was a device on it that activated when I touched it, and turned off everything in the building."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That was you, huh? Good to know."
+bg defense
+fg dbench
+char phoenix e=normal
+"The question here, of course, is why was that even on there in the first place?"
+"{e pointing}{sfx shout-objection}The only answer can be that it was meant to sabotage the building's power systems!"
+bg judge
+char judge e=surprised
+"S{p5}-Sabotage?! {n}How horrible!"
+bg defense
+fg dbench
+char phoenix e=pointing
+"The blackout happened so that it was possible for somebody to infiltrate the building!"
+mus
+bg witness
+fg wbench
+sfx headbang
+char gallante e=pound
+"{s20}{p2}{s5}{p20}{next}"
+bg defense
+fg dbench
+char phoenix e=ohshit
+"{sfx shout-shock}GAH!!!"
+bg judge
+char judge e=surprised
+"Eep!! C{p5}-Careful there, Mr. Black! You might break something!"
+bg witness
+fg wbench
+char gallante e=hunch
+"My apologies, Sir Judge. However, I felt it best to get your attention."
+bg judge
+char judge e=surprised
+"Yes, well, please... Just say something next time!"
+bg witness
+fg wbench
+char gallante e=hunch
+"Sir Judge, I believe that I must have a chance to defend myself further."
+"The accusations made by the defense are entirely unfounded."
+bg judge
+char judge e=surprised
+"You can refute their claims?"
+bg witness
+fg wbench
+char gallante e=hunch
+"Of course I can..."
+script scene85gallantetestimony2
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Why are you showing us that?"
+bg defense
+fg dbench
+char phoenix e=normal
+"This proves that there's a contradiction."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No, it doesn't."
+bg defense
+fg dbench
+char phoenix e=confident
+"Yes, it does."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No... It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes. It does!"
+bg judge
+char judge e=warning
+"Stop acting like a pair of children, you two!"
+sfx damage
+penalty -20
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I'll have to try something else.)"
+"{c090}(Is it possible the blackout was planned for...?)"
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

@@ -1,0 +1,143 @@
+label top
+bg pent2
+
+list scene66talk1
+li Today's trial
+flag todaystrialtalk todaystrialtalk
+showlist
+list scene66talk2
+menu scene66
+label todaystrialtalk
+li Forging evidence
+li Complications
+label scene66talk
+showlist
+menu scene66
+goto scene66talk
+
+label Today's trial
+char obadiah e=front-serious
+char phoenix hide
+"Believe me, Williamson. I didn't {n}intend for today to turn out {n}the way it did."
+char obadiah e=front-serious
+"Oh, I'm sure!"
+"If it had gone your way, you'd have {n}gotten a not guilty verdict and been {n}on your merry way!"
+"Have the witness take the fall. {n}{p10}That's how it always has to end."
+"I'm glad your friend had the guts to {n}speak up."
+char maya e=pumped
+"Nick wouldn't let an innocent man be {n}convicted!"
+char obadiah e=front-angry
+"{sfx damage}He almost did!"
+char phoenix hide
+"Prosecutor, please... {n}Today was a huge accident."
+"I was only trying to chase the guy I {n}thought had done it."
+char obadiah e=front-worried
+"Right. {p15}{delay 1}"An accident"..."
+"I already have enough complications {n}on this case."
+"Detective Watters worked with me {n}on it for the past three years."
+"Now I'm left having to finish without {n}a lead detective."
+char gumshoe e=confident
+"You've got me, sir!"
+char obadiah e=front-serious
+"Be quiet, Gumshoe."
+char gumshoe e=disheartened
+"Oh..."
+pause 30 script
+char obadiah e=front-serious
+"I don't know which piece of evidence {n}it was yet..."
+"...But when I find out what exactly it {n}was you forged, {e front-angry}it will all be over {n}for you!"
+char phoenix hide
+"Wh{p5}-{sfx shout-general}What?! {sfx shout-objection}Hey!!"
+setflag todaystrialtalk
+goto top
+
+label Forging evidence
+char obadiah e=front-serious
+char phoenix hide
+"Are you seriously accusing me of {n}{sfx shout-general}forging evidence in the trial this {n}morning?!"
+char obadiah e=front-serious
+"Is it that much of a stretch? {p10}{n}You've done it before."
+char phoenix hide
+"No, I {sfx shout-general}didn't!!"
+char obadiah e=front-serious
+"You were disbarred for it. That was {n}the best thing that could have {n}happened for the courts."
+"It's a shame they let you back in."
+char phoenix hide
+"I was {sfx shout-general}framed! They only gave me {n}back my badge after I was proven {n}innocent."
+char obadiah e=front-angry
+"Proven...?"
+"You used a computer simulation to {n}{sfx shout-general}"prove" that somebody else had {n}done it..."
+"Somebody who you held a grudge {n}against, I might add!"
+"Am I really supposed to put faith in a {n}program designed by a man who has {n}already been accused of forgery?"
+char maya e=mad
+"Nick never forged {sfx shout-general}anything!"
+char obadiah e=front-angry
+"You can shout that all day, but it {n}won't make me believe you."
+"You defense attorneys are all the {n}same... {p10}{delay 1}Never thinking about {n}anything but winning."
+char phoenix hide
+"I don't know what kind of attorneys {n}you've met, {p10}but I'm not like them."
+char obadiah e=front-angry
+"{sfx shout-general}Actions before words!"
+"I've {sfx damage}yet to see anything from you {n}that shows otherwise."
+setflag obytalk1
+goto top
+
+label Complications
+char obadiah e=front-serious
+char phoenix hide
+"What did you mean when you said {n}that this case had complications?"
+char obadiah e=front-serious
+"To put it simply, there's about a {n}hundred Sir Gallantes out there..."
+"...and only one of them is the guy {n}we're looking for."
+char maya e=thinking
+"A hundred Sir Gallantes...?"
+char obadiah e=front-angry
+"Morons in homemade costumes... {p10}{n}{sfx damage}That's what they are!!"
+"{f}{sfx screenwipe}{next}"
+bg pent4
+char watters e=serious
+grey value=1
+"Sir Gallante always leaves his own {n}little mark after each crime. {n}{p20}A calling card of sorts."
+"It's how we can tell his crimes apart {n}from those of his copycats." 
+char phoenix hide
+"I'd imagine that a super hero has {n}quite a few imitators."
+char watters e=confused
+grey value=1
+"No kidding."
+"Good things most of the people {n}trying to copy him are also the ones {n}who are dumb enough to get caught."
+sfx screenwipe
+"{f}{next}"
+bg pent2
+char obadiah e=front-serious
+char phoenix hide
+"{c089}(He must be talking about the {n}imitators.)"
+char obadiah e=front-serious
+"Gallante has achieved quite a lot of {n}fame among the more impressionable."
+"There have been several attempts to {n}copy his work... {p20}{e front-worried}{n}most failed horribly."
+"The police have had to keep a close {n}eye on who we talk to about the {n}case."
+"We try to keep the details classified, {n}so that we can tell the fake Gallantes {n}from the real one."
+"We haven't had as much luck as I'd {n}like."
+char phoenix hide
+"It must be hard having to deal with {n}the copycats and the real killer at {n}the same time."
+char obadiah e=front-worried
+"It would be a whole lot easier if {n}Detective Watters hadn't leaked {n}everything in the first place."
+char maya e=normal
+"Hey, we all make mistakes, right?"
+char obadiah e=front-angry
+"That's a rather {sfx shout-angry}large mistake!!"
+char phoenix hide
+"He's right, Maya."
+"That little blunder by Watters {n}probably ruined their chances of {n}ever running a clean investigation."
+char obadiah e=front-serious
+"It's because of {sfx shout-general}him that we have little {n}fanboys like Mr. Hackins running {n}around..."
+"...And he's actually one of the sane {n}ones."
+char obadiah e=front-worried
+"You should see some of the weirdos {n}that we've had to arrest in the {n}past few months."
+char phoenix hide
+"What have you been keeping {n}confidential from the public?"
+char obadiah e=front-serious
+"If I told you, it wouldn't be {n}confidential, would it?"
+char phoenix hide
+"...{n}{p30}{c089}(I don't think he's going to say any {n}more on this subject.)"
+setflag obytalk2
+goto top

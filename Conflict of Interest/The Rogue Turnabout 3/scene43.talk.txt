@@ -29,7 +29,7 @@ char phoenix hide
 "{c089}(It's the only one that doesn't have {n}an X through it.)"
 "{c089}(That must mean that he's the {n}only one they never succeeded in {n}catching.)"
 "I guess it would make sense that {n}they would want him dead."
-bg pent2
+bg pent4
 char maya e=disheartened
 pause 40 script
 "All these people are gone... {n}Just because the Rivales Family {n}didn't like them."

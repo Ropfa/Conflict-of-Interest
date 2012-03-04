@@ -1,0 +1,67 @@
+label top
+bg Abandonedbuildingday3
+
+examine
+region 25 97 31 66 stepladder
+region 33 54 49 30 vent
+region 86 159 17 5 blackmail
+region 118 114 8 6 photo
+region 148 72 32 38 window
+region 134 160 53 22 crates
+menu scene70
+
+label stepladder
+char phoenix hide
+"Just a regular old step-ladder."
+char maya e=normal
+"Nick, that's not a step-ladder. {n}It's a ladder!"
+char phoenix hide
+"{c089}(You'd think that by now, we'd have {n}this figured out.)"
+goto top
+
+label vent
+char phoenix hide
+"Thats the vent that Maya crawled {n}into earlier."
+"It looks empty now."
+goto top
+
+label blackmail
+char phoenix hide
+"A copy of the blackmail letter found {n}in the Rivales penthouse."
+"It was targeted at Watters."
+goto top
+
+label window
+char maya e=normal
+"Hey, Nick! I don't think we've been up {n}to the roof yet."
+char phoenix hide
+"The roof?"
+char maya e=normal
+"{sfx realization}The roof of the Rivales Tower. {n}{p10}That's where Cody saw Sir Gallante."
+"There might be some clues up there."
+char phoenix hide
+"Maybe we should check it out after {n}this."
+goto top
+
+label crates
+char maya e=thinking
+"Weren't these crates in a different {n}place yesterday?"
+char phoenix hide
+"You're right, I think they were."
+char maya e=worried
+"Who would've moved them?"
+"I didn't think anybody would want to {n}come into a creepy building like {n}this."
+char phoenix hide
+"Nobody... {p15}but Sir Gallante, that is."
+char maya e=pumped
+"He must've come in here and cleaned {n}everything up!"
+char phoenix hide
+"{c089}(Sir Gallante doesn't leave his mark {n}at the crime scene...)"
+"{c089}(...but it shows up in a nearby building {n}a few days later.)"
+"{c089}(I wonder...)"
+script scene70b
+
+label none
+char phoenix hide
+"No clues here."
+goto top

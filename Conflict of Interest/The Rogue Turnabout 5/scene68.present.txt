@@ -1,0 +1,10 @@
+present
+label top
+menu scene68
+bg reception
+char sarah e=crying
+
+label none
+char sarah e=bored
+"Sorry, I don't really feel like talking {n}much right now."
+goto top

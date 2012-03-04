@@ -1,0 +1,205 @@
+bg judge
+char judge e=normal
+"Now that we have a confession, I believe that we can end this trial."
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"It's finally over... It thought this case might never be solved."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"You're welcome."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Three years... I was on this case for three years..."
+"...and now you come and solve it in three days without any help."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"That's not true. I had plenty of people help me."
+"I couldn't have done it without them."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I don't know who you think you are, Wright... but this doesn't end here."
+"I still know what you've done to get where you are today."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"There really is no changing your mind, is there?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"{sfx shout-general}Bah!"
+
+bg judge
+char judge e=normal
+"I believe that it is time to hand things over to the jurists."
+
+bg black fade
+pause 100 script
+bg judge
+char judge e=normal
+fade
+pause 50 script
+"The verdict is back."
+"Thanks to the confession, the decision was unanimous."
+"The jury has found the defendant, Wayne Parker..."
+pause 30
+notguilty
+pause 30
+bg courtparker
+sfx courtcheer
+pause 200
+bg judge
+char judge e=normal
+"Court is adjourned."
+pause 60
+bg black fade
+pause 150 script
+
+bg courtlobby
+mus Solution - Splendid Deduction.ogg
+
+char maya e=cheerful
+"Alright, Nick!"
+
+char cody e=happy
+"Yeah, pops!{n}You did it!"
+
+char phoenix hide
+"I have you two to thank for that."
+
+char cody e=confident
+"Nah, you're just being modest.{n}You're the real hero here!"
+
+char maya e=confident
+"Yeah, Nick. You just took down a serial killer! And saved two people in the process!"
+
+char maya e=thinking
+"I guess four, if you count us."
+
+char cody e=happy
+"It must make you feel better to know that you're not going to be bisected in your bed tonight."
+
+char phoenix hide
+"Yes, I must say that it does."
+
+char cody e=confident
+"Phoenix Wright: Defender of the innocent and foe to all that is evil!"
+
+char maya e=pumped
+"Yeah!!"
+
+char cody e=happy
+"YEEEEAAAAHHHH!!!"
+
+char phoenix hide
+"Well, gee. Thanks, you guys."
+
+char cody e=confident
+"Maybe you should take up the mantle of Sir Gallante now!"
+
+char phoenix hide
+"I... might pass on that one."
+
+char maya e=confident
+"Nick couldn't do that. He'd be afraid of the flying part."
+
+char phoenix hide
+"Right. That's it."
+
+char parker e=sad
+"Th{p5}-Thank you, Mr. Wright."
+"I'd be a dead man without you."
+
+char phoenix hide
+"Mr. Parker? Is everything all right?"
+
+char maya e=cheerful
+"You should be celebrating!"
+
+char parker e=sad
+"*sniff*{n}I just... Why?"
+
+char maya e=worried
+"What are you talking about? {n}Why what?"
+
+char phoenix hide
+"You mean your friend, Mr. Black. Don't you?"
+
+char parker e=sad
+"*sob* Mmhmm. Why'd he do it, Mr. Wright?"
+"The Virgil I knew wasn't crazy. He wouldn't go around killing people for no reason."
+
+char phoenix hide
+"Well, I can't really say for sure. I can't read minds."
+
+char parker e=crying
+"Right... I knew that."
+
+char phoenix hide
+"However, if I had to guess..."
+"{c090}I would say that this is why he did it..."
+set _cr_back_button false
+present
+
+label parker$
+set _cr_back_button true
+char phoenix hide
+"He did it for you, Mr. Parker."
+char parker e=disturbed
+"Wh-wh-wh-WH-WH-WH-WH...{p60}{n}{e sad}What...?"
+char phoenix hide
+"You've been a close friend to him for several years now."
+"He saw how much the Rivales Family was destroying your life. He wanted to help."
+"With the police force too scared to do anything, he took the only course of action that made sense to him."
+char parker e=sad
+"Virgil...?{n}I... I can't believe it...{n}He did all of it to protect me?"
+char phoenix hide
+"You can finally leave them now, Mr. Parker. You're free."
+char parker e=sad
+"I... I......{n}{e smile}Thank you, Mr. Wright."
+"Thank you both for everything!"
+bg black fade
+set _cr_button false
+"And so ended the Sir Gallante investigation."
+"After a long and bloody three years, the law had finally managed to catch up with him."
+"However, for me, this was just the beginning."
+"This was one of several cases I would take in the next few months..."
+"...which would remind me of what it means to truly be a lawyer."
+bg endtrt fade
+pause 300
+mus
+script credits
+
+label none
+char phoenix hide
+set _cr_back_button true
+"I think this should explain everything for you."
+char parker e=sad
+"*sniff* No. Not really."
+char phoenix hide
+"I'm sorry. I guess even I don't have all the answers."
+char parker e=crying
+"*sniff* It's okay."
+"You've already done so much for me. I guess I'll just never know."
+"Thank you for everything, Mr. Wright."
+bg black fade
+set _cr_button false
+"And so ended the Sir Gallante investigation."
+"After a long and bloody three years, the law had finally managed to catch up with him."
+"However, for me, this was just the beginning."
+"This was one of several cases I would take in the next few months..."
+"...which would remind me of what it means to truly be a lawyer."
+pause 200
+mus
+script credits

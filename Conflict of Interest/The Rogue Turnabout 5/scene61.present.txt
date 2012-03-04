@@ -1,0 +1,54 @@
+present
+label top
+menu scene61
+bg detentionnew
+fg detention name=1
+
+label gun2
+delete name=1
+char maya e=thinking
+"I've been wondering something..."
+fg detention name=1
+char watters e=serious
+"Yeah?"
+delete name=1
+char maya e=thinking
+"Your gun fell thirty stories and hit {n}Gumshoe on the head."
+char maya e=normal
+"Wouldn't a crash like that make it {n}misfire?"
+fg detention name=1
+char watters e=serious
+"No. {p20}It was empty."
+delete name=1
+char maya e=surprised
+"Empty...?"
+fg detention name=1
+char watters e=serious
+"As far as I'm concerned, that thing is {n}just for show."
+"I never carry around a loaded {n}weapon."
+"Regulations say I'm supposed to be {n}prepared at all times, {p10}but I don't {n}really bother."
+char watters e=sad
+"I could never actually shoot {n}someone, even if my life depended {n}on it."
+char phoenix hide
+"{c089}(I guess Williamson was right about {n}him.)"
+delete name=1
+char maya e=thinking
+"Wait... {p15}{e cheerful}That means that you were {n}never in any danger from Mr. {n}Rivales!"
+fg detention name=1
+char watters e=confused
+"Yeah, at least until he found out that {n}it was empty and loaded it himself."
+"That's exactly what he did too."
+"Good thing he only had time to load {n}one bullet in there..."
+"...or somebody down there might've {n}had a really bad day."
+char phoenix hide
+"{c089}(Gumshoe might've come out of that {n}with a lot worse than just a {n}concussion.)"
+goto top
+
+
+label none
+fg detention name=1
+char watters e=confused
+"Man, like I care about that right now!"
+char phoenix hide
+"{c089}(Maybe you don't... {n}{p15}But you probably should!)"
+goto top

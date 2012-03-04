@@ -1,0 +1,47 @@
+bg Abandonedbuildingday3
+char maya e=normal
+"Why are you so quiet, Nick?"
+
+char phoenix hide
+"{c090}Let me try something..."
+label redo
+set _cr_back_button false
+present
+
+label luminol
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char phoenix hide
+"It's just a hunch, but I think this {n}luminol is just what we need right {n}now."
+char maya e=normal
+"Well, let's try it out!"
+script luminol
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char maya e=thinking
+"What are you going to do with that?"
+char maya e=nod
+"Oh! {e cheerful}I know!"
+sfx knifethrow
+pause 10 script
+sfx splat
+pause 20 script
+char phoenix hide
+"{sfx shout-general}Hey! {p10}What did you throw that for? {p10}{n}It might've broken!"
+char maya e=thinking
+"You mean that's not what you were {n}going to do with it!"
+char phoenix hide
+"{sfx damage}No!"
+"{c089}(I will never understand this woman's {n}thinking process...)"
+char maya e=mad
+"Well, you weren't exactly being clear {n}yourself!"
+"What else was I supposed to {sfx shout-general}do with {n}it?!"
+char phoenix hide
+"Maybe I just need to find something {n}else to use..."
+goto redo

@@ -1,0 +1,184 @@
+bg rooftophawk
+char maya e=thinking
+set _ev cord
+showevl
+"What do you think this thing is here {n}for?"
+char phoenix hide
+"That's a good question."
+"{c089}(This cable is completely out of place {n}here.)"
+"{c090}It looks like it can be combined with {n}something else..."
+label redo
+set _cr_back_button false
+present
+
+label strange
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+set _ev strange
+sfx showevidence
+showevr
+char phoenix hide
+"What about this?"
+char maya e=normal
+"Isn't that the thing I found in the {n}vent?"
+char phoenix hide
+"It looks like these little doohickeys {n}could snap around it."
+sfx handcuffs
+pause 20 script
+sfx handcuffs
+hideevr
+hideevl
+set _ev harness
+showevl
+sfx showevidence
+"There."
+char maya e=cheerful
+"Hey, that looks like a bungee cord!"
+char phoenix hide
+"Don't get any ideas."
+hideevl
+fg harnessev name=harnessev
+nt
+"{sfx evidence updated.wav}{c099}Harness added to the court record."
+addev harness
+delev cord
+delev strange
+delete name=harnessev
+pause 20 script
+char maya e=cheerful
+"Here, give it to me."
+sfx guitarcase
+pause 20 script
+showevl
+char maya e=normal
+"How do I look?"
+char phoenix hide
+"It looks kind of big on you."
+char maya e=pumped
+"That's not a problem. I'll just tighten {n}the straps a bit!"
+sfx brushel-tiepull
+pause 30 script
+char maya e=pumped
+"I'm gonna go try it out."
+char nothing
+sfx hideevidence
+hideevl
+char phoenix hide
+"Wh{p5}-Wh{p5}-{sfx damage}WHAT?! {n}{p20}{sfx shout-objection}No! {p10}Get back here!!"
+char maya hide
+"It's okay, Nick. This cord looks {n}strong enough to hold me up."
+char phoenix hide
+"You're {sfx shout-shock}completely missing the point!"
+pause 60 script
+char sarah hide nametag=???
+"What are you doing up here?"
+pause 40 script
+char sarah e=normal fade
+char phoenix hide
+"Sarah? {p20}{n}Why aren't you back at reception?"
+char sarah e=normal
+"All the lights in the building just went {n}out."
+"I was going to check and see if {n}something was wrong with the {n}fuse box up here."
+char phoenix hide
+"Th{p5}-The fuse box?{n}{p30}{c089}(Did I do that?)"
+char sarah e=normal
+"Feenie-weenie, you shouldn't be here."
+"Don't you know it's dangerous to {n}play on rooftops like this?"
+char sarah e=ditzy
+"You might fall and smash your {n}precious little body all over {n}the pavement."
+char phoenix hide
+"I'm not really the one you should be {n}worrying about."
+pause 40 script
+sfx realization
+char maya hide
+"Nick? {p20}Who's that you're talking to?"
+char maya e=normal fade
+showevl
+"Oh. Hi, Ms. Keyes!"
+char sarah e=bored
+"Oh.{p20} {delay 1}It's you."
+pause 40 script
+sfx realization
+"What are...{n}{p10}What are you wearing?!"
+char maya e=normal
+"It's a bungee harness."
+char sarah e=bored
+"{delay 1}.........{n}{p30}{sfx dramapound}{e angry}I think you two should leave."
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+char phoenix hide
+"Huh...?"
+char sarah e=angry
+"I'm going to have to ask you two to {n}leave the building."
+char phoenix hide
+"...{p15}I'm sorry, Sarah. Is there--{p10}{next}"
+char sarah e=angry
+"Ms. Keyes..."
+char phoenix hide
+"...{p15}I'm sorry, Ms. Keyes... {n}{p15}Is there something we did wrong?"
+char sarah e=angry
+"This building is a crime scene. The {n}prosecution wouldn't want you {n}meddling with the investigation."
+char phoenix hide
+"{sfx shout-shock}Meddling?!"
+"{c089}(What sparked this?!)"
+char sarah e=angry
+"Please leave. {p20}Now."
+char maya e=surprised
+"S-Sorry..."
+char nothing
+sfx hideevidence
+hideevl
+char sarah e=bored
+"I'm sorry, Phoenix. {p20}{e ditzy}It never would {n}have worked out between the two of {n}us..."
+bg black fade
+pause 80 script
+sfx GK doorslam
+pause 40 script
+
+bg entrance2 fade
+mus Investigation - Core.ogg
+set _music_loop Investigation - Core - loop.ogg
+char maya e=disheartened fade
+"I guess we can't go back in there {n}anymore..."
+char phoenix hide
+"No. {p15}I'm guessing "Ms. Keyes" would {n}be waiting at the reception desk {n}if we were to try."
+char maya e=sad
+"I didn't think she would get so mad {n}over my harness like that."
+char phoenix hide
+"It's not your fault. {n}You couldn't have know."
+"She turned hostile as soon as she {n}found out that we were investigating {n}the roof."
+char maya e=worried
+"N{p5}-Nick... {n}{p15}Do you think..."
+char phoenix hide
+"After today, I don't want to make {n}any judgements on that until I {n}know for sure."
+"We'll have to see how things play out before I make any calls on that."
+"{c089}(Sarah Keyes, what are you hiding?)"
+
+bg black fade
+pause 80 script
+mus
+pause 80
+mus Jingle - Slight Break.ogg
+bg tobecontinued fade
+pause 300
+mus
+pause 300
+bg nothing fade
+exit
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+char maya e=normal
+"Why are you smashing those two {n}things together?"
+char phoenix hide
+"Doesn't it look like they could {n}combine?"
+char maya e=thinking
+"Not really."
+char phoenix hide
+"{c090}(Maybe I'm just using the wrong {n}thing...)"
+goto redo

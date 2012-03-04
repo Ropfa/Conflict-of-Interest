@@ -50,7 +50,7 @@ pause 35 script
 sfx tong
 pause 30 script
 char phoenix hide
-"{c089}(Those screws certainly came out {n}easily.
+"{c089}(Those screws certainly came out {n}easily.)"
 sfx bodyflip
 char maya hide
 "See? {n}{p15}Told you I could do it!"

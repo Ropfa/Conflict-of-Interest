@@ -1,0 +1,29 @@
+set _cr_button true
+
+bg black
+pause 60
+bg wrightanything fade
+
+nt
+"{center}{type}{c090}July 21, 1:30 PM{n}Wright Anything Agency"
+pause 60 script
+
+char maya e=disheartened fade
+char phoenix hide
+"Well, that was certainly a surprise."
+
+char maya e=disheartened
+"I know you were just trying to do the {n}right thing."
+
+char phoenix hide
+"That doesn't change the fact that I {n}almost sent an innocent man off to {n}the gallows."
+
+char maya e=thinking
+"Well, you're going to make it all okay, {n}right?"
+char maya e=cheerful
+"And then we can be friends with Mr. {n}Watters again!"
+
+char phoenix hide
+"Actually, I doubt that he even wants {n}to be associated with me anymore."
+
+script scene60menu

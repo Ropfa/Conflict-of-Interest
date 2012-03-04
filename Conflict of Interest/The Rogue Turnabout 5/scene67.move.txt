@@ -1,0 +1,20 @@
+label top
+bg reception
+
+list scene67move
+li Entrance
+li Penthouse
+showlist
+menu scene67
+
+label Entrance
+noflag dumbbird 62
+flag dumbbird 62b
+label 62
+script scene62menu
+label 62b
+script scene62bmenu
+
+label Penthouse
+mus
+script scene66menu

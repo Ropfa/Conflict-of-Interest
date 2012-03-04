@@ -1,0 +1,339 @@
+set _list_back_button false
+set wrongevidence 1
+
+bg witness
+fg wbench
+char gallante e=hunch
+fg TestimonyAnim fade name=tanim
+nt
+delete name=tanim
+"{n}{center}{c940}-- The Blackout --"
+
+mus Confrontation - Allegro.ogg
+bg witness
+fg wbench
+
+char gallante e=hunch
+"{tbon}A device on a fuse box would have been useless to an intruder."
+"{tbon}What good would it serve anybody, being on the rooftop?"
+"{tbon}It is clear that the blackout was a mere coincidence."
+"{tbon}The earlier theory presented by the prosecution is much more sensible."
+"{tbon}In any case, Sir Watters should be honored, not punished."
+"{tbon}The death of Michael Rivales marked a turning point."
+"{tbon}By slaying him, he has all but vanquished the Rivales Clan."
+
+mus
+bg black
+pause 30
+bg witness
+fg wbench
+char gallante e=ba
+"Sir Judge, you are a wise man, but it seems you have been letting the defense get out of hand."
+bg judge
+char judge e=nodding
+pause 50 script
+char judge e=normal
+"Yes, perhaps I was."
+bg defense
+fg dbench
+char phoenix e=sweating
+"What?!"
+bg witness
+fg wbench
+char gallante e=ba
+"If Sir Prosecutor is unable to control him properly, then perhaps harsher punishments should be instilled..."
+"...a deterrent from further distractions."
+bg judge
+char judge e=normal
+"I agree. This sounds like a good idea."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"What?!"
+bg judge
+char judge e=normal
+"A penalty will be given for any needless pressing of the witness."
+"You may begin, Mr. Wright."
+
+bg witness
+fg wbench
+char gallante e=ba
+bg main name=main y=192 stack
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
+delete name=main
+nt
+"{n}{center}{c940}-- The Blackout --"
+mus Confrontation - Allegro.ogg
+set show_gallante1B1 false
+label start
+cross gallantetestimony2
+
+statement gallante2A
+bg witness
+fg wbench
+char gallante e=hunch
+"A device on a fuse box would have been useless to an intruder."
+
+statement gallante2B
+bg witness
+fg wbench
+char gallante e=hunch
+"What good would it serve anybody, being on the rooftop?"
+
+statement gallante2B1
+bg witness
+fg wbench
+char gallante e=hunch
+"It would need some kind of remote to control it."
+
+statement gallante2C
+bg witness
+fg wbench
+char gallante e=hunch
+"It is clear that the blackout was a mere coincidence."
+
+statement gallante2D
+bg witness
+fg wbench
+char gallante e=hunch
+"The earlier theory presented by the prosecution is much more sensible."
+
+statement gallante2E
+bg witness
+fg wbench
+char gallante e=hunch
+"In any case, Sir Watters should be honored, not punished."
+
+statement gallante2F
+bg witness
+fg wbench
+char gallante e=hunch
+"The death of Michael Rivales marked a turning point."
+
+statement gallante2G
+bg witness
+fg wbench
+char gallante e=hunch
+"By slaying him, he has all but vanquished the Rivales Clan."
+
+label comments
+bg aide
+char maya e=bench-strict
+"This is ridiculous! Why aren't they letting you press anything?!"
+char phoenix hide
+"Black has the judge in the palm of his hand."
+"I can still press things, I just need to be careful about what they are."
+char maya e=bench-strict
+"It's still ridiculous."
+char phoenix hide
+"I never said it wasn't."
+goto start
+
+label press gallante2A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+resume
+
+label press gallante2B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+resume
+
+label press gallante2B1
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+resume
+
+label press gallante2C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+resume
+
+label press gallante2D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+resume
+
+label press gallante2E
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+resume
+
+label press gallante2F
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+resume
+
+label press gallante2G
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+goto comments
+
+label none
+set _cr_back_button true
+is wrongevidence 1 wrongevidence1
+is wrongevidence 2 wrongevidence2
+is wrongevidence 3 wrongevidence3
+
+label wrongevidence1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves that the {n}witness is lying!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Actually, no... {p15}{n}However, it does prove that you're {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Excuse me...?"
+bg judge
+char judge e=normal
+"I think what he's trying to say is that {n}a penalty is in order here."
+sfx damage.wav
+penalty -20
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That didn't quite go as planned...)"
+pause 20 script
+set wrongevidence 2
+clear
+goto start
+
+label wrongevidence2
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -20
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+set wrongevidence 3
+clear 
+goto start
+
+label wrongevidence3
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Your Honor!{n}{p20}That statement contradicts the {n}evidence!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, it does...{p20}{n}{e pointing}And I can prove it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}You can't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I...{n}{p20}{e sweating}No, {p20}I can't."
+bg judge
+char judge e=normal
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
+"Then I wouldn't have to give you {n}penalties."
+char judge e=warning
+"{sfx shout-general}Like this one!"
+sfx damage.wav
+penalty -20
+is penalty 0 failure
+pause 20 script
+set wrongevidence 1
+clear 
+goto start
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

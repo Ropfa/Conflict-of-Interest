@@ -23,8 +23,8 @@ set blackmail_check check_blackmail
 
 set blackmail2_name Blackmail Letter
 set blackmail2_pic blackmail
-set blackmail2_desc A blackmail letter found at the crime scene. Another copy was found across the street in a separate building.
-set blackmail_check check_blackmail
+set blackmail2_desc A blackmail letter found at the crime scene. Another copy was found in the warehouse across the street.
+set blackmail2_check check_blackmail
 
 set autopsy_name Autopsy Report
 set autopsy_pic autopsyreport

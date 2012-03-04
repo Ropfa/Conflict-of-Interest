@@ -1,0 +1,2 @@
+bg blackmailletter fade
+gui Back y=350

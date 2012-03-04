@@ -1,0 +1,99 @@
+set _cr_button false
+mus
+
+bg reception
+
+"{f}{next}"
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+"{f}{next}"
+sfx dramapound.wav
+invert name=reception
+char sarah e=bored
+pause 40 script
+bg black
+char sara e=bored
+sfx rolling.ogg
+pause 10 script
+bg 2-chain-bg
+char sarah e=bored
+fg lockchains-2 name=chains2
+"{s 80 4}{next}"
+pause 20 script
+fg lock y=-8 x=65 name=lock1
+"{sfx Owned.ogg}{f}{next}"
+fg lock y=-8 x=-65 name=lock2
+pause 2 script
+"{sfx Owned.ogg}{f}{next}"
+pause 20 script
+
+nt
+"{n}{center}{c940}-- Working for Rivales --"
+pause 60 script
+mus 'Psyche Lock' 2007.ogg
+set _music_loop 'Psyche Lock' 2007 - loop.ogg
+char phoenix hide
+"Was money really the only thing {n}motivating you to work for Rivales?"
+
+char sarah e=ditzy
+"Yep!"
+
+label redolock1
+char phoenix hide
+"Sarah, you don't seem like a bad {n}person."
+"I'm sure there must have been some {n}greater motive."
+
+char sarah e=normal
+"Oh, sweetie, please! {p10}It's like I told {n}you. {p10}I just needed some way to pay {n}my bills each month."
+"Do you have any idea how hard it is {n}to find work in this economy?"
+
+char phoenix hide
+"{c090}I don't think economics has anything {n}to do with this..."
+present
+label ifback
+goto back
+
+//PRESENT HIT LIST
+label hitlist
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scenepsychesarah2
+
+label none
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+
+char sarah e=bored
+"I don't understand.{n}Why are you showing me that?"
+char phoenix hide
+"Isn't it obvious?"
+pause 50 script
+sfx realization.wav
+char sarah e=ditzy
+"Oh, I see!{n}It's an expression of your burning {n}passionate love for me!"
+char phoenix hide
+"{sfx shout-scream}Uh... {p15}No.{n}{p10}That wasn't quite it."
+sfx damage.wav
+penalty -20
+is penalty 0 magafail
+
+goto redolock1
+
+label back
+char phoenix hide
+"{c089}(I don't have the evidence I need {n}right now.)"
+"{c089}(I'll have to come back later when {n}I've gathered some more.)"
+pause 30
+script scene67menu
+
+label magafail
+mus
+char phoenix hide
+"{c089}(Gah! I'm pushing myself too much!)"
+"{c089}(I need to calm down, collect my {n}thoughts, and try again...)"
+penalty +1
+pause 20
+script scene67menu

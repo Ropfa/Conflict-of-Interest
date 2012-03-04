@@ -1,0 +1,100 @@
+label top
+bg entrance
+
+list scene62talk
+li Big mistake
+label scene62talk
+showlist
+menu scene62
+goto scene62talk
+
+label Big mistake
+char cody e=angry
+char phoenix hide
+"Today's trial was nothing but a huge {n}mistake."
+"If I'm going to get Watters and {n}Parker cleared by tomorrow, I'm {n}going to need to find a new suspect."
+char cody e=angry
+"I guess just do what you always do, {n}right?"
+char cody e=confident
+"Find some people and make them spill {n}the beans!"
+char phoenix hide
+"Who is there left to talk to though?"
+char cody e=angry
+"...{p30}What about that secretary lady?"
+char phoenix hide
+"Ms. Keyes?"
+char cody e=angry
+"Yeah! Her testimony the other day {n}was really fishy."
+"No way she doesn't know more than {n}she's telling you."
+char phoenix hide
+"I guess if we see her again, we'll have {n}to confront her about that."
+"Thanks again, Cody."
+char cody e=confident
+"{sfx shout-general}Hah!{p20}{n}What'd you do without me?"
+char phoenix hide
+"You seem to have a hang on the {n}whole crime investigating thing."
+char cody e=sword
+"You have to be when you're training {n}to be a super hero, pops."
+char phoenix hide
+"Sir Gallante, Jr., eh?"
+char cody e=sword
+"N{p5}-Not exactly."
+mus
+pause 75 script
+set _ev hawk
+showevl
+sfx hawk
+char phoenix hide
+"What the..."
+pause 20 script
+sfx hawk
+char maya e=pumped
+"Nick, it's that bird again!"
+sfx knifethrow
+pause 25 script
+hideevl
+char maya e=surprised
+char phoenix hide
+"{sfx damage}GAH!!"
+bg black
+sfx damage
+"{f}{next}"
+pause 30 script
+sfx alitawings
+"{f}{next}"
+sfx shout-objection
+pause 20 script
+sfx hawk
+pause 20 script
+"{f}{f}{next}"
+delev attorneybadge
+bg entrance2
+sfx alitawings
+char maya e=pumped
+"It's getting away!"
+char phoenix hide
+"Wha..."
+"{sfx damage}Hey!!! {p20}That stupid thing took my {n}badge!"
+char maya e=shock
+"{sfx shout-scream}What?!"
+char maya e=pumped
+char phoenix hide
+"I spent eight years getting that thing {n}back!"
+char phoenix hide
+"I'm not going to let some dumb bird {n}take it!"
+sfx hawk
+pause 20 script
+char phoenix hide
+"{sfx shout-objection}COME BACK HERE!!!"
+pause 30 script
+char maya e=sad
+"...{p30}{delay 1}Too late."
+char cody e=angry
+"You can just get a new one, can't {n}you? {p15}Tell them you lost it?"
+char phoenix hide
+"I{p5}-It wouldn't be the same."
+"{c089}(We have to get that back!!)"
+nt
+"{c099}{sfx evidence updated.wav}Attorney's badge stolen by thieving {n}bird."
+setflag dumbbird
+script scene62bmenu

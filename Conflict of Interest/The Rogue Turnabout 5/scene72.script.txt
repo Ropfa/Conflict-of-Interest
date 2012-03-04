@@ -1,0 +1,20 @@
+bg black
+nt
+"{center}{c090}{type}July 21, 8:00 PM{n}Rivales Tower{n}Rooftop"
+pause 60
+
+bg rooftop fade
+pause 60 script
+char maya e=cheerful fade
+"Nick, look how high up we are!"
+
+char phoenix hide
+"I'd rather not, thank you very much."
+
+char maya e=cheerful
+"This is even higher than we were in {n}the penthouse!"
+
+char phoenix hide
+"{c089}(Find a happy place...{n}{p10}Find a happy place...{n}{p10}Find a happy place...)"
+
+script scene72menu

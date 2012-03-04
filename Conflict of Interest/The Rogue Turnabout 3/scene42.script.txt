@@ -20,6 +20,7 @@ pause 30 script
 "......{n}{p30}What was that?"
 pause 60 script
 "......Hm."
+pause 40 script
 char nothing fade
 
 pause 80 script

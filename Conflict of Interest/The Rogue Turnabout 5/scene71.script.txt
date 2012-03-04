@@ -1,0 +1,31 @@
+bg entrance2 fade
+mus Investigation - Middlegame.ogg
+set _music_loop Investigation - Middlegame - loop.ogg
+
+char maya e=mad fade
+"So that's it? We're not going back {n}there anymore?"
+
+char phoenix hide
+"It doesn't matter. {p10}We found what we {n}needed."
+"That bloody skull will be the key to {n}solving everything. {p10}Somehow, I {n}know it."
+
+fg markev name=markev
+addev mark
+"{sfx evidence updated.wav}{c099}Sir Gallante's Mark added to the court record."
+nt
+delete name=markev
+pause 20 script
+
+char maya e=pumped
+"We're stuck now though!"
+"There's nowhere for us to look {n}after this!"
+
+char phoenix hide
+"Not necessarily..."
+
+bg codysphoto
+char phoenix hide
+"{c089}(The roof of the Rivales Tower...)"
+"{c089}(It's the one place we haven't looked {n}yet.)"
+
+script scene71menu

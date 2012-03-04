@@ -1,0 +1,73 @@
+present
+label top
+menu scene62
+bg entrance
+
+label gallante$
+char cody e=happy
+"He's a real hero!{n}Fighting crime like a boss!"
+char phoenix hide
+"I'm not sure it's best to be idolizing a murderer."
+char cody e=confident
+"Hah! You just don't understand these things."
+goto top
+
+label codyphoto
+char cody e=happy
+"He's a real hero!{n}Fighting crime like a boss!"
+char phoenix hide
+"I'm not sure it's best to be idolizing a murderer."
+char cody e=confident
+"Hah! You just don't understand these things."
+goto top
+
+label poster
+char cody e=happy
+"He's a real hero!{n}Fighting crime like a boss!"
+char phoenix hide
+"I'm not sure it's best to be idolizing a murderer."
+char cody e=confident
+"Hah! You just don't understand these things."
+goto top
+
+label gallantefiles
+char cody e=happy
+"He's a real hero!{n}Fighting crime like a boss!"
+char phoenix hide
+"I'm not sure it's best to be idolizing a murderer."
+char cody e=confident
+"Hah! You just don't understand these things."
+goto top
+
+label gun2
+char cody e=happy
+"The light of {sfx shout-objection}justice!"
+char phoenix hide
+"That light you saw came from a {n}gunshot. It was hardly--{p10}{next}"
+char cody e=happy
+"A {sfx shout-general}beacon from the {sfx damage}heavens which {n}silences the foes of {sfx shout-objection}{n}righteousness!!!"
+char phoenix hide
+"...{p20}Never mind."
+goto top
+
+label sword
+char cody e=happy
+"{sfx shout-objection}YEAH!!!{n}{p10}That's what I'm talkin' about!"
+"That sword's the bringer of justice {n}upon all that is evil!"
+goto top
+
+label luminol
+char cody e=angry
+"That's luminol, right?{n}{p15}Where'd you get that stuff?"
+char phoenix hide
+"Detective Watters forgot it at the {n}crime scene."
+char cody e=confident
+"Hey, don't worry, pops.{n}{p10}I won't tell them you jacked it."
+char phoenix hide
+"{c089}(That's the last thing I want to be {n}worried about right now.)"
+goto top
+
+label none
+char cody e=confident
+"Sorry, pops.{n}I don't know nothing about that."
+goto top

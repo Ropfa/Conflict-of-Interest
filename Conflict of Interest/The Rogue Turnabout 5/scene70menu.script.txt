@@ -1,0 +1,4 @@
+bg Abandonedbuildingday3
+mus Investigation - Middlegame.ogg
+set _music_loop Investigation - Middlegame - loop.ogg
+menu scene70

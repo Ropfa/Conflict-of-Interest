@@ -1,0 +1,67 @@
+label top
+bg wrightanything
+
+list scene60move1
+li Detention Center
+flag whatthehellhero whatthehellhero
+showlist
+list scene60move2
+menu scene60
+label whatthehellhero
+li Rivales Tower
+li Criminal Affairs
+li Black's Apartment
+showlist
+menu scene60
+
+label Detention Center
+noflag wattersdetention scene61
+flag wattersdetention ifthen
+label scene61
+mus
+script scene61
+label ifthen
+noflag whatthehellhero menu
+flag whatthehellhero wattersgone
+label menu
+mus
+script scene61menu
+label wattersgone
+mus
+script scenewattersgone2
+
+label Rivales Tower
+noflag entranceday3 scene62
+flag entranceday3 ifthen
+label scene62
+mus
+script scene62
+label ifthen
+noflag dumbbird scene62menu
+flag dumbbird 62b
+label scene62menu
+mus
+script scene62menu
+label 62b
+mus
+script scene62bmenu
+
+label Criminal Affairs
+mus
+script scene63menu
+
+label Black's Apartment
+noflag dumbbird AND obytalk1 AND obytalk2 scene64
+flag dumbbird AND obytalk1 AND obytalk2 ifthen
+label scene64
+mus
+script scene64menu
+label ifthen
+noflag blacksapartmentday3 scene69
+flag blacksapartmentday3 scene69menu
+label scene69
+mus
+script scene69
+label scene69menu
+mus
+script scene69menu

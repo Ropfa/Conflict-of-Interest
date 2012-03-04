@@ -2,7 +2,7 @@ bg black
 bg courtlobby fade
 
 nt
-"{center}{type}{c090}July 22, 11:37 AM{n}Defendant Lobby No. 3"
+"{center}{type}{c090}July 21, 11:37 AM{n}Defendant Lobby No. 3"
 
 mus Courtroom Lounge.ogg
 set _music_loop Courtroom Lounge - loop.ogg

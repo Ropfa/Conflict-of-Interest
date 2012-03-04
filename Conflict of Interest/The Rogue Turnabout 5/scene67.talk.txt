@@ -1,0 +1,122 @@
+label top
+bg reception
+
+list scene67talk1
+li Missing
+flag missingtalk missingtalk
+showlist
+list scene67talk2
+menu scene67
+label missingtalk
+li The victim
+label scene67talk
+showlist
+menu scene67
+goto scene67talk
+
+label Missing
+char sarah e=normal
+char phoenix hide
+"Where have you been? {n}{p10}We didn't see you yesterday."
+char sarah e=bored
+"Mr. Angry Prosecutor sent me down {n}to the police station to be {n}inquisitated."
+"He didn't like the stuff I said, I guess?"
+"It kinda took the whole day."
+char sarah e=normal
+"I'm sorry that we haven't seen each {n}other since the lawyer... {delay 1}talk... {p20}{n}thing."
+char phoenix hide
+pause 50 script
+"{delay 1}You mean the trial?"
+char sarah e=ditzy
+"Yeah, that! You were so wonderful in {n}the trial the other day!"
+"You know, you're so cute when you {n}do your little objections!"
+char phoenix hide
+"C-Cute?"
+char sarah e=ditzy
+"You're much cuter than my last {n}seventeen boyfriends were."
+char phoenix hide
+"S-{sfx shout-scream}Seventeen?!"
+char sarah e=ditzy
+"Yeah, doesn't that make you feel {n}special?"
+char phoenix hide
+"Not really..."
+char sarah e=normal
+"I really should come watch more of {n}your trials."
+"It makes me feel all warm inside {n}just seeing you prosecute!"
+char phoenix hide
+"{delay 1}Speaking of THE TRIAL..."
+"I think we should talk some more {n}about what you saw."
+char sarah e=bored
+"I...{n}{p10}I already told you everything?!"
+char phoenix hide
+"There's still a few unanswered {n}questions."
+"We know for a fact now that Mr. {n}Parker wasn't the only one to {n}enter the penthouse."
+char sarah e=bored
+"Eh?"
+char phoenix hide
+"Now we know that Detective {n}Watters was there too. There are {n}two suspects."
+char sarah e=normal
+"{sfx realization}Mr. Watters is a suspect now?!"
+char phoenix hide
+"Yes. {p20}You didn't know that?"
+char sarah e=normal
+"No! {p20}{e bored}I mean, yes, I did, but... {p20}{n}{e normal}I know he didn't do it!"
+"You know, he seems like such a nice {n}guy. Why would people be pointing {n}fingers at him?"
+char phoenix hide
+"Th{p5}-That would be my fault."
+char sarah e=normal
+"Oh... Well... {e ditzy}I'm sure you had a good {n}reason for it. Right, Feeni-poo?"
+char phoenix hide
+"{c089}(Sometimes a good reason isn't a {n}good excuse though.)"
+setflag missingtalk
+goto top
+
+label The victim
+char sarah e=normal
+char phoenix hide
+"You didn't have any problems {n}working for a monster like Rivales?"
+char sarah e=bored
+"Hey! Don't look at me like that! I didn't {n}exactly approve of his line of work. I {n}just did what had to be done."
+char phoenix hide
+"What does {sfx shout-general}{s5}that mean?"
+char sarah e=bored
+"Well, you know, {p10}bills had to be paid... {n}{p10}And Mr. Rivales did a very good job {n}of paying me."
+char phoenix hide
+"You worked for the mob just for the {n}money?!"
+char sarah e=bored
+"If you put it that way, I sound like a {n}horrible person..." 
+"But yep, {p10}that was the only reason."
+
+mus
+"{f}{next}"
+sfx dramapound.wav
+invert name=reception
+char sarah e=bored
+pause 40 script
+bg black
+char sara e=bored
+sfx rolling.ogg
+pause 10
+bg 2-chain-bg
+char sarah e=bored
+fg lockchains-2 name=chains2
+"{s 80 4}{next}"
+pause 20
+fg lock y=-8 x=65 name=lock1
+"{sfx Owned.ogg}{f}{next}"
+fg lock y=-8 x=-65 name=lock2
+pause 2
+"{sfx Owned.ogg}{f}{next}"
+pause 20
+char phoenix hide
+"{c089}(That's right... {p15}She had these locks {n}last time too.)"
+delete name=chains2
+delete name=lock1
+delete name=lock2
+pause 20 script
+bg reception fade
+char sarah e=bored
+setflag sarahpsyche
+mus Arle Stage.ogg
+set _music_loop Arle Stage - loop.ogg
+goto top

@@ -1,0 +1,302 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"As we all know, blackouts are a rather rare thing. They don't exactly happen every day."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"...{p20}{sfx idea}!"
+
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Do you see where I'm going with this?"
+"That means that any other day, the security system would have been fully functional."
+"My client went there every day and would not look out of place."
+"Detective Watters, on the other hand, would attract a lot of unwanted attention."
+char phoenix e=objecting
+"He couldn't {e pointing}sneak himself in there, much less a suit of armor!"
+
+bg judge
+char judge e=surprised
+"Why, that's right!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"And I don't think that I need to remind you that the defendant just testified that Watters was NOT wearing the armor when he saw him!"
+
+sfx showevidence
+bg codyphoto
+char phoenix hide
+"If that's the case, then how did it show up in this picture?"
+char obadiah hide
+"Does it really matter? It's there either way."
+"{c940}Somebody managed to smuggle it into that building{c999}."
+label redo
+char judge hide
+"Well, Mr. Wright? Who did it?"
+
+set _list_back_button false
+list scene78
+li Mark Watters
+li Wayne Parker
+li A third person
+showlist
+
+label Mark Watters
+sfx hideevidence
+bg defense
+fg dbench
+char phoenix e=normal
+"It was Mark Watters."
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You're pathetic, you know that?"
+bg defense
+fg dbench
+char phoenix e=confident
+"No, I'm not!"
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You just spent the past several minutes trying to prove that he didn't do it!"
+"Now you want to say that he didn't?"
+"What kind of flip-flopping crazy person are you?!"
+bg judge
+char judge e=warning
+"Mr. Wright, I do not approve of flip-flopping crazy people in my court."
+bg defense
+fg dbench
+char phoenix e=sweating
+"S-Sorry...
+sfx showevidence
+bg codyphoto
+char judge hide
+"If it wasn't him, then it must have been somebody else. Who was it?"
+goto redo
+
+label Wayne Parker
+sfx hideevidence
+bg defense
+fg dbench
+char phoenix e=normal
+"It was the defendant."
+bg witness
+fg wbench
+char parker e=disturbed
+"Why are you ACCUSING {e freakout}MEEEE?!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Well, now. I think this case is settled."
+bg defense
+fg dbench
+char phoenix e=normal
+"Huh?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If the defendant smuggled in the armor, then he's most likely the killer."
+"We have no reason to continue the trial. He's guilty."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{sfx whoops}No, wait! I didn't mean that!!"
+sfx showevidence
+bg codyphoto
+char obadiah hide
+"Somebody else then? Who was it?"
+goto redo
+
+label A third person
+mus
+sfx hideevidence
+bg defense
+fg dbench
+char phoenix e=thinking
+"It had to have been a third person."
+bg judge
+char judge e=surprised
+"What? Somebody besides the defendant and the detective was in the penthouse?"
+char judge e=warning
+"That would mean that there was a third person!"
+bg defense
+fg dbench
+char phoenix e=normal
+"{c089}(That's what I just said.)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Do you know who this other person was?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"No idea."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Well, that doesn't help us at all, does it?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Maybe it doesn't. But I think I have something that will."
+bg judge
+char judge e=surprised
+"You do? Show us!"
+mus Tricks and Gimmicks.ogg
+bg defense
+fg dbench
+char phoenix e=normal
+"Both Detective Watters and Mr. Parker were in custody yesterday."
+"In that time, something happened which neither of them could have done."
+"Somebody tried to remove something."
+bg judge
+char judge e=normal
+"{c090}What was this thing?"
+label redopresent
+set _cr_back_button false
+present
+
+label mark
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+set _ev mark
+"This."
+bg witness
+fg wbench
+char parker e=disturbed
+"B{p10}-BAAAAAA!!!"
+bg judge
+char judge e=surprised
+"Wh{p5}-What is that?!"
+bg defense
+fg dbench
+char phoenix e=normal
+"This, Your Honor, is something that we've all been searching for these past few days."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That's Gallante's symbol! Where did you find that?!"
+bg defense
+fg dbench
+char phoenix e=normal
+"In the abandoned building across the street from the Rivales Tower."
+"It had already been erased when I arrived. I was only able to find it using luminol."
+bg prosecution
+fg pbench
+char obadiah e=worried
+"We were missing a bottle of that at the crime scene. Did you..."
+bg defense
+fg dbench
+char phoenix e=sheepish
+"We{p5}-We don't need to get into the specifics of how I found it."
+char phoenix e=thinking
+"The point I'm trying to make here is that the scene had been tampered with only recently."
+"Neither Watters nor Parker could have done it?"
+bg judge
+char judge e=surprised
+"The who did?"
+bg defense
+fg dbench
+char phoenix e=normal
+"The person who put it there..."
+sfx showevidence
+bg Abandonedbuildingday3
+char gallante e=ba fade
+char phoenix hide
+"...Sir Gallante."
+"He tried to remove the skull to throw us off his trail."
+mus
+bg judge
+char judge e=normal
+"This proves that Sir Gallante is the culprit."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That doesn't help us. We need to know who he actually is."
+bg witness
+fg wbench
+char parker e=serious
+"I don't think anybody can tell you that."
+"We've run a rather thorough investigation, but haven't found anything."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Mr. Parker, would you mind telling us about the Family's investigation of Sir Gallante?"
+bg witness
+fg wbench
+char parker e=serious
+"Of course, Mr. Wright.{n}I'll tell you what I know."
+script scene79parkertestimony2
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"It was {sfx shout-objection}this!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Whatever it is, it doesn't look like they did a very good job of removing it."
+bg defense
+fg dbench
+char phoenix e=confident
+"No, it doesn't. That's how I found it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Do you ever think before you speak?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Not always. Sometimes I just throw stuff out there and hope it works."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Why am I still here?"
+sfx damage
+penalty -15
+is penalty 0 failure
+bg judge
+char judge e=normal
+"{c090}What was this thing that somebody tried to remove?"
+goto redopresent
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

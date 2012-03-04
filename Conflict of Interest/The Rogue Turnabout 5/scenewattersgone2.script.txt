@@ -1,0 +1,9 @@
+bg detentionnew
+pause 60 script
+
+char Guard hide
+"Sorry, sir. But the detective is {n}refusing all visitors."
+char phoenix hide
+"{c089}(I don't think Watters wants to talk {n}to us again.)"
+
+script scenewattersgone2menu

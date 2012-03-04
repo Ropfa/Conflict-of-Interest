@@ -1,0 +1,34 @@
+label top
+bg entrance2
+
+list scene62talk
+li Big mistake
+label scene62talk
+showlist
+menu scene62b
+goto scene62talk
+
+label Big mistake
+char cody e=angry
+char phoenix hide
+"Today's trial was nothing but a huge {n}mistake."
+"If I'm going to get Watters and {n}Parker cleared by tomorrow, I'm going {n}to need to find a new suspect."
+char cody e=angry
+"I guess just do what you always do, {n}right?"
+char cody e=confident
+"Find some people and make them spill {n}the beans!"
+char phoenix hide
+"Who is there left to talk to though?"
+char cody e=angry
+"...{p30}What about that secretary lady?"
+char phoenix hide
+"Ms. Keyes?"
+char cody e=angry
+"Yeah! Her testimony the other day {n}was really fishy."
+"No way she doesn't know more than {n}she's telling you."
+char phoenix hide
+"I guess if we see her again, we'll have {n}to confront her about that."
+"Thanks again, Cody."
+char cody e=confident
+"{sfx shout-general}Hah!{p10}{n}What'd you do without me?"
+goto top

@@ -1,0 +1,34 @@
+label top
+bg reception
+
+list scene68move1
+li Entrance
+li Penthouse
+flag thetenebroustemplar rooftop
+showlist
+list scene68move2
+menu scene68
+label rooftop
+li Rooftop
+showlist
+menu scene68
+
+label Entrance
+mus
+script scene62bmenu
+
+label Penthouse
+mus
+script scene66menu
+
+label Rooftop
+noflag mynameisinigomontoya AND iamozymandius notyet
+flag mynameisinigomontoya AND iamozymandius scene72
+label notyet
+char phoenix hide
+"I don't think that I've found all the {n}answers out there yet."
+"I should keep looking for clues and {n}solve any loose ends that might be {n}left."
+script scene68menu
+label scene72
+mus
+script scene72

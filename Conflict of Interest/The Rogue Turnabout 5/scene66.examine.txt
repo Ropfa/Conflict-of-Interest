@@ -1,0 +1,11 @@
+label top
+bg pent2
+
+examine
+menu scene66
+
+label none
+char obadiah e=front-serious
+"{sfx shout-general}Stop trying to poke around here!"
+"You may be friends with those {n}detectives, but you aren't {n}getting past me!"
+goto top

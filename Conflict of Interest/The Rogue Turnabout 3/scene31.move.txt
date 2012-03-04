@@ -48,4 +48,9 @@ label scene33menu
 script scene33menu
 
 label Abandoned Warehouse
+noflag abandonedget scene39
+flag abandonedget scene39menu
+label scene39
 script scene39
+label scene39menu
+script scene39menu
