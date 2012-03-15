@@ -1,0 +1,214 @@
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You tried to erase your mark."
+
+bg judge
+char judge e=surprised
+"His bloody skull mark?{n}{p15}Why would he do that?"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"Yesterday during the trial, we {n}discussed something very {n}important..."
+
+sfx screenwipe
+"{f}{next}"
+bg prosecution
+fg pbench
+char obadiah e=serious2
+grey value=1
+"It's impossible for him to be {n}Gallante."
+"He may have been in the Rivales {n}penthouse that morning..."
+"...but for every other time Gallante {n}killed somebody..."
+"...he has an airtight alibi."
+sfx screenwipe
+"{f}{next}"
+bg judge 
+char judge e=headshake
+grey value=1
+pause 50 script
+char judge e=normal
+grey value=1
+"I don't believe that it was ever {n}proven beyond a doubt that Sir {n}Gallante committed this crime."
+"His identifying mark has yet to be {n}found."
+"Until then, everything else can be {n}seen as circumstantial."
+pause 20 script
+sfx screenwipe
+"{f}{next}"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Watters had been proven to not be {n}Sir Gallante."
+"Since the possibility of Gallante not {n}being the culprit was still being {n}considered..."
+"...he had to remove the one thing that {n}would have confirmed it."
+"If the bloody skull was never found, {n}Watters would easily be convicted..."
+"...allowing both Virgil Black and Mr. {n}Parker to walk free."
+"Well, Mr. Black... Am I getting close?"
+
+bg witness
+fg wbench
+char gallante e=hawk
+"Not at all."
+mus
+"Despite all your efforts, you still {n}have yet to prove anything."
+"Perhaps I chose to not take the {n}sword because, like you said..."
+"...I realized it would not be essential {n}to proving Sir Parker innocent."
+"There is no way to prove my {n}motivations for that..."
+"...just as there is no way to prove {n}that I was at the Tower."
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Maybe you're right... {p10}I can't prove it.{n}{p20}I don't have any evidence."
+"{c090}However, there is one person who {n}could testify about what happened {n}in the penthouse..."
+label redo
+setvar _allow_present_evidence false
+set _cr_back_button false
+present
+
+label rivalesupdate$
+setvar _allow_present_evidence true
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This person! Right here!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"The victim? {p15}You want HIM to testify?"
+"That's right, we'll just parade his {n}ghost in here and have him take the {n}stand."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, actually, we have done that {n}bef--{p10}{next}"
+bg judge
+char judge e=warning
+"Mr. Wright! I'm still losing sleep over {n}that incident!"
+"We {sfx shout-general}won't be doing that again!"
+sfx damage
+penalty -50
+is penalty 0 failure
+char phoenix hide
+"{c089}(I guess she can have that effect on {n}people.)"
+goto redo
+
+label watters$
+setvar _allow_present_evidence true
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"Mark Watters."
+bg judge
+char judge e=surprised
+"The detective?"
+bg defense
+fg dbench
+char phoenix e=normal
+"There's a reason why things {n}happened the way they did."
+"That was the morning the lead {n}detective was scheduled to meet {n}with Michael Rivales."
+"By killing Rivales then, he could {n}remove two enemies at once."
+"After all... {p10}{e confident}who would want to keep {n}hunting for somebody after they've {n}saved your life?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"The fact that Watters entered the {n}building has been proven."
+"Are you sure that he was in the {n}penthouse during the murder?"
+bg defense
+fg dbench
+char phoenix e=confident
+"I think we can leave that up to him to {n}tell us."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I suppose so."
+"Bailiff! {p15}Bring us Detective Watters!{n}{p25}{sfx damage}Now!"
+bg black fade
+pause 30
+bg courtwatters fade
+pause 60 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You know why you're here?"
+bg witness
+fg wbench
+char watters e=serious
+"I{p5}-I... Yeah, I do."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Then I believe we can skip the {n}formalities."
+"Tell us what happened."
+bg witness
+fg wbench
+char watters e=serious
+"R{p5}-Right."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Now's your chance, Watters. You {n}can finally end this case!)"
+script scene92watterstestimony4 
+
+label none
+setvar _allow_present_evidence true
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This person! Right here!"
+bg judge
+char judge e=surprised
+"That person? {p15}I didn't know they were {n}there when the crime happened."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Oh wait, {p10}I was supposed to be {n}looking for that?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Obviously."
+sfx damage
+penalty -50
+is penalty 0 failure
+bg defense
+fg dbnech
+char phoenix e=thinking
+"Well, um... {n}{p20}Let me try that again."
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

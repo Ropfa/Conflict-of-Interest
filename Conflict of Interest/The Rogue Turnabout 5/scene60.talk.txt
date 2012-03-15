@@ -35,7 +35,7 @@ goto top
 label Any ideas?
 char maya e=normal
 char phoenix hide
-"Well, I'm officially stumped. {n}Where do you think we should go next?"
+"Well, I'm officially stumped. {n}Where do you think we should go {n}next?"
 char maya e=thinking
 "Mr. Watters might have a lot of the {n}answers we're looking for."
 "After all, he was there."

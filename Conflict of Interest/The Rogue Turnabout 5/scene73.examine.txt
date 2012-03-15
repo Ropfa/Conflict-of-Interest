@@ -6,8 +6,7 @@ bg rooftophawk
 
 examine
 region 190 30 18 22 hawk
-region 204 152 32 22 cord
-region 178 160 26 14 cord
+region 175 142 69 32 cord
 region 218 72 25 54 stairs
 region 46 98 111 26 edge
 region 34 52 7 76 rod
@@ -75,7 +74,7 @@ char phoenix hide
 "That's nice... Just please don't stand {n}so close to the edge!"
 "{c089}(I know she's just doing that to bug {n}me!)"
 char maya hide
-"I'll bet this thing could stretch all the {n}way to that building across the street!"
+"I'll bet this thing could stretch all the {n}way to that building across the {n}street!"
 pause 60 script
 sfx realization
 char phoenix hide
@@ -159,6 +158,7 @@ char maya e=surprised
 "{sfx shout-objection}Fix it!"
 char phoenix hide
 "Don't look at me! {n}{p10}I'm a lawyer, not an electrician."
+hideevl
 fg fuseev name=fuseev
 nt
 "{sfx evidence updated.wav}{c099}Fuse box added to the court record."

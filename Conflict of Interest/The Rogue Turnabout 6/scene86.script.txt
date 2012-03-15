@@ -1,0 +1,213 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"If we can't go up... {p10}{e confident}why not go down?"
+
+bg judge
+char judge e=surprised
+"Down? What do you mean by that?"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"His point of entry was from the roof. {n}He climbed down from there, and {n}went through the window."
+char phoenix e=objecting
+"The only room he ever stepped{sfx shout-objection}{e pointing} foot {n}in was the penthouse!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"{sfx shout-general}Ridiculous!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Is it? Because that's exactly what {n}one of our witnesses told us."
+"He saw Sir Gallante climb down from {n}the roof and into the penthouse!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"That doesn't explain how he got up {n}there in the first place!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"I'll bet I have an answer for{p15}--{next}"
+
+bg witness
+fg wbench
+char gallante e=pound
+"{p20}{next}"
+char gallante e=pound2
+sfx headbang
+"{s30}{p2}{s5}{p20}"
+
+bg defense
+fg dbench
+char phoenix e=ohshit
+"{sfx shout-scream}Ack!! {n}{p30}{e sweating}S{p5}-Stop doing that!"
+
+bg witness
+fg wbench
+char gallante e=hunch
+"You are getting ahead of yourself, {n}Sir Wright."
+"Before trying to prove how I entered{n} the penthouse..."
+"Would it not be better to prove that I {n}was there at all?"
+"I implore you to present even a single {n}piece of evidence that suggests that."
+"At the moment, the only one who {n}accepts this story is you."
+
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}({sfx whoops}No! {p15}Knocked down right as I was {n}getting started!)"
+
+bg judge
+char judge e=normal
+"Mr. Black, I believe that you can {n}leave."
+"It appears Mr. Wright still doesn't {n}have everything thought out."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"N{p5}-No, wait! {n}{p15}I'd like to request more testimony."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Hmph. What about?"
+
+label redotestify
+bg defense
+fg dbench
+char phoenix e=thinking
+"I'd like him to testify about..."
+threat=50
+set _list_back_button false
+
+list scene86
+li His motive
+li His alibi
+li His knowledge of the crime
+showlist
+
+label His motive
+char phoenix e=normal
+"...his motive."
+"He had to have some motive for {n}everything."
+bg witness
+fg wbench
+char gallante e=ba
+"Nay, I had no motive, for I did not {n}commit the crime."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, you did!"
+bg witness
+fg wbench
+char gallante e=hunch
+"Is that all you have? Mere words to {n}back up your claims?"
+"It is a wonder Sir Parker has made it {n}this far."
+bg judge
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"There's no reason to speak about his {n}motive when we haven't even proven {n}his connection to the crime."
+sfx damage
+penalty -50
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I'll need to find something else.)"
+goto redotestify
+
+label His knowledge of the crime
+char phoenix e=normal
+"...his knowledge of the crime."
+"He's already shown that he knows {n}too much. There's no way that's {n}a coincidence."
+bg witness
+fg wbench
+char gallante e=ba
+"Have you not already established {n}though, that it was through Sir{n}Parker that I learned everything?"
+bg judge
+char judge e=nodding
+pause 50 script
+char judge e=normal
+"That's right.{n}{p15}Why should we need to cover this {n}again?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"Well, I just thought it was suspicious."
+bg judge
+char judge e=normal
+"Sorry. {p15}I don't believe this is {n}important enough for us to discuss {n}again."
+"We already know the answer to it."
+sfx damage
+penalty -50
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(I'll need to find something else.)"
+goto redotestify
+
+label His alibi
+penalty -0
+char phoenix e=normal
+"...his alibi."
+"We need to know where he was when {n}everything happened."
+bg witness
+fg wbench
+char gallante e=ba
+"An alibi? Do I really need such a thing {n}when I am not even a suspect?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No."
+bg defense
+fg dbench
+char phoenix e=normal
+"It wouldn't hurt though, would it?"
+bg judge
+char judge e=normal
+"Hmm... {p10}I don't suppose it would."
+"I will allow Mr. Black to testify about {n}this."
+bg witness
+fg wbench
+char gallante e=hunch
+"Very well, Sir Judge.{n}{p15}You expect me to give an alibi for the {n}murder of Michael Rivales?"
+"I will do even better."
+"I will show you that I am unconnected {n}to {c940}every single element of {n}this investigation{c999}."
+bg judge
+char judge e=surprised
+"Oh? {n}{p15}Well, yes, that is even better!"
+bg witness
+fg wbench
+char gallante e=hunch
+"Press all you like, Sir Wright. You will {n}see that the real killer is not I."
+script scene87gallantetestimony3
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

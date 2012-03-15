@@ -1,0 +1,203 @@
+bg defense
+fg dbench
+char phoenix e=confident
+"Lying is a very unherolike quality... {n}{p10}Wouldn't you agree, Mr. Black?"
+
+bg witness
+fg wbench
+char gallante e=ba
+"A haven for the weak and foolish."
+
+bg defense
+fg dbench name=1
+char phoenix e=confident
+"What does that say about you?"
+
+mus Objection.ogg
+set _music_loop Objection - loop.ogg
+
+set _ev rick
+showevr
+"You told me that you found this letter {n}in the warehouse..."
+"...and then Detective Gumshoe {n}confirmed its location the other {n}day in his testimony."
+sfx deskslam
+char phoenix e=deskslam
+pause 40 script
+char phoenix e=handsondesk
+"So you HAVE visited a place linked to {n}the crime!"
+hideevr
+bg speedzoom stack name=zoom
+delete name=1
+char phoenix e=zoom
+sfx shout-objection
+"{f}The building {f}that {f}Sir {f}Gallante made his {n}{f}escape {f}into!!!"
+
+bg judge
+char judge e=surprised
+"Mr. Black, did you go into that {n}warehouse?"
+
+bg witness
+fg wbench
+char gallante e=hunch
+"It would be pointless to deny."
+"However, twas not the morn of {n}Michael Rivales's death that I {n}visited there."
+"It wasn't until several hours later, {n}when I searched for evidence."
+"It was only then that I found the {n}envelope."
+
+label redo
+bg prosecution
+fg pbench
+char obadiah e=serious
+"He could have gone there at any {n}point in the day."
+"We're only interested in when {n}the murder happened."
+"I don't suppose you can prove that {n}he was there the morning of the {n}murder...?"
+set _list_back_button false
+
+list scene88
+li I can
+li I can't
+showlist
+
+label I can
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c090}Yes, I can prove he was there around {n}that time..."
+set _cr_back_button false
+present
+
+label I can't
+mus
+bg defense
+fg dbench
+char phoenix e=normal
+"...{p25}{e sweating}{sfx shout-shock}!!!"
+"{c089}(I don't have anything!{n}{p10}There's no way I can prove that!)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I take it that there's no way you can {n}prove that."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Y{p5}-Yes."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Just as I thought."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(If I can't prove this, then it's all {n}over! I have nowhere to go from {n}here!)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Mr. Black, you've done enough {n}explaining. I think you can leave."
+bg witness
+fg wbench
+char gallante e=ba
+"I applaud you, Sir Prosecutor.{n}{p10}You have performed admirably."
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"Just get out of here already."
+bg black fade
+pause 60 script
+sfx shout-objection
+fg HoldItAnim
+pause 10 script
+bg aide
+char maya e=bench-strict
+"{f}{sfx dramapound}{next}"
+pause 20 script
+"Nick! You can't stop now!"
+char phoenix hide
+"Sorry, Maya. I don't have anything to {n}counter his claim."
+"It looks like I won't be able to save {n}Watters after all."
+char maya e=bench-strict
+"I'm not talking about Mr. Watters...{n}{p25}{sfx realization}I'm talking about you!"
+
+mus Suspense.ogg
+set _music_loop Suspense - loop.ogg
+
+char phoenix hide
+"{sfx realization}Wh{p10}-What...?"
+
+char maya e=bench-strict
+"If you don't get this guy here and {n}now, {p10}you're as good as dead!"
+
+char phoenix hide
+"Wh{p5}{s5}{sfx shout-shock}-WHAT?!"
+
+char maya e=bench-strict
+"Don't tell me you've forgotten what {n}he said yesterday!"
+
+sfx screenwipe
+"{f}{f}{next}"
+bg blacksapartment
+char black e=normal
+grey value=1
+"{delay 1}Well, you know... {p15}Sir Gallante."
+"{delay 1}He goes around killing gangsters and {n}flying out windows and all that."
+"{e peace}{delay 1}Dude's a complete badass!"
+"{delay 1}A dude like him'd probably be way {n}mad if somebody tried to confront {n}him."
+"{delay 1}If he knows you're onto him, he might {n}try coming after you."
+"{f}{f}{next}"
+sfx screenwipe
+bg aide
+char maya e=bench-strict
+"Don't you get it?"
+"That wasn't anything more than a {n}thinly veiled death threat!"
+char phoenix hide
+"{c089}({sfx shout-shock}Gah... {p25}How did I not see through {n}that?!)"
+char maya e=bench-strict
+"He knows you're onto him now!"
+"If he leaves, you can bet he'll come {n}after you... {p15}or maybe even us both!"
+script scene89
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Wrong answer, Wright."
+bg defense
+fg dbench
+char phoenix e=thinking
+"I thought it would prove... {p10}something."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No. {p15}Something would've been a {n}welcome change though."
+sfx damage
+penalty -50
+is penalty 0 failure
+"Listen..."
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

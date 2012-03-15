@@ -39,7 +39,7 @@ char obadiah e=front-worried
 char gumshoe e=confident
 "You've got me, sir!"
 char obadiah e=front-serious
-"Be quiet, Gumshoe."
+"Shut up, Gumshoe."
 char gumshoe e=disheartened
 "Oh..."
 pause 30 script

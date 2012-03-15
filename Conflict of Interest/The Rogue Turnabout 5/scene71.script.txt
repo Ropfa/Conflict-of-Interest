@@ -11,7 +11,7 @@ char phoenix hide
 
 fg markev name=markev
 addev mark
-"{sfx evidence updated.wav}{c099}Sir Gallante's Mark added to the court record."
+"{sfx evidence updated.wav}{c099}Sir Gallante's Mark added to the {n}court record."
 nt
 delete name=markev
 pause 20 script

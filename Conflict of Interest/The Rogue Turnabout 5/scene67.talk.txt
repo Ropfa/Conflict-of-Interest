@@ -65,7 +65,7 @@ char sarah e=normal
 char phoenix hide
 "Th{p5}-That would be my fault."
 char sarah e=normal
-"Oh... Well... {e ditzy}I'm sure you had a good {n}reason for it. Right, Feeni-poo?"
+"Oh... Well... {e ditzy}I'm sure you had a good {n}reason for it. Right, Feenie-poo?"
 char phoenix hide
 "{c089}(Sometimes a good reason isn't a {n}good excuse though.)"
 setflag missingtalk

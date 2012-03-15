@@ -1,0 +1,145 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"I think I've solved our little {n}puzzle here."
+set _ev harness
+sfx showevidence
+showevr
+"Take a look at this."
+
+bg judge
+char judge e=surprised
+"What is that? It looks like some kind {n}of bungee cord!"
+
+mus Pursuit - Lying Coldly.ogg
+set _music_loop Pursuit - Lying Coldly - loop.ogg
+
+bg defense
+fg dbench
+char phoenix e=confident
+"That's exactly what it is, Your Honor."
+"It's a harness attached to a rather {n}long cable."
+"One piece was found on the roof of {n}the Rivales Tower..."
+"...the other in the warehouse across {n}the street."
+"We already know that's where he {n}escaped to, since his sword was {n}found there."
+"It's entirely possible he was using it {n}as a temporary base of operations."
+bg judge
+char judge e=normal
+"But isn't that the building that {n}Detectives Gumshoe and Watters {n}met in?"
+bg defense
+fg dbench
+char phoenix e=normal
+"They weren't there the whole time. {n}By the time they'd left, the {n}blackout had started."
+"{e confident}The plan was already in motion and {n}Gallante was on his way there!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You're suggesting he bungeed his {n}way across?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Not really bungeed. {p20}More like climbed."
+"{e normal}He attached one end of the cable to {n}his starting point and the other to {n}something sturdy on the Tower."
+"Something like, perhaps, the lighting {n}rod."
+"He climbed up the cable to the top, {n}repelled down through the {n}penthouse's open window..."
+"{e confident}...and killed his target."
+"After that, he leapt out of the window {n}and let himself be carried down..."
+"...{e pointing}{sfx shout-objection}just like a zip line!"
+bg witness
+fg wbench
+char gallante e=poundB
+"{p20}{next}"
+char gallante e=pound2B
+sfx headbang
+"{s30}{p2}{s5}{p20}"
+"{sfx shout-loud}NAY!!! You are a fool to even suggest {n}such a thing!"
+bg defense
+fg dbench
+char phoenix e=confident
+"This thing was in two pieces for a {n}good reason..."
+"That being that the killer wasn't able {n}to bring both of them with him when {n}he left!"
+"After reaching the bottom, you could {n}only disconnect one end of the cable."
+"The other end, the one attached to {n}the Tower, was still hanging!"
+label redo
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"You have nothing though to suggest {n}that such a thing took place!"
+"{e hawk-hunch-look}There is no proof that such a device {n}was ever used."
+bg defense
+fg dbench
+char phoenix e=confident
+"{c090}Oh, I believe that I do..."
+set _cr_back_button false
+present
+
+label codyphoto
+set _cr_back_button true
+bg codysphoto
+char phoenix hide
+"{c090}(What part of this proves that the {n}harness and cord were used?)"
+examine hide
+region 0 33 114 10 cord
+region 91 17 155 17 cord
+region 230 47 21 78 cord
+
+label cord
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene94
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This proves it!"
+bg judge
+char judge e=surprised
+"Proves what?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"You know... That... Um... Thing."
+bg judge
+char judge e=surprised
+"What thing?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"That... Uh... {p20}{e sweating}{sfx whoops}Never mind."
+sfx damage
+penalty -50
+is penalty 0 failure
+char phoenix e=handsondesk
+"{c089}(I just need to try that again.)"
+goto redo
+
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

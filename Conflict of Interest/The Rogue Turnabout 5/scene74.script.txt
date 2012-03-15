@@ -84,7 +84,7 @@ char sarah e=normal
 char phoenix hide
 "Th{p5}-The fuse box?{n}{p30}{c089}(Did I do that?)"
 char sarah e=normal
-"Feenie-weenie, you shouldn't be here."
+"Feenie-weenie, you shouldn't be {n}here."
 "Don't you know it's dangerous to {n}play on rooftops like this?"
 char sarah e=ditzy
 "You might fall and smash your {n}precious little body all over {n}the pavement."
@@ -147,13 +147,13 @@ char phoenix hide
 char maya e=sad
 "I didn't think she would get so mad {n}over my harness like that."
 char phoenix hide
-"It's not your fault. {n}You couldn't have know."
+"It's not your fault. {n}You couldn't have known."
 "She turned hostile as soon as she {n}found out that we were investigating {n}the roof."
 char maya e=worried
 "N{p5}-Nick... {n}{p15}Do you think..."
 char phoenix hide
 "After today, I don't want to make {n}any judgements on that until I {n}know for sure."
-"We'll have to see how things play out before I make any calls on that."
+"We'll have to see how things play out {n}before I make any calls on that."
 "{c089}(Sarah Keyes, what are you hiding?)"
 
 bg black fade

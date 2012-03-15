@@ -29,7 +29,7 @@ char rivales e=shadow fade
 pause100
 
 nt
-"You have access to it all.{p20}{n} Find some way. {p40}{n} Get it to me.{p60}{next}"
+"You have access to it all.{p20}{n}Find some way. {p40}{n}Get it to me.{p60}{next}"
 pause 80
 
 "You think I'd risk everything for{n} a guy like you?{p60}{next}"

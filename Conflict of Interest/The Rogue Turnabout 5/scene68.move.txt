@@ -14,8 +14,14 @@ showlist
 menu scene68
 
 label Entrance
+noflag thetenebroustemplar 62b
+flag thetenebroustemplar 71
+label 62b
 mus
 script scene62bmenu
+label 71
+mus
+script scene71menu
 
 label Penthouse
 mus

@@ -1,0 +1,131 @@
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You went into that building and {n}brought back an envelope..."
+"I'm not buying it."
+
+bg witness
+fg wbench
+char gallante e=ba
+"A pity. Why not?"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+mus Confess the Truth.ogg
+set _music_loop Confess the Truth - loop.ogg
+"There's no way you could've entered {n}that building and only noticed the {n}envelope."
+set _ev sword
+showevr
+"{e pointing}{sfx shout-objection}There was a giant bloody sword lying {n}in plain sight!"
+
+bg witness
+fg wbench
+sfx headbang
+char gallante e=pound
+"{s30}{p2}{s5}{p20}{e pound2}{next}"
+pause 40 script
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Why would you choose to overlook {n}the most obvious thing in the {n}room?"
+"If you'd really wanted to help with {n}the investigation..."
+"...you would have brought back the {n}murder weapon... not some random {n}envelope!"
+
+bg judge
+char judge e=surprised
+"Why would he choose the envelope {n}over the sword?"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"He already knew that it had been left {n}there, since he'd passed through the {n}building earlier."
+"My guess is that he knew it was the {n}one thing that would point away from {n}Wayne Parker."
+"{e pointing}{sfx shout-objection}That's the note that led to Detective {n}Watters being arrested!"
+"But that wasn't the only coverup you {n}tried to do, was it, Mr. Black?"
+
+bg witness
+fg wbench
+char gallante e=hunch
+"{delay 1}...{delay 2}...{sfx shiny}{e unsheathe}{p20}{e unsheathed}"
+pause 60 script
+"{f}{f}{f}{next}"
+char gallante e=hawk-unsheathed
+pause 60 script
+
+label redo
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You visited the warehouse again {n}yesterday..."
+"{c090}And you made a second attempt to {n}pin the murder on Watters."
+set _cr_back_button false
+present
+
+label mark
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene91
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg judge
+char judge e=surprised
+"He tried to frame him with that?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Huh? {p20}Oh, this?{n}{p20}{e thinking}No, it wasn't with this."
+bg judge
+char judge e=surprised
+"Then why are you showing it to us?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"I just thought it looked rather {n}interesting. {p20}Don't you?"
+bg judge
+char judge e=surprised
+"Why, yes. Now that you mention it--{p10}{next}"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"A{p10}-{sfx shout-general}HEM."
+bg judge
+char judge e=surprised
+"Oh! Oh, yes. {p20}{n}{e warning}Penalty!"
+sfx damage
+penalty -50
+is penalty 0 failure
+char phoenix hide
+"{c089}(And here I was hoping he would {n}overlook that one.)"
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

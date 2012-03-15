@@ -1,0 +1,508 @@
+set _list_back_button false
+set wrongevidence 1
+
+bg witness
+fg wbench
+char gallante e=hunch
+fg TestimonyAnim fade name=tanim
+nt
+delete name=tanim
+"{n}{center}{c940}-- No Connections --"
+
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
+bg witness
+fg wbench
+
+char gallante e=hunch
+"{tbon}There is nothing to suggest that I {n}visited that penthouse."
+"{tbon}If there is, then clearly I am not Sir {n}Gallante."
+"{tbon}For as you know, he never leaves {n}behind a shred of evidence."
+"{tbon}I have never visited any of the {n}locations from this incident."
+"{tbon}Nor spoken with anyone involved, {n}save Sir Parker."
+"{tbon}I, Virgil Black, hold no connection to {n}this case."
+
+mus
+bg black
+pause 30
+bg witness
+fg wbench
+char gallante e=hunch
+"You mock this establishment with {n}your stubbornness, Sir Wright."
+bg judge
+char judge e=normal
+"You may begin your cross-examin--{p10}{next}"
+bg witness
+fg wbench
+char gallante e=hunch
+"Before that, perhaps it is time for us {n}to raise the stakes."
+bg judge
+char judge e=surprised
+"What do you mean?"
+bg witness
+fg wbench
+char gallante e=hunch
+"If the defense proves my guilt, then {n}my life is over."
+penalty threat=50
+"Should it not be fair to also place a {n}similar punishment on him?"
+bg judge
+char judge e=surprised
+"Hm. {p20}Well, I suppose that's fair!"
+char phoenix hide
+"{c089}(No, it isn't!)"
+penalty -0
+char judge e=normal
+"You may begin the {n}cross-examination."
+
+bg witness
+fg wbench
+char gallante e=hunch
+bg main name=main y=192 stack
+fg phoenixvs name=phoenixvs x=-255 y=165 stack
+fg williamsonvs name=willvs x=256 y=225 stack
+scroll name=phoenixvs x=255 speed=8 nowait
+scroll name=willvs x=-256 speed=8 nowait
+fg Cross-ExaminationAnim stack fade
+pause 20
+delete name=phoenixvs
+delete name=willvs
+delete name=main
+nt
+"{n}{center}{c940}-- No Connections --"
+mus Confrontation - Presto.ogg
+set _music_loop Confrontation - Presto - loop.ogg
+label start
+cross gallantetestimony3
+
+statement gallante3A
+bg witness
+fg wbench
+char gallante e=hunch
+"There is nothing to suggest that I {n}visited that penthouse."
+
+statement gallante3B
+bg witness
+fg wbench
+char gallante e=hunch
+"If there is, then clearly I am not Sir {n}Gallante."
+
+statement gallante3C
+bg witness
+fg wbench
+char gallante e=hunch
+"For as you know, he never leaves {n}behind a shred of evidence."
+
+statement gallante3D
+bg witness
+fg wbench
+char gallante e=hunch
+"I have never visited any of the {n}locations from this incident."
+
+statement gallante3E
+bg witness
+fg wbench
+char gallante e=hunch
+"Nor spoken with anyone involved, {n}save Sir Parker."
+
+statement gallante3F
+bg witness
+fg wbench
+char gallante e=hunch
+"I, Virgil Black, hold no connection to {n}this case."
+endcross
+
+label comments
+bg aide
+char maya e=bench-hum
+"Is there any way to prove that he's {n}connected to everything?"
+char phoenix hide
+"I know he's lying about everything {n}here. {p10}The question is where..."
+char maya e=bench
+"Just keep looking at suspicious {n}statements."
+"There has to be something we've {n}heard in the past few days that's {n}being contradicted."
+goto start
+
+label press gallante3A
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"That's because you cleared the {n}scene of evidence before leaving!"
+bg witness
+fg wbench
+char gallante e=ba
+"Nay, I cleared nothing."
+"If anybody did such a thing, it would {n}have been Sir Gallante himself."
+"After all, did he not have complete {n}access to the crime scene during the {n}investigation?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Uh-oh... Looks like my own {n}arguments are coming back to bite {n}me.)"
+"Was there any evidence found that I {n}don't know about?"
+"Any DNA or fingerprints?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If there was, I would have presented {n}it on the first day."
+"The only evidence we have {n}incriminates the two people who {n}are already suspects."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Well, that's no good.)"
+resume
+
+label press gallante3B
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"What do you mean by that?"
+bg witness
+fg wbench
+char gallante e=ba
+"The Tenebrous Templar is very {n}thorough. {p20}He makes no mistakes."
+bg defense
+fg dbench
+char phoenix e=thinking
+"How does that prove that you aren't {n}Gallante?"
+bg witness
+fg wbench
+char gallante e=ba
+"If I was Sir Gallante, I would not leave {n}behind proof."
+"If I left behind proof, then I am not he."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"What kind of logic is that?!"
+bg witness
+fg wbench
+char gallante e=ba
+"The type that is beyond your feeble {n}comprehension."
+bg judge
+char judge e=normal
+"I understood it just fine."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Wonderful.)"
+resume
+
+label press gallante3C
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"No evidence, you say?"
+bg witness
+fg wbench
+char gallante e=ba
+"That is correct. {n}His works are perfect."
+bg defense
+fg dbench
+char phoenix e=normal
+"If that's the case, there's no way my {n}client or Watters could be Gallante."
+bg witness
+fg wbench
+char gallante e=ba
+"I am not sure I understand your {n}thinking."
+bg defense
+fg dbench
+char phoenix e=confident
+"Sir Gallante doesn't leave behind {n}evidence. {p15}They did."
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Are you listening to yourself?"
+"You're saying that because there is {n}evidence of them being guilty, they {n}couldn't possibly be guilty."
+bg defense
+fg dbench
+char phoenix e=normal
+"It's exactly what the witness said."
+"{e thinking}I guess it makes sense in a {n}backwards kind of way."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Backwards logic. {n}{p20}How fitting for you."
+bg judge
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"That kind of thinking would hardly {n}be sufficient for any sort of {n}verdict."
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(But when he uses it, it's perfectly {n}fine?!)"
+resume
+
+label press gallante3D
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"The other locations...?"
+bg witness
+fg wbench
+char gallante e=ba
+"The rooftop, the reception area, {n}the entrance hall..."
+"They are all foreign to me. I have {n}never once set foot in that building."
+"Sir Parker and Madame Keyes will {n}both agree with me on this, {n}should you choose to ask them."
+"I am told that the security files go {n}back several years."
+"The cameras would have seen me as {n}well."
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(Is there any way to prove that he's {n}been in the Rivales Tower?)"
+set _list_back_button false
+
+list gallante3D
+li There is
+li There isn't
+showlist
+
+label There is
+char phoenix e=confident
+"You're lying, Mr. Black."
+"{c090}This shows that you've been in the {n}Rivales Tower before..."
+set _cr_back_button false
+present
+
+label There isn't
+char phoenix e=normal
+"{c089}(There really isn't anything I can use {n}to prove it.)"
+"{c089}(Maybe this isn't the right way to {n}approach things.)"
+resume
+
+label press gallante3E
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"You've never spoken with any of {n}them?"
+bg witness
+fg wbench
+char gallante e=ba
+"I do not choose to associate myself {n}with those of the Rivales Clan."
+"They are a vile lot."
+bg defense
+fg dbench
+char phoenix e=normal
+"And your friend is different? {n}{p15}Isn't he one of them?"
+bg witness
+fg wbench
+char gallante e=ba
+"Sir Parker is a good person who has {n}been trapped by their lies."
+"He is one of their victims... {n}{p10}A fly in a spider's web."
+bg defense
+fg dbench
+char phoenix e=normal
+"Have you ever considered that {n}maybe that's true of the other {n}people who've been killed?"
+bg witness
+fg wbench
+char gallante e=hunch
+"Who can determine what lies in a {n}person's heart without knowing {n}them first?"
+"I do not wish to be connected with {n}the Family..."
+"...so I do not take responsibility for {n}what happens to them, {p20}good or bad."
+bg defense
+fg dbench
+char phoenix e=normal
+"Don't know, don't care. {n}{p15}Is that it?"
+bg witness
+fg wbench
+char gallante e=hunch
+"If you wish to express things as {n}such, then so be it."
+"I also do not concern myself with the {n}criticism of others."
+resume
+
+label press gallante3F
+sfx /phoenix/holdit.ogg
+fg HoldItAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+"What about that photo that was {n}taken? You were seen on the roof."
+bg witness
+fg wbench
+char gallante e=ba
+"Yes, it was a photo of Sir Gallante."
+bg defense
+fg dbench
+char phoenix e=confident
+"So you admit it?"
+bg witness
+fg wbench
+char gallante e=ba
+"Nay, I am not Sir Gallante."
+"I am Virgil Black, a mere fanboy who {n}chooses to mimic him through {n}costumes and props."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Anybody can wear a costume."
+"Dressing up in an eye patch and {n}bandana will not make you a pirate."
+"Dressing up in medieval armor will not {n}make you a knight..."
+"...nor will it make you a killer."
+bg witness
+fg wbench
+char gallante e=ba
+"I could not have said it better myself, {n}Sir Prosecutor."
+goto comments
+
+//PRESENT LETTER TO RICK
+
+label rick gallante3D
+mus
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+script scene88
+
+label none
+set _cr_back_button true
+is wrongevidence 1 wrongevidence1
+is wrongevidence 2 wrongevidence2
+is wrongevidence 3 wrongevidence3
+
+label wrongevidence1
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves that the {n}witness is lying!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Actually, no... {p15}{n}However, it does prove that you're {n}an idiot."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Excuse me...?"
+bg judge
+char judge e=normal
+"I think what he's trying to say is that {n}a penalty is in order here."
+sfx damage.wav
+penalty -50
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c089}(That didn't quite go as planned...)"
+pause 20 script
+set wrongevidence 2
+clear
+goto start
+
+label wrongevidence2
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"This evidence proves it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"What does it prove?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, it proves something..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Yes, it proves that you're grasping {n}at straws and have no idea what {n}you're doing."
+bg defense
+fg dbench
+char phoenix e=sweating
+"That's... {p10}not..."
+bg judge
+char judge e=warning
+"Mr. Wright! {n}There will be no straw grasping in my {n}courtroom!"
+sfx damage.wav
+penalty -50
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"{c089}(Urk...)"
+pause 20 script
+set wrongevidence 3
+clear 
+goto start
+
+label wrongevidence3
+sfx /phoenix/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Your Honor!{n}{p20}That statement contradicts the {n}evidence!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}It doesn't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Yes, it does...{p20}{n}{e pointing}And I can prove it!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"No.{p20}{n}You can't."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I...{n}{p20}{e sweating}No, {p20}I can't."
+bg judge
+char judge e=normal
+"Perhaps you should think things {n}through before jumping to {n}conclusions."
+"Then I wouldn't have to give you {n}penalties."
+char judge e=warning
+"{sfx shout-general}Like this one!"
+sfx damage.wav
+penalty -50
+is penalty 0 failure
+pause 20 script
+set wrongevidence 1
+clear 
+goto start
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

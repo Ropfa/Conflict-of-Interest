@@ -8,7 +8,7 @@ showevr
 bg witness
 fg wbench
 char gallante e=ba
-"Ah, yes. You are a perceptive one."
+"Ah, yes. {p10}You are a perceptive one."
 
 bg defense
 fg dbench
@@ -16,8 +16,8 @@ char phoenix e=confident
 "That's what I thought."
 mus Objection.ogg
 set _music_loop Objection - loop.ogg
-"Are you forgetting something?{p20}{n}There were no cameras in the penthouse."
-"Even if the power had been working, there wouldn't have been any footage of the crime!"
+"Are you forgetting something?{p20}{n}There were no cameras in the {n}penthouse."
+"Even if the power had been working, {n}there wouldn't have been any {n}footage of the crime!"
 
 bg witness
 fg wbench
@@ -27,8 +27,8 @@ char gallante e=hunch
 bg defense
 fg dbench
 char phoenix e=confident
-"There's a reason the crime had to happen there, and there alone."
-"That was the only place in the building where the killer could not be seen!"
+"There's a reason the crime had to {n}happen there, and there alone."
+"That was the only place in the building {n}where the killer could not be seen!"
 
 sfx /godot/objection.ogg
 fg ObjectionAnim
@@ -36,8 +36,8 @@ pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=serious
-"As much as I'd like to entertain your hypothesis, there is a rather large flaw with it."
-"There's no way he could've avoided the cameras on his way up."
+"As much as I'd like to entertain your {n}hypothesis, there is a rather large {n}flaw with it."
+"There's no way he could've avoided {n}the cameras on his way up."
 
 bg defense
 fg dbench
@@ -47,7 +47,7 @@ char phoenix e=handsondesk
 bg prosecution
 fg pbench
 char obadiah e=serious
-"How would he have known that? A blackout isn't the kind of thing that you plan for."
+"How would he have known that? A {n}blackout isn't the kind of thing {n}that you plan for."
 
 bg defense
 fg dbench
@@ -65,53 +65,56 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"I'd actually say that the blackout wasn't random at all. {p20}It was all part of the plan."
+"I'd actually say that the blackout {n}wasn't random at all. {p20}It was {n}all part of the plan."
 set _ev fuse
 showevr
-char phoenix e=thinkign
-"The fuse box on the roof had been tampered with."
-"There was a device on it that activated when I touched it, and turned off everything in the building."
+char phoenix e=thinking
+"The fuse box on the roof had been {n}tampered with."
+"There was a device on it that {n}activated when I touched it, and {n}turned off everything in the building."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"That was you, huh? Good to know."
+"That was you, huh? {n}{p10}Good to know."
 bg defense
 fg dbench
 char phoenix e=normal
-"The question here, of course, is why was that even on there in the first place?"
-"{e pointing}{sfx shout-objection}The only answer can be that it was meant to sabotage the building's power systems!"
+"The question here, of course, is why {n}was that even on there in the first {n}place?"
+"{e pointing}{sfx shout-objection}The only answer can be that it was {n}meant to sabotage the building's {n}power systems!"
 bg judge
 char judge e=surprised
 "S{p5}-Sabotage?! {n}How horrible!"
 bg defense
 fg dbench
 char phoenix e=pointing
-"The blackout happened so that it was possible for somebody to infiltrate the building!"
+"The blackout happened so that it was {n}possible for something big to happen {n}in the building..."
+"...{sfx shout-objection}without leaving behind any proof {n}of who had done it!"
 mus
 bg witness
 fg wbench
-sfx headbang
 char gallante e=pound
-"{s20}{p2}{s5}{p20}{next}"
+"{p20}{next}"
+char gallante e=pound2
+sfx headbang
+"{s30}{p2}{s5}{p20}"
 bg defense
 fg dbench
 char phoenix e=ohshit
 "{sfx shout-shock}GAH!!!"
 bg judge
 char judge e=surprised
-"Eep!! C{p5}-Careful there, Mr. Black! You might break something!"
+"Eep!! {n}{p20}C{p5}-Careful there, Mr. Black! {n}{p10}You might break something!"
 bg witness
 fg wbench
 char gallante e=hunch
-"My apologies, Sir Judge. However, I felt it best to get your attention."
+"My apologies, Sir Judge. {p15}However, I {n}felt it best to get your attention."
 bg judge
 char judge e=surprised
-"Yes, well, please... Just say something next time!"
+"Yes, well, please... {n}{p10}Just say something next time!"
 bg witness
 fg wbench
 char gallante e=hunch
-"Sir Judge, I believe that I must have a chance to defend myself further."
-"The accusations made by the defense are entirely unfounded."
+"Sir Judge, I believe that I must have a {n}chance to defend myself further."
+"The accusations made by the {n}defense are entirely unfounded."
 bg judge
 char judge e=surprised
 "You can refute their claims?"
@@ -133,7 +136,7 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=normal
-"This proves that there's a contradiction."
+"This proves that there's a {n}contradiction."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -152,7 +155,7 @@ char phoenix e=handsondesk
 "Yes. It does!"
 bg judge
 char judge e=warning
-"Stop acting like a pair of children, you two!"
+"Stop acting like a pair of children, you {n}two!"
 sfx damage
 penalty -20
 is penalty 0 failure
@@ -160,7 +163,7 @@ bg defense
 fg dbench
 char phoenix e=thinking
 "{c089}(I'll have to try something else.)"
-"{c090}(Is it possible the blackout was planned for...?)"
+"{c090}(Is it possible the blackout was {n}planned...?)"
 goto redo
 
 label failure

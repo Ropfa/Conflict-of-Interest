@@ -1,0 +1,109 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"There are actually a few things that {n}point to her."
+"First we have the penthouse window."
+char phoenix e=thinking
+"I seem to recall that it can only be {n}opened from the inside."
+"She could go in there anytime she {n}wanted."
+"{e thinking}Secondly, there was the fuse box on {n}the roof, which she could also {n}easily access."
+"She could attach the device onto it, {n}so that Gallante could later trigger {n}it via remote."
+"{e normal}And finally, there's the harness."
+"Gallante's hawk couldn't attach the {n}cable without hands. Somebody else {n}needed to be up there."
+"Ms. Keyes was in a perfect position {n}to do all of these things."
+"The blackout gave her the perfect {n}cover for it."
+"She just needed to make sure that {n}she was back at her desk when it {n}was over."
+
+bg prosecution
+fg pbench
+char obadiah e=worried
+"So that whole story about her losing {n}her cell phone...?"
+
+bg defense
+fg dbench
+char phoenix e=headshake
+pause 50 script
+char phoenix e=normal
+"All a lie."
+"She needed to come up with some {n}excuse in order to keep the blame {n}on Mr. Parker."
+
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"{sfx damage}Pah!! {p20}{n}You believe that I would try to {n}frame my good friend?"
+"I would never betray him like that!"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"I never said you would... {p20}{n}But it's clear that Ms. Keyes had an {n}agenda of her own."
+
+label redo
+bg defense
+fg dbench
+char phoenix e e=normal
+"{c090}This whole case has been a {n}setup..."
+set _cr_back_button false
+present
+
+label knife2
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene98
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"..."
+bg judge
+char judge e=surprised
+"..."
+bg aide
+char maya e=bench-ugh
+"..."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"...{p25}{e sheepish}I didn't mean to do that."
+bg judge
+char judge e=warning
+"Well,{p15} I DID mean to do this!"
+sfx damage
+penalty -50
+is penalty 0 failure
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

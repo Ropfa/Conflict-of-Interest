@@ -2,8 +2,8 @@ bg defense
 fg dbench
 char phoenix e=document
 "Page five."
-"You can clearly see that it says "All of the identified victim..."
-"...have had connections with the Rivales crime syndicate.""
+"You can clearly see that it says {p15}{n}"All of the identified victims..."
+"...have had connections with the {n}Rivales crime syndicate.""
 
 bg witness
 fg wbench
@@ -13,46 +13,46 @@ char parker e=disturbed
 bg defense
 fg dbench
 char phoenix e=confident
-"Bruto Cadaverini was hardly a member of that group."
-"In fact, he was one of your main rivals!"
-"Do you get it? {e objecting}{sfx shout-objection}Sir Gallante didn't kill the Cadaverinis!"
+"Bruto Cadaverini was hardly a {n}member of that group."
+"In fact, he was one of your main {n}rivals!"
+"Do you get it? {n}{e objecting}{sfx shout-objection}Sir Gallante didn't kill the {n}Cadaverinis!"
 
 bg witness
 fg wbench
 char parker e=disturbed
-"B{p5}-Bu{p5}-But that's NOT WHAT I {e freakout}{sfx shout-objection}WAS TOLD!!!"
+"B{p5}-Bu{p5}-But that's {sfx damage}NOT WHAT I {e freakout}{sfx shout-objection}WAS {sfx shout-loud}{n}TOLD!!!"
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"I don't know who did it, but the police apparently have reason to believe that it was someone else."
+"I don't know who did it, but the police {n}apparently have reason to believe {n}that it was someone else."
 
 sfx /godot/objection.ogg
 fg ObjectionAnim
-pause 5 script
+pause 10 script
 bg prosecution
 fg pbench
 char obadiah e=worried
-"Go a bit easier on your client, Wright. He didn't know."
-"Do you recall what I told you yesterday?"
+"Go a bit easier on your client, Wright. {n}{p15}He didn't know."
+"Do you recall what I told you {n}yesterday?"
 
 sfx scenechange2
 "{f}{next}"
 bg pent2
 char obadiah e=front-serious
 grey value=1
-"Gallante has achieved quite a lot of fame among the more impressionable."
-"There have been several attempts to copy his work... {e front-worried}{p20}{n}most failed horribly."
-"The police have had to keep a close eye on who we talk to about the {n}case."
-"We try to keep the details classified, so that we can tell the fake Gallantes from the real one."
+"Gallante has achieved quite a lot of {n}fame among the more impressionable."
+"There have been several attempts to {n}copy his work... {e front-worried}{p20}{n}most failed horribly."
+"The police have had to keep a close {n}eye on who we talk to about the {n}case."
+"We try to keep the details classified, {n}so that we can tell the fake Gallantes {n}from the real one."
 "{f}{next}"
 sfx scenechange2
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"What Mr. Parker just said... that was one of the things that we've managed to keep a secret."
-"...Even from the Rivales Family."
+"What Mr. Parker just said... {p20}that was {n}one of the things that we've {n}managed to keep a secret."
+"...{p20}{sfx realization}Even from the Rivales Family."
 
 bg defense
 fg dbench
@@ -62,24 +62,25 @@ char phoenix e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"...They never realized that they were {c940}the sold target of Gallante{c999}."
+"...They never realized that they were {n}{sfx realization2}{c940}the sole target of Gallante{c999}."
 
 bg witness
 fg wbench
 char parker e=disturbed
-"Wh-bu-hu-{e freakout}{sfx shout-loud}BLWAAAAAAAAAAAA{e crash}{p2}AAAGGGGG{sfx thud-body}{s20}GGGGHHHHH!!!"
+"Wh{p5}-bu{p5}-hu{p5}-{e freakout}{sfx shout-loud}BLWAAAAAAAAAAAA{e crash}{p2}AA{n}AGGGGG{sfx thud-body}{s20}GGGG{sfx shout-angry}HHHHH!!!"
 
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(The Rivales Family never realized that Sir Gallante was specifically targeting them...)"
+"{c089}(The Rivales Family never realized {n}that Sir Gallante was specifically {n}targeting them...)"
 "{c089}(Maybe even their leader never did. {n}{p30}{sfx idea}{delay 1}But then...)"
 char phoenix e=normal
-"{c089}(If what we just discussed has only been known to the police force, then {c940}somebody{c940} out there knows too much.)"
+"{c089}(If what we just discussed has only {n}been known to the police force...)"
+"{c089}(...then {c940}somebody{c089} out there knows {n}too much.)"
 
 char phoenix e=normal
-"I think I know the identity of Sir Gallante."
-"{c090}Given the circumstances, I'd say that {c940}this person{c090} has a lot of explaining to do..."
+"I think I know the identity of Sir {n}Gallante."
+"{c090}Given the circumstances, I'd say that {n}{c940}this person{c090} has a lot of explaining {n}to do..."
 label redogallante
 set _cr_back_button false
 setvar _allow_present_evidence false
@@ -93,7 +94,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=pointing
-"{sfx shout-objection}It was Sir Gallante! He's the murderer!"
+"{sfx shout-objection}It was Sir Gallante! {n}He's the murderer!"
 bg courtparker
 pause 80 script
 nt
@@ -102,7 +103,7 @@ pause 60 script
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Well, you're an observant one, aren't you?"
+"Well, you're an observant one, aren't {n}you?"
 bg defense
 fg dbench
 char phoenix e=pointing
@@ -110,17 +111,17 @@ char phoenix e=pointing
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I know you are. Nobody's questioning whether Gallante is the killer."
-"It's who's behind the mask that matters!"
+"I know you are. Nobody's {n}questioning whether Gallante {n}is the killer."
+"It's who's behind the {sfx shout-general}mask that {n}matters!"
 bg defense
 fg dbench
 char phoenix e=sheepish
-"Oh... Right.{p20} Hehe."
+"Oh... {p15}Right.{p20} Hehe."
 sfx damage
 penalty -15
 is penalty 0 failure
 char phoenix e=thinking
-"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+"{c090}(Somebody I've spoken to recently is {n}suspiciously knowledgable about Sir {n}Gallante...)"
 goto redogallante
 
 label watters$
@@ -139,23 +140,24 @@ char phoenix e=confident
 bg prosecution
 fg pbench
 char obadiah e=angry
-"I thought we agreed yesterday that he was innocent!"
-"You defense lawyers are all the same... Not a good one among the lot of you!"
+"I thought we agreed yesterday that {n}he was innocent!"
+"You defense lawyers are all the {n}same... Not a good one among the {n}{sfx shout-general}lot of you!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
 sfx realization
-"Sorry, I'll{p10}{e sheepish}-I'll revise that last bit."
+"Sorry, {p15}I'll{p10}{e sheepish}-I'll revise that last bit."
 bg prosecution
 fg pbench
 char obadiah e=angry
 "{sfx shout-angry}Good!"
+sfx damage
 penalty -15
 is penalty 0 failure
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+"{c090}(Somebody I've spoken to recently is {n}suspiciously knowledgable about Sir {n}Gallante...)"
 goto redogallante
 
 label parker$
@@ -170,13 +172,14 @@ char parker e=disturbed
 bg defense
 fg dbench
 char phoenix e=pointing
-"It was you, Mr. Parker! You killed the victim!"
+"It was you, Mr. Parker! {n}{sfx damage}You killed the victim!"
 bg witness
+fg wbnech
 char parker e=disturbed
 "NO I DI{e freakout}{sfx shout-loud}IIIIIIIDDD{sfx shout-objection}DDD{e crash}{p2}NNNN'{sfx thud-body}{s20}T!!!"
 bg judge
 char judge e=surprised
-"Why is the defense accusing their own client?"
+"Why is the defense accusing their {n}own client?"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -184,15 +187,15 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Oh wait. No, that's not what I was doing!"
+"Oh wait. {n}{p20}{e sheepish}No, that's not what I was doing!"
 bg aide
 char maya e=bench-strict
-"Seriously, Nick?!"
-"I think that was the only thing these past few days that he HASN'T overreated to!"
+"{sfx shout-general}Seriously, Nick?!"
+"I think that was the only thing these {n}past few days that he HASN'T {n}overreated to!"
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+"{c090}(Somebody I've spoken to recently is {n}suspiciously knowledgable about Sir {n}Gallante...)"
 goto redogallante
 
 label obadiah$
@@ -207,44 +210,46 @@ char phoenix e=pointing
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Oh, no you don't... Don't even think about it."
-"Accusing the prosecutor of murder? That whole routine isn't going to work this time, Wright."
+"Oh, no you don't... {n}{p20}Don't even think about it."
+"Accusing the prosecutor of murder? {n}{p15}That whole routine isn't going to {n}work this time, Wright."
 bg defense
 fg dbench
 char phoenix e=sheepish
 "S{p5}-Sorry..."
 char phoenix e=thinking
-"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+"{c090}(Somebody I've spoken to recently is {n}suspiciously knowledgable about Sir {n}Gallante...)"
 goto redogallante
 
 label black$
 set _cr_back_button true
-setvar allow_present_evidence true
+setvar _allow_present_evidence true
 sfx /phoenix/takethat.ogg
 fg TakeThatAnim
 pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"You haven't been there, Mr. Parker... But over the past few days, I've spoken with your friend, Virgil Black."
+set _ev black$
+showevr
+"You haven't been there, Mr. Parker... {p10}{n}But over the past few days, I've {n}spoken with your friend, Virgil Black."
 bg witness
 fg wbench
 char parker e=disturbed
-"V{p5}-Virgil? What does he have to do with this?"
+"V{p5}-Virgil? {p10}{n}What does he have to do with this?"
 bg defense
 fg dbench
 char phoenix e=normal
-"I believe that he knows a bit to much about this serial killer..."
+"I believe that he knows a bit too {n}much about this serial killer..."
 sfx screenwipe
 bg blacksapartment
 char black e=pumped
 grey value=1
-"{sfx shout-general}Of course not!"
+"Of course not!"
 "He has some sort of vendetta {n}against the Rivales Family. {n}He's tryinta kill 'em all!"
 char phoenix hide
 "And then later..."
 pause 30 script
-screenwipe
+sfx screenwipe
 "{f}{f}{f}{next}"
 char black e=pumped
 grey value=1
@@ -253,36 +258,37 @@ grey value=1
 bg defense
 fg dbench
 char phoenix e=normal
-"The comments seemed innocent at the time. But with what Mr. Williamson has just told us..."
+pause 20 script
+"The comments seemed innocent at {n}the time. But with what Mr. {n}Williamson has just told us..."
 char phoenix e=objecting
-"I can come up with {sfx shout-objection}{e pointing}no other explanation than that Virgil Black is none other than Sir Gallante himself!!"
+"I can come up with {sfx shout-objection}{e pointing}no other {n}explanation than that Virgil Black {n}is Sir Gallante!!"
 bg witness
 fg wbench
 char parker e=freakout
-"VIIIIIRRRRGIIIIIILLLLL?!{n}BBBBWWWWWWWHHHHAAAAAATTTTT?!{e crash}{p2}{s20}{sfx thud-body}"
+"{sfx shout-scream}VIIIIIR{sfx shout-shock}RRRGIIIIIILLLLL?!{n}BBB{sfx shout-loud}WWWWWWHHHAAAAAATTT?!{e crash}{p2}{s20}{sfx thud-body}"
 bg court
 sfx courtmurmur
 pause 100 script
 fg ani-judge-gavel-loop
-pause 45 script
+pause 35 script
 bg judge
 char judge e=warning
-"Order! Order!!"
+"Order! {sfx shout-general}Order!!"
 "Mr. Wright, are you sure about this?"
 bg defense
 fg dbench
 char phoenix e=normal
-"Is there any other way he could have known?"
+"Is there any other way he could have {n}known?"
 bg prosecution
 fg pbench
 char obadiah e=serious
 "......{p40}{n}Somebody go fetch Mr. Black."
-"Let's see what he has to say for himself."
+"Let's see what he has to say for {n}himself."
 char Bailiff hide
 "Right away, sir."
 bg judge
 char judge e=normal
-"We will have a recess until the suspect arrives."
+"We will have a recess until the {n}suspect arrives."
 fg ani-judge-gavel
 pause 30
 bg black fade
@@ -300,7 +306,7 @@ char phoenix e=pointing
 bg prosecution
 fg pbench
 char obadiah e=serious
-"What are you talking about? They don't have anything to do with the murder!"
+"What are you talking about? They {n}don't have anything to do with {n}the murder!"
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -316,7 +322,7 @@ char phoenix e=thinking
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Apparently not. Thanks for wasting our time though."
+"Apparently not. Thanks for wasting {n}our time though."
 bg judge
 char judge e=warning
 "Yes, thank you indeed!"
@@ -326,7 +332,7 @@ is penalty 0 failure
 bg defense
 fg dbench
 char phoenix e=normal
-"{c090}(Somebody I've spoken to recently is suspiciously knowledgable about Sir Gallante...)"
+"{c090}(Somebody I've spoken to recently is {n}suspiciously knowledgable about Sir {n}Gallante...)"
 goto redogallante
 
 label failure

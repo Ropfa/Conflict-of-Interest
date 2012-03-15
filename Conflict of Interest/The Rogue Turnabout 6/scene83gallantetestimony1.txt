@@ -15,9 +15,9 @@ fg wbench
 
 char gallante e=ba
 "{tbon}Alas, I am not the real hero."
-"{tbon}I am but one of his imitators{p20} - his copycats."
-"{tbon}Twas not I who scaled that fortress and slew the beast."
-"{tbon}I wish I had been there to witness such an event."
+"{tbon}I am but one of his imitators{p20} - his {n}copycats."
+"{tbon}Twas not I who scaled that fortress {n}and slew the beast."
+"{tbon}I wish I had been there to witness {n}such an event."
 
 mus
 bg black
@@ -26,11 +26,11 @@ bg prosecution
 fg pbench
 char obadiah e=serious
 "You disappoint me, Mr. Black."
-"Of all the people you could choose to look up to, you picked a criminal?"
+"Of all the people you could choose to {n}look up to, you picked a criminal?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"He's no copycat, Williamson. This man's the real thing!"
+"He's no copycat, Williamson. {n}This man's the real thing!"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -42,12 +42,12 @@ char gallante e=ba
 bg prosecution
 fg pbench
 char obadiah e=serious
-"If you are innocent as you say you are, then you need not worry."
-"I won't let Wright do to you what he did to Detective Watters."
+"If you are innocent as you say you {n}are, then you need not worry."
+"I won't let Wright do to you what he {n}did to Detective Watters."
 bg witness
 fg wbench
 char gallante e=ba
-"Much obliged, Sir Prosecutor. I knew I could count on you."
+"Much obliged, Sir Prosecutor. {n}{p15}I knew I could count on you."
 
 bg witness
 fg wbench
@@ -79,32 +79,33 @@ statement gallante1B
 bg witness
 fg wbench
 char gallante e=ba
-"I am but one of his imitators{p20} - his copycats."
+"I am but one of his imitators{p20} - his {n}copycats."
 
 statement gallante1C
 bg witness
 fg wbench
 char gallante e=ba
-"Twas not I who scaled that fortress and slew the beast."
+"Twas not I who scaled that fortress {n}and slew the beast."
 
-statement gallante1C1 test show_gallante1C1
+statement gallante1C1 test=show_gallante1C1
 bg witness
 fg wbench
 char gallante e=ba
-"The all-seeing eye slept that morn, preventing me from proving my innocence to you now."
+"The all-seeing eye slept that morn, {n}preventing me from proving my {n}innocence to you now."
 
 statement gallante1D
 bg witness
 fg wbench
 char gallante e=ba
-"I wish I had been there to witness such an event."
+"I wish I had been there to witness {n}such an event."
+endcross
 
 label comments
 bg witness
 fg wbench
 char gallante e=ba
-"Your words fall on deaf ears, Sir Lawyer."
-"You are alone in this quest to convict me... Would it not be wiser to simply surrender?"
+"Your words fall on deaf ears, Sir {n}Lawyer."
+"You are alone in this quest to convict {n}me... {p10}Would it not be wiser to simply {n}surrender?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -112,7 +113,7 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char gallante e=ba
-"Only a fool does not give up when he sees he is beaten. You have nothing to fight me with."
+"Only a fool does not give up when he {n}sees he is beaten. You have nothing {n}to fight me with."
 goto start
 
 label press gallante1A
@@ -122,23 +123,26 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Sir Gallante is not a hero!"
+"Sir Gallante isn't a hero!"
 bg witness
 fg wbench
 char gallante e=hunch
 "How dare you question him!"
 sfx shiny
 char gallante e=unsheathe
-"The Tenebrous Templar is far greater than you will ever be!"
+pause 20 script
+char gallante e=unsheathed
+"The Tenebrous Templar is far greater {n}than you will ever be!"
 bg judge
 char judge e=surprised
-"L{p5}-L{p5}-L{p5}-Let's keep things civilized in here! Mr. Black, please put that toy away!"
+"L{p5}-L{p5}-L{p5}-Let's keep things civilized in {n}here!"
+"Mr. Black, please put that toy away!"
 bg aide
 char maya e=bench-ugh
-"The judge's eyesight must be really bad if he thinks that thing's a toy."
-"How did he even get that thing in here?!"
+"The judge's eyesight must be really {n}bad if he thinks that thing's a toy."
+"How did he even get that sword in {n}here?!"
 char phoenix hide
-"It does give some unfortunate implications for the safety measures in this building."
+"It does raise some unfortunate {n}implications for the safety {n}measures in this building."
 bg judge
 char judge e=normal
 "Please continue, Mr. Black."
@@ -151,40 +155,40 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"You've been saying this whole investigation that you hate him."
+"You've been saying this whole {n}time that you hate him."
 "Why the sudden change?"
 bg witness
 fg wbench
 char gallante e=ba
-"Perhaps I was ashamed and have been hiding my true allegiance from you."
-"I believed that my obsession would be seen as a sign of weakness."
+"Perhaps I was ashamed and have {n}been hiding my true allegiance {n}from you."
+"I believed that my obsession would {n}be seen as a sign of weakness."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"It's because of people like you that the investigation has lasted three years."
-"There have been too many red herrings for me to even count!"
+"It's because of people like you that {n}the investigation has lasted three {n}years."
+"There have been too many red {n}herrings for me to even count!"
 bg judge
 char judge e=surprised
 "Isn't a herring a kind of fish?"
 bg prosecution
 fg pbench
 char obadiah e=worried
-"No, Your Honor. A red herring is a lead which ends up going nowhere."
+"No, Your Honor. {p10}A red herring is a {n}lead which ends up going nowhere."
 bg judge
 char judge e=warning
-"So these fish have been distracting you from finding the real criminal!"
+"So these fish have been distracting {n}you from finding the real criminal!"
 bg prosecution
 fg pbench
 char obadiah e=worried
-"Er... Not exactly."
-"However, as long as the imitators don't actually try to reenact the crimes..."
-"...there isn't really anything we can arrest them for."
-"There aren't any crimes against wearing a costume."
+"Er... {p20}Not exactly."
+"However, as long as the imitators {n}don't actually try to reenact the {n}crimes..."
+"...there isn't really anything we can {n}arrest them for."
+"There aren't any laws against {n}wearing a costume."
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(I should have seen this coming.)"
-"{c089}(He's trying to prove he's innocent by saying that he was pretending to be himself!)"
+"{c089}(He's trying to prove he's innocent {n}by saying that he was pretending to {n}be himself!)"
 resume
 
 label press gallante1C
@@ -194,15 +198,15 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"What is that supposed to mean?!"
+"What is THAT supposed to mean?!"
 bg witness
 fg wbench
 char gallante e=ba
-"Perhaps my poetic license is too much for you to comprehend."
-"I was referring to Michael Rivales and his tower."
+"Perhaps my poetic license is too {n}much for you to comprehend."
+"I was referring to Michael Rivales and {n}his tower."
 bg judge
 char judge e=surprised
-"Ah, poetry. I love poetry!"
+"Ah, poetry. {p15}I love poetry!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -210,24 +214,24 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char gallante e=ba
-"I shall refrain from it in the future if it bothers you, Sir Wright."
+"I shall refrain from it in the future if it {n}bothers you, Sir Wright."
 bg judge
 char judge e=warning
-"Well, I hope you're happy! Now we don't get any more poetry!"
+"Well, I hope you're happy! {n}{p10}Now we don't get any more poetry!"
 char phoenix hide
-"{c089}(Oh, come on! How am I the bad guy here?!)"
+"{c089}(Oh, come on! How am I the bad guy {n}here?!)"
 bg defense
 fg dbench
 char phoenix e=thinking
-"Are we really supposed to take your word for it that you didn't do it?"
+"Are we really supposed to take your {n}word for it that you didn't do it?"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"We have no reason to believe that he did."
+"We have no reason to believe that {n}he did."
 bg witness
 fg wbench
 char gallante e=ba
-"Yes, in fact, it was only a cruel twist of fate that I do not stand before you today with proof of my innocence."
+"Yes, in fact, it was only a cruel twist {n}of fate that I do not stand here {n}today with proof of my innocence."
 bg defense
 fg dbench
 char phoenix e=normal
@@ -235,10 +239,10 @@ char phoenix e=normal
 bg witness
 fg wbench
 char gallante e=ba
-"I do not actually have it, as I said... But I know that it once existed."
+"I do not actually have it, as I said... {n}{p10}But I know that it once existed."
 bg judge
 char judge e=surprised
-"Hurry, Mr. Black! I want to hear all about this proof!"
+"Hurry, Mr. Black! {n}I want to hear all about this proof!"
 set show_gallante1C1 true
 resume
 
@@ -253,30 +257,30 @@ char phoenix e=normal
 bg witness
 fg wbench
 char gallante e=ba
-"The Rivales Clan has eyes everywhere."
+"The Rivales Clan has eyes {n}everywhere."
 "They see all. {n}{p20}Hear all.{p20} {n}Know all."
 bg judge
 char judge e=normal
-"An all-seeing eye? {e headshake}{p50}{e normal}I don't think I like the sound of that!"
+"An all-seeing eye? {e headshake}{p50}{e normal}I don't think I like {n}the sound of that!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"I'm sure he was being metaphorical, Your Honor."
+"I'm sure he was being metaphorical, {n}Your Honor."
 bg witness
 fg wbench
 char gallante e=ba
 "Yes, you are correct, Sir Prosecutor."
-"That was, once again, poetic license. I apologize."
+"That was, once again, poetic license. {p10}{n}I apologize."
 bg judge
 char judge e=surprised
 "O{p5}-Oh! Poetry! {n}In that case, it's perfectly fine!"
 bg defense
 fg dbench
 char phoenix e=sweating
-"Will the witness please try to make more sense?"
+"Will the witness please try to make {n}more sense?"
 bg judge
 char judge e=warning
-"Overruled!"
+"{sfx damage}Overruled!"
 bg defense
 fg dbench
 char phoenix e=sweating
@@ -299,7 +303,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"That's rather morbid. A man was brutally slaughtered."
+"That's rather morbid. A man was {n}brutally slaughtered."
 bg witness
 fg wbench
 char gallante e=ba
@@ -307,35 +311,36 @@ char gallante e=ba
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"It isn't okay to celebrate the death of anyone!"
+"It isn't okay to celebrate the death {n}of anyone!"
 bg witness
 fg wbench
 char gallante e=ba
-"The righteous have triumphed over the wicked. Tis enough reason to celebrate as any."
+"The righteous have triumphed over {n}the wicked. Tis enough reason to {n}celebrate as any."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"When civilians take the law into their own hands, we're left with anarchy."
+"When civilians take the law into their {n}own hands, we're left with anarchy."
 "Is that what you want for us?"
 bg witness
 fg wbench
 char gallante e=hunch
-"This city is a hive of scum and villainy. {sfx shiny}{e unsheathe}"
-"The only solution is to cleanse the evil that dwells among us."
-"Sir Gallante is the only hope for this cesspool of wickedness."
+"This city is a hive of scum and {n}villainy. {sfx shiny}{e unsheathe}"
+"{e unsheathed}The only solution is to cleanse the {n}evil that dwells among us."
+"{e unsheathed}Sir Gallante is the only hope for this {n}cesspool of wickedness."
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "You're insane."
 bg witness
 fg wbench
-char gallante e=hunch
-"Perhaps. However, I do not believe that there is a law against insanity."
+char gallante e=ba
+"Perhaps. {p15}However, I do not believe {n}that there is a law against {n}insanity."
 goto comments
 
 //PRESENT SECURITY SYSTEM
 
 label security2 gallante1C1
+mus
 sfx /phoenix/objection.ogg
 fg ObjectionAnim
 pause 5 script

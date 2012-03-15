@@ -11,61 +11,60 @@ pause 30 script
 bg judge
 char judge e=normal
 "Court is in session."
-"Mr. Williamson, it is to my knowledge that you wish to have the defendant testify today."
+"Mr. Williamson, it is to my knowledge {n}that you wish to have the defendant {n}testify today."
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"If what we discussed yesterday is true..."
-"...then there's a good chance this man saw Detective Watters enter the crime scene."
+"If what we discussed yesterday is {n}true..."
+"...then there's a good chance this {n}man saw Detective Watters enter {n}the crime scene."
 
 bg judge
 char judge e=surprised
-"That goes completely against the prosecution's claims that the defendant committed the murder though!"
+"That goes completely against the {n}prosecution's claims that the {n}defendant was the killer though!"
 
 bg prosecution
 fg pbench
 char obadiah e=serious
 "That's irrelevant."
-"There are now two suspects in the case. One of them did it."
+"There are now two suspects in the {n}case.{p20} One of them did it."
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"That just means that they'll both try to incriminate the other as the culprit!"
+"That just means that they'll both try {n}to incriminate the other as the {n}culprit!"
 "We can't trust either of them!"
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"What's that, Wright? You don't think we can trust your client? You think he's a liar?"
+"What's that, Wright? {p20}You don't think {n}we can trust your client? {n}{p20}{delay 1}You think he's a liar?"
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{sfx idea}!! W{p5}-Well, no. That's not exactly what I meant."
+"{sfx idea}!! {p15}W{p5}-Well, no. {p25}That's not exactly {n}what I meant."
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Then do you think it would be a mistake to put him on the stand?"
+"Then do you think it would be a {n}mistake to put him on the stand?"
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"N-n-no. {n}Of course not!"
-"{c089}(That was a dirty trick, Williamson.)"
+"N-n-no. {n}{p10}Of course not!{n}{p20}{c089}(That was a dirty trick, Williamson.)"
 
 bg judge
 char judge e=normal
-"Mr. Wright, what is your opinion on this?"
+"Mr. Wright, what is your opinion on {n}this?"
 
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(I have to trust Mr. Parker.)"
-"{c089}(I have to believe that he isn't going to lie, just to get off the hook.)"
-"The defense will allow Mr. Parker to testify."
+"{c089}(I have to believe that he isn't going {n}to lie, just to get off the hook.)"
+"The defense will allow Mr. Parker to {n}testify."
 
 bg judge
 char judge e=normal
@@ -74,7 +73,7 @@ char judge e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Witness, please state your name and occupation."
+"Witness, please state your name and {n}occupation."
 
 bg witness
 fg wbench
@@ -83,28 +82,28 @@ char parker e=serious
 
 sfx courtmurmur
 pause 100
-"I worked as one of Mr. Rivales's top men."
+"I worked as one of Mr. Rivales's top {n}men."
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"A filthy occupation, and one hardly worthy of respect."
+"A filthy occupation, and one hardly {n}worthy of respect."
 
 bg witness
 fg wbench
 char parker e=sad
-"Pl-Please don't say that..."
+"Pl{p5}-Please don't say that..."
 
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Your poor choice of career is not what matters here though."
-"You are here because you witnessed something very important."
+"Your poor choice of career is not {n}what matters here though."
+"You are here because you witnessed {n}something very important."
 
 bg witness
 fg wbench
 char parker e=serious
-"Th{p5}-That's right, sir! {sfx dramapound}I saw him."
+"Th{p5}-That's right, sir! {p20}{n}{sfx dramapound}I saw him."
 
 bg defense
 fg dbench
@@ -114,11 +113,11 @@ char phoenix e=sweating
 bg witness
 fg wbench
 char parker e=serious
-"I saw the detective go into the crime scene. He looked scared out of his wits."
+"I saw the detective go into the crime {n}scene. {p15}He looked scared out of his {n}wits!"
 
 bg judge
 char judge e=normal
-"Could you tell us more about this matter?"
+"Could you tell us more about this?"
 
 bg witness
 fg wbench

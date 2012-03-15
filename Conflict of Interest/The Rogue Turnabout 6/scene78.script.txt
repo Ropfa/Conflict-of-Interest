@@ -1,7 +1,7 @@
 bg defense
 fg dbench
 char phoenix e=normal
-"As we all know, blackouts are a rather rare thing. They don't exactly happen every day."
+"As we all know, blackouts are a {n}rather rare thing. They don't {n}exactly happen every day."
 
 bg prosecution
 fg pbench
@@ -15,31 +15,32 @@ bg defense
 fg dbench
 char phoenix e=confident
 "Do you see where I'm going with this?"
-"That means that any other day, the security system would have been fully functional."
-"My client went there every day and would not look out of place."
-"Detective Watters, on the other hand, would attract a lot of unwanted attention."
+"That means that any other day, the {n}security system would have been {n}fully functional."
+"My client went there every day and {n}would not look out of place."
+"Detective Watters, on the other {n}hand, would attract a lot of {n}unwanted attention."
 char phoenix e=objecting
-"He couldn't {e pointing}sneak himself in there, much less a suit of armor!"
+"He {sfx shout-objection}couldn't {e pointing}sneak himself in there, {n}much less a suit of armor!"
 
 bg judge
 char judge e=surprised
-"Why, that's right!"
+"Why, {p10}that's right!"
 
 bg defense
 fg dbench
 char phoenix e=confident
-"And I don't think that I need to remind you that the defendant just testified that Watters was NOT wearing the armor when he saw him!"
+"And I don't think that I need to remind {n}you..."
+"...that the defendant just testified {n}that Watters was NOT wearing the {n}armor when he saw him!"
 
 sfx showevidence
-bg codyphoto
+bg codysphoto
 char phoenix hide
-"If that's the case, then how did it show up in this picture?"
+"If that's the case, then how did it {n}show up in this picture?"
 char obadiah hide
-"Does it really matter? It's there either way."
-"{c940}Somebody managed to smuggle it into that building{c999}."
+"Does it really matter? {n}{p10}It's there either way."
+"{c940}Somebody managed to smuggle it {n}into that building{c999}."
 label redo
 char judge hide
-"Well, Mr. Wright? Who did it?"
+"Well, Mr. Wright? {p15}{n}Who did it?"
 
 set _list_back_button false
 list scene78
@@ -65,20 +66,20 @@ char phoenix e=confident
 bg prosecution
 fg pbench
 char obadiah e=angry
-"You just spent the past several minutes trying to prove that he didn't do it!"
+"You just spent the past several {n}minutes trying to prove that he {n}didn't do it!"
 "Now you want to say that he didn't?"
-"What kind of flip-flopping crazy person are you?!"
+"What {sfx damage}kind of flip-flopping crazy {n}person are you?!"
 bg judge
 char judge e=warning
-"Mr. Wright, I do not approve of flip-flopping crazy people in my court."
+"Mr. Wright, I do not approve of {n}flip-flopping crazy people in my {n}court."
 bg defense
 fg dbench
 char phoenix e=sweating
 "S-Sorry...
 sfx showevidence
-bg codyphoto
+bg codysphoto
 char judge hide
-"If it wasn't him, then it must have been somebody else. Who was it?"
+"If it wasn't him, then it must have {n}been somebody else. {p15}{n}Who was it?"
 goto redo
 
 label Wayne Parker
@@ -90,7 +91,7 @@ char phoenix e=normal
 bg witness
 fg wbench
 char parker e=disturbed
-"Why are you ACCUSING {e freakout}MEEEE?!"
+"Why are you {sfx shout-angry}ACCUSING {e freakout}{sfx shout-loud}MEEEE?!"
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -102,16 +103,16 @@ char phoenix e=normal
 bg prosecution
 fg pbench
 char obadiah e=serious
-"If the defendant smuggled in the armor, then he's most likely the killer."
-"We have no reason to continue the trial. He's guilty."
+"If the defendant smuggled in the {n}armor, then he's most likely the {n}killer."
+"We have no reason to continue the {n}trial. {p15}He's guilty."
 bg defense
 fg dbench
 char phoenix e=sweating
-"{sfx whoops}No, wait! I didn't mean that!!"
+"{sfx whoops}No, wait! {p10}I didn't mean that!!"
 sfx showevidence
-bg codyphoto
+bg codysphoto
 char obadiah hide
-"Somebody else then? Who was it?"
+"Somebody else then? {p10}Who was it?"
 goto redo
 
 label A third person
@@ -123,17 +124,15 @@ char phoenix e=thinking
 "It had to have been a third person."
 bg judge
 char judge e=surprised
-"What? Somebody besides the defendant and the detective was in the penthouse?"
+"What? Somebody besides the {n}defendant and the detective {n}was in the penthouse?"
 char judge e=warning
-"That would mean that there was a third person!"
-bg defense
-fg dbench
-char phoenix e=normal
+"That would mean that there was a {n}third person!"
+char phoenix hide
 "{c089}(That's what I just said.)"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Do you know who this other person was?"
+"Do you know who this other person {n}was?"
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -141,11 +140,11 @@ char phoenix e=thinking
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Well, that doesn't help us at all, does it?"
+"Well, that doesn't help us at all, does {n}it?"
 bg defense
 fg dbench
 char phoenix e=normal
-"Maybe it doesn't. But I think I have something that will."
+"Maybe it doesn't. But I think I have {n}something that will."
 bg judge
 char judge e=surprised
 "You do? Show us!"
@@ -153,12 +152,12 @@ mus Tricks and Gimmicks.ogg
 bg defense
 fg dbench
 char phoenix e=normal
-"Both Detective Watters and Mr. Parker were in custody yesterday."
-"In that time, something happened which neither of them could have done."
-"Somebody tried to remove something."
+"Both Detective Watters and Mr. {n}Parker were in custody yesterday."
+"In that time, something happened {n}which neither of them could have {n}done."
+"Somebody tried to {sfx realization}remove {n}something."
 bg judge
 char judge e=normal
-"{c090}What was this thing?"
+"{c090}What was this thing that somebody {n}tried to remove?"
 label redopresent
 set _cr_back_button false
 present
@@ -172,41 +171,42 @@ bg defense
 fg dbench
 char phoenix e=normal
 set _ev mark
+showevr
 "This."
 bg witness
 fg wbench
 char parker e=disturbed
-"B{p10}-BAAAAAA!!!"
+"B{p10}-{sfx shout-scream}BAAAAAA!!!"
 bg judge
 char judge e=surprised
 "Wh{p5}-What is that?!"
 bg defense
 fg dbench
 char phoenix e=normal
-"This, Your Honor, is something that we've all been searching for these past few days."
+"This, Your Honor, is something that {n}we've all been searching for these {n}past few days."
 bg prosecution
 fg pbench
-char obadiah e=serious
-"That's Gallante's symbol! Where did you find that?!"
+char obadiah e=angry
+"That's Gallante's symbol! {n}{p15}Where did you find that?!"
 bg defense
 fg dbench
 char phoenix e=normal
-"In the abandoned building across the street from the Rivales Tower."
-"It had already been erased when I arrived. I was only able to find it using luminol."
+"In the abandoned building across the {n}street from the Rivales Tower."
+"It had already been erased when I {n}arrived. I was only able to find {n}it using luminol."
 bg prosecution
 fg pbench
 char obadiah e=worried
-"We were missing a bottle of that at the crime scene. Did you..."
+"We were missing a bottle of that at {n}the crime scene. {p15}Did you..."
 bg defense
 fg dbench
 char phoenix e=sheepish
-"We{p5}-We don't need to get into the specifics of how I found it."
+"We{p5}-We don't need to get into the {n}specifics of how I found it."
 char phoenix e=thinking
-"The point I'm trying to make here is that the scene had been tampered with only recently."
-"Neither Watters nor Parker could have done it?"
+"The point I'm trying to make here is {n}that the scene had been tampered {n}with only recently."
+"Neither Watters nor Parker could {n}have done it."
 bg judge
 char judge e=surprised
-"The who did?"
+"Then who did?"
 bg defense
 fg dbench
 char phoenix e=normal
@@ -216,28 +216,28 @@ bg Abandonedbuildingday3
 char gallante e=ba fade
 char phoenix hide
 "...Sir Gallante."
-"He tried to remove the skull to throw us off his trail."
+"He tried to remove the skull to throw {n}us off his trail."
 mus
 bg judge
 char judge e=normal
-"This proves that Sir Gallante is the culprit."
+"This mark proves that Sir Gallante is {n}the culprit."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"That doesn't help us. We need to know who he actually is."
+"That doesn't help us. {n}{p15}We need to know who he actually is."
 bg witness
 fg wbench
 char parker e=serious
-"I don't think anybody can tell you that."
-"We've run a rather thorough investigation, but haven't found anything."
+"I don't think anybody can tell you {n}that."
+"We've run a rather thorough {n}investigation, but haven't {n}found anything."
 bg defense
 fg dbench
 char phoenix e=thinking
-"Mr. Parker, would you mind telling us about the Family's investigation of Sir Gallante?"
+"Mr. Parker, would you mind telling us {n}about the Family's investigation of {n}Sir Gallante?"
 bg witness
 fg wbench
 char parker e=serious
-"Of course, Mr. Wright.{n}I'll tell you what I know."
+"Of course, Mr. Wright.{n}{p20}I'll tell you what I know."
 script scene79parkertestimony2
 
 label none
@@ -248,11 +248,11 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=pointing
-"It was {sfx shout-objection}this!"
+"It was this!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Whatever it is, it doesn't look like they did a very good job of removing it."
+"Whatever it is, it doesn't look like {n}they did a very good job of removing {n}it."
 bg defense
 fg dbench
 char phoenix e=confident
@@ -264,17 +264,17 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=thinking
-"Not always. Sometimes I just throw stuff out there and hope it works."
+"Not always. {p15}Sometimes I just throw {n}stuff out there and hope it works."
 bg prosecution
 fg pbench
-char obadiah e=serious
+char obadiah e=worried
 "Why am I still here?"
 sfx damage
 penalty -15
 is penalty 0 failure
 bg judge
 char judge e=normal
-"{c090}What was this thing that somebody tried to remove?"
+"{c090}What was this thing that somebody {n}tried to remove?"
 goto redopresent
 
 label failure

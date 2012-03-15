@@ -1,0 +1,135 @@
+bg defense
+fg dbench
+char phoenix e=confident
+"Even within his own ranks, Michael {n}Rivales had plenty of enemies."
+"I'm guessing that it wasn't very hard {n}for you to find somebody willing to {n}betray him."
+
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"{sfx shout-shock}...!"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"There were plenty of holes in Sarah {n}Keyes's testimony."
+"We were able to find answers for {n}some of them. {p20}{n}Others... {p10}we weren't."
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"You... You don't mean...?"
+
+bg defense
+fg dbench
+char phoenix e=pointing
+"Ms. Keyes was the one who helped {n}you enter the building that night!"
+"What better reason to lie in her {n}testimony than to save her own {n}life?"
+
+bg prosecution
+fg pbench
+char obadiah e=angry
+"What on earth would compel her to {n}do something like {sfx shout-shock}that?"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Sarah was never loyal to Rivales."
+"When she was a young girl, her {n}father was killed as a hit job from {n}the Family."
+"{e pointing}{sfx shout-objection}The only reason she joined him was {n}so that she could plot his death!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Hmph... {p10}In that case, I only have one {n}more question for you."
+
+bg defense
+fg dbench
+char phoenix e=confident
+"I'll bet I have an answer."
+
+bg prosecution
+fg pbench
+char obadiah e=worried
+"Is there any evidence that points {n}toward her involvement?"
+"Do you have anything to support {n}this?"
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"I believe I do."
+
+label redo
+bg defense
+fg dbench
+char phoenix e=thinking
+"{c090}(What's the piece of evidence that {n}incriminates Sarah Keyes as {n}Gallante's accomplice?)"
+set _cr_back_button false
+present
+
+label crimephoto2
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene97
+
+label fuse
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene97
+
+label harness
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene97
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"Nay, that shows nothing.{n}{p20}It seems you still lack the proper {n}answers."
+bg defense
+fg dbench
+char phoenix e=thinking
+"I have them. I'm just a bit confused, {n}that's all."
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"You are a sorry excuse for a man. {n}I expected better of you."
+sfx damage
+penalty -50
+is penalty 0 failure
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

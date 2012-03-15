@@ -24,9 +24,9 @@ char black e=peace
 char maya e=thinking
 "Wow, seven? That's more than {n}we've talked to him!"
 char black e=normal
-"{delay 1}Hey, {p10}he's my buddy, remember? I {n}gotta do what I can to help."
+"{delay 1}Hey, {p10}he's my buddy, remember? {p10}I {n}gotta do what I can to help."
 char phoenix hide
-"You're a very loyal friend, Mr. Black. {n}He's lucky to have somebody like you."
+"You're a very loyal friend, Mr. Black. {n}He's lucky to have somebody like {n}you."
 char black e=normal
 "{delay 1}We're real open with each other."
 char black e=peace

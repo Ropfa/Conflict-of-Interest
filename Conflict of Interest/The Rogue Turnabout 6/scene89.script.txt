@@ -1,0 +1,101 @@
+bg aide
+char maya e=bench-strict
+char phoenix hide
+"{c089}(Sir Gallante is known for changing {n}his modus operandi...)"
+"{c089}(Could Maya and I become his first {n}victims without a blood skull?)"
+"Wh{p5}-What am I supposed to do? {n}I don't have any evidence!"
+
+char maya e=bench-strict
+"Remember what Sis used to always {n}do. Try changing the situation {n}around."
+"Don't think about how you can prove {n}that he wasn't there when he says {n}he was..."
+
+char phoenix hide
+"...{p20}{sfx realization}Show them that he wasn't there for {n}the reason that he says he was."
+"Got it, Maya."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"Just a moment, Mr. Black. I think I've {n}finally figured out the flaw in your {n}explanation."
+
+bg witness
+fg wbench
+char gallante e=ba
+"I wait for you to show it."
+
+label redo
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c090}This piece of evidence proves that {n}you were in there for a completely {n}different reason..."
+set _cr_back_button false
+present
+
+label sword
+mus
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene90
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well? How about this?"
+bg judge
+char judge e=surprised
+"What about it?"
+bg defense
+fg dbench
+char phoenix e=confident
+"It proves it!"
+bg judge
+char judge e=surprised
+"Proves what?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"You know... That... Um... Thing."
+bg judge
+char judge e=surprised
+"What thing?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"That... Uh... {p20}{e sweating}{sfx whoops}Never mind."
+sfx damage
+penalty -50
+is penalty 0 failure
+char phoenix e=handsondesk
+"{c089}(I just need to try that again.)"
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

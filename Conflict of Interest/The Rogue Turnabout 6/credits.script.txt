@@ -5,104 +5,159 @@ mus Cadenza - Won the Lawsuit.ogg
 nt
 "{sound}{c099}{center}{n}-- Credits --{p80}{next}"
 
+pause 60 script
+bg credits1 fade
+pause 600
+
 bg pent2 fade
 char watters e=smile fade
-"{sound}Phoenix Wright? Yeah, I know the guy...{p60}{next}"
+"{sound}Phoenix Wright? {p15}Yeah, I know the {n}guy...{p60}{next}"
 char watters e=angry
-"{sound}He's a real jerk! I still can't believe he tried to frame me for murder!!{p20}{next}"
-"{sound}What did I ever do to him?!{p40}{next}"
+"{sound}He's a real jerk! {p15}I still can't believe he {n}tried to frame me for murder!!{p60}{next}"
+"{sound}What did I ever do to him?!{p60}{next}"
 char watters e=thinking
-"{sound}I'm just glad that we probably won't ever be working on the same case together again!{p60}{next}"
+"{sound}I'm just glad that we probably won't {n}ever be working on the same case {n}together again!{p60}{next}"
 pause 150 script
 
 bg black fade
+pause 30
+bg credits2 fade
+pause 600
 
 bg clinic fade
 char gumshoe e=confident fade
-"{sound}I know Mr. Williamson wouldn't like to hear me say this...{p30}{next}"
-"{sound}...but it real is good to have Wright back as an attorney.{p50}{next}"
+"{sound}I know Mr. Williamson wouldn't like to {n}hear me say this...{p60}{next}"
+"{sound}...but it really is good to have Wright {n}back as an attorney.{p60}{next}"
 char gumshoe e=thinking
-"{sound}I probably should tell Mr. Edgeworth. He'd like to know too.{p60}{next}"
+"{sound}I probably should tell Mr. Edgeworth. {p10}{n}He'd like to know too.{p60}{next}"
 char gumshoe e=normal
-"{sound}Then again, he probably already knows.{p50}{next}"
+"{sound}Then again, he probably already {n}knows.{p60}{next}"
 char gumshoe e=disheartened
-"{sound}He always seems to find out things before I do...{p60}{next}"
+"{sound}He always seems to find out things {n}before I do...{p60}{next}"
 pause 150 script
 
 bg black fade
+pause 30
+bg credits3 fade
+pause 600
+bg black fade
+pause 30
+bg credits4 fade
+pause 600
 
 bg entrance fade
-char cody e=angry fade
-"{sound}You have no idea how amazing it was to play detective these past few days!{p60}{next}"
+char cody e=happy fade
+"{sound}You have no idea how amazing it was {n}to play detective these past few {n}days!{p60}{next}"
 char cody e=happy
-"{sound}No way they could've caught the killer without my help!{p60}{next}"
+"{sound}No way they could've caught him {n}without my help!{p60}{next}"
 char cody e=confident
-"{sound}You know... I kinda think I'd make a good lawyer myself.{p60}{next}"
-"{sound}I should go to law school, so I can be just like Mr. Wright!{p40}{next}"
+"{sound}You know... {p10}I kinda think I'd make a {n}good lawyer myself.{p60}{next}"
+"{sound}I should go to law school, so I can be {n}just like Mr. Wright!{p60}{next}"
 char cody e=angry
-"{sound}I wonder if I'll get super lawyer powers then too...{p60}{next}"
+"{sound}I wonder if I'll get super lawyer {n}powers then too...{p60}{next}"
 pause 150 script
 
 bg black fade
+pause 30
+bg credits5 fade
+pause 600
+bg black fade
+pause 30
+bg credits15 fade
+pause 600
+bg black fade
+pause 30
+bg credits6 fade
+pause 600
+bg black fade
+pause 30
+bg credits7 fade
+pause 600
 
 bg police fade
 char obadiah e=front-serious fade
-"{sound}Wright...? {n}"The legendary Phoenix Wright"?{n}What about him?{p50}{next}"
-"{sound}You're not another one of his fanboys, come to gloat, are you?{p60}{next}"
+"{sound}Wright...? {n}{p20}"The legendary Phoenix Wright"?{n}{p20}What about him?{p60}{next}"
+"{sound}You're not another one of his {n}fanboys, come to gloat, are you?{p60}{next}"
 char obadiah e=front-angry
-"{sound}I can't believe you people actually like him. That man is a joke.{p60}{next}"
-"{sound}Just you wait, if I ever prosecute another one of his cases...{p40}{next}"
-"{sound}...you can be sure that I'll reveal him for the creep that he is!{p60}{next}"
+"{sound}I can't believe you people actually {n}like him. {p10}That man is a joke!{p60}{next}"
+"{sound}Just you wait, {p10}if I ever prosecute {n}another one of his cases...{p60}{next}"
+"{sound}...you can be sure that I'll reveal him {n}for the creep that he is!{p60}{next}"
 pause 150 script
 
 bg black fade
+pause 30
+bg credits8 fade
+pause 600
+bg black fade
+pause 30
+bg credits9 fade
+pause 600
+bg black fade
+pause 30
+bg credits10 fade
+pause 600
+bg black fade
+pause 30
+bg credits11 fade
+pause 600
 
 bg detentionnew fade
 fg detention
 char parker e=serious fade
-"{sound}I turned myself in. It wasn't easy... but I did it.{p60}{next}"
+"{sound}I turned myself in. {p20}It wasn't easy... {p10}{n}but I did it.{p60}{next}"
 char parker e=sad
-"{sound}The guards say that I'll probably be let out early for good behavior. I don't think that's right...{p60}{next}"
+"{sound}The guards say that I'll probably be {n}let out early for good behavior. {p15}I {n}don't think that's right...{p60}{next}"
 char parker e=smile
-"{sound}But now that Mr. Rivales is gone, I can finally live my own life!{p60}{next}"
+"{sound}But now that Mr. Rivales is gone, I {n}can finally live my own life!{p60}{next}"
 "{sound}I can't thank Mr. Wright enough!{p60}{next}"
 pause 150 script
 
 bg black fade
+pause 30
+bg credits12 fade
+pause 600
+bg black fade
+pause 30
+bg credits13 fade
+pause 600
 
 bg wrightanything fade
 char maya e=cheerful fade
 "{sound}Nick won!!{p50}{next}"
 char maya e=confident
-"{sound}Barely a month since he got his badge back and he's already managed to put a serial killer behind bars.{p60}{next}"
+"{sound}Barely a month since he got his badge {n}back and he's already managed to {n}put a serial killer behind bars.{p60}{next}"
 char maya e=thinking
-"{sound}It's going to be kinda hard for him to top that...{p60}{next}"
+"{sound}It's going to be kinda hard for him to {n}top that...{p60}{next}"
 pause 150 script
 
 bg black fade
+pause 30
+bg credits14 fade
+pause 1000 script
+bg black fade
+music_fade_out
 pause 150 script
-mus
-pause 300 script
 
 char ??? hide
 "{c940}How's the investigation going?"
-"{c090}Things are finally starting to come together."
+"{c090}Things are finally starting to come {n}together."
 "{c940}That's good to hear."
 "{c090}I can't say for certain..."
-"{c090}But I'm betting that I'll have the answers to everything within a few months."
-"{c940}That soon? Excellent... You don't know how happy I am to hear that."
-"{c090}You haven't shown any interest before. Why the sudden change?"
-"{c940}What do you mean by that?! It's been all I've thought about these past ten years!"
+"{c090}But I'm betting that I'll have the {n}answers to everything within a few {n}months."
+"{c940}{sfx realization}That soon? {p20}Excellent... {n}{p10}You don't know how happy I am to {n}hear that."
+"{c090}You haven't shown any interest {n}before. {p15}Why the sudden change?"
+"{c940}{sfx shout-general}What do you mean by that?! {p15}It's {n}been all I've thought about these {n}past ten years!"
 "{c940}Finally, I can finish what we started."
-"{c940}Finally... I can have {sfx realization}my revenge."
+"{c940}Finally... {p15}{delay 1}I can have {sfx realization}my revenge."
 pause 60 script
-"{c090}Revenge?{p40}Don't you think that's a bit dark... Obadiah?"
+"{c090}Revenge?"
+"{c090}Don't you think that's a bit extreme... {n}{p20}Obadiah?"
 
-pause 100 script
+pause 120 script
 
 nt
-"Thank you for playing The Rogue Turnabout."
-"The next case in Conflict of Interest -- "Turnabout on the Web" -- is already being worked on."
+"Thank you for playing The Rogue {n}Turnabout."
+"The next case in Conflict of Interest {n}-- "Turnabout on the Web" -- is {n}already being worked on."
 "Be sure to play that too!"
 pause 600
 exit

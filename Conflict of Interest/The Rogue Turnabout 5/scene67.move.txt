@@ -9,11 +9,20 @@ menu scene67
 
 label Entrance
 noflag dumbbird 62
-flag dumbbird 62b
+flag dumbbird ifthen
 label 62
+mus
 script scene62menu
+label ifthen
+noflag thetenebroustemplar 62b
+flag thetenebroustemplar 71
 label 62b
+mus
 script scene62bmenu
+label 71
+mus
+script scene71menu
+
 
 label Penthouse
 mus

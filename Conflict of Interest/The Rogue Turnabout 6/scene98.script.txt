@@ -1,0 +1,519 @@
+bg defense
+fg dbench
+char phoenix e=normal
+"Ever since it was found, this knife {n}has been nothing but a big {n}contradiction."
+"I doesn't even fit the victim's {n}wound... yet somehow it was {n}accepted as the murder weapon."
+"Why is that?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"I believe it was Ms. Keyes who {n}reported it in.{n}{delay 1}{p15}...{p15}{sfx idea}!"
+
+bg defense
+fg dbench
+char phoenix e=normal
+"Mr. Parker told me the other day that {n}his knife had gone missing."
+"From there, somehow it ended up at a {n}crime scene, in which Sarah was the {n}only witness."
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"But... {p10}Why would she..."
+
+bg defense
+fg dbench
+char phoenix e=normal
+"To frame him, obviously."
+"She wanted revenge on him just as {n}much as she did on Rivales."
+"To her, this whole scenario was a {n}way for her to, almost literally, {n}kill two birds with one stone."
+"As his friend, Mr. Black had no {n}intention of seeing my client {n}behind bars."
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"But Ms. Keyes did..."
+
+bg defense
+fg dbench
+char phoenix e=nodding
+pause 50 script
+char phoenix e=normal
+"After Rivales was killed, she entered {n}the penthouse and planted the knife."
+"Then, she called the police and let {n}them know that a murder had taken {n}place..."
+"...{e confident}making sure to give them just {n}enough reason to arrest Mr. Parker."
+
+mus
+
+bg witness
+fg wbench
+char gallante e=hunch
+shake 300 5 nowait
+"{delay 1}.........Madame Keyes...{p40}{next}"
+"{delay 1}You are a fool......{p40}{next}"
+pause 60 script
+sfx unsheath
+pause 20 script
+sfx shiny
+char gallante e=breakdown1
+pause 40 script
+sfx knifethrow
+char gallante e=breakdown3
+pause 30 script
+sfx shiny
+char gallante e=breakdown4
+pause 40 script
+sfx knifethrow
+char gallante e=breakdown2
+pause 30 script
+sfx knifethrow
+char gallante e=breakdown1
+pause 40 script
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown3
+pause 40 script
+sfx shiny
+char gallante e=breakdown4
+pause 25
+sfx shiny
+char gallante e=breakdown2
+pause 25
+sfx knifethrow
+char gallante e=breakdown4
+pause 25
+sfx knifethrow
+char gallante e=breakdown2
+pause 25
+char gallante e=breakdown1
+pause 25
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown3
+pause 10
+sfx knifethrow
+char gallante e=breakdown4
+pause 10
+sfx knifethrow
+char gallante e=breakdown2
+pause 10
+sfx shiny
+char gallante e=breakdown1
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown3
+pause 10
+sfx knifethrow
+char gallante e=breakdown4
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown2
+pause 10
+sfx knifethrow
+char gallante e=breakdown1
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown3
+pause 10
+sfx knifethrow
+char gallante e=breakdown4
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown2
+pause 10
+sfx knifethrow
+char gallante e=breakdown1
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown3
+pause 10
+sfx knifethrow
+char gallante e=breakdown4
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown2
+pause 10
+sfx knifethrow
+char gallante e=breakdown1
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown3
+pause 10
+sfx knifethrow
+char gallante e=breakdown4
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown2
+pause 10
+sfx knifethrow
+char gallante e=breakdown1
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown3
+pause 10
+sfx knifethrow
+char gallante e=breakdown4
+pause 10
+sfx knifethrow
+sfx shiny
+char gallante e=breakdown2
+pause 10
+sfx knifethrow
+char gallante e=breakdown1
+pause 10
+sfx shiny
+char gallante e=breakdown3
+pause 10
+sfx knifethrow
+shake 60 2
+sfx shout-loud
+char gallante e=breakdown5
+pause 100
+fg wbench-breakdown
+pause 100
+bg courtdestroyed
+sfx shockingreveal
+pause 150 script
+
+bg judge
+char judge e=surprised
+pause 50 script
+"Mr. Black!{n}{p25}{e warning}Now we're going to have to switch to {n}a different courtroom!"
+"{sfx shout-general}Do you have any idea how much {n}those things cost?"
+
+bg witness
+char gallante e=ba
+"Sorry{p15}, Sir Judge."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"It won't be necessary to change {n}rooms, Your Honor."
+
+bg judge
+char judge e=surprised
+"But the witness stand...!"
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"It's just a block of wood."
+"A court is not a building and {n}furniture..."
+"...but a group of people gathered to {n}deliver justice."
+"You can get the bench replaced later.{n}{p20}We're almost finished here."
+
+char gallante hide
+"Perhaps for you..."
+bg witness
+char gallante e=ba
+"But for me, {p10}I believe that it is time to {n}depart."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"No!"
+
+mus Pinch!.ogg
+set _music_loop Pinch! - loop.ogg
+
+bg witness
+char gallante e=ba
+"You weave an interesting tale, Sir {n}Wright... {p20}Yet it is not in the least {n}bit believable."
+"You have not proven anything."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"I've proven that you were there! {n}That you killed Michael Rivales!"
+
+bg witness
+char gallante e=ba
+"All the evidence you have shown {n}could just as easily be used against {n}the detective... {p10}Or Madame Keyes..."
+"Or, as much as I hate to admit it... {p15}{n}Sir Parker."
+"I knew confidential information {n}because my friend shares his woes {n}with me."
+"I was in the abandoned building {n}because I wished to help your {n}investigation."
+"The rest does not point to me at all."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"He's right, you know. {n}{p15}There is no evidence that directly {n}incriminates him."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{sfx shout-general}Come on! This isn't right!"
+"The jurist system was supposed to {n}do away with things like this!"
+"Whatever happened to common {n}sense?!"
+
+bg witness
+char gallante e=ba
+"Sometimes evidence IS common {n}sense."
+"You have nothing, so your words {n}mean nothing. {p10}You cannot convict {n}a man with baseless accusations."
+"You have shown how Sir Gallante {n}committed the murder."
+"You have not shown that I am he."
+mus
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"..."
+
+bg judge
+char judge e=normal
+"..."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"..."
+
+bg witness
+char gallante e=ba
+"Does the prosecution have anything {n}to show that I, Virgil Black, {n}killed Michael Rivales?"
+
+bg prosecution
+fg pbench
+char obadiah e=serious2
+"......{p20}No."
+
+bg witness
+char gallante e=ba
+"You, Sir Wright... {p10}Do you?"
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"......{p20}No."
+
+bg witness
+char gallante e=ba
+"Then there is no more reason for me {n}to stay."
+"Sir Judge? {p10}Your Honor?"
+
+bg judge
+char judge e=normal
+"Hmm... {e headshake}{p50}{e normal}No, I don't suppose we can {n}force you to stay."
+
+char phoenix hide
+"{c089}(No!! He can't leave now!)"
+
+bg aide
+char maya e=bench-ugh
+"Unless he suddenly decides to {n}confess, it looks like it's all {n}over."
+char phoenix hide
+pause 60 script
+"{sfx realization}Confess..."
+char maya e=bench-strict
+"Can you think of anything that would {n}make him do that?"
+char phoenix hide
+"A confession might actually still be {n}within our reach."
+
+bg defense
+fg dbench
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"Wait... {p20}Mr. Black, before you go..."
+"There's something I'd like to show {n}you. {c940}Something I'd like to {n}remind you about{c999}."
+
+bg witness
+char gallante e=ba
+"Very well, Sir Lawyer. {p10}If you insist, {n}you may show me {c940}one thing{c999}... {n}and one thing only."
+
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"If you have anything to prove that {n}this man killed the victim, you'd {n}better do it now."
+
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Actually, I don't have to {c940}prove{c089} {n}anything... But I'd like to show him {n}something nonetheless...)"
+set _cr_back_button false
+present
+
+label poster
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=normal
+set _ev poster
+showevr
+"Could you please take a look at this?"
+bg witness
+char gallante e=ba
+"It's a poster of Sir Gallante. I saw a {n}young man handing them out in front {n}of the courthouse."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"This is what you wanted to show us?"
+"If we wanted to know what Gallante {n}looked like, we could've just {n}looked over at the witness."
+bg defense
+fg dbench
+char phoenix e=normal
+"It's not the picture. {n}{p20}It's what's written on it."
+char phoenix e=document
+"Sir Gallante's creed has two rules..."
+"One: {p15}Slay the evil..."
+"...and two: {p20}{sfx realization}Protect the innocent."
+bg witness
+char gallante e=hunch
+"{delay 1}......"
+bg defense
+fg dbench
+char phoenix e=normal
+"Sir Gallante has inspired fans, such {n}as the creator of this poster, for {n}one very simple reason..."
+"He represents the triumph of good {n}over evil. {p10}To them, he is a hero."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"And...?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Nothing more. {p15}That is all."
+bg witness
+char gallante e=hunch
+"{delay 3}......"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Why do you insist on always wasting {n}our time like this? {p10}This teaches us {n}nothing."
+bg judge
+char judge e=warning
+"Is that really all the defense wishes {n}to show us?"
+bg defense
+fg dbench
+char phoenix e=nodding
+pause 50 script
+char phoenix e=normal
+"Yes, Your Honor."
+bg judge
+char judge e=normal
+"Well, I'm afraid then that there is {n}nothing more for us to discuss here."
+bg aide
+char maya e=bench-strict
+"Are you sure that was the right thing, {n}Nick?"
+char phoenix hide
+"I think so. {p15}We'll see though..."
+char maya e=bench-strict
+"I hope you know what you're doing..."
+bg judge
+char judge e=normal
+"The defense has nothing more to {n}say. I see no reason to further {n}prolong this trial."
+"The jury may decide its verdict."
+bg courtdestroyed
+sfx courtmurmur
+pause 120 script
+sfx shout-objection
+fg HoldItAnim
+pause 40 script
+char black hide
+"No... {p20}This isn't right."
+"I won't hide anymore."
+bg courtdestroyed2
+sfx unsheath
+pause 20 script
+bg courtdestroyed3
+pause 40 script
+bg courtdestroyed4
+pause 30 script
+bg courtdestroyed5
+pause 80 script
+bg witness
+char gallante e=helmetless nametag=Black
+"{sound blipmale}I did it. {n}{p20}I killed Michael Rivales.{n}{p30}I am Sir Gallante."
+bg judge
+char judge e=surprised
+"You are...? {p15}Well, thank you for {n}clearing this up."
+"But I don't understand... {n}{p10}Why are you confessing? {n}{p10}You could have walked away!"
+bg witness
+char gallante e=helmetless nametag=Black
+"{sound blipmale}No, Sir Judge. It is I who didn't {n}understand..."
+"{sound blipmale}Detective Watters is innocent. By {n}not confessing sooner, I almost {n}sent him to his death."
+"{sound blipmale}It would have been no worse had I {n}personally ended his life."
+"{sound blipmale}I wanted to make this city a better {n}place..."
+"{sound blipmale}...but when I start placing my own {n}interests before those of others, I {n}know that it is time to retire."
+"{sound blipmale}I have failed to protect the innocent, {n}as I'd hoped to do."
+"{sound blipmale}I am no hero."
+bg defense
+fg dbench
+char phoenix e=normal
+"There's more to being a hero than {n}just fighting bad guys."
+"Protecting the innocent should {n}always come before punishing the {n}guilty."
+bg witness
+char gallante e=helmetless nametag=Black
+"{sound blipmale}Yes, such is the difference between a {n}hero... {p20}and a vigilante."
+"{sound blipmale}It appears that I am no better than {n}those I sought to destroy."
+"{sound blipmale}You have fought well, Sir Wright."
+"{sound blipmale}Thank you for stopping me before I {n}did something truly horrible."
+"{sound blipmale}Sir Detective... {n}{p20}Wayne...{n}{p30}I am sorry."
+bg black fade
+pause 60 script
+script happyend
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 10 script
+bg witness
+char gallante e=ba
+"I see..."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"You{p10}-You do?"
+bg witness
+char gallante e=ba
+"Yes. {p20}I see a lawyer who has nothing {n}left to say."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(Dammit!)"
+bg witness
+char gallante e=ba
+"Ladies and gentlemen, {p10}it has been a {n}pleasure.{p20} But now I must bid you {n}farewell."
+"Goodbye, Sir Wright...{n}{p25}I'm sure we will see each other {n}soon."
+bg black fade
+pause 30
+bg witness
+pause 60
+bg judge
+char judge e=surprised
+"I actually thought for a moment there {n}that he was Sir Gallante!"
+"{e normal}But it looks like I was wrong."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(That WAS him! But I let him get {n}away!)"
+bg aide
+char maya e=bench-ugh
+"It's... It's over, isn't it?"
+char phoenix hide
+"I{p5}-I guess so."
+"{c089}(Everything's over... Gallante's going {n}to walk free...)"
+"{c089}(...and he's going to make sure to {n}follow up on that death threat he {n}made.)"
+"{c089}(Maya and I'd better leave the city if {n}we want to stay alive.)"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Some attorney you turned out to be, {n}Wright."
+bg black fade
+pause 30 script
+exit

@@ -1,0 +1,168 @@
+bg defense
+fg dbench
+char phoenix e=confident
+"You weren't alone that morning."
+"You had somebody there to help you {n}reach all those annoying {n}too-high-to-reach places."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Right. {p15}So Mr. Black isn't the one who {n}can fly. {p10}{delay 1}It's his accomplice."
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Exactly."
+
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Exac--{p20}{n}{e serious2}What?"
+
+bg defense
+fg dbench
+char phoenix e=thinking
+"I suppose that "somebody" isn't the {n}proper term here."
+"{e normal}You had "something"... {p20}{n}A hawk."
+
+bg judge
+char judge e=surprised
+"A hawk?"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Perhaps the one that's perched on {n}his shoulder right now?"
+"{e thinking}If you've noticed, it comes whenever {n}it sees a sword."
+
+"{f}{f}{next}"
+set _ev hawk
+bg entrance
+char cody e=sword
+grey value=1
+pause 40 script
+showevl
+grey value=1
+pause 60 script
+"{f}{f}{next}"
+bg Abandonedbuildingday3
+char gallante e=unsheathe
+grey value=1
+pause 20 script
+char gallante e=unsheathed
+grey value=1
+pause 35 script
+"{f}{f}{f}{next}"
+char gallante e=hawk-unsheathed
+grey value=1
+pause 60 script
+"{f}{f}{next}"
+bg defense
+fg dbench
+char phoenix e=pointing
+grey value=1
+set _ev sword
+showevr
+grey value=1
+pause 60 script
+bg witness
+fg wbench
+char gallante e=hunch
+grey value=1
+pause 60 script
+"{f}{f}{f}{next}"
+char gallante e=hawk-hunch
+grey value=1
+pause 80 script
+"{f}{f}{next}"
+
+bg defense
+fg dbench
+char phoenix e=confident
+"It also helps that this hawk seems to {n}treat the roof of the Rivales Tower {n}as its home."
+"You had a very effective method of {n}carrying the cable up there..."
+"{e pointing}...{sfx shout-objection}with a trained hawk!"
+
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"How clever of you. Yet you still seem {n}to be missing the bigger picture."
+"Whether or not my friend here was {n}able to carry up the line, I still {n}could not enter that building."
+"Twas impossible for me to do all of {n}it by myself."
+"I needed an accomplice.{n}{p20}...{p25}A human accomplice."
+
+bg defense
+fg dbench
+char phoenix e=confident
+"Actually... You're right."
+"For this specific crime, you needed {n}some help. You had somebody {n}working from the inside."
+
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"{s10}{sfx damage}Bah! {p20}As if I would lower myself to {n}the level of the Rivales Family!"
+"Who, then, was it?{n}{e unsheathe2}{sfx shiny}{p20}{e hawk-unsheathed}{p20}{c090}Who aided me in my quest?"
+
+label redo
+set _cr_back_button false
+setvar _allow_present_evidence false
+present
+
+label sarah$
+set _cr_back_button true
+setvar _allow_present_evidence true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene96
+
+label none
+set _cr_back_button true
+setvar _allow_present_evidence true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg defense
+fg dbench
+char phoenix e=pointing
+"It was this person!"
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"Your persistence is admirable.{n}{p15}{e hawk-hunch-look}But your technique seems to be {n}lacking."
+bg judge
+char judge e=normal
+"I think what he's saying is that this {n}person couldn't possibly be his {n}accomplice."
+sfx damage
+penalty -50
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(I was sure that was it.)"
+"{c090}This person helped you..."
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

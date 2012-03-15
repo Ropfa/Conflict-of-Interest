@@ -16,10 +16,10 @@ bg witness
 fg wbench
 
 char parker e=serious
-"{tbon}I passed by the detective as I was leaving the room."
-"{tbon}He went in about the same time I went out."
-"{tbon}I knew that Mr. Rivales had been expecting somebody, so I wasn't too concerned at the time."
-"{tbon}It wasn't until later that I found out he had been killed."
+"{tbon}I passed by the detective as I was {n}leaving the room."
+"{tbon}He went in about the same time I went {n}out."
+"{tbon}I knew that Mr. Rivales had been {n}expecting somebody, so I wasn't {n}too concerned at the time."
+"{tbon}It wasn't until later that I found out {n}he had been killed."
 
 mus
 bg black
@@ -27,12 +27,12 @@ pause 30
 bg defense
 fg dbench
 char phoenix e=normal
-"{c089}(This testimony is fine for Mr. Parker..."
+"{c089}(This testimony is fine for Mr. {n}Parker...)"
 char phoenix e=sweating
-"{c089}(...But it makes Watters look even worse than before!)"
+"{c089}(...But it makes Watters look even {n}worse than before!)"
 bg judge
 char judge e=normal
-"Witness, was the victim dead when you left?"
+"Witness, was the victim dead when {n}you left?"
 bg witness
 fg wbench
 char parker e=serious
@@ -40,17 +40,17 @@ char parker e=serious
 bg judge
 char judge e=normal
 "So he had to have been killed after."
-"This Detective Watters fellow is looking more and more guilty."
+"This Detective Watters fellow is {n}looking more and more guilty."
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"Like any testimony, this must be thoroughly examined to make sure there are no contradictions."
+"Like any testimony, this must be {n}thoroughly examined to make sure {n}there are no contradictions."
 bg judge
 char judge e=nodding
 pause 50 script
 char judge e=normal
 "Yes, I suppose so."
-"You may begin your cross-examination, Mr. Wright."
+"You may begin your {n}cross-examination, Mr. Wright."
 
 bg witness
 fg wbench
@@ -76,36 +76,37 @@ statement parker1A
 bg witness
 fg wbench
 char parker e=serious
-"I passed by the detective as I was leaving the room."
+"I passed by the detective as I was {n}leaving the room."
 
 statement parker1B
 bg witness
 fg wbench
 char parker e=serious
-"He went in about the same time I went out."
+"He went in about the same time I went {n}out."
 
 statement parker1C
 bg witness
 fg wbench
 char parker e=serious
-"I knew that Mr. Rivales had been expecting somebody, so I wasn't too concerned at the time."
+"I knew that Mr. Rivales had been {n}expecting somebody, so I wasn't {n}too concerned at the time."
 
 statement parker1D
 bg witness
 fg wbench
 char parker e=serious
-"It wasn't until later that I found out he had been killed."
+"It wasn't until later that I found out {n}he had been killed."
+endcross
 
 label comments
 bg aide
 char maya e=bench-strict
-"Nick, do you think that Mr. Parker is lying to us?"
+"Nick, do you think that Mr. Parker is {n}lying to us?"
 char phoenix hide
-"I don't think so. I think that he's just mistaken."
+"I don't think so. {n}{p10}I think that he's just mistaken."
 "I certainly hope so, at least."
 bg aide
 char maya e=bench-hum
-"Well, then that means there's still a contradiction in there somewhere."
+"Well, then that means there's still a {n}contradiction in there somewhere."
 char phoenix hide
 "{c089}(But where?)"
 goto start
@@ -117,11 +118,11 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Are you sure it was Detective Watters?"
+"Are you sure it was Detective {n}Watters?"
 bg witness
 fg wbench
 char parker e=serious
-"He's that other guy who testified yesterday, right? The one who arrested me?"
+"He's that other guy who testified {n}yesterday, right? {p10}The one who {n}arrested me?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -137,13 +138,13 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char parker e=serious
-"Huh?{n}Oh. Well...{n}I saw his face, I guess."
+"Huh?{n}{p20}Oh. Well...{n}{p15}I saw his face, I guess."
 bg defense
 fg dbench
 char phoenix e=handsondesk
 "{c089}(Rats.)"
 pause 50 script
-"{sfx realization}{c089}(Wait... {c940}He saw his face{c999}...)"
+"{sfx realization}{c089}(Wait... {c940}He saw his face{c089}...)"
 resume
 
 label press parker1B
@@ -161,25 +162,26 @@ char parker e=serious
 bg defense
 fg dbench
 char phoenix e=normal
-"When you showed up around 5:30, your meeting only lasted for a few minutes."
-"That would mean that the blackout had just barely started when you left."
+"When you showed up around 5:30, {n}your meeting only lasted for a {n}few minutes."
+"That would mean that the blackout {n}had just barely started when you {n}left."
 bg witness
 fg wbench
 char parker e=worried
 "That sounds about right."
-"I didn't stick around for very long after that."
+"I didn't stick around for very long {n}after that."
 bg defense
 fg dbench
 char phoenix e=normal
-"Where did you go after that?"
+"Where did you go next?"
 bg witness
 fg wbench
 char parker e=worried
-"Home. I was rather upset about how my meeting with Mr. Rivales had ended."
+"Home. {p15}I was rather upset about how {n}my meeting with Mr. Rivales had {n}ended."
+bg aide
 char maya e=bench-hum
-"He means how Mr. Rivales wouldn't let him quit."
+"He means how Mr. Rivales wouldn't {n}let him quit."
 char phoenix hide
-"This man can't seem to get a break in life, can he?"
+"This man can't seem to get a break in {n}life, can he?"
 resume
 
 label press parker1C
@@ -194,28 +196,28 @@ bg witness
 fg wbench
 char parker e=serious
 "Not the detective specifically..."
-"...but Mr. Rivales had mentioned having a meeting with someone that day."
+"...but Mr. Rivales had mentioned {n}having a meeting with someone that {n}day."
 bg defense
 fg dbench
 char phoenix e=normal
-"Would the receptionist have known too?"
+"Would the receptionist have known {n}too?"
 bg witness
 fg wbench
 char parker e=serious
-"Sarah? ...Well, yeah."
+"Sarah? {n}{p15}...{p10}Well, yeah."
 "It was her job to know stuff like that."
 bg defense
 fg dbench
 char phoenix e=thinking
-"{c089}(So Ms. Keyes knew that Watters was supposed to meet with the victim.)"
+"{c089}(So Ms. Keyes knew that Watters {n}was supposed to meet with the {n}victim.)"
 char phoenix e=normal
-"{c089}(That means that nobody had to do any sneaking around that morning. This changes everything!)"
+"{c089}(That means that nobody had to do {n}any sneaking around that morning. {p10}{n}This changes everything!)"
 bg aide
 char maya e=bench-strict
-"Are you thinking what I'm thinking, Nick?"
+"Are you thinking what I'm thinking, {n}Nick?"
 char phoenix hide
 "Probably."
-"There's only {c940}one reason{c999} why she would neglect to mention that she knew Watters was there..."
+"There's only {c940}one reason{c999} why she {n}would neglect to mention that she {n}knew Watters was there..."
 resume
 
 label press parker1D
@@ -225,7 +227,7 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"Was he dressed normally when you passed him?"
+"Was he dressed normally when you {n}passed him?"
 bg witness
 fg wbench
 char parker e=serious
@@ -236,25 +238,25 @@ sfx deskslam
 char phoenix e=deskslam
 pause 50 script
 char phoenix e=handsondesk
-"Then how do you explain the photo taken by Cody Hackins?"
+"Then how do you explain the photo {n}taken by Cody Hackins?"
 sfx /godot/objection.ogg
 fg ObjectionAnim
 pause 5 script
 bg prosecution
 fg pbench
 char obadiah e=serious
-"The same explanation used yesterday can still be used now, albeit with a different person."
+"The same explanation used {n}yesterday can still be used now, {n}albeit with a different person."
 bg defense
 fg dbench
 char phoenix e=thinking
-"The one about how he entered the room twice, once from the hallway, and once from the roof?"
+"The one about how he entered the {n}room twice, once from the hallway, {n}and once from the roof?"
 bg prosecution
 fg pbench
 char obadiah e=serious
 "That one."
 bg judge
 char judge e=normal
-"Well, Mr. Wright?{n}Do you have a problem with this theory?"
+"Well, Mr. Wright?{n}{p15}Do you have a problem with this {n}theory?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -269,7 +271,7 @@ li The witness
 showlist
 
 label The victim
-"The victim, Michael Rivales."
+"The victim, {p10}Michael Rivales."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -277,21 +279,21 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=normal
-"If he knew that he was going to be meeting with a potential enemy..."
-"...why would he send away my client, a big strong man who would've been able to defend him?"
+"If he knew that he was going to be {n}meeting with a potential enemy..."
+"...why would he send away my client, {n}a big strong man who would've been {n}able to defend him?"
 bg judge
 char judge e=normal
 "I don't quite understand, Mr. Wright."
-"This may seem like odd behavior, but it doesn't contradict the testimony."
+"This may seem like odd behavior, but {n}it doesn't contradict the testimony."
 bg defense
 fg dbench
 char phoenix e=thinking
 "No, I suppose it doesn't."
-"{c089}(Well, I guess I can scratch that idea off.)"
+"{c089}(Well, I guess I can scratch off that {n}idea.)"
 resume
 
 label The witness
-"The witness, Wayne Parker."
+"The witness, {p10}Wayne Parker."
 bg prosecution
 fg pbench
 char obadiah e=serious
@@ -299,14 +301,14 @@ char obadiah e=serious
 bg defense
 fg dbench
 char phoenix e=pointing
-"{sfx shout-objection}He's obviously just lying to cover for himself!"
+"{sfx shout-objection}He's obviously just lying to cover for {n}himself!"
 bg witness
 fg wbench
 char parker e=freakout
-"BWWWWHHHHHEEEEEEYYYYYYYY!!!"
+"{sfx shout-scream}BWWWWHHHHHEEEEEEY{sfx shout-loud}YYYYYYY!!!"
 bg judge
 char judge e=surprised
-"Is the defense suggesting that their client is committing perjury?"
+"Is the defense suggesting that their {n}client is committing perjury?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -314,9 +316,9 @@ char phoenix e=handsondesk
 bg aide
 char maya e=bench-strict
 char phoenix hide
-"What was that for?!"
-char maya bench-strict
-"What do you think that was for?!{n}{p15}You're going to get Mr. Parker convicted if you keep that up!"
+"{sfx shout-general}What was that for?!"
+char maya e=bench-strict
+"What do you think that was for?!{n}{p15}You're going to get Mr. Parker {n}convicted if you keep that up!"
 char phoenix hide
 "S{p5}-Sorry!"
 "{sfx slap}{s10}{next}"
@@ -328,9 +330,9 @@ char phoenix hide
 resume
 
 label The killer
-"Unlike before, you aren't the one being accused here, Mr. Parker."
-"Yesterday, the theory rested on the assumption that you were able to smuggle in the armor..."
-"...over the course of several days.{n}{p20}This wouldn't be possible with Detective Watters."
+"Unlike before, you aren't the one {n}being accused here, Mr. Parker."
+"Yesterday, the theory rested on the {n}assumption that you were able to {n}smuggle in the armor..."
+"...over the course of several days.{n}{p20}This wouldn't be possible with {n}Detective Watters."
 bg witness
 fg wbench
 char parker e=disturbed
@@ -338,19 +340,19 @@ char parker e=disturbed
 bg defense
 fg dbench
 char phoenix e=normal
-"Since he didn't work in the Tower, his presence would be immediately noticed."
+"Since he didn't work in the Tower, he {n}would be immediately noticed."
 char phoenix e=thinking
-"I doubt the Family would have enjoyed the presence of such fine, upstanding detective as him."
+"I doubt the Family would have {n}enjoyed the presence of such {n}fine, upstanding detective as him."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"Flattery will get you nowhere, Wright."
+"Flattery will get you nowhere, {n}Wright."
 bg defense
 fg dbench
 char phoenix e=normal
 "I'm being serious here."
 char phoenix e=thinking
-"There's no way he would have been able to sneak anything in over a period of several days..."
+"{c090}There's no way he would have been {n}able to sneak anything in over a {n}period of several days..."
 present
 label ifback
 goto back
@@ -371,9 +373,9 @@ script scene78
 
 label back
 char phoenix e=normal
-"{c089}(I don't think I have the answer to that yet.)"
-"{c089}(Maybe I can find some other clues in his testimony.)"
-resume
+"{c089}(I don't think I have the answer to {n}that yet.)"
+"{c089}(Maybe I can find some other clues in {n}his testimony.)"
+goto start
 
 label none
 set _cr_back_button true

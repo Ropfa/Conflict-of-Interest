@@ -1,0 +1,93 @@
+bg defense
+fg dbench
+char phoenix e=confident
+"Cody may not have realized it at the {n}time, but he took a picture of more {n}than just Sir Gallante."
+"{e pointing}The cable can clearly be seen here!"
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"You do not know whether they are {n}one and the same!"
+"{e hawk-hunch-look}And this does not explain how I was {n}supposedly able to {e hawk-hunch}attach it to the {n}lightning rod in the first place."
+bg judge
+char judge e=normal
+"That's right!{n}{p15}There's no way he could have done {n}that."
+"He would have to fly, just to bring the {n}other end up!"
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"Sir Judge, I assure you that I am {n}incapable of flight. {p10}{n}I am no bird."
+bg defense
+fg dbench
+char phoenix e=confident
+"Maybe you aren't..."
+
+label redo
+"{c090}But you did have another way of {n}attaching the other end..."
+set _cr_back_button false
+present
+
+label hawk
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene95
+
+label none
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+bg witness
+fg wbench
+char gallante e=poundB
+"{p20}{next}"
+char gallante e=pound2B
+sfx headbang
+"{s30}{p2}{s5}{p20}"
+pause 20
+bg defense
+fg dbench
+char phoenix e=ohshit
+"{sfx shout-scream}Ack!!"
+bg witness
+fg wbench
+char gallante e=hawk-hunch
+"You mock us with your idiocy, Sir {n}Wright."
+"You expect us to believe that I could {n}achieve anything with that?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"S{p5}-Sorry, it won't happen again!"
+char phoenix e=sweating
+"{c089}(Wait, now I'm apologizing to HIM?!{n}{p15}I must really be losing my touch {n}here.)"
+sfx damage
+penalty -50
+is penalty 0 failure
+char phoenix e=thinking
+"It's true that you can't fly."
+goto redo
+
+label failure
+mus
+fg ani-judge-gavel
+pause 40 script
+bg judge
+char judge e=normal
+"That's enough."
+"I see no reason to prolong this trial."
+"The defense's case is insufficient to {n}overturn the prosecution's claims."
+"I will now turn this case over to the {n}jury. They may decide their verdict."
+bg black fade
+pause 60
+bg judge fade
+char judge e=normal
+"The jury has decided.{n}{p20}It is unanimous."
+"This court finds the defendant, {n}Wayne Parker...{next}"
+guilty
+pause 60
+char judge hide
+"The defendant will submit himself to {n}the court, {p20}to be held pending {n}trial at a higher court."
+"Court is adjourned."
+pause 30 script
+exit

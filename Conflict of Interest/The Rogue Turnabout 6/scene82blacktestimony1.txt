@@ -16,24 +16,24 @@ fg wbench
 
 char black e=normal
 "{tbon}I think I might have overreacted a bit."
-"{tbon}I didn't really know that stuff, I was just guessing it."
+"{tbon}I didn't really know that stuff, I was {n}just guessing it."
 char black e=peace
-"{tbon}Besides, Sir Gallante knows all kinds of police stuff, doesn't he?"
-"{tbon}I don't have access to that kinda thing."
+"{tbon}Besides, Sir Gallante knows all kinds {n}of police stuff, doesn't he?"
+"{tbon}I don't have access to that kinda {n}thing."
 
 mus
 bg black
 pause 30
 bg judge
 char judge e=normal
-"You were just guessing when you made those comments?"
+"You were just guessing when you {n}made those comments?"
 bg witness
 fg wbench
 char black e=normal
-"{delay 1}Yeah. {p20}{e peace}Sorry."
+"{delay 1}Yeah... {p20}{e peace}Sorry."
 bg judge
 char judge e=normal
-"Well, Mr. Wright. Does this satisfy you?"
+"Well, Mr. Wright. Does this satisfy {n}you?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -41,13 +41,14 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char black e=pumped
-"{delay 1}Heeeeeey. {p20}Why are you being like this, dude? I thought we were buddies."
+"{delay 1}Heeeeeey. {p20}Why are you being like {n}this, dude? {p15}I thought we were {n}buddies."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(I'm not buddies with mass murderers... No matter how justified their actions may have been.)"
-"{c089}(Sir Gallante is clearly a smart man to have lasted this long.)"
-"{c089}(I'll have to be ready for anything here.)"
+"{c089}(I'm not buddies with mass {n}murderers...)"
+"{c089}(...No matter how justified {n}their actions may have been.)"
+"{c089}(Sir Gallante is clearly a smart man to {n}have lasted this long.)"
+"{c089}(I'll have to be ready for anything {n}here.)"
 
 bg witness
 fg wbench
@@ -79,19 +80,20 @@ statement black1B
 bg witness
 fg wbench
 char black e=normal
-"I didn't really know that stuff, I was just guessing it."
+"I didn't really know that stuff, I was {n}just guessing it."
 
 statement black1C
 bg witness
 fg wbench
 char black e=peace
-"Besides, Sir Gallante knows all kinds of police stuff, doesn't he?"
+"Besides, Sir Gallante knows all kinds {n}of police stuff, doesn't he?"
 
 statement black1D
 bg witness
 fg wbench
 char black e=peace
-"I don't have access to that kinda thing."
+"I don't have access to that kinda {n}thing."
+endcross
 
 label comments
 bg aide
@@ -100,16 +102,16 @@ char maya e=bench-hum
 char phoenix hide
 "Neither do I."
 char maya e=bench
-"Well... I'm sure if you keep looking, you'll find something eventually, right?"
+"Well... I'm sure if you keep looking, {n}you'll find something eventually, {n}right?"
 "That's how it always works."
 char phoenix hide
-"It might not actually be a {c940}direct contradiction{c999} we're looking for this time."
+"It might not actually be a {c940}direct {n}contradiction{c999} we're looking for {n}this time."
 "He's worded this very cleverly."
-char maya e=bench
+char maya e=bench-hum
 "What do you mean?"
 char phoenix hide
-"There isn't a direct contradiction here... But if we take what we've already learned..."
-"...there just might be {c940}an indirect one{c999}..."
+"There isn't a direct contradiction {n}here... {p10}But if we take what we've {n}already learned..."
+"...there just might be {c940}an indirect {n}one{c999}..."
 goto start
 
 label press black1A
@@ -124,21 +126,21 @@ bg witness
 fg wbench
 char black e=normal
 "{delay 1}I think I panicked."
-"{delay 1}I get really scared when I think about how Wayne's messed up in that stuff."
+"{delay 1}I get really scared when I think about {n}how Wayne's messed up in that {n}stuff."
 bg judge
 char judge e=surprised
-"Th{p5}-That's right! He might become a victim himself!"
+"Th{p5}-That's right! {p10}He might become a {n}victim himself!"
 bg witness
 fg wbench
 char black e=peace
-"{delay 1}I don't really think clearly when I'm talking about that kinda stuff. It's way scary."
+"{delay 1}I don't really think clearly when I'm {n}talking about that kinda stuff. {n}{p15}It's way scary."
 bg judge
 char judge e=surprised
-"So you were just concerned about your friend. How heartwarming!"
+"So you were just concerned about {n}your friend. {p10}How heartwarming!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{c089}(Don't let him fool you with that, Your Honor!"
+"{c089}(Don't let him fool you with that, Your {n}Honor!)"
 resume
 
 label press black1B
@@ -148,30 +150,30 @@ pause 5 script
 bg defense
 fg dbench
 char phoenix e=normal
-"How could you possibly guess something like that?"
+"How could you possibly guess {n}something like that?"
 bg witness
 fg wbench
 char black e=normal
-"{delay 1}I dunno. Maybe I'm just real good at predicting stuff?"
+"{delay 1}I dunno. {p20}Maybe I'm just real good at {n}predicting stuff?"
 "{delay 1}{e peace}It's like I have ESPN or something."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"I find it very suspicious you were able to jump to that conclusion..."
-"...when even the Rivales Family wasn't aware of it."
+"I find it very suspicious you were {n}able to jump to that conclusion..."
+"...when even the Rivales Family {n}wasn't aware of it."
 bg witness
 fg wbench
 char black e=normal
-"{delay 1}Heeeeey,{p20} Wayne told me some of his buddies were dying."
+"{delay 1}Heeeeey,{p20} Wayne told me some of his {n}buddies were dying."
 "{delay 1}I just know what I heard from him."
 bg prosecution
 fg pbench
 char obadiah e=worried
-"You only knew of the victims that he told you about?"
+"You only knew of the victims that he {n}told you about?"
 bg witness
 fg wbench
 char black e=peace
-"{delay 1}Yeah. {p20}That explains how I thought they were the only ones."
+"{delay 1}Yeah. {p20}That explains how I thought {n}they were the only ones."
 bg judge
 char judge e=normal
 "Yes, indeed it does."
@@ -189,34 +191,34 @@ char phoenix e=thinking
 bg witness
 fg wbench
 char black e=pumped
-"{delay 1}Heeeeeeey, {p20}I've been watching these trials. I know what's been goin' on."
-"{delay 1}You guys have been talking all about confidential things and stuff and how that guy knew it all."
+"{delay 1}Heeeeeeey, {p20}I've been watching these {n}trials. {p10}I know what's been goin' on."
+"{delay 1}You guys have been talking all about {n}confidential things and stuff and {n}how that guy knew it all."
 bg prosecution
 fg pbench
 char obadiah e=serious
-"You're right. We did mention that yesterday."
-"The fact that Gallante can change his MO so quickly does imply that he has knowledge of the investigation."
-"I believe you were the one who brought that up, Wright."
+"You're right. {n}{p10}We did mention that yesterday."
+"The fact that Gallante can change his {n}MO so quickly does imply that he has {n}knowledge of the investigation."
+"I believe you were the one who {n}brought that up, Wright."
 bg defense
 fg dbench
 char phoenix e=sheepish
-"Oh. Heh heh..."
+"Oh. {p15}Heh heh..."
 bg witness
 fg wbench
 char black e=normal
-"{delay 1}Didn't you also say that the detective guy leaked it all to cover his own tracks?"
+"{delay 1}Didn't you also say that the {n}detective guy leaked it all to {n}cover his own tracks?"
 bg prosecution
 fg pbench
 char obadiah e=serious2
-"Yes. He said that too."
+"Yes...{p10} He said that too."
 bg witness
 fg wbench
 char black e=peace
-"{delay 1}I'd think that'd point to him more than me, wouldn't it?"
+"{delay 1}I'd think that'd point to him more than {n}me, wouldn't it?"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"What Watters did was an accident!"
+"What Watters did was an {sfx shout-general}accident!"
 bg witness
 fg wbench
 char black e=normal
@@ -224,7 +226,7 @@ char black e=normal
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"{sfx realization}!! {n}{p30}...{p10}Well, no."
+"{sfx realization}!! {n}{p30}...{p15}Well, no."
 bg witness
 fg wbench
 char black e=peace
@@ -233,8 +235,8 @@ bg defense
 fg dbench
 char phoenix e=handsondesk
 "R{p5}-Right..."
-"{c089}(This guy's testimony is resting on the fact that he didn't have police knowledge.)"
-"{c089}(There has to be some way around that.)"
+"{c089}(This guy's testimony is resting on {n}the fact that he didn't have police {n}knowledge.)"
+"{c089}(There has to be some way around {n}that.)"
 resume
 
 label press black1D
@@ -248,21 +250,21 @@ char phoenix e=normal
 bg witness
 fg wbench
 char black e=normal
-"{delay 1}Hey, I'd kinda know if I did, wouldn't I?"
+"{delay 1}Hey, I'd kinda know if I did, wouldn't {n}I?"
 bg defense
 fg dbench
 char phoenix e=thinking
-"Maybe you're lying, just to throw us off."
+"Maybe you're lying, just to throw us {n}off."
 bg witness
 fg wbench
 char black e=normal
-"{delay 1}Hey, Prosecutor Guy... Can you help me out here?"
+"{delay 1}Hey, Prosecutor Guy... {n}{p20}Can you help me out here?"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"If you must know, we did a background check on Mr. Black before bringing him in here."
-"He has no friends or relatives on the police force."
-"He hasn't even so much as made a 911 call before."
+"If you must know, we did a {n}background check on Mr. Black {n}before bringing him in here."
+"He has no friends or relatives on the {n}police force."
+"He hasn't even so much as made a 911 {n}call before."
 bg defense
 fg dbench
 char phoenix e=thinking
@@ -278,7 +280,7 @@ bg defense
 fg dbench
 char phoenix e=normal
 "Mr. Black, I have to give you credit..."
-"You definitely know how to deny something."
+"You definitely know how to deny {n}something."
 bg witness
 fg wbench
 char black e=normal
@@ -296,25 +298,25 @@ set _music_loop Objection - loop.ogg
 bg defense
 fg dbench
 char phoenix e=normal
-"He didn't have police information... {e confident}He had Rivales Family information!"
+"He didn't have police information... {n}{p10}{e confident}He had Rivales Family information!"
 bg judge
 char judge e=surprised
-"What?! The witness worked for those criminals?"
+"What?! {p10}The witness worked for {n}those criminals?"
 bg defense
 fg dbench
 char phoenix e=headshake
 pause 50 script
 char phoenix e=normal
-"No. {p25}{e confident}But he was close friends with somebody who did. Wayne Parker!"
+"No. {p25}{e confident}But he was close friends with {n}somebody who did. {p20}Wayne Parker!"
 bg witness
 fg wbench
 char black e=pumped
-"{delay 1}That doesn't mean anything, dude."
+"That doesn't mean anything, dude."
 bg defense
 fg dbench
 char phoenix e=confident
 "It does, Mr. Black."
-"Yesterday, you told us that when he's stressed, Mr. Parker vents to you."
+"Yesterday, you told us that when {n}he's stressed, Mr. Parker vents {n}to you."
 char phoenix e=deskslam
 sfx deskslam
 pause 50 script
@@ -323,27 +325,27 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char black e=pumped
-"Not everything! He didn't even tell me he was meeting with Old Mikey that day!"
+"Not everything! He didn't even tell me {n}he was meeting with Old Mikey that {n}day!"
 bg defense
 fg dbench
 char phoenix e=thinking
-"Did he really need to? He worked there, after all."
-"It wasn't exactly out of character for him."
+"Did he really need to? He worked {n}there, after all."
+"It wasn't exactly out of character {n}for him."
 bg witness
 fg wbench
 char black e=pumped
-"It was dangerous, dude! Somebody died there!"
+"It was dangerous, dude! {n}{p10}Somebody died there!"
 mus
 bg defense
 fg dbench
 char phoenix e=confident
 sfx dramapound
 "There. You did it again!"
-"How could you have possibly known that somebody was going to die... Before it even happened?"
+"How could you have possibly known {n}that somebody was going to die... {n}Before it even happened?"
 bg witness
 fg wbench
 char black e=pumped
-"Well, that detective guy was going there."
+"Well, that detective guy was going {n}there."
 "I knew it couldn't end well for him!"
 bg defense
 fg dbench
@@ -363,26 +365,27 @@ bg witness
 fg wbench
 char parker e=serious
 grey value=1
-"I knew that Mr. Rivales had been expecting somebody, so I wasn't too concerned at the time."
+"I knew that Mr. Rivales had been {n}expecting somebody, so I wasn't {n}too concerned at the time."
 sfx screenwipe
 "{f}{f}{next}"
 bg defense
 fg dbench
 char phoenix e=confident
-""Somebody", Mr. Black. Not Mark Watters, but "somebody"."
-"He had no idea who Rivales was expecting!"
+pause 20 script
+""Somebody", Mr. Black. {n}{p20}Not Mark Watters...{n}{p15}but "somebody"."
+"He had no idea who Rivales was {n}expecting!"
 bg prosecution
 fg pbench
 char obadiah e=serious
-"There's no way he could've known that then!"
+"There's no way he could've known {n}that then!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Do you have anything to say to that, Mr. Black?"
+"Do you have anything to say to that, {n}Mr. Black?"
 bg witness
 fg wbench
 char black e=pumped
-"{delay 1}............{delay 2}......"
+"{delay 1}..................{n}............{delay 2}......"
 sfx scenechange2
 bg black
 pause 50 script
@@ -395,14 +398,14 @@ pause 30 script
 sfx unsheath
 pause 60 script
 char gallante hide nametag=???
-"What I have to say, Sir Wright... is that you have made a terrible mistake."
+"What I have to say, Sir Wright... {p15}{n}is that you have made a terrible {n}mistake."
 pause 30 script
 bg witness
 fg wbench
 char gallante e=hunch
 pause 10 script
 sfx shockingreveal
-"{s10}{next}"
+"{f}{s10}{f}{next}"
 mus Pinch!.ogg
 set _music_loop Pinch! - loop.ogg
 pause 60 script
@@ -412,7 +415,7 @@ char obadiah e=angry
 "{delay 1}What... {p20}the..."
 bg judge
 char judge e=surprised
-"What? {e warning}What is the meaning of this?!"
+"{sfx shout-general}What? {p20}{e warning}Mr. Black!{n}{p15}What is the meaning of this?!"
 bg defense
 fg dbench
 char phoenix e=handsondesk
@@ -420,24 +423,24 @@ char phoenix e=handsondesk
 bg witness
 fg wbench
 char gallante e=ba
-"...{p30}{sfx realization}No. {p20}I am but one of his followers.{n}{p15}A "fanboy", I believe you might call me."
+"...{p30}{sfx realization}No. {p30}I am but one of his followers.{n}{p15}A "fanboy", I believe you might call {n}me."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"A fanboy? What is that supposed to mean?!"
+"A fanboy? {p10}What is that supposed to {n}mean?!"
 bg witness
 fg wbench
 char gallante e=ba
-"I am merely a simple servant of justice."
-"Sir Gallante is the true one who will bring peace to the city."
+"I am merely a simple servant of {n}justice."
+"Sir Gallante is the one who will bring {n}peace to the city."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"You're one of his copycats?! People like you make me sick!"
+"You're one of his {sfx shout-general}copycats?! {n}{p10}People like you make me sick!"
 bg witness
 fg wbench
 char gallante e=ba
-"Say what you will, Sir Prosecutor. It is clear that you have a misguided sense of justice."
+"Say what you will, Sir Prosecutor. {n}It is clear that you have a {n}misguided sense of justice."
 bg prosecution
 fg pbench
 char obadiah e=angry
@@ -445,40 +448,43 @@ char obadiah e=angry
 bg defense
 fg dbench
 char phoenix e=normal
-"{c089}(Williamson looks like he's about to have an aneurism.)"
+"{c089}(Williamson looks like he's about to {n}have an aneurism.)"
 bg judge
 char judge e=normal
-"This still doesn't explain how you knew all those things about Sir Gallante."
+"This still doesn't explain how you {n}knew all those things about Sir {n}Gallante."
 bg witness
 fg wbench
 char gallante e=ba
-"An obsessive fan such as myself will always find ways to learn things."
-"I have followed the reports of him very diligently these past three years..."
-"...and yes, I perhaps did convince Sir Parker to tell me what he knew."
+"An obsessive fan such as myself will {n}always find ways to learn things."
+"I have followed the reports on him {n}very diligently these past three {n}years..."
+"...and yes, I perhaps did convince Sir {n}Parker to tell me what he knew."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"Stop making excuses!"
+"{sfx shout-general}Stop making excuses!"
 bg witness
 fg wbench
 char gallante e=ba
-"Ah, Sir Wright. You should know better."
-"Is it not true that you cannot accuse someone without proper evidence?"
-"Without that, the jurists have no reason to suspect me, let alone make a conviction."
+"Ah, Sir Wright. {n}{p10}You should know better."
+"Is it not true that you cannot accuse {n}someone without proper evidence?"
+"Without that, the jurists have no {n}reason to suspect me, let alone {n}make a conviction."
 bg defense
 fg dbench
 char phoenix e=handsondesk
-"I... I have plenty of evidence!"
+"I... {p15}I have plenty of evidence!"
 bg witness
 fg wbench
 char gallante e=hunch
-"It beings then! A battle of wits between the great Phoenix Wright, legendary attorney..."
+"It beings then! {p15}A battle of wits {n}between the great Phoenix Wright, {n}legendary attorney..."
 char gallante e=unsheathe
 sfx shiny
-"...and I, Virgil Black... but a humble servant of the great Sir Gallante."
-"Two seekers of justice, pitted against each other."
-"You wish to challenge me? You will lose."
-"Nay, you have already lost."
+pause 20 script
+char gallante e=unsheathed
+"...and I, Virgil Black... but a humble {n}servant of the great Sir Gallante."
+"Two seekers of justice, {p10}pitted {n}against each other."
+"You wish to challenge me? {n}{p10}You will lose."
+"Nay, {p10}you have already lost."
+mus
 script scene83gallantetestimony1
 
 label none

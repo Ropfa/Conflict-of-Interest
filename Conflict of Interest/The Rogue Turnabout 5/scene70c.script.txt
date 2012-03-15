@@ -65,7 +65,12 @@ char gallante e=ba
 char maya e=disheartened
 "N{p5}-Nick. P{p5}-Please... {p15}Let's go..."
 
+char gallante e=hunch
+sfx shiny
+"{f}{f}{next}"
 char gallante e=unsheathe
+pause 20 script
+char gallante e=unsheathed
 "You should heed the lady's advice."
 
 mus
@@ -73,7 +78,7 @@ pause 50 script
 sfx alitawings
 pause 30 script
 "{f}{f}{f}{next}"
-char gallante e=hawk
+char gallante e=hawk-unsheathed
 pause 60 script
 sfx realization
 pause 40 script
@@ -88,12 +93,12 @@ char phoenix hide
 "..."
 
 char gallante e=hawk
-"..."
+"...{e hawk-look}"
 
 char phoenix hide
 "Fine. {p20}We'll go."
 
-char gallante e=hawk
+char gallante e=hawk-look
 "You are a wise man."
 
 char phoenix hide

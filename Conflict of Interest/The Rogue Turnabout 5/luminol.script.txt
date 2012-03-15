@@ -41,3 +41,8 @@ goto top
 label scene70c
 mus 
 script scene70c
+
+label back
+char phoenix hide
+"{c089}(I think I'll save this for some{n}other time.)"
+script scene70menu

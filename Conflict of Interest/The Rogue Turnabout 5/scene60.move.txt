@@ -38,13 +38,19 @@ mus
 script scene62
 label ifthen
 noflag dumbbird scene62menu
-flag dumbbird 62b
+flag dumbbird ifthen2
 label scene62menu
 mus
 script scene62menu
+label ifthen2
+noflag thetenebroustemplar 62b
+flag thetenebroustemplar 71
 label 62b
 mus
 script scene62bmenu
+label 71
+mus
+script scene71menu
 
 label Criminal Affairs
 mus

@@ -14,13 +14,13 @@ bg witness
 fg wbench
 
 char gallante e=hunch
-"{tbon}A device on a fuse box would have been useless to an intruder."
-"{tbon}What good would it serve anybody, being on the rooftop?"
-"{tbon}It is clear that the blackout was a mere coincidence."
-"{tbon}The earlier theory presented by the prosecution is much more sensible."
-"{tbon}In any case, Sir Watters should be honored, not punished."
-"{tbon}The death of Michael Rivales marked a turning point."
-"{tbon}By slaying him, he has all but vanquished the Rivales Clan."
+"{tbon}A device on a fuse box would have {n}been useless to an intruder."
+"{tbon}What good would it serve anybody, {n}being on the rooftop?"
+"{tbon}It is clear that the blackout was a {n}mere coincidence."
+"{tbon}The earlier theory presented by the {n}prosecution is much more sensible."
+"{tbon}In any case, Sir Watters should be {n}honored, not punished."
+"{tbon}The death of Michael Rivales marked {n}a turning point."
+"{tbon}By slaying him, he has all but {n}vanquished the Rivales Clan."
 
 mus
 bg black
@@ -28,7 +28,7 @@ pause 30
 bg witness
 fg wbench
 char gallante e=ba
-"Sir Judge, you are a wise man, but it seems you have been letting the defense get out of hand."
+"Sir Judge, you are a wise man, but it {n}seems you have been letting the {n}defense get out of hand."
 bg judge
 char judge e=nodding
 pause 50 script
@@ -37,27 +37,27 @@ char judge e=normal
 bg defense
 fg dbench
 char phoenix e=sweating
-"What?!"
+"{sfx shout-general}What?!"
 bg witness
 fg wbench
 char gallante e=ba
-"If Sir Prosecutor is unable to control him properly, then perhaps harsher punishments should be instilled..."
-"...a deterrent from further distractions."
+"If Sir Prosecutor is unable to control {n}him properly, then perhaps harsher {n}punishments should be instilled..."
+"...a deterrent from further {n}distractions."
 bg judge
 char judge e=normal
 "I agree. This sounds like a good idea."
 bg prosecution
 fg pbench
 char obadiah e=angry
-"What?!"
+"{sfx shout-general}What?!"
 bg judge
 char judge e=normal
-"A penalty will be given for any needless pressing of the witness."
+"A penalty will be given for any {n}needless pressing of the witness."
 "You may begin, Mr. Wright."
 
 bg witness
 fg wbench
-char gallante e=ba
+char gallante e=hunch
 bg main name=main y=192 stack
 fg phoenixvs name=phoenixvs x=-255 y=165 stack
 fg williamsonvs name=willvs x=256 y=225 stack
@@ -79,57 +79,58 @@ statement gallante2A
 bg witness
 fg wbench
 char gallante e=hunch
-"A device on a fuse box would have been useless to an intruder."
+"A device on a fuse box would have {n}been useless to an intruder."
 
 statement gallante2B
 bg witness
 fg wbench
 char gallante e=hunch
-"What good would it serve anybody, being on the rooftop?"
+"What good would it serve anybody, {n}being on the rooftop?"
 
-statement gallante2B1
+statement gallante2B1 test=show_gallante1B1
 bg witness
 fg wbench
 char gallante e=hunch
-"It would need some kind of remote to control it."
+"It would need some kind of remote to {n}control it."
 
 statement gallante2C
 bg witness
 fg wbench
 char gallante e=hunch
-"It is clear that the blackout was a mere coincidence."
+"It is clear that the blackout was a {n}mere coincidence."
 
 statement gallante2D
 bg witness
 fg wbench
 char gallante e=hunch
-"The earlier theory presented by the prosecution is much more sensible."
+"The earlier theory presented by the {n}prosecution is much more sensible."
 
 statement gallante2E
 bg witness
 fg wbench
 char gallante e=hunch
-"In any case, Sir Watters should be honored, not punished."
+"In any case, Sir Watters should be {n}honored, not punished."
 
 statement gallante2F
 bg witness
 fg wbench
 char gallante e=hunch
-"The death of Michael Rivales marked a turning point."
+"The death of Michael Rivales marked {n}a turning point."
 
 statement gallante2G
 bg witness
 fg wbench
 char gallante e=hunch
-"By slaying him, he has all but vanquished the Rivales Clan."
+"By slaying him, he has all but {n}vanquished the Rivales Clan."
+endcross
 
 label comments
 bg aide
 char maya e=bench-strict
-"This is ridiculous! Why aren't they letting you press anything?!"
+"This is ridiculous! Why aren't they {n}letting you press anything?!"
 char phoenix hide
-"Black has the judge in the palm of his hand."
-"I can still press things, I just need to be careful about what they are."
+"Black has the judge in the palm of his {n}hand."
+"I can still press things, I just need to {n}be careful about what they are."
 char maya e=bench-strict
 "It's still ridiculous."
 char phoenix hide
@@ -142,6 +143,55 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=handsondesk
+"That's not true!"
+"You could disable all the cameras in {n}the building with something like that!"
+bg witness
+fg wbench
+char gallante e=ba
+"Such an ability would be useless if {n}you could not access it."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2A
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+char phoenix e=normal
+"You could easily access it by taking {n}the stairs to the roof."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"And by the time you got there, the {n}security cameras would have seen {n}you a hundred times."
+"Rather pointless, no?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Well, maybe it's not the best idea..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Just stop trying. {p10}Please."
+sfx damage
+penalty -15
+is penalty 0 failure
+"It's embarrassing for both of us."
+bg defense
+fg dbench
+char phoenix e=sweating
+"Sorry I'm making things more difficult {n}for you."
+resume
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 resume
 
 label press gallante2B
@@ -150,6 +200,65 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=normal
+"What do you mean by that?"
+bg witness
+fg wbench
+char gallante e=ba
+"An intruder would have to enter from {n}the ground floor, would he not?"
+"There is no other way to get there."
+"The security system would have {n}been fully active until you reached {n}the fuse box."
+"You would not have made it far {n}without being seen."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2B
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+char phoenix e=normal
+"Maybe there's another possibility."
+"What if it was possible to activate {n}the blackout without being next to {n}the fuse box?"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"How exactly would that be possible?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"There might have been a remote {n}control for it."
+"It was electronic, so it's definitely {n}a possibility."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Have you seen this remote? {n}{p10}Do you know that it actually exists?"
+bg defense
+fg dbench
+char phoenix e=normal
+"Well... {p15}No."
+bg witness
+fg wbench
+char gallante e=ba
+"Such a thing would indeed make {n}sense of the situation."
+"However, without proof of it, you {n}have nothing."
+bg judge
+char judge e=normal
+"I feel that this is an interesting thing {n}for us to consider."
+"Please amend your testimony, Mr. {n}Black."
+set show_gallante1B1 true
+setflag gallante1B1
+resume
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 resume
 
 label press gallante2B1
@@ -158,6 +267,68 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=normal
+"It doesn't seem normal that the {n}device would activate as soon as {n}it was touched."
+"That seems more like a malfunction {n}than anything else."
+bg witness
+fg wbench
+char gallante e=ba
+"You have not found a remote, {n}therefore you cannot prove that {n}it existed."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2B1
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+char phoenix e=normal
+"What if we haven't found the remote {n}because it was disposed of?"
+bg judge
+char judge e=normal
+"Who do you think did that?"
+bg defense
+fg dbench
+char phoenix e=normal
+"The killer, obviously... {p15}Sir Gallante."
+"I'm almost positive that's what {n}happened."
+"Sir Gallante is known for never {n}leaving any evidence behind."
+"Wouldn't it make sense that he got {n}rid of something that could prove {n}how he did it?"
+"He still needed the blackout to be in {n}effect until he left..."
+"...so he couldn't remove the device {n}from the fuse box."
+"He could, however, easily dispose of {n}a remote control."
+bg courtgallante
+sfx courtmurmur
+pause 120 script
+bg witness
+fg wbench
+char gallante e=ba
+"Sir Prosecutor, are you not going to {n}say anything?"
+bg prosecution
+fg pbench
+char obadiah e=worried
+"No."
+"{e serious}I can neither prove nor disprove {n}what he said."
+"Gallante's hidden evidence before. {n}{p10}It could happen again."
+bg witness
+fg wbench
+char gallante e=hunch
+"{delay 1}..."
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Continue, Wright."
+resume
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 resume
 
 label press gallante2C
@@ -166,6 +337,65 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=handsondesk
+"How could you possibly prove that?"
+bg witness
+fg wbench
+char gallante e=ba
+"How could you possibly prove that it {n}wasn't?"
+bg defense
+fg dbench
+char phoenix e=sweating
+"Uh... Well..."
+bg witness
+fg wbench
+char gallante e=ba
+"Precisely."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2C
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+char phoenix e=normal
+"There was the device on the fuse {n}box."
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"He'd need to be on the roof to set {n}it there in the first place."
+"There wouldn't have been any way {n}for him to access it without getting {n}caught."
+bg witness
+fg wbench
+char gallante e=ba
+"Surely you did not overlook {n}something as clear as this, Sir {n}Lawyer?"
+bg defense
+fg dbench
+char phoenix e=sheepish
+"N-No, of course not!"
+bg judge
+char judge e=warning
+"Well, you clearly overlooked the fact {n}that you need to be watching what {n}you press!"
+sfx damage.wav
+penalty -15
+is penalty 0 failure
+char phoenix hide
+"{c089}(I just can't seem to catch a break {n}here...)"
+resume
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 resume
 
 label press gallante2D
@@ -174,6 +404,144 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=sweating
+"We've been over that thing a million {n}times now!"
+bg witness
+fg wbench
+char gallante e=ba
+"Yet it still makes more sense than {n}what you are proposing."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2D
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+noflag gallante1B1 nocontinue
+flag gallante1B1 continue
+label nocontinue
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"Do we really need to go over this {n}again?!"
+bg witness
+fg wbench
+char gallante e=ba
+"The theory holds true because there {n}is no other way it could have been {n}accomplished."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"No other way?!"
+bg witness
+fg wbench
+char gallante e=ba
+"Yes. There is only one way to access {n}both the roof and the penthouse."
+"That is through the reception area."
+bg judge
+char judge e=normal
+"The receptionist was aware that the {n}two suspects were there."
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"I would find it hard to believe that a {n}third could sneak past all three of {n}them."
+bg witness
+fg wbench
+char gallante e=ba
+"Yes, Sir Judge. {p10}To open the window {n}and commit the crime..."
+"...one would have to enter the room {n}no less than twice."
+"There are no other possibilities."
+bg judge
+char judge e=normal
+"I hope this clears things up for {n}you, Mr. Wright."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"{c089}(No. Not at all.)'
+resume
+
+label continue
+sfx deskslam
+char phoenix e=deskslam
+pause 50 script
+char phoenix e=handsondesk
+"Do we really need to go over this {n}again?!"
+bg witness
+fg wbench
+char gallante e=ba
+"The theory holds true because there {n}is no other way it could have been {n}accomplished."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"No other way?!"
+bg witness
+fg wbench
+char gallante e=ba
+"Yes. There is only one way to access {n}both the roof and the penthouse."
+"That is through the reception area."
+bg judge
+char judge e=normal
+"The receptionist was aware that the {n}two suspects were there."
+char judge e=headshake
+pause 50 script
+char judge e=normal
+"I would find it hard to believe that a {n}third could sneak past all three of {n}them."
+bg witness
+fg wbench
+char gallante e=ba
+"Yes, Sir Judge. {p10}To open the window {n}and commit the crime..."
+"...one would have to enter the room {n}no less than twice."
+"There are no other possibilities."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Actually, if we accept another thing, {n}we can find a new possibility."
+bg judge
+char judge e=normal
+"What is that?"
+bg defense
+fg dbench
+char phoenix e=normal
+"The remote."
+bg witness
+fg wbench
+char gallante e=ba
+"Pray tell, what difference could that {n}possibly make?"
+bg defense
+fg dbench
+char phoenix e=normal
+"A person using a remote control {n}probably wouldn't be in the {n}building in the first place."
+"He also couldn't have entered {n}through reception, because three {n}people would have seen him."
+"{c090}So... He had to have come from {n}somewhere else. Somewhere outside {n}the building..."
+set _cr_back_button false
+present
+
+label harness
+mus
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene86
+
+label codyphoto
+mus
+set _cr_back_button true
+sfx /phoenix/takethat.ogg
+fg TakeThatAnim
+pause 5 script
+script scene86
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 resume
 
 label press gallante2E
@@ -182,6 +550,77 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=handsondesk
+"{sfx shout-general}Watters didn't do it!"
+bg witness
+fg wbench
+char gallante e=ba
+"All the evidence points toward him."
+"Denying it is nothing short of pure {n}foolishness."
+"Do not try to attribute this great feat {n}of his to someone else."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"A great {sfx shout-general}feat?!"
+bg witness
+fg wbench
+char gallante e=ba
+"Yes, that is what I said."
+"He killed Michael Rivales. {n}He is a more worthy person than I."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2E
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+char phoenix e=normal
+"If there's one thing I absolutely can {n}not stand..."
+"...it's trying to pin a crime on {n}somebody else."
+bg witness
+fg wbench
+char gallante e=ba
+"If silencing evil is a crime, then it is an {n}unjust law, and should be fought."
+"Sir Watters has chosen to fight it {n}under the guise of Sir Gallante."
+"He is a hero, not a villain."
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Now you have him blathering on with {n}his propaganda again."
+"None of us needs to hear this."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"H{p5}-Hey! I can't control what he says!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Your questioning led him directly to it."
+bg judge
+char judge e=warning
+"Next time think before you do that!"
+sfx damage
+penalty -15
+is penalty 0 failure
+bg witness
+fg wbench
+char gallante e=ba
+"Tis a shame.{n}{p20}I was just getting started."
+resume
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 resume
 
 label press gallante2F
@@ -190,6 +629,56 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=normal
+"A turning point?"
+bg witness
+fg wbench
+char gallante e=ba
+"Yes. {p5}Was I unclear when I said that?"
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2F
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+char phoenix e=normal
+"What do you mean by that?"
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"Maybe if you paid attention, you {n}would realize that he was just {n}getting to that."
+bg witness
+fg wbench
+char gallante e=ba
+"This is correct."
+char gallante e=hunch
+"I was about to explain before I was {n}so rudely interrupted."
+bg judge
+char judge e=warning
+"Interrupting people is very poor {n}etiquette, Mr. Wright."
+sfx damage
+penalty -15
+is penalty 0 failure
+bg defense
+fg dbench
+char phoenix e=sweating
+"Thank you... I'll remember that in the {n}future."
+resume
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 resume
 
 label press gallante2G
@@ -198,6 +687,74 @@ fg HoldItAnim
 pause 5 script
 bg defense
 fg dbench
+char phoenix e=handsondesk
+"How could you possibly predict that?"
+bg witness
+fg wbench
+char gallante e=ba
+"Michael Rivales was their leader."
+"Cut off the serpent's head and it will {n}die."
+bg defense
+fg dbench
+char phoenix e=thinking
+"The serpent in this case being the {n}Rivales Family?"
+bg witness
+fg wbench
+char gallante e=ba
+"Yes."
+bg defense
+fg dbench
+char phoenix e=thinking
+"Hmm..."
+"{c089}(What should I do?)"
+set _list_back_button false
+
+list stat2G
+li Press further
+li Leave it alone
+showlist
+
+label Press further
+char phoenix e=normal
+"Won't somebody else just step in to {n}replace him? {p15}Isn't that how these {n}things work?"
+bg witness
+fg wbench
+char gallante e=ba
+"Tis a possibility."
+"However, I believe it more likely that {n}they will tear themselves apart from {n}within..."
+"...like the power-hungry savages {n}they all are."
+bg defense
+fg dbench
+char phoenix e=thinking
+"They might also find a stronger new {n}leader and gather behind him."
+sfx /godot/objection.ogg
+fg ObjectionAnim
+pause 5 script
+bg prosecution
+fg pbench
+char obadiah e=serious
+"You're getting off track again. This {n}has nothing to do with the case at {n}hand."
+bg defense
+fg dbench
+char phoenix e=handsondesk
+"This is important!"
+bg prosecution
+fg pbench
+char obadiah e=serious
+"True. {p20}{n}It's also irrelevant."
+bg judge
+char judge e=normal
+"I would appreciate you sticking to {n}the current matter, Mr. Wright."
+sfx damage
+penalty -15
+is penalty 0 failure
+pause 20
+goto comments
+
+label Leave it alone
+char phoenix e=normal
+"{c089}(No, I shouldn't take too many {n}chances here. The judge is clearly {n}siding with the prosecution.)"
+"{c089}(I might get penalized if I press the {n}wrong thing.)"
 goto comments
 
 label none
